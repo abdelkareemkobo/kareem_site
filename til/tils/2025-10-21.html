@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="kareem">
+<meta name="dcterms.date" content="2025-10-21">
+<meta name="description" content="A practical comparison of AraModernBert and AraBERT v2 tokenizers for Arabic NLP, including efficiency metrics and real-world evaluation tips.">
 
-<title>📚 kareem’s TILs – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
+<title>Evaluating Arabic Tokenizers – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,33 +23,66 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../2.svg" rel="icon" type="image/svg+xml">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-914dc4404272ff4a2a791e68204292ff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-e3ae77831967a3826a5611a9313361f5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-914dc4404272ff4a2a791e68204292ff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../2.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-914dc4404272ff4a2a791e68204292ff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-e3ae77831967a3826a5611a9313361f5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-914dc4404272ff4a2a791e68204292ff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,35 +110,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XFPC3M9TMG"></script>
 
 <script type="text/javascript">
@@ -113,46 +120,17 @@ gtag('js', new Date());
 gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="../styles.css">
-<link rel="stylesheet" href="../custom-header.css">
-<link rel="alternate" type="application/rss+xml" title="عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist" href="index.xml" data-external="1"><meta property="og:title" content="📚 kareem’s TILs – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
-<meta property="og:description" content="Kareem Elkhateb personal site, a blog about machine learning, deep learning, Web development with Astro.js, FastAPI, also Arabic Natural Language Processing and Rust language.">
-<meta property="og:image" content="https://user-images.githubusercontent.com/1483922/208359430-f55d7503-3a98-4875-a35c-16314c9439d0.png">
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="../../custom-header.css">
+<meta property="og:title" content="Evaluating Arabic Tokenizers – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta property="og:description" content="A practical comparison of AraModernBert and AraBERT v2 tokenizers for Arabic NLP, including efficiency metrics and real-world evaluation tips.">
+<meta property="og:image" content="https://kareemai.com/til/tils/til.jpg">
 <meta property="og:site_name" content="عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
 <meta property="og:locale" content="ar_AR">
-<meta name="twitter:title" content="📚 kareem’s TILs – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
-<meta name="twitter:description" content="Kareem Elkhateb personal site, a blog about machine learning, deep learning, Web development with Astro.js, FastAPI, also Arabic Natural Language Processing and Rust language.">
-<meta name="twitter:image" content="https://user-images.githubusercontent.com/1483922/208359430-f55d7503-3a98-4875-a35c-16314c9439d0.png">
+<meta name="twitter:title" content="Evaluating Arabic Tokenizers – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta name="twitter:description" content="A practical comparison of AraModernBert and AraBERT v2 tokenizers for Arabic NLP, including efficiency metrics and real-world evaluation tips.">
+<meta name="twitter:image" content="https://kareemai.com/til/tils/til.jpg">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary">
 </head>
@@ -326,7 +304,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -336,23 +314,23 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">🏠 Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../blog/feed.html"> 
+    <a class="nav-link" href="../../blog/feed.html"> 
 <span class="menu-text">📮 Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../til/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../til/index.html"> 
 <span class="menu-text">💭 TILs</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../papers.html"> 
+    <a class="nav-link" href="../../papers.html"> 
 <span class="menu-text">📚 Papers</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../publish.html"> 
+    <a class="nav-link" href="../../publish.html"> 
 <span class="menu-text">📖 Books</span></a>
   </li>  
 </ul>
@@ -370,12 +348,12 @@ window.Quarto = {
 <span class="menu-text">💻 GPUVec</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../index.xml"> <i class="bi bi-rss" role="img" aria-label="Blog RSS Feed">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img" aria-label="Blog RSS Feed">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../til/index.xml"> <i class="bi bi-rss" role="img" aria-label="TILs RSS Feed">
+    <a class="nav-link" href="../../til/index.xml"> <i class="bi bi-rss" role="img" aria-label="TILs RSS Feed">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -392,22 +370,89 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(10)</span></div><div class="category" data-category="YWk=">ai <span class="quarto-category-count">(2)</span></div><div class="category" data-category="YmxvZ2dpbmc=">blogging <span class="quarto-category-count">(10)</span></div><div class="category" data-category="ZG9tYWlucw==">domains <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGxt">llm <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bG9jYWxfbGxt">local_llm <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWFjaGluZS1sZWFybmluZw==">machine-learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bmxw">nlp <span class="quarto-category-count">(1)</span></div><div class="category" data-category="b2xsYW1h">ollama <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cG9ya2J1bg==">porkbun <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHl0aG9u">python <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cWRyYW50">qdrant <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cmFn">rag <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c2Vv">seo <span class="quarto-category-count">(2)</span></div><div class="category" data-category="c3Vic3RhY2s=">substack <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dGls">til <span class="quarto-category-count">(10)</span></div><div class="category" data-category="dmVyY2Vs">vercel <span class="quarto-category-count">(1)</span></div><div class="category" data-category="d2Vi">web <span class="quarto-category-count">(2)</span></div><div class="category" data-category="JUQ4JUFBJUQ4JUIyJUQ5JTgzJUQ5JThBJUQ5JTg3">تزكيه <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#why-tokenizer-evaluation-matters" id="toc-why-tokenizer-evaluation-matters" class="nav-link" data-scroll-target="#why-tokenizer-evaluation-matters">Why Tokenizer Evaluation Matters</a></li>
+  <li><a href="#the-evaluation-framework" id="toc-the-evaluation-framework" class="nav-link" data-scroll-target="#the-evaluation-framework">The Evaluation Framework</a>
+  <ul class="collapse">
+  <li><a href="#key-metrics" id="toc-key-metrics" class="nav-link" data-scroll-target="#key-metrics">Key Metrics</a></li>
+  </ul></li>
+  <li><a href="#the-contenders" id="toc-the-contenders" class="nav-link" data-scroll-target="#the-contenders">The Contenders</a>
+  <ul class="collapse">
+  <li><a href="#aramodernbert" id="toc-aramodernbert" class="nav-link" data-scroll-target="#aramodernbert">AraModernBert</a></li>
+  <li><a href="#arabert-v2" id="toc-arabert-v2" class="nav-link" data-scroll-target="#arabert-v2">AraBERT v2</a></li>
+  </ul></li>
+  <li><a href="#test-results" id="toc-test-results" class="nav-link" data-scroll-target="#test-results">Test Results</a>
+  <ul class="collapse">
+  <li><a href="#test-1-modern-standard-arabic" id="toc-test-1-modern-standard-arabic" class="nav-link" data-scroll-target="#test-1-modern-standard-arabic">Test 1: Modern Standard Arabic</a></li>
+  <li><a href="#test-2-egyptian-dialect" id="toc-test-2-egyptian-dialect" class="nav-link" data-scroll-target="#test-2-egyptian-dialect">Test 2: Egyptian Dialect</a></li>
+  <li><a href="#test-3-technicalformal-text" id="toc-test-3-technicalformal-text" class="nav-link" data-scroll-target="#test-3-technicalformal-text">Test 3: Technical/Formal Text</a></li>
+  </ul></li>
+  <li><a href="#key-findings" id="toc-key-findings" class="nav-link" data-scroll-target="#key-findings">Key Findings</a>
+  <ul class="collapse">
+  <li><a href="#aramodernbert-is-consistently-more-efficient" id="toc-aramodernbert-is-consistently-more-efficient" class="nav-link" data-scroll-target="#aramodernbert-is-consistently-more-efficient">1. AraModernBert is Consistently More Efficient</a></li>
+  <li><a href="#the-gap-widens-with-complex-text" id="toc-the-gap-widens-with-complex-text" class="nav-link" data-scroll-target="#the-gap-widens-with-complex-text">2. The Gap Widens with Complex Text</a></li>
+  <li><a href="#both-handle-dialects-reasonably-well" id="toc-both-handle-dialects-reasonably-well" class="nav-link" data-scroll-target="#both-handle-dialects-reasonably-well">3. Both Handle Dialects Reasonably Well</a></li>
+  </ul></li>
+  <li><a href="#why-aramodernbert-performs-better" id="toc-why-aramodernbert-performs-better" class="nav-link" data-scroll-target="#why-aramodernbert-performs-better">Why AraModernBert Performs Better</a>
+  <ul class="collapse">
+  <li><a href="#larger-vocabulary-50k-vs-30k-tokens" id="toc-larger-vocabulary-50k-vs-30k-tokens" class="nav-link" data-scroll-target="#larger-vocabulary-50k-vs-30k-tokens">Larger Vocabulary (50K vs 30K tokens)</a></li>
+  <li><a href="#more-training-data-100gb-vs-77gb" id="toc-more-training-data-100gb-vs-77gb" class="nav-link" data-scroll-target="#more-training-data-100gb-vs-77gb">More Training Data (100GB vs 77GB)</a></li>
+  <li><a href="#modern-architecture" id="toc-modern-architecture" class="nav-link" data-scroll-target="#modern-architecture">Modern Architecture</a></li>
+  <li><a href="#recency-advantage" id="toc-recency-advantage" class="nav-link" data-scroll-target="#recency-advantage">Recency Advantage</a></li>
+  </ul></li>
+  <li><a href="#practical-implications" id="toc-practical-implications" class="nav-link" data-scroll-target="#practical-implications">Practical Implications</a>
+  <ul class="collapse">
+  <li><a href="#for-model-training" id="toc-for-model-training" class="nav-link" data-scroll-target="#for-model-training">For Model Training</a></li>
+  <li><a href="#for-production-systems" id="toc-for-production-systems" class="nav-link" data-scroll-target="#for-production-systems">For Production Systems</a></li>
+  </ul></li>
+  <li><a href="#should-you-train-your-own-tokenizer" id="toc-should-you-train-your-own-tokenizer" class="nav-link" data-scroll-target="#should-you-train-your-own-tokenizer">Should You Train Your Own Tokenizer?</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next Steps</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#code-repository" id="toc-code-repository" class="nav-link" data-scroll-target="#code-repository">Code Repository</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">📚 kareem’s TILs</h1>
-</div>
+<h1 class="title">Evaluating Arabic Tokenizers</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">blogging</div>
+    <div class="quarto-category">til</div>
+    <div class="quarto-category">nlp</div>
+    <div class="quarto-category">ai</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    A practical comparison of AraModernBert and AraBERT v2 tokenizers for Arabic NLP, including efficiency metrics and real-world evaluation tips.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>kareem </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 21, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -417,400 +462,279 @@ window.Quarto = {
 </header>
 
 
-<p>This the place where is share what i learn nearly everyday..for more crafted articles see the <a href="../blog/feed.html">blogs</a></p>
-<p>You can also get in touch with me <a href="../index.html">here</a>.</p>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-      <option value="listing-author" data-direction="asc">
-        Author
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="YmxvZ2dpbmclMkN0aWwlMkNubHAlMkNhaQ==" data-listing-date-sort="1760994000000" data-listing-file-modified-sort="1761024492567" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1187">
-<div class="thumbnail"><a href="../til/tils/2025-10-21.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/til.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-10-21.html" class="no-external">Evaluating Arabic Tokenizers</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bmxw'); return false;">nlp</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YWk='); return false;">ai</div>
-
-</div>
-<div class="delink listing-description"><a href="../til/tils/2025-10-21.html" class="no-external">
-<p>A practical comparison of AraModernBert and…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-10-21.html" class="no-external">
-<div class="listing-date">
-Oct 21, 2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="YmxvZ2dpbmclMkN0aWw=" data-listing-date-sort="1749157200000" data-listing-file-modified-sort="1759508099486" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="718">
-<div class="thumbnail"><a href="../til/tils/2025-06-06-til.html" class="no-external">
-
-<img loading="lazy" src="../til/tils" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-06-06-til.html" class="no-external">Connecting with ideas in ML</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
-
-</div>
-<div class="delink listing-description"><a href="../til/tils/2025-06-06-til.html" class="no-external">
-<p>some random thoughts about nonsense thoughts.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-06-06-til.html" class="no-external">
-<div class="listing-date">
-Jun 6, 2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="YmxvZ2dpbmclMkN0aWw=" data-listing-date-sort="1748379600000" data-listing-file-modified-sort="1759508096361" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="709">
-<div class="thumbnail"><a href="../til/tils/2025-05-28-til.html" class="no-external">
-
-<img loading="lazy" src="../til/tils" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-05-28-til.html" class="no-external">Pylate Day 1</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
-
-</div>
-<div class="delink listing-description"><a href="../til/tils/2025-05-28-til.html" class="no-external">
-<p>Trying to explore pylate and create my first…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-05-28-til.html" class="no-external">
-<div class="listing-date">
-May 28, 2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="YmxvZ2dpbmclMkN0aWwlMkNtYWNoaW5lLWxlYXJuaW5nJTJDcHl0aG9uJTJDcmFn" data-listing-date-sort="1748120400000" data-listing-file-modified-sort="1757555725697" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="977">
-<div class="thumbnail"><a href="../til/tils/2025-05-25-til.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/images/raptor.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-05-25-til.html" class="no-external">RAG RAPTOR: Complete Guide to Meta’s RAPTOR RAG, DFloat11 Compression &amp; Pyrefly Type Checker</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWFjaGluZS1sZWFybmluZw=='); return false;">machine-learning</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHl0aG9u'); return false;">python</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cmFn'); return false;">rag</div>
-
-</div>
-<div class="delink listing-description"><a href="../til/tils/2025-05-25-til.html" class="no-external">
-<p>Learn about RAPTOR RAG technique for improved…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-05-25-til.html" class="no-external">
-<div class="listing-date">
-May 25, 2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="YmxvZ2dpbmclMkN0aWwlMkN3ZWIlMkNhaSUyQ2xsbSUyQ2xvY2FsX2xsbSUyQ29sbGFtYQ==" data-listing-date-sort="1747947600000" data-listing-file-modified-sort="1748011457821" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="584">
-<div class="thumbnail"><a href="../til/tils/2025-05-23-til.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/images/brave_leo.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-05-23-til.html" class="no-external">Brave Leo AI with Ollama, vllm, and any huggingface llm locally</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('d2Vi'); return false;">web</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YWk='); return false;">ai</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGxt'); return false;">llm</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bG9jYWxfbGxt'); return false;">local_llm</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('b2xsYW1h'); return false;">ollama</div>
-
-</div>
-<div class="delink listing-description"><a href="../til/tils/2025-05-23-til.html" class="no-external">
-<p>How to configure Brave Leo to use your any LLM…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-05-23-til.html" class="no-external">
-<div class="listing-date">
-May 23, 2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="YmxvZ2dpbmclMkN0aWwlMkMlRDglQUElRDglQjIlRDklODMlRDklOEElRDklODc=" data-listing-date-sort="1747774800000" data-listing-file-modified-sort="1747779027853" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1147">
-<div class="thumbnail"><a href="../til/tils/2025-05-21-til.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/images/isreal.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-05-21-til.html" class="no-external">البوصلة الحقيقة</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUQ4JUFBJUQ4JUIyJUQ5JTgzJUQ5JThBJUQ5JTg3'); return false;">تزكيه</div>
-
-</div>
-<div class="delink listing-description"><a href="../til/tils/2025-05-21-til.html" class="no-external">
-<p>محاولة لإعادة لتزكية النفس وحسن العمل والتوجه…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-05-21-til.html" class="no-external">
-<div class="listing-date">
-May 21, 2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="YmxvZ2dpbmclMkN0aWwlMkNzZW8lMkNkb21haW5zJTJDdmVyY2VsJTJDcG9ya2J1biUyQ3dlYg==" data-listing-date-sort="1747688400000" data-listing-file-modified-sort="1748012551097" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="501">
-<div class="thumbnail"><a href="../til/tils/2025-05-20-til.html" class="no-external">
-
-<img loading="lazy" src="../til/tils" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-05-20-til.html" class="no-external">Domains Day: Connecting Railway with Vercel, Cloudflare, and Hostinger</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c2Vv'); return false;">seo</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZG9tYWlucw=='); return false;">domains</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dmVyY2Vs'); return false;">vercel</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cG9ya2J1bg=='); return false;">porkbun</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('d2Vi'); return false;">web</div>
-
-</div>
-<div class="delink listing-description"><a href="../til/tils/2025-05-20-til.html" class="no-external">
-<p>My experience moving my domain from Hostinger to…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-05-20-til.html" class="no-external">
-<div class="listing-date">
-May 20, 2025
-</div>
-<div class="listing-author">
-Kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="YmxvZ2dpbmclMkN0aWwlMkNzZW8lMkNzdWJzdGFjaw==" data-listing-date-sort="1747602000000" data-listing-file-modified-sort="1748142769001" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1023">
-<div class="thumbnail"><a href="../til/tils/2025-05-19-til.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/images/old_ahead_of_ai.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-05-19-til.html" class="no-external">Starting Substack as a AI Researcher</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c2Vv'); return false;">seo</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c3Vic3RhY2s='); return false;">substack</div>
-
-</div>
-<div class="delink listing-description"><a href="../til/tils/2025-05-19-til.html" class="no-external">
-<p>Why i started writing on substack and why you…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-05-19-til.html" class="no-external">
-<div class="listing-date">
-May 19, 2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-categories="YmxvZ2dpbmclMkN0aWwlMkNxZHJhbnQ=" data-listing-date-sort="1747515600000" data-listing-file-modified-sort="1747574870124" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="698">
-<div class="thumbnail"><a href="../til/tils/2025-05-18-til.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/til.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-05-18-til.html" class="no-external">Explore the Qdrant Blog core concepts | Part 1</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cWRyYW50'); return false;">qdrant</div>
-
-</div>
-<div class="delink listing-description"><a href="../til/tils/2025-05-18-til.html" class="no-external">
-<p>This a 2 hours daily exploring and summarizing…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-05-18-til.html" class="no-external">
-<div class="listing-date">
-May 18, 2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="9" data-categories="YmxvZ2dpbmclMkN0aWw=" data-listing-date-sort="1747429200000" data-listing-file-modified-sort="1747511152712" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="594">
-<div class="thumbnail"><a href="../til/tils/2025-05-17-til.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/til.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-05-17-til.html" class="no-external">TIL ? Tody I lernt to create TIL</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
-
-</div>
-<div class="delink listing-description"><a href="../til/tils/2025-05-17-til.html" class="no-external">
-<p>Starting with TIL for creating posts on my blogg…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-05-17-til.html" class="no-external">
-<div class="listing-date">
-May 17, 2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>When working with Arabic language models, choosing the right tokenizer can significantly impact model performance and efficiency. In this post, I’ll share my experience comparing two popular Arabic tokenizers: <strong>AraModernBert</strong> and <strong>AraBERT v2</strong>.</p>
+</section>
+<section id="why-tokenizer-evaluation-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-tokenizer-evaluation-matters">Why Tokenizer Evaluation Matters</h2>
+<p>After reading the comprehensive guide on <a href="https://www.fast.ai/posts/2025-10-16-karpathy-tokenizers.html#token-efficiency">GPT tokenizers</a>, I realized that tokenization is often overlooked but critically important. Poor tokenization can lead to:</p>
+<ul>
+<li>Inefficient use of limited context windows</li>
+<li>Higher computational costs (you pay per token!)</li>
+<li>Worse model performance, especially for non-English languages</li>
+</ul>
+<p>For Arabic specifically, tokenization is challenging because:</p>
+<ul>
+<li>Arabic has rich morphology with prefixes and suffixes</li>
+<li>Different dialects (Egyptian, Levantine, Gulf) have varying vocabulary</li>
+<li>Diacritical marks (tashkeel) add complexity</li>
+<li>Tasks the needs Tashkeel like Speech synthesis Grammar checking (need tashkeel) like arabic poetry tasks ..etc</li>
+</ul>
+</section>
+<section id="the-evaluation-framework" class="level2">
+<h2 class="anchored" data-anchor-id="the-evaluation-framework">The Evaluation Framework</h2>
+<p>I built a simple evaluation function to measure tokenizer quality:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> evaluate_tokenizer(text, tokenizer):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    number_of_tokens <span class="op">=</span> <span class="bu">len</span>(tokenizer.tokenize(text))</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    number_of_bytes <span class="op">=</span> <span class="bu">len</span>(text.encode(<span class="st">'utf-8'</span>))</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    number_of_words <span class="op">=</span> <span class="bu">len</span>(text.split(<span class="st">" "</span>))</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    fertility <span class="op">=</span> number_of_tokens <span class="op">/</span> number_of_words </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    compression_ratio <span class="op">=</span> number_of_bytes <span class="op">/</span> number_of_tokens </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="st">"fertility"</span>: fertility,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">"compression_ratio"</span>: compression_ratio,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="st">"total_tokens"</span>: number_of_tokens</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    }</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="key-metrics" class="level3">
+<h3 class="anchored" data-anchor-id="key-metrics">Key Metrics</h3>
+<ol type="1">
+<li><strong>Fertility Rate</strong> (tokens/word): Lower is better. Measures how many tokens are needed per word.</li>
+<li><strong>Compression Ratio</strong> (bytes/token): Higher is better. Measures how efficiently the tokenizer compresses text.</li>
+<li><strong>Total Tokens</strong>: The raw count for the given text.</li>
+</ol>
+</section>
+</section>
+<section id="the-contenders" class="level2">
+<h2 class="anchored" data-anchor-id="the-contenders">The Contenders</h2>
+<section id="aramodernbert" class="level3">
+<h3 class="anchored" data-anchor-id="aramodernbert">AraModernBert</h3>
+<ul>
+<li><strong>Vocabulary</strong>: 50,280 tokens</li>
+<li><strong>Training Data</strong>: 100GB of Arabic text</li>
+<li><strong>Architecture</strong>: ModernBERT with transtokenization</li>
+<li><strong>Context Window</strong>: 8,192 tokens</li>
+</ul>
+</section>
+<section id="arabert-v2" class="level3">
+<h3 class="anchored" data-anchor-id="arabert-v2">AraBERT v2</h3>
+<ul>
+<li><strong>Vocabulary</strong>: ~30,000 tokens</li>
+<li><strong>Training Data</strong>: 77GB of Arabic text</li>
+<li><strong>Architecture</strong>: BERT-base</li>
+<li><strong>Pre-segmentation</strong>: Uses Farasa segmenter</li>
+</ul>
+</section>
+</section>
+<section id="test-results" class="level2">
+<h2 class="anchored" data-anchor-id="test-results">Test Results</h2>
+<p>I tested both tokenizers on three different Arabic texts with Encoder only for now more to come later!:</p>
+<section id="test-1-modern-standard-arabic" class="level3">
+<h3 class="anchored" data-anchor-id="test-1-modern-standard-arabic">Test 1: Modern Standard Arabic</h3>
+<p><strong>Text</strong>: “مرحبا كيف حالك اليوم”</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Tokenizer</th>
+<th>Fertility</th>
+<th>Compression Ratio</th>
+<th>Total Tokens</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AraModernBert</td>
+<td>1.25</td>
+<td>7.4</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>AraBERT v2</td>
+<td>1.5</td>
+<td>6.17</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="test-2-egyptian-dialect" class="level3">
+<h3 class="anchored" data-anchor-id="test-2-egyptian-dialect">Test 2: Egyptian Dialect</h3>
+<p><strong>Text</strong>: “إزيك يا صاحبي عامل إيه”</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Tokenizer</th>
+<th>Fertility</th>
+<th>Compression Ratio</th>
+<th>Total Tokens</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AraModernBert</td>
+<td>1.2</td>
+<td>6.67</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>AraBERT v2</td>
+<td>1.4</td>
+<td>5.71</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="test-3-technicalformal-text" class="level3">
+<h3 class="anchored" data-anchor-id="test-3-technicalformal-text">Test 3: Technical/Formal Text</h3>
+<p><strong>Text</strong>: “الذكاء الاصطناعي يغير العالم بسرعة كبيرة”</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Tokenizer</th>
+<th>Fertility</th>
+<th>Compression Ratio</th>
+<th>Total Tokens</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AraModernBert</td>
+<td>1.17</td>
+<td>10.71</td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td>AraBERT v2</td>
+<td>2.0</td>
+<td>6.25</td>
+<td><strong>12</strong></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="key-findings" class="level2">
+<h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
+<section id="aramodernbert-is-consistently-more-efficient" class="level3">
+<h3 class="anchored" data-anchor-id="aramodernbert-is-consistently-more-efficient">1. AraModernBert is Consistently More Efficient</h3>
+<p>Across all three tests, AraModernBert showed:</p>
+<ul>
+<li><p><strong>Lower fertility</strong> (15-42% fewer tokens per word)</p></li>
+<li><p><strong>Higher compression ratio</strong> (14-71% better compression)</p></li>
+<li><p><strong>Fewer total tokens</strong> needed for the same text</p></li>
+</ul>
+</section>
+<section id="the-gap-widens-with-complex-text" class="level3">
+<h3 class="anchored" data-anchor-id="the-gap-widens-with-complex-text">2. The Gap Widens with Complex Text</h3>
+<p>The most dramatic difference appeared in Test 3 (technical text):</p>
+<ul>
+<li><p>AraModernBert: 7 tokens</p></li>
+<li><p>AraBERT v2: 12 tokens (<strong>71% more!</strong>)</p></li>
+</ul>
+<p>This means for an 8K context window, AraModernBert can fit significantly more Arabic text.</p>
+</section>
+<section id="both-handle-dialects-reasonably-well" class="level3">
+<h3 class="anchored" data-anchor-id="both-handle-dialects-reasonably-well">3. Both Handle Dialects Reasonably Well</h3>
+<p>The Egyptian dialect test (Test 2) showed both tokenizers maintained similar efficiency to MSA, though AraModernBert still outperformed.</p>
+</section>
+</section>
+<section id="why-aramodernbert-performs-better" class="level2">
+<h2 class="anchored" data-anchor-id="why-aramodernbert-performs-better">Why AraModernBert Performs Better</h2>
+<section id="larger-vocabulary-50k-vs-30k-tokens" class="level3">
+<h3 class="anchored" data-anchor-id="larger-vocabulary-50k-vs-30k-tokens">Larger Vocabulary (50K vs 30K tokens)</h3>
+<p>More tokens means the model can learn longer, more common Arabic word chunks as single tokens.</p>
+<p>This is especially important for Arabic’s morphologically rich structure.</p>
+</section>
+<section id="more-training-data-100gb-vs-77gb" class="level3">
+<h3 class="anchored" data-anchor-id="more-training-data-100gb-vs-77gb">More Training Data (100GB vs 77GB)</h3>
+<p>More data leads to better byte-pair encoding merges that reflect actual Arabic usage patterns.</p>
+</section>
+<section id="modern-architecture" class="level3">
+<h3 class="anchored" data-anchor-id="modern-architecture">Modern Architecture</h3>
+<p>AraModernBert uses transtokenization - a technique that optimally initializes embeddings when creating the tokenizer, leading to better learned representations.</p>
+</section>
+<section id="recency-advantage" class="level3">
+<h3 class="anchored" data-anchor-id="recency-advantage">Recency Advantage</h3>
+<p>Trained in 2024 vs 2020, AraModernBert benefits from more recent data and improved training techniques.</p>
+</section>
+</section>
+<section id="practical-implications" class="level2">
+<h2 class="anchored" data-anchor-id="practical-implications">Practical Implications</h2>
+<section id="for-model-training" class="level3">
+<h3 class="anchored" data-anchor-id="for-model-training">For Model Training</h3>
+<ul>
+<li><strong>Context efficiency</strong>: AraModernBert lets you fit ~40% more Arabic text in the same context window</li>
+<li><strong>Cost savings</strong>: Fewer tokens = lower training costs</li>
+<li><strong>Better performance</strong>: More efficient tokenization often correlates with better downstream task performance</li>
+</ul>
+</section>
+<section id="for-production-systems" class="level3">
+<h3 class="anchored" data-anchor-id="for-production-systems">For Production Systems</h3>
+<ul>
+<li><strong>API costs</strong>: Pay per token, so more efficient tokenization = lower costs</li>
+<li><strong>Latency</strong>: Fewer tokens to process = faster inference</li>
+<li><strong>Memory</strong>: Smaller token sequences = lower memory footprint</li>
+</ul>
+</section>
+</section>
+<section id="should-you-train-your-own-tokenizer" class="level2">
+<h2 class="anchored" data-anchor-id="should-you-train-your-own-tokenizer">Should You Train Your Own Tokenizer?</h2>
+<p>After this evaluation, here’s my thinking:</p>
+<p><strong>Use AraModernBert if:</strong></p>
+<ul>
+<li>You’re working with Modern Standard Arabic or mixed dialects</li>
+<li>You want state-of-the-art efficiency out of the box</li>
+<li>You don’t have massive compute resources for training</li>
+</ul>
+<p><strong>Train your own if:</strong></p>
+<ul>
+<li>You have a very specific domain (medical, legal, etc.)</li>
+<li>You’re working with a specific dialect extensively (pure Egyptian, Levantine, etc.)</li>
+<li>You have unique requirements (handling tashkeel differently, etc.)</li>
+</ul>
+<p>For my Egyptian Arabic use case, I’m leaning toward using AraModernBert’s tokenizer as-is, since:</p>
+<ol type="1">
+<li>It already handles Egyptian dialect reasonably well</li>
+<li>The 50K vocabulary is large enough to be flexible</li>
+<li>Training a custom tokenizer requires significant effort and data</li>
+</ol>
+</section>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
+<ol type="1">
+<li><strong>Test on real data</strong>: Evaluate on actual Egyptian Arabic corpus (FineWeb Egyptian)</li>
+<li><strong>Compare with SentencePiece</strong>: Test a SentencePiece tokenizer trained on Arabic</li>
+<li><strong>Measure downstream performance</strong>: Tokenizer efficiency doesn’t always equal better model performance</li>
+<li><strong>Investigate tashkeel handling</strong>: How do these tokenizers handle diacritical marks?</li>
+</ol>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Tokenizer evaluation revealed that <strong>AraModernBert significantly outperforms AraBERT v2</strong> in efficiency metrics, with 15-71% fewer tokens needed for the same Arabic text.</p>
+<p>This translates to real cost savings and performance improvements in production systems.</p>
+<p>The key lesson: <strong>don’t assume all tokenizers are equal</strong>. A few hours of evaluation can save months of headaches and significant costs down the line.</p>
+</section>
+<section id="code-repository" class="level2">
+<h2 class="anchored" data-anchor-id="code-repository">Code Repository</h2>
+<p>The complete evaluation code is available as a simple function:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> evaluate_tokenizer(text, tokenizer):</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    number_of_tokens <span class="op">=</span> <span class="bu">len</span>(tokenizer.tokenize(text))</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    number_of_bytes <span class="op">=</span> <span class="bu">len</span>(text.encode(<span class="st">'utf-8'</span>))</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    number_of_words <span class="op">=</span> <span class="bu">len</span>(text.split(<span class="st">" "</span>))</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    fertility <span class="op">=</span> number_of_tokens <span class="op">/</span> number_of_words </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    compression_ratio <span class="op">=</span> number_of_bytes <span class="op">/</span> number_of_tokens </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        <span class="st">"fertility"</span>: fertility,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">"compression_ratio"</span>: compression_ratio,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="st">"total_tokens"</span>: number_of_tokens</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    }</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>this post was built with guide from Amazing <a href="https://solve.it.com/?via_id=t1hpiqbn">Solveit</a></p>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1257,7 +1181,7 @@ kareem
     </a>
   </li>  
     <li class="nav-item compact">
-    <a class="nav-link" href="../index.xml">
+    <a class="nav-link" href="../../index.xml">
       <i class="bi bi-rss" role="img">
 </i> 
     </a>

@@ -15,7 +15,370 @@
 <link>https://kareemai.com/til/</link>
 </image>
 <generator>quarto-1.8.25</generator>
-<lastBuildDate>Thu, 05 Jun 2025 21:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 20 Oct 2025 21:00:00 GMT</lastBuildDate>
+<item>
+  <title>Evaluating Arabic Tokenizers</title>
+  <dc:creator>kareem </dc:creator>
+  <link>https://kareemai.com/til/tils/2025-10-21.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>When working with Arabic language models, choosing the right tokenizer can significantly impact model performance and efficiency. In this post, I’ll share my experience comparing two popular Arabic tokenizers: <strong>AraModernBert</strong> and <strong>AraBERT v2</strong>.</p>
+</section>
+<section id="why-tokenizer-evaluation-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-tokenizer-evaluation-matters">Why Tokenizer Evaluation Matters</h2>
+<p>After reading the comprehensive guide on <a href="https://www.fast.ai/posts/2025-10-16-karpathy-tokenizers.html#token-efficiency">GPT tokenizers</a>, I realized that tokenization is often overlooked but critically important. Poor tokenization can lead to:</p>
+<ul>
+<li>Inefficient use of limited context windows</li>
+<li>Higher computational costs (you pay per token!)</li>
+<li>Worse model performance, especially for non-English languages</li>
+</ul>
+<p>For Arabic specifically, tokenization is challenging because:</p>
+<ul>
+<li>Arabic has rich morphology with prefixes and suffixes</li>
+<li>Different dialects (Egyptian, Levantine, Gulf) have varying vocabulary</li>
+<li>Diacritical marks (tashkeel) add complexity</li>
+<li>Tasks the needs Tashkeel like Speech synthesis Grammar checking (need tashkeel) like arabic poetry tasks ..etc</li>
+</ul>
+</section>
+<section id="the-evaluation-framework" class="level2">
+<h2 class="anchored" data-anchor-id="the-evaluation-framework">The Evaluation Framework</h2>
+<p>I built a simple evaluation function to measure tokenizer quality:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> evaluate_tokenizer(text, tokenizer):</span>
+<span id="cb1-2">    number_of_tokens <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(tokenizer.tokenize(text))</span>
+<span id="cb1-3">    number_of_bytes <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(text.encode(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'utf-8'</span>))</span>
+<span id="cb1-4">    number_of_words <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(text.split(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">" "</span>))</span>
+<span id="cb1-5">    fertility <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> number_of_tokens <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> number_of_words </span>
+<span id="cb1-6">    compression_ratio <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> number_of_bytes <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> number_of_tokens </span>
+<span id="cb1-7">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> {</span>
+<span id="cb1-8">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"fertility"</span>: fertility,</span>
+<span id="cb1-9">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"compression_ratio"</span>: compression_ratio,</span>
+<span id="cb1-10">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"total_tokens"</span>: number_of_tokens</span>
+<span id="cb1-11">    }</span></code></pre></div></div>
+<section id="key-metrics" class="level3">
+<h3 class="anchored" data-anchor-id="key-metrics">Key Metrics</h3>
+<ol type="1">
+<li><strong>Fertility Rate</strong> (tokens/word): Lower is better. Measures how many tokens are needed per word.</li>
+<li><strong>Compression Ratio</strong> (bytes/token): Higher is better. Measures how efficiently the tokenizer compresses text.</li>
+<li><strong>Total Tokens</strong>: The raw count for the given text.</li>
+</ol>
+</section>
+</section>
+<section id="the-contenders" class="level2">
+<h2 class="anchored" data-anchor-id="the-contenders">The Contenders</h2>
+<section id="aramodernbert" class="level3">
+<h3 class="anchored" data-anchor-id="aramodernbert">AraModernBert</h3>
+<ul>
+<li><strong>Vocabulary</strong>: 50,280 tokens</li>
+<li><strong>Training Data</strong>: 100GB of Arabic text</li>
+<li><strong>Architecture</strong>: ModernBERT with transtokenization</li>
+<li><strong>Context Window</strong>: 8,192 tokens</li>
+</ul>
+</section>
+<section id="arabert-v2" class="level3">
+<h3 class="anchored" data-anchor-id="arabert-v2">AraBERT v2</h3>
+<ul>
+<li><strong>Vocabulary</strong>: ~30,000 tokens</li>
+<li><strong>Training Data</strong>: 77GB of Arabic text</li>
+<li><strong>Architecture</strong>: BERT-base</li>
+<li><strong>Pre-segmentation</strong>: Uses Farasa segmenter</li>
+</ul>
+</section>
+</section>
+<section id="test-results" class="level2">
+<h2 class="anchored" data-anchor-id="test-results">Test Results</h2>
+<p>I tested both tokenizers on three different Arabic texts with Encoder only for now more to come later!:</p>
+<section id="test-1-modern-standard-arabic" class="level3">
+<h3 class="anchored" data-anchor-id="test-1-modern-standard-arabic">Test 1: Modern Standard Arabic</h3>
+<p><strong>Text</strong>: “مرحبا كيف حالك اليوم”</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Tokenizer</th>
+<th>Fertility</th>
+<th>Compression Ratio</th>
+<th>Total Tokens</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AraModernBert</td>
+<td>1.25</td>
+<td>7.4</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>AraBERT v2</td>
+<td>1.5</td>
+<td>6.17</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="test-2-egyptian-dialect" class="level3">
+<h3 class="anchored" data-anchor-id="test-2-egyptian-dialect">Test 2: Egyptian Dialect</h3>
+<p><strong>Text</strong>: “إزيك يا صاحبي عامل إيه”</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Tokenizer</th>
+<th>Fertility</th>
+<th>Compression Ratio</th>
+<th>Total Tokens</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AraModernBert</td>
+<td>1.2</td>
+<td>6.67</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>AraBERT v2</td>
+<td>1.4</td>
+<td>5.71</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="test-3-technicalformal-text" class="level3">
+<h3 class="anchored" data-anchor-id="test-3-technicalformal-text">Test 3: Technical/Formal Text</h3>
+<p><strong>Text</strong>: “الذكاء الاصطناعي يغير العالم بسرعة كبيرة”</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Tokenizer</th>
+<th>Fertility</th>
+<th>Compression Ratio</th>
+<th>Total Tokens</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AraModernBert</td>
+<td>1.17</td>
+<td>10.71</td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td>AraBERT v2</td>
+<td>2.0</td>
+<td>6.25</td>
+<td><strong>12</strong></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="key-findings" class="level2">
+<h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
+<section id="aramodernbert-is-consistently-more-efficient" class="level3">
+<h3 class="anchored" data-anchor-id="aramodernbert-is-consistently-more-efficient">1. AraModernBert is Consistently More Efficient</h3>
+<p>Across all three tests, AraModernBert showed:</p>
+<ul>
+<li><p><strong>Lower fertility</strong> (15-42% fewer tokens per word)</p></li>
+<li><p><strong>Higher compression ratio</strong> (14-71% better compression)</p></li>
+<li><p><strong>Fewer total tokens</strong> needed for the same text</p></li>
+</ul>
+</section>
+<section id="the-gap-widens-with-complex-text" class="level3">
+<h3 class="anchored" data-anchor-id="the-gap-widens-with-complex-text">2. The Gap Widens with Complex Text</h3>
+<p>The most dramatic difference appeared in Test 3 (technical text):</p>
+<ul>
+<li><p>AraModernBert: 7 tokens</p></li>
+<li><p>AraBERT v2: 12 tokens (<strong>71% more!</strong>)</p></li>
+</ul>
+<p>This means for an 8K context window, AraModernBert can fit significantly more Arabic text.</p>
+</section>
+<section id="both-handle-dialects-reasonably-well" class="level3">
+<h3 class="anchored" data-anchor-id="both-handle-dialects-reasonably-well">3. Both Handle Dialects Reasonably Well</h3>
+<p>The Egyptian dialect test (Test 2) showed both tokenizers maintained similar efficiency to MSA, though AraModernBert still outperformed.</p>
+</section>
+</section>
+<section id="why-aramodernbert-performs-better" class="level2">
+<h2 class="anchored" data-anchor-id="why-aramodernbert-performs-better">Why AraModernBert Performs Better</h2>
+<section id="larger-vocabulary-50k-vs-30k-tokens" class="level3">
+<h3 class="anchored" data-anchor-id="larger-vocabulary-50k-vs-30k-tokens">Larger Vocabulary (50K vs 30K tokens)</h3>
+<p>More tokens means the model can learn longer, more common Arabic word chunks as single tokens.</p>
+<p>This is especially important for Arabic’s morphologically rich structure.</p>
+</section>
+<section id="more-training-data-100gb-vs-77gb" class="level3">
+<h3 class="anchored" data-anchor-id="more-training-data-100gb-vs-77gb">More Training Data (100GB vs 77GB)</h3>
+<p>More data leads to better byte-pair encoding merges that reflect actual Arabic usage patterns.</p>
+</section>
+<section id="modern-architecture" class="level3">
+<h3 class="anchored" data-anchor-id="modern-architecture">Modern Architecture</h3>
+<p>AraModernBert uses transtokenization - a technique that optimally initializes embeddings when creating the tokenizer, leading to better learned representations.</p>
+</section>
+<section id="recency-advantage" class="level3">
+<h3 class="anchored" data-anchor-id="recency-advantage">Recency Advantage</h3>
+<p>Trained in 2024 vs 2020, AraModernBert benefits from more recent data and improved training techniques.</p>
+</section>
+</section>
+<section id="practical-implications" class="level2">
+<h2 class="anchored" data-anchor-id="practical-implications">Practical Implications</h2>
+<section id="for-model-training" class="level3">
+<h3 class="anchored" data-anchor-id="for-model-training">For Model Training</h3>
+<ul>
+<li><strong>Context efficiency</strong>: AraModernBert lets you fit ~40% more Arabic text in the same context window</li>
+<li><strong>Cost savings</strong>: Fewer tokens = lower training costs</li>
+<li><strong>Better performance</strong>: More efficient tokenization often correlates with better downstream task performance</li>
+</ul>
+</section>
+<section id="for-production-systems" class="level3">
+<h3 class="anchored" data-anchor-id="for-production-systems">For Production Systems</h3>
+<ul>
+<li><strong>API costs</strong>: Pay per token, so more efficient tokenization = lower costs</li>
+<li><strong>Latency</strong>: Fewer tokens to process = faster inference</li>
+<li><strong>Memory</strong>: Smaller token sequences = lower memory footprint</li>
+</ul>
+</section>
+</section>
+<section id="should-you-train-your-own-tokenizer" class="level2">
+<h2 class="anchored" data-anchor-id="should-you-train-your-own-tokenizer">Should You Train Your Own Tokenizer?</h2>
+<p>After this evaluation, here’s my thinking:</p>
+<p><strong>Use AraModernBert if:</strong></p>
+<ul>
+<li>You’re working with Modern Standard Arabic or mixed dialects</li>
+<li>You want state-of-the-art efficiency out of the box</li>
+<li>You don’t have massive compute resources for training</li>
+</ul>
+<p><strong>Train your own if:</strong></p>
+<ul>
+<li>You have a very specific domain (medical, legal, etc.)</li>
+<li>You’re working with a specific dialect extensively (pure Egyptian, Levantine, etc.)</li>
+<li>You have unique requirements (handling tashkeel differently, etc.)</li>
+</ul>
+<p>For my Egyptian Arabic use case, I’m leaning toward using AraModernBert’s tokenizer as-is, since:</p>
+<ol type="1">
+<li>It already handles Egyptian dialect reasonably well</li>
+<li>The 50K vocabulary is large enough to be flexible</li>
+<li>Training a custom tokenizer requires significant effort and data</li>
+</ol>
+</section>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
+<ol type="1">
+<li><strong>Test on real data</strong>: Evaluate on actual Egyptian Arabic corpus (FineWeb Egyptian)</li>
+<li><strong>Compare with SentencePiece</strong>: Test a SentencePiece tokenizer trained on Arabic</li>
+<li><strong>Measure downstream performance</strong>: Tokenizer efficiency doesn’t always equal better model performance</li>
+<li><strong>Investigate tashkeel handling</strong>: How do these tokenizers handle diacritical marks?</li>
+</ol>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Tokenizer evaluation revealed that <strong>AraModernBert significantly outperforms AraBERT v2</strong> in efficiency metrics, with 15-71% fewer tokens needed for the same Arabic text.</p>
+<p>This translates to real cost savings and performance improvements in production systems.</p>
+<p>The key lesson: <strong>don’t assume all tokenizers are equal</strong>. A few hours of evaluation can save months of headaches and significant costs down the line.</p>
+</section>
+<section id="code-repository" class="level2">
+<h2 class="anchored" data-anchor-id="code-repository">Code Repository</h2>
+<p>The complete evaluation code is available as a simple function:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> evaluate_tokenizer(text, tokenizer):</span>
+<span id="cb2-2">    number_of_tokens <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(tokenizer.tokenize(text))</span>
+<span id="cb2-3">    number_of_bytes <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(text.encode(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'utf-8'</span>))</span>
+<span id="cb2-4">    number_of_words <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(text.split(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">" "</span>))</span>
+<span id="cb2-5">    fertility <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> number_of_tokens <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> number_of_words </span>
+<span id="cb2-6">    compression_ratio <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> number_of_bytes <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> number_of_tokens </span>
+<span id="cb2-7">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> {</span>
+<span id="cb2-8">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"fertility"</span>: fertility,</span>
+<span id="cb2-9">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"compression_ratio"</span>: compression_ratio,</span>
+<span id="cb2-10">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"total_tokens"</span>: number_of_tokens</span>
+<span id="cb2-11">    }</span></code></pre></div></div>
+<p>this post was built with guide from Amazing <a href="https://solve.it.com/?via_id=t1hpiqbn">Solveit</a></p>
+
+
+</section>
+
+ ]]></description>
+  <category>blogging</category>
+  <category>til</category>
+  <category>nlp</category>
+  <category>ai</category>
+  <guid>https://kareemai.com/til/tils/2025-10-21.html</guid>
+  <pubDate>Mon, 20 Oct 2025 21:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/til/tils/til.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Connecting with ideas in ML</title>
   <dc:creator>kareem </dc:creator>

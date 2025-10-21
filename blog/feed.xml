@@ -583,6 +583,39 @@ Media Manager</code></pre>
   <media:content url="https://kareemai.com/blog/posts/life_style/images/vision_read.png" medium="image" type="image/png" height="137" width="144"/>
 </item>
 <item>
+  <title>Late Interaction and ColPali</title>
+  <dc:creator>kareem </dc:creator>
+  <link>https://kareemai.com/blog/posts/nlp/embedding_world/late_interaction.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<ul>
+<li>what is early interaction</li>
+<li>what is late interaction</li>
+<li>Reasoning BERT</li>
+<li>mvbert</li>
+<li>ColPali</li>
+<li>colbert</li>
+<li>pylate</li>
+<li>PLAID</li>
+</ul>
+
+
+
+ ]]></description>
+  <category>blogging</category>
+  <category>embedding</category>
+  <category>minishlab</category>
+  <category>model2vec</category>
+  <category>arabic</category>
+  <guid>https://kareemai.com/blog/posts/nlp/embedding_world/late_interaction.html</guid>
+  <pubDate>Wed, 14 May 2025 21:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/images/minishlab.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
   <title>Bojji &amp; Zarra Embedding models</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/blog/posts/minishlab/blog_zaraah.html</link>
@@ -3309,60 +3342,6 @@ Inputs are two sets of sentences from two different languages. For each sentence
  ]]></description>
   <guid>https://kareemai.com/blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html</guid>
   <pubDate>Fri, 27 Oct 2023 22:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>tiny-gte “Tiny, yet powerful, it is small in size but packs a lot of power.”</title>
-  <link>https://kareemai.com/blog/posts/mteb_encoding/tiny-gte_transformer_model.html</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="table-of-contents" class="level2">
-<h2 class="anchored" data-anchor-id="table-of-contents">Table of contents</h2>
-<p>#definition : This is a&nbsp;<a href="https://www.sbert.net/">sentence-transformers</a>&nbsp;model: It maps sentences &amp; paragraphs to a 384 dimensional dense vector space and can be used for tasks like clustering or semantic search. It is distilled from&nbsp;<code>thenlper/gte-small</code>, with comparable (slightly worse) performance at around half the size.</p>
-</section>
-<section id="details" class="level2">
-<h2 class="anchored" data-anchor-id="details">Details</h2>
-<ul>
-<li>It’s around ~45MB very small compared to other models like MiniLM-L6-V2 which is equal to ~80 MB</li>
-<li>Embedding vector size 384d</li>
-<li>BERT based</li>
-<li>Distilied from thenlper/gte-small,</li>
-</ul>
-</section>
-<section id="notice-about-using-small-size" class="level2">
-<h2 class="anchored" data-anchor-id="notice-about-using-small-size">Notice about using small size</h2>
-</section>
-<section id="use-cases" class="level2">
-<h2 class="anchored" data-anchor-id="use-cases">Use Cases</h2>
-</section>
-<section id="todo" class="level1">
-<h1>Todo</h1>
-<ol type="1">
-<li><label><input type="checkbox" checked="">Explain the MTEB</label>
-<ol type="1">
-<li>Add the link of it into the this blog</li>
-</ol></li>
-<li>Explain fastembed</li>
-<li>Make comparison between tiny-gte and small gte</li>
-<li>Add the small-gte-4096 comparison</li>
-</ol>
-</section>
-<section id="references" class="level1">
-<h1>References</h1>
-<ul>
-<li>https://huggingface.co/TaylorAI/gte-tiny</li>
-<li>https://www.linkedin.com/posts/prithivirajdamodaran_%3F%3F%3F%3F-%3F%3F%3F%3F-%3F%3F%3F%3F%3F-%3F%3F%3F%3F-activity-7120279840569597952-iwc-/?utm_source=share&amp;utm_medium=member_desktop</li>
-</ul>
-
-
-</section>
-
- ]]></description>
-  <guid>https://kareemai.com/blog/posts/mteb_encoding/tiny-gte_transformer_model.html</guid>
-  <pubDate>Fri, 20 Oct 2023 21:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
