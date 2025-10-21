@@ -427,7 +427,7 @@ font-style: inherit;">"total_tokens"</span>: number_of_tokens</span>
   <category>til</category>
   <guid>https://kareemai.com/til/tils/2025-06-06-til.html</guid>
   <pubDate>Thu, 05 Jun 2025 21:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/til/tils" medium="image"/>
+  <media:content url="https://kareemai.com/til/tils/til.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Pylate Day 1</title>
@@ -666,7 +666,7 @@ font-style: inherit;"># process each negative document</span></span></code></pre
   <category>til</category>
   <guid>https://kareemai.com/til/tils/2025-05-28-til.html</guid>
   <pubDate>Tue, 27 May 2025 21:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/til/tils" medium="image"/>
+  <media:content url="https://kareemai.com/til/tils/til.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>RAG RAPTOR: Complete Guide to Meta’s RAPTOR RAG, DFloat11 Compression &amp; Pyrefly Type Checker</title>
