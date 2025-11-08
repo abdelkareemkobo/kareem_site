@@ -22,7 +22,7 @@
   </url>
   <url>
     <loc>https://kareemai.com/til/tils/2025-05-20-til.html</loc>
-    <lastmod>2025-05-23T15:02:31.097Z</lastmod>
+    <lastmod>2025-11-01T12:43:21.889Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/speech_recognition/my_dream_job_at_tarteel.html</loc>
@@ -41,92 +41,96 @@
     <lastmod>2025-02-05T03:18:26.957Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/blog/posts/products_reviews/Huawei_mate_pad_11.html</loc>
+    <loc>https://kareemai.com/blog/posts/products_reviews/Huawei_watch_gt_4_experience.html</loc>
     <lastmod>2025-02-05T03:18:26.954Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/posts/nlp/embedding_world/late_interaction.html</loc>
-    <lastmod>2025-10-08T09:32:38.308Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/posts/mteb_encoding/tiny-gte_transformer_model.html</loc>
-    <lastmod>2025-02-05T03:18:26.953Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html</loc>
-    <lastmod>2025-02-05T03:18:26.942Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/posts/math/math_skills_for_AI.html</loc>
-    <lastmod>2025-02-05T03:18:26.942Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/posts/life_style/digital_minimalisim_arabic.html</loc>
-    <lastmod>2025-02-05T05:23:39.959Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/posts/life_style/protienai.html</loc>
-    <lastmod>2025-09-11T01:57:45.684Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/posts/life_style/kamcalorie.html</loc>
-    <lastmod>2025-02-05T03:18:26.941Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/posts/life_style/fake_graviety.html</loc>
-    <lastmod>2025-02-05T03:18:26.937Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/posts/life_style/back_to_rss.html</loc>
-    <lastmod>2025-06-10T12:00:43.676Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/posts/fl/what_is_federated_learning.html</loc>
-    <lastmod>2025-02-05T05:24:16.562Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/publish.html</loc>
-    <lastmod>2025-02-05T03:18:26.967Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/index.html</loc>
-    <lastmod>2025-10-08T02:35:12.282Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/papers.html</loc>
-    <lastmod>2025-06-14T17:23:51.646Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/feed.html</loc>
-    <lastmod>2025-10-08T02:17:58.953Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/posts/courses/havrard CS197 AI research experiences.html</loc>
-    <lastmod>2025-02-05T03:18:26.932Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/posts/ds_and_algo/master_ds.html</loc>
-    <lastmod>2025-02-05T03:18:26.933Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/posts/life_style/why_I_am_blogging.html</loc>
-    <lastmod>2025-02-05T03:18:26.941Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/posts/life_style/gpuvec.html</loc>
-    <lastmod>2025-04-06T23:49:08.304Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/posts/mteb_encoding/my_little_dargon.html</loc>
-    <lastmod>2025-02-05T03:18:26.953Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/products_reviews/Huawei freebuds 5i.html</loc>
     <lastmod>2025-02-05T03:18:26.954Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/blog/posts/products_reviews/Huawei_watch_gt_4_experience.html</loc>
+    <loc>https://kareemai.com/blog/posts/mteb_encoding/my_little_dargon.html</loc>
+    <lastmod>2025-02-05T03:18:26.953Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/life_style/gpuvec.html</loc>
+    <lastmod>2025-04-06T23:49:08.304Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/life_style/why_I_am_blogging.html</loc>
+    <lastmod>2025-02-05T03:18:26.941Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/ds_and_algo/master_ds.html</loc>
+    <lastmod>2025-02-05T03:18:26.933Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/courses/havrard CS197 AI research experiences.html</loc>
+    <lastmod>2025-02-05T03:18:26.932Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/feed.html</loc>
+    <lastmod>2025-10-08T02:17:58.953Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/papers.html</loc>
+    <lastmod>2025-06-14T17:23:51.646Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/index.html</loc>
+    <lastmod>2025-10-08T02:35:12.282Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/publish.html</loc>
+    <lastmod>2025-02-05T03:18:26.967Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/fl/what_is_federated_learning.html</loc>
+    <lastmod>2025-02-05T05:24:16.562Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/life_style/back_to_rss.html</loc>
+    <lastmod>2025-06-10T12:00:43.676Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/life_style/fake_graviety.html</loc>
+    <lastmod>2025-02-05T03:18:26.937Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/life_style/kamcalorie.html</loc>
+    <lastmod>2025-02-05T03:18:26.941Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/life_style/protienai.html</loc>
+    <lastmod>2025-09-11T01:57:45.684Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/life_style/digital_minimalisim_arabic.html</loc>
+    <lastmod>2025-02-05T05:23:39.959Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/math/math_skills_for_AI.html</loc>
+    <lastmod>2025-02-05T03:18:26.942Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html</loc>
+    <lastmod>2025-02-05T03:18:26.942Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/mteb_encoding/tiny-gte_transformer_model.html</loc>
+    <lastmod>2025-02-05T03:18:26.953Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/nlp/embedding_world/late_interaction.html</loc>
+    <lastmod>2025-10-08T09:32:38.308Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/products_reviews/Huawei_mate_pad_11.html</loc>
     <lastmod>2025-02-05T03:18:26.954Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/products_reviews/Huawei freebuds 7i.html</loc>
+    <lastmod>2025-11-08T00:05:43.876Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/seo/how_i_use_nlp_for_seo.html</loc>
@@ -158,6 +162,6 @@
   </url>
   <url>
     <loc>https://kareemai.com/til/tils/2025-10-21.html</loc>
-    <lastmod>2025-10-21T05:28:12.567Z</lastmod>
+    <lastmod>2025-11-01T12:53:00.069Z</lastmod>
   </url>
 </urlset>
