@@ -15,7 +15,129 @@
 <link>https://kareemai.com/til/</link>
 </image>
 <generator>quarto-1.8.26</generator>
-<lastBuildDate>Mon, 20 Oct 2025 21:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 13 Dec 2025 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>Rust for DataScience 2026 - TIL</title>
+  <dc:creator>kareem </dc:creator>
+  <link>https://kareemai.com/til/tils/2025-12-14.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="rust-for-data-science" class="level2">
+<h2 class="anchored" data-anchor-id="rust-for-data-science">Rust for Data science</h2>
+<p>Yesterday, I had and idea about creating a keyword spell checker for Arabic and I was trying to contribute to المعلم القرانئ project which needs some preprocessing pipelines and multiple projects that i am very curious how it’s built in AI and some of them are : 1. Polars : it’s very efficient and interesting project I use it daily 2. Qdrant: my main vector database 3. Fast-palid : multivector late interaction indexing built with rust And the list goes from inference engine for static embedding and much more.</p>
+</section>
+<section id="رست-للغلابة---أحمد-فرغل" class="level2">
+<h2 class="anchored" data-anchor-id="رست-للغلابة---أحمد-فرغل">رست للغلابة - أحمد فرغل</h2>
+<p>I found Ahmed plalist about rust in Arabic speakers it’s streaming videos around 3 hours each. I started with the first one because I tried to learn rust two times before and didn’t understand it and I read the book 3 years ago.</p>
+<p>The Introduction and the way of explaining is very nice and cool one. I really love the idea of series : it’s not just rust as language but Rust with programming thinking about how to design and Operating system works.. it makes the concepts a lot easier and practical. I loved how it compare rust features to other languages and how he explained how each concept affect other concept. In the first video he has explaining how something like</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb1-1">Let Data<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb1-2">    a<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">u8</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb1-3">    b<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">i32</span></span>
+<span id="cb1-4"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span></span></code></pre></div></div>
+<p>What is the align , and their size and how it’s added to memory in efficient way and why this is different from C language ..etc Why the order doesn’t matter for rust compiler. How memory is working like heap, stack , system calls , word, bytes how the compiler see them and use precompile, the explaining of why macro in rust exist and a lot of concepts I encountered before was very hard to me now they makes sense.</p>
+<p>I will continue the series it’s rare one and the good thing he teach in Arabic ⭐⭐⭐ ### Rust Project for ML I plan to do the following projects after I get some knowledge for rust 1. Better Docs for Rust and Python with code embedded search with static embedding model 1. The rust doc is amazing compared to the poor python documentation it’s very bad and ugly one! 2. Lialia : Arabic keywords checker with Lexical search 3. Bm25 with Rust 1. BMX from mixeadbread in Rust 4. Pyversity in Rust 5. Semhash + Rust + Qdrant 6. RSS reader with DSPY 7. Mgrep in Rust</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ol type="1">
+<li><a href="https://youtube.com/playlist?list=PLald6EODoOJU0GMuYHlkS9MLhTPE7HiaT&amp;si=3O-9VHNwmSN5M13t">رست للغلابة</a></li>
+</ol>
+
+
+</section>
+
+ ]]></description>
+  <category>blogging</category>
+  <category>til</category>
+  <guid>https://kareemai.com/til/tils/2025-12-14.html</guid>
+  <pubDate>Sat, 13 Dec 2025 22:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/til/tils/til.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Revisit the Basics of Arabic NLP</title>
+  <dc:creator>kareem </dc:creator>
+  <link>https://kareemai.com/til/tils/2025-12-13.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<ul>
+<li>When I was a student I was learning about classical machine learning and NLP I encountered a lot of concept like:</li>
+<li>TF-ID</li>
+<li>Bm25 and other concept I skimmed them and get the idea but I didn’t apply it into Arabic with practical code after these years</li>
+<li>I was reading about the following topics</li>
+</ul>
+<ol type="1">
+<li>Lexical Embedding</li>
+<li>MiniCol from Qdrant</li>
+<li>StaticEmbedding (minislab and sbert) I understand the new advanced that are related to Bert and Transformer but the basics about sparse embedding are totally missing like how they are using n-gram to subsample for a large space then train an MLP to simulate a dense embedding to create a faster model what are the parameters of this architecture how to optimize it…etc all these knowledge are not connect well. So I want to revisit these concepts again in roadmap</li>
+</ol>
+<ul>
+<li>word2vec</li>
+<li>n-gram</li>
+<li>stemming</li>
+<li>TF-IDF</li>
+<li>BM25
+<ul>
+<li>BMX</li>
+</ul></li>
+<li>Sparse embedding
+<ul>
+<li>splade</li>
+<li>train a sparse embedding with sbert This is my initial thoughts but I think a better way it to start reading this book and try to implement the code for Arabic NLP: Speech and Language Processing An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition with Language Models Third Edition draft Daniel Jurafsky Stanford University James H. Martin University of Colorado at Boulder</li>
+</ul></li>
+</ul>
+<section id="chapter-summary-and-what-to-do-next" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-summary-and-what-to-do-next">Chapter Summary and what to do next</h2>
+<ul>
+<li>the chapter was an introduction about words, tokens , BPE and tokenization and some linguistics stuff, and how is the Unicode and encoding for different language is done which was nice intro.</li>
+<li>How to use regular expression to do some NLP analysis.</li>
+<li>what I really like most was the Minimum Edit Distance and Alignment of words. <strong>The problem I had is implement the algorhtim yourself needs some problem solving and I didn’t practice problem solving for a long time and my skills is no there yet</strong> **** I tried for 30 minutes to implement minimum distance but failed. I opened a website for leetcode problems is more organized and minimal called <a href="neetcode.com">neetcode</a> I solved the first 11 problems 3 was very easy, and other were medium and the good thing that I had solutions that are not in the solutions sections and my focus on how to use python collections methods like counter is good. The code solves the problem but it’s not the fastest thing. But I feel good that my patience and thinking is better. ![[Screenshot_2025-12-14-10-35-27-07_e4424258c8b8649f6e67d283a50a2cbc.jpg]]</li>
+<li>my month plan will be to finish all the 150 problem and do a lot of dynamic programming (DP) because the minimum edit distance and viterbi in the end of the first chapter will be implemented in DP and other things I know also needs DP.</li>
+<li>After that i will start practice on the following alternative to leetcode but for machine learning <strong>deep-ml.com</strong> ![[Pasted image 20251214122627.png]] ### Build a Keyword checker in Arabic I get a nice idea while learning about alignment that I could build my own keyword spell checker for my language that is more smart than the current keyboards by creating the following features:</li>
+</ul>
+<ol type="1">
+<li>Recommend technical meaning
+<ol type="1">
+<li>If I said word like embedding model it can suggest =&gt; نماذج التضمين</li>
+</ol></li>
+<li>Recommend keywords related to my persona (engineer or doctor..etc)</li>
+<li>Federated Learning Keyboard like gboard</li>
+<li>Arabic Grammars corrected</li>
+<li>Automatic learning based on user interactions I thought it will be nice even to implement this in rust :) 🦀🦀 ### References</li>
+<li><a href="https://web.stanford.edu/~jurafsky/slp3/">The NLP book</a></li>
+</ol>
+
+
+</section>
+
+ ]]></description>
+  <category>blogging</category>
+  <category>til</category>
+  <guid>https://kareemai.com/til/tils/2025-12-13.html</guid>
+  <pubDate>Fri, 12 Dec 2025 22:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/til/tils/til.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Evaluating Arabic Tokenizers</title>
   <dc:creator>kareem </dc:creator>
