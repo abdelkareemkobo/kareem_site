@@ -1,22 +1,5 @@
 [
   {
-    "listing": "/til/index.html",
-    "items": [
-      "/til/tils/2025-12-14.html",
-      "/til/tils/2025-12-13.html",
-      "/til/tils/2025-10-21.html",
-      "/til/tils/2025-06-06-til.html",
-      "/til/tils/2025-05-28-til.html",
-      "/til/tils/2025-05-25-til.html",
-      "/til/tils/2025-05-23-til.html",
-      "/til/tils/2025-05-21-til.html",
-      "/til/tils/2025-05-20-til.html",
-      "/til/tils/2025-05-19-til.html",
-      "/til/tils/2025-05-18-til.html",
-      "/til/tils/2025-05-17-til.html"
-    ]
-  },
-  {
     "listing": "/blog/feed.html",
     "items": [
       "/blog/posts/minishlab/pyversity_qdrant.html",
@@ -46,6 +29,24 @@
       "/blog/posts/courses/havrard CS197 AI research experiences.html",
       "/blog/posts/life_style/why_I_am_blogging.html",
       "/blog/posts/seo/how_i_use_nlp_for_seo.html"
+    ]
+  },
+  {
+    "listing": "/til/index.html",
+    "items": [
+      "/til/tils/2025-12-15.html",
+      "/til/tils/2025-12-14.html",
+      "/til/tils/2025-12-13.html",
+      "/til/tils/2025-10-21.html",
+      "/til/tils/2025-06-06-til.html",
+      "/til/tils/2025-05-28-til.html",
+      "/til/tils/2025-05-25-til.html",
+      "/til/tils/2025-05-23-til.html",
+      "/til/tils/2025-05-21-til.html",
+      "/til/tils/2025-05-20-til.html",
+      "/til/tils/2025-05-19-til.html",
+      "/til/tils/2025-05-18-til.html",
+      "/til/tils/2025-05-17-til.html"
     ]
   },
   {
