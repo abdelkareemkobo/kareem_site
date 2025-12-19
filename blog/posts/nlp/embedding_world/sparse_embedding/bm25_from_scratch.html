@@ -156,15 +156,11 @@ window.Quarto = {
 <meta property="og:image" content="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/bm25.png">
 <meta property="og:site_name" content="عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
 <meta property="og:locale" content="ar_AR">
-<meta property="og:image:height" content="1272">
-<meta property="og:image:width" content="1877">
 <meta name="twitter:title" content="BM25 Explained for Hybrid Search and Rag – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
 <meta name="twitter:description" content="BM25 explained with python code implementation and math examples">
 <meta name="twitter:image" content="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/bm25.png">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image-height" content="1272">
-<meta name="twitter:image-width" content="1877">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -480,24 +476,25 @@ window.Quarto = {
 <section id="sample-documents" class="level2">
 <h2 class="anchored" data-anchor-id="sample-documents">1. Sample Documents</h2>
 <p>Let’s start with a small collection of documents to search through.</p>
-<div id="a0eab7dd" class="cell" data-execution_count="1">
+<div id="a0eab7dd" class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>documents <span class="op">=</span> [</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Python is a programming language"</span>,</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"I love Python programming"</span>,</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Java is also a programming language"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Java is also a programming language"</span>,</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="tokenization" class="level2">
 <h2 class="anchored" data-anchor-id="tokenization">2. Tokenization</h2>
 <p>First, we need to break text into individual words (tokens). We’ll convert to lowercase for case-insensitive matching.</p>
-<div id="61d0f48d" class="cell" data-execution_count="2">
+<div id="61d0f48d" class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tokenize(text):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Convert text to lowercase and split into words."""</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> text.lower().split()</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Test tokenization</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Example:"</span>, tokenize(documents[<span class="dv">0</span>]))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Test tokenization</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Example:"</span>, tokenize(documents[<span class="dv">0</span>]))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Example: ['python', 'is', 'a', 'programming', 'language']</code></pre>
 </div>
@@ -507,23 +504,25 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="term-frequency-tf">3. Term Frequency (TF)</h2>
 <p>For each document, we count how many times each word appears.</p>
 <p>We’ll use Python’s <code>Counter</code> for this.</p>
-<div id="c37f85d8" class="cell" data-execution_count="3">
+<div id="c37f85d8" class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> collections <span class="im">import</span> Counter</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compute_term_frequencies(documents):</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Compute term frequency for each document."""</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    doc_term_freqs <span class="op">=</span> []</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> doc <span class="kw">in</span> documents:</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        tokens <span class="op">=</span> tokenize(doc)</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        term_freq <span class="op">=</span> Counter(tokens)</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        doc_term_freqs.append(term_freq)</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> doc_term_freqs</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>all_docs_terms <span class="op">=</span> compute_term_frequencies(documents)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compute_term_frequencies(documents):</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Compute term frequency for each document."""</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    doc_term_freqs <span class="op">=</span> []</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> doc <span class="kw">in</span> documents:</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        tokens <span class="op">=</span> tokenize(doc)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        term_freq <span class="op">=</span> Counter(tokens)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>        doc_term_freqs.append(term_freq)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> doc_term_freqs</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Display term frequencies for each document</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, tf <span class="kw">in</span> <span class="bu">enumerate</span>(all_docs_terms):</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Document </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span><span class="bu">dict</span>(tf)<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>all_docs_terms <span class="op">=</span> compute_term_frequencies(documents)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Display term frequencies for each document</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, tf <span class="kw">in</span> <span class="bu">enumerate</span>(all_docs_terms):</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Document </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span><span class="bu">dict</span>(tf)<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Document 0: {'python': 1, 'is': 1, 'a': 1, 'programming': 1, 'language': 1}
 Document 1: {'i': 1, 'love': 1, 'python': 1, 'programming': 1}
@@ -534,7 +533,7 @@ Document 2: {'java': 1, 'is': 1, 'also': 1, 'a': 1, 'programming': 1, 'language'
 <section id="document-frequency-df" class="level2">
 <h2 class="anchored" data-anchor-id="document-frequency-df">4. Document Frequency (DF)</h2>
 <p>Document frequency counts in how many documents each term appears. This helps identify common vs.&nbsp;rare words.</p>
-<div id="5ea190db" class="cell" data-execution_count="4">
+<div id="5ea190db" class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compute_document_frequency(doc_term_freqs):</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Count how many documents each term appears in."""</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> {}</span>
@@ -543,8 +542,9 @@ Document 2: {'java': 1, 'is': 1, 'also': 1, 'a': 1, 'programming': 1, 'language'
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>            df[term] <span class="op">=</span> df.get(term, <span class="dv">0</span>) <span class="op">+</span> <span class="dv">1</span></span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> df</span>
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> compute_document_frequency(all_docs_terms)</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Document Frequencies:"</span>, df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> compute_document_frequency(all_docs_terms)</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Document Frequencies:"</span>, df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Document Frequencies: {'python': 2, 'is': 2, 'a': 2, 'programming': 3, 'language': 2, 'i': 1, 'love': 1, 'java': 1, 'also': 1}</code></pre>
 </div>
@@ -570,20 +570,22 @@ Document 2: {'java': 1, 'is': 1, 'also': 1, 'a': 1, 'programming': 1, 'language'
 <p>The log smooths this out so differences are more reasonable.</p>
 <p>The <code>+0.5</code> terms are a <strong>smoothing trick</strong> to handle edge cases (like when a word appears in all or no documents).</p>
 <hr>
-<div id="b5dd5487" class="cell" data-execution_count="5">
+<div id="b5dd5487" class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compute_idf(term, df, num_docs):</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Calculate IDF score for a term."""</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> term <span class="kw">not</span> <span class="kw">in</span> df:</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">0</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    df_term <span class="op">=</span> df[term]</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> math.log((num_docs <span class="op">-</span> df_term <span class="op">+</span> <span class="fl">0.5</span>) <span class="op">/</span> (df_term <span class="op">+</span> <span class="fl">0.5</span>))</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Test IDF scores</span></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"IDF('python'): </span><span class="sc">{</span>compute_idf(<span class="st">'python'</span>, df, <span class="bu">len</span>(documents))<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"IDF('java'): </span><span class="sc">{</span>compute_idf(<span class="st">'java'</span>, df, <span class="bu">len</span>(documents))<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"IDF('programming'): </span><span class="sc">{</span>compute_idf(<span class="st">'programming'</span>, df, <span class="bu">len</span>(documents))<span class="sc">:.4f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compute_idf(term, df, num_docs):</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Calculate IDF score for a term."""</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> term <span class="kw">not</span> <span class="kw">in</span> df:</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">0</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    df_term <span class="op">=</span> df[term]</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> math.log((num_docs <span class="op">-</span> df_term <span class="op">+</span> <span class="fl">0.5</span>) <span class="op">/</span> (df_term <span class="op">+</span> <span class="fl">0.5</span>))</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Test IDF scores</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"IDF('python'): </span><span class="sc">{</span>compute_idf(<span class="st">'python'</span>, df, <span class="bu">len</span>(documents))<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"IDF('java'): </span><span class="sc">{</span>compute_idf(<span class="st">'java'</span>, df, <span class="bu">len</span>(documents))<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"IDF('programming'): </span><span class="sc">{</span>compute_idf(<span class="st">'programming'</span>, df, <span class="bu">len</span>(documents))<span class="sc">:.4f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>IDF('python'): -0.5108
 IDF('java'): 0.5108
@@ -657,14 +659,15 @@ IDF('programming'): -1.9459</code></pre>
 <section id="average-document-length" class="level2">
 <h2 class="anchored" data-anchor-id="average-document-length">6. Average Document Length</h2>
 <p>BM25 normalizes scores by document length to avoid bias toward longer documents.</p>
-<div id="a77c0e20" class="cell" data-execution_count="6">
+<div id="a77c0e20" class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compute_avg_doc_length(doc_term_freqs):</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Calculate average document length (in terms)."""</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    total_length <span class="op">=</span> <span class="bu">sum</span>(<span class="bu">len</span>(doc_tf) <span class="cf">for</span> doc_tf <span class="kw">in</span> doc_term_freqs)</span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> total_length <span class="op">/</span> <span class="bu">len</span>(doc_term_freqs)</span>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>avg_doc_len <span class="op">=</span> compute_avg_doc_length(all_docs_terms)</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Average document length: </span><span class="sc">{</span>avg_doc_len<span class="sc">:.2f}</span><span class="ss"> unique terms"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>avg_doc_len <span class="op">=</span> compute_avg_doc_length(all_docs_terms)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Average document length: </span><span class="sc">{</span>avg_doc_len<span class="sc">:.2f}</span><span class="ss"> unique terms"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Average document length: 5.00 unique terms</code></pre>
 </div>
@@ -719,13 +722,13 @@ IDF('programming'): -1.9459</code></pre>
 <li><p><span class="math inline">\(b = 0\)</span>: Document length is ignored</p></li>
 <li><p><span class="math inline">\(b = 1\)</span>: Full length normalization</p></li>
 </ul>
-<div id="a4186497" class="cell" data-execution_count="7">
+<div id="a4186497" class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> bm25_term_score(term, doc_tf, idf_score, doc_length, avg_doc_len, k1<span class="op">=</span><span class="fl">1.5</span>, b<span class="op">=</span><span class="fl">0.75</span>):</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Calculate BM25 score for a single term in a document."""</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    tf <span class="op">=</span> doc_tf.get(term, <span class="dv">0</span>)</span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> tf <span class="op">==</span> <span class="dv">0</span>:</span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">0</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    numerator <span class="op">=</span> idf_score <span class="op">*</span> tf <span class="op">*</span> (k1 <span class="op">+</span> <span class="dv">1</span>)</span>
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    denominator <span class="op">=</span> tf <span class="op">+</span> k1 <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> b <span class="op">+</span> b <span class="op">*</span> (doc_length <span class="op">/</span> avg_doc_len))</span>
 <span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> numerator <span class="op">/</span> denominator</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -740,35 +743,37 @@ IDF('programming'): -1.9459</code></pre>
 <li><p>For each document, sum the BM25 scores of all query terms</p></li>
 <li><p>Return scores for all documents</p></li>
 </ol>
-<div id="f63dbf6f" class="cell" data-execution_count="9">
+<div id="f63dbf6f" class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> bm25_search(query, documents, doc_term_freqs, df, avg_doc_len, k1<span class="op">=</span><span class="fl">1.5</span>, b<span class="op">=</span><span class="fl">0.75</span>):</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Score all documents for a given query using BM25.</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns a list of (document_index, score) tuples sorted by relevance.</span></span>
 <span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
 <span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    query_tokens <span class="op">=</span> tokenize(query)</span>
 <span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    num_docs <span class="op">=</span> <span class="bu">len</span>(documents)</span>
 <span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    scores <span class="op">=</span> []</span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> doc_idx, doc_tf <span class="kw">in</span> <span class="bu">enumerate</span>(doc_term_freqs):</span>
 <span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>        doc_length <span class="op">=</span> <span class="bu">sum</span>(doc_tf.values())  <span class="co"># Total terms in document</span></span>
 <span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>        doc_score <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> term <span class="kw">in</span> query_tokens:</span>
 <span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>            idf_score <span class="op">=</span> compute_idf(term, df, num_docs)</span>
-<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>            doc_score <span class="op">+=</span> bm25_term_score(term, doc_tf, idf_score, doc_length, avg_doc_len, k1, b)</span>
-<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>        scores.append((doc_idx, doc_score))</span>
-<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Sort by score (descending)</span></span>
-<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>    scores.sort(key<span class="op">=</span><span class="kw">lambda</span> x: x[<span class="dv">1</span>], reverse<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> scores</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>            doc_score <span class="op">+=</span> bm25_term_score(</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>                term, doc_tf, idf_score, doc_length, avg_doc_len, k1, b</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>            )</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>        scores.append((doc_idx, doc_score))</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Sort by score (descending)</span></span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>    scores.sort(key<span class="op">=</span><span class="kw">lambda</span> x: x[<span class="dv">1</span>], reverse<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> scores</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="test-the-search-engine" class="level2">
 <h2 class="anchored" data-anchor-id="test-the-search-engine">9. Test the Search Engine</h2>
-<div id="991f2ba4" class="cell" data-execution_count="10">
+<div id="991f2ba4" class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> display_results(query, results, documents):</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Pretty print search results."""</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Query: '</span><span class="sc">{</span>query<span class="sc">}</span><span class="ss">'"</span>)</span>
@@ -776,12 +781,13 @@ IDF('programming'): -1.9459</code></pre>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> rank, (doc_idx, score) <span class="kw">in</span> <span class="bu">enumerate</span>(results, <span class="dv">1</span>):</span>
 <span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>rank<span class="sc">}</span><span class="ss">. [Score: </span><span class="sc">{</span>score<span class="sc">:6.3f}</span><span class="ss">] </span><span class="sc">{</span>documents[doc_idx]<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Test different queries</span></span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>queries <span class="op">=</span> [<span class="st">"python programming"</span>, <span class="st">"java programming"</span>, <span class="st">"love python"</span>]</span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> query <span class="kw">in</span> queries:</span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    results <span class="op">=</span> bm25_search(query, documents, all_docs_terms, df, avg_doc_len)</span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>    display_results(query, results, documents)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Test different queries</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>queries <span class="op">=</span> [<span class="st">"python programming"</span>, <span class="st">"java programming"</span>, <span class="st">"love python"</span>]</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> query <span class="kw">in</span> queries:</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>    results <span class="op">=</span> bm25_search(query, documents, all_docs_terms, df, avg_doc_len)</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    display_results(query, results, documents)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Query: 'python programming'
@@ -829,7 +835,7 @@ Query: 'love python'
 <li>A 100-word doc mentioning “python” once may be more relevant than a 10,000-word doc mentioning it once</li>
 </ul></li>
 </ol>
-<p>Here is part 2 BM25 with Qdrant: It’s a real usecase for using bm25 with gemini-embedding to improve the search results</p>
+<p>Here is <a href="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html">part 2 BM25 with Qdrant</a>: It’s a real usecase for using bm25 with gemini-embedding to improve the search results</p>
 
 
 </section>
