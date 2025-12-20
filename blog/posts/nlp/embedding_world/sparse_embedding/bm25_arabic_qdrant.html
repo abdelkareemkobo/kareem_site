@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="kareem">
-<meta name="dcterms.date" content="2025-12-20">
+<meta name="dcterms.date" content="2025-12-19">
 <meta name="description" content="BM25 explained with python code implementation and math examples">
 
 <title>BM25 expalined part 2 | Qdrant hybrid search for real estate – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
@@ -372,6 +372,7 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
   <li><a href="#building-hybrid-search-for-real-estate-with-qdrant-and-bm25" id="toc-building-hybrid-search-for-real-estate-with-qdrant-and-bm25" class="nav-link active" data-scroll-target="#building-hybrid-search-for-real-estate-with-qdrant-and-bm25">Building Hybrid Search for Real Estate with Qdrant and BM25</a>
   <ul class="collapse">
   <li><a href="#the-problem" id="toc-the-problem" class="nav-link" data-scroll-target="#the-problem">The Problem</a></li>
+  </ul></li>
   <li><a href="#when-dense-search-fails" id="toc-when-dense-search-fails" class="nav-link" data-scroll-target="#when-dense-search-fails">When Dense Search Fails</a></li>
   <li><a href="#why-hybrid-search-works" id="toc-why-hybrid-search-works" class="nav-link" data-scroll-target="#why-hybrid-search-works">Why Hybrid Search Works</a></li>
   <li><a href="#challenge-1-reducing-token-noise" id="toc-challenge-1-reducing-token-noise" class="nav-link" data-scroll-target="#challenge-1-reducing-token-noise">Challenge 1: Reducing Token Noise</a></li>
@@ -386,7 +387,6 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
   <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">Key Takeaways</a>
   <ul class="collapse">
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
-  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -425,7 +425,7 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 20, 2025</p>
+      <p class="date">December 19, 2025</p>
     </div>
   </div>
   
@@ -437,16 +437,16 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 </header>
 
 
-<section id="building-hybrid-search-for-real-estate-with-qdrant-and-bm25" class="level1">
-<h1>Building Hybrid Search for Real Estate with Qdrant and BM25</h1>
+<section id="building-hybrid-search-for-real-estate-with-qdrant-and-bm25" class="level2">
+<h2 class="anchored" data-anchor-id="building-hybrid-search-for-real-estate-with-qdrant-and-bm25">Building Hybrid Search for Real Estate with Qdrant and BM25</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/xbites_chat.png" class="img-fluid figure-img"></p>
 <figcaption>xbites mena real esate ai</figcaption>
 </figure>
 </div>
-<section id="the-problem" class="level2">
-<h2 class="anchored" data-anchor-id="the-problem">The Problem</h2>
+<section id="the-problem" class="level3">
+<h3 class="anchored" data-anchor-id="the-problem">The Problem</h3>
 <p>When building a real estate search system, I ran into a frustrating issue: dense vector search kept returning the wrong locations. A query for “6th Settlement Apartment” would return properties in “5th Settlement” or “New Cairo” instead.</p>
 <p>I was using Gemini’s embedding model, which performs well for both English and Arabic. But even strong embeddings struggle with domain-specific data where names are nearly identical:</p>
 <ul>
@@ -458,6 +458,7 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 <p>The semantic similarity between them is too high for dense search to distinguish.</p>
 <p>My property chunks contain full descriptions like “Villa in El Patio Vera, 3 bedrooms, 1,000,000 EGP”. Semantic search handles most queries well, but some searches are fundamentally lexical. I needed both approaches working together.</p>
 <hr>
+</section>
 </section>
 <section id="when-dense-search-fails" class="level2">
 <h2 class="anchored" data-anchor-id="when-dense-search-fails">When Dense Search Fails</h2>
@@ -723,10 +724,11 @@ El Alamein - 5.6M</code></pre>
 <ol type="1">
 <li><a href="https://www.xbites.io/">Xbites Real Estate AI</a></li>
 <li><a href="https://qdrant.tech/articles/hybrid-search/">Qdrand Hybrid search</a></li>
+<li><a href="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html">Bm25 part 1</a></li>
+<li><a href="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html">Bm25 part 3</a></li>
 </ol>
 
 
-</section>
 </section>
 </section>
 

@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="kareem">
-<meta name="dcterms.date" content="2025-12-20">
+<meta name="dcterms.date" content="2025-12-19">
 <meta name="description" content="BM25 explained with python code implementation and math examples">
 
-<title>BM25 Explained for Hybrid Search and Rag – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
+<title>BM25 Explained for Hybrid Search and Rag | Part 1 – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -151,12 +151,12 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../../../../../styles.css">
-<meta property="og:title" content="BM25 Explained for Hybrid Search and Rag – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta property="og:title" content="BM25 Explained for Hybrid Search and Rag | Part 1 – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
 <meta property="og:description" content="BM25 explained with python code implementation and math examples">
 <meta property="og:image" content="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/bm25.png">
 <meta property="og:site_name" content="عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
 <meta property="og:locale" content="ar_AR">
-<meta name="twitter:title" content="BM25 Explained for Hybrid Search and Rag – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta name="twitter:title" content="BM25 Explained for Hybrid Search and Rag | Part 1 – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
 <meta name="twitter:description" content="BM25 explained with python code implementation and math examples">
 <meta name="twitter:image" content="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/bm25.png">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
@@ -398,7 +398,7 @@ window.Quarto = {
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#bm25-explained-part-1" id="toc-bm25-explained-part-1" class="nav-link active" data-scroll-target="#bm25-explained-part-1">BM25 Explained | part 1</a></li>
+  <li><a href="#bm25-explained" id="toc-bm25-explained" class="nav-link active" data-scroll-target="#bm25-explained">BM25 Explained</a></li>
   <li><a href="#sample-documents" id="toc-sample-documents" class="nav-link" data-scroll-target="#sample-documents">1. Sample Documents</a></li>
   <li><a href="#tokenization" id="toc-tokenization" class="nav-link" data-scroll-target="#tokenization">2. Tokenization</a></li>
   <li><a href="#term-frequency-tf" id="toc-term-frequency-tf" class="nav-link" data-scroll-target="#term-frequency-tf">3. Term Frequency (TF)</a></li>
@@ -428,7 +428,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">BM25 Explained for Hybrid Search and Rag</h1>
+<h1 class="title">BM25 Explained for Hybrid Search and Rag | Part 1</h1>
   <div class="quarto-categories">
     <div class="quarto-category">blogging</div>
     <div class="quarto-category">embedding</div>
@@ -455,7 +455,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 20, 2025</p>
+      <p class="date">December 19, 2025</p>
     </div>
   </div>
   
@@ -467,11 +467,19 @@ window.Quarto = {
 </header>
 
 
-<section id="bm25-explained-part-1" class="level2">
-<h2 class="anchored" data-anchor-id="bm25-explained-part-1">BM25 Explained | part 1</h2>
+<section id="bm25-explained" class="level2">
+<h2 class="anchored" data-anchor-id="bm25-explained">BM25 Explained</h2>
 <p>Implementing BM25 Search Algorithm from Scratch</p>
 <p>BM25 (Best Matching 25) is a ranking function used by search engines to estimate the relevance of documents to a given search query.</p>
 <p>It’s an improvement over TF-IDF that handles term frequency saturation and document length normalization.</p>
+<hr>
+<p><strong>you will find a marimo version in the references that will help you understand the equation better.</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/bm_25_marimo.png" class="img-fluid figure-img"></p>
+<figcaption>marimo bm25</figcaption>
+</figure>
+</div>
 </section>
 <section id="sample-documents" class="level2">
 <h2 class="anchored" data-anchor-id="sample-documents">1. Sample Documents</h2>
@@ -836,6 +844,8 @@ Query: 'love python'
 </ul></li>
 </ol>
 <p>Here is <a href="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html">part 2 BM25 with Qdrant</a>: It’s a real usecase for using bm25 with gemini-embedding to improve the search results</p>
+<p>Also the <a href="https://molab.marimo.io/notebooks/nb_qmRNbuWUz4fvLdfDt8Un7E/app">Marimo bm25 explained</a></p>
+<p>A benchmark <a href="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html">bm25 benchmark</a></p>
 
 
 </section>

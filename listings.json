@@ -21,9 +21,9 @@
   {
     "listing": "/blog/feed.html",
     "items": [
+      "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html",
       "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html",
       "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html",
-      "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html",
       "/blog/posts/minishlab/pyversity_qdrant.html",
       "/blog/posts/products_reviews/one_plus_pad_3.html",
       "/blog/posts/products_reviews/Huawei freebuds 7i.html",
