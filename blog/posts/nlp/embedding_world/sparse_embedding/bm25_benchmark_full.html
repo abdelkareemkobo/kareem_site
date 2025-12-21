@@ -448,7 +448,6 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 <li>Rank_bm25</li>
 <li>bm25-sparse</li>
 <li>Polars optimization</li>
-<li>fastembed code (I think i am using it wrong!!)</li>
 </ol>
 <p>If there is any mistake please tell me!</p>
 <p>it’s first time for me to create a benchmark for anything</p>
@@ -948,81 +947,6 @@ QPS: 1627.94
 <pre><code>(0.1579906940460205, 0.6142714023590088, 1627.9449053946898)</code></pre>
 </div>
 </div>
-<div id="Hstk" class="cell" data-execution_count="10">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> benchmark_qdrant_fastembed():</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>    <span class="im">from</span> qdrant_client <span class="im">import</span> QdrantClient, models</span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>    <span class="im">from</span> fastembed <span class="im">import</span> SparseTextEmbedding</span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"=== 8. QDRANT + FASTEMBED BM25 ==="</span>)</span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># === SETUP (not timed) ===</span></span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>    client <span class="op">=</span> QdrantClient(<span class="st">":memory:"</span>)</span>
-<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>    model <span class="op">=</span> SparseTextEmbedding(model_name<span class="op">=</span><span class="st">"Qdrant/bm25"</span>)</span>
-<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>    client.create_collection(</span>
-<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>        collection_name<span class="op">=</span><span class="st">"bm25_demo"</span>,</span>
-<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>        vectors_config<span class="op">=</span>{},</span>
-<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>        sparse_vectors_config<span class="op">=</span>{</span>
-<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>            <span class="st">"bm25"</span>: models.SparseVectorParams(modifier<span class="op">=</span>models.Modifier.IDF)</span>
-<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>        },</span>
-<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># === INDEXING (timed) ===</span></span>
-<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a>    start <span class="op">=</span> time.time()</span>
-<span id="cb25-21"><a href="#cb25-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-22"><a href="#cb25-22" aria-hidden="true" tabindex="-1"></a>    doc_embeddings <span class="op">=</span> <span class="bu">list</span>(model.embed(corpus))</span>
-<span id="cb25-23"><a href="#cb25-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-24"><a href="#cb25-24" aria-hidden="true" tabindex="-1"></a>    points <span class="op">=</span> [</span>
-<span id="cb25-25"><a href="#cb25-25" aria-hidden="true" tabindex="-1"></a>        models.PointStruct(</span>
-<span id="cb25-26"><a href="#cb25-26" aria-hidden="true" tabindex="-1"></a>            <span class="bu">id</span><span class="op">=</span>i,</span>
-<span id="cb25-27"><a href="#cb25-27" aria-hidden="true" tabindex="-1"></a>            vector<span class="op">=</span>{</span>
-<span id="cb25-28"><a href="#cb25-28" aria-hidden="true" tabindex="-1"></a>                <span class="st">"bm25"</span>: models.SparseVector(</span>
-<span id="cb25-29"><a href="#cb25-29" aria-hidden="true" tabindex="-1"></a>                    indices<span class="op">=</span>emb.indices.tolist(), values<span class="op">=</span>emb.values.tolist()</span>
-<span id="cb25-30"><a href="#cb25-30" aria-hidden="true" tabindex="-1"></a>                )</span>
-<span id="cb25-31"><a href="#cb25-31" aria-hidden="true" tabindex="-1"></a>            },</span>
-<span id="cb25-32"><a href="#cb25-32" aria-hidden="true" tabindex="-1"></a>            payload<span class="op">=</span>{<span class="st">"text"</span>: corpus[i]},</span>
-<span id="cb25-33"><a href="#cb25-33" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb25-34"><a href="#cb25-34" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i, emb <span class="kw">in</span> <span class="bu">enumerate</span>(doc_embeddings)</span>
-<span id="cb25-35"><a href="#cb25-35" aria-hidden="true" tabindex="-1"></a>    ]</span>
-<span id="cb25-36"><a href="#cb25-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-37"><a href="#cb25-37" aria-hidden="true" tabindex="-1"></a>    client.upsert(collection_name<span class="op">=</span><span class="st">"bm25_demo"</span>, points<span class="op">=</span>points)</span>
-<span id="cb25-38"><a href="#cb25-38" aria-hidden="true" tabindex="-1"></a>    index_time <span class="op">=</span> time.time() <span class="op">-</span> start</span>
-<span id="cb25-39"><a href="#cb25-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-40"><a href="#cb25-40" aria-hidden="true" tabindex="-1"></a>    <span class="co"># === QUERYING (timed) ===</span></span>
-<span id="cb25-41"><a href="#cb25-41" aria-hidden="true" tabindex="-1"></a>    start_query <span class="op">=</span> time.time()</span>
-<span id="cb25-42"><a href="#cb25-42" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> query <span class="kw">in</span> test_queries:</span>
-<span id="cb25-43"><a href="#cb25-43" aria-hidden="true" tabindex="-1"></a>        query_emb <span class="op">=</span> <span class="bu">list</span>(model.query_embed(query))[<span class="dv">0</span>]</span>
-<span id="cb25-44"><a href="#cb25-44" aria-hidden="true" tabindex="-1"></a>        results <span class="op">=</span> client.query_points(</span>
-<span id="cb25-45"><a href="#cb25-45" aria-hidden="true" tabindex="-1"></a>            collection_name<span class="op">=</span><span class="st">"bm25_demo"</span>,</span>
-<span id="cb25-46"><a href="#cb25-46" aria-hidden="true" tabindex="-1"></a>            query<span class="op">=</span>models.SparseVector(</span>
-<span id="cb25-47"><a href="#cb25-47" aria-hidden="true" tabindex="-1"></a>                indices<span class="op">=</span>query_emb.indices.tolist(), values<span class="op">=</span>query_emb.values.tolist()</span>
-<span id="cb25-48"><a href="#cb25-48" aria-hidden="true" tabindex="-1"></a>            ),</span>
-<span id="cb25-49"><a href="#cb25-49" aria-hidden="true" tabindex="-1"></a>            using<span class="op">=</span><span class="st">"bm25"</span>,</span>
-<span id="cb25-50"><a href="#cb25-50" aria-hidden="true" tabindex="-1"></a>            limit<span class="op">=</span><span class="dv">10</span>,</span>
-<span id="cb25-51"><a href="#cb25-51" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb25-52"><a href="#cb25-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-53"><a href="#cb25-53" aria-hidden="true" tabindex="-1"></a>    query_time <span class="op">=</span> time.time() <span class="op">-</span> start_query</span>
-<span id="cb25-54"><a href="#cb25-54" aria-hidden="true" tabindex="-1"></a>    qps <span class="op">=</span> <span class="bu">len</span>(test_queries) <span class="op">/</span> query_time</span>
-<span id="cb25-55"><a href="#cb25-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-56"><a href="#cb25-56" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Indexing: </span><span class="sc">{</span>index_time<span class="sc">:.4f}</span><span class="ss">s"</span>)</span>
-<span id="cb25-57"><a href="#cb25-57" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Query time: </span><span class="sc">{</span>query_time<span class="sc">:.4f}</span><span class="ss">s"</span>)</span>
-<span id="cb25-58"><a href="#cb25-58" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"QPS: </span><span class="sc">{</span>qps<span class="sc">:.2f}</span><span class="ch">\n</span><span class="ss">"</span>)</span>
-<span id="cb25-59"><a href="#cb25-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-60"><a href="#cb25-60" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> index_time, query_time, qps</span>
-<span id="cb25-61"><a href="#cb25-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-62"><a href="#cb25-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-63"><a href="#cb25-63" aria-hidden="true" tabindex="-1"></a>benchmark_qdrant_fastembed()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>=== 8. QDRANT + FASTEMBED BM25 ===
-Indexing: 1.5654s
-Query time: 31.3923s
-QPS: 31.85
-</code></pre>
-</div>
-<div class="cell-output cell-output-display" data-execution_count="10">
-<pre><code>(1.5654137134552002, 31.39225196838379, 31.854994060545074)</code></pre>
-</div>
-</div>
 </section>
 <section id="bm25-benchmark-results-8530-documents-1000-queries" class="level2">
 <h2 class="anchored" data-anchor-id="bm25-benchmark-results-8530-documents-1000-queries">🏆 BM25 Benchmark Results (8,530 documents, 1000 queries)</h2>
@@ -1071,12 +995,6 @@ QPS: 31.85
 <td>0.1580</td>
 <td>0.6143</td>
 <td>1,627.94</td>
-</tr>
-<tr class="odd">
-<td><strong>8. Qdrant + FastEmbed</strong></td>
-<td>1.5654</td>
-<td>31.3923</td>
-<td>31.85</td>
 </tr>
 </tbody>
 </table>
