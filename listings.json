@@ -2,6 +2,7 @@
   {
     "listing": "/blog/feed.html",
     "items": [
+      "/blog/posts/speech_recognition/muaalm_quran_chance.html",
       "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html",
       "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html",
       "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html",
