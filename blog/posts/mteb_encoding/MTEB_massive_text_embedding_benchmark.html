@@ -504,7 +504,7 @@ Inputs are two sets of sentences from two different languages. For each sentence
 <li>Spearman correlation based on cosine similarity serves as the main metric (Reimers et al.,2016). #definition <strong>Summarization</strong> A set of human-written and machine-generated summaries are provided. The aim is to score the machine summaries. The provided model is first used to embed all summaries. For each machine summary embedding, distances to all human summary embeddings are computed. The closest score (e.g.&nbsp;highest cosine similarity) is kept and used as the model’s score of a single machine-generated summary. Pearson and Spearman correlations with ground truth human assessments of the machine-generated summaries are computed. Like for STS, Spearman correlation based on cosine similarity serves as the main metric</li>
 </ul>
 <hr>
-<p>#sidenote <strong>Non-Transformers</strong> : LASER (Heffernan et al.,2022) is the only context aware non-transformer model we benchmark, relying on an LSTM (Hochreiter and Schmidhuber, 1997) instead. Similar to LaBSE, the model trains on parallel data and focuses on bitext mining applications. ![[Pasted image 20231028124555.png]]</p>
+<p>#sidenote <strong>Non-Transformers</strong> : LASER (Heffernan et al.,2022) is the only context aware non-transformer model we benchmark, relying on an LSTM (Hochreiter and Schmidhuber, 1997) instead. Similar to LaBSE, the model trains on parallel data and focuses on bitext mining applications.</p>
 </section>
 <section id="analysis" class="level2">
 <h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
@@ -562,7 +562,7 @@ Inputs are two sets of sentences from two different languages. For each sentence
 <p><strong>Maximum performance</strong> -&gt; If latency is less important than performance Depending on the task at hand, GTR-XXL, ST5-XXL or SGPT-5.8B may be the right choice,</p>
 <p><strong>Speed and Peformance</strong> -&gt; The fine-tuned MPNet and MiniLM models lead the middle cluster making the choice easy.</p>
 <hr>
-<p>#todo you can check the gte architecture here it’s highly related to the MTEP [[tiny-gte_transformer_model]]</p>
+<p>You can check the GTE architecture here, it’s highly related to MTEB: <a href="tiny-gte_transformer_model.html">Tiny-GTE Transformer Model</a></p>
 <hr>
 </section>
 <section id="conclusion" class="level2">
