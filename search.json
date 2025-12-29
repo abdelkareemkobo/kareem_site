@@ -333,7 +333,7 @@
     "href": "blog/posts/minishlab/ctranslate_maswray.html#vllms-and-sglang-for-hf-translation-pipeline",
     "title": "From $32,000 to $0 with Small Models and CTranslate2",
     "section": "VLLMs and SGLang for HF translation pipeline",
-    "text": "VLLMs and SGLang for HF translation pipeline\nI searched for SGLang solution with the model and I didn’t find any help. I tried the vLLM documentation also and found the following pages: bring_your_own_model and this. The model speed was worse than normal HF tensors - it was 5 seconds more. I think there is a better way to write the vLLM version better than mine."
+    "text": "VLLMs and SGLang for HF translation pipeline\nI searched for SGLang solution with the model and I didn’t find any help. I tried the vLLM documentation also and found the following pages: bring_your_own_model and vLLM supported models. The model speed was worse than normal HF tensors - it was 5 seconds more. I think there is a better way to write the vLLM version better than mine."
   },
   {
     "objectID": "blog/posts/minishlab/ctranslate_maswray.html#more-search-and-ctranslate-magic",
