@@ -38,7 +38,7 @@ website:
      card-style: summary
   site-url: "https://kareemai.com/"
   description: "Kareem Elkhateb personal site, a blog about machine learning, deep learning, Web development with Astro.js, FastAPI, also Arabic Natural Language Processing and Rust language."
-  repo-url: https://github.com/abdelkareemkobo/karem-site
+  repo-url: https://github.com/abdelkareemkobo/kareem_site
   # repo-actions: [edit]
   repo-branch: master
   navbar:
@@ -95,6 +95,16 @@ format:
     fontsize: 18px
     css: 
       - styles.css
+    comments:
+      giscus:
+        repo: abdelkareemkobo/kareem_site
+        repo-id: R_kgDOQxY8kw
+        category: Comments
+        category-id: DIC_kwDOQxY8k84C0aRf
+        mapping: pathname
+        reactions-enabled: true
+        theme: preferred_color_scheme
+        language: en
 
 
 
