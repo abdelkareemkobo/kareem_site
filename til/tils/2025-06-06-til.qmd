@@ -8,7 +8,7 @@ featured: false
 categories:
   - blogging
   - til
-image: ""
+image: "til.jpg"
 ---
 Here is the corrected version with grammar errors fixed and improved clarity, while preserving the original meaning and tone:
 

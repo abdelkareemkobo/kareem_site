@@ -17,7 +17,9 @@ listing:
 
   contents: 
    - "/*.qmd"
+   - "/*.md"
    - "/*/*.qmd"
+   - "/*/*.md"
    - "/*/index.qmd"
 format: 
   html:
@@ -26,5 +28,5 @@ format:
 ---
 This the place where is share what i learn nearly everyday..for more crafted articles see the [blogs](../blog/feed.qmd)
 
-You can also get in touch with me [here](../index.qmd).
+You can also get in touch with me on my [homepage](../index.qmd).
 

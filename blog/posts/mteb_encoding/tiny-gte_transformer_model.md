@@ -31,7 +31,7 @@ authors:
 
 ## Use Cases
 
-# Todo
+## Todo
 
 1. [x] Explain the MTEB
    1. Add the link of it into the this blog
@@ -39,7 +39,7 @@ authors:
 3. Make comparison between tiny-gte and small gte
 4. Add the small-gte-4096 comparison
 
-# References
+## References
 
 - https://huggingface.co/TaylorAI/gte-tiny
 - https://www.linkedin.com/posts/prithivirajdamodaran_%3F%3F%3F%3F-%3F%3F%3F%3F-%3F%3F%3F%3F%3F-%3F%3F%3F%3F-activity-7120279840569597952-iwc-/?utm_source=share&utm_medium=member_desktop

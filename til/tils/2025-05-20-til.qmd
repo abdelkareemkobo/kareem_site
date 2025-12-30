@@ -13,7 +13,7 @@ categories:
   - vercel 
   - porkbun
   - web
-image: ""
+image: "til.jpg"
 ---
 
 ## Moving My Domains 

@@ -79,6 +79,9 @@ image: "images/huawei-watch-gt4-14-day-battery-life.png"
 - Syncing with Linux or from the web? No, you can’t do that either.
 - However, syncing is very fast.
 
+If you want to see more reviews about Huawei you can join the [Channel](https://whatsapp.com/channel/0029Vb6c2NK77qVIcdILrb3U)
+
+
 ## Messages with huawei gt4
 
 - I love the messaging feature. You can read messages in multiple languages without any problem and respond using preconfigured answers, but you can't type on the watch.

@@ -8,7 +8,7 @@ featured: false
 categories:
   - blogging
   - til
-image: ""
+image: "til.jpg"
 ---
 # PyLate & ColBERT Evaluation - Complete Learning Guide
 

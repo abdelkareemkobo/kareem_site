@@ -11,7 +11,8 @@ categories:
   - translation
   - ctranslate2
   - cost-optimization
-image: "images/bojji.png"
+  - blogging
+image: images/bojji.png
 ---
 
 ## Going from $32,000 to 0 cost with small models
@@ -127,7 +128,7 @@ I searched for SGLang solution with the model and I didn't find any help. I
 tried the vLLM documentation also and found the following pages:
 [bring_your_own_model](https://docs.vllm.ai/en/latest/contributing/model/basic.html#1-bring-your-model-code)
 and
-[this](https://docs.vllm.ai/en/latest/models/supported_models.html#modelscope).
+[vLLM supported models](https://docs.vllm.ai/en/latest/models/supported_models.html#modelscope).
 The model speed was worse than normal HF tensors - it was 5 seconds more. I
 think there is a better way to write the vLLM version better than mine.
 
@@ -258,7 +259,7 @@ the results. I will also increase the size from 100 samples to 1000.
 | Ctranslate + int8_float16 + dual GPU                            |   | 1000               | 64         | Dual Titan RTX | 3.85s     | 0.36 days  |
 | ==We moved now from 22 days in single Titan RTX to 0.60 days!== |   |                    |            |                |           |            |
 
-#### Why float16 is faster than int8
+### Why float16 is faster than int8
 
 **Float16 Version (faster!):**
 

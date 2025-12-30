@@ -1,5 +1,5 @@
 ---
-pagetitle: "Blog | عبد الكريم الخطيب"
+pagetitle: "kareem's blog"
 sidebar: false
 toc: false
 listing:

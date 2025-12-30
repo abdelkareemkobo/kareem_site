@@ -23,7 +23,7 @@ Here is an expanded version of your blog post with some additional details:
 ## Why I bought it
 
 I purchased the Huawei tablet because I enjoy creative activities like drawing, taking notes, and reading books. I wished to have an iPad or premium tablet with a good stylus to fully explore my creative potential. My brother found an excellent deal on this Huawei tablet for around 60% off retail price and gifted it to me. I'm very thankful to him!
-![](https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/tablets/matepad-11-2023-new/images/kv/Huawei-matepad-11-inch-2023-kv@2x.webp)
+![Huawei MatePad 11 2023 tablet](https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/tablets/matepad-11-2023-new/images/kv/Huawei-matepad-11-inch-2023-kv@2x.webp)
 
 ## Pros
 
@@ -46,6 +46,8 @@ I purchased the Huawei tablet because I enjoy creative activities like drawing, 
    - Should not see ads just trying to open App Gallery
    - Default music app tries to push online streaming service with more ads
 4. Many apps spam notifications asking to reopen them. Very irritating.
+
+If you want to see more reviews about Huawei you can join the [Channel](https://whatsapp.com/channel/0029Vb6c2NK77qVIcdILrb3U)
 
 ## Using Huawei Devices with Linux
 

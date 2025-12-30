@@ -14,17 +14,24 @@ website:
     center:
       - icon: github
         href: https://github.com/abdelkareemkobo
+        aria-label: "GitHub Profile"
       - icon: cloud
         href: https://soundcloud.com/abdelkareem-elkhateb
+        aria-label: "SoundCloud"
       - icon: google
         href: https://kareemai.com/kareem01095134688@gmail.com
+        aria-label: "Email Contact"
       - icon: bank
         href: https://www.upwork.com/freelancers/~016a9fea792423bb9a
+        aria-label: "Upwork Profile"
       - icon: rss
         href: index.xml
+        aria-label: "RSS Feed"
   favicon: 2.svg
   open-graph: 
     locale: ar_AR
+    image-width: 1200
+    image-height: 630
   google-analytics: "G-XFPC3M9TMG"
   twitter-card:
      creator: "@AbdelkareemElk1"
@@ -73,14 +80,21 @@ website:
       contents: notes/**
 format:
   html:
+    filters:
+      - _extensions/jsonld/jsonld.lua
     reference-location: document
     theme:
       light: spacelab
       dark: cyborg
     toc: true
+    toc-location: right
+    toc-depth: 3
+    toc-title: "Contents"
     syntax-definitions: 
     - fomo.xml
-    css: styles.css
     fontsize: 18px
+    css: 
+      - styles.css
+
 
 

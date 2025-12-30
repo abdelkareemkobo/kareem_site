@@ -21,6 +21,7 @@ Hi, In this fast blog i will talk about my review with Huawei Freebuds 5i, which
 This is not an ad or even affiliate product, it's my own review for fun and just seeking of knowledge.
 ![freebuds](https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/headphones/freebuds5i/imges/huawei-freebuds-5i-kv.jpg)
 
+
 ## Who am i !
 
 - I am Kareem, a college student interested in machine learning and web technology.
@@ -48,6 +49,8 @@ I've used these earbuds in various settings:
 3. Bus: The noise of the bus engine was successfully blocked out, but I could still hear the conversations of those sitting next to me. It wasn't overly bothersome, but it didn't provide complete isolation.
 
 In summary, the noise-cancelling feature works well, but it doesn't provide absolute silence. I can still hear some ambient sounds. One noticeable issue is that when I make calls using the earbuds, I can hear the other person clearly, but they often complain about the clarity of my voice. They say it sounds distant and unclear, sometimes even asking to call back later. This issue is particularly prevalent when I'm on the bus.
+
+If you want to see more reviews about Huawei you can join the [Channel](https://whatsapp.com/channel/0029Vb6c2NK77qVIcdILrb3U)
 
 ## the modes of the Freebuds and
 

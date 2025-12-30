@@ -119,7 +119,6 @@ Inputs are two sets of sentences from two different languages. For each sentence
 ---
 
 #sidenote **Non-Transformers** : LASER (Heffernan et al.,2022) is the only context aware non-transformer model we benchmark, relying on an LSTM (Hochreiter and Schmidhuber, 1997) instead. Similar to LaBSE, the model trains on parallel data and focuses on bitext mining applications.
-![[Pasted image 20231028124555.png]]
 
 ## Analysis
 
@@ -167,7 +166,7 @@ Inputs are two sets of sentences from two different languages. For each sentence
 
 ---
 
-#todo you can check the gte architecture here it's highly related to the MTEP [[tiny-gte_transformer_model]]
+You can check the GTE architecture here, it's highly related to MTEB: [Tiny-GTE Transformer Model](tiny-gte_transformer_model.html)
 
 ---
 
