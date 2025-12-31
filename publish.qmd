@@ -1,8 +1,13 @@
 ---
-title: 📚 Books
+title: "Books"
+pagetitle: "Books | Abdelkareem Elkhateb"
 image: "https://user-images.githubusercontent.com/1483922/208562675-3c69c87a-6688-44ea-8974-fae837f079df.png"
-description: A list of  books that I've write.
+description: "Books and long-form writing on Arabic NLP, machine learning, and AI engineering."
 sidebar: false
+comments: false
+open-graph:
+  title: "Books | Abdelkareem Elkhateb"
+  description: "Books on Arabic NLP and AI engineering"
 ---
 
 ## still under review

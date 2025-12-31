@@ -1,1 +1,9 @@
 image: "https://user-images.githubusercontent.com/1483922/208359430-f55d7503-3a98-4875-a35c-16314c9439d0.png"
+
+# Include share buttons, newsletter, and progress bar
+format:
+  html:
+    include-in-header: ../_includes/progress-bar.html
+    include-after-body: 
+      - ../_includes/share-buttons.html
+      - ../_includes/newsletter.html

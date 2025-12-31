@@ -1,8 +1,13 @@
 ---
-title: 📝 Papers
+title: "Research Papers"
+pagetitle: "Research Papers | Abdelkareem Elkhateb"
 image: "https://user-images.githubusercontent.com/1483922/208562675-3c69c87a-6688-44ea-8974-fae837f079df.png"
-description: A list of  papers that I've Contributed to.
+description: "Academic research papers on Arabic OCR, NLP, medical AI, and machine learning. Publications in peer-reviewed journals and conferences."
 sidebar: false
+comments: false
+open-graph:
+  title: "Research Papers | Abdelkareem Elkhateb"
+  description: "Academic publications on Arabic NLP, OCR, and AI"
 ---
 
 These are a list of papers I've given:

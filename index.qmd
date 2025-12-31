@@ -1,186 +1,97 @@
 ---
-pagetitle: Abdelkareem Elkhateb - Arabic NLP
-description: "AI Researcher specializing in Arabic NLP. Building efficient embedding models and semantic search systems for 500M+ Arabic speakers."
+pagetitle: "Abdelkareem Elkhateb | Arabic NLP & AI Researcher"
+description: "AI Researcher specializing in Arabic NLP. Building efficient embedding models, semantic search systems, and production AI for 500M+ Arabic speakers."
 lang: en
 sidebar: false
-image: quarto.png
+image: kareem.jpg
 toc: false
+comments: false
+open-graph:
+  title: "Abdelkareem Elkhateb - Arabic NLP & AI Researcher"
+  description: "Building efficient Arabic AI models. Embeddings, semantic search, and production ML systems."
+  image: kareem.jpg
+twitter-card:
+  title: "Abdelkareem Elkhateb - Arabic NLP & AI"
+  description: "Building efficient Arabic AI models for 500M+ speakers"
+  image: kareem.jpg
+  card-style: summary_large_image
 format:
   html:
     anchor-sections: true
 ---
 
-<div class="homepage">
+::: {.hero-section}
+![](kareem.jpg){.hero-avatar}
 
-<div class="hero">
-<div class="hero-left">
-<img src="kareem.png" class="avatar" alt="Abdelkareem Elkhateb">
-</div>
+# Abdelkareem Elkhateb
 
-<div class="hero-right">
-<h1 class="name-en">Abdelkareem Elkhateb</h1>
-<p>I build Arabic AI that actually works.</p>
-<p>500M+ Arabic speakers deserve better than translated English models.</p>
-<p>I create efficient NLP systems that run anywhere — from cloud servers to cheap phones.</p>
-<div class="hero-links">
-<a href="https://github.com/abdelkareemkobo" class="btn"><i class="bi bi-github"></i> GitHub</a>
+Arabic NLP researcher. I make AI models small, fast, and actually useful.
 
-<a href="https://scholar.google.com/citations?user=lF1wxvcAAAAJ" class="btn"><i class="bi bi-google"></i> Research</a>
+[GitHub](https://github.com/abdelkareemkobo){.hero-link} · [Research](https://scholar.google.com/citations?user=lF1wxvcAAAAJ){.hero-link} · [Hire me](https://www.upwork.com/freelancers/~016a9fea792423bb9a){.hero-link .primary}
+:::
 
-<a href="https://www.upwork.com/freelancers/~016a9fea792423bb9a" class="btn btn-primary"><i class="bi bi-briefcase"></i> Hire Me</a>
-
-</div>
-</div>
-</div>
-
-<blockquote>
-##### فقالَ: إن تَصدُقِ اللَّهَ يَصدُقْكَ فلبثوا قليلًا ، ثمَّ نَهَضوا إلى العدوِّ ، فأتى بِهِ النَّبيُّ صلَّى اللَّهُ عليهِ وسلَّمَ يُحمَلُ ، قد أصابَهُ سَهْمٌ حيثُ أشارَ . فقالَ النَّبيُّ صلَّى اللَّهُ عليهِ وسلَّمَ: أَهوَ هوَ ؟ قالوا: نعَم قالَ: صدقَ اللَّهَ فصدقَهُ
-</blockquote>
-
-
-<div class="arabic-footer">
-<blockquote>
+<blockquote class="arabic-quote">
 اللغة ليست عِلمًا .. بل هي شيء فوق العلم<br>
 لغتنا في خطر داهم .. ونحن أيضًا
+<span class="translation">"Language is not a science — it is something above science. Our language is in danger — and so are we."</span>
 </blockquote>
-<p class="arabic-translation">"Language is not a science — it is something above science.<br>Our language is in danger — and so are we."</p>
-</div>
 
+---
 
-<hr>
+::: {.projects-grid}
 
-<div class="section">
-<h2>What I've Built</h2>
+::: {.project-card .featured}
+### BertHash-Femto
+113× smaller than AraBERTv2, 94% accuracy. Runs on edge devices.
+[→ GitHub](https://github.com/abdelkareemkobo)
+:::
 
-<div class="work-grid">
+::: {.project-card}
+### Zarra & Bojji  
+Tiny Arabic models for phones.
+[→ Read more](http://kareemai.com/blog/posts/minishlab/blog_zaraah.html)
+:::
 
-<div class="work-card featured">
-<h3>BertHash-Femto</h3>
-<p>Arabic embedding model that's 113x smaller than AraBERTv2 (1.2M vs 135M parameters) while achieving 94% of its performance. Runs on edge devices.</p>
-<p><strong>Why it matters:</strong> Production-ready Arabic AI without expensive GPU infrastructure.</p>
-<a href="https://github.com/abdelkareemkobo">GitHub →</a>
-</div>
+::: {.project-card}
+### كم كالوري
+Arabic nutrition search.
+[→ Try it](https://kamcalorie.com)
+:::
 
-<div class="work-card">
-<h3>Zarra & Bojji</h3>
-<p>Arabic AI models that are 10x smaller than competitors but just as accurate. They run on phones, not just expensive servers.</p>
-<a href="http://kareemai.com/blog/posts/minishlab/blog_zaraah.html">Read more →</a>
-</div>
+::: {.project-card}
+### GPUVec
+GPU pricing & ML benchmarks.
+[→ Check it](https://gpuvec.com)
+:::
 
-<div class="work-card">
-<h3>كم كالوري</h3>
-<p>Ask "how many calories in koshari?" in Arabic and get real answers. Semantic search for nutrition.</p>
-<a href="https://kamcalorie.com">Try it →</a>
-</div>
+:::
 
-<div class="work-card">
-<h3>GPUVec</h3>
-<p>Developer toolkit for ML infrastructure decisions. Compare GPU pricing across 50+ cloud providers, benchmark LLMs and embedding models, and calculate Qdrant vector database specs.</p>
-<a href="https://gpuvec.com">Check it out →</a>
-</div>
+---
 
-<div class="work-card">
-<h3>Arabic GLiNER</h3>
-<p>Extract names, places, and organizations from Arabic text automatically.</p>
-<a href="https://github.com/abdelkareemkobo/arabic-gliner">GitHub →</a>
-</div>
+::: {.work-section}
 
-</div>
-</div>
+I'm an NLP Engineer at **Xbites**, building the AI backend for Darin. I also research with **Hamza Salem Lab** on Arabic embeddings and contribute to **NAMMA** for open-source Arabic AI.
 
-<hr>
-
-<div class="section">
-
-<h2>Where I Work</h2>
-
-<div class="work-places">
-
-<div class="place-card">
-<h3>Xbites <span class="place-date">2025 - now</span></h3>
-<p>Building the AI backend for Darin, a smart real estate platform. I designed semantic search (improved relevancy from 30% to 92%), built an AI agent factory that generates custom agents in under 2 minutes, and automated data pipelines across 150+ developers and 500 projects.</p>
-<p><strong>Result:</strong> Reduced broker workflow time by 83%. Enabled deals with major real estate companies.</p>
-</div>
-
-<div class="place-card">
-<h3>Hamza Salem Lab <span class="place-date">2024 - now</span></h3>
-<p>Research group focused on advancing Arabic AI. I build embedding models and contribute to academic publications. Our mission is to make cutting-edge Arabic AI accessible beyond big tech.</p>
-<p><strong>Result:</strong> Multiple papers published, 54 citations, models used internationally.</p>
-</div>
-
-<div class="place-card">
-<h3>NAMMA <span class="place-date">Nov 2024 - now</span></h3>
-<p>Part-time NLP Engineer and open-source maintainer. Contributing to state-of-the-art Arabic LLMs, embeddings, OCR, and ASR systems.</p>
-<p><strong>Result:</strong> Multiple SOTA Arabic models released openly, used by thousands of developers across the Arab world.</p>
-</div>
-
-<div class="place-card">
-<h3>Freelance <span class="place-date">2021 - now</span></h3>
-<p>Search engines, APIs, ML pipelines, and web applications for clients worldwide. Top-rated freelancer on Upwork with 20+ completed projects.</p>
-<p><strong>Result:</strong> Repeat clients from 5+ countries.</p>
-</div>
-
-</div>
-</div>
-
-<hr>
-
-<div class="section">
-<h2>What I'm Working On Now</h2>
-
-<div class="now-card">
-<ul>
-<li><strong>Better Arabic embeddings</strong> — Current models struggle with dialects. Fixing that.</li>
-<li><strong>Arabic OCR</strong> — Reading old Arabic manuscripts and printed books automatically.</li>
-<li><strong>Multimodal Arabic AI</strong> — Models that understand both Arabic text and images together.</li>
-<li><strong>CPU-efficient Transformers</strong> — Master's thesis research on making models faster without GPUs.</li>
-</ul>
+My thesis focuses on making transformers run efficiently on CPUs.
 
 <div class="stats-row">
-<div class="stat">
-<span class="stat-number">7</span>
-<span class="stat-label">Papers</span>
-</div>
-<div class="stat">
-<span class="stat-number">54</span>
-<span class="stat-label">Citations</span>
-</div>
-<div class="stat">
-<span class="stat-number">962</span>
-<span class="stat-label">Papers Read</span>
-</div>
-</div>
-</div>
+<div class="stat"><span class="num">7</span><span class="label">papers</span></div>
+<div class="stat"><span class="num">54</span><span class="label">citations</span></div>
+<div class="stat"><span class="num">962</span><span class="label">papers read</span></div>
 </div>
 
-<hr>
+:::
 
-<div class="section cta-section">
-<h2>Work With Me</h2>
-<p>Need Arabic AI, production ML systems, or efficient model architectures?</p>
-<div class="cta-buttons">
-<a href="mailto:kareem01095134688@gmail.com" class="btn btn-primary btn-large"><i class="bi bi-envelope"></i> Email Me</a>
-<a href="https://www.upwork.com/freelancers/~016a9fea792423bb9a" class="btn btn-large"><i class="bi bi-briefcase"></i> Upwork</a>
-</div>
-</div>
+---
 
-<hr>
+::: {.contact-section}
+[kareem01095134688@gmail.com](mailto:kareem01095134688@gmail.com) · [Upwork](https://www.upwork.com/freelancers/~016a9fea792423bb9a) · [GitHub](https://github.com/abdelkareemkobo)
+:::
 
-<div class="section">
-<h2>Updates</h2>
-<p style="text-align: center; color: var(--text-secondary);">Get notified when I publish new research or projects.</p>
-
-<div class="newsletter-embed">
+::: {.newsletter-box}
 <iframe src="https://kareemnns.substack.com/embed" width="100%" height="150" style="border:none; background:transparent;" frameborder="0" scrolling="no"></iframe>
-</div>
+:::
 
-<div class="social-row">
-<a href="index.xml"><i class="bi bi-rss"></i> RSS</a>
-<a href="https://github.com/abdelkareemkobo"><i class="bi bi-github"></i> GitHub</a>
-<a href="https://youtube.com/@AbdelkareemElkhatib"><i class="bi bi-youtube"></i> YouTube</a>
-</div>
-</div>
-
-
-
-</div>
+<blockquote class="arabic-quote small">
+فقالَ: إن تَصدُقِ اللَّهَ يَصدُقْكَ
+</blockquote>

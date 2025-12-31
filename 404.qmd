@@ -1,0 +1,33 @@
+---
+title: "Lost in the Matrix"
+pagetitle: "404 - Page Not Found"
+description: "The page you're looking for has wandered off into the void of the internet."
+sidebar: false
+toc: false
+comments: false
+---
+
+::: {.error-404}
+
+# 🤖 404
+
+### Oops! This page went to train on more data...
+
+Looks like this page decided to become a transformer model and attention-ed itself out of existence.
+
+**Possible explanations:**
+
+- The page is still in `draft: true` mode
+- A rogue gradient descent optimized it away
+- Someone forgot to `git push`
+- The Arabic NLP model misunderstood the URL
+
+::: {.error-actions}
+[← Take me home](/)
+[Read the blog](/blog/feed.html)
+[Check TILs](/til/)
+:::
+
+<p class="error-quote">"In the world of 404s, every missing page is just an undiscovered feature."</p>
+
+:::

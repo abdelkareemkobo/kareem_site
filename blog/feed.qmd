@@ -1,23 +1,25 @@
 ---
-pagetitle: "kareem's blog"
+pagetitle: "Blog | Abdelkareem Elkhateb - Arabic NLP & AI Research"
+title: "Blog"
+description: "Articles on Arabic NLP, efficient AI models, semantic search, and machine learning engineering. Deep dives into building production AI systems."
 sidebar: false
 toc: false
+comments: false
+open-graph:
+  title: "Blog | Abdelkareem Elkhateb"
+  description: "Articles on Arabic NLP, efficient AI, and ML engineering"
 listing:
-  type: default
+  type: grid
   sort: "date desc"
   contents: 
    - "posts"
-  sort-ui: [date, title]
+  sort-ui: false
   filter-ui: true
   categories: true
   feed: true
-  fields: [image, date, title, description, categories]
+  fields: [image, date, title, description, categories, reading-time]
   date-format: "MMM D, YYYY"
-  max-description-length: 100
+  max-description-length: 150
+  grid-columns: 2
+  grid-item-border: false
 ---
-
-::: {.blog-page-header}
-# 📮 Blog
-
-Thoughts, experiments, and learnings on Arabic NLP, AI research, and building real-world systems.
-:::

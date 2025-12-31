@@ -1,1 +1,18 @@
 sidebar: false
+
+# Show reading time on all posts
+reading-time: true
+
+# Smooth scrolling
+smooth-scroll: true
+
+# Enable previous/next navigation
+page-navigation: true
+
+# Include share buttons, newsletter, and progress bar
+format:
+  html:
+    include-in-header: ../../_includes/progress-bar.html
+    include-after-body: 
+      - ../../_includes/share-buttons.html
+      - ../../_includes/newsletter.html

@@ -1,9 +1,15 @@
 ---
 id: TIL
-title: 📚 kareem's TILs
+title: "TILs - Today I Learned"
+pagetitle: "TILs | Abdelkareem Elkhateb - Arabic NLP & AI"
+description: "Quick learnings and notes on Arabic NLP, machine learning, Python, Rust, and AI engineering. Daily discoveries from building real-world AI systems."
 image: "https://user-images.githubusercontent.com/1483922/208359430-f55d7503-3a98-4875-a35c-16314c9439d0.png"
 search: true
 toc: true
+comments: false
+open-graph:
+  title: "TILs - Today I Learned | Abdelkareem Elkhateb"
+  description: "Quick learnings on Arabic NLP, ML, and AI engineering"
 listing:
   filter-ui: true
   sort-ui: true

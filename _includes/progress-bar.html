@@ -1,0 +1,12 @@
+<div class="reading-progress" id="reading-progress"></div>
+
+<script>
+window.addEventListener('scroll', () => {
+  const article = document.querySelector('article') || document.body;
+  const scrollTop = window.scrollY;
+  const docHeight = article.scrollHeight - window.innerHeight;
+  const progress = Math.min((scrollTop / docHeight) * 100, 100);
+  document.getElementById('reading-progress').style.width = progress + '%';
+});
+</script>
+
