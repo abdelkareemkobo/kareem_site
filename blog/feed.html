@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Articles on Arabic NLP, efficient AI models, semantic search, and machine learning engineering. Deep dives into building production AI systems.">
 
-<title>kareem’s blog – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
+<title>Blog | Abdelkareem Elkhateb - Arabic NLP &amp; AI Research – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../2.svg" rel="icon" type="image/svg+xml">
+<link href="../favicon.ico" rel="icon">
 <script src="../site_libs/quarto-listing/list.min.js"></script>
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
@@ -84,10 +85,10 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
-      page: 25,
+      valueNames: ['listing-image','listing-date','listing-title','listing-description','listing-categories','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      page: 18,
     pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -112,6 +113,21 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Blog",
+  "description": "Articles on Arabic NLP, efficient AI models, semantic search, and machine learning engineering. Deep dives into building production AI systems.",
+  "author": {"@type": "Person", "name": "Kareem Elkhateb"},
+  "datePublished": "",
+  "publisher": {
+    "@type": "Person",
+    "name": "Kareem Elkhateb",
+    "url": "https://kareemai.com"
+  }
+}
 </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
@@ -145,16 +161,16 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../styles.css">
-<link rel="alternate" type="application/rss+xml" title="عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist" href="feed.xml" data-external="1"><meta property="og:title" content="kareem’s blog">
-<meta property="og:description" content="Kareem Elkhateb personal site, a blog about machine learning, deep learning, Web development with Astro.js, FastAPI, also Arabic Natural Language Processing and Rust language.">
-<meta property="og:image" content="https://kareemai.com/blog/posts/speech_recognition/images/tarteel_ai.jpg">
-<meta property="og:site_name" content="عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
-<meta property="og:locale" content="ar_AR">
-<meta name="twitter:title" content="kareem’s blog">
-<meta name="twitter:description" content="Kareem Elkhateb personal site, a blog about machine learning, deep learning, Web development with Astro.js, FastAPI, also Arabic Natural Language Processing and Rust language.">
-<meta name="twitter:image" content="https://kareemai.com/blog/posts/speech_recognition/images/tarteel_ai.jpg">
+<link rel="alternate" type="application/rss+xml" title="عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist" href="feed.xml" data-external="1"><meta property="og:title" content="Blog | Abdelkareem Elkhateb">
+<meta property="og:description" content="Articles on Arabic NLP, efficient AI, and ML engineering">
+<meta property="og:image" content="https://kareemai.com/blog/kareem.jpg">
+<meta property="og:site_name" content="Abdelkareem Elkhateb">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:title" content="Blog | Abdelkareem Elkhateb - Arabic NLP &amp; AI Research">
+<meta name="twitter:description" content="Articles on Arabic NLP, efficient AI models, semantic search, and machine learning engineering. Deep dives into building production AI systems.">
+<meta name="twitter:image" content="https://kareemai.com/blog/kareem.jpg">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -390,54 +406,56 @@ window.Quarto = {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(31)</span></div><div class="category" data-category="YWRz">ads <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YWk=">ai <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YXJhYmlj">arabic <span class="quarto-category-count">(2)</span></div><div class="category" data-category="YmxvZ2dpbmc=">blogging <span class="quarto-category-count">(22)</span></div><div class="category" data-category="Y2FsY3VsdXM=">calculus <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29zdC1vcHRpbWl6YXRpb24=">cost-optimization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y3RyYW5zbGF0ZTI=">ctranslate2 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZW1iZWRkaW5n">embedding <span class="quarto-category-count">(6)</span></div><div class="category" data-category="ZXhw">exp <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Zmw=">fl <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z29vZ2xl">google <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aHVhd2Vp">huawei <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aWRlYV9Gb3JnZQ==">idea_Forge <span class="quarto-category-count">(6)</span></div><div class="category" data-category="am9i">job <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bGlmZQ==">life <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bGlmZV9zdHlsZQ==">life_style <span class="quarto-category-count">(6)</span></div><div class="category" data-category="bGluZWFyX2FsZ2VicmE=">linear_algebra <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWFjaGluZV9sZWFybmluZw==">machine_learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bWFjaGluZS1sZWFybmluZw==">machine-learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWF0aA==">math <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWluaXNobGFi">minishlab <span class="quarto-category-count">(3)</span></div><div class="category" data-category="bW9kZWwydmVj">model2vec <span class="quarto-category-count">(2)</span></div><div class="category" data-category="b3B0aW1pemF0aW9u">optimization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvYmFiaWxpdHk=">probability <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHVibGlzaA==">publish <span class="quarto-category-count">(11)</span></div><div class="category" data-category="cWRyYW50">qdrant <span class="quarto-category-count">(4)</span></div><div class="category" data-category="cXVyYW4=">quran <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cm91Z2hfdGhvdWdodHM=">rough_thoughts <span class="quarto-category-count">(6)</span></div><div class="category" data-category="c2Vv">seo <span class="quarto-category-count">(3)</span></div><div class="category" data-category="c3BhcnNl">sparse <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3BlZWNoX3JlY29nbml0aW9u">speech_recognition <span class="quarto-category-count">(2)</span></div><div class="category" data-category="c3RhdGlzdGljcw==">statistics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dGFydGVlbA==">tarteel <span class="quarto-category-count">(2)</span></div><div class="category" data-category="dGls">til <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dHJhbnNsYXRpb24=">translation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="d2F0Y2g=">watch <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
 
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Blog</h1>
+</div>
 
-
-
-<section id="blog" class="level1 blog-page-header">
-<h1>📮 Blog</h1>
-<p>Thoughts, experiments, and learnings on Arabic NLP, AI research, and building real-world systems.</p>
-</section>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-    </select>
+<div>
+  <div class="description">
+    Articles on Arabic NLP, efficient AI models, semantic search, and machine learning engineering. Deep dives into building production AI systems.
   </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+
+
+
+
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="listing-actions-group">
     <div class="input-group input-group-sm quarto-listing-filter">
       <span class="input-group-text"><i class="bi bi-search"></i></span>
       <input type="text" class="search form-control" placeholder="Filter">
     </div>
 </div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="YmxvZ2dpbmclMkN0YXJ0ZWVsJTJDc3BlZWNoX3JlY29nbml0aW9uJTJDbWFjaGluZV9sZWFybmluZyUyQ3F1cmFuJTJDam9i" data-listing-date-sort="1766700000000" data-listing-file-modified-sort="1767135461835" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1250">
-<div class="thumbnail"><a href="../blog/posts/speech_recognition/muaalm_quran_chance.html" class="no-external">
-
-<img loading="lazy" src="../blog/posts/speech_recognition/images/tarteel_ai.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/speech_recognition/muaalm_quran_chance.html" class="no-external">My Dream Job Working at Tarteel &amp; muaalem El Quran | Part 2</a>
-</h3>
+<div class="list grid quarto-listing-cols-2">
+<div class="g-col-1" data-index="0" data-categories="YmxvZ2dpbmclMkN0YXJ0ZWVsJTJDc3BlZWNoX3JlY29nbml0aW9uJTJDbWFjaGluZV9sZWFybmluZyUyQ3F1cmFuJTJDam9i" data-listing-date-sort="1766700000000" data-listing-file-modified-sort="1767135461835" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1250">
+<a href="../blog/posts/speech_recognition/muaalm_quran_chance.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top">
+<img loading="lazy" src="../blog/posts/speech_recognition/images/tarteel_ai.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+My Dream Job Working at Tarteel &amp; muaalem El Quran | Part 2
+</h5>
+<div class="listing-reading-time card-text text-muted">7 min</div>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
@@ -453,28 +471,28 @@ window.Quarto = {
 <div class="listing-category" onclick="window.quartoListingCategory('am9i'); return false;">job</div>
 
 </div>
-<div class="delink listing-description"><a href="../blog/posts/speech_recognition/muaalm_quran_chance.html" class="no-external">
+<div class="card-text listing-description delink">
 <p>Sharing my journey trying to join tarteel ai and contribute to Islamic open source projects</p>
-</a></div>
 </div>
-<div class="metadata">
-<a href="../blog/posts/speech_recognition/muaalm_quran_chance.html" class="no-external">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Dec 26, 2025
 </div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="YmxvZ2dpbmclMkNlbWJlZGRpbmclMkNxZHJhbnQ=" data-listing-date-sort="1766181600000" data-listing-file-modified-sort="1767135461832" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="414">
-<div class="thumbnail"><a href="../blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html" class="no-external">
-
-<img loading="lazy" src="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/bm25.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html" class="no-external">BM25 part 3 | Naive Benchmark</a>
-</h3>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="YmxvZ2dpbmclMkNlbWJlZGRpbmclMkNxZHJhbnQ=" data-listing-date-sort="1766181600000" data-listing-file-modified-sort="1767139600635" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="414">
+<a href="../blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top">
+<img loading="lazy" src="../blog/posts/nlp/embedding_world/sparse_embedding/images/bm25.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+BM25 part 3 | Naive Benchmark
+</h5>
+<div class="listing-reading-time card-text text-muted">3 min</div>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
@@ -484,28 +502,28 @@ Dec 26, 2025
 <div class="listing-category" onclick="window.quartoListingCategory('cWRyYW50'); return false;">qdrant</div>
 
 </div>
-<div class="delink listing-description"><a href="../blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html" class="no-external">
+<div class="card-text listing-description delink">
 <p>BM25 Benchmarked with bm25-sparse , rankbm_25 , numpy vectorization, scipy and normal python code.</p>
-</a></div>
 </div>
-<div class="metadata">
-<a href="../blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html" class="no-external">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Dec 20, 2025
 </div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="YmxvZ2dpbmclMkNlbWJlZGRpbmclMkNxZHJhbnQlMkNzcGFyc2U=" data-listing-date-sort="1766095200000" data-listing-file-modified-sort="1767135461832" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1386">
-<div class="thumbnail"><a href="../blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html" class="no-external">
-
-<img loading="lazy" src="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/xbites_chat.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html" class="no-external">BM25 Explained Part 2 | Qdrant hybrid search for real estate</a>
-</h3>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="YmxvZ2dpbmclMkNlbWJlZGRpbmclMkNxZHJhbnQlMkNzcGFyc2U=" data-listing-date-sort="1766095200000" data-listing-file-modified-sort="1767139600637" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1386">
+<a href="../blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top">
+<img loading="lazy" src="../blog/posts/nlp/embedding_world/sparse_embedding/images/xbites_chat.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+BM25 Explained Part 2 | Qdrant hybrid search for real estate
+</h5>
+<div class="listing-reading-time card-text text-muted">7 min</div>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
@@ -517,28 +535,28 @@ Dec 20, 2025
 <div class="listing-category" onclick="window.quartoListingCategory('c3BhcnNl'); return false;">sparse</div>
 
 </div>
-<div class="delink listing-description"><a href="../blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html" class="no-external">
+<div class="card-text listing-description delink">
 <p>BM25 explained with python code implementation and math examples</p>
-</a></div>
 </div>
-<div class="metadata">
-<a href="../blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html" class="no-external">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Dec 19, 2025
 </div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="YmxvZ2dpbmclMkNlbWJlZGRpbmclMkNxZHJhbnQ=" data-listing-date-sort="1766095200000" data-listing-file-modified-sort="1767135492595" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="786">
-<div class="thumbnail"><a href="../blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html" class="no-external">
-
-<img loading="lazy" src="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/bm25.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html" class="no-external">BM25 Explained for Hybrid Search and Rag | Part 1</a>
-</h3>
+</div></a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="YmxvZ2dpbmclMkNlbWJlZGRpbmclMkNxZHJhbnQ=" data-listing-date-sort="1766095200000" data-listing-file-modified-sort="1767139600635" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="786">
+<a href="../blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top">
+<img loading="lazy" src="../blog/posts/nlp/embedding_world/sparse_embedding/images/bm25.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+BM25 Explained for Hybrid Search and Rag | Part 1
+</h5>
+<div class="listing-reading-time card-text text-muted">4 min</div>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
@@ -548,28 +566,28 @@ Dec 19, 2025
 <div class="listing-category" onclick="window.quartoListingCategory('cWRyYW50'); return false;">qdrant</div>
 
 </div>
-<div class="delink listing-description"><a href="../blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html" class="no-external">
+<div class="card-text listing-description delink">
 <p>BM25 explained with python code implementation and math examples</p>
-</a></div>
 </div>
-<div class="metadata">
-<a href="../blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html" class="no-external">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Dec 19, 2025
 </div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="YmxvZ2dpbmclMkNtaW5pc2hsYWIlMkNlbWJlZGRpbmclMkNxZHJhbnQlMkN0aWw=" data-listing-date-sort="1765749600000" data-listing-file-modified-sort="1767135461831" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="716">
-<div class="thumbnail"><a href="../blog/posts/minishlab/pyversity_qdrant.html" class="no-external">
-
-<img loading="lazy" src="../blog/posts/minishlab/images/minishlab.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/minishlab/pyversity_qdrant.html" class="no-external">Diversifying Search Results with Pyversity and Qdrant</a>
-</h3>
+</div></a>
+</div>
+<div class="g-col-1" data-index="4" data-categories="YmxvZ2dpbmclMkNtaW5pc2hsYWIlMkNlbWJlZGRpbmclMkNxZHJhbnQlMkN0aWw=" data-listing-date-sort="1765749600000" data-listing-file-modified-sort="1767135461831" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="716">
+<a href="../blog/posts/minishlab/pyversity_qdrant.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top">
+<img loading="lazy" src="../blog/posts/minishlab/images/minishlab.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Diversifying Search Results with Pyversity and Qdrant
+</h5>
+<div class="listing-reading-time card-text text-muted">4 min</div>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
@@ -583,72 +601,68 @@ Dec 19, 2025
 <div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
 
 </div>
-<div class="delink listing-description"><a href="../blog/posts/minishlab/pyversity_qdrant.html" class="no-external">
-<p>Diversifying search results with Qdrant and Pyversity for better RAG System with MMR, DDP and…</p>
-</a></div>
+<div class="card-text listing-description delink">
+<p>Diversifying search results with Qdrant and Pyversity for better RAG System with MMR, DDP and other algorthims</p>
 </div>
-<div class="metadata">
-<a href="../blog/posts/minishlab/pyversity_qdrant.html" class="no-external">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Dec 15, 2025
 </div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1764799200000" data-listing-file-modified-sort="1767135461835" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="19" data-listing-word-count-sort="3658">
-<div class="thumbnail"><a href="../blog/posts/products_reviews/one_plus_pad_3.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/products_reviews/images/big_image.webp"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/products_reviews/one_plus_pad_3.html" class="no-external">OnePlus Pad 3 Review (2025) - Researcher Review</a>
-</h3>
-<div class="delink listing-description"><a href="../blog/posts/products_reviews/one_plus_pad_3.html" class="no-external">
-<p>In-depth OnePlus Pad 3 review with Snapdragon 8 Elite. Covering the 13.2-inch 3.4K display…</p>
-</a></div>
+</div></a>
 </div>
-<div class="metadata">
-<a href="../blog/posts/products_reviews/one_plus_pad_3.html" class="no-external">
+<div class="g-col-1" data-index="5" data-listing-date-sort="1764799200000" data-listing-file-modified-sort="1767135461835" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="19" data-listing-word-count-sort="3658">
+<a href="../blog/posts/products_reviews/one_plus_pad_3.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top"><img src="posts/products_reviews/images/big_image.webp" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+OnePlus Pad 3 Review (2025) - Researcher Review
+</h5>
+<div class="listing-reading-time card-text text-muted">19 min</div>
+<div class="card-text listing-description delink">
+<p>In-depth OnePlus Pad 3 review with Snapdragon 8 Elite. Covering the 13.2-inch 3.4K display, 12,140mAh battery, AI features, 80W charging, keyboard…</p>
+</div>
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Dec 4, 2025
 </div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-listing-date-sort="1762466400000" data-listing-file-modified-sort="1767135461834" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2101">
-<div class="thumbnail"><a href="../blog/posts/products_reviews/Huawei freebuds 7i.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/products_reviews/images/huawei_7i.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/products_reviews/Huawei freebuds 7i.html" class="no-external">Huawei FreeBuds 7i Review and specs: Is It Worth Upgrading from FreeBuds 5i?</a>
-</h3>
-<div class="delink listing-description"><a href="../blog/posts/products_reviews/Huawei freebuds 7i.html" class="no-external">
-<p>Honest review of the Huawei FreeBuds 7i after 20 days of daily use. Compare FreeBuds 7i vs 5i -…</p>
-</a></div>
+</div></a>
 </div>
-<div class="metadata">
-<a href="../blog/posts/products_reviews/Huawei freebuds 7i.html" class="no-external">
+<div class="g-col-1" data-index="6" data-listing-date-sort="1762466400000" data-listing-file-modified-sort="1767135461834" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2101">
+<a href="../blog/posts/products_reviews/Huawei freebuds 7i.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top"><img src="posts/products_reviews/images/huawei_7i.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Huawei FreeBuds 7i Review and specs: Is It Worth Upgrading from FreeBuds 5i?
+</h5>
+<div class="listing-reading-time card-text text-muted">11 min</div>
+<div class="card-text listing-description delink">
+<p>Honest review of the Huawei FreeBuds 7i after 20 days of daily use. Compare FreeBuds 7i vs 5i - microphone quality, ANC performance, battery life…</p>
+</div>
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Nov 7, 2025
 </div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="bWFjaGluZS1sZWFybmluZyUyQ29wdGltaXphdGlvbiUyQ3RyYW5zbGF0aW9uJTJDY3RyYW5zbGF0ZTIlMkNjb3N0LW9wdGltaXphdGlvbiUyQ2Jsb2dnaW5n" data-listing-date-sort="1759438800000" data-listing-file-modified-sort="1767135461803" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="17" data-listing-word-count-sort="3212">
-<div class="thumbnail"><a href="../blog/posts/minishlab/ctranslate_maswray.html" class="no-external">
-
-<img loading="lazy" src="../blog/posts/minishlab/images/bojji.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/minishlab/ctranslate_maswray.html" class="no-external">From $32,000 to $0 with Small Models and CTranslate2</a>
-</h3>
+</div></a>
+</div>
+<div class="g-col-1" data-index="7" data-categories="bWFjaGluZS1sZWFybmluZyUyQ29wdGltaXphdGlvbiUyQ3RyYW5zbGF0aW9uJTJDY3RyYW5zbGF0ZTIlMkNjb3N0LW9wdGltaXphdGlvbiUyQ2Jsb2dnaW5n" data-listing-date-sort="1759438800000" data-listing-file-modified-sort="1767135461803" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="17" data-listing-word-count-sort="3212">
+<a href="../blog/posts/minishlab/ctranslate_maswray.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top">
+<img loading="lazy" src="../blog/posts/minishlab/images/bojji.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+From $32,000 to $0 with Small Models and CTranslate2
+</h5>
+<div class="listing-reading-time card-text text-muted">17 min</div>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('bWFjaGluZS1sZWFybmluZw=='); return false;">machine-learning</div>
@@ -664,28 +678,28 @@ Nov 7, 2025
 <div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
 
 </div>
-<div class="delink listing-description"><a href="../blog/posts/minishlab/ctranslate_maswray.html" class="no-external">
-<p>How I reduced translation costs from $32,000 to $0 using small models and CTranslate2…</p>
-</a></div>
+<div class="card-text listing-description delink">
+<p>How I reduced translation costs from $32,000 to $0 using small models and CTranslate2 optimization, achieving 4-6x speed improvements</p>
 </div>
-<div class="metadata">
-<a href="../blog/posts/minishlab/ctranslate_maswray.html" class="no-external">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Oct 3, 2025
 </div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="YmxvZ2dpbmclMkNpZGVhX0ZvcmdlJTJDcHVibGlzaCUyQ3JvdWdoX3Rob3VnaHRzJTJDbGlmZV9zdHlsZQ==" data-listing-date-sort="1749502800000" data-listing-file-modified-sort="1767135461802" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="736">
-<div class="thumbnail"><a href="../blog/posts/life_style/back_to_rss.html" class="no-external">
-
-<img loading="lazy" src="../blog/posts/life_style/images/vision_read.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/life_style/back_to_rss.html" class="no-external">Getting Back to RSS</a>
-</h3>
+</div></a>
+</div>
+<div class="g-col-1" data-index="8" data-categories="YmxvZ2dpbmclMkNpZGVhX0ZvcmdlJTJDcHVibGlzaCUyQ3JvdWdoX3Rob3VnaHRzJTJDbGlmZV9zdHlsZQ==" data-listing-date-sort="1749502800000" data-listing-file-modified-sort="1767135461802" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="736">
+<a href="../blog/posts/life_style/back_to_rss.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top">
+<img loading="lazy" src="../blog/posts/life_style/images/vision_read.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Getting Back to RSS
+</h5>
+<div class="listing-reading-time card-text text-muted">4 min</div>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
@@ -699,28 +713,28 @@ Oct 3, 2025
 <div class="listing-category" onclick="window.quartoListingCategory('bGlmZV9zdHlsZQ=='); return false;">life_style</div>
 
 </div>
-<div class="delink listing-description"><a href="../blog/posts/life_style/back_to_rss.html" class="no-external">
-<p>Exploring digital minimalism and strategies to stay ahead in AI without burnout. This post…</p>
-</a></div>
+<div class="card-text listing-description delink">
+<p>Exploring digital minimalism and strategies to stay ahead in AI without burnout. This post discusses the overwhelm of social media, the power of RSS…</p>
 </div>
-<div class="metadata">
-<a href="../blog/posts/life_style/back_to_rss.html" class="no-external">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jun 10, 2025
 </div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="YmxvZ2dpbmclMkNlbWJlZGRpbmclMkNtaW5pc2hsYWIlMkNtb2RlbDJ2ZWMlMkNhcmFiaWM=" data-listing-date-sort="1747256400000" data-listing-file-modified-sort="1767135461832" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="20">
-<div class="thumbnail"><a href="../blog/posts/nlp/embedding_world/late_interaction.html" class="no-external">
-
-<img loading="lazy" src="../blog/posts/nlp/embedding_world/images/minishlab.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/nlp/embedding_world/late_interaction.html" class="no-external">Late Interaction and ColPali</a>
-</h3>
+</div></a>
+</div>
+<div class="g-col-1" data-index="9" data-categories="YmxvZ2dpbmclMkNlbWJlZGRpbmclMkNtaW5pc2hsYWIlMkNtb2RlbDJ2ZWMlMkNhcmFiaWM=" data-listing-date-sort="1747256400000" data-listing-file-modified-sort="1767135461832" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="20">
+<a href="../blog/posts/nlp/embedding_world/late_interaction.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top">
+<img loading="lazy" src="../blog/posts/nlp/embedding_world/images/minishlab.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Late Interaction and ColPali
+</h5>
+<div class="listing-reading-time card-text text-muted">1 min</div>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
@@ -734,28 +748,28 @@ Jun 10, 2025
 <div class="listing-category" onclick="window.quartoListingCategory('YXJhYmlj'); return false;">arabic</div>
 
 </div>
-<div class="delink listing-description"><a href="../blog/posts/nlp/embedding_world/late_interaction.html" class="no-external">
+<div class="card-text listing-description delink">
 <p>What is Colapli, Late interaction and their impact</p>
-</a></div>
 </div>
-<div class="metadata">
-<a href="../blog/posts/nlp/embedding_world/late_interaction.html" class="no-external">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 May 15, 2025
 </div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="YmxvZ2dpbmclMkNlbWJlZGRpbmclMkNtaW5pc2hsYWIlMkNtb2RlbDJ2ZWMlMkNhcmFiaWM=" data-listing-date-sort="1747256400000" data-listing-file-modified-sort="1767135461803" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1001">
-<div class="thumbnail"><a href="../blog/posts/minishlab/blog_zaraah.html" class="no-external">
-
-<img loading="lazy" src="../blog/posts/minishlab/images/minishlab.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/minishlab/blog_zaraah.html" class="no-external">Bojji &amp; Zarra Embedding models</a>
-</h3>
+</div></a>
+</div>
+<div class="g-col-1" data-index="10" data-categories="YmxvZ2dpbmclMkNlbWJlZGRpbmclMkNtaW5pc2hsYWIlMkNtb2RlbDJ2ZWMlMkNhcmFiaWM=" data-listing-date-sort="1747256400000" data-listing-file-modified-sort="1767135461803" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1001">
+<a href="../blog/posts/minishlab/blog_zaraah.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top">
+<img loading="lazy" src="../blog/posts/minishlab/images/minishlab.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Bojji &amp; Zarra Embedding models
+</h5>
+<div class="listing-reading-time card-text text-muted">6 min</div>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
@@ -769,28 +783,28 @@ May 15, 2025
 <div class="listing-category" onclick="window.quartoListingCategory('YXJhYmlj'); return false;">arabic</div>
 
 </div>
-<div class="delink listing-description"><a href="../blog/posts/minishlab/blog_zaraah.html" class="no-external">
+<div class="card-text listing-description delink">
 <p>Bojji and Zarra model2vec family model analysis and testing on Arabic Embeddings tasks.</p>
-</a></div>
 </div>
-<div class="metadata">
-<a href="../blog/posts/minishlab/blog_zaraah.html" class="no-external">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 May 15, 2025
 </div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="YmxvZ2dpbmclMkNpZGVhX0ZvcmdlJTJDcHVibGlzaCUyQ3JvdWdoX3Rob3VnaHRzJTJDbGlmZV9zdHlsZQ==" data-listing-date-sort="1743717600000" data-listing-file-modified-sort="1767135461802" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="742">
-<div class="thumbnail"><a href="../blog/posts/life_style/gpuvec.html" class="no-external">
-
-<img loading="lazy" src="../blog/posts/life_style/images/gpuvec.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/life_style/gpuvec.html" class="no-external">Cloud GPU Pricing Comparsion in 2025</a>
-</h3>
+</div></a>
+</div>
+<div class="g-col-1" data-index="11" data-categories="YmxvZ2dpbmclMkNpZGVhX0ZvcmdlJTJDcHVibGlzaCUyQ3JvdWdoX3Rob3VnaHRzJTJDbGlmZV9zdHlsZQ==" data-listing-date-sort="1743717600000" data-listing-file-modified-sort="1767135461802" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="742">
+<a href="../blog/posts/life_style/gpuvec.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top">
+<img loading="lazy" src="../blog/posts/life_style/images/gpuvec.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Cloud GPU Pricing Comparsion in 2025
+</h5>
+<div class="listing-reading-time card-text text-muted">4 min</div>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
@@ -804,28 +818,28 @@ May 15, 2025
 <div class="listing-category" onclick="window.quartoListingCategory('bGlmZV9zdHlsZQ=='); return false;">life_style</div>
 
 </div>
-<div class="delink listing-description"><a href="../blog/posts/life_style/gpuvec.html" class="no-external">
-<p>Explore 2025 cloud GPU pricing with GPUvec. Compare top providers, GPU benchmarks, and tools like…</p>
-</a></div>
+<div class="card-text listing-description delink">
+<p>Explore 2025 cloud GPU pricing with GPUvec. Compare top providers, GPU benchmarks, and tools like our model size calculator to find the cheapest…</p>
 </div>
-<div class="metadata">
-<a href="../blog/posts/life_style/gpuvec.html" class="no-external">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Apr 4, 2025
 </div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="YmxvZ2dpbmclMkN0YXJ0ZWVsJTJDc3BlZWNoX3JlY29nbml0aW9uJTJDbWFjaGluZV9sZWFybmluZyUyQ3F1cmFuJTJDam9i" data-listing-date-sort="1742248800000" data-listing-file-modified-sort="1767135461835" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="894">
-<div class="thumbnail"><a href="../blog/posts/speech_recognition/my_dream_job_at_tarteel.html" class="no-external">
-
-<img loading="lazy" src="../blog/posts/speech_recognition/images/tarteel_ai.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/speech_recognition/my_dream_job_at_tarteel.html" class="no-external">my dream job at Tarteel</a>
-</h3>
+</div></a>
+</div>
+<div class="g-col-1" data-index="12" data-categories="YmxvZ2dpbmclMkN0YXJ0ZWVsJTJDc3BlZWNoX3JlY29nbml0aW9uJTJDbWFjaGluZV9sZWFybmluZyUyQ3F1cmFuJTJDam9i" data-listing-date-sort="1742248800000" data-listing-file-modified-sort="1767135461835" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="894">
+<a href="../blog/posts/speech_recognition/my_dream_job_at_tarteel.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top">
+<img loading="lazy" src="../blog/posts/speech_recognition/images/tarteel_ai.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+my dream job at Tarteel
+</h5>
+<div class="listing-reading-time card-text text-muted">5 min</div>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
@@ -841,28 +855,28 @@ Apr 4, 2025
 <div class="listing-category" onclick="window.quartoListingCategory('am9i'); return false;">job</div>
 
 </div>
-<div class="delink listing-description"><a href="../blog/posts/speech_recognition/my_dream_job_at_tarteel.html" class="no-external">
+<div class="card-text listing-description delink">
 <p>Sharing my thoughts about my dream to work at Tarteel on Quran as Machine learning Engineer</p>
-</a></div>
 </div>
-<div class="metadata">
-<a href="../blog/posts/speech_recognition/my_dream_job_at_tarteel.html" class="no-external">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Mar 18, 2025
 </div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="YmxvZ2dpbmclMkNpZGVhX0ZvcmdlJTJDcHVibGlzaCUyQ3JvdWdoX3Rob3VnaHRzJTJDbGlmZV9zdHlsZQ==" data-listing-date-sort="1738706400000" data-listing-file-modified-sort="1767135461802" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="662">
-<div class="thumbnail"><a href="../blog/posts/life_style/digital_minimalisim_arabic.html" class="no-external">
-
-<img loading="lazy" src="../blog/posts/life_style/images/fake_graviety.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/life_style/digital_minimalisim_arabic.html" class="no-external">فن تبسيط الحياة الرقمية</a>
-</h3>
+</div></a>
+</div>
+<div class="g-col-1" data-index="13" data-categories="YmxvZ2dpbmclMkNpZGVhX0ZvcmdlJTJDcHVibGlzaCUyQ3JvdWdoX3Rob3VnaHRzJTJDbGlmZV9zdHlsZQ==" data-listing-date-sort="1738706400000" data-listing-file-modified-sort="1767135461802" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="662">
+<a href="../blog/posts/life_style/digital_minimalisim_arabic.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top">
+<img loading="lazy" src="../blog/posts/life_style/images/fake_graviety.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+فن تبسيط الحياة الرقمية
+</h5>
+<div class="listing-reading-time card-text text-muted">4 min</div>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
@@ -876,28 +890,28 @@ Mar 18, 2025
 <div class="listing-category" onclick="window.quartoListingCategory('bGlmZV9zdHlsZQ=='); return false;">life_style</div>
 
 </div>
-<div class="delink listing-description"><a href="../blog/posts/life_style/digital_minimalisim_arabic.html" class="no-external">
-<p>فن تبسيط الحياة الرقمية نصائح وتطبيقات تساعدك علي التحرر من عقلية القرد و محافظة علي وقتك و طاقة…</p>
-</a></div>
+<div class="card-text listing-description delink">
+<p>فن تبسيط الحياة الرقمية نصائح وتطبيقات تساعدك علي التحرر من عقلية القرد و محافظة علي وقتك و طاقة النفسية</p>
 </div>
-<div class="metadata">
-<a href="../blog/posts/life_style/digital_minimalisim_arabic.html" class="no-external">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Feb 5, 2025
 </div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-categories="YmxvZ2dpbmclMkNhaSUyQ21hdGglMkNsaW5lYXJfYWxnZWJyYSUyQ2NhbGN1bHVzJTJDc3RhdGlzdGljcyUyQ3Byb2JhYmlsaXR5" data-listing-date-sort="1737928800000" data-listing-file-modified-sort="1767135461803" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3149">
-<div class="thumbnail"><a href="../blog/posts/math/math_skills_for_AI.html" class="no-external">
-
-<img loading="lazy" src="../blog/posts/math/images/Maslakiat.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/math/math_skills_for_AI.html" class="no-external">Math Skills For AI</a>
-</h3>
+</div></a>
+</div>
+<div class="g-col-1" data-index="14" data-categories="YmxvZ2dpbmclMkNhaSUyQ21hdGglMkNsaW5lYXJfYWxnZWJyYSUyQ2NhbGN1bHVzJTJDc3RhdGlzdGljcyUyQ3Byb2JhYmlsaXR5" data-listing-date-sort="1737928800000" data-listing-file-modified-sort="1767135461803" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3149">
+<a href="../blog/posts/math/math_skills_for_AI.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top">
+<img loading="lazy" src="../blog/posts/math/images/Maslakiat.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Math Skills For AI
+</h5>
+<div class="listing-reading-time card-text text-muted">16 min</div>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
@@ -915,28 +929,28 @@ Feb 5, 2025
 <div class="listing-category" onclick="window.quartoListingCategory('cHJvYmFiaWxpdHk='); return false;">probability</div>
 
 </div>
-<div class="delink listing-description"><a href="../blog/posts/math/math_skills_for_AI.html" class="no-external">
-<p>Improving my math skills from pure math , concepts to applied AI and try to keep this skills share…</p>
-</a></div>
+<div class="card-text listing-description delink">
+<p>Improving my math skills from pure math , concepts to applied AI and try to keep this skills share as much as possible</p>
 </div>
-<div class="metadata">
-<a href="../blog/posts/math/math_skills_for_AI.html" class="no-external">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jan 27, 2025
 </div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="15" data-categories="YmxvZ2dpbmclMkNpZGVhX0ZvcmdlJTJDcHVibGlzaCUyQ3JvdWdoX3Rob3VnaHRzJTJDbGlmZV9zdHlsZQ==" data-listing-date-sort="1736287200000" data-listing-file-modified-sort="1767135461802" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="189">
-<div class="thumbnail"><a href="../blog/posts/life_style/kamcalorie.html" class="no-external">
-
-<img loading="lazy" src="../blog/posts/life_style/images/kcal.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/life_style/kamcalorie.html" class="no-external">كم كالوري في الطعام ؟</a>
-</h3>
+</div></a>
+</div>
+<div class="g-col-1" data-index="15" data-categories="YmxvZ2dpbmclMkNpZGVhX0ZvcmdlJTJDcHVibGlzaCUyQ3JvdWdoX3Rob3VnaHRzJTJDbGlmZV9zdHlsZQ==" data-listing-date-sort="1736287200000" data-listing-file-modified-sort="1767135461802" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="189">
+<a href="../blog/posts/life_style/kamcalorie.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top">
+<img loading="lazy" src="../blog/posts/life_style/images/kcal.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+كم كالوري في الطعام ؟
+</h5>
+<div class="listing-reading-time card-text text-muted">1 min</div>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
@@ -950,28 +964,28 @@ Jan 27, 2025
 <div class="listing-category" onclick="window.quartoListingCategory('bGlmZV9zdHlsZQ=='); return false;">life_style</div>
 
 </div>
-<div class="delink listing-description"><a href="../blog/posts/life_style/kamcalorie.html" class="no-external">
-<p>أول موقع بالذكاء الإصطناعي لتحديد السعرات الحرارية في الأطعمة باللغة العربية بشكل تلقائي وسهل و…</p>
-</a></div>
+<div class="card-text listing-description delink">
+<p>أول موقع بالذكاء الإصطناعي لتحديد السعرات الحرارية في الأطعمة باللغة العربية بشكل تلقائي وسهل و بدقة عالية</p>
 </div>
-<div class="metadata">
-<a href="../blog/posts/life_style/kamcalorie.html" class="no-external">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jan 8, 2025
 </div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="16" data-categories="YmxvZ2dpbmclMkNpZGVhX0ZvcmdlJTJDcHVibGlzaCUyQ3JvdWdoX3Rob3VnaHRzJTJDbGlmZV9zdHlsZQ==" data-listing-date-sort="1736287200000" data-listing-file-modified-sort="1767135461803" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="262">
-<div class="thumbnail"><a href="../blog/posts/life_style/protienai.html" class="no-external">
-
-<img loading="lazy" src="../blog/posts/life_style/images/proteinai.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/life_style/protienai.html" class="no-external">افضل انواع الكرياتين لبناء العضلات</a>
-</h3>
+</div></a>
+</div>
+<div class="g-col-1" data-index="16" data-categories="YmxvZ2dpbmclMkNpZGVhX0ZvcmdlJTJDcHVibGlzaCUyQ3JvdWdoX3Rob3VnaHRzJTJDbGlmZV9zdHlsZQ==" data-listing-date-sort="1736287200000" data-listing-file-modified-sort="1767135461803" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="262">
+<a href="../blog/posts/life_style/protienai.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top">
+<img loading="lazy" src="../blog/posts/life_style/images/proteinai.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+افضل انواع الكرياتين لبناء العضلات
+</h5>
+<div class="listing-reading-time card-text text-muted">2 min</div>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
@@ -985,28 +999,28 @@ Jan 8, 2025
 <div class="listing-category" onclick="window.quartoListingCategory('bGlmZV9zdHlsZQ=='); return false;">life_style</div>
 
 </div>
-<div class="delink listing-description"><a href="../blog/posts/life_style/protienai.html" class="no-external">
-<p>بروتين اي افضل موقع لمقارنة مساحيق البروتين والكرياتين للتنشيف و التضخيم و اختيار الافضل و مايناسب…</p>
-</a></div>
+<div class="card-text listing-description delink">
+<p>بروتين اي افضل موقع لمقارنة مساحيق البروتين والكرياتين للتنشيف و التضخيم و اختيار الافضل و مايناسب لك و يسمح لك بمقارنة كافة انواع مثل ريدريكس بيج…</p>
 </div>
-<div class="metadata">
-<a href="../blog/posts/life_style/protienai.html" class="no-external">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jan 8, 2025
 </div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="17" data-categories="YmxvZ2dpbmclMkNwdWJsaXNoJTJDZmw=" data-listing-date-sort="1731362400000" data-listing-file-modified-sort="1767135461802" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="891">
-<div class="thumbnail"><a href="../blog/posts/fl/what_is_federated_learning.html" class="no-external">
-
-<img loading="lazy" src="../blog/posts/fl/images/federate_learning.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/fl/what_is_federated_learning.html" class="no-external">What is Federated Learning</a>
-</h3>
+</div></a>
+</div>
+<div class="g-col-1" data-index="17" data-categories="YmxvZ2dpbmclMkNwdWJsaXNoJTJDZmw=" data-listing-date-sort="1731362400000" data-listing-file-modified-sort="1767135461802" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="891">
+<a href="../blog/posts/fl/what_is_federated_learning.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top">
+<img loading="lazy" src="../blog/posts/fl/images/federate_learning.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+What is Federated Learning
+</h5>
+<div class="listing-reading-time card-text text-muted">5 min</div>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
@@ -1016,28 +1030,28 @@ Jan 8, 2025
 <div class="listing-category" onclick="window.quartoListingCategory('Zmw='); return false;">fl</div>
 
 </div>
-<div class="delink listing-description"><a href="../blog/posts/fl/what_is_federated_learning.html" class="no-external">
-<p>A quick introduction to Federated Learning Systems, comparing them with centralized machine…</p>
-</a></div>
+<div class="card-text listing-description delink">
+<p>A quick introduction to Federated Learning Systems, comparing them with centralized machine learning systems in a simple style.</p>
 </div>
-<div class="metadata">
-<a href="../blog/posts/fl/what_is_federated_learning.html" class="no-external">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Nov 12, 2024
 </div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="18" data-categories="YmxvZ2dpbmclMkNwdWJsaXNoJTJDZ29vZ2xlJTJDc2VvJTJDYWRz" data-listing-date-sort="1728075600000" data-listing-file-modified-sort="1767135461835" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="341">
-<div class="thumbnail"><a href="../blog/posts/seo/google_ads_black_box.html" class="no-external">
-
-<img loading="lazy" src="../blog/posts/seo" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/seo/google_ads_black_box.html" class="no-external">Google Ads Black Box</a>
-</h3>
+</div></a>
+</div>
+<div class="g-col-1" data-index="18" data-categories="YmxvZ2dpbmclMkNwdWJsaXNoJTJDZ29vZ2xlJTJDc2VvJTJDYWRz" data-listing-date-sort="1728075600000" data-listing-file-modified-sort="1767135461835" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="341">
+<a href="../blog/posts/seo/google_ads_black_box.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top">
+<img loading="lazy" data-src="../blog/posts/seo" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Google Ads Black Box
+</h5>
+<div class="listing-reading-time card-text text-muted">2 min</div>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
@@ -1051,28 +1065,28 @@ Nov 12, 2024
 <div class="listing-category" onclick="window.quartoListingCategory('YWRz'); return false;">ads</div>
 
 </div>
-<div class="delink listing-description"><a href="../blog/posts/seo/google_ads_black_box.html" class="no-external">
+<div class="card-text listing-description delink">
 <p>Suspended Google Account without any explaination why and how to fix Circumventing Systems Poclicy</p>
-</a></div>
 </div>
-<div class="metadata">
-<a href="../blog/posts/seo/google_ads_black_box.html" class="no-external">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Oct 5, 2024
 </div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="19" data-categories="aHVhd2VpJTJDd2F0Y2glMkNleHAlMkNibG9nZ2luZyUyQ3B1Ymxpc2g=" data-listing-date-sort="1727989200000" data-listing-file-modified-sort="1767135461834" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1291">
-<div class="thumbnail"><a href="../blog/posts/products_reviews/Huawei_watch_gt_4_experience.html" class="no-external">
-
-<img loading="lazy" src="../blog/posts/products_reviews/images/huawei-watch-gt4-14-day-battery-life.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/products_reviews/Huawei_watch_gt_4_experience.html" class="no-external">Review of Huawei watch gt 4</a>
-</h3>
+</div></a>
+</div>
+<div class="g-col-1" data-index="19" data-categories="aHVhd2VpJTJDd2F0Y2glMkNleHAlMkNibG9nZ2luZyUyQ3B1Ymxpc2g=" data-listing-date-sort="1727989200000" data-listing-file-modified-sort="1767135461834" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1291">
+<a href="../blog/posts/products_reviews/Huawei_watch_gt_4_experience.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top">
+<img loading="lazy" data-src="../blog/posts/products_reviews/images/huawei-watch-gt4-14-day-battery-life.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Review of Huawei watch gt 4
+</h5>
+<div class="listing-reading-time card-text text-muted">7 min</div>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('aHVhd2Vp'); return false;">huawei</div>
@@ -1086,50 +1100,48 @@ Oct 5, 2024
 <div class="listing-category" onclick="window.quartoListingCategory('cHVibGlzaA=='); return false;">publish</div>
 
 </div>
-<div class="delink listing-description"><a href="../blog/posts/products_reviews/Huawei_watch_gt_4_experience.html" class="no-external">
+<div class="card-text listing-description delink">
 <p>Huawei watch gt4 review after 1 year of use focus more on cons and leaving pros to the media</p>
-</a></div>
 </div>
-<div class="metadata">
-<a href="../blog/posts/products_reviews/Huawei_watch_gt_4_experience.html" class="no-external">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Oct 4, 2024
 </div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="20" data-listing-date-sort="1727989200000" data-listing-file-modified-sort="1767135461802" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="473">
-<div class="thumbnail"><a href="../blog/posts/ds_and_algo/master_ds.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/ds_and_algo/master_ds.html" class="no-external">Learning Data Structures and Algorithms as Machine Learning Engineer</a>
-</h3>
-<div class="delink listing-description"><a href="../blog/posts/ds_and_algo/master_ds.html" class="no-external">
-<p>Trying to learning Data structure and algorithms after gradute from college to improve my problem…</p>
-</a></div>
+</div></a>
 </div>
-<div class="metadata">
-<a href="../blog/posts/ds_and_algo/master_ds.html" class="no-external">
+<div class="g-col-1" data-index="20" data-listing-date-sort="1727989200000" data-listing-file-modified-sort="1767135461802" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="473">
+<a href="../blog/posts/ds_and_algo/master_ds.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Learning Data Structures and Algorithms as Machine Learning Engineer
+</h5>
+<div class="listing-reading-time card-text text-muted">3 min</div>
+<div class="card-text listing-description delink">
+<p>Trying to learning Data structure and algorithms after gradute from college to improve my problem solving ans software engineer skills and get out…</p>
+</div>
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Oct 4, 2024
 </div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="21" data-categories="YmxvZ2dpbmclMkNzZW8=" data-listing-date-sort="1722373200000" data-listing-file-modified-sort="1767135461835" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="882">
-<div class="thumbnail"><a href="../blog/posts/seo/the_curse_of_seo.html" class="no-external">
-
-<img loading="lazy" src="../blog/posts/seo/images/labtop.jpeg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/seo/the_curse_of_seo.html" class="no-external">The curse of SEO</a>
-</h3>
+</div></a>
+</div>
+<div class="g-col-1" data-index="21" data-categories="YmxvZ2dpbmclMkNzZW8=" data-listing-date-sort="1722373200000" data-listing-file-modified-sort="1767135461835" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="882">
+<a href="../blog/posts/seo/the_curse_of_seo.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top">
+<img loading="lazy" data-src="../blog/posts/seo/images/labtop.jpeg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+The curse of SEO
+</h5>
+<div class="listing-reading-time card-text text-muted">5 min</div>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
@@ -1137,28 +1149,28 @@ Oct 4, 2024
 <div class="listing-category" onclick="window.quartoListingCategory('c2Vv'); return false;">seo</div>
 
 </div>
-<div class="delink listing-description"><a href="../blog/posts/seo/the_curse_of_seo.html" class="no-external">
-<p>Discover the hidden challenges of SEO, effective tools, and strategies to track changes and…</p>
-</a></div>
+<div class="card-text listing-description delink">
+<p>Discover the hidden challenges of SEO, effective tools, and strategies to track changes and recover from setbacks, while navigating the complexities…</p>
 </div>
-<div class="metadata">
-<a href="../blog/posts/seo/the_curse_of_seo.html" class="no-external">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jul 31, 2024
 </div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="22" data-categories="YmxvZ2dpbmclMkNpZGVhX0ZvcmdlJTJDcHVibGlzaCUyQ3JvdWdoX3Rob3VnaHRzJTJDbGlmZV9zdHlsZQ==" data-listing-date-sort="1720558800000" data-listing-file-modified-sort="1767135461802" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2155">
-<div class="thumbnail"><a href="../blog/posts/life_style/fake_graviety.html" class="no-external">
-
-<img loading="lazy" src="../blog/posts/life_style/images/burn_out.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/life_style/fake_graviety.html" class="no-external">جاذبية مزيفة و عالم مخادع</a>
-</h3>
+</div></a>
+</div>
+<div class="g-col-1" data-index="22" data-categories="YmxvZ2dpbmclMkNpZGVhX0ZvcmdlJTJDcHVibGlzaCUyQ3JvdWdoX3Rob3VnaHRzJTJDbGlmZV9zdHlsZQ==" data-listing-date-sort="1720558800000" data-listing-file-modified-sort="1767135461802" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2155">
+<a href="../blog/posts/life_style/fake_graviety.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top">
+<img loading="lazy" data-src="../blog/posts/life_style/images/burn_out.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+جاذبية مزيفة و عالم مخادع
+</h5>
+<div class="listing-reading-time card-text text-muted">11 min</div>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
@@ -1172,138 +1184,126 @@ Jul 31, 2024
 <div class="listing-category" onclick="window.quartoListingCategory('bGlmZV9zdHlsZQ=='); return false;">life_style</div>
 
 </div>
-<div class="delink listing-description"><a href="../blog/posts/life_style/fake_graviety.html" class="no-external">
-<p>مخاوف عن الوقوع في جاذبية الأخرين وأهوائهم والابتعاد الغير مقصود عن الهدف الرئيسي وضياع البوصلة…</p>
-</a></div>
+<div class="card-text listing-description delink">
+<p>مخاوف عن الوقوع في جاذبية الأخرين وأهوائهم والابتعاد الغير مقصود عن الهدف الرئيسي وضياع البوصلة الأساسية.</p>
 </div>
-<div class="metadata">
-<a href="../blog/posts/life_style/fake_graviety.html" class="no-external">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jul 10, 2024
 </div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="23" data-listing-date-sort="1704060000000" data-listing-file-modified-sort="1767135461832" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1208">
-<div class="thumbnail"><a href="../blog/posts/mteb_encoding/my_little_dargon.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/mteb_encoding/dragon_2.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/mteb_encoding/my_little_dargon.html" class="no-external">My little Dragon “kobo”</a>
-</h3>
-<div class="delink listing-description"><a href="../blog/posts/mteb_encoding/my_little_dargon.html" class="no-external">
-<p>A review about my MSI Gaming Laptop as a machine learning student and also a web developer! and…</p>
-</a></div>
+</div></a>
 </div>
-<div class="metadata">
-<a href="../blog/posts/mteb_encoding/my_little_dargon.html" class="no-external">
+<div class="g-col-1" data-index="23" data-listing-date-sort="1704060000000" data-listing-file-modified-sort="1767135461832" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1208">
+<a href="../blog/posts/mteb_encoding/my_little_dargon.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top"><img data-src="posts/mteb_encoding/dragon_2.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+My little Dragon “kobo”
+</h5>
+<div class="listing-reading-time card-text text-muted">7 min</div>
+<div class="card-text listing-description delink">
+<p>A review about my MSI Gaming Laptop as a machine learning student and also a web developer! and want to say thanks for this amazing friend who…</p>
+</div>
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jan 1, 2024
 </div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="24" data-listing-date-sort="1701900000000" data-listing-file-modified-sort="1767135461834" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="456">
-<div class="thumbnail"><a href="../blog/posts/products_reviews/Huawei_mate_pad_11.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/products_reviews/Huawei_mate_pad_11.html" class="no-external">After one year of using Huawei Mate 11 without google services</a>
-</h3>
-<div class="delink listing-description"><a href="../blog/posts/products_reviews/Huawei_mate_pad_11.html" class="no-external">
-<p>Sharing my experience with using Huawei Mate product line for one year without huawei services, a…</p>
-</a></div>
+</div></a>
 </div>
-<div class="metadata">
-<a href="../blog/posts/products_reviews/Huawei_mate_pad_11.html" class="no-external">
+<div class="g-col-1" data-index="24" data-listing-date-sort="1701900000000" data-listing-file-modified-sort="1767135461834" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="456">
+<a href="../blog/posts/products_reviews/Huawei_mate_pad_11.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+After one year of using Huawei Mate 11 without google services
+</h5>
+<div class="listing-reading-time card-text text-muted">3 min</div>
+<div class="card-text listing-description delink">
+<p>Sharing my experience with using Huawei Mate product line for one year without huawei services, a detailed student review. describe my experience…</p>
+</div>
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Dec 7, 2023
 </div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="25" data-listing-date-sort="1701813600000" data-listing-file-modified-sort="1767135461834" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1107">
-<div class="thumbnail"><a href="../blog/posts/products_reviews/Huawei freebuds 5i.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/products_reviews/Huawei freebuds 5i.html" class="no-external">Huawei Freebuds 5i review: is it the best budget earbuds for Huawei phone owner!</a>
-</h3>
-<div class="delink listing-description"><a href="../blog/posts/products_reviews/Huawei freebuds 5i.html" class="no-external">
-<p>Review of the Huawei Freebuds 5i after 2 months of use. Huawei Freebuds is latest pair of…</p>
-</a></div>
+</div></a>
 </div>
-<div class="metadata">
-<a href="../blog/posts/products_reviews/Huawei freebuds 5i.html" class="no-external">
+<div class="g-col-1" data-index="25" data-listing-date-sort="1701813600000" data-listing-file-modified-sort="1767135461834" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1107">
+<a href="../blog/posts/products_reviews/Huawei freebuds 5i.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Huawei Freebuds 5i review: is it the best budget earbuds for Huawei phone owner!
+</h5>
+<div class="listing-reading-time card-text text-muted">6 min</div>
+<div class="card-text listing-description delink">
+<p>Review of the Huawei Freebuds 5i after 2 months of use. Huawei Freebuds is latest pair of noise-cancelling earbuds and share a lot in common with…</p>
+</div>
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Dec 6, 2023
 </div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="26" data-listing-date-sort="1698444000000" data-listing-file-modified-sort="1767135461831" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2023">
-<div class="thumbnail"><a href="../blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html" class="no-external">MTEB Massive Text Embedding Benchmark</a>
-</h3>
-<div class="delink listing-description"><a href="../blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html" class="no-external">
-<p>MTEB Benchmark aims to provide clarity on how models perform on a variety of embedding tasks and…</p>
-</a></div>
+</div></a>
 </div>
-<div class="metadata">
-<a href="../blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html" class="no-external">
+<div class="g-col-1" data-index="26" data-listing-date-sort="1698444000000" data-listing-file-modified-sort="1767135461831" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2023">
+<a href="../blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+MTEB Massive Text Embedding Benchmark
+</h5>
+<div class="listing-reading-time card-text text-muted">11 min</div>
+<div class="card-text listing-description delink">
+<p>MTEB Benchmark aims to provide clarity on how models perform on a variety of embedding tasks and thus serves as the gateway to finding universal…</p>
+</div>
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Oct 28, 2023
 </div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="27" data-listing-date-sort="1697835600000" data-listing-file-modified-sort="1767135461832" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="109">
-<div class="thumbnail"><a href="../blog/posts/mteb_encoding/tiny-gte_transformer_model.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/mteb_encoding/tiny-gte_transformer_model.html" class="no-external">tiny-gte “Tiny, yet powerful, it is small in size but packs a lot of power.”</a>
-</h3>
-<div class="delink listing-description"><a href="../blog/posts/mteb_encoding/tiny-gte_transformer_model.html" class="no-external">
+</div></a>
+</div>
+<div class="g-col-1" data-index="27" data-listing-date-sort="1697835600000" data-listing-file-modified-sort="1767135461832" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="109">
+<a href="../blog/posts/mteb_encoding/tiny-gte_transformer_model.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+tiny-gte “Tiny, yet powerful, it is small in size but packs a lot of power.”
+</h5>
+<div class="listing-reading-time card-text text-muted">1 min</div>
+<div class="card-text listing-description delink">
 <p>let’s explore this applications with txtai and other workflow with some notes and future directions</p>
-</a></div>
 </div>
-<div class="metadata">
-<a href="../blog/posts/mteb_encoding/tiny-gte_transformer_model.html" class="no-external">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Oct 21, 2023
 </div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="28" data-categories="bGlmZSUyQ2Jsb2dnaW5nJTJDcHVibGlzaA==" data-listing-date-sort="1689627600000" data-listing-file-modified-sort="1767135461803" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="274">
-<div class="thumbnail"><a href="../blog/posts/life_style/why_I_am_blogging.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/life_style/why_I_am_blogging.html" class="no-external">why i am blogging</a>
-</h3>
+</div></a>
+</div>
+<div class="g-col-1" data-index="28" data-categories="bGlmZSUyQ2Jsb2dnaW5nJTJDcHVibGlzaA==" data-listing-date-sort="1689627600000" data-listing-file-modified-sort="1767135461803" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="274">
+<a href="../blog/posts/life_style/why_I_am_blogging.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+why i am blogging
+</h5>
+<div class="listing-reading-time card-text text-muted">2 min</div>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('bGlmZQ=='); return false;">life</div>
@@ -1313,28 +1313,26 @@ Oct 21, 2023
 <div class="listing-category" onclick="window.quartoListingCategory('cHVibGlzaA=='); return false;">publish</div>
 
 </div>
-<div class="delink listing-description"><a href="../blog/posts/life_style/why_I_am_blogging.html" class="no-external">
-<p>why i am blogging and should you also blog? Why you (yes, you) should blog blogging with astro js…</p>
-</a></div>
+<div class="card-text listing-description delink">
+<p>why i am blogging and should you also blog? Why you (yes, you) should blog blogging with astro js as a machine learning engineer</p>
 </div>
-<div class="metadata">
-<a href="../blog/posts/life_style/why_I_am_blogging.html" class="no-external">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jul 18, 2023
 </div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="29" data-categories="bGlmZSUyQ2Jsb2dnaW5nJTJDcHVibGlzaCUyQ3Nlbw==" data-listing-date-sort="1689627600000" data-listing-file-modified-sort="1767135461835" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="596">
-<div class="thumbnail"><a href="../blog/posts/seo/how_i_use_nlp_for_seo.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/seo/how_i_use_nlp_for_seo.html" class="no-external">How I am using NLP to improve my Websites SEO</a>
-</h3>
+</div></a>
+</div>
+<div class="g-col-1" data-index="29" data-categories="bGlmZSUyQ2Jsb2dnaW5nJTJDcHVibGlzaCUyQ3Nlbw==" data-listing-date-sort="1689627600000" data-listing-file-modified-sort="1767135461835" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="596">
+<a href="../blog/posts/seo/how_i_use_nlp_for_seo.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+How I am using NLP to improve my Websites SEO
+</h5>
+<div class="listing-reading-time card-text text-muted">3 min</div>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('bGlmZQ=='); return false;">life</div>
@@ -1346,39 +1344,36 @@ Jul 18, 2023
 <div class="listing-category" onclick="window.quartoListingCategory('c2Vv'); return false;">seo</div>
 
 </div>
-<div class="delink listing-description"><a href="../blog/posts/seo/how_i_use_nlp_for_seo.html" class="no-external">
+<div class="card-text listing-description delink">
 <p>How i use python scripts and natural language processing to improve my landing page SEO</p>
-</a></div>
 </div>
-<div class="metadata">
-<a href="../blog/posts/seo/how_i_use_nlp_for_seo.html" class="no-external">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jul 18, 2023
 </div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="30" data-listing-date-sort="1689627600000" data-listing-file-modified-sort="1767135461802" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="509">
-<div class="thumbnail"><a href="../blog/posts/courses/havrard CS197 AI research experiences.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/courses/havrard CS197 AI research experiences.html" class="no-external">havrard CS197 AI research experiences</a>
-</h3>
-<div class="delink listing-description"><a href="../blog/posts/courses/havrard CS197 AI research experiences.html" class="no-external">
-<p>Embark on a transformative journey into the world of scientific research, particularly deep…</p>
-</a></div>
+</div></a>
 </div>
-<div class="metadata">
-<a href="../blog/posts/courses/havrard CS197 AI research experiences.html" class="no-external">
+<div class="g-col-1" data-index="30" data-listing-date-sort="1689627600000" data-listing-file-modified-sort="1767135461802" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="509">
+<a href="../blog/posts/courses/havrard CS197 AI research experiences.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+havrard CS197 AI research experiences
+</h5>
+<div class="listing-reading-time card-text text-muted">3 min</div>
+<div class="card-text listing-description delink">
+<p>Embark on a transformative journey into the world of scientific research, particularly deep learning, with our comprehensive 21-lecture course.…</p>
+</div>
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jul 18, 2023
 </div>
-</a>
 </div>
+</div>
+</div></a>
 </div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
@@ -1799,38 +1794,6 @@ Jul 18, 2023
     }
   });
   </script>
-<input type="hidden" id="giscus-base-theme" value="preferred_color_scheme">
-<input type="hidden" id="giscus-alt-theme" value="preferred_color_scheme">
-<script>
-  function loadGiscus() {
-    // Function to get the theme based on body class
-    const getTheme = () => {
-      let baseTheme = document.getElementById('giscus-base-theme').value;
-      let altTheme = document.getElementById('giscus-alt-theme').value;
-      if (authorPrefersDark) {
-          [baseTheme, altTheme] = [altTheme, baseTheme];
-      }
-      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
-    };
-    const script = document.createElement("script");
-    script.src = "https://giscus.app/client.js";
-    script.async = true;
-    script.dataset.repo = "abdelkareemkobo/kareem_site";
-    script.dataset.repoId = "R_kgDOQxY8kw";
-    script.dataset.category = "Comments";
-    script.dataset.categoryId = "DIC_kwDOQxY8k84C0aRf";
-    script.dataset.mapping = "pathname";
-    script.dataset.reactionsEnabled = "1";
-    script.dataset.emitMetadata = "0";
-    script.dataset.inputPosition = "top";
-    script.dataset.theme = getTheme();
-    script.dataset.lang = "en";
-    script.crossOrigin = "anonymous";
-    // Append the script to the desired div instead of at the end of the body
-    document.getElementById("quarto-content").appendChild(script);
-  }
-  loadGiscus();
-</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Quick learnings and notes on Arabic NLP, machine learning, Python, Rust, and AI engineering. Daily discoveries from building real-world AI systems.">
 
-<title>📚 kareem’s TILs – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
+<title>TILs | Abdelkareem Elkhateb - Arabic NLP &amp; AI – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../2.svg" rel="icon" type="image/svg+xml">
+<link href="../favicon.ico" rel="icon">
 <script src="../site_libs/quarto-listing/list.min.js"></script>
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
@@ -112,66 +113,17 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "📚 kareem’s TILs",
-  "description": "",
-  "author": {"@type": "Person", "name": "Kareem Elkhateb"},
-  "datePublished": "",
-  "publisher": {
-    "@type": "Person",
-    "name": "Kareem Elkhateb",
-    "url": "https://kareemai.com"
-  }
-}
-</script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="../styles.css">
-<link rel="alternate" type="application/rss+xml" title="عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist" href="index.xml" data-external="1"><meta property="og:title" content="📚 kareem’s TILs – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
-<meta property="og:description" content="Kareem Elkhateb personal site, a blog about machine learning, deep learning, Web development with Astro.js, FastAPI, also Arabic Natural Language Processing and Rust language.">
+<link rel="alternate" type="application/rss+xml" title="عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist" href="index.xml" data-external="1"><meta property="og:title" content="TILs - Today I Learned | Abdelkareem Elkhateb">
+<meta property="og:description" content="Quick learnings on Arabic NLP, ML, and AI engineering">
 <meta property="og:image" content="https://user-images.githubusercontent.com/1483922/208359430-f55d7503-3a98-4875-a35c-16314c9439d0.png">
-<meta property="og:site_name" content="عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
-<meta property="og:locale" content="ar_AR">
-<meta name="twitter:title" content="📚 kareem’s TILs – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
-<meta name="twitter:description" content="Kareem Elkhateb personal site, a blog about machine learning, deep learning, Web development with Astro.js, FastAPI, also Arabic Natural Language Processing and Rust language.">
+<meta property="og:site_name" content="Abdelkareem Elkhateb">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:title" content="TILs | Abdelkareem Elkhateb - Arabic NLP &amp; AI">
+<meta name="twitter:description" content="Quick learnings and notes on Arabic NLP, machine learning, Python, Rust, and AI engineering. Daily discoveries from building real-world AI systems.">
 <meta name="twitter:image" content="https://user-images.githubusercontent.com/1483922/208359430-f55d7503-3a98-4875-a35c-16314c9439d0.png">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
-<meta name="twitter:card" content="summary">
-</head>
-
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<meta name="twitter:card" content="summary_large_image">
+</head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -333,7 +285,68 @@ window.Quarto = {
     } else {
       toggleColorMode(false);
     }
-  </script>
+  </script><div class="reading-progress" id="reading-progress"></div>
+
+<script>
+window.addEventListener('scroll', () => {
+  const article = document.querySelector('article') || document.body;
+  const scrollTop = window.scrollY;
+  const docHeight = article.scrollHeight - window.innerHeight;
+  const progress = Math.min((scrollTop / docHeight) * 100, 100);
+  document.getElementById('reading-progress').style.width = progress + '%';
+});
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "TILs - Today I Learned",
+  "description": "Quick learnings and notes on Arabic NLP, machine learning, Python, Rust, and AI engineering. Daily discoveries from building real-world AI systems.",
+  "author": {"@type": "Person", "name": "Kareem Elkhateb"},
+  "datePublished": "",
+  "publisher": {
+    "@type": "Person",
+    "name": "Kareem Elkhateb",
+    "url": "https://kareemai.com"
+  }
+}
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+
+
+
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -410,9 +423,14 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">📚 kareem’s TILs</h1>
+<h1 class="title">TILs - Today I Learned</h1>
 </div>
 
+<div>
+  <div class="description">
+    Quick learnings and notes on Arabic NLP, machine learning, Python, Rust, and AI engineering. Daily discoveries from building real-world AI systems.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -917,6 +935,46 @@ kareem
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div></main> <!-- /main -->
+<div class="share-buttons">
+  <span class="share-label">Share:</span>
+  <a href="#" class="share-btn share-twitter" onclick="shareTwitter()" title="Share on Twitter">
+    <svg width="18" height="18" viewbox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+  </a>
+  <a href="#" class="share-btn share-linkedin" onclick="shareLinkedIn()" title="Share on LinkedIn">
+    <svg width="18" height="18" viewbox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
+  </a>
+  <a href="#" class="share-btn share-copy" onclick="copyLink()" title="Copy link">
+    <svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+    <span class="copy-feedback">Copied!</span>
+  </a>
+</div>
+
+<script>
+function shareTwitter() {
+  const url = encodeURIComponent(window.location.href);
+  const title = encodeURIComponent(document.title);
+  window.open(`https://twitter.com/intent/tweet?url=${url}&text=${title}`, '_blank', 'width=550,height=420');
+}
+
+function shareLinkedIn() {
+  const url = encodeURIComponent(window.location.href);
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank', 'width=550,height=420');
+}
+
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const feedback = document.querySelector('.copy-feedback');
+    feedback.classList.add('show');
+    setTimeout(() => feedback.classList.remove('show'), 2000);
+  });
+}
+</script>
+
+<div class="newsletter-section">
+<p class="newsletter-title">Get updates</p>
+<iframe src="https://kareemnns.substack.com/embed" width="100%" height="150" style="border:none; background:transparent;" frameborder="0" scrolling="no"></iframe>
+</div>
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1330,38 +1388,6 @@ kareem
     }
   });
   </script>
-<input type="hidden" id="giscus-base-theme" value="preferred_color_scheme">
-<input type="hidden" id="giscus-alt-theme" value="preferred_color_scheme">
-<script>
-  function loadGiscus() {
-    // Function to get the theme based on body class
-    const getTheme = () => {
-      let baseTheme = document.getElementById('giscus-base-theme').value;
-      let altTheme = document.getElementById('giscus-alt-theme').value;
-      if (authorPrefersDark) {
-          [baseTheme, altTheme] = [altTheme, baseTheme];
-      }
-      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
-    };
-    const script = document.createElement("script");
-    script.src = "https://giscus.app/client.js";
-    script.async = true;
-    script.dataset.repo = "abdelkareemkobo/kareem_site";
-    script.dataset.repoId = "R_kgDOQxY8kw";
-    script.dataset.category = "Comments";
-    script.dataset.categoryId = "DIC_kwDOQxY8k84C0aRf";
-    script.dataset.mapping = "pathname";
-    script.dataset.reactionsEnabled = "1";
-    script.dataset.emitMetadata = "0";
-    script.dataset.inputPosition = "top";
-    script.dataset.theme = getTheme();
-    script.dataset.lang = "en";
-    script.crossOrigin = "anonymous";
-    // Append the script to the desired div instead of at the end of the body
-    document.getElementById("quarto-content").appendChild(script);
-  }
-  loadGiscus();
-</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
