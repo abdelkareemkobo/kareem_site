@@ -35,6 +35,7 @@
  ]]></description>
   <category>blogging</category>
   <category>til</category>
+  <category>blog/opinion/tech</category>
   <guid>https://kareemai.com/til/tils/2025-12-15.html</guid>
   <pubDate>Sun, 14 Dec 2025 22:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/til/tils/til.jpg" medium="image" type="image/jpeg"/>
@@ -90,6 +91,9 @@ font-style: inherit;">}</span></span></code></pre></div></div>
  ]]></description>
   <category>blogging</category>
   <category>til</category>
+  <category>blog/status/complete</category>
+  <category>blog/status/published</category>
+  <category>rust</category>
   <guid>https://kareemai.com/til/tils/2025-12-14.html</guid>
   <pubDate>Sat, 13 Dec 2025 22:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/til/tils/til.jpg" medium="image" type="image/jpeg"/>
@@ -157,6 +161,9 @@ font-style: inherit;">}</span></span></code></pre></div></div>
  ]]></description>
   <category>blogging</category>
   <category>til</category>
+  <category>blog/status/published</category>
+  <category>blog/status/complete</category>
+  <category>blog/learn/journey</category>
   <guid>https://kareemai.com/til/tils/2025-12-13.html</guid>
   <pubDate>Fri, 12 Dec 2025 22:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/til/tils/til.jpg" medium="image" type="image/jpeg"/>
@@ -520,6 +527,9 @@ font-style: inherit;">"total_tokens"</span>: number_of_tokens</span>
   <category>til</category>
   <category>nlp</category>
   <category>ai</category>
+  <category>blog/learn/concept</category>
+  <category>blog/benchmark</category>
+  <category>blog/status/complete</category>
   <guid>https://kareemai.com/til/tils/2025-10-21.html</guid>
   <pubDate>Mon, 20 Oct 2025 21:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/til/tils/til.jpg" medium="image" type="image/jpeg"/>
