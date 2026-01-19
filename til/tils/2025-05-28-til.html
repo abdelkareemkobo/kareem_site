@@ -2,15 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="kareem">
 <meta name="dcterms.date" content="2025-05-28">
-<meta name="description" content="Trying to explore pylate and create my first Arabic model">
+<meta name="description" content="A comprehensive guide to PyLate and ColBERT for vector retrieval. Explore dataset formats, indexing strategies, and evaluation metrics for Arabic NLP models.">
 
-<title>Pylate Day 1 – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
+<title>PyLate &amp; ColBERT: Learning Vector Retrieval and Arabic Models – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,9 +75,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-914dc4404272ff4a2a791e68204292ff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -119,13 +119,13 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 </script>
-<meta property="og:title" content="Pylate Day 1 – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
-<meta property="og:description" content="Trying to explore pylate and create my first Arabic model">
+<meta property="og:title" content="PyLate &amp; ColBERT: Learning Vector Retrieval and Arabic Models – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta property="og:description" content="A comprehensive guide to PyLate and ColBERT for vector retrieval. Explore dataset formats, indexing strategies, and evaluation metrics for Arabic NLP models.">
 <meta property="og:image" content="https://kareemai.com/til/tils/til.jpg">
 <meta property="og:site_name" content="Abdelkareem Elkhateb">
 <meta property="og:locale" content="en_US">
-<meta name="twitter:title" content="Pylate Day 1 – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
-<meta name="twitter:description" content="Trying to explore pylate and create my first Arabic model">
+<meta name="twitter:title" content="PyLate &amp; ColBERT: Learning Vector Retrieval and Arabic Models – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta name="twitter:description" content="A comprehensive guide to PyLate and ColBERT for vector retrieval. Explore dataset formats, indexing strategies, and evaluation metrics for Arabic NLP models.">
 <meta name="twitter:image" content="https://kareemai.com/til/tils/til.jpg">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary_large_image">
@@ -308,8 +308,8 @@ window.addEventListener('scroll', () => {
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Pylate Day 1",
-  "description": "Trying to explore pylate and create my first Arabic model",
+  "headline": "PyLate & ColBERT: Learning Vector Retrieval and Arabic Models",
+  "description": "A comprehensive guide to PyLate and ColBERT for vector retrieval. Explore dataset formats, indexing strategies, and evaluation metrics for Arabic NLP models.",
   "author": {"@type": "Person", "name": "kareem"},
   "datePublished": "May 28, 2025",
   "publisher": {
@@ -454,6 +454,7 @@ window.addEventListener('scroll', () => {
   <ul class="collapse">
   <li><a href="#standard-ir-metrics" id="toc-standard-ir-metrics" class="nav-link" data-scroll-target="#standard-ir-metrics">Standard IR Metrics</a></li>
   <li><a href="#interpreting-results" id="toc-interpreting-results" class="nav-link" data-scroll-target="#interpreting-results">Interpreting Results</a></li>
+  <li><a href="#internal-resources" id="toc-internal-resources" class="nav-link" data-scroll-target="#internal-resources">Internal Resources</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -465,7 +466,7 @@ window.addEventListener('scroll', () => {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Pylate Day 1</h1>
+<h1 class="title">PyLate &amp; ColBERT: Learning Vector Retrieval and Arabic Models</h1>
   <div class="quarto-categories">
     <div class="quarto-category">blogging</div>
     <div class="quarto-category">til</div>
@@ -474,7 +475,7 @@ window.addEventListener('scroll', () => {
 
 <div>
   <div class="description">
-    Trying to explore pylate and create my first Arabic model
+    A comprehensive guide to PyLate and ColBERT for vector retrieval. Explore dataset formats, indexing strategies, and evaluation metrics for Arabic NLP models.
   </div>
 </div>
 
@@ -520,8 +521,7 @@ window.addEventListener('scroll', () => {
 <h2 class="anchored" data-anchor-id="dataset-formats">Dataset Formats</h2>
 <section id="format-1-tripletmulti-negative-format" class="level3">
 <h3 class="anchored" data-anchor-id="format-1-tripletmulti-negative-format">Format 1: Triplet/Multi-negative Format</h3>
-<p><strong>Q: What does triplet format look like?</strong> A: Each row contains: - <code>query</code>: The search query - <code>positive</code>: One relevant document<br>
-- <code>negative1</code>, <code>negative2</code>, …: Multiple irrelevant documents</p>
+<p><strong>Q: What does triplet format look like?</strong> A: Each row contains: - <code>query</code>: The search query - <code>positive</code>: One relevant document - <code>negative1</code>, <code>negative2</code>, …: Multiple irrelevant documents</p>
 <p><strong>Pros</strong>: Good for training with hard negatives <strong>Cons</strong>: No separate corpus, harder to evaluate</p>
 </section>
 <section id="format-2-structured-retrieval-format" class="level3">
@@ -582,8 +582,7 @@ window.addEventListener('scroll', () => {
 <section id="plaid-index" class="level3">
 <h3 class="anchored" data-anchor-id="plaid-index">PLAID Index</h3>
 <p><strong>Q: What is PLAID indexing?</strong> A: PyLate’s efficient indexing method for ColBERT embeddings, supporting fast similarity search</p>
-<p><strong>Key Parameters</strong>: - <code>index_folder</code>: Where to store index - <code>index_name</code>: Identifier for the index<br>
-- <code>override=True</code>: Overwrites existing index</p>
+<p><strong>Key Parameters</strong>: - <code>index_folder</code>: Where to store index - <code>index_name</code>: Identifier for the index - <code>override=True</code>: Overwrites existing index</p>
 </section>
 <section id="document-processing" class="level3">
 <h3 class="anchored" data-anchor-id="document-processing">Document Processing</h3>
@@ -624,14 +623,23 @@ window.addEventListener('scroll', () => {
 <h2 class="anchored" data-anchor-id="evaluation-metrics">Evaluation Metrics</h2>
 <section id="standard-ir-metrics" class="level3">
 <h3 class="anchored" data-anchor-id="standard-ir-metrics">Standard IR Metrics</h3>
-<p><strong>Q: What metrics should you track?</strong> A: - <strong>NDCG@k</strong>: Normalized discounted cumulative gain - <strong>MAP@k</strong>: Mean average precision<br>
-- <strong>Recall@k</strong>: Proportion of relevant docs retrieved - <strong>Precision@k</strong>: Proportion of retrieved docs that are relevant</p>
+<p><strong>Q: What metrics should you track?</strong> A: - <strong>NDCG@k</strong>: Normalized discounted cumulative gain - <strong>MAP@k</strong>: Mean average precision - <strong>Recall@k</strong>: Proportion of relevant docs retrieved - <strong>Precision@k</strong>: Proportion of retrieved docs that are relevant</p>
 </section>
 <section id="interpreting-results" class="level3">
 <h3 class="anchored" data-anchor-id="interpreting-results">Interpreting Results</h3>
-<p><strong>Q: What makes good retrieval performance?</strong> A: - NDCG@5 &gt; 0.7: Excellent - NDCG@5 &gt; 0.5: Good<br>
-- NDCG@5 &gt; 0.3: Acceptable - NDCG@5 &lt; 0.3: Needs improvement</p>
+<p><strong>Q: What makes good retrieval performance?</strong> A: - NDCG@5 &gt; 0.7: Excellent - NDCG@5 &gt; 0.5: Good - NDCG@5 &gt; 0.3: Acceptable - NDCG@5 &lt; 0.3: Needs improvement</p>
 <p>This comprehensive guide covers all the key concepts, trade-offs, and practical considerations for working with PyLate and ColBERT evaluation pipelines.</p>
+<hr>
+</section>
+<section id="internal-resources" class="level3">
+<h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
+<p>If you’re interested in more about vector retrieval and my AI research, explore these sections:</p>
+<ul>
+<li><a href="../../papers.html">My Research Papers</a></li>
+<li><a href="../../oss/opensource.html">Open Source Contributions</a></li>
+<li><a href="../../til/index.html">Today I Learned Index</a></li>
+<li><a href="../../blog/feed.html">Main Blog Index</a></li>
+</ul>
 
 
 </section>

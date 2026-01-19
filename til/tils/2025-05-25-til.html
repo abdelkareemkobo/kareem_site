@@ -2,16 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="kareem">
 <meta name="dcterms.date" content="2025-05-25">
 <meta name="keywords" content="RAPTOR RAG, rag raptor, meta pyrefly, raptor rag paper, llamaindex raptor, DFloat11, pyrefly, RAG technique, document retrieval">
-<meta name="description" content="Learn about RAPTOR RAG technique for improved document retrieval, DFloat11 lossless compression for LLMs, and Pyrefly Python type checker. Complete guide with examples and implementation details.">
+<meta name="description" content="A complete guide to Meta’s RAPTOR RAG technique, DFloat11 lossless model compression, and the Pyrefly Python type checker with implementation details.">
 
-<title>RAG RAPTOR: Complete Guide to Meta’s RAPTOR RAG, DFloat11 Compression &amp; Pyrefly Type Checker – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
+<title>Meta’s RAPTOR RAG, DFloat11 Compression &amp; Pyrefly Guide – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -41,9 +41,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-914dc4404272ff4a2a791e68204292ff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -85,15 +85,15 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 </script>
-<meta property="og:title" content="RAG RAPTOR: Complete Guide to Meta’s RAPTOR RAG, DFloat11 Compression &amp; Pyrefly Type Checker – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
-<meta property="og:description" content="Learn about RAPTOR RAG technique for improved document retrieval, DFloat11 lossless compression for LLMs, and Pyrefly Python type checker. Complete guide with examples and implementation details.">
+<meta property="og:title" content="Meta’s RAPTOR RAG, DFloat11 Compression &amp; Pyrefly Guide – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta property="og:description" content="A complete guide to Meta’s RAPTOR RAG technique, DFloat11 lossless model compression, and the Pyrefly Python type checker with implementation details.">
 <meta property="og:image" content="https://kareemai.com/til/tils/images/raptor.png">
 <meta property="og:site_name" content="Abdelkareem Elkhateb">
 <meta property="og:image:height" content="399">
 <meta property="og:image:width" content="1218">
 <meta property="og:locale" content="en_US">
-<meta name="twitter:title" content="RAG RAPTOR: Complete Guide to Meta’s RAPTOR RAG, DFloat11 Compression &amp; Pyrefly Type Checker – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
-<meta name="twitter:description" content="Learn about RAPTOR RAG technique for improved document retrieval, DFloat11 lossless compression for LLMs, and Pyrefly Python type checker. Complete guide with examples and implementation details.">
+<meta name="twitter:title" content="Meta’s RAPTOR RAG, DFloat11 Compression &amp; Pyrefly Guide – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta name="twitter:description" content="A complete guide to Meta’s RAPTOR RAG technique, DFloat11 lossless model compression, and the Pyrefly Python type checker with implementation details.">
 <meta name="twitter:image" content="https://kareemai.com/til/tils/images/raptor.png">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary_large_image">
@@ -278,8 +278,8 @@ window.addEventListener('scroll', () => {
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "RAG RAPTOR: Complete Guide to Meta’s RAPTOR RAG, DFloat11 Compression & Pyrefly Type Checker",
-  "description": "Learn about RAPTOR RAG technique for improved document retrieval, DFloat11 lossless compression for LLMs, and Pyrefly Python type checker. Complete guide with examples and implementation details.",
+  "headline": "Meta’s RAPTOR RAG, DFloat11 Compression & Pyrefly Guide",
+  "description": "A complete guide to Meta’s RAPTOR RAG technique, DFloat11 lossless model compression, and the Pyrefly Python type checker with implementation details.",
   "author": {"@type": "Person", "name": "kareem"},
   "datePublished": "May 25, 2025",
   "publisher": {
@@ -408,7 +408,10 @@ window.addEventListener('scroll', () => {
   </ul></li>
   <li><a href="#meta-pyrefly-and-open-source-ecosystem" id="toc-meta-pyrefly-and-open-source-ecosystem" class="nav-link" data-scroll-target="#meta-pyrefly-and-open-source-ecosystem">Meta Pyrefly and Open Source Ecosystem</a></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a>
+  <ul class="collapse">
+  <li><a href="#internal-resources" id="toc-internal-resources" class="nav-link" data-scroll-target="#internal-resources">Internal Resources</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -418,7 +421,7 @@ window.addEventListener('scroll', () => {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">RAG RAPTOR: Complete Guide to Meta’s RAPTOR RAG, DFloat11 Compression &amp; Pyrefly Type Checker</h1>
+<h1 class="title">Meta’s RAPTOR RAG, DFloat11 Compression &amp; Pyrefly Guide</h1>
   <div class="quarto-categories">
     <div class="quarto-category">blogging</div>
     <div class="quarto-category">til</div>
@@ -430,7 +433,7 @@ window.addEventListener('scroll', () => {
 
 <div>
   <div class="description">
-    Learn about RAPTOR RAG technique for improved document retrieval, DFloat11 lossless compression for LLMs, and Pyrefly Python type checker. Complete guide with examples and implementation details.
+    A complete guide to Meta’s RAPTOR RAG technique, DFloat11 lossless model compression, and the Pyrefly Python type checker with implementation details.
   </div>
 </div>
 
@@ -470,8 +473,7 @@ window.addEventListener('scroll', () => {
 <p>Over the last 2 days, I’ve been exploring some fascinating new open source tools from Meta and other organizations. These tools are revolutionizing how we approach RAG (Retrieval-Augmented Generation), model compression, and Python development. Let me break down what I’ve learned:</p>
 <ol type="1">
 <li><strong>RAPTOR RAG</strong> - Meta’s tree-based retrieval technique</li>
-<li><strong>DFloat11</strong> - Lossless compression for LLMs<br>
-</li>
+<li><strong>DFloat11</strong> - Lossless compression for LLMs</li>
 <li><strong>Pyrefly</strong> - Fast Python type checker in Rust</li>
 <li><strong>FastEmbed</strong> - Efficient embedding generation</li>
 </ol>
@@ -637,8 +639,19 @@ window.addEventListener('scroll', () => {
 <li><a href="https://arxiv.org/abs/2406.02359">DFloat11 Research</a> - Compression technique details</li>
 <li><a href="https://docs.llamaindex.ai/">LlamaIndex Documentation</a> - RAG framework integration</li>
 </ol>
+<hr>
+<section id="internal-resources" class="level3">
+<h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
+<p>If you’re interested in more about AI engineering and my research, explore these sections:</p>
+<ul>
+<li><a href="../../papers.html">My Research Papers</a></li>
+<li><a href="../../oss/opensource.html">Open Source Contributions</a></li>
+<li><a href="../../til/index.html">Today I Learned Index</a></li>
+<li><a href="../../blog/feed.html">Main Blog Index</a></li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

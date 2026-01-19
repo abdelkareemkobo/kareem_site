@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2023-10-21">
-<meta name="description" content="let’s explore this applications with txtai and other workflow with some notes and future directions">
+<meta name="description" content="Explore tiny-gte, a distilled transformer model for efficient sentence embeddings. Learn about its performance and architecture for use in vector databases and RAG.">
 
-<title>tiny-gte “Tiny, yet powerful, it is small in size but packs a lot of power.” – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
+<title>tiny-gte: Efficient Transformer for Semantic Search – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,9 +39,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../site_libs/bootstrap/bootstrap-914dc4404272ff4a2a791e68204292ff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -84,13 +84,13 @@ gtag('js', new Date());
 gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 </script>
 <style>html{ scroll-behavior: smooth; }</style>
-<meta property="og:title" content="tiny-gte “Tiny, yet powerful, it is small in size but packs a lot of power.” – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
-<meta property="og:description" content="let’s explore this applications with txtai and other workflow with some notes and future directions">
+<meta property="og:title" content="tiny-gte: Efficient Transformer for Semantic Search – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta property="og:description" content="Explore tiny-gte, a distilled transformer model for efficient sentence embeddings. Learn about its performance and architecture for use in vector databases and RAG.">
 <meta property="og:image" content="https://kareemai.com/blog/posts/mteb_encoding/kareem.jpg">
 <meta property="og:site_name" content="Abdelkareem Elkhateb">
 <meta property="og:locale" content="en_US">
-<meta name="twitter:title" content="tiny-gte “Tiny, yet powerful, it is small in size but packs a lot of power.” – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
-<meta name="twitter:description" content="let’s explore this applications with txtai and other workflow with some notes and future directions">
+<meta name="twitter:title" content="tiny-gte: Efficient Transformer for Semantic Search – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta name="twitter:description" content="Explore tiny-gte, a distilled transformer model for efficient sentence embeddings. Learn about its performance and architecture for use in vector databases and RAG.">
 <meta name="twitter:image" content="https://kareemai.com/blog/posts/mteb_encoding/kareem.jpg">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary_large_image">
@@ -273,8 +273,8 @@ window.addEventListener('scroll', () => {
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "tiny-gte “Tiny, yet powerful, it is small in size but packs a lot of power.”",
-  "description": "let’s explore this applications with txtai and other workflow with some notes and future directions",
+  "headline": "tiny-gte: Efficient Transformer for Semantic Search",
+  "description": "Explore tiny-gte, a distilled transformer model for efficient sentence embeddings. Learn about its performance and architecture for use in vector databases and RAG.",
   "author": {"@type": "Person", "name": "Kareem Elkhateb"},
   "datePublished": "October 21, 2023",
   "publisher": {
@@ -375,12 +375,15 @@ window.addEventListener('scroll', () => {
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#table-of-contents" id="toc-table-of-contents" class="nav-link active" data-scroll-target="#table-of-contents">Table of contents</a></li>
-  <li><a href="#details" id="toc-details" class="nav-link" data-scroll-target="#details">Details</a></li>
-  <li><a href="#notice-about-using-small-size" id="toc-notice-about-using-small-size" class="nav-link" data-scroll-target="#notice-about-using-small-size">Notice about using small size</a></li>
-  <li><a href="#use-cases" id="toc-use-cases" class="nav-link" data-scroll-target="#use-cases">Use Cases</a></li>
-  <li><a href="#todo" id="toc-todo" class="nav-link" data-scroll-target="#todo">Todo</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#what-is-tiny-gte" id="toc-what-is-tiny-gte" class="nav-link active" data-scroll-target="#what-is-tiny-gte">What is tiny-gte?</a></li>
+  <li><a href="#model-details" id="toc-model-details" class="nav-link" data-scroll-target="#model-details">Model Details</a></li>
+  <li><a href="#why-size-matters-the-benefits-of-small-models" id="toc-why-size-matters-the-benefits-of-small-models" class="nav-link" data-scroll-target="#why-size-matters-the-benefits-of-small-models">Why Size Matters: The Benefits of Small Models</a></li>
+  <li><a href="#use-cases-for-tiny-gte" id="toc-use-cases-for-tiny-gte" class="nav-link" data-scroll-target="#use-cases-for-tiny-gte">Use Cases for tiny-gte</a></li>
+  <li><a href="#performance-comparison-tiny-gte-vs.-gte-small" id="toc-performance-comparison-tiny-gte-vs.-gte-small" class="nav-link" data-scroll-target="#performance-comparison-tiny-gte-vs.-gte-small">Performance Comparison: tiny-gte vs.&nbsp;gte-small</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a>
+  <ul class="collapse">
+  <li><a href="#internal-resources" id="toc-internal-resources" class="nav-link" data-scroll-target="#internal-resources">Internal Resources</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -390,12 +393,12 @@ window.addEventListener('scroll', () => {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">tiny-gte “Tiny, yet powerful, it is small in size but packs a lot of power.”</h1>
+<h1 class="title">tiny-gte: Efficient Transformer for Semantic Search</h1>
 </div>
 
 <div>
   <div class="description">
-    let’s explore this applications with txtai and other workflow with some notes and future directions
+    Explore tiny-gte, a distilled transformer model for efficient sentence embeddings. Learn about its performance and architecture for use in vector databases and RAG.
   </div>
 </div>
 
@@ -424,45 +427,64 @@ window.addEventListener('scroll', () => {
 </header>
 
 
-<section id="table-of-contents" class="level2">
-<h2 class="anchored" data-anchor-id="table-of-contents">Table of contents</h2>
-<p>#definition : This is a&nbsp;<a href="https://www.sbert.net/">sentence-transformers</a>&nbsp;model: It maps sentences &amp; paragraphs to a 384 dimensional dense vector space and can be used for tasks like clustering or semantic search. It is distilled from&nbsp;<code>thenlper/gte-small</code>, with comparable (slightly worse) performance at around half the size.</p>
+<section id="what-is-tiny-gte" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-tiny-gte">What is tiny-gte?</h2>
+<p>The <code>tiny-gte</code> model is a specialized <a href="https://www.sbert.net/">sentence-transformers</a> model designed for extreme efficiency without sacrificing too much accuracy. It maps sentences and paragraphs into a 384-dimensional dense vector space, making it perfect for tasks like clustering, semantic search, and Retrieval-Augmented Generation (RAG).</p>
+<p>The model is a distilled version of <code>thenlper/gte-small</code>. Through distillation, it manages to maintain comparable performance (only slightly lower on benchmarks like MTEB) while being roughly half the size of its parent model.</p>
 </section>
-<section id="details" class="level2">
-<h2 class="anchored" data-anchor-id="details">Details</h2>
+<section id="model-details" class="level2">
+<h2 class="anchored" data-anchor-id="model-details">Model Details</h2>
+<p>If you are building production-grade AI systems, the size and latency of your embedding model matter. Here is why <code>tiny-gte</code> stands out:</p>
 <ul>
-<li>It’s around ~45MB very small compared to other models like MiniLM-L6-V2 which is equal to ~80 MB</li>
-<li>Embedding vector size 384d</li>
-<li>BERT based</li>
-<li>Distilied from thenlper/gte-small,</li>
+<li><strong>Ultra-Small Footprint:</strong> It weighs in at around <strong>~45MB</strong>. To put that in perspective, the popular <code>all-MiniLM-L6-v2</code> is nearly double the size at ~80MB.</li>
+<li><strong>Dimensionality:</strong> It produces <strong>384D</strong> embeddings, which is the “sweet spot” for many vector databases, balancing search precision with storage costs.</li>
+<li><strong>Architecture:</strong> Based on the BERT architecture but optimized through distillation.</li>
+<li><strong>Parent Model:</strong> Distilled from <code>thenlper/gte-small</code>, inheriting its robust understanding of semantic relationships.</li>
 </ul>
 </section>
-<section id="notice-about-using-small-size" class="level2">
-<h2 class="anchored" data-anchor-id="notice-about-using-small-size">Notice about using small size</h2>
-</section>
-<section id="use-cases" class="level2">
-<h2 class="anchored" data-anchor-id="use-cases">Use Cases</h2>
-</section>
-<section id="todo" class="level2">
-<h2 class="anchored" data-anchor-id="todo">Todo</h2>
+<section id="why-size-matters-the-benefits-of-small-models" class="level2">
+<h2 class="anchored" data-anchor-id="why-size-matters-the-benefits-of-small-models">Why Size Matters: The Benefits of Small Models</h2>
+<p>In the world of LLMs, we often hear that “bigger is better.” However, for embedding models used in search pipelines, smaller models offer several critical advantages:</p>
 <ol type="1">
-<li><label><input type="checkbox" checked="">Explain the MTEB</label>
-<ol type="1">
-<li>Add the link of it into the this blog</li>
-</ol></li>
-<li>Explain fastembed</li>
-<li>Make comparison between tiny-gte and small gte</li>
-<li>Add the small-gte-4096 comparison</li>
+<li><strong>Lower Latency:</strong> Smaller models require fewer FLOPs, meaning faster inference times. This is crucial for real-time search applications.</li>
+<li><strong>Reduced Hosting Costs:</strong> You can run <code>tiny-gte</code> on cheaper hardware, even on CPU-only instances, without a significant performance bottleneck.</li>
+<li><strong>Edge Deployment:</strong> At 45MB, this model can easily be deployed on mobile devices or in browser-based applications using Transformers.js.</li>
+<li><strong>Memory Efficiency:</strong> You can fit more instances of the model in memory, allowing for higher throughput in multi-tenant systems.</li>
 </ol>
+</section>
+<section id="use-cases-for-tiny-gte" class="level2">
+<h2 class="anchored" data-anchor-id="use-cases-for-tiny-gte">Use Cases for tiny-gte</h2>
+<ul>
+<li><strong>Real-time Document Retrieval:</strong> Quickly finding relevant context for an LLM prompt in a RAG pipeline.</li>
+<li><strong>Mobile AI Applications:</strong> Enabling semantic search within offline mobile apps where storage space is limited.</li>
+<li><strong>Large-scale Clustering:</strong> Processing millions of documents where the computational cost of larger models would be prohibitive.</li>
+<li><strong>Edge Search:</strong> Using <code>tiny-gte</code> with libraries like <code>txtai</code> or <code>fastembed</code> for local, private search on your own machine.</li>
+</ul>
+</section>
+<section id="performance-comparison-tiny-gte-vs.-gte-small" class="level2">
+<h2 class="anchored" data-anchor-id="performance-comparison-tiny-gte-vs.-gte-small">Performance Comparison: tiny-gte vs.&nbsp;gte-small</h2>
+<p>On the Massive Text Embedding Benchmark (MTEB), <code>tiny-gte</code> performs impressively well given its size. While <code>gte-small</code> might lead by a few percentage points in specific retrieval tasks, <code>tiny-gte</code> often provides better “value per megabyte.” If your application can tolerate a 1-2% drop in accuracy in exchange for 2x faster inference, <code>tiny-gte</code> is the clear winner.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
 <ul>
-<li>https://huggingface.co/TaylorAI/gte-tiny</li>
-<li>https://www.linkedin.com/posts/prithivirajdamodaran_%3F%3F%3F%3F-%3F%3F%3F%3F-%3F%3F%3F%3F%3F-%3F%3F%3F%3F-activity-7120279840569597952-iwc-/?utm_source=share&amp;utm_medium=member_desktop</li>
+<li><a href="https://huggingface.co/TaylorAI/gte-tiny">TaylorAI/gte-tiny on Hugging Face</a></li>
+<li><a href="https://huggingface.co/spaces/mteb/leaderboard">MTEB (Massive Text Embedding Benchmark) Leaderboard</a></li>
+<li><a href="https://www.linkedin.com/posts/prithivirajdamodaran_%3F%3F%3F%3F-%3F%3F%3F%3F-%3F%3F%3F%3F%3F-%3F%3F%3F%3F-activity-7120279840569597952-iwc-">Prithiviraj Damodaran’s Note on distilled models</a></li>
+</ul>
+<hr>
+<section id="internal-resources" class="level3">
+<h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
+<p>If you’re looking for more technical deep dives or information on my research, check out these sections:</p>
+<ul>
+<li><a href="../../../papers.html">My Research Papers</a></li>
+<li><a href="../../../oss/opensource.html">Open Source Contributions</a></li>
+<li><a href="../../../til/index.html">Today I Learned: AI Engineering Notes</a></li>
+<li><a href="../../../blog/feed.html">Arabic NLP Blog Posts</a></li>
 </ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

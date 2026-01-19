@@ -8,7 +8,7 @@
 <title>عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
 <link>https://kareemai.com/blog/feed.html</link>
 <atom:link href="https://kareemai.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
-<description>Articles on Arabic NLP, efficient AI models, semantic search, and machine learning engineering. Deep dives into building production AI systems.</description>
+<description>Articles on Arabic NLP, efficient AI models, semantic search, and machine learning engineering. Deep dives into building production AI systems by Abdelkareem Elkhateb.</description>
 <image>
 <url>https://kareemai.com/quarto.png</url>
 <title>عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
@@ -16,10 +16,10 @@
 <height>86</height>
 <width>144</width>
 </image>
-<generator>quarto-1.8.26</generator>
+<generator>quarto-1.8.27</generator>
 <lastBuildDate>Thu, 08 Jan 2026 22:00:00 GMT</lastBuildDate>
 <item>
-  <title>Super Productivity: Best Free Todo App in 2026</title>
+  <title>Super Productivity Review: Best Free Todo App for AI Engineers</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/blog/posts/tools_reviews/super_productivity_app.html</link>
   <description><![CDATA[ 
@@ -145,12 +145,16 @@
 <p>There are features I still haven’t explored. The developer responds quickly and respectfully to issues.</p>
 <p>Remember this all in a free app without ads, data leakage,…etc!</p>
 <p>Give it a try: <a href="https://super-productivity.com/">super-productivity.com</a></p>
-<p>what else to read:</p>
+</section>
+<section id="more-resources" class="level3">
+<h3 class="anchored" data-anchor-id="more-resources">More Resources</h3>
+<p>If you’re interested in more tool reviews or my journey in AI, check out these posts:</p>
 <ol type="1">
 <li><a href="https://kareemai.com/blog/posts/life_style/back_to_rss.html">Getting back to RSS</a></li>
-<li><a href="https://kareemai.com/blog/posts/products_reviews/one_plus_pad_3.html">One Plus pad 3 Reivew</a></li>
-<li><a href="https://kareemai.com/blog/posts/products_reviews/Huawei%20freebuds%207i.html">Huawei Freebuds 7i</a></li>
+<li><a href="https://kareemai.com/blog/posts/products_reviews/one_plus_pad_3.html">One Plus Pad 3 Review</a></li>
+<li><a href="https://kareemai.com/blog/posts/products_reviews/Huawei%20freebuds%207i.html">Huawei Freebuds 7i Review</a></li>
 </ol>
+<p>You can also explore my <a href="../../../papers.html">Research Papers</a> or see my <a href="../../../oss/opensource.html">Open Source Projects</a>.</p>
 
 
 </section>
@@ -166,7 +170,7 @@
   <media:content url="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109194735.png" medium="image" type="image/png" height="284" width="144"/>
 </item>
 <item>
-  <title>My Dream Job Working at Tarteel &amp; muaalem El Quran | Part 2</title>
+  <title>Optimizing Quranic AI Models: Tarteel &amp; Muaalem El Quran | Part 2</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/blog/posts/speech_recognition/muaalm_quran_chance.html</link>
   <description><![CDATA[ 
@@ -3492,7 +3496,7 @@ font-style: inherit;">"6th Settlement Apartment"</span>, your_query_embedding)</
   <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/xbites_chat.png" medium="image" type="image/png" height="153" width="144"/>
 </item>
 <item>
-  <title>BM25 Explained for Hybrid Search and Rag | Part 1</title>
+  <title>BM25 Search Algorithm: Python Implementation from Scratch</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html</link>
   <description><![CDATA[ 
@@ -6761,7 +6765,7 @@ font-style: inherit;">"float16"</span>,</span>
   <media:content url="https://kareemai.com/blog/posts/minishlab/images/bojji.png" medium="image" type="image/png" height="216" width="144"/>
 </item>
 <item>
-  <title>Getting Back to RSS</title>
+  <title>Digital Minimalism: Getting Back to RSS for AI Engineers</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/blog/posts/life_style/back_to_rss.html</link>
   <description><![CDATA[ 
@@ -6770,12 +6774,10 @@ font-style: inherit;">"float16"</span>,</span>
 
 
 
-<p>Hi!<br>
-These are my thoughts on digital minimalism and staying ahead in AI without burning out.</p>
+<p>Hi! These are my thoughts on digital minimalism and staying ahead in AI without burning out.</p>
 <section id="the-flood-of-information" class="level2">
 <h2 class="anchored" data-anchor-id="the-flood-of-information">The Flood of Information</h2>
-<p>I use <a href="https://github.com/yang991178/fluent-reader">Fluent Reader</a> to keep track of the feeds I love, covering topics like machine learning (ML), life, and more.<br>
-<img src="https://kareemai.com/blog/posts/life_style/images/vision_read.png" class="img-fluid" alt="Fluent Reader"></p>
+<p>I use <a href="https://github.com/yang991178/fluent-reader">Fluent Reader</a> to keep track of the feeds I love, covering topics like machine learning (ML), life, and more. <img src="https://kareemai.com/blog/posts/life_style/images/vision_read.png" class="img-fluid" alt="Fluent Reader"></p>
 <p>Yesterday, I read an article from <a href="https://www.answer.ai/posts/2025-06-05-readbench.html">Answerdotai</a> about Vision Language Models (VLMs).</p>
 <p>I spent about 15 minutes diving into the ideas and reflecting on how they relate to my recent projects using Colpali and DSE.</p>
 <p>Today, I opened X.com and saw a thread by Benjamin about the same article.</p>
@@ -6827,8 +6829,19 @@ Media Manager</code></pre>
 <p>Want to find me? Visit my customized space at kareeai.com.</p>
 <p>All my love,</p>
 <p>Kareem</p>
+<hr>
+<section id="internal-resources" class="level3">
+<h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
+<p>If you found these thoughts on digital minimalism and productivity useful, you might also be interested in:</p>
+<ul>
+<li><a href="../../../papers.html">My Research Papers</a></li>
+<li><a href="../../../oss/opensource.html">Open Source Projects</a></li>
+<li><a href="../../../til/index.html">Today I Learned: AI Engineering Notes</a></li>
+<li><a href="../../../blog/feed.html">Arabic NLP Blog Posts</a></li>
+</ul>
 
 
+</section>
 </section>
 
  ]]></description>
@@ -6842,7 +6855,7 @@ Media Manager</code></pre>
   <media:content url="https://kareemai.com/blog/posts/life_style/images/vision_read.png" medium="image" type="image/png" height="137" width="144"/>
 </item>
 <item>
-  <title>Late Interaction and ColPali</title>
+  <title>Late Interaction and ColPali: The Future of Efficient Semantic Search</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/blog/posts/nlp/embedding_world/late_interaction.html</link>
   <description><![CDATA[ 
@@ -6851,18 +6864,49 @@ Media Manager</code></pre>
 
 
 
+<section id="beyond-bi-encoders-the-rise-of-late-interaction" class="level2">
+<h2 class="anchored" data-anchor-id="beyond-bi-encoders-the-rise-of-late-interaction">Beyond Bi-Encoders: The Rise of Late Interaction</h2>
+<p>In the world of Information Retrieval (IR), we usually face a trade-off between speed and accuracy.</p>
+<section id="bi-encoders-the-speed-kings" class="level3">
+<h3 class="anchored" data-anchor-id="bi-encoders-the-speed-kings">1. Bi-Encoders (The Speed Kings)</h3>
+<p>Bi-encoders (like standard BERT embeddings) encode the query and the document independently into a single vector. Search is just a cosine similarity between these two points. It’s incredibly fast (sub-millisecond) but loses fine-grained details because the entire document is compressed into one fixed-size vector.</p>
+</section>
+<section id="cross-encoders-the-accuracy-masters" class="level3">
+<h3 class="anchored" data-anchor-id="cross-encoders-the-accuracy-masters">2. Cross-Encoders (The Accuracy Masters)</h3>
+<p>Cross-encoders feed both the query and the document into the model simultaneously (Early Interaction). The model can attend to every word in the query relative to every word in the document. This is highly accurate but computationally expensive because you must run the model for every single query-document pair. You can’t pre-compute embeddings.</p>
+</section>
+<section id="late-interaction-the-best-of-both-worlds" class="level3">
+<h3 class="anchored" data-anchor-id="late-interaction-the-best-of-both-worlds">3. Late Interaction: The Best of Both Worlds</h3>
+<p>Late Interaction models, pioneered by <strong>ColBERT</strong>, bridge this gap. Instead of one vector per document, they store a vector for <strong>every single token</strong> in the document.</p>
+<p>When a query comes in: 1. The query is encoded into token-level embeddings. 2. A <strong>MaxSim</strong> (Maximum Similarity) operation is performed: for each query token, we find the document token that matches it best. 3. We sum these maximum similarities to get the final score.</p>
+<p>This allows the model to perform fine-grained matching (like a cross-encoder) while still allowing document embeddings to be pre-computed (like a bi-encoder).</p>
+</section>
+<section id="colpali-retrieval-without-ocr" class="level3">
+<h3 class="anchored" data-anchor-id="colpali-retrieval-without-ocr">ColPali: Retrieval Without OCR</h3>
+<p>One of the most exciting recent developments is <strong>ColPali</strong>. Traditional PDF retrieval requires a complex pipeline: OCR the text, chunk it, and then embed it. This often fails on tables, charts, and complex layouts.</p>
+<p>ColPali applies the Late Interaction principle to vision models (PaliGemma). It treats image patches of a PDF page as “tokens.” Instead of reading text, it “looks” at the page and matches query tokens directly to visual features.</p>
+<p><strong>Key Benefits of ColPali:</strong> - <strong>Layout Aware:</strong> It understands that a caption belongs to a specific image. - <strong>OCR-Free:</strong> No more messy text extraction from scanned documents. - <strong>Superior Retrieval:</strong> It outperforms traditional text-based RAG on visually rich documents.</p>
+<hr>
+</section>
+</section>
+<section id="ecosystem-and-tools" class="level2">
+<h2 class="anchored" data-anchor-id="ecosystem-and-tools">Ecosystem and Tools</h2>
+<p>If you want to implement Late Interaction today, these are the projects to watch: - <strong>ColBERTv2:</strong> The optimized version of the original late interaction model. - <strong>PyLate:</strong> A flexible Python library for training and using late interaction models. - <strong>PLAID:</strong> An extremely fast engine for searching ColBERT vectors. - <strong>Model2Vec:</strong> While focused on static embeddings, it shows the trend towards more efficient representation learning.</p>
+<p>Late interaction is transforming how we think about retrieval, moving us away from “one vector fits all” towards a more nuanced, token-aware future.</p>
+<hr>
+<section id="internal-resources" class="level3">
+<h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
+<p>If you’re interested in more technical deep dives or information on my research, check out these sections:</p>
 <ul>
-<li>what is early interaction</li>
-<li>what is late interaction</li>
-<li>Reasoning BERT</li>
-<li>mvbert</li>
-<li>ColPali</li>
-<li>colbert</li>
-<li>pylate</li>
-<li>PLAID</li>
+<li><a href="../../../papers.qmd">My Research Papers</a></li>
+<li><a href="../../../oss/opensource.qmd">Open Source Contributions</a></li>
+<li><a href="../../../til/index.qmd">Today I Learned: AI Engineering Notes</a></li>
+<li><a href="../../feed.qmd">Arabic NLP Blog Posts</a></li>
 </ul>
 
 
+</section>
+</section>
 
  ]]></description>
   <category>blogging</category>
@@ -7644,7 +7688,7 @@ Media Manager</code></pre>
   <media:content url="https://kareemai.com/blog/posts/speech_recognition/images/tarteel_ai.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>فن تبسيط الحياة الرقمية</title>
+  <title>فن تبسيط الحياة الرقمية: دليل التحرر من التشتت</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/blog/posts/life_style/digital_minimalisim_arabic.html</link>
   <description><![CDATA[ 
@@ -7790,8 +7834,19 @@ Media Manager</code></pre>
 <li>فن تبسيط الحياة</li>
 </ul></li>
 </ul>
+<hr>
+<section id="مصادر-إضافية-من-الموقع" class="level3">
+<h3 class="anchored" data-anchor-id="مصادر-إضافية-من-الموقع">مصادر إضافية من الموقع</h3>
+<p>إذا كنت مهتماً بمتابعة رحلتي في هندسة الذكاء الاصطناعي ومعالجة اللغات الطبيعية، يمكنك زيارة الأقسام التالية:</p>
+<ul>
+<li><a href="../../../papers.html">أبحاث في معالجة اللغة العربية</a></li>
+<li><a href="../../../oss/opensource.html">مشاريع مفتوحة المصدر</a></li>
+<li><a href="../../../til/index.html">مدونة “تعلمت اليوم” (TIL)</a></li>
+<li><a href="../../../blog/feed.html">فهرس المدونة التقنية</a></li>
+</ul>
 
 
+</section>
 
  ]]></description>
   <category>blogging</category>
@@ -7804,7 +7859,7 @@ Media Manager</code></pre>
   <media:content url="https://kareemai.com/blog/posts/life_style/images/fake_graviety.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>Math Skills For AI</title>
+  <title>Mathematics for AI: A Personal Journey and Essential Concepts</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/blog/posts/math/math_skills_for_AI.html</link>
   <description><![CDATA[ 
@@ -7967,6 +8022,16 @@ Media Manager</code></pre>
 </section>
 <section id="not-just-the-math" class="level2">
 <h2 class="anchored" data-anchor-id="not-just-the-math">NOT Just the Math</h2>
+<hr>
+<section id="internal-resources" class="level3">
+<h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
+<p>If you are interested in how these mathematical foundations apply to real-world AI systems, check out these sections:</p>
+<ul>
+<li><a href="../../../papers.html">My Research Papers</a></li>
+<li><a href="../../../oss/opensource.html">Open Source Projects</a></li>
+<li><a href="../../../til/index.html">Today I Learned: Daily AI Engineering Notes</a></li>
+<li><a href="../../../blog/feed.html">Arabic NLP Blog Posts</a></li>
+</ul>
 <p>This approach isn’t limited to math. It extends to every skill, including CSS, Deep Learning implementation with pure PyTorch code, and so on.</p>
 <p>…to be continued.</p>
 <p>you can read:</p>
@@ -7976,6 +8041,7 @@ Media Manager</code></pre>
 </ol>
 
 
+</section>
 </section>
 
  ]]></description>
@@ -7991,7 +8057,7 @@ Media Manager</code></pre>
   <media:content url="https://kareemai.com/blog/posts/math/images/Maslakiat.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>كم كالوري في الطعام ؟</title>
+  <title>كم كالوري في الطعام؟ دليل السعرات الحرارية بالذكاء الاصطناعي</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/blog/posts/life_style/kamcalorie.html</link>
   <description><![CDATA[ 
@@ -8010,17 +8076,32 @@ Media Manager</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://kareemai.com/blog/posts/life_style/images/kcal.png" class="img-fluid figure-img"></p>
-<figcaption>كم كالوري</figcaption>
+<figcaption>كم كالوري - واجهة الموقع</figcaption>
 </figure>
 </div>
+</section>
+<section id="لماذا-تحتاج-إلى-استخدام-كم-كالوري-في-نظامك-الغذائي" class="level2">
+<h2 class="anchored" data-anchor-id="لماذا-تحتاج-إلى-استخدام-كم-كالوري-في-نظامك-الغذائي"><strong>لماذا تحتاج إلى استخدام “كم كالوري” في نظامك الغذائي؟</strong></h2>
+<p>سواء كنت تتبع حمية لإنقاص الوزن (تنشيف) أو ترغب في زيادة الكتلة العضلية (تضخيم)، فإن معرفة ما تدخله إلى جسمك هو المفتاح. يوفر الموقع: - <strong>دقة في البيانات:</strong> نعتمد على قواعد بيانات ضخمة وموثوقة مدعومة بالذكاء الاصطناعي لتقليل الأخطاء البشرية في تقدير السعرات. - <strong>دعم اللهجات العربية:</strong> يمكنك البحث عن “كبسة”، “ملوخية”، أو حتى “طعمية” وسيفهم المحرك ما تقصده تماماً. - <strong>تحليل الماكروز:</strong> لا يقتصر الموقع على السعرات فقط، بل يوضح لك توزيع البروتين، الكربوهيدرات، والدهون في كل وجبة.</p>
 <hr>
 </section>
 <section id="خاتمة" class="level2">
 <h2 class="anchored" data-anchor-id="خاتمة">خاتمة</h2>
 <p>يعتبر موقع كم كالوري بداية الي سلسلة ممن المنتجات التي تسهل علي الناطقين بالعربية ممارسة الرياضة و لعيش حياة أفضل و هناك الكثير قادم مثل : 1. كوب بروتين 2. عضلاتي</p>
-<p>قام بتطوير و إنشاء الموقع عبد الكريم الخطيب باحث في علوم الذكاء الإصطناعي و مهتم باثراء المحتوي العربي</p>
+<p>تم تطوير منصة <a href="https://www.kamcalorie.com/">كم كالوري</a> بواسطة عبد الكريم الخطيب، وهو باحث في علوم الذكاء الاصطناعي ومهتم بإثراء المحتوى العربي التقني وتوفير أدوات ذكية تخدم المستخدم العربي في حياته اليومية. نهدف إلى جعل التغذية الصحية أمراً بسيطاً ومتاحاً للجميع بضغطة زر.</p>
+<hr>
+<section id="مصادر-إضافية-من-الموقع" class="level3">
+<h3 class="anchored" data-anchor-id="مصادر-إضافية-من-الموقع">مصادر إضافية من الموقع</h3>
+<p>إذا كنت مهتماً بمتابعة رحلتي في هندسة الذكاء الاصطناعي ومعالجة اللغات الطبيعية، يمكنك زيارة الأقسام التالية:</p>
+<ul>
+<li><a href="../../../papers.html">أبحاث في معالجة اللغة العربية</a></li>
+<li><a href="../../../oss/opensource.html">مشاريع مفتوحة المصدر</a></li>
+<li><a href="../../../til/index.html">مدونة “تعلمت اليوم” (TIL)</a></li>
+<li><a href="../../../blog/feed.html">فهرس المدونة التقنية</a></li>
+</ul>
 
 
+</section>
 </section>
 
  ]]></description>
@@ -8034,7 +8115,7 @@ Media Manager</code></pre>
   <media:content url="https://kareemai.com/blog/posts/life_style/images/kcal.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
-  <title>افضل انواع الكرياتين لبناء العضلات</title>
+  <title>أفضل أنواع الكرياتين والبروتين لبناء العضلات: دليل شامل</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/blog/posts/life_style/protienai.html</link>
   <description><![CDATA[ 
@@ -8088,10 +8169,35 @@ Media Manager</code></pre>
 <li><strong>سهولة الاستخدام:</strong> تصميم بسيط وواجهة مستخدم مريحة.</li>
 <li><strong>تنوع الخيارات:</strong> تغطية شاملة لأفضل المنتجات في السوق.</li>
 </ol>
+</section>
+<section id="كيف-تختار-المكمل-الغذائي-المناسب-لك" class="level2">
+<h2 class="anchored" data-anchor-id="كيف-تختار-المكمل-الغذائي-المناسب-لك"><strong>كيف تختار المكمل الغذائي المناسب لك؟</strong></h2>
+<p>عند اختيار مسحوق البروتين أو الكرياتين، هناك عدة عوامل يجب مراعاتها لضمان الحصول على أفضل النتائج:</p>
+<ol type="1">
+<li><strong>الهدف البدني:</strong> هل تسعى للتضخيم العضلي أم التنشيف؟ مكملات “الواي بروتين كونسنتريت” قد تكون أفضل للتضخيم، بينما “الواي بروتين أيزوليت” هو الخيار الأمثل للتنشيف لقلة الدهون والكربوهيدرات فيه.</li>
+<li><strong>نسبة البروتين في الحصة الواحدة:</strong> تأكد من أن المكمل يوفر كمية كافية من البروتين (عادة بين 20-30 جرام) لكل سكوب.</li>
+<li><strong>نوع الكرياتين:</strong> يعتبر “كرياتين مونوهيدرات” هو النوع الأكثر دراسة وفعالية وثباتاً في تحقيق القوة البدنية وزيادة حجم العضلات.</li>
+<li><strong>السعر مقابل الجودة:</strong> يقدم موقع Proteinai ميزة حساب التكلفة لكل حصة، مما يساعدك في الحصول على أفضل قيمة مقابل مالك.</li>
+</ol>
+</section>
+<section id="أهمية-المقارنة-قبل-الشراء" class="level2">
+<h2 class="anchored" data-anchor-id="أهمية-المقارنة-قبل-الشراء"><strong>أهمية المقارنة قبل الشراء</strong></h2>
+<p>السوق مليء بالخيارات، والاعتماد على الإعلانات فقط قد يكون مضللاً. من خلال استخدام <a href="https://www.protienai.com">موقع بروتين آي</a>، يمكنك مقارنة المكونات الحقيقية والتحقق من تجارب المستخدمين الآخرين. سواء كنت مبتدئاً أو محترفاً في كمال الأجسام، فإن المعلومة الدقيقة هي مفتاحك لتجنب الهدر المالي وتحقيق أقصى استفادة جسدية.</p>
 <p>استفد الآن من موقع <a href="https://www.protienai.com">مساحيق كرياتين و بروتين لبناء العضلات والتضخيم</a> لاختيار المكمل المثالي لتحقيق أهدافك الرياضية والصحية.</p>
-<p>يمكنك استخدام موقع كم كالوري لمعرفة كافة السعرات الحرارية ايضا: 1. <a href="https://www.kamcalorie.com">كم كالوري بالذكاء الإصطناعي</a></p>
+<p>يمكنك أيضاً استخدام موقع “كم كالوري” لتتبع نظامك الغذائي بدقة ومعرفة كافة السعرات الحرارية في وجباتك اليومية: 1. <a href="https://www.kamcalorie.com">كم كالوري - حاسبة السعرات بالذكاء الإصطناعي</a></p>
+<hr>
+<section id="internal-resources" class="level3">
+<h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
+<p>If you’re interested in more about AI engineering and my research, explore these sections:</p>
+<ul>
+<li><a href="../../../papers.html">My Research Papers</a></li>
+<li><a href="../../../oss/opensource.html">Open Source Contributions</a></li>
+<li><a href="../../../til/index.html">Today I Learned: AI Notes</a></li>
+<li><a href="../../../blog/feed.html">Arabic NLP Blog Posts</a></li>
+</ul>
 
 
+</section>
 </section>
 
  ]]></description>
@@ -8243,6 +8349,17 @@ Since these unique flavors are likely to appeal only to certain local customers,
 <ol type="1">
 <li><a href="https://flower.ai/docs/framework/tutorial-series-what-is-federated-learning.html#Challenges-of-classical-machine-learning">Flower Framework</a></li>
 </ol>
+<hr>
+</section>
+<section id="internal-resources" class="level3">
+<h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
+<p>If you’re interested in more about AI engineering and my research, explore these sections:</p>
+<ul>
+<li><a href="../../../papers.html">My Research Papers</a></li>
+<li><a href="../../../oss/opensource.html">Open Source Contributions</a></li>
+<li><a href="../../../til/index.html">Today I Learned: AI Notes</a></li>
+<li><a href="../../../blog/feed.html">Arabic NLP Blog Posts</a></li>
+</ul>
 
 
 </section>

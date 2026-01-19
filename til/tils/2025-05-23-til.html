@@ -2,15 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="kareem">
 <meta name="dcterms.date" content="2025-05-23">
-<meta name="description" content="How to configure Brave Leo to use your any LLM provider privately in your browser like Ollama or VLLM local models from hugginface transformers">
+<meta name="description" content="How to configure Brave Leo to use any local LLM provider privately in your browser, like Ollama or vLLM, for a privacy-first AI assistant experience.">
 
-<title>Brave Leo AI with Ollama, vllm, and any huggingface llm locally – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
+<title>Brave Leo AI: Using Ollama and local LLMs in your Browser – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,9 +75,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-914dc4404272ff4a2a791e68204292ff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -119,15 +119,15 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 </script>
-<meta property="og:title" content="Brave Leo AI with Ollama, vllm, and any huggingface llm locally – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
-<meta property="og:description" content="How to configure Brave Leo to use your any LLM provider privately in your browser like Ollama or VLLM local models from hugginface transformers">
+<meta property="og:title" content="Brave Leo AI: Using Ollama and local LLMs in your Browser – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta property="og:description" content="How to configure Brave Leo to use any local LLM provider privately in your browser, like Ollama or vLLM, for a privacy-first AI assistant experience.">
 <meta property="og:image" content="https://kareemai.com/til/tils/images/brave_leo.png">
 <meta property="og:site_name" content="Abdelkareem Elkhateb">
 <meta property="og:image:height" content="923">
 <meta property="og:image:width" content="1866">
 <meta property="og:locale" content="en_US">
-<meta name="twitter:title" content="Brave Leo AI with Ollama, vllm, and any huggingface llm locally – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
-<meta name="twitter:description" content="How to configure Brave Leo to use your any LLM provider privately in your browser like Ollama or VLLM local models from hugginface transformers">
+<meta name="twitter:title" content="Brave Leo AI: Using Ollama and local LLMs in your Browser – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta name="twitter:description" content="How to configure Brave Leo to use any local LLM provider privately in your browser, like Ollama or vLLM, for a privacy-first AI assistant experience.">
 <meta name="twitter:image" content="https://kareemai.com/til/tils/images/brave_leo.png">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary_large_image">
@@ -312,8 +312,8 @@ window.addEventListener('scroll', () => {
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Brave Leo AI with Ollama, vllm, and any huggingface llm locally",
-  "description": "How to configure Brave Leo to use your any LLM provider privately in your browser like Ollama or VLLM local models from hugginface transformers",
+  "headline": "Brave Leo AI: Using Ollama and local LLMs in your Browser",
+  "description": "How to configure Brave Leo to use any local LLM provider privately in your browser, like Ollama or vLLM, for a privacy-first AI assistant experience.",
   "author": {"@type": "Person", "name": "kareem"},
   "datePublished": "May 23, 2025",
   "publisher": {
@@ -420,7 +420,10 @@ window.addEventListener('scroll', () => {
   <li><a href="#is-brave-leo-safe-to-use" id="toc-is-brave-leo-safe-to-use" class="nav-link" data-scroll-target="#is-brave-leo-safe-to-use">Is Brave Leo Safe to Use?</a></li>
   <li><a href="#what-about-your-chat-history-with-leo" id="toc-what-about-your-chat-history-with-leo" class="nav-link" data-scroll-target="#what-about-your-chat-history-with-leo">What About Your Chat History with Leo?</a></li>
   </ul></li>
-  <li><a href="#bring-your-own-model-byom-with-brave-leo" id="toc-bring-your-own-model-byom-with-brave-leo" class="nav-link" data-scroll-target="#bring-your-own-model-byom-with-brave-leo">Bring Your Own Model (BYOM) with Brave Leo</a></li>
+  <li><a href="#bring-your-own-model-byom-with-brave-leo" id="toc-bring-your-own-model-byom-with-brave-leo" class="nav-link" data-scroll-target="#bring-your-own-model-byom-with-brave-leo">Bring Your Own Model (BYOM) with Brave Leo</a>
+  <ul class="collapse">
+  <li><a href="#internal-resources" id="toc-internal-resources" class="nav-link" data-scroll-target="#internal-resources">Internal Resources</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -430,7 +433,7 @@ window.addEventListener('scroll', () => {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Brave Leo AI with Ollama, vllm, and any huggingface llm locally</h1>
+<h1 class="title">Brave Leo AI: Using Ollama and local LLMs in your Browser</h1>
   <div class="quarto-categories">
     <div class="quarto-category">blogging</div>
     <div class="quarto-category">til</div>
@@ -444,7 +447,7 @@ window.addEventListener('scroll', () => {
 
 <div>
   <div class="description">
-    How to configure Brave Leo to use your any LLM provider privately in your browser like Ollama or VLLM local models from hugginface transformers
+    How to configure Brave Leo to use any local LLM provider privately in your browser, like Ollama or vLLM, for a privacy-first AI assistant experience.
   </div>
 </div>
 
@@ -528,8 +531,19 @@ window.addEventListener('scroll', () => {
 <p><strong>API Key</strong>: local</p>
 <p><strong>System Prompt</strong>: A custom prompt like, “You are Leo, a helpful AI assistant by Brave. Provide clear, concise, polite responses under 80 words. Use a neutral tone, clarify if needed, and ensure accuracy.”</p>
 <p>Brave doesn’t proxy these requests, so check the privacy terms of your chosen provider. Once set up, your model integrates with Leo, letting you use it directly in the browser for tailored, private AI chats. It’s like giving Leo your own custom brain!</p>
+<hr>
+<section id="internal-resources" class="level3">
+<h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
+<p>If you’re interested in more about local LLMs and my AI research, explore these sections:</p>
+<ul>
+<li><a href="../../papers.html">My Research Papers</a></li>
+<li><a href="../../oss/opensource.html">Open Source Contributions</a></li>
+<li><a href="../../til/index.html">Today I Learned Index</a></li>
+<li><a href="../../blog/feed.html">Main Blog Index</a></li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

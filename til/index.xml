@@ -14,10 +14,10 @@
 <title>عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
 <link>https://kareemai.com/til/</link>
 </image>
-<generator>quarto-1.8.26</generator>
+<generator>quarto-1.8.27</generator>
 <lastBuildDate>Sun, 14 Dec 2025 22:00:00 GMT</lastBuildDate>
 <item>
-  <title>AI Research is not for poor GPU | 2026</title>
+  <title>AI Research Challenges: The GPU Barrier for Researchers</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/til/tils/2025-12-15.html</link>
   <description><![CDATA[ 
@@ -29,8 +29,13 @@
 <p>Imagine a blind trying to walk in a new city he didn’t visit before and he didn’t had a stick in this hand he just had an idiot rat who guides him with a rope, this rat sometime tell the man : Hey, Kareem can you wait some time I will go in batches to find the bus station. 72 hours later you get hungry , lost your mind and your poor can’t get an Uber! Then the rat come to you and said I didn’t find a bus station, let’s go and find a restaurant 72 hours later the rat is out of control and get panic from the long routes in this new city. You are hungry and the rat can’t help he can just guide to a little places and in these little places you need to wait multiple hours to get a response from rat.</p>
 <p>This is my life being a GPU poor, I want to fine-tune an embedding model which is something trivial in the AI compute I will need to get GPU and based on the dataset size to fine-tune in my college it’s a titan rtx it takes 72 so all my ideas and research will wait until the 72 finishes!</p>
 <p>The lack of immediate feedback is the bottleneck for ai if I was an engineer a frontend developer every change I made I see an immediate feedback on the screen, the flow continue until I had a good prototype in less than 2 hours and I can change ..etc this is what makes AI sicks! Any idea about anything to validate it you will spend months if you are GPU poor and doing ai research on kaggle or colap free instances is not good experience if you will use the free you are limited but the VRAM, time until they suspend the instance…etc this is not how AI programming should be. <strong>I hope I can get an rtx 5090 in the next months</strong></p>
+<hr>
+<section id="more-from-my-site" class="level3">
+<h3 class="anchored" data-anchor-id="more-from-my-site">More from my site</h3>
+<p>If you enjoyed this reflection on the state of AI research hardware, you might also be interested in my <a href="../../papers.html">Research Papers</a> where I share the results of my work, or my <a href="../../blog/feed.html">Main Blog</a> for deeper technical dives. You can also return to my <a href="../../index.html">Homepage</a>.</p>
 
 
+</section>
 
  ]]></description>
   <category>blogging</category>
@@ -84,8 +89,19 @@ font-style: inherit;">}</span></span></code></pre></div></div>
 <ol type="1">
 <li><a href="https://youtube.com/playlist?list=PLald6EODoOJU0GMuYHlkS9MLhTPE7HiaT&amp;si=3O-9VHNwmSN5M13t">رست للغلابة</a></li>
 </ol>
+<hr>
+<section id="internal-resources" class="level3">
+<h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
+<p>If you’re interested in more about Rust, AI engineering, and my research, explore these sections:</p>
+<ul>
+<li><a href="../../papers.html">My Research Papers</a></li>
+<li><a href="../../oss/opensource.html">Open Source Contributions</a></li>
+<li><a href="../../til/index.html">Today I Learned Index</a></li>
+<li><a href="../../blog/feed.html">Main Blog Index</a></li>
+</ul>
 
 
+</section>
 </section>
 
  ]]></description>
@@ -99,7 +115,7 @@ font-style: inherit;">}</span></span></code></pre></div></div>
   <media:content url="https://kareemai.com/til/tils/til.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>Revisit the Basics of Arabic NLP</title>
+  <title>Arabic NLP Fundamentals: Sparse Embeddings &amp; Dynamic Programming</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/til/tils/2025-12-13.html</link>
   <description><![CDATA[ 
@@ -139,9 +155,9 @@ font-style: inherit;">}</span></span></code></pre></div></div>
 <ul>
 <li>the chapter was an introduction about words, tokens , BPE and tokenization and some linguistics stuff, and how is the Unicode and encoding for different language is done which was nice intro.</li>
 <li>How to use regular expression to do some NLP analysis.</li>
-<li>what I really like most was the Minimum Edit Distance and Alignment of words. <strong>The problem I had is implement the algorhtim yourself needs some problem solving and I didn’t practice problem solving for a long time and my skills is no there yet</strong> **** I tried for 30 minutes to implement minimum distance but failed. I opened a website for leetcode problems is more organized and minimal called <a href="neetcode.com">neetcode</a> I solved the first 11 problems 3 was very easy, and other were medium and the good thing that I had solutions that are not in the solutions sections and my focus on how to use python collections methods like counter is good. The code solves the problem but it’s not the fastest thing. But I feel good that my patience and thinking is better. ![[Screenshot_2025-12-14-10-35-27-07_e4424258c8b8649f6e67d283a50a2cbc.jpg]]</li>
+<li>what I really like most was the Minimum Edit Distance and Alignment of words. <strong>The problem I had is implement the algorhtim yourself needs some problem solving and I didn’t practice problem solving for a long time and my skills is no there yet</strong> **** I tried for 30 minutes to implement minimum distance but failed. I opened a website for leetcode problems is more organized and minimal called <a href="https://neetcode.com">neetcode</a> I solved the first 11 problems 3 was very easy, and other were medium and the good thing that I had solutions that are not in the solutions sections and my focus on how to use python collections methods like counter is good. The code solves the problem but it’s not the fastest thing. But I feel good that my patience and thinking is better. ![[Screenshot_2025-12-14-10-35-27-07_e4424258c8b8649f6e67d283a50a2cbc.jpg]]</li>
 <li>my month plan will be to finish all the 150 problem and do a lot of dynamic programming (DP) because the minimum edit distance and viterbi in the end of the first chapter will be implemented in DP and other things I know also needs DP.</li>
-<li>After that i will start practice on the following alternative to leetcode but for machine learning <strong>deep-ml.com</strong> ![[Pasted image 20251214122627.png]] ### Build a Keyword checker in Arabic I get a nice idea while learning about alignment that I could build my own keyword spell checker for my language that is more smart than the current keyboards by creating the following features:</li>
+<li>After that i will start practice on the following alternative to leetcode but for machine learning <a href="https://deep-ml.com"><strong>deep-ml.com</strong></a> ![[Pasted image 20251214122627.png]] ### Build a Keyword checker in Arabic I get a nice idea while learning about alignment that I could build my own keyword spell checker for my language that is more smart than the current keyboards by creating the following features:</li>
 </ul>
 <ol type="1">
 <li>Recommend technical meaning
@@ -154,8 +170,13 @@ font-style: inherit;">}</span></span></code></pre></div></div>
 <li>Automatic learning based on user interactions I thought it will be nice even to implement this in rust :) 🦀🦀 ### References</li>
 <li><a href="https://web.stanford.edu/~jurafsky/slp3/">The NLP book</a></li>
 </ol>
+<hr>
+<section id="internal-resources" class="level3">
+<h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
+<p>If you are interested in more structured deep dives, check out my <a href="../../blog/feed.html">Blog</a> or my <a href="../../papers.html">Research Papers</a>. For my work on tools and libraries, visit the <a href="../../oss/opensource.html">Open Source</a> section. You can also explore more daily notes in the <a href="../../til/index.html">TIL Index</a>.</p>
 
 
+</section>
 </section>
 
  ]]></description>
@@ -169,7 +190,7 @@ font-style: inherit;">}</span></span></code></pre></div></div>
   <media:content url="https://kareemai.com/til/tils/til.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>Evaluating Arabic Tokenizers</title>
+  <title>Evaluating Arabic Tokenizers: AraModernBert vs AraBERT v2 Efficiency</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/til/tils/2025-10-21.html</link>
   <description><![CDATA[ 
@@ -466,6 +487,10 @@ font-style: inherit;">"total_tokens"</span>: number_of_tokens</span>
 <p>Tokenizer evaluation revealed that <strong>AraModernBert significantly outperforms AraBERT v2</strong> in efficiency metrics, with 15-71% fewer tokens needed for the same Arabic text.</p>
 <p>This translates to real cost savings and performance improvements in production systems.</p>
 <p>The key lesson: <strong>don’t assume all tokenizers are equal</strong>. A few hours of evaluation can save months of headaches and significant costs down the line.</p>
+<section id="internal-resources" class="level3">
+<h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
+<p>For more insights into Arabic NLP and AI engineering, visit my <a href="../../papers.html">Research Papers</a> or explore my <a href="../../oss/opensource.html">Open Source Projects</a>. You can also find more daily discoveries in the <a href="../../til/index.html">TIL Index</a>.</p>
+</section>
 </section>
 <section id="code-repository" class="level2">
 <h2 class="anchored" data-anchor-id="code-repository">Code Repository</h2>
@@ -535,7 +560,7 @@ font-style: inherit;">"total_tokens"</span>: number_of_tokens</span>
   <media:content url="https://kareemai.com/til/tils/til.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>Connecting with ideas in ML</title>
+  <title>AI Engineering Careers: Connecting with Minds in Machine Learning</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/til/tils/2025-06-06-til.html</link>
   <description><![CDATA[ 
@@ -574,8 +599,19 @@ font-style: inherit;">"total_tokens"</span>: number_of_tokens</span>
 <li>There’s more to say, but this world has immense potential for smart people—not in terms of marketing or being a shallow influencer.</li>
 <li>I want to say that I have many ideas I want to create and share with other minds. I believe I’ll be able to make a positive impact in the areas I’m passionate about and improve Islamic tech and Arabic NLP.</li>
 </ul>
+<hr>
+<section id="internal-resources" class="level3">
+<h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
+<p>If you found these career reflections and thoughts on the AI field useful, you might also be interested in:</p>
+<ul>
+<li><a href="../../papers.html">My Research Papers</a></li>
+<li><a href="../../oss/opensource.html">Open Source Contributions</a></li>
+<li><a href="../../blog/feed.html">Main Blog Index</a></li>
+<li><a href="../../til/index.html">Today I Learned Index</a></li>
+</ul>
 
 
+</section>
 
  ]]></description>
   <category>blogging</category>
@@ -585,7 +621,7 @@ font-style: inherit;">"total_tokens"</span>: number_of_tokens</span>
   <media:content url="https://kareemai.com/til/tils/til.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>Pylate Day 1</title>
+  <title>PyLate &amp; ColBERT: Learning Vector Retrieval and Arabic Models</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/til/tils/2025-05-28-til.html</link>
   <description><![CDATA[ 
@@ -611,8 +647,7 @@ font-style: inherit;">"total_tokens"</span>: number_of_tokens</span>
 <h2 class="anchored" data-anchor-id="dataset-formats">Dataset Formats</h2>
 <section id="format-1-tripletmulti-negative-format" class="level3">
 <h3 class="anchored" data-anchor-id="format-1-tripletmulti-negative-format">Format 1: Triplet/Multi-negative Format</h3>
-<p><strong>Q: What does triplet format look like?</strong> A: Each row contains: - <code>query</code>: The search query - <code>positive</code>: One relevant document<br>
-- <code>negative1</code>, <code>negative2</code>, …: Multiple irrelevant documents</p>
+<p><strong>Q: What does triplet format look like?</strong> A: Each row contains: - <code>query</code>: The search query - <code>positive</code>: One relevant document - <code>negative1</code>, <code>negative2</code>, …: Multiple irrelevant documents</p>
 <p><strong>Pros</strong>: Good for training with hard negatives <strong>Cons</strong>: No separate corpus, harder to evaluate</p>
 </section>
 <section id="format-2-structured-retrieval-format" class="level3">
@@ -744,8 +779,7 @@ font-style: inherit;">"map@5"</span>])</span></code></pre></div></div>
 <section id="plaid-index" class="level3">
 <h3 class="anchored" data-anchor-id="plaid-index">PLAID Index</h3>
 <p><strong>Q: What is PLAID indexing?</strong> A: PyLate’s efficient indexing method for ColBERT embeddings, supporting fast similarity search</p>
-<p><strong>Key Parameters</strong>: - <code>index_folder</code>: Where to store index - <code>index_name</code>: Identifier for the index<br>
-- <code>override=True</code>: Overwrites existing index</p>
+<p><strong>Key Parameters</strong>: - <code>index_folder</code>: Where to store index - <code>index_name</code>: Identifier for the index - <code>override=True</code>: Overwrites existing index</p>
 </section>
 <section id="document-processing" class="level3">
 <h3 class="anchored" data-anchor-id="document-processing">Document Processing</h3>
@@ -802,14 +836,23 @@ font-style: inherit;"># process each negative document</span></span></code></pre
 <h2 class="anchored" data-anchor-id="evaluation-metrics">Evaluation Metrics</h2>
 <section id="standard-ir-metrics" class="level3">
 <h3 class="anchored" data-anchor-id="standard-ir-metrics">Standard IR Metrics</h3>
-<p><strong>Q: What metrics should you track?</strong> A: - <strong>NDCG@k</strong>: Normalized discounted cumulative gain - <strong>MAP@k</strong>: Mean average precision<br>
-- <strong>Recall@k</strong>: Proportion of relevant docs retrieved - <strong>Precision@k</strong>: Proportion of retrieved docs that are relevant</p>
+<p><strong>Q: What metrics should you track?</strong> A: - <strong>NDCG@k</strong>: Normalized discounted cumulative gain - <strong>MAP@k</strong>: Mean average precision - <strong>Recall@k</strong>: Proportion of relevant docs retrieved - <strong>Precision@k</strong>: Proportion of retrieved docs that are relevant</p>
 </section>
 <section id="interpreting-results" class="level3">
 <h3 class="anchored" data-anchor-id="interpreting-results">Interpreting Results</h3>
-<p><strong>Q: What makes good retrieval performance?</strong> A: - NDCG@5 &gt; 0.7: Excellent - NDCG@5 &gt; 0.5: Good<br>
-- NDCG@5 &gt; 0.3: Acceptable - NDCG@5 &lt; 0.3: Needs improvement</p>
+<p><strong>Q: What makes good retrieval performance?</strong> A: - NDCG@5 &gt; 0.7: Excellent - NDCG@5 &gt; 0.5: Good - NDCG@5 &gt; 0.3: Acceptable - NDCG@5 &lt; 0.3: Needs improvement</p>
 <p>This comprehensive guide covers all the key concepts, trade-offs, and practical considerations for working with PyLate and ColBERT evaluation pipelines.</p>
+<hr>
+</section>
+<section id="internal-resources" class="level3">
+<h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
+<p>If you’re interested in more about vector retrieval and my AI research, explore these sections:</p>
+<ul>
+<li><a href="../../papers.html">My Research Papers</a></li>
+<li><a href="../../oss/opensource.html">Open Source Contributions</a></li>
+<li><a href="../../til/index.html">Today I Learned Index</a></li>
+<li><a href="../../blog/feed.html">Main Blog Index</a></li>
+</ul>
 
 
 </section>
@@ -824,7 +867,7 @@ font-style: inherit;"># process each negative document</span></span></code></pre
   <media:content url="https://kareemai.com/til/tils/til.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>RAG RAPTOR: Complete Guide to Meta’s RAPTOR RAG, DFloat11 Compression &amp; Pyrefly Type Checker</title>
+  <title>Meta’s RAPTOR RAG, DFloat11 Compression &amp; Pyrefly Guide</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/til/tils/2025-05-25-til.html</link>
   <description><![CDATA[ 
@@ -838,8 +881,7 @@ font-style: inherit;"># process each negative document</span></span></code></pre
 <p>Over the last 2 days, I’ve been exploring some fascinating new open source tools from Meta and other organizations. These tools are revolutionizing how we approach RAG (Retrieval-Augmented Generation), model compression, and Python development. Let me break down what I’ve learned:</p>
 <ol type="1">
 <li><strong>RAPTOR RAG</strong> - Meta’s tree-based retrieval technique</li>
-<li><strong>DFloat11</strong> - Lossless compression for LLMs<br>
-</li>
+<li><strong>DFloat11</strong> - Lossless compression for LLMs</li>
 <li><strong>Pyrefly</strong> - Fast Python type checker in Rust</li>
 <li><strong>FastEmbed</strong> - Efficient embedding generation</li>
 </ol>
@@ -1005,8 +1047,19 @@ font-style: inherit;"># process each negative document</span></span></code></pre
 <li><a href="https://arxiv.org/abs/2406.02359">DFloat11 Research</a> - Compression technique details</li>
 <li><a href="https://docs.llamaindex.ai/">LlamaIndex Documentation</a> - RAG framework integration</li>
 </ol>
+<hr>
+<section id="internal-resources" class="level3">
+<h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
+<p>If you’re interested in more about AI engineering and my research, explore these sections:</p>
+<ul>
+<li><a href="../../papers.html">My Research Papers</a></li>
+<li><a href="../../oss/opensource.html">Open Source Contributions</a></li>
+<li><a href="../../til/index.html">Today I Learned Index</a></li>
+<li><a href="../../blog/feed.html">Main Blog Index</a></li>
+</ul>
 
 
+</section>
 </section>
 
  ]]></description>
@@ -1020,7 +1073,7 @@ font-style: inherit;"># process each negative document</span></span></code></pre
   <media:content url="https://kareemai.com/til/tils/images/raptor.png" medium="image" type="image/png" height="47" width="144"/>
 </item>
 <item>
-  <title>Brave Leo AI with Ollama, vllm, and any huggingface llm locally</title>
+  <title>Brave Leo AI: Using Ollama and local LLMs in your Browser</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/til/tils/2025-05-23-til.html</link>
   <description><![CDATA[ 
@@ -1108,8 +1161,19 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div></div>
 <p><strong>API Key</strong>: local</p>
 <p><strong>System Prompt</strong>: A custom prompt like, “You are Leo, a helpful AI assistant by Brave. Provide clear, concise, polite responses under 80 words. Use a neutral tone, clarify if needed, and ensure accuracy.”</p>
 <p>Brave doesn’t proxy these requests, so check the privacy terms of your chosen provider. Once set up, your model integrates with Leo, letting you use it directly in the browser for tailored, private AI chats. It’s like giving Leo your own custom brain!</p>
+<hr>
+<section id="internal-resources" class="level3">
+<h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
+<p>If you’re interested in more about local LLMs and my AI research, explore these sections:</p>
+<ul>
+<li><a href="../../papers.html">My Research Papers</a></li>
+<li><a href="../../oss/opensource.html">Open Source Contributions</a></li>
+<li><a href="../../til/index.html">Today I Learned Index</a></li>
+<li><a href="../../blog/feed.html">Main Blog Index</a></li>
+</ul>
 
 
+</section>
 </section>
 
  ]]></description>
@@ -1125,7 +1189,7 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div></div>
   <media:content url="https://kareemai.com/til/tils/images/brave_leo.png" medium="image" type="image/png" height="71" width="144"/>
 </item>
 <item>
-  <title>البوصلة الحقيقة</title>
+  <title>البوصلة الحقيقية: تأملات في تزكية النفس وإخلاص النية في طلب العلم</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/til/tils/2025-05-21-til.html</link>
   <description><![CDATA[ 
@@ -1196,8 +1260,19 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div></div>
 <p>بعد كل المصاعب التي تقابلني من حاجة مادة وحاجة للفهم والوقت والتوفيق والعلم و غير هذا..أجد أن الامر كله بيد الله و قدرته.</p>
 <p><strong>فلا حول ولا قوة الإبالله و حسبي الله ونعم الوكيل.</strong></p>
 <p>يجب علي تقبل المحدودية و الضعف و اللجوء الي من بيده ملكوت السموات و الأرض القادر علي كل شئ. سبحان ربي و تعالي و صلي الله وسلم علي سيدنا محمد.</p>
+<hr>
+<section id="مصادر-إضافية-من-الموقع" class="level3">
+<h3 class="anchored" data-anchor-id="مصادر-إضافية-من-الموقع">مصادر إضافية من الموقع</h3>
+<p>إذا كنت مهتماً بمتابعة رحلتي في هندسة الذكاء الاصطناعي ومعالجة اللغات الطبيعية، يمكنك زيارة الأقسام التالية:</p>
+<ul>
+<li><a href="../../papers.html">أبحاث في معالجة اللغة العربية</a></li>
+<li><a href="../../oss/opensource.html">مشاريع مفتوحة المصدر</a></li>
+<li><a href="../../til/index.html">مدونة “تعلمت اليوم” (TIL)</a></li>
+<li><a href="../../blog/feed.html">فهرس المدونة التقنية</a></li>
+</ul>
 
 
+</section>
 </section>
 
  ]]></description>
@@ -1209,7 +1284,7 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div></div>
   <media:content url="https://kareemai.com/til/tils/images/isreal.png" medium="image" type="image/png" height="78" width="144"/>
 </item>
 <item>
-  <title>Domains Day: Connecting Railway with Vercel, Cloudflare, and Hostinger</title>
+  <title>Domain Migration: Connecting Railway, Vercel, and Cloudflare</title>
   <dc:creator>Kareem </dc:creator>
   <link>https://kareemai.com/til/tils/2025-05-20-til.html</link>
   <description><![CDATA[ 
@@ -1249,6 +1324,17 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div></div>
 <li><p>Wait approximately 1 to 2 days for the DNS changes to propagate.</p></li>
 </ol>
 <p>Once the DNS updates are complete, your domain should work seamlessly with Railway.</p>
+<hr>
+</section>
+<section id="internal-resources" class="level3">
+<h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
+<p>If you’re interested in more about web development and my AI research, explore these sections:</p>
+<ul>
+<li><a href="../../papers.html">My Research Papers</a></li>
+<li><a href="../../oss/opensource.html">Open Source Contributions</a></li>
+<li><a href="../../til/index.html">Today I Learned Index</a></li>
+<li><a href="../../blog/feed.html">Main Blog Index</a></li>
+</ul>
 
 
 </section>
@@ -1267,7 +1353,7 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div></div>
   <media:content url="https://kareemai.com/til/tils/til.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>Starting Substack as a AI Researcher</title>
+  <title>AI Research Blogging: Why Substack Matters for Researchers</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/til/tils/2025-05-19-til.html</link>
   <description><![CDATA[ 
@@ -1391,6 +1477,17 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div></div>
 </ol>
 <iframe title="Kareem's Newsletter" src="https://kareemnns.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no">
 </iframe>
+<hr>
+</section>
+<section id="internal-resources" class="level3">
+<h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
+<p>If you’re interested in more about AI engineering and my research, explore these sections:</p>
+<ul>
+<li><a href="../../papers.html">My Research Papers</a></li>
+<li><a href="../../oss/opensource.html">Open Source Contributions</a></li>
+<li><a href="../../til/index.html">Today I Learned Index</a></li>
+<li><a href="../../blog/feed.html">Main Blog Index</a></li>
+</ul>
 
 
 </section>
@@ -1495,7 +1592,7 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div></div>
   <media:content url="https://kareemai.com/til/tils/til.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>TIL ? Tody I lernt to create TIL</title>
+  <title>Learning in Public: Why I Started My TIL Journey</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/til/tils/2025-05-17-til.html</link>
   <description><![CDATA[ 

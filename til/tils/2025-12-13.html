@@ -2,15 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="kareem">
 <meta name="dcterms.date" content="2025-12-13">
-<meta name="description" content="Let’s get back into studying Arabic NLP from the basics">
+<meta name="description" content="A deep dive into Arabic NLP fundamentals: from lexical embeddings and BM25 to implementing minimum edit distance using dynamic programming.">
 
-<title>Revisit the Basics of Arabic NLP – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
+<title>Arabic NLP Fundamentals: Sparse Embeddings &amp; Dynamic Programming – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -40,9 +40,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-914dc4404272ff4a2a791e68204292ff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -84,13 +84,13 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 </script>
-<meta property="og:title" content="Revisit the Basics of Arabic NLP – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
-<meta property="og:description" content="Let’s get back into studying Arabic NLP from the basics">
+<meta property="og:title" content="Arabic NLP Fundamentals: Sparse Embeddings &amp; Dynamic Programming – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta property="og:description" content="A deep dive into Arabic NLP fundamentals: from lexical embeddings and BM25 to implementing minimum edit distance using dynamic programming.">
 <meta property="og:image" content="https://kareemai.com/til/tils/til.jpg">
 <meta property="og:site_name" content="Abdelkareem Elkhateb">
 <meta property="og:locale" content="en_US">
-<meta name="twitter:title" content="Revisit the Basics of Arabic NLP – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
-<meta name="twitter:description" content="Let’s get back into studying Arabic NLP from the basics">
+<meta name="twitter:title" content="Arabic NLP Fundamentals: Sparse Embeddings &amp; Dynamic Programming – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta name="twitter:description" content="A deep dive into Arabic NLP fundamentals: from lexical embeddings and BM25 to implementing minimum edit distance using dynamic programming.">
 <meta name="twitter:image" content="https://kareemai.com/til/tils/til.jpg">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary_large_image">
@@ -273,8 +273,8 @@ window.addEventListener('scroll', () => {
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Revisit the Basics of Arabic NLP",
-  "description": "Let’s get back into studying Arabic NLP from the basics",
+  "headline": "Arabic NLP Fundamentals: Sparse Embeddings & Dynamic Programming",
+  "description": "A deep dive into Arabic NLP fundamentals: from lexical embeddings and BM25 to implementing minimum edit distance using dynamic programming.",
   "author": {"@type": "Person", "name": "kareem"},
   "datePublished": "December 13, 2025",
   "publisher": {
@@ -375,7 +375,10 @@ window.addEventListener('scroll', () => {
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#chapter-summary-and-what-to-do-next" id="toc-chapter-summary-and-what-to-do-next" class="nav-link active" data-scroll-target="#chapter-summary-and-what-to-do-next">Chapter Summary and what to do next</a></li>
+  <li><a href="#chapter-summary-and-what-to-do-next" id="toc-chapter-summary-and-what-to-do-next" class="nav-link active" data-scroll-target="#chapter-summary-and-what-to-do-next">Chapter Summary and what to do next</a>
+  <ul class="collapse">
+  <li><a href="#internal-resources" id="toc-internal-resources" class="nav-link" data-scroll-target="#internal-resources">Internal Resources</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -385,7 +388,7 @@ window.addEventListener('scroll', () => {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Revisit the Basics of Arabic NLP</h1>
+<h1 class="title">Arabic NLP Fundamentals: Sparse Embeddings &amp; Dynamic Programming</h1>
   <div class="quarto-categories">
     <div class="quarto-category">blogging</div>
     <div class="quarto-category">til</div>
@@ -397,7 +400,7 @@ window.addEventListener('scroll', () => {
 
 <div>
   <div class="description">
-    Let’s get back into studying Arabic NLP from the basics
+    A deep dive into Arabic NLP fundamentals: from lexical embeddings and BM25 to implementing minimum edit distance using dynamic programming.
   </div>
 </div>
 
@@ -457,9 +460,9 @@ window.addEventListener('scroll', () => {
 <ul>
 <li>the chapter was an introduction about words, tokens , BPE and tokenization and some linguistics stuff, and how is the Unicode and encoding for different language is done which was nice intro.</li>
 <li>How to use regular expression to do some NLP analysis.</li>
-<li>what I really like most was the Minimum Edit Distance and Alignment of words. <strong>The problem I had is implement the algorhtim yourself needs some problem solving and I didn’t practice problem solving for a long time and my skills is no there yet</strong> **** I tried for 30 minutes to implement minimum distance but failed. I opened a website for leetcode problems is more organized and minimal called <a href="neetcode.com">neetcode</a> I solved the first 11 problems 3 was very easy, and other were medium and the good thing that I had solutions that are not in the solutions sections and my focus on how to use python collections methods like counter is good. The code solves the problem but it’s not the fastest thing. But I feel good that my patience and thinking is better. ![[Screenshot_2025-12-14-10-35-27-07_e4424258c8b8649f6e67d283a50a2cbc.jpg]]</li>
+<li>what I really like most was the Minimum Edit Distance and Alignment of words. <strong>The problem I had is implement the algorhtim yourself needs some problem solving and I didn’t practice problem solving for a long time and my skills is no there yet</strong> **** I tried for 30 minutes to implement minimum distance but failed. I opened a website for leetcode problems is more organized and minimal called <a href="https://neetcode.com">neetcode</a> I solved the first 11 problems 3 was very easy, and other were medium and the good thing that I had solutions that are not in the solutions sections and my focus on how to use python collections methods like counter is good. The code solves the problem but it’s not the fastest thing. But I feel good that my patience and thinking is better. ![[Screenshot_2025-12-14-10-35-27-07_e4424258c8b8649f6e67d283a50a2cbc.jpg]]</li>
 <li>my month plan will be to finish all the 150 problem and do a lot of dynamic programming (DP) because the minimum edit distance and viterbi in the end of the first chapter will be implemented in DP and other things I know also needs DP.</li>
-<li>After that i will start practice on the following alternative to leetcode but for machine learning <strong>deep-ml.com</strong> ![[Pasted image 20251214122627.png]] ### Build a Keyword checker in Arabic I get a nice idea while learning about alignment that I could build my own keyword spell checker for my language that is more smart than the current keyboards by creating the following features:</li>
+<li>After that i will start practice on the following alternative to leetcode but for machine learning <a href="https://deep-ml.com"><strong>deep-ml.com</strong></a> ![[Pasted image 20251214122627.png]] ### Build a Keyword checker in Arabic I get a nice idea while learning about alignment that I could build my own keyword spell checker for my language that is more smart than the current keyboards by creating the following features:</li>
 </ul>
 <ol type="1">
 <li>Recommend technical meaning
@@ -472,8 +475,13 @@ window.addEventListener('scroll', () => {
 <li>Automatic learning based on user interactions I thought it will be nice even to implement this in rust :) 🦀🦀 ### References</li>
 <li><a href="https://web.stanford.edu/~jurafsky/slp3/">The NLP book</a></li>
 </ol>
+<hr>
+<section id="internal-resources" class="level3">
+<h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
+<p>If you are interested in more structured deep dives, check out my <a href="../../blog/feed.html">Blog</a> or my <a href="../../papers.html">Research Papers</a>. For my work on tools and libraries, visit the <a href="../../oss/opensource.html">Open Source</a> section. You can also explore more daily notes in the <a href="../../til/index.html">TIL Index</a>.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
