@@ -78,20 +78,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-til-posts .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-til-posts'] = new List('listing-til-posts', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -113,6 +113,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 </script>
+<!-- Fonts are embedded locally via shimmering-fonts.css -->
 <link rel="alternate" type="application/rss+xml" title="عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist" href="index.xml" data-external="1"><meta property="og:title" content="TILs - Today I Learned | Abdelkareem Elkhateb">
 <meta property="og:description" content="Quick learnings on Arabic NLP, ML, and AI engineering">
 <meta property="og:image" content="https://user-images.githubusercontent.com/1483922/208359430-f55d7503-3a98-4875-a35c-16314c9439d0.png">
@@ -120,7 +121,7 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 <meta property="og:locale" content="en_US">
 <meta name="twitter:title" content="TILs | Abdelkareem Elkhateb - Arabic NLP &amp; AI">
 <meta name="twitter:description" content="Quick learnings and notes on Arabic NLP, machine learning, Python, Rust, and AI engineering. Daily discoveries from building real-world AI systems.">
-<meta name="twitter:image" content="https://user-images.githubusercontent.com/1483922/208359430-f55d7503-3a98-4875-a35c-16314c9439d0.png">
+<meta name="twitter:image" content="https://kareemai.com//kareem.jpg">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://kareemai.com/til/">
@@ -344,6 +345,7 @@ window.Quarto = {
 };
 </script>
 
+<link rel="stylesheet" href="../shimmering-fonts.css">
 <link rel="stylesheet" href="../styles.css">
 
 
@@ -440,7 +442,7 @@ window.Quarto = {
   </ul></li>
   </ul>
 </nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(13)</span></div><div class="category" data-category="YWk=">ai <span class="quarto-category-count">(2)</span></div><div class="category" data-category="YmxvZyUyRmJlbmNobWFyaw==">blog/benchmark <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YmxvZyUyRmxlYXJuJTJGY29uY2VwdA==">blog/learn/concept <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YmxvZyUyRmxlYXJuJTJGam91cm5leQ==">blog/learn/journey <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YmxvZyUyRm9waW5pb24lMkZ0ZWNo">blog/opinion/tech <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YmxvZyUyRnN0YXR1cyUyRmNvbXBsZXRl">blog/status/complete <span class="quarto-category-count">(3)</span></div><div class="category" data-category="YmxvZyUyRnN0YXR1cyUyRnB1Ymxpc2hlZA==">blog/status/published <span class="quarto-category-count">(2)</span></div><div class="category" data-category="YmxvZ2dpbmc=">blogging <span class="quarto-category-count">(13)</span></div><div class="category" data-category="ZG9tYWlucw==">domains <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGxt">llm <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bG9jYWxfbGxt">local_llm <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWFjaGluZS1sZWFybmluZw==">machine-learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bmxw">nlp <span class="quarto-category-count">(1)</span></div><div class="category" data-category="b2xsYW1h">ollama <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cG9ya2J1bg==">porkbun <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHl0aG9u">python <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cWRyYW50">qdrant <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cmFn">rag <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cnVzdA==">rust <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c2Vv">seo <span class="quarto-category-count">(2)</span></div><div class="category" data-category="c3Vic3RhY2s=">substack <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dGls">til <span class="quarto-category-count">(13)</span></div><div class="category" data-category="dmVyY2Vs">vercel <span class="quarto-category-count">(1)</span></div><div class="category" data-category="d2Vi">web <span class="quarto-category-count">(2)</span></div><div class="category" data-category="JUQ4JUFBJUQ4JUIyJUQ5JTgzJUQ5JThBJUQ5JTg3">تزكيه <span class="quarto-category-count">(1)</span></div></div></div>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -493,39 +495,14 @@ window.Quarto = {
 <li><p><strong>Programming Languages:</strong> Snippets and best practices for Python, Rust, and Go.</p></li>
 <li><p><strong>Developer Tools:</strong> Productivity hacks, CLI tricks, and configuration tips for Linux and macOS environments.</p></li>
 </ul>
-<p>You can browse the entries below, or use the categories filter to find specific topics. If you have any questions or want to discuss a specific learning, feel free to get in touch with me on my <a href="../index.html">homepage</a>.</p>
+<p>You can browse the entries below. If you have any questions or want to discuss a specific learning, feel free to get in touch with me on my <a href="../index.html">homepage</a>.</p>
 
 
 
 </section>
 </section>
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-      <option value="listing-author" data-direction="asc">
-        Author
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
+<div class="quarto-listing quarto-listing-container-default" id="listing-til-posts">
 <div class="list quarto-listing-default">
 <div class="quarto-post image-right" data-index="0" data-categories="YmxvZ2dpbmclMkN0aWwlMkNibG9nJTJGb3BpbmlvbiUyRnRlY2g=" data-listing-date-sort="1765749600000" data-listing-file-modified-sort="1768824512611" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="375">
 <div class="thumbnail"><a href="../til/tils/2025-12-15.html" class="no-external">
@@ -537,15 +514,6 @@ window.Quarto = {
 <h3 class="no-anchor listing-title">
 <a href="../til/tils/2025-12-15.html" class="no-external">AI Research Challenges: The GPU Barrier for Researchers</a>
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZyUyRm9waW5pb24lMkZ0ZWNo'); return false;">blog/opinion/tech</div>
-
-</div>
 <div class="delink listing-description"><a href="../til/tils/2025-12-15.html" class="no-external">
 <p>Exploring the challenges of AI research without…</p>
 </a></div>
@@ -571,19 +539,6 @@ kareem
 <h3 class="no-anchor listing-title">
 <a href="../til/tils/2025-12-14.html" class="no-external">Rust for DataScience 2026 - TIL</a>
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZyUyRnN0YXR1cyUyRmNvbXBsZXRl'); return false;">blog/status/complete</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZyUyRnN0YXR1cyUyRnB1Ymxpc2hlZA=='); return false;">blog/status/published</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cnVzdA=='); return false;">rust</div>
-
-</div>
 <div class="delink listing-description"><a href="../til/tils/2025-12-14.html" class="no-external">
 <p>My road map to learn rust as a machine learning…</p>
 </a></div>
@@ -609,19 +564,6 @@ kareem
 <h3 class="no-anchor listing-title">
 <a href="../til/tils/2025-12-13.html" class="no-external">Arabic NLP Fundamentals: Sparse Embeddings &amp; Dynamic Programming</a>
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZyUyRnN0YXR1cyUyRnB1Ymxpc2hlZA=='); return false;">blog/status/published</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZyUyRnN0YXR1cyUyRmNvbXBsZXRl'); return false;">blog/status/complete</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZyUyRmxlYXJuJTJGam91cm5leQ=='); return false;">blog/learn/journey</div>
-
-</div>
 <div class="delink listing-description"><a href="../til/tils/2025-12-13.html" class="no-external">
 <p>A deep dive into Arabic NLP fundamentals: from…</p>
 </a></div>
@@ -647,23 +589,6 @@ kareem
 <h3 class="no-anchor listing-title">
 <a href="../til/tils/2025-10-21.html" class="no-external">Evaluating Arabic Tokenizers: AraModernBert vs AraBERT v2 Efficiency</a>
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bmxw'); return false;">nlp</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YWk='); return false;">ai</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZyUyRmxlYXJuJTJGY29uY2VwdA=='); return false;">blog/learn/concept</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZyUyRmJlbmNobWFyaw=='); return false;">blog/benchmark</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZyUyRnN0YXR1cyUyRmNvbXBsZXRl'); return false;">blog/status/complete</div>
-
-</div>
 <div class="delink listing-description"><a href="../til/tils/2025-10-21.html" class="no-external">
 <p>A practical comparison of AraModernBert and…</p>
 </a></div>
@@ -689,13 +614,6 @@ kareem
 <h3 class="no-anchor listing-title">
 <a href="../til/tils/2025-06-06-til.html" class="no-external">AI Engineering Careers: Connecting with Minds in Machine Learning</a>
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
-
-</div>
 <div class="delink listing-description"><a href="../til/tils/2025-06-06-til.html" class="no-external">
 <p>Reflections on landing an AI engineering role…</p>
 </a></div>
@@ -721,13 +639,6 @@ kareem
 <h3 class="no-anchor listing-title">
 <a href="../til/tils/2025-05-28-til.html" class="no-external">PyLate &amp; ColBERT: Learning Vector Retrieval and Arabic Models</a>
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
-
-</div>
 <div class="delink listing-description"><a href="../til/tils/2025-05-28-til.html" class="no-external">
 <p>A comprehensive guide to PyLate and ColBERT for…</p>
 </a></div>
@@ -753,19 +664,6 @@ kareem
 <h3 class="no-anchor listing-title">
 <a href="../til/tils/2025-05-25-til.html" class="no-external">Meta’s RAPTOR RAG, DFloat11 Compression &amp; Pyrefly Guide</a>
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWFjaGluZS1sZWFybmluZw=='); return false;">machine-learning</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHl0aG9u'); return false;">python</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cmFn'); return false;">rag</div>
-
-</div>
 <div class="delink listing-description"><a href="../til/tils/2025-05-25-til.html" class="no-external">
 <p>A complete guide to Meta’s RAPTOR RAG technique…</p>
 </a></div>
@@ -791,23 +689,6 @@ kareem
 <h3 class="no-anchor listing-title">
 <a href="../til/tils/2025-05-23-til.html" class="no-external">Brave Leo AI: Using Ollama and local LLMs in your Browser</a>
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('d2Vi'); return false;">web</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YWk='); return false;">ai</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGxt'); return false;">llm</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bG9jYWxfbGxt'); return false;">local_llm</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('b2xsYW1h'); return false;">ollama</div>
-
-</div>
 <div class="delink listing-description"><a href="../til/tils/2025-05-23-til.html" class="no-external">
 <p>How to configure Brave Leo to use any local LLM…</p>
 </a></div>
@@ -833,15 +714,6 @@ kareem
 <h3 class="no-anchor listing-title">
 <a href="../til/tils/2025-05-21-til.html" class="no-external">البوصلة الحقيقية: تأملات في تزكية النفس وإخلاص النية في طلب العلم</a>
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUQ4JUFBJUQ4JUIyJUQ5JTgzJUQ5JThBJUQ5JTg3'); return false;">تزكيه</div>
-
-</div>
 <div class="delink listing-description"><a href="../til/tils/2025-05-21-til.html" class="no-external">
 <p>تأملات حول التوجه إلى الله وتزكية النفس،…</p>
 </a></div>
@@ -867,23 +739,6 @@ kareem
 <h3 class="no-anchor listing-title">
 <a href="../til/tils/2025-05-20-til.html" class="no-external">Domain Migration: Connecting Railway, Vercel, and Cloudflare</a>
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c2Vv'); return false;">seo</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZG9tYWlucw=='); return false;">domains</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dmVyY2Vs'); return false;">vercel</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cG9ya2J1bg=='); return false;">porkbun</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('d2Vi'); return false;">web</div>
-
-</div>
 <div class="delink listing-description"><a href="../til/tils/2025-05-20-til.html" class="no-external">
 <p>A guide to moving domains from Hostinger to…</p>
 </a></div>
@@ -909,17 +764,6 @@ Kareem
 <h3 class="no-anchor listing-title">
 <a href="../til/tils/2025-05-19-til.html" class="no-external">AI Research Blogging: Why Substack Matters for Researchers</a>
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c2Vv'); return false;">seo</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c3Vic3RhY2s='); return false;">substack</div>
-
-</div>
 <div class="delink listing-description"><a href="../til/tils/2025-05-19-til.html" class="no-external">
 <p>Insights on starting a Substack for AI…</p>
 </a></div>
@@ -945,15 +789,6 @@ kareem
 <h3 class="no-anchor listing-title">
 <a href="../til/tils/2025-05-18-til.html" class="no-external">Explore the Qdrant Blog core concepts | Part 1</a>
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cWRyYW50'); return false;">qdrant</div>
-
-</div>
 <div class="delink listing-description"><a href="../til/tils/2025-05-18-til.html" class="no-external">
 <p>This a 2 hours daily exploring and summarizing…</p>
 </a></div>
@@ -979,13 +814,6 @@ kareem
 <h3 class="no-anchor listing-title">
 <a href="../til/tils/2025-05-17-til.html" class="no-external">Learning in Public: Why I Started My TIL Journey</a>
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
-
-</div>
 <div class="delink listing-description"><a href="../til/tils/2025-05-17-til.html" class="no-external">
 <p>Starting a Today I Learned (TIL) series to…</p>
 </a></div>
@@ -1004,6 +832,283 @@ kareem
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div></main> <!-- /main -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const root =
+    document.querySelector("#quarto-document-content") ||
+    document.querySelector("main.content") ||
+    document.body;
+  if (!root) return;
+
+  const headings = Array.from(root.querySelectorAll("h2, h3, h4"));
+  const foldables = [];
+
+  headings.forEach((heading) => {
+    if (
+      heading.classList.contains("no-fold") ||
+      heading.closest(".toc") ||
+      heading.closest(".quarto-listing") ||
+      heading.closest(".quarto-post") ||
+      heading.classList.contains("listing-title")
+    ) {
+      return;
+    }
+
+    const level = Number.parseInt(heading.tagName.slice(1), 10);
+    const siblings = [];
+    let el = heading.nextElementSibling;
+
+    while (el) {
+      if (isBoundary(el, level)) break;
+      siblings.push(el);
+      el = el.nextElementSibling;
+    }
+
+    if (!siblings.length) return;
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "heading-fold";
+    button.setAttribute("aria-expanded", "true");
+    button.setAttribute("aria-label", "Toggle section");
+
+    const icon = document.createElement("span");
+    icon.className = "heading-fold-icon";
+    icon.setAttribute("aria-hidden", "true");
+    button.appendChild(icon);
+
+    heading.classList.add("foldable-heading");
+    heading.insertBefore(button, heading.firstChild);
+
+    const foldable = { heading, siblings, button };
+    foldables.push(foldable);
+
+    button.addEventListener("click", () => {
+      toggleFoldable(foldable, !heading.classList.contains("is-collapsed"));
+      updateControls();
+    });
+  });
+
+  if (!foldables.length) return;
+
+  const controls = document.createElement("div");
+  controls.className = "fold-controls";
+
+  const toggleAll = document.createElement("button");
+  toggleAll.type = "button";
+  toggleAll.className = "fold-controls-toggle";
+  toggleAll.setAttribute("aria-pressed", "false");
+  toggleAll.textContent = "Collapse all";
+
+  controls.appendChild(toggleAll);
+
+  const header = document.querySelector("#title-block-header");
+  if (header && header.parentElement) {
+    header.insertAdjacentElement("afterend", controls);
+  } else {
+    root.insertAdjacentElement("afterbegin", controls);
+  }
+
+  toggleAll.addEventListener("click", () => {
+    const shouldCollapse = !foldables.every((item) =>
+      item.heading.classList.contains("is-collapsed")
+    );
+    foldables.forEach((item) => toggleFoldable(item, shouldCollapse));
+    updateControls();
+  });
+
+  function toggleFoldable(item, collapse) {
+    item.heading.classList.toggle("is-collapsed", collapse);
+    item.button.setAttribute("aria-expanded", String(!collapse));
+    item.siblings.forEach((node) => node.classList.toggle("folded-section", collapse));
+  }
+
+  function updateControls() {
+    const allCollapsed = foldables.every((item) =>
+      item.heading.classList.contains("is-collapsed")
+    );
+    toggleAll.textContent = allCollapsed ? "Expand all" : "Collapse all";
+    toggleAll.setAttribute("aria-pressed", String(allCollapsed));
+  }
+
+  function isBoundary(element, level) {
+    if (element.matches("h1, h2, h3, h4, h5, h6")) {
+      return Number.parseInt(element.tagName.slice(1), 10) <= level;
+    }
+
+    if (element.matches("section")) {
+      const sectionHeading = element.querySelector(
+        ":scope > h1, :scope > h2, :scope > h3, :scope > h4, :scope > h5, :scope > h6"
+      );
+      if (sectionHeading) {
+        return Number.parseInt(sectionHeading.tagName.slice(1), 10) <= level;
+      }
+    }
+
+    return false;
+  }
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector("#title-block-header");
+  if (!header || header.querySelector(".post-hero-image")) return;
+
+  const metaImage =
+    document.querySelector('meta[property="og:image"]') ||
+    document.querySelector('meta[name="twitter:image"]');
+  const title = document.querySelector("h1.title");
+  const metaAlt =
+    document.querySelector('meta[property="og:image:alt"]') ||
+    document.querySelector('meta[name="twitter:image:alt"]');
+
+  if (!metaImage || !header.querySelector(".quarto-title-meta")) return;
+
+  const rawUrl = metaImage.getAttribute("content");
+  if (!rawUrl) return;
+
+  let imageUrl = rawUrl;
+  try {
+    const parsed = new URL(rawUrl, window.location.href);
+    if (parsed.origin !== window.location.origin) {
+      const currentDir = window.location.pathname.replace(/[^/]*$/, "");
+      if (parsed.pathname.startsWith(currentDir)) {
+        imageUrl = parsed.pathname.slice(currentDir.length);
+      } else {
+        imageUrl = parsed.pathname;
+      }
+    } else {
+      imageUrl = parsed.href;
+    }
+  } catch {
+    imageUrl = rawUrl;
+  }
+
+  const figure = document.createElement("figure");
+  figure.className = "post-hero-image";
+
+  const img = document.createElement("img");
+  img.src = imageUrl;
+  img.alt = (metaAlt && metaAlt.getAttribute("content")) || (title && title.textContent) || "Post image";
+  img.loading = "eager";
+  img.decoding = "async";
+  figure.appendChild(img);
+
+  const description = header.querySelector(".description");
+  if (description && description.parentElement) {
+    description.parentElement.insertAdjacentElement("afterend", figure);
+  } else {
+    header.insertAdjacentElement("beforeend", figure);
+  }
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+  if (connection && (connection.saveData || /2g/.test(connection.effectiveType || ""))) {
+    return;
+  }
+
+  const prefetched = new Set();
+
+  function shouldPrefetch(anchor) {
+    if (!anchor || !anchor.href) return false;
+    if (anchor.dataset.noPrefetch !== undefined) return false;
+    if (anchor.target && anchor.target !== "_self") return false;
+    if (anchor.hasAttribute("download")) return false;
+    if (anchor.rel && anchor.rel.includes("external")) return false;
+
+    const url = new URL(anchor.href, window.location.href);
+    if (url.origin !== window.location.origin) return false;
+    if (url.pathname === window.location.pathname && url.hash) return false;
+    return true;
+  }
+
+  function prefetch(href) {
+    if (prefetched.has(href)) return;
+    prefetched.add(href);
+    const link = document.createElement("link");
+    link.rel = "prefetch";
+    link.as = "document";
+    link.href = href;
+    document.head.appendChild(link);
+  }
+
+  function handleHover(event) {
+    const anchor = event.target.closest("a");
+    if (!shouldPrefetch(anchor)) return;
+    prefetch(anchor.href);
+  }
+
+  document.body.addEventListener("mouseover", handleHover, { passive: true });
+  document.body.addEventListener("touchstart", handleHover, { passive: true });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const selector =
+    ".quarto-listing .listing-actions-group, .quarto-listing .quarto-listing-filter, .quarto-listing .quarto-listing-sort, .quarto-listing .search, .quarto-listing .input-group, .quarto-listing .input-group-text";
+
+  const titleText =
+    document.querySelector("#title-block-header h1.title")?.textContent?.trim() || "";
+
+  const matchesTitle = (input) => {
+    const value = input.value?.trim() || "";
+    const placeholder = input.getAttribute("placeholder")?.trim() || "";
+    const ariaLabel = input.getAttribute("aria-label")?.trim() || "";
+    return (
+      (value && value === titleText) ||
+      (placeholder && placeholder === titleText) ||
+      (ariaLabel && ariaLabel === titleText)
+    );
+  };
+
+  const removeListingUi = (root = document) => {
+    root.querySelectorAll(selector).forEach((el) => el.remove());
+
+    const listingRoots = [];
+    if (root.matches && root.matches(".quarto-listing")) {
+      listingRoots.push(root);
+    }
+    if (root.querySelectorAll) {
+      listingRoots.push(...root.querySelectorAll(".quarto-listing"));
+    }
+
+    if (!titleText || listingRoots.length === 0) return;
+    listingRoots.forEach((listingRoot) => {
+      listingRoot
+        .querySelectorAll("input[type='text'], input[type='search']")
+        .forEach((input) => {
+          if (!input) return;
+          if (input.classList.contains("search") || matchesTitle(input)) {
+            const container =
+              input.closest(
+                ".listing-actions-group, .quarto-listing-filter, .quarto-listing-sort, .input-group"
+              ) || input;
+            container.remove();
+          }
+        });
+    });
+  };
+
+  removeListingUi();
+
+  const observer = new MutationObserver((mutations) => {
+    for (const mutation of mutations) {
+      for (const node of mutation.addedNodes) {
+        if (!(node instanceof Element)) continue;
+        if (node.matches && node.matches(selector)) {
+          node.remove();
+          continue;
+        }
+        removeListingUi(node);
+      }
+    }
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+});
+</script>
 <div class="share-buttons">
   <span class="share-label">Share:</span>
   <a href="#" class="share-btn share-twitter" onclick="shareTwitter()" title="Share on Twitter">
@@ -1041,7 +1146,7 @@ function copyLink() {
 
 <div class="newsletter-section">
     <p class="newsletter-title">Get updates</p>
-    <iframe title="Subscribe to my newsletter" src="https://kareemnns.substack.com/embed" width="100%" height="150" style="border: none; background: transparent" frameborder="0" scrolling="no"></iframe>
+    <iframe title="Subscribe to my newsletter" src="https://kareemnns.substack.com/embed" width="100%" height="150" loading="lazy" style="border: none; background: transparent" frameborder="0" scrolling="no"></iframe>
 </div>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {

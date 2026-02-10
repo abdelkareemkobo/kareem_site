@@ -84,6 +84,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 </script>
+<!-- Fonts are embedded locally via shimmering-fonts.css -->
 <meta property="og:title" content="AI Research Blogging: Why Substack Matters for Researchers – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
 <meta property="og:description" content="Insights on starting a Substack for AI researchers. Learn how blogging improves networking, writing skills, and knowledge management for AI engineering.">
 <meta property="og:image" content="https://kareemai.com/til/tils/images/old_ahead_of_ai.jpg">
@@ -286,6 +287,7 @@ window.addEventListener('scroll', () => {
 </script>
 
 
+<link rel="stylesheet" href="../../shimmering-fonts.css">
 <link rel="stylesheet" href="../../styles.css">
 
 
@@ -565,6 +567,283 @@ window.addEventListener('scroll', () => {
 </section>
 
 </main> <!-- /main -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const root =
+    document.querySelector("#quarto-document-content") ||
+    document.querySelector("main.content") ||
+    document.body;
+  if (!root) return;
+
+  const headings = Array.from(root.querySelectorAll("h2, h3, h4"));
+  const foldables = [];
+
+  headings.forEach((heading) => {
+    if (
+      heading.classList.contains("no-fold") ||
+      heading.closest(".toc") ||
+      heading.closest(".quarto-listing") ||
+      heading.closest(".quarto-post") ||
+      heading.classList.contains("listing-title")
+    ) {
+      return;
+    }
+
+    const level = Number.parseInt(heading.tagName.slice(1), 10);
+    const siblings = [];
+    let el = heading.nextElementSibling;
+
+    while (el) {
+      if (isBoundary(el, level)) break;
+      siblings.push(el);
+      el = el.nextElementSibling;
+    }
+
+    if (!siblings.length) return;
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "heading-fold";
+    button.setAttribute("aria-expanded", "true");
+    button.setAttribute("aria-label", "Toggle section");
+
+    const icon = document.createElement("span");
+    icon.className = "heading-fold-icon";
+    icon.setAttribute("aria-hidden", "true");
+    button.appendChild(icon);
+
+    heading.classList.add("foldable-heading");
+    heading.insertBefore(button, heading.firstChild);
+
+    const foldable = { heading, siblings, button };
+    foldables.push(foldable);
+
+    button.addEventListener("click", () => {
+      toggleFoldable(foldable, !heading.classList.contains("is-collapsed"));
+      updateControls();
+    });
+  });
+
+  if (!foldables.length) return;
+
+  const controls = document.createElement("div");
+  controls.className = "fold-controls";
+
+  const toggleAll = document.createElement("button");
+  toggleAll.type = "button";
+  toggleAll.className = "fold-controls-toggle";
+  toggleAll.setAttribute("aria-pressed", "false");
+  toggleAll.textContent = "Collapse all";
+
+  controls.appendChild(toggleAll);
+
+  const header = document.querySelector("#title-block-header");
+  if (header && header.parentElement) {
+    header.insertAdjacentElement("afterend", controls);
+  } else {
+    root.insertAdjacentElement("afterbegin", controls);
+  }
+
+  toggleAll.addEventListener("click", () => {
+    const shouldCollapse = !foldables.every((item) =>
+      item.heading.classList.contains("is-collapsed")
+    );
+    foldables.forEach((item) => toggleFoldable(item, shouldCollapse));
+    updateControls();
+  });
+
+  function toggleFoldable(item, collapse) {
+    item.heading.classList.toggle("is-collapsed", collapse);
+    item.button.setAttribute("aria-expanded", String(!collapse));
+    item.siblings.forEach((node) => node.classList.toggle("folded-section", collapse));
+  }
+
+  function updateControls() {
+    const allCollapsed = foldables.every((item) =>
+      item.heading.classList.contains("is-collapsed")
+    );
+    toggleAll.textContent = allCollapsed ? "Expand all" : "Collapse all";
+    toggleAll.setAttribute("aria-pressed", String(allCollapsed));
+  }
+
+  function isBoundary(element, level) {
+    if (element.matches("h1, h2, h3, h4, h5, h6")) {
+      return Number.parseInt(element.tagName.slice(1), 10) <= level;
+    }
+
+    if (element.matches("section")) {
+      const sectionHeading = element.querySelector(
+        ":scope > h1, :scope > h2, :scope > h3, :scope > h4, :scope > h5, :scope > h6"
+      );
+      if (sectionHeading) {
+        return Number.parseInt(sectionHeading.tagName.slice(1), 10) <= level;
+      }
+    }
+
+    return false;
+  }
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector("#title-block-header");
+  if (!header || header.querySelector(".post-hero-image")) return;
+
+  const metaImage =
+    document.querySelector('meta[property="og:image"]') ||
+    document.querySelector('meta[name="twitter:image"]');
+  const title = document.querySelector("h1.title");
+  const metaAlt =
+    document.querySelector('meta[property="og:image:alt"]') ||
+    document.querySelector('meta[name="twitter:image:alt"]');
+
+  if (!metaImage || !header.querySelector(".quarto-title-meta")) return;
+
+  const rawUrl = metaImage.getAttribute("content");
+  if (!rawUrl) return;
+
+  let imageUrl = rawUrl;
+  try {
+    const parsed = new URL(rawUrl, window.location.href);
+    if (parsed.origin !== window.location.origin) {
+      const currentDir = window.location.pathname.replace(/[^/]*$/, "");
+      if (parsed.pathname.startsWith(currentDir)) {
+        imageUrl = parsed.pathname.slice(currentDir.length);
+      } else {
+        imageUrl = parsed.pathname;
+      }
+    } else {
+      imageUrl = parsed.href;
+    }
+  } catch {
+    imageUrl = rawUrl;
+  }
+
+  const figure = document.createElement("figure");
+  figure.className = "post-hero-image";
+
+  const img = document.createElement("img");
+  img.src = imageUrl;
+  img.alt = (metaAlt && metaAlt.getAttribute("content")) || (title && title.textContent) || "Post image";
+  img.loading = "eager";
+  img.decoding = "async";
+  figure.appendChild(img);
+
+  const description = header.querySelector(".description");
+  if (description && description.parentElement) {
+    description.parentElement.insertAdjacentElement("afterend", figure);
+  } else {
+    header.insertAdjacentElement("beforeend", figure);
+  }
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+  if (connection && (connection.saveData || /2g/.test(connection.effectiveType || ""))) {
+    return;
+  }
+
+  const prefetched = new Set();
+
+  function shouldPrefetch(anchor) {
+    if (!anchor || !anchor.href) return false;
+    if (anchor.dataset.noPrefetch !== undefined) return false;
+    if (anchor.target && anchor.target !== "_self") return false;
+    if (anchor.hasAttribute("download")) return false;
+    if (anchor.rel && anchor.rel.includes("external")) return false;
+
+    const url = new URL(anchor.href, window.location.href);
+    if (url.origin !== window.location.origin) return false;
+    if (url.pathname === window.location.pathname && url.hash) return false;
+    return true;
+  }
+
+  function prefetch(href) {
+    if (prefetched.has(href)) return;
+    prefetched.add(href);
+    const link = document.createElement("link");
+    link.rel = "prefetch";
+    link.as = "document";
+    link.href = href;
+    document.head.appendChild(link);
+  }
+
+  function handleHover(event) {
+    const anchor = event.target.closest("a");
+    if (!shouldPrefetch(anchor)) return;
+    prefetch(anchor.href);
+  }
+
+  document.body.addEventListener("mouseover", handleHover, { passive: true });
+  document.body.addEventListener("touchstart", handleHover, { passive: true });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const selector =
+    ".quarto-listing .listing-actions-group, .quarto-listing .quarto-listing-filter, .quarto-listing .quarto-listing-sort, .quarto-listing .search, .quarto-listing .input-group, .quarto-listing .input-group-text";
+
+  const titleText =
+    document.querySelector("#title-block-header h1.title")?.textContent?.trim() || "";
+
+  const matchesTitle = (input) => {
+    const value = input.value?.trim() || "";
+    const placeholder = input.getAttribute("placeholder")?.trim() || "";
+    const ariaLabel = input.getAttribute("aria-label")?.trim() || "";
+    return (
+      (value && value === titleText) ||
+      (placeholder && placeholder === titleText) ||
+      (ariaLabel && ariaLabel === titleText)
+    );
+  };
+
+  const removeListingUi = (root = document) => {
+    root.querySelectorAll(selector).forEach((el) => el.remove());
+
+    const listingRoots = [];
+    if (root.matches && root.matches(".quarto-listing")) {
+      listingRoots.push(root);
+    }
+    if (root.querySelectorAll) {
+      listingRoots.push(...root.querySelectorAll(".quarto-listing"));
+    }
+
+    if (!titleText || listingRoots.length === 0) return;
+    listingRoots.forEach((listingRoot) => {
+      listingRoot
+        .querySelectorAll("input[type='text'], input[type='search']")
+        .forEach((input) => {
+          if (!input) return;
+          if (input.classList.contains("search") || matchesTitle(input)) {
+            const container =
+              input.closest(
+                ".listing-actions-group, .quarto-listing-filter, .quarto-listing-sort, .input-group"
+              ) || input;
+            container.remove();
+          }
+        });
+    });
+  };
+
+  removeListingUi();
+
+  const observer = new MutationObserver((mutations) => {
+    for (const mutation of mutations) {
+      for (const node of mutation.addedNodes) {
+        if (!(node instanceof Element)) continue;
+        if (node.matches && node.matches(selector)) {
+          node.remove();
+          continue;
+        }
+        removeListingUi(node);
+      }
+    }
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+});
+</script>
 <div class="share-buttons">
   <span class="share-label">Share:</span>
   <a href="#" class="share-btn share-twitter" onclick="shareTwitter()" title="Share on Twitter">
@@ -602,7 +881,7 @@ function copyLink() {
 
 <div class="newsletter-section">
     <p class="newsletter-title">Get updates</p>
-    <iframe title="Subscribe to my newsletter" src="https://kareemnns.substack.com/embed" width="100%" height="150" style="border: none; background: transparent" frameborder="0" scrolling="no"></iframe>
+    <iframe title="Subscribe to my newsletter" src="https://kareemnns.substack.com/embed" width="100%" height="150" loading="lazy" style="border: none; background: transparent" frameborder="0" scrolling="no"></iframe>
 </div>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
