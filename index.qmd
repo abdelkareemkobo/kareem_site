@@ -20,6 +20,8 @@ format:
     anchor-sections: true
 ---
 
+::: {.home-centered}
+
 ::: {.hero-section}
 ![](kareem.jpg){.hero-avatar}
 
@@ -122,3 +124,5 @@ GPU pricing & ML benchmarks.
 <blockquote class="arabic-quote small">
 فقالَ: إن تَصدُقِ اللَّهَ يَصدُقْكَ
 </blockquote>
+
+:::
