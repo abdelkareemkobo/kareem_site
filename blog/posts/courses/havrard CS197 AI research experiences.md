@@ -1,6 +1,6 @@
 ---
-title: havrard CS197 AI research experiences
-description: Embark on a transformative journey into the world of scientific research, particularly deep learning, with our comprehensive 21-lecture course. Delve into a wealth of experiences and crucial insights delivered through quick, digestible lectures, designed for enthusiasts and beginners alike. Complete the course in just one or two days, exploring topics ranging from AI language models to advanced techniques in research paper analysis.
+title: "Harvard CS197: AI Research Experiences & Deep Learning Guide"
+description: "A review of Harvard CS197: AI Research Experiences. 21 lectures covering deep learning research, paper analysis, and productivity for AI researchers."
 author: kareem
 date: 2023-07-18
 draft: false
@@ -152,3 +152,12 @@ Lecture 21 : Model Showdown
    **feedback** : ⭐⭐ ⭐(3/5)
 
 ---
+
+### Further Reading
+
+If you found this review of AI research methodologies useful, you might also be interested in:
+
+- [My Research Papers](../../../papers.qmd)
+- [Open Source Contributions](../../../oss/opensource.qmd)
+- [Today I Learned: AI Engineering Notes](../../../til/index.qmd)
+- [Arabic NLP Blog Posts](../../feed.qmd)

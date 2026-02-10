@@ -1,8 +1,8 @@
 ---
-title: "Research Papers"
+title: "Research Papers | Arabic NLP, OCR & Medical AI Publications"
 pagetitle: "Research Papers | Abdelkareem Elkhateb"
 image: "https://user-images.githubusercontent.com/1483922/208562675-3c69c87a-6688-44ea-8974-fae837f079df.png"
-description: "Academic research papers on Arabic OCR, NLP, medical AI, and machine learning. Publications in peer-reviewed journals and conferences."
+description: "Explore academic research papers by Abdelkareem Elkhateb on Arabic OCR, Explainable AI, medical image classification, and AI-powered infant cry analysis."
 sidebar: false
 comments: false
 open-graph:
@@ -10,12 +10,28 @@ open-graph:
   description: "Academic publications on Arabic NLP, OCR, and AI"
 ---
 
-These are a list of papers I've given:
+## Research Overview
 
-- [QARI-OCR](https://www.researchgate.net/publication/392372128_QARI-OCR_High-Fidelity_Arabic_Text_Recognition_through_Multimodal_Large_Language_Model_Adaptation?_sg%5B0%5D=Ddb9kwrghDtknsstHB3jlx1WzktpoFiMyRPptkC8aa65gsBxoJELnyU0eWOEMdJZc7iDzAWz_H6F-tcBgH5cEFeAxcJSKj_KPbQmRJ4U.0revArIdJ55OwTpYSzjXCjzvTRcpqs6fjm7JpaoCoUTXQ3fpCpx0DPLOF7UnmV8HWDrYSY9_QqO1XfHUzMtApQ&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6ImxvZ2luIiwicGFnZSI6InByb2ZpbGUiLCJwcmV2aW91c1BhZ2UiOiJwcm9maWxlIiwicG9zaXRpb24iOiJwYWdlQ29udGVudCJ9fQ): High-Fidelity Arabic Text Recognition through Multimodal Large Language Model Adaptation
+My research focuses on the intersection of Machine Learning, Natural Language Processing (NLP), and Healthcare. I am particularly interested in developing robust AI systems for under-represented languages like Arabic and applying advanced computer vision techniques to medical diagnostics. My goal is to bridge the gap between theoretical AI research and practical, impactful applications that solve real-world problems in diverse domains.
 
-- [XAI for Alzheimer's Dieases based on Particle Swarm Optimization](https://www.researchgate.net/publication/375102394_Explainable_Artificial_Intelligence_of_Multi-level_Stacking_Ensemble_for_Detection_of_Alzheimer's_Disease_based_on_Particle_Swarm_Optimization_and_the_Sub-scores_of_Cognitive_Biomarkers):  Explainable Artificial Intelligence of Multi-Level Stacking Ensemble for Detection of Alzheimer’s Disease Based on Particle Swarm Optimization and the Sub-Scores of Cognitive Biomarkers
+I believe that the future of AI lies in its ability to be both performant and interpretable. This philosophy guides my work, whether I am optimizing transformer models for Arabic text recognition or developing explainable models for healthcare diagnostics. By making AI systems more transparent and efficient, we can ensure they are adopted more widely and responsibly in critical sectors.
 
-- [Optimiznig Medical Image Classification](https://www.researchgate.net/publication/390783955_Optimizing_Medical_Image_Classification_Leveraging_Advanced_Segmentation_Models_for_Enhanced_Object_Detection_in_Real-World_Scenarios?_sg%5B0%5D=Ddb9kwrghDtknsstHB3jlx1WzktpoFiMyRPptkC8aa65gsBxoJELnyU0eWOEMdJZc7iDzAWz_H6F-tcBgH5cEFeAxcJSKj_KPbQmRJ4U.0revArIdJ55OwTpYSzjXCjzvTRcpqs6fjm7JpaoCoUTXQ3fpCpx0DPLOF7UnmV8HWDrYSY9_QqO1XfHUzMtApQ&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6ImxvZ2luIiwicGFnZSI6InByb2ZpbGUiLCJwcmV2aW91c1BhZ2UiOiJwcm9maWxlIiwicG9zaXRpb24iOiJwYWdlQ29udGVudCJ9fQ) : Leveraging Advanced Segmentation Models for Enhanced Object Detection in Real-World Scenarios
+Below is a curated list of my academic publications and research papers, reflecting my contributions to these fields:
 
-- [AI-Powered ICare ifnant cry Analysis and Speech Therapy](https://www.researchgate.net/publication/384044186_AI-Powered_ICare_Infant_Cry_Analysis_and_Speech_Therapy?_sg%5B0%5D=Ddb9kwrghDtknsstHB3jlx1WzktpoFiMyRPptkC8aa65gsBxoJELnyU0eWOEMdJZc7iDzAWz_H6F-tcBgH5cEFeAxcJSKj_KPbQmRJ4U.0revArIdJ55OwTpYSzjXCjzvTRcpqs6fjm7JpaoCoUTXQ3fpCpx0DPLOF7UnmV8HWDrYSY9_QqO1XfHUzMtApQ&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6ImxvZ2luIiwicGFnZSI6InByb2ZpbGUiLCJwcmV2aW91c1BhZ2UiOiJwcm9maWxlIiwicG9zaXRpb24iOiJwYWdlQ29udGVudCJ9fQ)
+### Arabic Language Technology
+
+- [QARI-OCR](https://www.researchgate.net/publication/392372128_QARI-OCR_High-Fidelity_Arabic_Text_Recognition_through_Multimodal_Large_Language_Model_Adaptation?_sg%5B0%5D=Ddb9kwrghDtknsstHB3jlx1WzktpoFiMyRPptkC8aa65gsBxoJELnyU0eWOEMdJZc7iDzAWz_H6F-tcBgH5cEFeAxcJSKj_KPbQmRJ4U.0revArIdJ55OwTpYSzjXCjzvTRcpqs6fjm7JpaoCoUTXQ3fpCpx0DPLOF7UnmV8HWDrYSY9_QqO1XfHUzMtApQ&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6ImxvZ2luIiwicGFnZSI6InByb2ZpbGUiLCJwcmV2aW91c1BhZ2UiOiJwcm9maWxlIiwicG9zaXRpb24iOiJwYWdlQ29udGVudCJ9fQ): **High-Fidelity Arabic Text Recognition through Multimodal Large Language Model Adaptation**. This work explores how multimodal LLMs can be adapted to achieve state-of-the-art results in Arabic Optical Character Recognition (OCR), addressing the unique challenges of the Arabic script.
+
+### Healthcare and Medical AI
+
+- [XAI for Alzheimer's Diseases based on Particle Swarm Optimization](https://www.researchgate.net/publication/375102394_Explainable_Artificial_Intelligence_of_Multi-level_Stacking_Ensemble_for_Detection_of_Alzheimer's_Disease_based_on_Particle_Swarm_Optimization_and_the_Sub-scores_of_Cognitive_Biomarkers): **Explainable Artificial Intelligence of Multi-Level Stacking Ensemble for Detection of Alzheimer’s Disease Based on Particle Swarm Optimization and the Sub-Scores of Cognitive Biomarkers**. This paper presents a novel approach to early detection of Alzheimer's using an ensemble model optimized via Particle Swarm Optimization (PSO), with a strong emphasis on model explainability.
+
+- [Optimizing Medical Image Classification](https://www.researchgate.net/publication/390783955_Optimizing_Medical_Image_Classification_Leveraging_Advanced_Segmentation_Models_for_Enhanced_Object_Detection_in_Real-World_Scenarios?_sg%5B0%5D=Ddb9kwrghDtknsstHB3jlx1WzktpoFiMyRPptkC8aa65gsBxoJELnyU0eWOEMdJZc7iDzAWz_H6F-tcBgH5cEFeAxcJSKj_KPbQmRJ4U.0revArIdJ55OwTpYSzjXCjzvTRcpqs6fjm7JpaoCoUTXQ3fpCpx0DPLOF7UnmV8HWDrYSY9_QqO1XfHUzMtApQ&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6ImxvZ2luIiwicGFnZSI6InByb2ZpbGUiLCJwcmV2aW91c1BhZ2UiOiJwcm9maWxlIiwicG9zaXRpb24iOiJwYWdlQ29udGVudCJ9fQ): **Leveraging Advanced Segmentation Models for Enhanced Object Detection in Real-World Scenarios**. This research focuses on improving the accuracy and reliability of medical image classification by integrating advanced segmentation techniques into the detection pipeline.
+
+- [AI-Powered ICare infant cry Analysis and Speech Therapy](https://www.researchgate.net/publication/384044186_AI-Powered_ICare_Infant_Cry_Analysis_and_Speech_Therapy?_sg%5B0%5D=Ddb9kwrghDtknsstHB3jlx1WzktpoFiMyRPptkC8aa65gsBxoJELnyU0eWOEMdJZc7iDzAWz_H6F-tcBgH5cEFeAxcJSKj_KPbQmRJ4U.0revArIdJ55OwTpYSzjXCjzvTRcpqs6fjm7JpaoCoUTXQ3fpCpx0DPLOF7UnmV8HWDrYSY9_QqO1XfHUzMtApQ&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6ImxvZ2luIiwicGFnZSI6InByb2ZpbGUiLCJwcmV2aW91c1BhZ2UiOiJwcm9maWxlIiwicG9zaXRpb24iOiJwYWdlQ29udGVudCJ9fQ): **AI-Powered ICare: Infant Cry Analysis and Speech Therapy**. This project investigates the use of artificial intelligence to analyze infant cries, helping parents and clinicians identify needs and potential speech therapy requirements at an early stage.
+
+## Collaboration and Further Reading
+
+I am always open to collaborating on research projects related to Arabic NLP, healthcare AI, or model optimization. If you are interested in discussing any of these papers or have ideas for future research, please feel free to reach out.
+
+You can also explore my practical implementations and technical deep dives on my [Blog](blog/feed.qmd) or check out my [Open Source Projects](oss/opensource.qmd) to see how I apply these research concepts in production environments. For a broader overview of my professional background, you can visit my [Homepage](index.qmd).

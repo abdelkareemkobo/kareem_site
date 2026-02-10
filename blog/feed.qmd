@@ -1,25 +1,43 @@
 ---
 pagetitle: "Blog | Abdelkareem Elkhateb - Arabic NLP & AI Research"
 title: "Blog"
-description: "Articles on Arabic NLP, efficient AI models, semantic search, and machine learning engineering. Deep dives into building production AI systems."
+description: "Articles on Arabic NLP, efficient AI models, semantic search, and machine learning engineering. Deep dives into building production AI systems by Abdelkareem Elkhateb."
+image: false
 sidebar: false
 toc: false
 comments: false
+search: true
 open-graph:
   title: "Blog | Abdelkareem Elkhateb"
   description: "Articles on Arabic NLP, efficient AI, and ML engineering"
+  image: "/kareem.jpg"
 listing:
-  type: grid
+  id: blog-posts
+  type: default
+  image-align: right
   sort: "date desc"
-  contents: 
+  contents:
    - "posts"
   sort-ui: false
-  filter-ui: true
-  categories: true
+  filter-ui: false
+  categories: false
   feed: true
+  page-size: 25
   fields: [image, date, title, description, categories, reading-time]
   date-format: "MMM D, YYYY"
-  max-description-length: 150
-  grid-columns: 2
-  grid-item-border: false
+  max-description-length: 80
 ---
+
+Welcome to my blog! Here, I share deep dives, tutorials, and insights into the world of **Arabic Natural Language Processing (NLP)**, **Machine Learning Engineering**, and building efficient AI systems.
+
+My writing focuses on practical applications, from optimizing transformer models for production to exploring the latest advancements in semantic search and vector databases. Whether you are an AI researcher, a software engineer, or a tech enthusiast, you'll find articles aimed at making complex AI concepts accessible and actionable.
+
+## The Philosophy Behind My Writing
+
+In the rapidly evolving field of Artificial Intelligence, the gap between academic research and production-grade engineering can often feel vast. My goal with this blog is to bridge that gap by sharing hands-on experiences, architectural patterns, and performance optimizations.
+
+I believe that for AI to be truly useful, it must be accessible, efficient, and well-understood. This is especially true for the Arabic language, which presents unique linguistic and technical challenges. Through these posts, I aim to provide a resource for fellow engineers and researchers who are passionate about building the next generation of intelligent systems.
+
+By documenting my journey, I hope to contribute to a more robust AI ecosystem. If you are interested in my academic background, you can explore my [Research Papers](../papers.qmd). For a look at the tools and libraries I build, visit my [Open Source Projects](../oss/opensource.qmd). I also maintain a [Today I Learned](../til/index.qmd) section for smaller, daily technical discoveries.
+
+Explore the latest posts below, or filter by category to find specific topics of interest.

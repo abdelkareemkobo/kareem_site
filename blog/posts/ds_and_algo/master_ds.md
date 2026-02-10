@@ -1,6 +1,6 @@
 ---
-title: "Learning Data Structures and Algorithms as Machine Learning Engineer"
-description: Trying to learning Data structure and algorithms after gradute from college to improve my problem solving ans software engineer skills and get out from the notebook hell.
+title: "Mastering Data Structures for Machine Learning Engineering"
+description: "Mastering Data Structures and Algorithms as a Machine Learning Engineer to improve problem-solving skills and move beyond Jupyter notebooks."
 author: kareem
 date: 2024-10-4
 draft: false
@@ -37,3 +37,14 @@ tags:
 ### Topics
 
 1. [Arrays](https://kareemai.com/blog/posts/ds_and_algo/Static_array.html)
+
+---
+
+### Further Reading
+
+If you found this journey into software engineering fundamentals useful, you might also like:
+
+- [My Blog Index](../../feed.qmd)
+- [Research Papers](../../../papers.qmd)
+- [Open Source Projects](../../../oss/opensource.qmd)
+- [Today I Learned](../../../til/index.qmd)

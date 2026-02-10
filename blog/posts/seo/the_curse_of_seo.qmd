@@ -1,6 +1,6 @@
 ---
-title: The curse of SEO
-description: Discover the hidden challenges of SEO, effective tools, and strategies to track changes and recover from setbacks, while navigating the complexities of search engine optimization.
+title: "The Curse of SEO: Challenges and Recovery Strategies"
+description: "Discover the hidden challenges of SEO, effective tools, and strategies to recover from setbacks while navigating search engine optimization."
 date: 2024-07-31
 categories:
   - blogging
@@ -125,4 +125,13 @@ author: kareem
 	- [شركة تنسيق حدائق بالمدينة المنورة](https://www.smaagarden.com/)
 	- [شركة تنظيف منازل في العين](https://www.alainclean.com/)
 
-	- 
+---
+
+### Internal Resources
+
+If you're interested in more about AI engineering, research, and technical deep dives, explore these sections:
+
+- [My Research Papers](../../../papers.qmd)
+- [Open Source Contributions](../../../oss/opensource.qmd)
+- [Today I Learned: AI Notes](../../../til/index.qmd)
+- [Arabic NLP Blog Posts](../../feed.qmd)

@@ -3,36 +3,64 @@ id: TIL
 title: "TILs - Today I Learned"
 pagetitle: "TILs | Abdelkareem Elkhateb - Arabic NLP & AI"
 description: "Quick learnings and notes on Arabic NLP, machine learning, Python, Rust, and AI engineering. Daily discoveries from building real-world AI systems."
-image: "https://user-images.githubusercontent.com/1483922/208359430-f55d7503-3a98-4875-a35c-16314c9439d0.png"
+image: false
 search: true
 toc: true
 comments: false
 open-graph:
   title: "TILs - Today I Learned | Abdelkareem Elkhateb"
   description: "Quick learnings on Arabic NLP, ML, and AI engineering"
+  image: "https://user-images.githubusercontent.com/1483922/208359430-f55d7503-3a98-4875-a35c-16314c9439d0.png"
 listing:
-  filter-ui: true
-  sort-ui: true
-  categories: true
+  id: til-posts
+  filter-ui: false
+  sort-ui: false
+  categories: false
   feed:
-    type: full 
-    description: "Latest TILs by Kareem" 
+    type: full
+    description: "Latest TILs by Kareem"
   sort: "date desc"
   max-description-length: 50
   type: default
-
-  contents: 
-   - "/*.qmd"
-   - "/*.md"
-   - "/*/*.qmd"
-   - "/*/*.md"
-   - "/*/index.qmd"
-format: 
+  contents:
+   - "tils/*.qmd"
+   - "tils/*.md"
+format:
   html:
     anchor-sections: true
 
 ---
-This the place where is share what i learn nearly everyday..for more crafted articles see the [blogs](../blog/feed.qmd)
 
-You can also get in touch with me on my [homepage](../index.qmd).
+## Daily Insights and Micro-Learnings
 
+Welcome to my **TIL (Today I Learned)** collection. This is a digital garden where I document small, daily discoveries, snippets of code, and interesting facts I encounter while working on **Arabic NLP**, **Machine Learning**, **Python**, and **AI Engineering**.
+
+In the fast-paced world of technology, especially within the AI and NLP domains, we often encounter small but critical pieces of information that solve specific problems. These might be a particular Python library's edge case, a Rust performance tip, or a specific nuance in processing Arabic script. This repository is my way of capturing those "lightbulb moments" before they fade.
+
+Unlike my long-form [blog posts](../blog/feed.qmd), these notes are brief, unpolished, and focused on single, specific topics. They serve as a quick reference for myself and hopefully a helpful resource for others facing similar technical challenges. If you're looking for my more structured work, you can check out my [Research Papers](../papers.qmd) or my [Open Source Projects](../oss/opensource.qmd).
+
+### Why I Maintain a TIL?
+
+Documenting small wins and learnings daily helps in:
+
+- **Knowledge Retention:** Writing it down reinforces the learning and forces a clearer understanding of the solution.
+
+- **Quick Reference:** Finding that specific regex, shell command, or obscure PyTorch function I used last month becomes effortless.
+
+- **Sharing Value:** Even a small note can save someone else hours of debugging. I believe in the power of shared knowledge to elevate the entire engineering community.
+
+- **Tracking Progress:** It provides a chronological record of my technical evolution and the various challenges I've tackled over time.
+
+### What You'll Find Here
+
+The TILs cover a wide range of topics that reflect my daily work and interests:
+
+- **Arabic NLP:** Tips on handling RTL text, tokenization strategies, and model fine-tuning.
+
+- **AI Engineering:** Insights into MLOps, model deployment, and infrastructure optimization.
+
+- **Programming Languages:** Snippets and best practices for Python, Rust, and Go.
+
+- **Developer Tools:** Productivity hacks, CLI tricks, and configuration tips for Linux and macOS environments.
+
+You can browse the entries below. If you have any questions or want to discuss a specific learning, feel free to get in touch with me on my [homepage](../index.qmd).

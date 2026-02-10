@@ -1,4 +1,6 @@
 sidebar: false
+lang: en
+description: "Insights and articles on Arabic NLP, Machine Learning, and AI Research by Abdelkareem Elkhateb."
 
 # Show reading time on all posts
 reading-time: true
@@ -12,7 +14,12 @@ page-navigation: true
 # Include share buttons, newsletter, and progress bar
 format:
   html:
-    include-in-header: ../../_includes/progress-bar.html
-    include-after-body: 
+    lang: en
+    description: "Insights and articles on Arabic NLP, Machine Learning, and AI Research by Abdelkareem Elkhateb."
+    include-in-header:
+      - ../../_includes/preconnect.html
+      - ../../_includes/progress-bar.html
+    include-after-body:
       - ../../_includes/share-buttons.html
       - ../../_includes/newsletter.html
+      - ../../_includes/listing-cleanup.html

@@ -23,11 +23,30 @@ format:
 ::: {.hero-section}
 ![](kareem.jpg){.hero-avatar}
 
+::: {.hero-intro}
 # Abdelkareem Elkhateb
 
-Arabic NLP researcher. I make AI models small, fast, and actually useful.
+**Arabic NLP Researcher.**
 
-[GitHub](https://github.com/abdelkareemkobo){.hero-link} · [Research](https://scholar.google.com/citations?user=lF1wxvcAAAAJ){.hero-link} · [Hire me](https://www.upwork.com/freelancers/~016a9fea792423bb9a){.hero-link .primary}
+I make AI models small, fast, and actually useful.
+:::
+
+
+<div class="hero-socials">
+<a href="https://github.com/abdelkareemkobo" class="hero-link">GitHub</a>
+<a href="https://scholar.google.com/citations?user=lF1wxvcAAAAJ" class="hero-link">Research</a>
+<a href="https://www.upwork.com/freelancers/~017a9fea792423bb9a" class="hero-link primary">Hire me</a>
+<a href="https://qabilah.com/profile/kareemai/posts" class="social-btn qabilah" target="_blank">
+<img src="https://qabilah.com/assets/orangeLogo_96x96.png" alt="Qabilah"> Qabilah
+</a>
+<a href="https://www.linkedin.com/in/abdelkareem-elkhateb-202b6b377/" class="social-btn linkedin" target="_blank">
+<img src="icon-linkedin.png" alt="LinkedIn"> LinkedIn
+</a>
+
+<a href="https://x.com/AbdelkareemElk1" class="social-btn x" target="_blank">
+<img src="icons-twitter.png" alt="X"> X
+</a>
+</div>
 :::
 
 <blockquote class="arabic-quote">
@@ -38,7 +57,29 @@ Arabic NLP researcher. I make AI models small, fast, and actually useful.
 
 ---
 
+## Who am I
+
+::: {.work-section}
+
+I'm an NLP Engineer at **[Xbites](https://xbites.io)**, building the AI backend for Darin.
+
+I also research with **[Hamza Salem Lab](https://www.enghamzasalem.com/)** on Arabic embeddings and contributer to **[NAMMA](https://www.namaa.space/)** for open-source Arabic AI.
+
+My thesis focuses on making transformers run efficiently on CPUs.
+
+<div class="stats-row">
+<div class="stat"><span class="num">7</span><span class="label">papers</span></div>
+<div class="stat"><span class="num">54</span><span class="label">citations</span></div>
+<div class="stat"><span class="num">962</span><span class="label">papers read</span></div>
+</div>
+
+:::
+
+---
+
 ::: {.projects-grid}
+
+## Projects
 
 ::: {.project-card .featured}
 ### BertHash-Femto
@@ -47,7 +88,7 @@ Arabic NLP researcher. I make AI models small, fast, and actually useful.
 :::
 
 ::: {.project-card}
-### Zarra & Bojji  
+### Zarra & Bojji
 Tiny Arabic models for phones.
 [→ Read more](http://kareemai.com/blog/posts/minishlab/blog_zaraah.html)
 :::
@@ -66,21 +107,7 @@ GPU pricing & ML benchmarks.
 
 :::
 
----
 
-::: {.work-section}
-
-I'm an NLP Engineer at **Xbites**, building the AI backend for Darin. I also research with **Hamza Salem Lab** on Arabic embeddings and contribute to **NAMMA** for open-source Arabic AI.
-
-My thesis focuses on making transformers run efficiently on CPUs.
-
-<div class="stats-row">
-<div class="stat"><span class="num">7</span><span class="label">papers</span></div>
-<div class="stat"><span class="num">54</span><span class="label">citations</span></div>
-<div class="stat"><span class="num">962</span><span class="label">papers read</span></div>
-</div>
-
-:::
 
 ---
 
@@ -89,7 +116,7 @@ My thesis focuses on making transformers run efficiently on CPUs.
 :::
 
 ::: {.newsletter-box}
-<iframe src="https://kareemnns.substack.com/embed" width="100%" height="150" style="border:none; background:transparent;" frameborder="0" scrolling="no"></iframe>
+<iframe title="Subscribe to my newsletter" src="https://kareemnns.substack.com/embed" width="100%" height="150" style="border:none; background:transparent;" frameborder="0" scrolling="no" loading="lazy"></iframe>
 :::
 
 <blockquote class="arabic-quote small">

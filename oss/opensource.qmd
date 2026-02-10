@@ -1,16 +1,16 @@
 ---
-title: '<i class="bi bi-github"></i> Open Source'
-description: A collection of open source projects I've been involved with.
+title: "Open Source Projects & Contributions | Abdelkareem Elkhateb"
+description: "Explore open source projects and contributions by Abdelkareem Elkhateb, featuring work on fastai, Kubeflow, Metaflow, Jupyter, and Great Expectations."
 image: "https://user-images.githubusercontent.com/1483922/208564573-d28e0ef0-984f-43ae-8ede-92b573518c54.png"
 sidebar: false
-listing: 
+listing:
   - id: fastai-listings
     contents: data/fastai.yml
     type: table
     sort-ui: false
     filter-ui: false
     categories: false
-    fields: 
+    fields:
     - project
     - description
     - role
@@ -28,7 +28,7 @@ listing:
     sort-ui: false
     filter-ui: false
     categories: false
-    fields: 
+    fields:
     - project
     - description
     - role
@@ -46,7 +46,7 @@ listing:
     sort-ui: false
     filter-ui: false
     categories: false
-    fields: 
+    fields:
     - project
     - description
     - role
@@ -60,44 +60,53 @@ listing:
       other: "Other References"
 ---
 
-My open source work has been focused on developer tools and infrastructure. I've contributed to projects such as [fastai](#fastai), [Metaflow](#metaflow), [Kubeflow](#kubeflow), [Jupyter](#jupyter), and [Great Expectations](#great-expectations), as well as [many others](#other).  I list some of these below:
+## Open Source Philosophy
 
-## ![](img_oss/fastai_small.png){width="10%"} fastai 
+I am a strong believer in the power of open source software to democratize technology and accelerate innovation. My open source work has been primarily focused on developer tools, machine learning infrastructure, and streamlining production workflows. I've been fortunate to contribute to widely-used projects such as [fastai](#fastai), [Metaflow](#metaflow), [Kubeflow](#kubeflow), [Jupyter](#jupyter), and [Great Expectations](#great-expectations).
 
-I maintain and contribute to a variety of [fastai](https://github.com/fastai) projects. Below are the projects I've been very involved in: 
+Below is a detailed overview of my contributions and the projects I maintain.
+
+## ![fastai logo](img_oss/fastai_small.png){width="10%"} fastai
+
+The fastai library is one of the most popular high-level frameworks for deep learning. I maintain and contribute to a variety of [fastai](https://github.com/fastai) projects, focusing on improving the developer experience and expanding the library's capabilities. Below are the specific projects I've been deeply involved in:
 
 ::: {#fastai-listings}
 :::
 
 
-## ![](img_oss/metaflow.webp){width="7%"} Metaflow
+## ![Metaflow logo](img_oss/metaflow.webp){width="7%"} Metaflow
 
-I created [notebook cards](https://github.com/outerbounds/metaflow-card-notebook): A tool that allows you to use notebooks to generate reports, visualizations and diagnostics in Metaflow production workflows. [Blog](https://outerbounds.com/blog/notebooks-in-production-with-metaflow/)
+Metaflow is a framework for real-life data science. I created [notebook cards](https://github.com/outerbounds/metaflow-card-notebook): A tool that allows you to use notebooks to generate reports, visualizations, and diagnostics directly within Metaflow production workflows. This helps bridge the gap between experimental notebooks and production-grade monitoring. You can read more about it on the [official blog](https://outerbounds.com/blog/notebooks-in-production-with-metaflow/).
 
-## ![](img_oss/kubeflow.jpeg){width="10%"} Kubeflow
+## ![Kubeflow logo](img_oss/kubeflow.jpeg){width="10%"} Kubeflow
 
-I've worked on several projects related to Kubeflow, mainly around examples and documentation:
+Kubeflow is the machine learning toolkit for Kubernetes. I've worked on several projects related to Kubeflow, mainly focusing on building practical examples and enhancing documentation to help developers deploy ML models more effectively:
 
 ::: {#kubeflow-listings}
 :::
 
 
-## ![](img_oss/jupyter.png){width="7%"} Jupyter
+## ![Jupyter logo](img_oss/jupyter.png){width="7%"} Jupyter
 
-I created the [Repo2Docker GitHub Action](https://github.com/jupyterhub/repo2docker-action), which allows you to trigger [repo2docker](https://github.com/jupyter/repo2docker) to build a Jupyter enabled Docker images from your GitHub repository.  This Action allows you to pre-cache images for your own [BinderHub cluster](https://binderhub.readthedocs.io/en/latest/zero-to-binderhub/setup-binderhub.html) or for [mybinder.org](https://mybinder.org/).
+I created the [Repo2Docker GitHub Action](https://github.com/jupyterhub/repo2docker-action), which allows you to trigger [repo2docker](https://github.com/jupyter/repo2docker) to build Jupyter-enabled Docker images directly from your GitHub repository. This Action is essential for teams looking to pre-cache images for their own [BinderHub cluster](https://binderhub.readthedocs.io/en/latest/zero-to-binderhub/setup-binderhub.html) or for sharing reproducible environments on [mybinder.org](https://mybinder.org/).
 
-This project was accepted into the official JupyterHub GitHub org.
+This project was recognized for its utility and accepted into the official JupyterHub GitHub organization.
 
-## ![](img_oss/ge-logo.png){width="7%"} Great Expectations
+## ![Great Expectations logo](img_oss/ge-logo.png){width="7%"} Great Expectations
 
-I developed the [Great Expectations GitHub Action](https://github.com/great-expectations/great_expectations_action) that allows you to use Great Expectations in CI/CD Workflows. [Blog](https://github.blog/2020-10-01-keeping-your-data-pipelines-healthy-with-the-great-expectations-github-action/).
+Data quality is paramount in machine learning. I developed the [Great Expectations GitHub Action](https://github.com/great-expectations/great_expectations_action) to enable automated data validation within CI/CD workflows. This ensures that data pipelines remain healthy and that schema changes or data drift are caught early. More details can be found in this [GitHub Blog post](https://github.blog/2020-10-01-keeping-your-data-pipelines-healthy-with-the-great-expectations-github-action/).
 
 
-## <i class="bi bi-github"></i> Other
+## <i class="bi bi-github"></i> Other Projects
 
-I worked as a staff machine learning engineer at GitHub from 2017 - 2022.  I led or created the following open source projects that explored the intersection of machine learning, data and the developer workflow:
+During my time as a staff machine learning engineer at GitHub (2017 - 2022), I led and created several open source projects exploring the intersection of machine learning, big data, and the developer workflow. These projects aimed to bring intelligence to the tools developers use every day:
 
 
 ::: {#other-listings}
 :::
 
+## Connect and Explore
+
+My open source work is deeply connected to my research and practical engineering. You can explore the theoretical side of these technologies in my [Research Papers](../papers.qmd) or read about their implementation in production on my [Blog](../blog/feed.qmd).
+
+For smaller daily updates and technical snippets, check out my [Today I Learned](../til/index.qmd) section. You can also return to my [Homepage](../index.qmd) for a general overview of my work.

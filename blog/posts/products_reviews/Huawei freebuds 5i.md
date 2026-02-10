@@ -1,6 +1,6 @@
 ---
-title: "Huawei Freebuds 5i review: is it the best budget earbuds for Huawei phone owner!"
-description: Review of the Huawei Freebuds 5i after 2 months of use. Huawei Freebuds is latest pair of noise-cancelling earbuds and share a lot in common with their stablemates the FreeBuds pro 2
+title: "Huawei FreeBuds 5i Review: Best Budget ANC Earbuds?"
+description: "A detailed review of the Huawei FreeBuds 5i after 2 months of use. Explore its noise-cancelling performance, sound quality, and compatibility with Linux and Android."
 author: kareem
 date: 2023-12-06
 draft: false
@@ -135,3 +135,16 @@ I've connected the Freebuds to my Linux laptop using the '[bluetoothctl](https:/
 - https://smarttech101.com/bluetoothctl-management-of-bluetooth-devices-in-linux/
 - https://askubuntu.com/questions/1225896/huawei-freebuds-3-pairing-with-ubuntu-18-04
 - [كم كالوري](https://kamcalorie.com)
+
+---
+
+### Internal Resources
+
+If you found this hardware review useful, you might also be interested in my other posts and projects:
+
+- [Huawei Freebuds 7i Review](Huawei%20freebuds%207i.md)
+- [Huawei MatePad 11 Review](Huawei_mate_pad_11.md)
+- [One Plus Pad 3 Review](one_plus_pad_3.md)
+- [My Research Papers](../../../papers.qmd)
+- [Open Source Contributions](../../../oss/opensource.qmd)
+- [Today I Learned: AI Engineering Notes](../../../til/index.qmd)

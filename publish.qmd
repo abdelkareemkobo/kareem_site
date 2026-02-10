@@ -1,14 +1,33 @@
 ---
-title: "Books"
+title: "Books & Publications | Arabic NLP and AI Engineering"
 pagetitle: "Books | Abdelkareem Elkhateb"
 image: "https://user-images.githubusercontent.com/1483922/208562675-3c69c87a-6688-44ea-8974-fae837f079df.png"
-description: "Books and long-form writing on Arabic NLP, machine learning, and AI engineering."
+description: "Explore books and technical guides by Abdelkareem Elkhateb. Covering Arabic NLP, machine learning infrastructure, and production AI systems."
 sidebar: false
 comments: false
 open-graph:
-  title: "Books | Abdelkareem Elkhateb"
-  description: "Books on Arabic NLP and AI engineering"
+  title: "Books & Publications | Abdelkareem Elkhateb"
+  description: "In-depth books and guides on Arabic NLP and AI engineering"
 ---
 
-## still under review
-Still cooking ...
+## Long-form Writing Projects
+
+This section is dedicated to my upcoming books and long-form technical guides. I am currently working on several projects aimed at providing deep, structured knowledge for engineers and researchers in the AI space. My goal is to consolidate years of experience in **Machine Learning Engineering** and **Arabic NLP** into accessible, high-quality resources.
+
+### Why Long-form Content?
+
+While my [blog](blog/feed.qmd) and [Today I Learned](til/index.qmd) notes are great for quick insights, some topics require a more comprehensive and structured approach. Books allow for a deep dive into architectural patterns, theoretical foundations, and end-to-end implementation details that are often too complex for a single article.
+
+### Current Projects in Progress
+
+- **The Arabic NLP Handbook:** This book aims to be a comprehensive guide to building modern NLP systems specifically tailored for the Arabic language. It covers unique linguistic challenges, from classical morphological analysis to fine-tuning state-of-the-art Large Language Models (LLMs) on Arabic datasets.
+- **Production AI Infrastructure:** Drawing from my experience as a Staff ML Engineer, this project focuses on the practicalities of building and scaling machine learning systems in production. It covers MLOps, CI/CD for data pipelines, and robust monitoring strategies.
+- **Efficient Transformers:** A deep dive into making AI models faster and smaller. We explore techniques like model distillation, quantization, and architectural pruning to enable the deployment of sophisticated AI on edge devices and in cost-constrained environments.
+
+## Status: Still Under Review
+
+The content for these publications is "still cooking" and undergoing thorough review to ensure technical accuracy and clarity. I believe in releasing well-researched and practically applicable material that can serve as a long-term reference for the community.
+
+If you are interested in my academic work in the meantime, please visit my [Research Papers](papers.qmd). I will announce official releases for these books here and on my [main blog](blog/feed.qmd).
+
+You can also find more about my professional background on my [homepage](index.qmd).

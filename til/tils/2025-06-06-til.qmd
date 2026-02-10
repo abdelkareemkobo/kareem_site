@@ -1,6 +1,6 @@
 ---
-title: Connecting with ideas in ML
-description: some random thoughts about nonsense thoughts. 
+title: "AI Engineering Careers: Connecting with Minds in Machine Learning"
+description: "Reflections on landing an AI engineering role, the importance of professional connections, and following the right experts in the machine learning field."
 author: kareem
 date: 2025-06-06
 draft: false
@@ -16,7 +16,7 @@ Here is the corrected version with grammar errors fixed and improved clarity, wh
 - I’m not interested in all this talk about being replaced by AI. If AI can replace an engineer’s mind, it will replace everything in the world.
 - When this happens, it won’t really matter!
 - I got my first job one year after graduation with a good salary for my experience and the local currency.
-- الحمد والشكر والفضل لله وحده. 
+- الحمد والشكر والفضل لله وحده.
 - Actually, I got two jobs, not one!
 - I landed a full-time AI Engineer position at a startup that is already operational with its own customers, plus a part-time role with flexible meetings. I’m the wildcard—maybe even the AI—in this startup, which is set to receive funding in the coming weeks.
 - This might give the impression that I’m a great engineer, but I’m not!
@@ -40,3 +40,13 @@ Here is the corrected version with grammar errors fixed and improved clarity, wh
 - There’s more to say, but this world has immense potential for smart people—not in terms of marketing or being a shallow influencer.
 - I want to say that I have many ideas I want to create and share with other minds. I believe I’ll be able to make a positive impact in the areas I’m passionate about and improve Islamic tech and Arabic NLP.
 
+---
+
+### Internal Resources
+
+If you found these career reflections and thoughts on the AI field useful, you might also be interested in:
+
+- [My Research Papers](../../papers.qmd)
+- [Open Source Contributions](../../oss/opensource.qmd)
+- [Main Blog Index](../../blog/feed.qmd)
+- [Today I Learned Index](../index.qmd)

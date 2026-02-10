@@ -1,0 +1,42 @@
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+  if (connection && (connection.saveData || /2g/.test(connection.effectiveType || ""))) {
+    return;
+  }
+
+  const prefetched = new Set();
+
+  function shouldPrefetch(anchor) {
+    if (!anchor || !anchor.href) return false;
+    if (anchor.dataset.noPrefetch !== undefined) return false;
+    if (anchor.target && anchor.target !== "_self") return false;
+    if (anchor.hasAttribute("download")) return false;
+    if (anchor.rel && anchor.rel.includes("external")) return false;
+
+    const url = new URL(anchor.href, window.location.href);
+    if (url.origin !== window.location.origin) return false;
+    if (url.pathname === window.location.pathname && url.hash) return false;
+    return true;
+  }
+
+  function prefetch(href) {
+    if (prefetched.has(href)) return;
+    prefetched.add(href);
+    const link = document.createElement("link");
+    link.rel = "prefetch";
+    link.as = "document";
+    link.href = href;
+    document.head.appendChild(link);
+  }
+
+  function handleHover(event) {
+    const anchor = event.target.closest("a");
+    if (!shouldPrefetch(anchor)) return;
+    prefetch(anchor.href);
+  }
+
+  document.body.addEventListener("mouseover", handleHover, { passive: true });
+  document.body.addEventListener("touchstart", handleHover, { passive: true });
+});
+</script>

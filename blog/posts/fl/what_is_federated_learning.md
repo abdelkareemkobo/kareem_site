@@ -116,3 +116,14 @@ We’ll explore different types of FL attacks and create defenses in a future bl
 In upcoming posts, I will explain the components of Federated Learning in greater detail, including math, code, and more beekeeping analogies.
 
 1. [Flower Framework](https://flower.ai/docs/framework/tutorial-series-what-is-federated-learning.html#Challenges-of-classical-machine-learning)
+
+---
+
+### Internal Resources
+
+If you're interested in more about AI engineering and my research, explore these sections:
+
+- [My Research Papers](../../../papers.qmd)
+- [Open Source Contributions](../../../oss/opensource.qmd)
+- [Today I Learned: AI Notes](../../../til/index.qmd)
+- [Arabic NLP Blog Posts](../../feed.qmd)

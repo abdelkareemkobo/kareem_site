@@ -1,6 +1,6 @@
 ---
-title: Math Skills For AI
-description: Improving my math skills from pure math , concepts to applied AI and try to keep this skills share as much as possible
+title: "Mathematics for AI: A Personal Journey and Essential Concepts"
+description: "Explore my roadmap for mastering the mathematical foundations of AI, covering linear algebra, calculus, and probability for machine learning research."
 date: 2025-01-27
 categories:
   [blogging, ai, math, linear_algebra, calculus, statistics, probability]
@@ -193,6 +193,17 @@ This is my intended approach, and I will start with:
 Then, I will expand on these approaches in blog posts and other materials on topics like federated learning and other areas I'm interested in. I'll try my best to do all of this effectively.
 
 ## NOT Just the Math
+
+---
+
+### Internal Resources
+
+If you are interested in how these mathematical foundations apply to real-world AI systems, check out these sections:
+
+- [My Research Papers](../../../papers.qmd)
+- [Open Source Projects](../../../oss/opensource.qmd)
+- [Today I Learned: Daily AI Engineering Notes](../../../til/index.qmd)
+- [Arabic NLP Blog Posts](../../feed.qmd)
 
 This approach isn't limited to math. It extends to every skill, including CSS, Deep Learning implementation with pure PyTorch code, and so on.
 

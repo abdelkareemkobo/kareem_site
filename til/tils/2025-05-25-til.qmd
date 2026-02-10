@@ -1,6 +1,6 @@
 ---
-title: "RAG RAPTOR: Complete Guide to Meta's RAPTOR RAG, DFloat11 Compression & Pyrefly Type Checker"
-description: "Learn about RAPTOR RAG technique for improved document retrieval, DFloat11 lossless compression for LLMs, and Pyrefly Python type checker. Complete guide with examples and implementation details."
+title: "Meta's RAPTOR RAG, DFloat11 Compression & Pyrefly Guide"
+description: "A complete guide to Meta's RAPTOR RAG technique, DFloat11 lossless model compression, and the Pyrefly Python type checker with implementation details."
 author: kareem
 date: 2025-05-25
 draft: false
@@ -20,7 +20,7 @@ keywords: ["RAPTOR RAG", "rag raptor", "meta pyrefly", "raptor rag paper", "llam
 Over the last 2 days, I've been exploring some fascinating new open source tools from Meta and other organizations. These tools are revolutionizing how we approach RAG (Retrieval-Augmented Generation), model compression, and Python development. Let me break down what I've learned:
 
 1. **RAPTOR RAG** - Meta's tree-based retrieval technique
-2. **DFloat11** - Lossless compression for LLMs  
+2. **DFloat11** - Lossless compression for LLMs
 3. **Pyrefly** - Fast Python type checker in Rust
 4. **FastEmbed** - Efficient embedding generation
 
@@ -170,3 +170,14 @@ While RAPTOR RAG's claims may be overstated, the underlying tree-based approach 
 3. [Pyrefly Official Site](https://pyrefly.org/) - Documentation and installation
 4. [DFloat11 Research](https://arxiv.org/abs/2406.02359) - Compression technique details
 5. [LlamaIndex Documentation](https://docs.llamaindex.ai/) - RAG framework integration
+
+---
+
+### Internal Resources
+
+If you're interested in more about AI engineering and my research, explore these sections:
+
+- [My Research Papers](../../papers.qmd)
+- [Open Source Contributions](../../oss/opensource.qmd)
+- [Today I Learned Index](../index.qmd)
+- [Main Blog Index](../../blog/feed.qmd)

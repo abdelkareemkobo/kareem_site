@@ -1,0 +1,65 @@
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const selector =
+    ".quarto-listing .listing-actions-group, .quarto-listing .quarto-listing-filter, .quarto-listing .quarto-listing-sort, .quarto-listing .search, .quarto-listing .input-group, .quarto-listing .input-group-text";
+
+  const titleText =
+    document.querySelector("#title-block-header h1.title")?.textContent?.trim() || "";
+
+  const matchesTitle = (input) => {
+    const value = input.value?.trim() || "";
+    const placeholder = input.getAttribute("placeholder")?.trim() || "";
+    const ariaLabel = input.getAttribute("aria-label")?.trim() || "";
+    return (
+      (value && value === titleText) ||
+      (placeholder && placeholder === titleText) ||
+      (ariaLabel && ariaLabel === titleText)
+    );
+  };
+
+  const removeListingUi = (root = document) => {
+    root.querySelectorAll(selector).forEach((el) => el.remove());
+
+    const listingRoots = [];
+    if (root.matches && root.matches(".quarto-listing")) {
+      listingRoots.push(root);
+    }
+    if (root.querySelectorAll) {
+      listingRoots.push(...root.querySelectorAll(".quarto-listing"));
+    }
+
+    if (!titleText || listingRoots.length === 0) return;
+    listingRoots.forEach((listingRoot) => {
+      listingRoot
+        .querySelectorAll("input[type='text'], input[type='search']")
+        .forEach((input) => {
+          if (!input) return;
+          if (input.classList.contains("search") || matchesTitle(input)) {
+            const container =
+              input.closest(
+                ".listing-actions-group, .quarto-listing-filter, .quarto-listing-sort, .input-group"
+              ) || input;
+            container.remove();
+          }
+        });
+    });
+  };
+
+  removeListingUi();
+
+  const observer = new MutationObserver((mutations) => {
+    for (const mutation of mutations) {
+      for (const node of mutation.addedNodes) {
+        if (!(node instanceof Element)) continue;
+        if (node.matches && node.matches(selector)) {
+          node.remove();
+          continue;
+        }
+        removeListingUi(node);
+      }
+    }
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+});
+</script>

@@ -1,0 +1,53 @@
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector("#title-block-header");
+  if (!header || header.querySelector(".post-hero-image")) return;
+
+  const metaImage =
+    document.querySelector('meta[property="og:image"]') ||
+    document.querySelector('meta[name="twitter:image"]');
+  const title = document.querySelector("h1.title");
+  const metaAlt =
+    document.querySelector('meta[property="og:image:alt"]') ||
+    document.querySelector('meta[name="twitter:image:alt"]');
+
+  if (!metaImage || !header.querySelector(".quarto-title-meta")) return;
+
+  const rawUrl = metaImage.getAttribute("content");
+  if (!rawUrl) return;
+
+  let imageUrl = rawUrl;
+  try {
+    const parsed = new URL(rawUrl, window.location.href);
+    if (parsed.origin !== window.location.origin) {
+      const currentDir = window.location.pathname.replace(/[^/]*$/, "");
+      if (parsed.pathname.startsWith(currentDir)) {
+        imageUrl = parsed.pathname.slice(currentDir.length);
+      } else {
+        imageUrl = parsed.pathname;
+      }
+    } else {
+      imageUrl = parsed.href;
+    }
+  } catch {
+    imageUrl = rawUrl;
+  }
+
+  const figure = document.createElement("figure");
+  figure.className = "post-hero-image";
+
+  const img = document.createElement("img");
+  img.src = imageUrl;
+  img.alt = (metaAlt && metaAlt.getAttribute("content")) || (title && title.textContent) || "Post image";
+  img.loading = "eager";
+  img.decoding = "async";
+  figure.appendChild(img);
+
+  const description = header.querySelector(".description");
+  if (description && description.parentElement) {
+    description.parentElement.insertAdjacentElement("afterend", figure);
+  } else {
+    header.insertAdjacentElement("beforeend", figure);
+  }
+});
+</script>

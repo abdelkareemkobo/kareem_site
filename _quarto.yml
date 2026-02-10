@@ -1,15 +1,24 @@
+lang: en
+
 project:
   type: website
+  resources:
+    - "robots.txt"
+    - "CNAME"
+    - "public"
+    - "fonts"
+    - "kareem.jpg"
 
-ipynb-filters: 
+ipynb-filters:
   - quarto_filter.py
 
 execute:
   eval: false
 
 website:
+  search: true
   title: "عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher & Arabic NLP Specialist"
-  image: quarto.png
+  image: /kareem.jpg
   page-footer:
     center:
       - icon: github
@@ -28,17 +37,17 @@ website:
         href: index.xml
         aria-label: "RSS Feed"
   favicon: favicon.ico
-  open-graph: 
+  open-graph:
     locale: en_US
     site-name: "Abdelkareem Elkhateb"
-    image: kareem.jpg
+    image: /kareem.jpg
     image-width: 1200
     image-height: 630
   google-analytics: "G-XFPC3M9TMG"
   twitter-card:
-     creator: "@AbdelkareemElk1"
-     card-style: summary_large_image
-     image: kareem.jpg
+    creator: "@AbdelkareemElk1"
+    card-style: summary_large_image
+    image: /kareem.jpg
   site-url: "https://kareemai.com/"
   description: "Kareem Elkhateb personal site, a blog about machine learning, deep learning, Web development with Astro.js, FastAPI, also Arabic Natural Language Processing and Rust language."
   repo-url: https://github.com/abdelkareemkobo/kareem_site
@@ -51,22 +60,32 @@ website:
     collapse: true
     collapse-below: lg
     left:
-    - text: "🏠 Home"
-      href: index.qmd
-    - text: "📮 Blog"
-      href: blog/feed.qmd
-    - text: "💭 TILs"
-      file: til/index.qmd
-    - text: "📚 Papers"
-      file: papers.qmd
-    - text: "📖 Books"
-      file: publish.qmd
+      - icon: house
+        text: Home
+        href: index.qmd
+      - icon: journal-text
+        text: Blog
+        href: blog/feed.qmd
+      - icon: lightbulb
+        text: TILs
+        file: til/index.qmd
+      - icon: file-text
+        text: Papers
+        file: papers.qmd
+      - icon: book
+        text: Books
+        file: publish.qmd
     right:
-      - text: "🎥 Videos"
+      - icon: telegram
+        href: https://t.me/+xRY72sYuiwc0ZGY8
+      - icon: youtube
+        text: Videos
         href: https://youtube.com/@AbdelkareemElkhatib
-      - text: "💼 Hire Me"
+      - icon: briefcase
+        text: Hire Me
         href: https://www.upwork.com/freelancers/~016a9fea792423bb9a
-      - text: "💻 GPUVec"
+      - icon: cpu
+        text: GPUVec
         href: https://gpuvec.com
       - icon: rss
         href: index.xml
@@ -81,11 +100,24 @@ website:
       collapse-level: 1
       style: docked
       contents: notes/**
+
 format:
   html:
+    lang: en
+    canonical-url: true
+    metadata:
+      description: "Kareem Elkhateb personal site, a blog about machine learning, deep learning, Web development with Astro.js, FastAPI, also Arabic Natural Language Processing and Rust language."
+      robots: "index, follow"
     filters:
       - _extensions/jsonld/jsonld.lua
     reference-location: document
+    include-in-header:
+      - _includes/preconnect.html
+    include-after-body:
+      - _includes/fold-headings.html
+      - _includes/post-hero-image.html
+      - _includes/prefetch.html
+      - _includes/listing-cleanup.html
     theme:
       light: spacelab
       dark: cyborg
@@ -93,10 +125,11 @@ format:
     toc-location: right
     toc-depth: 3
     toc-title: "Contents"
-    syntax-definitions: 
-    - fomo.xml
+    syntax-definitions:
+      - fomo.xml
     fontsize: 18px
-    css: 
+    css:
+      - shimmering-fonts.css
       - styles.css
     comments:
       giscus:
@@ -108,6 +141,3 @@ format:
         reactions-enabled: true
         theme: preferred_color_scheme
         language: en
-
-
-

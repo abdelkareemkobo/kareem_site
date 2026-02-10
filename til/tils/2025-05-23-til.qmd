@@ -1,6 +1,6 @@
 ---
-title: Brave Leo AI with Ollama, vllm, and any huggingface llm locally
-description: "How to configure Brave Leo to use your any LLM provider privately in your browser  like Ollama or VLLM local models from hugginface transformers"
+title: "Brave Leo AI: Using Ollama and local LLMs in your Browser"
+description: "How to configure Brave Leo to use any local LLM provider privately in your browser, like Ollama or vLLM, for a privacy-first AI assistant experience."
 author: kareem
 date: 2025-05-23
 draft: false
@@ -8,7 +8,7 @@ featured: false
 categories:
   - blogging
   - til
-  - web 
+  - web
   - ai
   - llm
   - local_llm
@@ -18,9 +18,9 @@ image: "images/brave_leo.png"
 
 ## What’s Brave Leo AI All About?
 
-Brave Leo AI is a super handy, privacy-first AI assistant built right into the Brave browser. 
+Brave Leo AI is a super handy, privacy-first AI assistant built right into the Brave browser.
 
-It’s there to help you out with all sorts of tasks, and it works on your computer (macOS, Windows, Linux) or phone (Android and iOS). 
+It’s there to help you out with all sorts of tasks, and it works on your computer (macOS, Windows, Linux) or phone (Android and iOS).
 
 The best part? You don’t need to sign up or log in to use it for free, and it’s designed to keep your data private.
 
@@ -52,7 +52,7 @@ Privacy is Leo’s middle name! Here’s why it’s safe:
 
 - **Local Storage**: Your chat history stays on your device, and you can clear it anytime through the browser settings.
 
-- **Heads-Up on Third-Party Models**: If you use external AI models (like Anthropic’s Claude), their data policies might differ (Claude keeps chats for 30 days, for 
+- **Heads-Up on Third-Party Models**: If you use external AI models (like Anthropic’s Claude), their data policies might differ (Claude keeps chats for 30 days, for
 - example). Always check the privacy terms if you go that route.
 
 
@@ -61,18 +61,18 @@ Privacy is Leo’s middle name! Here’s why it’s safe:
 
 
 
-If you’re using Brave version 1.75 or higher on desktop or Android (not in Incognito or Tor mode), you can keep track of your chats with Leo. 
+If you’re using Brave version 1.75 or higher on desktop or Android (not in Incognito or Tor mode), you can keep track of your chats with Leo.
 
-They’re stored locally on your  device, not on any server, so you’re in control. 
-You can revisit, continue, or delete them from the Leo full-page view (brave://leo-ai) or the browser’s sidebar. 
+They’re stored locally on your  device, not on any server, so you’re in control.
+You can revisit, continue, or delete them from the Leo full-page view (brave://leo-ai) or the browser’s sidebar.
 
-Just note that clearing your browsing history will also wipe out any webpage-related content in your chats. 
+Just note that clearing your browsing history will also wipe out any webpage-related content in your chats.
 Easy peasy!
 
 ## Bring Your Own Model (BYOM) with Brave Leo
 
-With [BYOM](https://support.brave.com/hc/en-us/articles/34070140231821-How-do-I-use-the-Bring-Your-Own-Model-BYOM-with-Brave-Leo) , you can connect your own AI models to Leo for a custom experience. You can use platforms like vLLM, SGLang, or any inefernce engines with any Hugging Face Transformers model, as long as it follows the OpenAI 
-Chat Protocol. 
+With [BYOM](https://support.brave.com/hc/en-us/articles/34070140231821-How-do-I-use-the-Bring-Your-Own-Model-BYOM-with-Brave-Leo) , you can connect your own AI models to Leo for a custom experience. You can use platforms like vLLM, SGLang, or any inefernce engines with any Hugging Face Transformers model, as long as it follows the OpenAI
+Chat Protocol.
 
 
 For example, you can run a model like Qwen2.5-VL-3B-Instruct locally with this command:
@@ -84,7 +84,7 @@ python -m sglang.launch_server --port 7501 --model-path Qwen/Qwen2.5-VL-3B-Instr
 
 ```
 
-This sets up a server for SGLang (or you can use vLLM with a similar command). 
+This sets up a server for SGLang (or you can use vLLM with a similar command).
 
 
 Then, in Brave Leo’s BYOM settings, add your model with these details:
@@ -100,10 +100,20 @@ Then, in Brave Leo’s BYOM settings, add your model with these details:
 
 **API Key**: local
 
-**System Prompt**: A custom prompt like, “You are Leo, a helpful AI assistant by Brave. Provide clear, concise, polite responses under 80 words. Use a neutral tone, clarify 
+**System Prompt**: A custom prompt like, “You are Leo, a helpful AI assistant by Brave. Provide clear, concise, polite responses under 80 words. Use a neutral tone, clarify
 if needed, and ensure accuracy.”
 
 
-Brave doesn’t proxy these requests, so check the privacy terms of your chosen provider. 
+Brave doesn’t proxy these requests, so check the privacy terms of your chosen provider.
 Once set up, your model integrates with Leo, letting you use it directly in the browser for tailored, private AI chats. It’s like giving Leo your own custom brain!
 
+---
+
+### Internal Resources
+
+If you're interested in more about local LLMs and my AI research, explore these sections:
+
+- [My Research Papers](../../papers.qmd)
+- [Open Source Contributions](../../oss/opensource.qmd)
+- [Today I Learned Index](../index.qmd)
+- [Main Blog Index](../../blog/feed.qmd)

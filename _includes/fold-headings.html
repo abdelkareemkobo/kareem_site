@@ -1,0 +1,117 @@
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const root =
+    document.querySelector("#quarto-document-content") ||
+    document.querySelector("main.content") ||
+    document.body;
+  if (!root) return;
+
+  const headings = Array.from(root.querySelectorAll("h2, h3, h4"));
+  const foldables = [];
+
+  headings.forEach((heading) => {
+    if (
+      heading.classList.contains("no-fold") ||
+      heading.closest(".toc") ||
+      heading.closest(".quarto-listing") ||
+      heading.closest(".quarto-post") ||
+      heading.classList.contains("listing-title")
+    ) {
+      return;
+    }
+
+    const level = Number.parseInt(heading.tagName.slice(1), 10);
+    const siblings = [];
+    let el = heading.nextElementSibling;
+
+    while (el) {
+      if (isBoundary(el, level)) break;
+      siblings.push(el);
+      el = el.nextElementSibling;
+    }
+
+    if (!siblings.length) return;
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "heading-fold";
+    button.setAttribute("aria-expanded", "true");
+    button.setAttribute("aria-label", "Toggle section");
+
+    const icon = document.createElement("span");
+    icon.className = "heading-fold-icon";
+    icon.setAttribute("aria-hidden", "true");
+    button.appendChild(icon);
+
+    heading.classList.add("foldable-heading");
+    heading.insertBefore(button, heading.firstChild);
+
+    const foldable = { heading, siblings, button };
+    foldables.push(foldable);
+
+    button.addEventListener("click", () => {
+      toggleFoldable(foldable, !heading.classList.contains("is-collapsed"));
+      updateControls();
+    });
+  });
+
+  if (!foldables.length) return;
+
+  const controls = document.createElement("div");
+  controls.className = "fold-controls";
+
+  const toggleAll = document.createElement("button");
+  toggleAll.type = "button";
+  toggleAll.className = "fold-controls-toggle";
+  toggleAll.setAttribute("aria-pressed", "false");
+  toggleAll.textContent = "Collapse all";
+
+  controls.appendChild(toggleAll);
+
+  const header = document.querySelector("#title-block-header");
+  if (header && header.parentElement) {
+    header.insertAdjacentElement("afterend", controls);
+  } else {
+    root.insertAdjacentElement("afterbegin", controls);
+  }
+
+  toggleAll.addEventListener("click", () => {
+    const shouldCollapse = !foldables.every((item) =>
+      item.heading.classList.contains("is-collapsed")
+    );
+    foldables.forEach((item) => toggleFoldable(item, shouldCollapse));
+    updateControls();
+  });
+
+  function toggleFoldable(item, collapse) {
+    item.heading.classList.toggle("is-collapsed", collapse);
+    item.button.setAttribute("aria-expanded", String(!collapse));
+    item.siblings.forEach((node) => node.classList.toggle("folded-section", collapse));
+  }
+
+  function updateControls() {
+    const allCollapsed = foldables.every((item) =>
+      item.heading.classList.contains("is-collapsed")
+    );
+    toggleAll.textContent = allCollapsed ? "Expand all" : "Collapse all";
+    toggleAll.setAttribute("aria-pressed", String(allCollapsed));
+  }
+
+  function isBoundary(element, level) {
+    if (element.matches("h1, h2, h3, h4, h5, h6")) {
+      return Number.parseInt(element.tagName.slice(1), 10) <= level;
+    }
+
+    if (element.matches("section")) {
+      const sectionHeading = element.querySelector(
+        ":scope > h1, :scope > h2, :scope > h3, :scope > h4, :scope > h5, :scope > h6"
+      );
+      if (sectionHeading) {
+        return Number.parseInt(sectionHeading.tagName.slice(1), 10) <= level;
+      }
+    }
+
+    return false;
+  }
+});
+</script>

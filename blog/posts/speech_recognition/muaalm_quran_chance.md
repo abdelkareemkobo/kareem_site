@@ -1,6 +1,6 @@
 ---
-title: My Dream Job Working at Tarteel & muaalem El Quran  | Part 2
-description: Sharing my journey trying to join tarteel ai  and contribute to Islamic open source projects
+title: "Optimizing Quranic AI Models: Tarteel & Muaalem El Quran | Part 2"
+description: "Discover how I optimized the Muaalem El Quran model using TensorRT and ONNX. A deep dive into Quranic speech recognition and my journey with Tarteel AI."
 date: 2025-12-26
 author: kareem
 draft: false

@@ -1,8 +1,6 @@
 ---
-title: After one year of using Huawei Mate 11 without google services
-description: |-
-  Sharing my experience with using Huawei Mate product line for one year without huawei  services, a detailed student review. 
-  describe my experience with, noteshelf,concepts,  infinte painter, Flexcil and Gbox
+title: "Huawei MatePad 11 Review: One Year Without Google Services"
+description: "A detailed student review of the Huawei MatePad 11 after one year. Exploring life without Google services, app compatibility, and integration with Linux."
 author: kareem
 date: 2023-12-07
 draft: false
@@ -88,3 +86,15 @@ Overall, while the Huawei tablet offers excellent hardware, the software experie
 - https://www.noteshelf.net/
 - https://www.gboxlab.com/
 - https://www.infinitestudio.art/painter.php
+
+---
+
+### Internal Resources
+
+If you found this hardware review useful, you might also be interested in my other posts and projects:
+
+- [Huawei Freebuds 7i Review](Huawei%20freebuds%207i.md)
+- [One Plus Pad 3 Review](one_plus_pad_3.md)
+- [My Research Papers](../../../papers.qmd)
+- [Open Source Contributions](../../../oss/opensource.qmd)
+- [Today I Learned: AI Engineering Notes](../../../til/index.qmd)

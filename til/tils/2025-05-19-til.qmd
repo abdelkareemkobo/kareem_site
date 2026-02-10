@@ -1,6 +1,6 @@
 ---
-title: Starting Substack as a AI Researcher
-description: Why i started writing on substack and why you should or shouldn't! initial thoughts and some other SEO and fastai ideas. 
+title: "AI Research Blogging: Why Substack Matters for Researchers"
+description: "Insights on starting a Substack for AI researchers. Learn how blogging improves networking, writing skills, and knowledge management for AI engineering."
 author: kareem
 date: 2025-05-19
 draft: false
@@ -8,16 +8,16 @@ featured: false
 categories:
   - blogging
   - til
-  - seo 
+  - seo
   - substack
 image: "images/old_ahead_of_ai.jpg"
 ---
 
 ## What is Substack?
-From their about page: 
+From their about page:
 "On Substack, writers and creators can publish their work and make money from paid subscriptions while supporters can directly sustain the work they deeply value."
 
-It's a platform where you can publish what you want in an organized way, with great analytics tools and a powerful recommendation and search system. 
+It's a platform where you can publish what you want in an organized way, with great analytics tools and a powerful recommendation and search system.
 
 I like to think of it as a nicer version of Medium, with more than just SEO dumped from Google.
 
@@ -40,7 +40,7 @@ My reasons:
 
 Did you forget something?
 
-^_^ 
+^_^
 
 Die, empty, and publish your knowledge!
 
@@ -66,9 +66,9 @@ When I started learning about DL, I searched for a great book about DL and PyTor
 
 
 I found his Substack where he publishes what he learns.
-At the same time, I found similar people like 
+At the same time, I found similar people like
 
-- [Jay Alammar](https://substack.com/@jayalammar) 
+- [Jay Alammar](https://substack.com/@jayalammar)
 
 - [Maarten Grootendorst](https://newsletter.maartengrootendorst.com/)
 
@@ -78,7 +78,7 @@ These people I follow and appreciate what they provide!
 
 So I started to ask, why do they use Substack?
 
-The answer is very clear if you know them ^_^ 
+The answer is very clear if you know them ^_^
 
 
 
@@ -87,11 +87,11 @@ The answer is very clear if you know them ^_^
 
 The UI/UX, speed of the website, and animations are very cool.
 
-Let's look at the level I want to reach :) 
+Let's look at the level I want to reach :)
 
-#### Ahead of AI 
+#### Ahead of AI
 
-On 28/04/2023 
+On 28/04/2023
 
 It reached 15,028 free subscribers and only 69 paid ones!
 
@@ -122,16 +122,16 @@ He has more than 105k+ and is #71 Rising in Technology. I don't know why 71!! He
 
 
 
-**Jay Alammar** => 23k+ subscribers  
+**Jay Alammar** => 23k+ subscribers
 
-**Maarten Grootendorst** => 20k+ subscribers  
-**Paul Iusztin** => 25k+ subscribers  
+**Maarten Grootendorst** => 20k+ subscribers
+**Paul Iusztin** => 25k+ subscribers
 
 Most likes per post are around 10 to 20 only!
 
 
 
-The comments are around 0 to 5 :) 
+The comments are around 0 to 5 :)
 
 ### My Goal in the coming 6 months?
 
@@ -151,7 +151,7 @@ For money, if I can get only $200 per month, this is very great as a start.
 
 #### Disease from other websites?
 
-I noticed the following issues on the first day: 
+I noticed the following issues on the first day:
 
 
 
@@ -166,21 +166,21 @@ I don't talk about the post but the long-form ones.
 
 
 
-3. Drop your Substack fake numbers: A lot of people post "drop your Substack below and whatever it's about I will exchange" and multiple similar things!! What is the 
+3. Drop your Substack fake numbers: A lot of people post "drop your Substack below and whatever it's about I will exchange" and multiple similar things!! What is the
 4. purpose then... you have 1 million subscribers, then what?
 
 
-#### There is no official API for Substack 
+#### There is no official API for Substack
 
 The most annoying thing in Substack is there is no current API to develop apps, create extensions, and automate a lot of things.
 
-### What things can I write about? 
+### What things can I write about?
 
-You seem to love to talk a lot? What will you write then? 
+You seem to love to talk a lot? What will you write then?
 
-It's very obvious... 
+It's very obvious...
 
-I want to talk about the following: 
+I want to talk about the following:
 
 1. Compute world with AI, fine-tuning/training, and cloud instances, etc.
 
@@ -191,18 +191,26 @@ I want to talk about the following:
 
 5. Novel writing about the AI world like vector databases, embedding, and searching, etc.
 6. Applications I build and services I provide.
-7. My workflow and software i use. 
+7. My workflow and software i use.
 
 8. Substack tips and analysis.
 
-you can find links here for now: 
-1. Gpuvec publications 
+you can find links here for now:
+1. Gpuvec publications
 
-<iframe src="https://gpuvecc.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+<iframe title="GPUVec Newsletter" src="https://gpuvecc.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
 
 2. Kareem's TILs
 
-<iframe src="https://kareemnns.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+<iframe title="Kareem's Newsletter" src="https://kareemnns.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
 
+---
 
+### Internal Resources
 
+If you're interested in more about AI engineering and my research, explore these sections:
+
+- [My Research Papers](../../papers.qmd)
+- [Open Source Contributions](../../oss/opensource.qmd)
+- [Today I Learned Index](../index.qmd)
+- [Main Blog Index](../../blog/feed.qmd)

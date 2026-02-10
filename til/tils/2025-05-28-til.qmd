@@ -1,6 +1,6 @@
 ---
-title: Pylate Day 1 
-description: Trying to explore pylate and create my first Arabic model 
+title: "PyLate & ColBERT: Learning Vector Retrieval and Arabic Models"
+description: "A comprehensive guide to PyLate and ColBERT for vector retrieval. Explore dataset formats, indexing strategies, and evaluation metrics for Arabic NLP models."
 author: kareem
 date: 2025-05-28
 draft: false
@@ -28,13 +28,13 @@ A: ColBERT (Contextualized Late Interaction over BERT) creates dense vector repr
 **Q: What does triplet format look like?**
 A: Each row contains:
 - `query`: The search query
-- `positive`: One relevant document  
+- `positive`: One relevant document
 - `negative1`, `negative2`, ...: Multiple irrelevant documents
 
 **Pros**: Good for training with hard negatives
 **Cons**: No separate corpus, harder to evaluate
 
-### Format 2: Structured Retrieval Format  
+### Format 2: Structured Retrieval Format
 **Q: What does structured format contain?**
 A: Three separate components:
 - `corpus`: All documents with IDs
@@ -72,7 +72,7 @@ with open('corpus.jsonl', 'w') as f:
 
 ### PyLate File Requirements
 **Q: What files does  BEIR datasets is ?**
-A: 
+A:
 - `corpus.jsonl`: `{"_id": "doc1", "text": "document text"}`
 - `queries.jsonl`: `{"_id": "q1", "text": "query text"}`
 - `qrels/split.tsv`: `query_id\tdoc_id\tscore`
@@ -120,12 +120,12 @@ A: PyLate's efficient indexing method for ColBERT embeddings, supporting fast si
 
 **Key Parameters**:
 - `index_folder`: Where to store index
-- `index_name`: Identifier for the index  
+- `index_name`: Identifier for the index
 - `override=True`: Overwrites existing index
 
 ### Document Processing
 **Q: How do you prepare documents for indexing?**
-A: 
+A:
 1. Extract unique documents from all sources
 2. Create document IDs and embeddings
 3. Add to index with `add_documents()`
@@ -179,7 +179,7 @@ A: Use descriptive names and separate folders:
 **Q: What metrics should you track?**
 A:
 - **NDCG@k**: Normalized discounted cumulative gain
-- **MAP@k**: Mean average precision  
+- **MAP@k**: Mean average precision
 - **Recall@k**: Proportion of relevant docs retrieved
 - **Precision@k**: Proportion of retrieved docs that are relevant
 
@@ -187,9 +187,19 @@ A:
 **Q: What makes good retrieval performance?**
 A:
 - NDCG@5 > 0.7: Excellent
-- NDCG@5 > 0.5: Good  
+- NDCG@5 > 0.5: Good
 - NDCG@5 > 0.3: Acceptable
 - NDCG@5 < 0.3: Needs improvement
 
 This comprehensive guide covers all the key concepts, trade-offs, and practical considerations for working with PyLate and ColBERT evaluation pipelines.
 
+---
+
+### Internal Resources
+
+If you're interested in more about vector retrieval and my AI research, explore these sections:
+
+- [My Research Papers](../../papers.qmd)
+- [Open Source Contributions](../../oss/opensource.qmd)
+- [Today I Learned Index](../index.qmd)
+- [Main Blog Index](../../blog/feed.qmd)
