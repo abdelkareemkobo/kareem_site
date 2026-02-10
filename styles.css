@@ -500,6 +500,83 @@ article {
    Homepage - Clean & Modern
    ───────────────────────────────────────────────────────────── */
 
+/* Centered homepage variant */
+.home-centered {
+    text-align: center;
+}
+
+.home-centered .hero-section {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "avatar"
+        "intro"
+        "socials";
+    justify-items: center;
+    text-align: center;
+}
+
+.home-centered .hero-intro {
+    max-width: 60ch;
+}
+
+.home-centered .hero-socials {
+    justify-content: center;
+}
+
+.home-centered h2,
+.home-centered h3,
+.home-centered h4,
+.home-centered .projects-grid > h2 {
+    text-align: center !important;
+}
+
+.home-centered .work-section {
+    text-align: center;
+}
+
+.home-centered .stats-row {
+    justify-content: center;
+    text-align: center;
+}
+
+.home-centered .stats-row .stat {
+    text-align: center;
+}
+
+.home-centered .projects-grid {
+    justify-items: center;
+    border-top: 1px solid var(--ui);
+    text-align: center;
+}
+
+.home-centered .project-card {
+    text-align: center;
+    max-width: 60ch;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.home-centered .foldable-heading {
+    justify-content: center;
+    text-align: center;
+}
+
+.home-centered .heading-fold {
+    margin-right: 0.35rem;
+}
+
+.home-centered .work-section > p,
+.home-centered .project-card > p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 65ch;
+}
+
+.home-centered .project-card h3,
+.home-centered .project-card a {
+    text-align: center;
+}
+
 /* Hero Section */
   .hero-section {
       display: grid;
