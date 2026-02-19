@@ -1,0 +1,1727 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="kareem">
+<meta name="dcterms.date" content="2026-02-19">
+<meta name="description" content="Learn about OpenCode’s agents, skills, and server. Built in TypeScript but works perfectly with Python for custom AI workflows.">
+
+<title>OpenCode: Why It’s Different and How to Use It with Python – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../favicon.ico" rel="icon">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-914dc4404272ff4a2a791e68204292ff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-e3ae77831967a3826a5611a9313361f5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-914dc4404272ff4a2a791e68204292ff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XFPC3M9TMG"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
+</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<!-- Fonts are embedded locally via shimmering-fonts.css -->
+<meta property="og:title" content="OpenCode: Why It’s Different and How to Use It with Python – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta property="og:description" content="Learn about OpenCode’s agents, skills, and server. Built in TypeScript but works perfectly with Python for custom AI workflows.">
+<meta property="og:image" content="https://kareemai.com/blog/posts/dspy/images/Opencode.jpg">
+<meta property="og:site_name" content="Abdelkareem Elkhateb">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:title" content="OpenCode: Why It’s Different and How to Use It with Python – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta name="twitter:description" content="Learn about OpenCode’s agents, skills, and server. Built in TypeScript but works perfectly with Python for custom AI workflows.">
+<meta name="twitter:image" content="https://kareemai.com/blog/posts/dspy/images/Opencode.jpg">
+<meta name="twitter:creator" content="@AbdelkareemElk1">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://kareemai.com/blog/posts/dspy/Opencode.html">
+</head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script><div class="reading-progress" id="reading-progress"></div>
+
+<script>
+window.addEventListener('scroll', () => {
+  const article = document.querySelector('article') || document.body;
+  const scrollTop = window.scrollY;
+  const docHeight = article.scrollHeight - window.innerHeight;
+  const progress = Math.min((scrollTop / docHeight) * 100, 100);
+  document.getElementById('reading-progress').style.width = progress + '%';
+});
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "OpenCode: Why It’s Different and How to Use It with Python",
+  "description": "Learn about OpenCode’s agents, skills, and server. Built in TypeScript but works perfectly with Python for custom AI workflows.",
+  "author": {"@type": "Person", "name": "kareem"},
+  "datePublished": "February 19, 2026",
+  "publisher": {
+    "@type": "Person",
+    "name": "Kareem Elkhateb",
+    "url": "https://kareemai.com"
+  }
+}
+</script>
+
+
+<link rel="stylesheet" href="../../../shimmering-fonts.css">
+<link rel="stylesheet" href="../../../styles.css">
+
+
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> <i class="bi bi-house" role="img">
+</i> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../blog/feed.html"> <i class="bi bi-journal-text" role="img">
+</i> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../til/index.html"> <i class="bi bi-lightbulb" role="img">
+</i> 
+<span class="menu-text">TILs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../papers.html"> <i class="bi bi-file-text" role="img">
+</i> 
+<span class="menu-text">Papers</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../publish.html"> <i class="bi bi-book" role="img">
+</i> 
+<span class="menu-text">Books</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://t.me/+xRY72sYuiwc0ZGY8"> <i class="bi bi-telegram" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://youtube.com/@AbdelkareemElkhatib"> <i class="bi bi-youtube" role="img">
+</i> 
+<span class="menu-text">Videos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.upwork.com/freelancers/~016a9fea792423bb9a"> <i class="bi bi-briefcase" role="img">
+</i> 
+<span class="menu-text">Hire Me</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://gpuvec.com"> <i class="bi bi-cpu" role="img">
+</i> 
+<span class="menu-text">GPUVec</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../../index.xml"> <i class="bi bi-rss" role="img" aria-label="Blog RSS Feed">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../../til/index.xml"> <i class="bi bi-rss" role="img" aria-label="TILs RSS Feed">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#opencode-why-its-different-and-how-to-use-it-with-python" id="toc-opencode-why-its-different-and-how-to-use-it-with-python" class="nav-link active" data-scroll-target="#opencode-why-its-different-and-how-to-use-it-with-python">OpenCode: Why It’s Different and How to Use It with Python</a></li>
+  <li><a href="#what-is-opencode" id="toc-what-is-opencode" class="nav-link" data-scroll-target="#what-is-opencode">What is OpenCode?</a></li>
+  <li><a href="#opencode-is-programmer-friendly" id="toc-opencode-is-programmer-friendly" class="nav-link" data-scroll-target="#opencode-is-programmer-friendly">OpenCode is Programmer Friendly</a></li>
+  <li><a href="#why-this-hybrid-approach" id="toc-why-this-hybrid-approach" class="nav-link" data-scroll-target="#why-this-hybrid-approach">Why This Hybrid Approach?</a></li>
+  <li><a href="#opencode-tools" id="toc-opencode-tools" class="nav-link" data-scroll-target="#opencode-tools">OpenCode Tools</a></li>
+  <li><a href="#specialized-agents" id="toc-specialized-agents" class="nav-link" data-scroll-target="#specialized-agents">Specialized Agents</a></li>
+  <li><a href="#opencode-rules-agents.md" id="toc-opencode-rules-agents.md" class="nav-link" data-scroll-target="#opencode-rules-agents.md">OpenCode Rules (AGENTS.md)</a></li>
+  <li><a href="#opencode-skills" id="toc-opencode-skills" class="nav-link" data-scroll-target="#opencode-skills">OpenCode Skills</a></li>
+  <li><a href="#smart-planning-with-plan.md" id="toc-smart-planning-with-plan.md" class="nav-link" data-scroll-target="#smart-planning-with-plan.md">Smart Planning with PLAN.md</a></li>
+  <li><a href="#the-impact" id="toc-the-impact" class="nav-link" data-scroll-target="#the-impact">The Impact</a></li>
+  <li><a href="#mlflow-integration" id="toc-mlflow-integration" class="nav-link" data-scroll-target="#mlflow-integration">MLflow Integration</a></li>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">OpenCode: Why It’s Different and How to Use It with Python</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">blogging</div>
+    <div class="quarto-category">til</div>
+    <div class="quarto-category">opencode</div>
+    <div class="quarto-category">ai</div>
+    <div class="quarto-category">dspy</div>
+    <div class="quarto-category">blog/build/project</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Learn about OpenCode’s agents, skills, and server. Built in TypeScript but works perfectly with Python for custom AI workflows.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>kareem </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 19, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="opencode-why-its-different-and-how-to-use-it-with-python" class="level2">
+<h2 class="anchored" data-anchor-id="opencode-why-its-different-and-how-to-use-it-with-python">OpenCode: Why It’s Different and How to Use It with Python</h2>
+<p>OpenCode is an AI coding assistant. But unlike Cursor or Claude Code, it’s built to be extended and controlled programmatically.</p>
+<p>Here’s what makes it different and why that matters.</p>
+<hr>
+</section>
+<section id="what-is-opencode" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-opencode">What is OpenCode?</h2>
+<p>OpenCode is an AI coding assistant. Different from Cursor, Claude Code, and Copilot.</p>
+<p><strong>Key architecture features:</strong></p>
+<p><strong>Works everywhere</strong></p>
+<ul>
+<li>Terminal</li>
+<li>IDE extensions</li>
+<li>Desktop app</li>
+</ul>
+<p><strong>LSP-enabled</strong> Automatically loads Language Server Protocol for your project. LLM gets proper code intelligence.</p>
+<p><strong>Multi-session</strong> Run multiple agents in parallel on the same project. No conflicts.</p>
+<p><strong>Share links</strong> Every session gets a shareable link. Good for debugging and code review.</p>
+<p><strong>Model flexibility</strong></p>
+<ul>
+<li>GitHub Copilot account</li>
+<li>ChatGPT Plus/Pro account</li>
+<li>75+ LLM providers via Models.dev</li>
+<li>Local models</li>
+</ul>
+<p><strong>The key difference</strong>: OpenCode is infrastructure you can build on, not just a chat interface.</p>
+<hr>
+</section>
+<section id="opencode-is-programmer-friendly" class="level2">
+<h2 class="anchored" data-anchor-id="opencode-is-programmer-friendly">OpenCode is Programmer Friendly</h2>
+<p>OpenCode is built in TypeScript. But you can control it with Python. No TypeScript needed.</p>
+<p><strong>How I use it:</strong></p>
+<ol type="1">
+<li>Run OpenCode as background process on specific port</li>
+<li>Create Python client that controls the server</li>
+<li>Use it with DSPy for smarter workflows</li>
+</ol>
+<p><strong>Example setup:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">opencode</span> server <span class="at">--port</span> 3000</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Python client</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> OpenCodeClient:</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, port<span class="op">=</span><span class="dv">3000</span>):</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.base_url <span class="op">=</span> <span class="ss">f"http://localhost:</span><span class="sc">{</span>port<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> invoke_agent(<span class="va">self</span>, agent, prompt, context<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        response <span class="op">=</span> httpx.post(</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>            <span class="ss">f"</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>base_url<span class="sc">}</span><span class="ss">/api/sessions"</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>            json<span class="op">=</span>{</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>                <span class="st">"agent"</span>: agent,</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>                <span class="st">"prompt"</span>: prompt,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>                <span class="st">"context"</span>: context</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> response.json()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Now you have programmatic control. Build whatever workflows you need.</p>
+<hr>
+</section>
+<section id="why-this-hybrid-approach" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-hybrid-approach">Why This Hybrid Approach?</h2>
+<p>You could try to simulate OpenCode features in DSPy tool calling. But it won’t be as mature or robust.</p>
+<p><strong>What you’d need to rebuild:</strong></p>
+<ul>
+<li>LSP integration</li>
+<li>Multi-session management</li>
+<li>File operations with error handling</li>
+<li>Bash execution with timeouts</li>
+</ul>
+<p>OpenCode already has this. Battle-tested.</p>
+<p><strong>What DSPy adds:</strong> Structured programming and optimization for AI workflows.</p>
+<p><strong>Example workflow:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> FigmaToCodeWorkflow(dspy.Module):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> forward(<span class="va">self</span>, figma_url):</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        <span class="co"># DSPy: Analyze Figma design</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        analysis <span class="op">=</span> <span class="va">self</span>.analyzer(figma_url<span class="op">=</span>figma_url)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="co"># DSPy: Pick best component</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        selection <span class="op">=</span> <span class="va">self</span>.selector(design_analysis<span class="op">=</span>analysis)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="co"># OpenCode: Build it</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> opencode_client.invoke_agent(</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>            agent<span class="op">=</span><span class="st">"build"</span>,</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>            prompt<span class="op">=</span><span class="ss">f"Create component: </span><span class="sc">{</span>selection<span class="sc">.</span>component_name<span class="sc">}</span><span class="ss">"</span>,</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>            context<span class="op">=</span>selection.design_specs</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> result</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>DSPy analyzes and decides. OpenCode executes with proper LSP support.</p>
+<hr>
+</section>
+<section id="opencode-tools" class="level2">
+<h2 class="anchored" data-anchor-id="opencode-tools">OpenCode Tools</h2>
+<p>OpenCode has built-in tools:</p>
+<ul>
+<li><code>read</code> - Read files</li>
+<li><code>write</code> - Create/overwrite files</li>
+<li><code>edit</code> - Modify existing files</li>
+<li><code>bash</code> - Execute shell commands</li>
+<li><code>grep</code> - Search file contents</li>
+<li><code>glob</code> - Find files by pattern</li>
+<li><code>lsp</code> - Code intelligence (definitions, references)</li>
+<li><code>webfetch</code> - Fetch web content</li>
+</ul>
+<p><strong>You can create custom tools.</strong></p>
+<p>Example custom tool:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"tools"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"analyze_performance"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"python scripts/analyze.py"</span><span class="fu">,</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"Analyze code performance"</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>You can also use MCP servers</strong> for database access, API integrations, and third-party services.</p>
+<hr>
+</section>
+<section id="specialized-agents" class="level2">
+<h2 class="anchored" data-anchor-id="specialized-agents">Specialized Agents</h2>
+<p>OpenCode has built-in agents:</p>
+<p><strong>Build Agent</strong></p>
+<ul>
+<li>Full access to all tools</li>
+<li>Can edit files and run bash commands</li>
+<li>Default agent for development</li>
+</ul>
+<p><strong>Plan Agent</strong></p>
+<ul>
+<li>Read-only by default</li>
+<li>All edits set to “ask” permission</li>
+<li>Good for analysis without changes</li>
+</ul>
+<p><strong>General Agent</strong></p>
+<ul>
+<li>Multi-step tasks</li>
+<li>Full tool access</li>
+<li>Invoke with <code>@general</code></li>
+</ul>
+<p><strong>Explore Agent</strong></p>
+<ul>
+<li>Fast codebase exploration</li>
+<li>Read-only</li>
+<li>Find files and search code</li>
+</ul>
+<p><strong>Create custom agents:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"agent"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"security-auditor"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"Reviews code for vulnerabilities"</span><span class="fu">,</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"mode"</span><span class="fu">:</span> <span class="st">"subagent"</span><span class="fu">,</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"model"</span><span class="fu">:</span> <span class="st">"anthropic/claude-sonnet-4"</span><span class="fu">,</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"permission"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"edit"</span><span class="fu">:</span> <span class="st">"deny"</span><span class="fu">,</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"bash"</span><span class="fu">:</span> <span class="st">"deny"</span><span class="fu">,</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"read"</span><span class="fu">:</span> <span class="st">"allow"</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Each agent can have:</p>
+<ul>
+<li>Different models</li>
+<li>Different tools</li>
+<li>Different permissions</li>
+<li>Custom skills</li>
+<li>MCP servers</li>
+</ul>
+<hr>
+</section>
+<section id="opencode-rules-agents.md" class="level2">
+<h2 class="anchored" data-anchor-id="opencode-rules-agents.md">OpenCode Rules (AGENTS.md)</h2>
+<p>Create <code>AGENTS.md</code> in your project root:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># My Project</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Architecture</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`backend/`</span> - FastAPI server</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`frontend/`</span> - React app</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`agents/`</span> - DSPy workflows</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## Standards</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>TypeScript strict mode</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>All routes in <span class="in">`backend/routes/`</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Tests required</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Context</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>This is a collaborative coding platform.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Every agent reads this on startup. They understand your project structure and conventions.</p>
+<p><strong>Types of rules:</strong></p>
+<p><strong>Project rules</strong>: <code>AGENTS.md</code> in project root</p>
+<ul>
+<li>Commits to Git</li>
+<li>Shared with team</li>
+</ul>
+<p><strong>Global rules</strong>: <code>~/.config/opencode/AGENTS.md</code></p>
+<ul>
+<li>Personal preferences</li>
+<li>Not shared</li>
+</ul>
+<p><strong>Advanced</strong>: Reference external files or remote URLs:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"instructions"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"docs/standards.md"</span><span class="ot">,</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"https://raw.githubusercontent.com/org/rules/main/style.md"</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="opencode-skills" class="level2">
+<h2 class="anchored" data-anchor-id="opencode-skills">OpenCode Skills</h2>
+<p>Skills are reusable <code>SKILL.md</code> files. Agents can load them on demand.</p>
+<p>Create skills in:</p>
+<ul>
+<li>Global: <code>~/.config/opencode/skills/</code></li>
+<li>Project: <code>.opencode/skills/</code></li>
+</ul>
+<p>Example skill:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- .opencode/skills/react-component.md --&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu"># React Component Skill</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>Create React components following our patterns:</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Functional components with hooks</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>TypeScript for props</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Tailwind for styling</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Agent loads skill:</p>
+<pre><code>@build use react-component skill to create login form</code></pre>
+<p>Good for:</p>
+<ul>
+<li>Coding patterns</li>
+<li>Project conventions</li>
+<li>Reusable workflows</li>
+</ul>
+<hr>
+</section>
+<section id="smart-planning-with-plan.md" class="level2">
+<h2 class="anchored" data-anchor-id="smart-planning-with-plan.md">Smart Planning with PLAN.md</h2>
+<p>Problem: Multiple agents working in parallel duplicate work or miss dependencies.</p>
+<p>Solution: Shared <code>PLAN.md</code> file.</p>
+<p><strong>How it works:</strong></p>
+<p>Create <code>PLAN.md</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Project Plan</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Authentication [IN PROGRESS - @build-agent-1]</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> JWT tokens</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Refresh logic (CURRENT)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Password reset</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## Frontend [BLOCKED - waiting on auth]</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Login form</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Dashboard</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Agent workflow:</strong></p>
+<p>Before work:</p>
+<ul>
+<li>Read PLAN.md</li>
+<li>Find available tasks</li>
+<li>Mark <span class="citation" data-cites="agent-name">[IN PROGRESS - @agent-name]</span></li>
+</ul>
+<p>During work:</p>
+<ul>
+<li>Complete subtask</li>
+<li>Mark [x]</li>
+<li>Add new subtasks</li>
+</ul>
+<p>After completion:</p>
+<ul>
+<li>Mark section complete</li>
+<li>Check if blocked tasks can proceed</li>
+</ul>
+<p><strong>Impact:</strong></p>
+<p>Before PLAN.md:</p>
+<ul>
+<li>40% wasted work</li>
+<li>Constant manual coordination</li>
+</ul>
+<p>After PLAN.md:</p>
+<ul>
+<li>&lt;5% wasted work</li>
+<li>90% self-coordination</li>
+</ul>
+<p><strong>Real example from my Replit clone:</strong></p>
+<p>I had agents building features out of order. Agent 1 builds auth while Agent 2 builds login UI (no endpoints exist yet).</p>
+<p>Added PLAN.md with dependencies. Agents now check what’s available and what’s blocked. Problem solved.</p>
+<hr>
+</section>
+<section id="the-impact" class="level2">
+<h2 class="anchored" data-anchor-id="the-impact">The Impact</h2>
+<p>My project timeline: 2 months with OpenCode vs 12 months without.</p>
+<p><strong>Time saved:</strong></p>
+<p><strong>Infrastructure (3 months)</strong></p>
+<ul>
+<li>LSP integration</li>
+<li>Multi-session management</li>
+<li>File operations</li>
+<li>Bash execution</li>
+</ul>
+<p>OpenCode ships all of this.</p>
+<p><strong>Coordination (6 months)</strong></p>
+<ul>
+<li>PLAN.md pattern for agent sync</li>
+<li>Multi-session for parallel work</li>
+<li>Discovering this pattern would take months</li>
+</ul>
+<p><strong>Debugging (1 month)</strong></p>
+<ul>
+<li>MLflow caught issues early</li>
+<li>Prompt optimization</li>
+<li>Performance improvements</li>
+</ul>
+<p><strong>What made the difference:</strong></p>
+<ul>
+<li>Not rebuilding mature infrastructure</li>
+<li>Programmatic control with Python</li>
+<li>Agent coordination patterns</li>
+<li>Observability from day one</li>
+</ul>
+<hr>
+</section>
+<section id="mlflow-integration" class="level2">
+<h2 class="anchored" data-anchor-id="mlflow-integration">MLflow Integration</h2>
+<p>Attach MLflow to your Python client:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> mlflow</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> OpenCodeClient:</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> invoke_agent(<span class="va">self</span>, agent, prompt, context<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">with</span> mlflow.start_run():</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Log inputs</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>            mlflow.log_param(<span class="st">"agent"</span>, agent)</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>            mlflow.log_param(<span class="st">"prompt_length"</span>, <span class="bu">len</span>(prompt))</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Call OpenCode</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>            result <span class="op">=</span> <span class="va">self</span>._call_opencode(agent, prompt, context)</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Log outputs</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>            mlflow.log_metric(<span class="st">"execution_time"</span>, result.duration)</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>            mlflow.log_metric(<span class="st">"files_modified"</span>, <span class="bu">len</span>(result.changes))</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>            mlflow.log_text(result.output, <span class="st">"output.txt"</span>)</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> result</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>What you get:</strong></p>
+<p>Real-time dashboard:</p>
+<ul>
+<li>Which agents are running</li>
+<li>What they’re working on</li>
+<li>Operation duration</li>
+<li>Success/failure rates</li>
+</ul>
+<p>Historical data:</p>
+<ul>
+<li>Slow agents</li>
+<li>Prompt optimization opportunities</li>
+<li>Debugging failures</li>
+<li>Performance trends</li>
+</ul>
+<p>Cost tracking:</p>
+<ul>
+<li>Token usage per agent</li>
+<li>Model costs per feature</li>
+<li>ROI on different approaches</li>
+</ul>
+<p><strong>My setup:</strong></p>
+<p>Use decorators for clean code:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="at">@mlflow.trace</span>(name<span class="op">=</span><span class="st">"figma_to_code"</span>, span_type<span class="op">=</span>SpanType.CHAIN)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="cf">async</span> <span class="kw">def</span> figma_to_code(figma_url):</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Automatically traced</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Key tags I track:</p>
+<ul>
+<li><code>project_name</code>, <code>figma_url</code></li>
+<li><code>model</code>, <code>provider</code></li>
+<li>Session ID for debugging</li>
+</ul>
+<hr>
+</section>
+<section id="getting-started" class="level2">
+<h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
+<ol type="1">
+<li><strong>Install OpenCode</strong></li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install <span class="at">-g</span> opencode</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol type="1">
+<li><strong>Start server</strong></li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">opencode</span> server <span class="at">--port</span> 3000</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol type="1">
+<li><strong>Create Python client</strong></li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> httpx</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> OpenCodeClient:</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, port<span class="op">=</span><span class="dv">3000</span>):</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.base_url <span class="op">=</span> <span class="ss">f"http://localhost:</span><span class="sc">{</span>port<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> invoke_agent(<span class="va">self</span>, agent, prompt, context<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>        response <span class="op">=</span> httpx.post(</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>            <span class="ss">f"</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>base_url<span class="sc">}</span><span class="ss">/api/sessions"</span>,</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>            json<span class="op">=</span>{</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>                <span class="st">"agent"</span>: agent,</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>                <span class="st">"prompt"</span>: prompt,</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>                <span class="st">"context"</span>: context</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> response.json()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol type="1">
+<li><p><strong>Set up AGENTS.md</strong> Document your project structure and conventions.</p></li>
+<li><p><strong>Configure agents</strong> Create specialized agents for different tasks.</p></li>
+<li><p><strong>Add PLAN.md</strong> For multi-agent coordination.</p></li>
+<li><p><strong>Integrate MLflow</strong> For observability and tracking.</p></li>
+</ol>
+<hr>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>OpenCode provides:</p>
+<ul>
+<li>Mature code operations (LSP, file management, multi-session)</li>
+<li>Programmatic control (run as server, control with Python)</li>
+<li>Flexible configuration (agents, tools, rules, skills)</li>
+<li>Multi-agent coordination (PLAN.md pattern)</li>
+</ul>
+<p>Why it matters:</p>
+<ul>
+<li>Don’t rebuild infrastructure</li>
+<li>Focus on your product</li>
+<li>Build custom workflows</li>
+<li>Production-ready from day one</li>
+</ul>
+<p>The architecture is what makes it different. Not just another chat interface.</p>
+<hr>
+<p><strong>Resources:</strong></p>
+<ul>
+<li>OpenCode docs: <a href="https://opencode.ai">opencode.ai</a></li>
+<li>Follow updates: <span class="citation" data-cites="AbdelkareemElk1">[@AbdelkareemElk1]</span></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const root =
+    document.querySelector("#quarto-document-content") ||
+    document.querySelector("main.content") ||
+    document.body;
+  if (!root) return;
+
+  const headings = Array.from(root.querySelectorAll("h2, h3, h4"));
+  const foldables = [];
+
+  headings.forEach((heading) => {
+    if (
+      heading.classList.contains("no-fold") ||
+      heading.closest(".toc") ||
+      heading.closest(".quarto-listing") ||
+      heading.closest(".quarto-post") ||
+      heading.classList.contains("listing-title")
+    ) {
+      return;
+    }
+
+    const level = Number.parseInt(heading.tagName.slice(1), 10);
+    const siblings = [];
+    let el = heading.nextElementSibling;
+
+    while (el) {
+      if (isBoundary(el, level)) break;
+      siblings.push(el);
+      el = el.nextElementSibling;
+    }
+
+    if (!siblings.length) return;
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "heading-fold";
+    button.setAttribute("aria-expanded", "true");
+    button.setAttribute("aria-label", "Toggle section");
+
+    const icon = document.createElement("span");
+    icon.className = "heading-fold-icon";
+    icon.setAttribute("aria-hidden", "true");
+    button.appendChild(icon);
+
+    heading.classList.add("foldable-heading");
+    heading.insertBefore(button, heading.firstChild);
+
+    const foldable = { heading, siblings, button };
+    foldables.push(foldable);
+
+    button.addEventListener("click", () => {
+      toggleFoldable(foldable, !heading.classList.contains("is-collapsed"));
+      updateControls();
+    });
+  });
+
+  if (!foldables.length) return;
+
+  const controls = document.createElement("div");
+  controls.className = "fold-controls";
+
+  const toggleAll = document.createElement("button");
+  toggleAll.type = "button";
+  toggleAll.className = "fold-controls-toggle";
+  toggleAll.setAttribute("aria-pressed", "false");
+  toggleAll.textContent = "Collapse all";
+
+  controls.appendChild(toggleAll);
+
+  const header = document.querySelector("#title-block-header");
+  if (header && header.parentElement) {
+    header.insertAdjacentElement("afterend", controls);
+  } else {
+    root.insertAdjacentElement("afterbegin", controls);
+  }
+
+  toggleAll.addEventListener("click", () => {
+    const shouldCollapse = !foldables.every((item) =>
+      item.heading.classList.contains("is-collapsed")
+    );
+    foldables.forEach((item) => toggleFoldable(item, shouldCollapse));
+    updateControls();
+  });
+
+  function toggleFoldable(item, collapse) {
+    item.heading.classList.toggle("is-collapsed", collapse);
+    item.button.setAttribute("aria-expanded", String(!collapse));
+    item.siblings.forEach((node) => node.classList.toggle("folded-section", collapse));
+  }
+
+  function updateControls() {
+    const allCollapsed = foldables.every((item) =>
+      item.heading.classList.contains("is-collapsed")
+    );
+    toggleAll.textContent = allCollapsed ? "Expand all" : "Collapse all";
+    toggleAll.setAttribute("aria-pressed", String(allCollapsed));
+  }
+
+  function isBoundary(element, level) {
+    if (element.matches("h1, h2, h3, h4, h5, h6")) {
+      return Number.parseInt(element.tagName.slice(1), 10) <= level;
+    }
+
+    if (element.matches("section")) {
+      const sectionHeading = element.querySelector(
+        ":scope > h1, :scope > h2, :scope > h3, :scope > h4, :scope > h5, :scope > h6"
+      );
+      if (sectionHeading) {
+        return Number.parseInt(sectionHeading.tagName.slice(1), 10) <= level;
+      }
+    }
+
+    return false;
+  }
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector("#title-block-header");
+  if (!header || header.querySelector(".post-hero-image")) return;
+
+  const metaImage =
+    document.querySelector('meta[property="og:image"]') ||
+    document.querySelector('meta[name="twitter:image"]');
+  const title = document.querySelector("h1.title");
+  const metaAlt =
+    document.querySelector('meta[property="og:image:alt"]') ||
+    document.querySelector('meta[name="twitter:image:alt"]');
+
+  if (!metaImage || !header.querySelector(".quarto-title-meta")) return;
+
+  const rawUrl = metaImage.getAttribute("content");
+  if (!rawUrl) return;
+
+  let imageUrl = rawUrl;
+  try {
+    const parsed = new URL(rawUrl, window.location.href);
+    if (parsed.origin !== window.location.origin) {
+      const currentDir = window.location.pathname.replace(/[^/]*$/, "");
+      if (parsed.pathname.startsWith(currentDir)) {
+        imageUrl = parsed.pathname.slice(currentDir.length);
+      } else {
+        imageUrl = parsed.pathname;
+      }
+    } else {
+      imageUrl = parsed.href;
+    }
+  } catch {
+    imageUrl = rawUrl;
+  }
+
+  const figure = document.createElement("figure");
+  figure.className = "post-hero-image";
+
+  const img = document.createElement("img");
+  img.src = imageUrl;
+  img.alt = (metaAlt && metaAlt.getAttribute("content")) || (title && title.textContent) || "Post image";
+  img.loading = "eager";
+  img.decoding = "async";
+  figure.appendChild(img);
+
+  const description = header.querySelector(".description");
+  if (description && description.parentElement) {
+    description.parentElement.insertAdjacentElement("afterend", figure);
+  } else {
+    header.insertAdjacentElement("beforeend", figure);
+  }
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+  if (connection && (connection.saveData || /2g/.test(connection.effectiveType || ""))) {
+    return;
+  }
+
+  const prefetched = new Set();
+
+  function shouldPrefetch(anchor) {
+    if (!anchor || !anchor.href) return false;
+    if (anchor.dataset.noPrefetch !== undefined) return false;
+    if (anchor.target && anchor.target !== "_self") return false;
+    if (anchor.hasAttribute("download")) return false;
+    if (anchor.rel && anchor.rel.includes("external")) return false;
+
+    const url = new URL(anchor.href, window.location.href);
+    if (url.origin !== window.location.origin) return false;
+    if (url.pathname === window.location.pathname && url.hash) return false;
+    return true;
+  }
+
+  function prefetch(href) {
+    if (prefetched.has(href)) return;
+    prefetched.add(href);
+    const link = document.createElement("link");
+    link.rel = "prefetch";
+    link.as = "document";
+    link.href = href;
+    document.head.appendChild(link);
+  }
+
+  function handleHover(event) {
+    const anchor = event.target.closest("a");
+    if (!shouldPrefetch(anchor)) return;
+    prefetch(anchor.href);
+  }
+
+  document.body.addEventListener("mouseover", handleHover, { passive: true });
+  document.body.addEventListener("touchstart", handleHover, { passive: true });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const selector =
+    ".quarto-listing .listing-actions-group, .quarto-listing .quarto-listing-filter, .quarto-listing .quarto-listing-sort, .quarto-listing .search, .quarto-listing .input-group, .quarto-listing .input-group-text";
+
+  const titleText =
+    document.querySelector("#title-block-header h1.title")?.textContent?.trim() || "";
+
+  const matchesTitle = (input) => {
+    const value = input.value?.trim() || "";
+    const placeholder = input.getAttribute("placeholder")?.trim() || "";
+    const ariaLabel = input.getAttribute("aria-label")?.trim() || "";
+    return (
+      (value && value === titleText) ||
+      (placeholder && placeholder === titleText) ||
+      (ariaLabel && ariaLabel === titleText)
+    );
+  };
+
+  const removeListingUi = (root = document) => {
+    root.querySelectorAll(selector).forEach((el) => el.remove());
+
+    const listingRoots = [];
+    if (root.matches && root.matches(".quarto-listing")) {
+      listingRoots.push(root);
+    }
+    if (root.querySelectorAll) {
+      listingRoots.push(...root.querySelectorAll(".quarto-listing"));
+    }
+
+    if (!titleText || listingRoots.length === 0) return;
+    listingRoots.forEach((listingRoot) => {
+      listingRoot
+        .querySelectorAll("input[type='text'], input[type='search']")
+        .forEach((input) => {
+          if (!input) return;
+          if (input.classList.contains("search") || matchesTitle(input)) {
+            const container =
+              input.closest(
+                ".listing-actions-group, .quarto-listing-filter, .quarto-listing-sort, .input-group"
+              ) || input;
+            container.remove();
+          }
+        });
+    });
+  };
+
+  removeListingUi();
+
+  const observer = new MutationObserver((mutations) => {
+    for (const mutation of mutations) {
+      for (const node of mutation.addedNodes) {
+        if (!(node instanceof Element)) continue;
+        if (node.matches && node.matches(selector)) {
+          node.remove();
+          continue;
+        }
+        removeListingUi(node);
+      }
+    }
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+});
+</script>
+<div class="share-buttons">
+  <span class="share-label">Share:</span>
+  <a href="#" class="share-btn share-twitter" onclick="shareTwitter()" title="Share on Twitter">
+    <svg width="18" height="18" viewbox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+  </a>
+  <a href="#" class="share-btn share-linkedin" onclick="shareLinkedIn()" title="Share on LinkedIn">
+    <svg width="18" height="18" viewbox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
+  </a>
+  <a href="#" class="share-btn share-copy" onclick="copyLink()" title="Copy link">
+    <svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+    <span class="copy-feedback">Copied!</span>
+  </a>
+</div>
+
+<script>
+function shareTwitter() {
+  const url = encodeURIComponent(window.location.href);
+  const title = encodeURIComponent(document.title);
+  window.open(`https://twitter.com/intent/tweet?url=${url}&text=${title}`, '_blank', 'width=550,height=420');
+}
+
+function shareLinkedIn() {
+  const url = encodeURIComponent(window.location.href);
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank', 'width=550,height=420');
+}
+
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const feedback = document.querySelector('.copy-feedback');
+    feedback.classList.add('show');
+    setTimeout(() => feedback.classList.remove('show'), 2000);
+  });
+}
+</script>
+
+<div class="newsletter-section">
+    <p class="newsletter-title">Get updates</p>
+    <iframe title="Subscribe to my newsletter" src="https://kareemnns.substack.com/embed" width="100%" height="150" loading="lazy" style="border: none; background: transparent" frameborder="0" scrolling="no"></iframe>
+</div>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/kareemai\.com\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<input type="hidden" id="giscus-base-theme" value="preferred_color_scheme">
+<input type="hidden" id="giscus-alt-theme" value="preferred_color_scheme">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      if (authorPrefersDark) {
+          [baseTheme, altTheme] = [altTheme, baseTheme];
+      }
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "abdelkareemkobo/kareem_site";
+    script.dataset.repoId = "R_kgDOQxY8kw";
+    script.dataset.category = "Comments";
+    script.dataset.categoryId = "DIC_kwDOQxY8k84C0aRf";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/abdelkareemkobo">
+      <i class="bi bi-github" role="img" aria-label="GitHub Profile">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://soundcloud.com/abdelkareem-elkhateb">
+      <i class="bi bi-cloud" role="img" aria-label="SoundCloud">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://kareemai.com/kareem01095134688@gmail.com">
+      <i class="bi bi-google" role="img" aria-label="Email Contact">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.upwork.com/freelancers/~016a9fea792423bb9a">
+      <i class="bi bi-bank" role="img" aria-label="Upwork Profile">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="../../../index.xml">
+      <i class="bi bi-rss" role="img" aria-label="RSS Feed">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
