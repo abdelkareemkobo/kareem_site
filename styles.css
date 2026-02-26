@@ -1665,6 +1665,75 @@ figcaption,
     color: var(--tx);
 }
 
+.callout-title-container p {
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.callout-title {
+    display: inline-block;
+}
+
+.callout-icon-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.1rem;
+    height: 1.1rem;
+    color: inherit;
+}
+
+.callout-icon {
+    display: inline-block;
+    width: 1.1rem;
+    height: 1.1rem;
+    background-color: currentColor;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+}
+
+.callout-note .callout-icon,
+.callout-info .callout-icon,
+.callout-abstract .callout-icon,
+.callout-summary .callout-icon,
+.callout-tldr .callout-icon,
+.callout-quote .callout-icon,
+.callout-example .callout-icon,
+.callout-question .callout-icon {
+    -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PGNpcmNsZSBjeD0iOCIgY3k9IjgiIHI9IjYuNSIvPjxsaW5lIHgxPSI4IiB5MT0iNyIgeDI9IjgiIHkyPSIxMSIvPjxjaXJjbGUgY3g9IjgiIGN5PSI1IiByPSIxIiBmaWxsPSJibGFjayIgc3Ryb2tlPSJub25lIi8+PC9zdmc+");
+    mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PGNpcmNsZSBjeD0iOCIgY3k9IjgiIHI9IjYuNSIvPjxsaW5lIHgxPSI4IiB5MT0iNyIgeDI9IjgiIHkyPSIxMSIvPjxjaXJjbGUgY3g9IjgiIGN5PSI1IiByPSIxIiBmaWxsPSJibGFjayIgc3Ryb2tlPSJub25lIi8+PC9zdmc+");
+}
+
+.callout-tip .callout-icon,
+.callout-todo .callout-icon,
+.callout-hint .callout-icon,
+.callout-success .callout-icon {
+    -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0zIDguNWwzIDMgNy03Ii8+PC9zdmc+");
+    mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0zIDguNWwzIDMgNy03Ii8+PC9zdmc+");
+}
+
+.callout-warning .callout-icon,
+.callout-caution .callout-icon,
+.callout-attention .callout-icon {
+    -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTggMmw2IDExSDJ6Ii8+PGxpbmUgeDE9IjgiIHkxPSI2IiB4Mj0iOCIgeTI9IjEwIi8+PGNpcmNsZSBjeD0iOCIgY3k9IjEyLjIiIHI9IjAuOCIgZmlsbD0iYmxhY2siIHN0cm9rZT0ibm9uZSIvPjwvc3ZnPg==");
+    mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTggMmw2IDExSDJ6Ii8+PGxpbmUgeDE9IjgiIHkxPSI2IiB4Mj0iOCIgeTI9IjEwIi8+PGNpcmNsZSBjeD0iOCIgY3k9IjEyLjIiIHI9IjAuOCIgZmlsbD0iYmxhY2siIHN0cm9rZT0ibm9uZSIvPjwvc3ZnPg==");
+}
+
+.callout-important .callout-icon,
+.callout-danger .callout-icon,
+.callout-bug .callout-icon,
+.callout-error .callout-icon,
+.callout-failure .callout-icon {
+    -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PGNpcmNsZSBjeD0iOCIgY3k9IjgiIHI9IjYuNSIvPjxsaW5lIHgxPSI4IiB5MT0iNC41IiB4Mj0iOCIgeTI9IjkuNSIvPjxjaXJjbGUgY3g9IjgiIGN5PSIxMS41IiByPSIwLjgiIGZpbGw9ImJsYWNrIiBzdHJva2U9Im5vbmUiLz48L3N2Zz4=");
+    mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PGNpcmNsZSBjeD0iOCIgY3k9IjgiIHI9IjYuNSIvPjxsaW5lIHgxPSI4IiB5MT0iNC41IiB4Mj0iOCIgeTI9IjkuNSIvPjxjaXJjbGUgY3g9IjgiIGN5PSIxMS41IiByPSIwLjgiIGZpbGw9ImJsYWNrIiBzdHJva2U9Im5vbmUiLz48L3N2Zz4=");
+}
+
 .callout .callout-body {
     color: var(--tx-2);
 }
@@ -1688,6 +1757,80 @@ figcaption,
 .callout-important {
     border-color: hsl(0 70% 55% / 0.4);
     background: hsl(0 70% 55% / 0.12);
+}
+
+.callout-info,
+.callout-abstract,
+.callout-summary,
+.callout-tldr,
+.callout-quote,
+.callout-example,
+.callout-question {
+    border-color: hsl(var(--accent-hsl) / 0.35);
+    background: hsl(var(--accent-hsl) / 0.08);
+}
+
+.callout-todo,
+.callout-hint,
+.callout-success {
+    border-color: hsl(150 45% 45% / 0.4);
+    background: hsl(150 45% 45% / 0.12);
+}
+
+.callout-attention,
+.callout-caution {
+    border-color: hsl(35 80% 45% / 0.4);
+    background: hsl(35 80% 45% / 0.12);
+}
+
+.callout-danger,
+.callout-bug,
+.callout-error,
+.callout-failure {
+    border-color: hsl(0 70% 55% / 0.4);
+    background: hsl(0 70% 55% / 0.12);
+}
+
+.callout-collapsible .callout-title-container {
+    cursor: pointer;
+}
+
+.callout-fold {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin-right: 0.25rem;
+    border: 1px solid var(--ui);
+    border-radius: 6px;
+    background: transparent;
+    color: inherit;
+    padding: 0;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.callout-fold:hover {
+    border-color: var(--ui-2);
+}
+
+.callout-fold-icon {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid currentColor;
+    transform: rotate(0deg);
+    transition: transform 0.2s ease;
+}
+
+.callout-collapsed .callout-fold-icon {
+    transform: rotate(-90deg);
+}
+
+.callout-collapsed .callout-body {
+    display: none;
 }
 
 /* Blockquotes */

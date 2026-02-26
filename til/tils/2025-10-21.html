@@ -1060,6 +1060,58 @@ document.addEventListener("DOMContentLoaded", () => {
   observer.observe(document.body, { childList: true, subtree: true });
 });
 </script>
+<script>
+(function () {
+  function setupCallout(callout) {
+    var fold = callout.getAttribute("data-callout-fold");
+    if (!fold) return;
+
+    var title = callout.querySelector(".callout-title-container");
+    if (!title) return;
+
+    callout.classList.add("callout-collapsible");
+
+    var button = document.createElement("button");
+    button.type = "button";
+    button.className = "callout-fold";
+    button.setAttribute("aria-label", "Toggle callout");
+
+    var icon = document.createElement("span");
+    icon.className = "callout-fold-icon";
+    icon.setAttribute("aria-hidden", "true");
+
+    button.appendChild(icon);
+    title.insertBefore(button, title.firstChild);
+
+    function setCollapsed(isCollapsed) {
+      callout.classList.toggle("callout-collapsed", isCollapsed);
+      button.setAttribute("aria-expanded", String(!isCollapsed));
+    }
+
+    var startCollapsed = fold === "-";
+    setCollapsed(startCollapsed);
+
+    function toggleFromUI() {
+      setCollapsed(!callout.classList.contains("callout-collapsed"));
+    }
+
+    button.addEventListener("click", function (event) {
+      event.stopPropagation();
+      toggleFromUI();
+    });
+
+    title.addEventListener("click", function (event) {
+      if (event.target === button || button.contains(event.target)) return;
+      toggleFromUI();
+    });
+  }
+
+  var callouts = document.querySelectorAll('.callout[data-callout-fold]');
+  for (var i = 0; i < callouts.length; i++) {
+    setupCallout(callouts[i]);
+  }
+})();
+</script>
 <div class="share-buttons">
   <span class="share-label">Share:</span>
   <a href="#" class="share-btn share-twitter" onclick="shareTwitter()" title="Share on Twitter">

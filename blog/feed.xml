@@ -15,7 +15,113 @@
 <link>https://kareemai.com/blog/feed.html</link>
 </image>
 <generator>quarto-1.8.27</generator>
-<lastBuildDate>Wed, 18 Feb 2026 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 25 Feb 2026 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>Building SEO RAT: A Free, Open-Source SEO Tool</title>
+  <dc:creator>kareem </dc:creator>
+  <link>https://kareemai.com/blog/posts/seo/seo_rat_journey.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="what-is-seo" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-seo">What is SEO?</h2>
+<p>SEO is search engine optimization: the practice of enhancing your website to increase its ranking and visibility in search engines like Google and Bing without paying money, unlike ads.</p>
+<p><strong>Key Components of SEO</strong></p>
+<ol type="1">
+<li><strong>On-Page SEO</strong>: Creating high-quality and relevant content that helps users and incorporates keywords that match user intent.</li>
+<li><strong>Off-Page SEO</strong>: Building authority and popularity through backlinks from other reputable websites.</li>
+<li><strong>Technical SEO</strong>: Improving website structure, speed, mobile-friendliness, and indexing to help search engines crawl the site effectively.</li>
+</ol>
+<section id="why-is-seo-important" class="level3">
+<h3 class="anchored" data-anchor-id="why-is-seo-important">Why is SEO Important?</h3>
+<p>If you do SEO correctly, you can get organic traffic for your website, which is important for making your brand or product visible without paying money.</p>
+<div class="callout callout-note" data-callout="note">
+<div class="callout-title-container">
+<p><span class="callout-icon-container"><span class="callout-icon"></span></span><span class="callout-title">LLMs Can Cite Your Website</span></p>
+</div>
+<div class="callout-body">
+<p>Good SEO will make popular LLMs cite your site and provide information based on your content.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="why-building-seo-tool" class="level2">
+<h2 class="anchored" data-anchor-id="why-building-seo-tool">Why Building SEO Tool?</h2>
+<p>I am an AI developer and have done SEO in my college years as a passive income source. I have some SEO websites that generate income:</p>
+<ol type="1">
+<li><a href="https://awazly.com">شركة عزل اسطح بجدة</a></li>
+<li><a href="http://www.protienai.com/">متجر مكملات غذائية</a></li>
+<li><a href="https://gpuvec.com/">GPU Pricing Compare</a></li>
+</ol>
+<p>Each of these websites is from a different sector and purpose. After some time working on optimizing them using <strong>Google Search Console</strong>, I found that doing good SEO is not an easy task and it’s more than just having content.</p>
+<p>I also found that most SEO tools are cloud solutions with very high pricing compared to what a developer, blogger, or most people can afford — and the value from them is not that much! The hard and important work is still missing.</p>
+</section>
+<section id="building-seo-rat" class="level2">
+<h2 class="anchored" data-anchor-id="building-seo-rat">Building SEO RAT</h2>
+<p>I will be building SEO_RAT, an SEO tool that really works and helps you based on real gains and guidelines.</p>
+<p>My main focus will be to have the following features:</p>
+<ol type="1">
+<li>Getting real benefits from Google Search Console, not just quick overviews</li>
+<li>Smart and helpful visualizations</li>
+<li>Rank Tracker</li>
+<li>Competitor Analysis</li>
+<li>Audit (Technical + On-Page SEO)</li>
+<li>Smart indexing for pages</li>
+<li>Keyword analysis (using NLP and LLMs)
+<ol type="1">
+<li>Semantic Search</li>
+<li>Keyword Stuffing Detection</li>
+<li>Extract user queries</li>
+</ol></li>
+</ol>
+<p>…and much more features that will all be free and open source.</p>
+<div class="callout callout-note callout-todo" data-callout="todo">
+<div class="callout-title-container">
+<p><span class="callout-icon-container"><span class="callout-icon"></span></span><span class="callout-title">How would you know if its working!</span></p>
+</div>
+<div class="callout-body">
+<p>I will be testing the tool in my websites first before giving and words about it’s performance.</p>
+</div>
+</div>
+</section>
+<section id="seo_rat-creator" class="level2">
+<h2 class="anchored" data-anchor-id="seo_rat-creator">SEO_RAT Creator</h2>
+<div class="callout callout-note callout-question" data-callout="question">
+<div class="callout-title-container">
+<p><span class="callout-icon-container"><span class="callout-icon"></span></span><span class="callout-title">Who am I?</span></p>
+</div>
+<div class="callout-body">
+<p><a href="https://kareemai.com/">Kareem Elkhateb</a> Arabic NLP Researcher. I love crafting Ideas and see them help others.</p>
+</div>
+</div>
+<p>You can find the GitHub repo here: <a href="https://github.com/abdelkareemkobo/seo_rat">SEO_RAT</a></p>
+<p>My tech stack for this project is:</p>
+<ol type="1">
+<li>Python (functional style)</li>
+<li>Solveit</li>
+<li>fastcore, nbdev, and Jeremy’s style (I hope!)</li>
+<li>FastHTML</li>
+</ol>
+<p>If you find any design issues or have suggestions, I’d be happy to hear from you!</p>
+<p><strong>This is my attempt at building in public.</strong></p>
+
+
+</section>
+
+ ]]></description>
+  <category>blogging</category>
+  <category>til</category>
+  <category>blog/build/project</category>
+  <category>seo</category>
+  <category>ai</category>
+  <category>ads</category>
+  <guid>https://kareemai.com/blog/posts/seo/seo_rat_journey.html</guid>
+  <pubDate>Wed, 25 Feb 2026 22:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/blog/posts/seo/images/seo_rat.jpeg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>OpenCode: Why It’s Different and How to Use It with Python</title>
   <dc:creator>kareem </dc:creator>
@@ -9101,169 +9207,6 @@ Media Manager</code></pre>
   <guid>https://kareemai.com/blog/posts/life_style/protienai.html</guid>
   <pubDate>Tue, 07 Jan 2025 22:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/life_style/images/proteinai.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>What is Federated Learning</title>
-  <link>https://kareemai.com/blog/posts/fl/what_is_federated_learning.html</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>You’re on a mission to create the purest, sweetest, and healthiest honey in the world. As a mad scientist, you want to improve your beehive’s efficiency and ensure no one can steal your secret recipe for magic honey.<br>
-After researching how to set up your beehive system—how the bees should communicate, and where to collect nectar in a protected way to guard against wasps that want to steal your honey and harm your beehive—you discover that a Federated Beehive could meet all your needs. However, it adds complexity to your system and requires a new mindset.</p>
-<section id="traditional-ml-systems-centralized" class="level2">
-<h2 class="anchored" data-anchor-id="traditional-ml-systems-centralized">Traditional ML Systems (Centralized)</h2>
-<p>In centralized systems, you collect flowers into your beehive and start processing them to create honey, which is not secure since people will know the type of flower on its way.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/fl/images/centralized_learning.png" class="img-fluid figure-img"></p>
-<figcaption>centralized Learning</figcaption>
-</figure>
-</div>
-<p>In centralized systems, we aggregate data from multiple sources into a specific center where training occurs, consuming significant bandwidth and moving user data off their devices.</p>
-</section>
-<section id="federated-learning-decentralized" class="level2">
-<h2 class="anchored" data-anchor-id="federated-learning-decentralized">Federated Learning (Decentralized)</h2>
-<p>In FL, your bees visit different types of flowers to collect nectar and bring it back to your beehive in a fast and efficient way. The nectar is covered in a protective container to prevent the scent from attracting dark wasps and others in the world. While this approach is secure and efficient, it requires more overhead in managing bee communication globally, combining diverse nectar, and handling potential issues like poisoned nectar that could harm your entire honey supply.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/fl/images/federate_learning.png" class="img-fluid figure-img"></p>
-<figcaption>federated learning</figcaption>
-</figure>
-</div>
-</section>
-<section id="introduction-to-federated-learning" class="level2">
-<h2 class="anchored" data-anchor-id="introduction-to-federated-learning">Introduction to Federated Learning</h2>
-<p><strong>Definition:</strong> Federated Learning (FL) enables machine learning models on distributed data by moving the training to the data, instead of transferring data to the training center.</p>
-<p>FL was first developed by Google in 2016 for their Gboard application, which uses a user’s typing history to suggest corrections and predict upcoming words while preserving user data privacy.</p>
-<p>The idea is as follows: distribute our model across Android users’ applications, train their data locally on their phones, and then aggregate the knowledge each user has learned using aggregation algorithms like FedAvg to combine the updates into a single global model.</p>
-<p>This process must be repeated for multiple rounds to allow the model to learn from these small updates.</p>
-</section>
-<section id="honey-with-multiple-flavors" class="level2">
-<h2 class="anchored" data-anchor-id="honey-with-multiple-flavors">Honey with Multiple Flavors</h2>
-<p>We decided to offer honey jars with multiple flavors based on the flower types from which nectar was collected. We’ll create a base flavor that everyone recognizes, plus special flavors with unique ingredients—some containing vitamin C, others a dose of caffeine.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/fl/images/multiple_honey_flavors.png" class="img-fluid figure-img"></p>
-<figcaption>Personalization in Federated Learning</figcaption>
-</figure>
-</div>
-<p>In FL, this is called <strong>personalization</strong>. It can be seen as fine-tuning our global model (the base taste) with local data (special flowers) to meet specific needs.<br>
-Since these unique flavors are likely to appeal only to certain local customers, they won’t be as popular with all customers compared to the base taste.</p>
-<p>Our personalized model will excel on local data but may underperform on general data due to increased bias from fine-tuning.</p>
-<p>An FL system allows us to manage the trade-off between user-specific preferences and generalization.</p>
-</section>
-<section id="horizontal-and-vertical-fl" class="level2">
-<h2 class="anchored" data-anchor-id="horizontal-and-vertical-fl">Horizontal and Vertical FL</h2>
-<p>There are two types of FL: Horizontal (homogeneous) FL and Vertical (heterogeneous) FL.</p>
-<section id="horizontal-federated-learning" class="level3">
-<h3 class="anchored" data-anchor-id="horizontal-federated-learning">Horizontal Federated Learning</h3>
-<p>Imagine our bees extracting nectar from the same type of flower in different places and in various quantities.</p>
-<p>An example of horizontal FL is the Gboard application, where local training on phones uses identical data formats with unique content reflecting the user’s typing history.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/fl/images/horizontal_fl.png" class="img-fluid figure-img"></p>
-<figcaption>Horizontal Federated Learning</figcaption>
-</figure>
-</div>
-</section>
-<section id="vertical-federated-learning" class="level3">
-<h3 class="anchored" data-anchor-id="vertical-federated-learning">Vertical Federated Learning</h3>
-<p>For a new honey type, we instruct our bees to collect nectar from different plants with unique characteristics, creating a distinctive honey.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/fl/images/vertical_fl.png" class="img-fluid figure-img"></p>
-<figcaption>Vertical Federated Learning</figcaption>
-</figure>
-</div>
-</section>
-</section>
-<section id="why-fl-instead-of-centralized-machine-learning" class="level2">
-<h2 class="anchored" data-anchor-id="why-fl-instead-of-centralized-machine-learning">Why FL instead of Centralized Machine Learning?</h2>
-<ol type="1">
-<li><strong>Centralized Learning</strong> lacks security, making FL essential for industries like banking and healthcare.</li>
-<li><strong>Private data</strong> availability surpasses public data, offering more insights and patterns to uncover new abilities.</li>
-<li><strong>User preference:</strong> Some users expect that no data will leave their device. For example, entering passwords or credit card information should not send those details to a keyboard app’s server. This use case led to FL’s development.</li>
-<li><strong>Regulations:</strong> Various data privacy laws (GDPR, CCPA, etc.) protect sensitive data from being transferred. Regulations may even prohibit organizations from merging their users’ data across different countries.</li>
-<li><strong>Reduced Compute Costs:</strong> Centralized ML with large datasets demands high computational resources, limited by individual machine performance.</li>
-<li><strong>Faster Training:</strong> With FL, models can train immediately after receiving data, providing users with faster, more responsive solutions.</li>
-</ol>
-</section>
-<section id="are-we-running-out-of-training-data-for-genai" class="level2">
-<h2 class="anchored" data-anchor-id="are-we-running-out-of-training-data-for-genai">Are We Running Out of Training Data for GenAI?</h2>
-<p>Most LLMs are trained on publicly available web data, but there’s a need for diverse data across modalities (text, images, audio, video). LLM architectures are similar, but the data they are trained or fine-tuned on is crucial. FL can help by enabling training on:</p>
-<ol type="1">
-<li>Private data
-<ul>
-<li>Phones</li>
-<li>Emails</li>
-</ul></li>
-<li>Regulated data
-<ul>
-<li>Financial</li>
-<li>Legal</li>
-</ul></li>
-<li>Sensitive data
-<ul>
-<li>Doorbell camera images</li>
-<li>Medical</li>
-</ul></li>
-<li>Isolated data
-<ul>
-<li>Manufacturing</li>
-<li>Automotive</li>
-</ul></li>
-</ol>
-</section>
-<section id="wasps-attacking-your-data" class="level2">
-<h2 class="anchored" data-anchor-id="wasps-attacking-your-data">Wasps Attacking Your Data</h2>
-<p>Federated Learning minimizes data exposure, but gaps in federated systems still need secure solutions.</p>
-<section id="privacy-attacks-on-federated-systems" class="level3">
-<h3 class="anchored" data-anchor-id="privacy-attacks-on-federated-systems">Privacy Attacks on Federated Systems</h3>
-<ul>
-<li><strong>Membership Inference Attack:</strong> Identifies whether specific data samples were used in training.</li>
-<li><strong>Attribute Inference Attack:</strong> Infers unseen attributes of training data.</li>
-<li><strong>Reconstruction Attack:</strong> Reconstructs specific training data samples.</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/fl/images/privacy_attack.png" class="img-fluid figure-img"></p>
-<figcaption>Privacy Attacks on Federated Learning</figcaption>
-</figure>
-</div>
-<p>We’ll explore different types of FL attacks and create defenses in a future blog post.</p>
-</section>
-<section id="references" class="level3">
-<h3 class="anchored" data-anchor-id="references">References</h3>
-<p>In upcoming posts, I will explain the components of Federated Learning in greater detail, including math, code, and more beekeeping analogies.</p>
-<ol type="1">
-<li><a href="https://flower.ai/docs/framework/tutorial-series-what-is-federated-learning.html#Challenges-of-classical-machine-learning">Flower Framework</a></li>
-</ol>
-<hr>
-</section>
-<section id="internal-resources" class="level3">
-<h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
-<p>If you’re interested in more about AI engineering and my research, explore these sections:</p>
-<ul>
-<li><a href="../../../papers.html">My Research Papers</a></li>
-<li><a href="../../../oss/opensource.html">Open Source Contributions</a></li>
-<li><a href="../../../til/index.html">Today I Learned: AI Notes</a></li>
-<li><a href="../../../blog/feed.html">Arabic NLP Blog Posts</a></li>
-</ul>
-
-
-</section>
-</section>
-
- ]]></description>
-  <category>blogging</category>
-  <category>publish</category>
-  <category>fl</category>
-  <guid>https://kareemai.com/blog/posts/fl/what_is_federated_learning.html</guid>
-  <pubDate>Mon, 11 Nov 2024 22:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/fl/images/federate_learning.png" medium="image" type="image/png" height="151" width="144"/>
 </item>
 </channel>
 </rss>
