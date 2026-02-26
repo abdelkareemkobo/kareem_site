@@ -109,6 +109,7 @@ format:
       description: "Kareem Elkhateb personal site, a blog about machine learning, deep learning, Web development with Astro.js, FastAPI, also Arabic Natural Language Processing and Rust language."
       robots: "index, follow"
     filters:
+      - obsidian-callout.lua
       - _extensions/jsonld/jsonld.lua
     reference-location: document
     include-in-header:
@@ -118,6 +119,7 @@ format:
       - _includes/post-hero-image.html
       - _includes/prefetch.html
       - _includes/listing-cleanup.html
+      - _includes/obsidian-callout-fold.html
     theme:
       light: spacelab
       dark: cyborg
