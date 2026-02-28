@@ -8,9 +8,9 @@
 
 <meta name="author" content="Kareem">
 <meta name="dcterms.date" content="2025-05-20">
-<meta name="description" content="A guide to moving domains from Hostinger to Porkbun and connecting them with Vercel, Railway, and Cloudflare for better web management.">
+<meta name="description" content="Connect Porkbun domains to Vercel via DNS records and Cloudflare for Railway. Complete steps for domain transfers, WHOIS privacy setup, and DNS propagation troubleshooting.">
 
-<title>Domain Migration: Connecting Railway, Vercel, and Cloudflare – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
+<title>How to Connect Porkbun Domains to Vercel and Cloudflare (Step-by-Step) – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -85,13 +85,13 @@ gtag('js', new Date());
 gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 </script>
 <!-- Fonts are embedded locally via shimmering-fonts.css -->
-<meta property="og:title" content="Domain Migration: Connecting Railway, Vercel, and Cloudflare – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
-<meta property="og:description" content="A guide to moving domains from Hostinger to Porkbun and connecting them with Vercel, Railway, and Cloudflare for better web management.">
+<meta property="og:title" content="How to Connect Porkbun Domains to Vercel and Cloudflare (Step-by-Step) – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta property="og:description" content="Connect Porkbun domains to Vercel via DNS records and Cloudflare for Railway. Complete steps for domain transfers, WHOIS privacy setup, and DNS propagation troubleshooting.">
 <meta property="og:image" content="https://kareemai.com/til/tils/til.jpg">
 <meta property="og:site_name" content="Abdelkareem Elkhateb">
 <meta property="og:locale" content="en_US">
-<meta name="twitter:title" content="Domain Migration: Connecting Railway, Vercel, and Cloudflare – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
-<meta name="twitter:description" content="A guide to moving domains from Hostinger to Porkbun and connecting them with Vercel, Railway, and Cloudflare for better web management.">
+<meta name="twitter:title" content="How to Connect Porkbun Domains to Vercel and Cloudflare (Step-by-Step) – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta name="twitter:description" content="Connect Porkbun domains to Vercel via DNS records and Cloudflare for Railway. Complete steps for domain transfers, WHOIS privacy setup, and DNS propagation troubleshooting.">
 <meta name="twitter:image" content="https://kareemai.com/til/tils/til.jpg">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary_large_image">
@@ -274,8 +274,8 @@ window.addEventListener('scroll', () => {
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Domain Migration: Connecting Railway, Vercel, and Cloudflare",
-  "description": "A guide to moving domains from Hostinger to Porkbun and connecting them with Vercel, Railway, and Cloudflare for better web management.",
+  "headline": "How to Connect Porkbun Domains to Vercel and Cloudflare (Step-by-Step)",
+  "description": "Connect Porkbun domains to Vercel via DNS records and Cloudflare for Railway. Complete steps for domain transfers, WHOIS privacy setup, and DNS propagation troubleshooting.",
   "author": {"@type": "Person", "name": "Kareem"},
   "datePublished": "May 20, 2025",
   "publisher": {
@@ -377,10 +377,21 @@ window.addEventListener('scroll', () => {
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#moving-my-domains" id="toc-moving-my-domains" class="nav-link active" data-scroll-target="#moving-my-domains">Moving My Domains</a>
+  <li><a href="#quick-faq-your-domain-setup-questions-answered" id="toc-quick-faq-your-domain-setup-questions-answered" class="nav-link active" data-scroll-target="#quick-faq-your-domain-setup-questions-answered">Quick FAQ: Your Domain Setup Questions Answered</a></li>
+  <li><a href="#managing-whois-privacy-during-transfer" id="toc-managing-whois-privacy-during-transfer" class="nav-link" data-scroll-target="#managing-whois-privacy-during-transfer">Managing WHOIS Privacy During Transfer</a></li>
+  <li><a href="#moving-my-domains" id="toc-moving-my-domains" class="nav-link" data-scroll-target="#moving-my-domains">Moving My Domains</a>
   <ul class="collapse">
   <li><a href="#moving-from-hostinger-to-porkbun" id="toc-moving-from-hostinger-to-porkbun" class="nav-link" data-scroll-target="#moving-from-hostinger-to-porkbun">Moving from Hostinger to Porkbun</a></li>
-  <li><a href="#connecting-railway-and-vercel-with-porkbun" id="toc-connecting-railway-and-vercel-with-porkbun" class="nav-link" data-scroll-target="#connecting-railway-and-vercel-with-porkbun">Connecting Railway and Vercel with Porkbun</a></li>
+  </ul></li>
+  <li><a href="#connecting-your-domain-vercel-railway-and-cloudflare-setup" id="toc-connecting-your-domain-vercel-railway-and-cloudflare-setup" class="nav-link" data-scroll-target="#connecting-your-domain-vercel-railway-and-cloudflare-setup">Connecting Your Domain: Vercel, Railway, and Cloudflare Setup</a>
+  <ul class="collapse">
+  <li><a href="#connecting-porkbun-domains-to-vercel" id="toc-connecting-porkbun-domains-to-vercel" class="nav-link" data-scroll-target="#connecting-porkbun-domains-to-vercel">Connecting Porkbun Domains to Vercel</a></li>
+  <li><a href="#using-cloudflare-with-vercel-and-porkbun" id="toc-using-cloudflare-with-vercel-and-porkbun" class="nav-link" data-scroll-target="#using-cloudflare-with-vercel-and-porkbun">Using Cloudflare with Vercel and Porkbun</a></li>
+  <li><a href="#setting-up-railway-with-cloudflare" id="toc-setting-up-railway-with-cloudflare" class="nav-link" data-scroll-target="#setting-up-railway-with-cloudflare">Setting Up Railway with Cloudflare</a></li>
+  <li><a href="#troubleshooting-railway-waiting-for-dns-update" id="toc-troubleshooting-railway-waiting-for-dns-update" class="nav-link" data-scroll-target="#troubleshooting-railway-waiting-for-dns-update">Troubleshooting: “Railway Waiting for DNS Update”</a></li>
+  </ul></li>
+  <li><a href="#why-i-switched-from-hostinger-to-porkbun" id="toc-why-i-switched-from-hostinger-to-porkbun" class="nav-link" data-scroll-target="#why-i-switched-from-hostinger-to-porkbun">Why I Switched from Hostinger to Porkbun</a>
+  <ul class="collapse">
   <li><a href="#internal-resources" id="toc-internal-resources" class="nav-link" data-scroll-target="#internal-resources">Internal Resources</a></li>
   </ul></li>
   </ul>
@@ -392,7 +403,7 @@ window.addEventListener('scroll', () => {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Domain Migration: Connecting Railway, Vercel, and Cloudflare</h1>
+<h1 class="title">How to Connect Porkbun Domains to Vercel and Cloudflare (Step-by-Step)</h1>
   <div class="quarto-categories">
     <div class="quarto-category">blogging</div>
     <div class="quarto-category">til</div>
@@ -406,7 +417,7 @@ window.addEventListener('scroll', () => {
 
 <div>
   <div class="description">
-    A guide to moving domains from Hostinger to Porkbun and connecting them with Vercel, Railway, and Cloudflare for better web management.
+    Connect Porkbun domains to Vercel via DNS records and Cloudflare for Railway. Complete steps for domain transfers, WHOIS privacy setup, and DNS propagation troubleshooting.
   </div>
 </div>
 
@@ -435,6 +446,22 @@ window.addEventListener('scroll', () => {
 </header>
 
 
+<section id="quick-faq-your-domain-setup-questions-answered" class="level2">
+<h2 class="anchored" data-anchor-id="quick-faq-your-domain-setup-questions-answered">Quick FAQ: Your Domain Setup Questions Answered</h2>
+<p><strong>Does Porkbun use Cloudflare?</strong> No, Porkbun is a domain registrar; Cloudflare is a DNS provider. You can use Porkbun’s built-in DNS <em>or</em> point Porkbun domains to Cloudflare’s nameservers for additional features (SSL, DDoS protection, faster propagation).</p>
+<p><strong>How do I connect a Porkbun domain to Vercel?</strong> Add DNS records from Vercel to Porkbun’s DNS Management section. For Cloudflare routing: point Porkbun’s nameservers to Cloudflare, then add DNS records in Cloudflare.</p>
+<p><strong>Why is Railway waiting for DNS updates?</strong> DNS changes can take 1-2 days to propagate globally. If it’s been longer, check that you’ve added the correct Records in Cloudflare and saved them.</p>
+<p><strong>Can I migrate from Hostinger easily?</strong> Yes—disable WHOIS Privacy and Transfer Lock, get your Authorization Code, and submit to the new registrar (Porkbun).</p>
+<hr>
+</section>
+<section id="managing-whois-privacy-during-transfer" class="level2">
+<h2 class="anchored" data-anchor-id="managing-whois-privacy-during-transfer">Managing WHOIS Privacy During Transfer</h2>
+<p>One critical setting often overlooked: <strong>WHOIS Privacy Protection</strong> (also called “Domain Privacy” in Vercel context).</p>
+<p><strong>Before transferring from Hostinger:</strong> 1. Disable Privacy Protection (WHOIS Privacy)—this is required for the transfer 2. Wait for the status to update (usually instant, sometimes 12 hours) 3. Don’t re-enable WHOIS Privacy until after the transfer completes</p>
+<p>With Porkbun, you can re-enable Domain Privacy after the transfer is complete for privacy protection.</p>
+<p><strong>Why this matters</strong>: Vercel users often ask about WHOIS privacy—Vercel doesn’t manage WHOIS directly, but your registrar does. Keep this enabled for privacy unless you need your contact info public.</p>
+<hr>
+</section>
 <section id="moving-my-domains" class="level2">
 <h2 class="anchored" data-anchor-id="moving-my-domains">Moving My Domains</h2>
 <p>I decided to transfer all 11 of my domains from Hostinger to other providers. I consulted two friends—a team lead in Canada and an SEO specialist in Turkey—and both recommended Porkbun.</p>
@@ -456,18 +483,57 @@ window.addEventListener('scroll', () => {
 <p>If your domain is older than 60 days, the transfer typically takes 5 to 7 days. Some domains may transfer in as little as 2 days, but Hostinger will send a verification request via email to confirm the transfer.</p>
 <p>Note: If your domain is less than 60 days old, you’ll need to wait until it passes the 60-day mark. There’s talk of this being reduced to 30 days, but as of this writing (May 2025), the 60-day rule applies, per ICANN regulations, not Hostinger or Porkbun.</p>
 </section>
-<section id="connecting-railway-and-vercel-with-porkbun" class="level3">
-<h3 class="anchored" data-anchor-id="connecting-railway-and-vercel-with-porkbun">Connecting Railway and Vercel with Porkbun</h3>
-<p>Connecting a domain to Vercel is straightforward. Follow the instructions provided by Vercel, which are similar to those for any registrar. Add the necessary DNS records in Porkbun’s <strong>DNS Management</strong> section, accessible from the domain management dashboard under your account menu.</p>
-<p>Connecting to Railway was trickier. I needed an intermediary, and I chose Cloudflare to manage my Porkbun domain’s DNS. Here’s how it worked:</p>
+</section>
+<section id="connecting-your-domain-vercel-railway-and-cloudflare-setup" class="level2">
+<h2 class="anchored" data-anchor-id="connecting-your-domain-vercel-railway-and-cloudflare-setup">Connecting Your Domain: Vercel, Railway, and Cloudflare Setup</h2>
+<section id="connecting-porkbun-domains-to-vercel" class="level3">
+<h3 class="anchored" data-anchor-id="connecting-porkbun-domains-to-vercel">Connecting Porkbun Domains to Vercel</h3>
+<p>Connecting a domain to Vercel is straightforward:</p>
 <ol type="1">
-<li><p>Configure Cloudflare to manage your Porkbun domain.</p></li>
-<li><p>Add the necessary Railway DNS records to Cloudflare.</p></li>
-<li><p>Wait approximately 1 to 2 days for the DNS changes to propagate.</p></li>
+<li>In Vercel’s dashboard, add your domain from Porkbun</li>
+<li>Vercel shows you the DNS records to add</li>
+<li>Go to Porkbun’s <strong>DNS Management</strong> section (from domain dashboard)</li>
+<li>Add the records Vercel specifies</li>
+<li>Wait 5-30 minutes for verification</li>
 </ol>
-<p>Once the DNS updates are complete, your domain should work seamlessly with Railway.</p>
+</section>
+<section id="using-cloudflare-with-vercel-and-porkbun" class="level3">
+<h3 class="anchored" data-anchor-id="using-cloudflare-with-vercel-and-porkbun">Using Cloudflare with Vercel and Porkbun</h3>
+<p>If you want Cloudflare’s features (DDoS protection, SSL, faster DNS):</p>
+<ol type="1">
+<li>Add your Porkbun domain to Cloudflare</li>
+<li>Cloudflare shows you their nameservers</li>
+<li>In Porkbun, update your domain’s nameservers to point to Cloudflare’s</li>
+<li>Add your Vercel DNS records <em>inside Cloudflare</em> (not Porkbun)</li>
+<li>Wait for nameserver propagation (1-2 hours typical, up to 48 hours)</li>
+</ol>
+</section>
+<section id="setting-up-railway-with-cloudflare" class="level3">
+<h3 class="anchored" data-anchor-id="setting-up-railway-with-cloudflare">Setting Up Railway with Cloudflare</h3>
+<p>Railway also needs DNS records, but your domain needs to work with both Vercel <em>and</em> Railway:</p>
+<ol type="1">
+<li>Configure Cloudflare to manage your Porkbun domain (change nameservers in Porkbun)</li>
+<li>Add Railway’s DNS records to Cloudflare (not Porkbun directly)</li>
+<li>Add Vercel’s DNS records to Cloudflare as well</li>
+<li>Both services now use Cloudflare’s DNS</li>
+</ol>
+</section>
+<section id="troubleshooting-railway-waiting-for-dns-update" class="level3">
+<h3 class="anchored" data-anchor-id="troubleshooting-railway-waiting-for-dns-update">Troubleshooting: “Railway Waiting for DNS Update”</h3>
+<p>If you see this message:</p>
+<ol type="1">
+<li><strong>Check propagation</strong>: Use <a href="https://www.whatsmydns.net">whatsmydns.net</a> to verify your DNS records globally</li>
+<li><strong>Wait longer</strong>: DNS changes can take 1-2 business days to fully propagate</li>
+<li><strong>Verify records in Cloudflare</strong>: Make sure you added the exact records Railway specified</li>
+<li><strong>Check nameservers</strong>: Ensure Porkbun’s nameservers still point to Cloudflare (not reverted)</li>
+<li><strong>Refresh</strong>: Try removing and re-adding the domain in Railway after propagation is complete</li>
+</ol>
+<p>Most delays happen because: - Nameserver changes take time to propagate globally - Users add records to Porkbun when they should add them to Cloudflare - Records are added with typos (domain must match exactly)</p>
 <hr>
 </section>
+</section>
+<section id="why-i-switched-from-hostinger-to-porkbun" class="level2">
+<h2 class="anchored" data-anchor-id="why-i-switched-from-hostinger-to-porkbun">Why I Switched from Hostinger to Porkbun</h2>
 <section id="internal-resources" class="level3">
 <h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
 <p>If you’re interested in more about web development and my AI research, explore these sections:</p>

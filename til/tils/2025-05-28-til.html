@@ -8,9 +8,9 @@
 
 <meta name="author" content="kareem">
 <meta name="dcterms.date" content="2025-05-28">
-<meta name="description" content="A comprehensive guide to PyLate and ColBERT for vector retrieval. Explore dataset formats, indexing strategies, and evaluation metrics for Arabic NLP models.">
+<meta name="description" content="PyLate tutorial for ColBERT vector retrieval. Learn dataset formats, PLAID indexing, evaluation metrics, and practical code examples for dense retrieval systems.">
 
-<title>PyLate &amp; ColBERT: Learning Vector Retrieval and Arabic Models – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
+<title>PyLate Tutorial: Vector Indexing and Retrieval with ColBERT (Complete Guide) – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -120,13 +120,13 @@ gtag('js', new Date());
 gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 </script>
 <!-- Fonts are embedded locally via shimmering-fonts.css -->
-<meta property="og:title" content="PyLate &amp; ColBERT: Learning Vector Retrieval and Arabic Models – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
-<meta property="og:description" content="A comprehensive guide to PyLate and ColBERT for vector retrieval. Explore dataset formats, indexing strategies, and evaluation metrics for Arabic NLP models.">
+<meta property="og:title" content="PyLate Tutorial: Vector Indexing and Retrieval with ColBERT (Complete Guide) – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta property="og:description" content="PyLate tutorial for ColBERT vector retrieval. Learn dataset formats, PLAID indexing, evaluation metrics, and practical code examples for dense retrieval systems.">
 <meta property="og:image" content="https://kareemai.com/til/tils/til.jpg">
 <meta property="og:site_name" content="Abdelkareem Elkhateb">
 <meta property="og:locale" content="en_US">
-<meta name="twitter:title" content="PyLate &amp; ColBERT: Learning Vector Retrieval and Arabic Models – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
-<meta name="twitter:description" content="A comprehensive guide to PyLate and ColBERT for vector retrieval. Explore dataset formats, indexing strategies, and evaluation metrics for Arabic NLP models.">
+<meta name="twitter:title" content="PyLate Tutorial: Vector Indexing and Retrieval with ColBERT (Complete Guide) – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta name="twitter:description" content="PyLate tutorial for ColBERT vector retrieval. Learn dataset formats, PLAID indexing, evaluation metrics, and practical code examples for dense retrieval systems.">
 <meta name="twitter:image" content="https://kareemai.com/til/tils/til.jpg">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary_large_image">
@@ -309,8 +309,8 @@ window.addEventListener('scroll', () => {
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "PyLate & ColBERT: Learning Vector Retrieval and Arabic Models",
-  "description": "A comprehensive guide to PyLate and ColBERT for vector retrieval. Explore dataset formats, indexing strategies, and evaluation metrics for Arabic NLP models.",
+  "headline": "PyLate Tutorial: Vector Indexing and Retrieval with ColBERT (Complete Guide)",
+  "description": "PyLate tutorial for ColBERT vector retrieval. Learn dataset formats, PLAID indexing, evaluation metrics, and practical code examples for dense retrieval systems.",
   "author": {"@type": "Person", "name": "kareem"},
   "datePublished": "May 28, 2025",
   "publisher": {
@@ -412,13 +412,10 @@ window.addEventListener('scroll', () => {
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#pylate-colbert-evaluation---complete-learning-guide" id="toc-pylate-colbert-evaluation---complete-learning-guide" class="nav-link active" data-scroll-target="#pylate-colbert-evaluation---complete-learning-guide">PyLate &amp; ColBERT Evaluation - Complete Learning Guide</a>
+  <li><a href="#pylate-tutorial-vector-indexing-and-retrieval-with-colbert" id="toc-pylate-tutorial-vector-indexing-and-retrieval-with-colbert" class="nav-link active" data-scroll-target="#pylate-tutorial-vector-indexing-and-retrieval-with-colbert">PyLate Tutorial: Vector Indexing and Retrieval with ColBERT</a>
   <ul class="collapse">
-  <li><a href="#core-concepts" id="toc-core-concepts" class="nav-link" data-scroll-target="#core-concepts">Core Concepts</a>
-  <ul class="collapse">
-  <li><a href="#what-is-pylate" id="toc-what-is-pylate" class="nav-link" data-scroll-target="#what-is-pylate">What is PyLate?</a></li>
-  <li><a href="#what-is-colbert" id="toc-what-is-colbert" class="nav-link" data-scroll-target="#what-is-colbert">What is ColBERT?</a></li>
-  </ul></li>
+  <li><a href="#what-youll-learn" id="toc-what-youll-learn" class="nav-link" data-scroll-target="#what-youll-learn">What You’ll Learn</a></li>
+  <li><a href="#core-concepts-pylate-and-colbert-explained" id="toc-core-concepts-pylate-and-colbert-explained" class="nav-link" data-scroll-target="#core-concepts-pylate-and-colbert-explained">Core Concepts: PyLate and ColBERT Explained</a></li>
   <li><a href="#dataset-formats" id="toc-dataset-formats" class="nav-link" data-scroll-target="#dataset-formats">Dataset Formats</a>
   <ul class="collapse">
   <li><a href="#format-1-tripletmulti-negative-format" id="toc-format-1-tripletmulti-negative-format" class="nav-link" data-scroll-target="#format-1-tripletmulti-negative-format">Format 1: Triplet/Multi-negative Format</a></li>
@@ -468,7 +465,7 @@ window.addEventListener('scroll', () => {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">PyLate &amp; ColBERT: Learning Vector Retrieval and Arabic Models</h1>
+<h1 class="title">PyLate Tutorial: Vector Indexing and Retrieval with ColBERT (Complete Guide)</h1>
   <div class="quarto-categories">
     <div class="quarto-category">blogging</div>
     <div class="quarto-category">til</div>
@@ -477,7 +474,7 @@ window.addEventListener('scroll', () => {
 
 <div>
   <div class="description">
-    A comprehensive guide to PyLate and ColBERT for vector retrieval. Explore dataset formats, indexing strategies, and evaluation metrics for Arabic NLP models.
+    PyLate tutorial for ColBERT vector retrieval. Learn dataset formats, PLAID indexing, evaluation metrics, and practical code examples for dense retrieval systems.
   </div>
 </div>
 
@@ -506,18 +503,24 @@ window.addEventListener('scroll', () => {
 </header>
 
 
-<section id="pylate-colbert-evaluation---complete-learning-guide" class="level1">
-<h1>PyLate &amp; ColBERT Evaluation - Complete Learning Guide</h1>
-<section id="core-concepts" class="level2">
-<h2 class="anchored" data-anchor-id="core-concepts">Core Concepts</h2>
-<section id="what-is-pylate" class="level3">
-<h3 class="anchored" data-anchor-id="what-is-pylate">What is PyLate?</h3>
-<p><strong>Q: What is PyLate and what does it do?</strong> A: PyLate is a Python library for vector retrieval and search, specifically designed for ColBERT models. It provides tools for indexing documents, encoding queries, and performing similarity search.</p>
+<section id="pylate-tutorial-vector-indexing-and-retrieval-with-colbert" class="level1">
+<h1>PyLate Tutorial: Vector Indexing and Retrieval with ColBERT</h1>
+<p><strong>PyLate</strong> is a Python library that simplifies dense vector retrieval with ColBERT (Contextualized Late Interaction over BERT). It handles indexing, querying, and evaluation of dense retrieval systems. This guide covers everything you need to work with PyLate in production: data formats, indexing strategies, and evaluation pipelines.</p>
+<section id="what-youll-learn" class="level2">
+<h2 class="anchored" data-anchor-id="what-youll-learn">What You’ll Learn</h2>
+<ul>
+<li>How PyLate and ColBERT work together for dense retrieval</li>
+<li>Three dataset formats (Triplet, Structured, Passage Ranking)</li>
+<li>Data conversion strategies for large datasets</li>
+<li>PLAID indexing and document processing</li>
+<li>IR metrics (NDCG, MAP, Recall) and evaluation</li>
+<li>Common pitfalls and performance optimization</li>
+</ul>
 </section>
-<section id="what-is-colbert" class="level3">
-<h3 class="anchored" data-anchor-id="what-is-colbert">What is ColBERT?</h3>
-<p><strong>Q: How does ColBERT work?</strong> A: ColBERT (Contextualized Late Interaction over BERT) creates dense vector representations for documents and queries, then uses late interaction (token-level matching) for retrieval instead of single vector similarity.</p>
-</section>
+<section id="core-concepts-pylate-and-colbert-explained" class="level2">
+<h2 class="anchored" data-anchor-id="core-concepts-pylate-and-colbert-explained">Core Concepts: PyLate and ColBERT Explained</h2>
+<p><strong>PyLate</strong> is a Python library for vector retrieval and search, specifically designed for ColBERT models. It provides tools for indexing documents, encoding queries, and performing similarity search.</p>
+<p><strong>ColBERT</strong> (Contextualized Late Interaction over BERT) creates dense vector representations for documents and queries, then uses late interaction (token-level matching) for retrieval instead of single vector similarity. This approach is faster and more efficient than traditional dense retrieval.</p>
 </section>
 <section id="dataset-formats" class="level2">
 <h2 class="anchored" data-anchor-id="dataset-formats">Dataset Formats</h2>

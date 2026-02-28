@@ -8,9 +8,9 @@
 
 <meta name="author" content="kareem">
 <meta name="dcterms.date" content="2025-12-13">
-<meta name="description" content="A deep dive into Arabic NLP fundamentals: from lexical embeddings and BM25 to implementing minimum edit distance using dynamic programming.">
+<meta name="description" content="Rebuilding NLP fundamentals for Arabic: TF-IDF, BM25, sparse embeddings, minimum edit distance, and learning problem-solving through LeetCode and Jurafsky’s Speech and Language Processing book.">
 
-<title>Arabic NLP Fundamentals: Sparse Embeddings &amp; Dynamic Programming – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
+<title>Arabic NLP Fundamentals: From Sparse Embeddings and BM25 to Dynamic Programming – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -85,13 +85,13 @@ gtag('js', new Date());
 gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 </script>
 <!-- Fonts are embedded locally via shimmering-fonts.css -->
-<meta property="og:title" content="Arabic NLP Fundamentals: Sparse Embeddings &amp; Dynamic Programming – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
-<meta property="og:description" content="A deep dive into Arabic NLP fundamentals: from lexical embeddings and BM25 to implementing minimum edit distance using dynamic programming.">
+<meta property="og:title" content="Arabic NLP Fundamentals: From Sparse Embeddings and BM25 to Dynamic Programming – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta property="og:description" content="Rebuilding NLP fundamentals for Arabic: TF-IDF, BM25, sparse embeddings, minimum edit distance, and learning problem-solving through LeetCode and Jurafsky’s Speech and Language Processing book.">
 <meta property="og:image" content="https://kareemai.com/til/tils/til.jpg">
 <meta property="og:site_name" content="Abdelkareem Elkhateb">
 <meta property="og:locale" content="en_US">
-<meta name="twitter:title" content="Arabic NLP Fundamentals: Sparse Embeddings &amp; Dynamic Programming – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
-<meta name="twitter:description" content="A deep dive into Arabic NLP fundamentals: from lexical embeddings and BM25 to implementing minimum edit distance using dynamic programming.">
+<meta name="twitter:title" content="Arabic NLP Fundamentals: From Sparse Embeddings and BM25 to Dynamic Programming – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta name="twitter:description" content="Rebuilding NLP fundamentals for Arabic: TF-IDF, BM25, sparse embeddings, minimum edit distance, and learning problem-solving through LeetCode and Jurafsky’s Speech and Language Processing book.">
 <meta name="twitter:image" content="https://kareemai.com/til/tils/til.jpg">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary_large_image">
@@ -274,8 +274,8 @@ window.addEventListener('scroll', () => {
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Arabic NLP Fundamentals: Sparse Embeddings & Dynamic Programming",
-  "description": "A deep dive into Arabic NLP fundamentals: from lexical embeddings and BM25 to implementing minimum edit distance using dynamic programming.",
+  "headline": "Arabic NLP Fundamentals: From Sparse Embeddings and BM25 to Dynamic Programming",
+  "description": "Rebuilding NLP fundamentals for Arabic: TF-IDF, BM25, sparse embeddings, minimum edit distance, and learning problem-solving through LeetCode and Jurafsky’s Speech and Language Processing book.",
   "author": {"@type": "Person", "name": "kareem"},
   "datePublished": "December 13, 2025",
   "publisher": {
@@ -377,8 +377,17 @@ window.addEventListener('scroll', () => {
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#chapter-summary-and-what-to-do-next" id="toc-chapter-summary-and-what-to-do-next" class="nav-link active" data-scroll-target="#chapter-summary-and-what-to-do-next">Chapter Summary and what to do next</a>
+  <li><a href="#fixing-the-gap-classical-nlp-fundamentals" id="toc-fixing-the-gap-classical-nlp-fundamentals" class="nav-link active" data-scroll-target="#fixing-the-gap-classical-nlp-fundamentals">Fixing the Gap: Classical NLP Fundamentals</a>
   <ul class="collapse">
+  <li><a href="#learning-roadmap" id="toc-learning-roadmap" class="nav-link" data-scroll-target="#learning-roadmap">Learning Roadmap</a></li>
+  </ul></li>
+  <li><a href="#first-chapter-tokenization-unicode-minimum-edit-distance" id="toc-first-chapter-tokenization-unicode-minimum-edit-distance" class="nav-link" data-scroll-target="#first-chapter-tokenization-unicode-minimum-edit-distance">First Chapter: Tokenization, Unicode &amp; Minimum Edit Distance</a>
+  <ul class="collapse">
+  <li><a href="#deliberate-practice-neetcode-ml-problems" id="toc-deliberate-practice-neetcode-ml-problems" class="nav-link" data-scroll-target="#deliberate-practice-neetcode-ml-problems">Deliberate Practice: NeetCode + ML Problems</a></li>
+  </ul></li>
+  <li><a href="#building-smart-arabic-keyword-checker" id="toc-building-smart-arabic-keyword-checker" class="nav-link" data-scroll-target="#building-smart-arabic-keyword-checker">Building: Smart Arabic Keyword Checker</a>
+  <ul class="collapse">
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   <li><a href="#internal-resources" id="toc-internal-resources" class="nav-link" data-scroll-target="#internal-resources">Internal Resources</a></li>
   </ul></li>
   </ul>
@@ -390,7 +399,7 @@ window.addEventListener('scroll', () => {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Arabic NLP Fundamentals: Sparse Embeddings &amp; Dynamic Programming</h1>
+<h1 class="title">Arabic NLP Fundamentals: From Sparse Embeddings and BM25 to Dynamic Programming</h1>
   <div class="quarto-categories">
     <div class="quarto-category">blogging</div>
     <div class="quarto-category">til</div>
@@ -402,7 +411,7 @@ window.addEventListener('scroll', () => {
 
 <div>
   <div class="description">
-    A deep dive into Arabic NLP fundamentals: from lexical embeddings and BM25 to implementing minimum edit distance using dynamic programming.
+    Rebuilding NLP fundamentals for Arabic: TF-IDF, BM25, sparse embeddings, minimum edit distance, and learning problem-solving through LeetCode and Jurafsky’s Speech and Language Processing book.
   </div>
 </div>
 
@@ -431,53 +440,115 @@ window.addEventListener('scroll', () => {
 </header>
 
 
+<section id="fixing-the-gap-classical-nlp-fundamentals" class="level2">
+<h2 class="anchored" data-anchor-id="fixing-the-gap-classical-nlp-fundamentals">Fixing the Gap: Classical NLP Fundamentals</h2>
+<p>For years, I’ve skimmed over foundational NLP concepts:</p>
 <ul>
-<li>When I was a student I was learning about classical machine learning and NLP I encountered a lot of concept like:</li>
-<li>TF-ID</li>
-<li>Bm25 and other concept I skimmed them and get the idea but I didn’t apply it into Arabic with practical code after these years</li>
-<li>I was reading about the following topics</li>
+<li>TF-IDF and BM25 (lexical retrieval)</li>
+<li>Sparse embeddings (n-gram subsampling + MLP compression)</li>
+<li>Dynamic programming algorithms (edit distance, Viterbi)</li>
 </ul>
+<p>I understood the new stuff—BERT, transformers, semantic embeddings—but the classical foundations felt disconnected. The gap became obvious: I never built these algorithms myself. I never saw <em>why</em> sparse embeddings exist (they’re solving speed + interpretability problems dense methods don’t) or <em>how</em> to optimize them.</p>
+<p>I decided to rebuild from first principles using:</p>
 <ol type="1">
-<li>Lexical Embedding</li>
-<li>MiniCol from Qdrant</li>
-<li>StaticEmbedding (minislab and sbert) I understand the new advanced that are related to Bert and Transformer but the basics about sparse embedding are totally missing like how they are using n-gram to subsample for a large space then train an MLP to simulate a dense embedding to create a faster model what are the parameters of this architecture how to optimize it…etc all these knowledge are not connect well. So I want to revisit these concepts again in roadmap</li>
+<li><strong>Jurafsky &amp; Martin’s “Speech and Language Processing”</strong> (3rd edition draft)</li>
+<li><strong>Implementing algorithms in Arabic code</strong></li>
+<li><strong>Problem-solving practice through LeetCode</strong></li>
 </ol>
+<section id="learning-roadmap" class="level3">
+<h3 class="anchored" data-anchor-id="learning-roadmap">Learning Roadmap</h3>
+<p><strong>Phase 1: Lexical Methods</strong></p>
 <ul>
-<li>word2vec</li>
-<li>n-gram</li>
-<li>stemming</li>
-<li>TF-IDF</li>
-<li>BM25
-<ul>
-<li>BMX</li>
-</ul></li>
-<li>Sparse embedding
-<ul>
-<li>splade</li>
-<li>train a sparse embedding with sbert This is my initial thoughts but I think a better way it to start reading this book and try to implement the code for Arabic NLP: Speech and Language Processing An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition with Language Models Third Edition draft Daniel Jurafsky Stanford University James H. Martin University of Colorado at Boulder</li>
-</ul></li>
+<li>Word2vec and n-gram theory</li>
+<li>Stemming and tokenization for Arabic</li>
+<li>TF-IDF and BM25 ranking</li>
+<li>BMX (dense-sparse hybrid from Mixedbread)</li>
 </ul>
-<section id="chapter-summary-and-what-to-do-next" class="level2">
-<h2 class="anchored" data-anchor-id="chapter-summary-and-what-to-do-next">Chapter Summary and what to do next</h2>
+<p><strong>Phase 2: Sparse Embeddings</strong></p>
 <ul>
-<li>the chapter was an introduction about words, tokens , BPE and tokenization and some linguistics stuff, and how is the Unicode and encoding for different language is done which was nice intro.</li>
-<li>How to use regular expression to do some NLP analysis.</li>
-<li>what I really like most was the Minimum Edit Distance and Alignment of words. <strong>The problem I had is implement the algorhtim yourself needs some problem solving and I didn’t practice problem solving for a long time and my skills is no there yet</strong> **** I tried for 30 minutes to implement minimum distance but failed. I opened a website for leetcode problems is more organized and minimal called <a href="https://neetcode.com">neetcode</a> I solved the first 11 problems 3 was very easy, and other were medium and the good thing that I had solutions that are not in the solutions sections and my focus on how to use python collections methods like counter is good. The code solves the problem but it’s not the fastest thing. But I feel good that my patience and thinking is better. ![[Screenshot_2025-12-14-10-35-27-07_e4424258c8b8649f6e67d283a50a2cbc.jpg]]</li>
-<li>my month plan will be to finish all the 150 problem and do a lot of dynamic programming (DP) because the minimum edit distance and viterbi in the end of the first chapter will be implemented in DP and other things I know also needs DP.</li>
-<li>After that i will start practice on the following alternative to leetcode but for machine learning <a href="https://deep-ml.com"><strong>deep-ml.com</strong></a> ![[Pasted image 20251214122627.png]] ### Build a Keyword checker in Arabic I get a nice idea while learning about alignment that I could build my own keyword spell checker for my language that is more smart than the current keyboards by creating the following features:</li>
+<li>SPLADE and learned sparse vectors</li>
+<li>Training sparse embeddings with SBERT</li>
+<li>Optimization and interpretability</li>
 </ul>
+<p><strong>Phase 3: Dynamic Programming &amp; Alignment</strong> (current)</p>
+<ul>
+<li>Minimum edit distance (Levenshtein)</li>
+<li>Word alignment algorithms</li>
+<li>Viterbi and HMMs</li>
+</ul>
+<p>Each builds on the last. You can’t understand why sparse embeddings matter without understanding BM25. You can’t implement them efficiently without mastering dynamic programming.</p>
+</section>
+</section>
+<section id="first-chapter-tokenization-unicode-minimum-edit-distance" class="level2">
+<h2 class="anchored" data-anchor-id="first-chapter-tokenization-unicode-minimum-edit-distance">First Chapter: Tokenization, Unicode &amp; Minimum Edit Distance</h2>
+<p>Chapter 1 of Jurafsky covers:</p>
+<ul>
+<li><strong>Words and tokens</strong>: What counts as a “word” when you’re dealing with Arabic morphology?</li>
+<li><strong>Unicode and encoding</strong>: How different languages store characters differently (critical for Arabic preprocessing)</li>
+<li><strong>Regular expressions</strong>: Practical NLP pattern matching</li>
+<li><strong>Minimum edit distance</strong>: The algorithm that powers spell-checking and text similarity</li>
+</ul>
+<p>The minimum edit distance is brilliant but requires implementation from scratch. You need to think about:</p>
+<ul>
+<li>State representation (the matrix)</li>
+<li>Recurrence relations (how cells depend on neighbors)</li>
+<li>Backtracking (to recover the actual edits)</li>
+</ul>
+<p>I couldn’t implement it cleanly at first. That’s when I realized: <strong>my problem-solving muscles are rusty.</strong></p>
+<section id="deliberate-practice-neetcode-ml-problems" class="level3">
+<h3 class="anchored" data-anchor-id="deliberate-practice-neetcode-ml-problems">Deliberate Practice: NeetCode + ML Problems</h3>
+<p>I found <a href="https://neetcode.io">NeetCode</a>—cleaner and more focused than LeetCode. In the last week:</p>
+<ul>
+<li>Solved 11 problems (3 easy, 8 medium+)</li>
+<li>Built Python fluency around <code>collections.Counter</code>, hashmaps, list comprehensions</li>
+<li>Code works but isn’t always optimal—that’s fine; repetition matters more than perfection at this stage</li>
+<li>The real win: restored my patience for thinking through problems step-by-step</li>
+</ul>
+<p>The plan:</p>
+<ul>
+<li><strong>Month 1</strong>: Finish 150 NeetCode problems, focus on dynamic programming (edit distance, Viterbi, longest common subsequence)</li>
+<li><strong>Month 2</strong>: Transition to <a href="https://deep-ml.com">Deep-ML</a>—same structure but for ML algorithms instead of data structures</li>
+<li><strong>Parallel</strong>: Implement each NLP chapter concept in Arabic-ready code</li>
+</ul>
+</section>
+</section>
+<section id="building-smart-arabic-keyword-checker" class="level2">
+<h2 class="anchored" data-anchor-id="building-smart-arabic-keyword-checker">Building: Smart Arabic Keyword Checker</h2>
+<p>The alignment chapter inspired a concrete project: <strong>build a spell checker for Arabic that understands context and domain.</strong></p>
+<p>Current keyboards (suggest random near-misses). A smarter version would:</p>
 <ol type="1">
-<li>Recommend technical meaning
+<li><strong>Technical terminology mapping</strong>
+<ul>
+<li>Suggest Arabic equivalents for ML terms</li>
+<li>Example: “embedding model” → “نماذج التضمين”</li>
+<li>Example: “vector database” → “قاعدة بيانات المتجهات”</li>
+</ul></li>
+<li><strong>Persona-aware suggestions</strong>
+<ul>
+<li>Different recommendations for engineers, doctors, writers</li>
+<li>Your vocabulary profile informs what “correct” means</li>
+</ul></li>
+<li><strong>Federated learning</strong> (like Gboard)
+<ul>
+<li>Learn from your typing without uploading data</li>
+</ul></li>
+<li><strong>Arabic grammar correction</strong>
+<ul>
+<li>Not just spelling; handle diacritics, agreement, tense</li>
+</ul></li>
+<li><strong>Adaptive learning</strong>
+<ul>
+<li>Improve suggestions based on what you accept/reject</li>
+</ul></li>
+</ol>
+<p>The tech stack: dynamic programming for edit distance, sparse embeddings for semantic similarity, possibly Rust for performance.</p>
+<section id="references" class="level3">
+<h3 class="anchored" data-anchor-id="references">References</h3>
 <ol type="1">
-<li>If I said word like embedding model it can suggest =&gt; نماذج التضمين</li>
-</ol></li>
-<li>Recommend keywords related to my persona (engineer or doctor..etc)</li>
-<li>Federated Learning Keyboard like gboard</li>
-<li>Arabic Grammars corrected</li>
-<li>Automatic learning based on user interactions I thought it will be nice even to implement this in rust :) 🦀🦀 ### References</li>
 <li><a href="https://web.stanford.edu/~jurafsky/slp3/">The NLP book</a></li>
 </ol>
 <hr>
+</section>
 <section id="internal-resources" class="level3">
 <h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
 <p>If you are interested in more structured deep dives, check out my <a href="../../blog/feed.html">Blog</a> or my <a href="../../papers.html">Research Papers</a>. For my work on tools and libraries, visit the <a href="../../oss/opensource.html">Open Source</a> section. You can also explore more daily notes in the <a href="../../til/index.html">TIL Index</a>.</p>
