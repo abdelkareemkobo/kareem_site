@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2025-12-26">
 <meta name="description" content="Discover how I optimized the Muaalem El Quran model using TensorRT and ONNX. A deep dive into Quranic speech recognition and my journey with Tarteel AI.">
 
-<title>Optimizing Quranic AI Models: Tarteel &amp; Muaalem El Quran | Part 2 – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
+<title>Tarteel &amp; Muaalem El Quran: Optimizing Quranic AI Part 2 – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -121,12 +121,12 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <!-- Fonts are embedded locally via shimmering-fonts.css -->
-<meta property="og:title" content="Optimizing Quranic AI Models: Tarteel &amp; Muaalem El Quran | Part 2 – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta property="og:title" content="Tarteel &amp; Muaalem El Quran: Optimizing Quranic AI Part 2 – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
 <meta property="og:description" content="Discover how I optimized the Muaalem El Quran model using TensorRT and ONNX. A deep dive into Quranic speech recognition and my journey with Tarteel AI.">
 <meta property="og:image" content="https://kareemai.com/blog/posts/speech_recognition/images/tarteel_ai.jpg">
 <meta property="og:site_name" content="Abdelkareem Elkhateb">
 <meta property="og:locale" content="en_US">
-<meta name="twitter:title" content="Optimizing Quranic AI Models: Tarteel &amp; Muaalem El Quran | Part 2 – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta name="twitter:title" content="Tarteel &amp; Muaalem El Quran: Optimizing Quranic AI Part 2 – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
 <meta name="twitter:description" content="Discover how I optimized the Muaalem El Quran model using TensorRT and ONNX. A deep dive into Quranic speech recognition and my journey with Tarteel AI.">
 <meta name="twitter:image" content="https://kareemai.com/blog/posts/speech_recognition/images/tarteel_ai.jpg">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
@@ -310,7 +310,7 @@ window.addEventListener('scroll', () => {
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Optimizing Quranic AI Models: Tarteel & Muaalem El Quran | Part 2",
+  "headline": "Tarteel & Muaalem El Quran: Optimizing Quranic AI Part 2",
   "description": "Discover how I optimized the Muaalem El Quran model using TensorRT and ONNX. A deep dive into Quranic speech recognition and my journey with Tarteel AI.",
   "author": {"@type": "Person", "name": "kareem"},
   "datePublished": "December 26, 2025",
@@ -433,7 +433,8 @@ window.addEventListener('scroll', () => {
   <li><a href="#server-architecture" id="toc-server-architecture" class="nav-link" data-scroll-target="#server-architecture">Server Architecture</a></li>
   <li><a href="#api-usage" id="toc-api-usage" class="nav-link" data-scroll-target="#api-usage">API Usage</a></li>
   </ul></li>
-  <li><a href="#the-dependency-hell-with-onnx" id="toc-the-dependency-hell-with-onnx" class="nav-link" data-scroll-target="#the-dependency-hell-with-onnx">The Dependency Hell with ONNX</a>
+  <li><a href="#the-dependency-hell-with-onnx" id="toc-the-dependency-hell-with-onnx" class="nav-link" data-scroll-target="#the-dependency-hell-with-onnx">The Dependency Hell with ONNX</a></li>
+  <li><a href="#key-learnings" id="toc-key-learnings" class="nav-link" data-scroll-target="#key-learnings">Key Learnings</a>
   <ul class="collapse">
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul></li>
@@ -446,7 +447,7 @@ window.addEventListener('scroll', () => {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Optimizing Quranic AI Models: Tarteel &amp; Muaalem El Quran | Part 2</h1>
+<h1 class="title">Tarteel &amp; Muaalem El Quran: Optimizing Quranic AI Part 2</h1>
   <div class="quarto-categories">
     <div class="quarto-category">blogging</div>
     <div class="quarto-category">tarteel</div>
@@ -757,7 +758,10 @@ window.addEventListener('scroll', () => {
 <p>Next day I found out you need NVIDIA’s special index:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install tensorrt <span class="at">--extra-index-url</span> https://pypi.nvidia.com</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Took 30 mins. WHY IS THIS NOT THE DEFAULT.</p>
-<p><strong>Honestly?</strong> Just use different virtual environments. Don’t be like me trying to fit everything in one place. Your sanity is worth more. ## Key Learnings</p>
+<p><strong>Honestly?</strong> Just use different virtual environments. Don’t be like me trying to fit everything in one place. Your sanity is worth more.</p>
+</section>
+<section id="key-learnings" class="level2">
+<h2 class="anchored" data-anchor-id="key-learnings">Key Learnings</h2>
 <ol type="1">
 <li><p><strong>Know your hardware</strong>: GTX 1660 Ti lacks Tensor Cores, so FP16 without TensorRT hurts performance</p></li>
 <li><p><strong>TensorRT is powerful</strong>: Even on consumer GPUs, it provides significant speedups</p></li>

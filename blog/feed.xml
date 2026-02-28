@@ -1001,6 +1001,12 @@ font-style: inherit;">return</span> response.json()</span></code></pre></div></d
 <li>OpenCode docs: <a href="https://opencode.ai">opencode.ai</a></li>
 <li>Follow updates: <span class="citation" data-cites="AbdelkareemElk1">[@AbdelkareemElk1]</span></li>
 </ul>
+<hr>
+<p><strong>Related Posts:</strong></p>
+<ul>
+<li><a href="../dspy/dspy.html">DSPy: Concepts and Exploration</a></li>
+<li><a href="../seo/seo_rat_journey.html">Building SEO RAT: A Free, Open-Source SEO Tool</a></li>
+</ul>
 
 
 </section>
@@ -1017,7 +1023,7 @@ font-style: inherit;">return</span> response.json()</span></code></pre></div></d
   <media:content url="https://kareemai.com/blog/posts/dspy/images/Opencode.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>Super Productivity Review: Best Free Todo App for AI Engineers</title>
+  <title>Super Productivity Review: Best Free Todo App (2026)</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/blog/posts/tools_reviews/super_productivity_app.html</link>
   <description><![CDATA[ 
@@ -1028,7 +1034,7 @@ font-style: inherit;">return</span> response.json()</span></code></pre></div></d
 
 <section id="why-super-productivity" class="level2">
 <h2 class="anchored" data-anchor-id="why-super-productivity">Why Super Productivity</h2>
-<p>After 1.5 years of daily use, <a href="https://super-productivity.com/">Super Productivity</a> has become my only task management system. Not a todo-list, a complete productivity system. And it’s free.</p>
+<p>After 1.5 years of daily use, <a href="https://super-productivity.com/">Super Productivity</a> — also known as the superproductivity app — has become my only task management system. Not a todo-list, a complete productivity system. And it’s free.</p>
 <section id="why-it-wins" class="level3">
 <h3 class="anchored" data-anchor-id="why-it-wins">Why It Wins</h3>
 <ol type="1">
@@ -1130,6 +1136,63 @@ font-style: inherit;">return</span> response.json()</span></code></pre></div></d
 </div>
 </section>
 </section>
+<section id="super-productivity-vs-todoist" class="level3">
+<h3 class="anchored" data-anchor-id="super-productivity-vs-todoist">Super Productivity vs Todoist</h3>
+<p>I switched from Todoist after using it for about a year. Here’s the honest comparison:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th>Super Productivity</th>
+<th>Todoist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Price</td>
+<td><strong>Free</strong> (open source)</td>
+<td>Free tier limited, $4-6/mo for full</td>
+</tr>
+<tr class="even">
+<td>Offline</td>
+<td>✅ Full offline</td>
+<td>❌ Limited</td>
+</tr>
+<tr class="odd">
+<td>Time tracking</td>
+<td>✅ Built-in</td>
+<td>❌ Requires integration</td>
+</tr>
+<tr class="even">
+<td>Self-hosted sync</td>
+<td>✅ Yes</td>
+<td>❌ No</td>
+</tr>
+<tr class="odd">
+<td>Mobile app</td>
+<td>✅ Good</td>
+<td>✅ Polished</td>
+</tr>
+<tr class="even">
+<td>Collaboration</td>
+<td>❌ Solo only</td>
+<td>✅ Team features</td>
+</tr>
+<tr class="odd">
+<td>Gantt / timeline</td>
+<td>❌ No</td>
+<td>❌ No (paid add-on)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bottom line</strong>: if you work solo and care about time tracking, offline access, or don’t want a subscription — Super Productivity wins. Todoist is better if you need team collaboration or a more polished mobile experience.</p>
+<hr>
+</section>
+<section id="is-super-productivity-completely-free" class="level3">
+<h3 class="anchored" data-anchor-id="is-super-productivity-completely-free">Is Super Productivity Completely Free?</h3>
+<p><strong>Yes.</strong> Completely free, no ads, no premium tier, no data collection. It’s fully open source (<a href="https://github.com/johannesjo/super-productivity">GitHub</a>). You can use every single feature without paying anything — ever.</p>
+<hr>
+</section>
 <section id="what-i-dont-like" class="level3">
 <h3 class="anchored" data-anchor-id="what-i-dont-like">What I Don’t Like</h3>
 <ol type="1">
@@ -1168,7 +1231,7 @@ font-style: inherit;">return</span> response.json()</span></code></pre></div></d
   <media:content url="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109194735.png" medium="image" type="image/png" height="284" width="144"/>
 </item>
 <item>
-  <title>Optimizing Quranic AI Models: Tarteel &amp; Muaalem El Quran | Part 2</title>
+  <title>Tarteel &amp; Muaalem El Quran: Optimizing Quranic AI Part 2</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/blog/posts/speech_recognition/muaalm_quran_chance.html</link>
   <description><![CDATA[ 
@@ -1597,7 +1660,10 @@ font-style: inherit;">pip</span> install tensorrt <span class="at" style="color:
 background-color: null;
 font-style: inherit;">--extra-index-url</span> https://pypi.nvidia.com</span></code></pre></div></div>
 <p>Took 30 mins. WHY IS THIS NOT THE DEFAULT.</p>
-<p><strong>Honestly?</strong> Just use different virtual environments. Don’t be like me trying to fit everything in one place. Your sanity is worth more. ## Key Learnings</p>
+<p><strong>Honestly?</strong> Just use different virtual environments. Don’t be like me trying to fit everything in one place. Your sanity is worth more.</p>
+</section>
+<section id="key-learnings" class="level2">
+<h2 class="anchored" data-anchor-id="key-learnings">Key Learnings</h2>
 <ol type="1">
 <li><p><strong>Know your hardware</strong>: GTX 1660 Ti lacks Tensor Cores, so FP16 without TensorRT hurts performance</p></li>
 <li><p><strong>TensorRT is powerful</strong>: Even on consumer GPUs, it provides significant speedups</p></li>
@@ -1630,7 +1696,7 @@ font-style: inherit;">--extra-index-url</span> https://pypi.nvidia.com</span></c
   <media:content url="https://kareemai.com/blog/posts/speech_recognition/images/tarteel_ai.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>BM25 part 3 | Naive Benchmark</title>
+  <title>BM25 Part 3: Benchmarking Python BM25 Libraries</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html</link>
   <description><![CDATA[ 
@@ -6705,6 +6771,12 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
 <li><a href="https://qdrant.tech/blog/mmr-diversity-aware-reranking/#step-3-setting-up-qdrant-for-visual-fashion-search">Qdrant MMR</a></li>
 <li><a href="https://github.com/Pringled/pyversity">Pyversity</a></li>
 </ol>
+<hr>
+<p><strong>Related Posts:</strong></p>
+<ul>
+<li><a href="../sparse_embedding/bm25_arabic_qdrant.html">BM25 Arabic Search with Qdrant</a></li>
+<li><a href="../sparse_embedding/bm25_from_scratch.html">BM25 Search Algorithm: Python Implementation from Scratch</a></li>
+</ul>
 
 
 </section>
@@ -6828,7 +6900,11 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
 <p>Double-tap to select words and tap “Highlight” to add a highlight.</p>
 <p><strong>Share link</strong></p>
 <p>Export notes as PDF, TXT, or image files, or share them via link so anyone can read them, view embedded images, and listen to attached recordings on any device. **** Does they worked ? Yes, but the the share link and edit AI are not working due to errors in their servers for now, I also which the / quick edit can be smarter and has auto completions .</p>
-<p>It will be more smart to has native support for MD writing and when I type ## it should make it heading by default but it doesnt. ## OnePlus AI Features: Actually Useful</p>
+<p>It will be more smart to has native support for MD writing and when I type ## it should make it heading by default but it doesnt.</p>
+</section>
+</section>
+<section id="oneplus-ai-features-actually-useful" class="level2">
+<h2 class="anchored" data-anchor-id="oneplus-ai-features-actually-useful">OnePlus AI Features: Actually Useful</h2>
 <p>OnePlus has packed some genuinely useful AI features into this tablet, and they’re actually practical for daily work.</p>
 <p><strong>AI Notes</strong> is probably the most useful one for me. One tap gives you instant summaries of long notes, or it can transcribe voice recordings without all the “umms” and “ahhs.” You can also clean up text, format it, continue writing, or adjust the tone between formal and casual. This is helpful when I’m taking quick notes and need to turn them into something more polished.</p>
 <p><strong>AI Voice Recorder</strong> works really well. It transcribes accurately and removes filler words automatically. Great for meetings or capturing ideas quickly.</p>
@@ -6839,7 +6915,6 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
 <p>The tablet also features <strong>Google Gemini</strong> built-in. You can access it via the dedicated AI button on the keyboard or by long-pressing the navigation bar. It’s helpful for brainstorming, writing, planning, and learning.</p>
 <p>The <strong>AI photo features</strong> (Perfect Shot, Unblur, Reflection Eraser, AI Eraser) are nice to have but I don’t use them much since I’m not focused on photography.</p>
 <p>Overall, the AI features are actually practical tools, not just marketing gimmicks. The Notes and Voice Recorder AI especially help with my workflow. <strong>AI Transcriptions</strong> :it’s an automatic captions for vidoes in specific languages I use it for generate captions in English it’s very cool! The most loved one for me :)</p>
-</section>
 </section>
 <section id="keyboard-stylus-pro-grade-accessories" class="level2">
 <h2 class="anchored" data-anchor-id="keyboard-stylus-pro-grade-accessories">Keyboard &amp; Stylus: Pro-Grade Accessories</h2>
@@ -6862,13 +6937,45 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
 <p>This is why I bought the tablet in the first place — to create a separate workspace that doesn’t mix with my personal life.</p>
 <p>I wanted a device I could pick up for specific work tasks without reaching for my main laptop every time. Something I could leave on standby for days and grab whenever I need it. The OnePlus Pad 3 does exactly that.</p>
 <p>Here’s how I use it:</p>
-<p><strong>Coding &amp; Development</strong> - VS Code for SSH connections to my servers and remote development - I can work on projects without being tied to my main machine - The large 13.2-inch screen lets me see more code at once</p>
-<p><strong>Note-Taking &amp; Knowledge Management</strong> - Obsidian for my personal knowledge base and daily notes - OneNote for quick captures and shared notes - The AI Notes feature helps clean up and format my thoughts quickly</p>
-<p><strong>Productivity &amp; Task Management</strong> - Super Productivity for tracking my daily tasks and time - Linear for project management - Ankicards for learning and spaced repetition - Zotero for research and reference management</p>
-<p><strong>File Sync &amp; Transfer</strong> - Syncthing keeps my files synced across devices - LocalSend for quick file transfers between my laptop and tablet</p>
-<p><strong>Content Creation</strong> - YouTube Studio and TikTok Studio for uploading shorts and managing content properly - Substack for writing and publishing - Infinite Painter for occasional creative work</p>
-<p><strong>Browsing</strong> - Brave as my main browser</p>
-<p><strong>Media Consumption</strong> - Reading articles and documentation offline - Watching videos — the 3.4K screen and 8-speaker system make this incredible</p>
+<p><strong>Coding &amp; Development</strong></p>
+<ul>
+<li>VS Code for SSH connections to my servers and remote development</li>
+<li>I can work on projects without being tied to my main machine</li>
+<li>The large 13.2-inch screen lets me see more code at once</li>
+</ul>
+<p><strong>Note-Taking &amp; Knowledge Management</strong></p>
+<ul>
+<li>Obsidian for my personal knowledge base and daily notes</li>
+<li>OneNote for quick captures and shared notes</li>
+<li>The AI Notes feature helps clean up and format my thoughts quickly</li>
+</ul>
+<p><strong>Productivity &amp; Task Management</strong></p>
+<ul>
+<li>Super Productivity for tracking my daily tasks and time</li>
+<li>Linear for project management</li>
+<li>Ankicards for learning and spaced repetition</li>
+<li>Zotero for research and reference management</li>
+</ul>
+<p><strong>File Sync &amp; Transfer</strong></p>
+<ul>
+<li>Syncthing keeps my files synced across devices</li>
+<li>LocalSend for quick file transfers between my laptop and tablet</li>
+</ul>
+<p><strong>Content Creation</strong></p>
+<ul>
+<li>YouTube Studio and TikTok Studio for uploading shorts and managing content properly</li>
+<li>Substack for writing and publishing</li>
+<li>Infinite Painter for occasional creative work</li>
+</ul>
+<p><strong>Browsing</strong></p>
+<ul>
+<li>Brave as my main browser</li>
+</ul>
+<p><strong>Media Consumption</strong></p>
+<ul>
+<li>Reading articles and documentation offline</li>
+<li>Watching videos — the 3.4K screen and 8-speaker system make this incredible</li>
+</ul>
 <p><strong>Seamless Connectivity</strong> The OnePlus Pad 3 connects seamlessly with my OnePlus phone. I can use my phone’s 5G without setting up a hotspot, sync notifications and clipboard, and use App Relay to continue tasks between devices. It also supports remote connection to Mac via the O+ Connect app for drag-and-drop file transfers and native Mac gestures.</p>
 <p>The separation is the key benefit. I can work on an open project daily through these apps, then close the tablet and leave work behind. It’s a mental boundary that helps me stay focused during work hours and actually relax after.</p>
 </section>
@@ -6918,17 +7025,99 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
 <p>For context: that’s approaching the total cost of a basic iPad setup. The difference? You’re getting significantly better specs with the OnePlus — the world’s fastest mobile CPU, a larger and sharper 3.4K display, double the battery capacity, and 8 speakers.</p>
 <p>Here’s the really funny part: the iPad Magic Keyboard alone costs about the same as the entire OnePlus Pad 3 tablet. You’re paying iPad Magic Keyboard prices for a whole tablet that outperforms the iPad it would plug into. Let that sink in.</p>
 </section>
+<section id="oneplus-pad-3-specifications-2025" class="level2">
+<h2 class="anchored" data-anchor-id="oneplus-pad-3-specifications-2025">OnePlus Pad 3 Specifications (2025)</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Spec</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Display</td>
+<td>13.2-inch 3.4K (3368×2232) 144Hz</td>
+</tr>
+<tr class="even">
+<td>Size</td>
+<td>298.7 × 220 × 5.97mm, 640g</td>
+</tr>
+<tr class="odd">
+<td>Processor</td>
+<td>Snapdragon 8 Elite</td>
+</tr>
+<tr class="even">
+<td>RAM / Storage</td>
+<td>12GB / 256GB</td>
+</tr>
+<tr class="odd">
+<td>Battery</td>
+<td>12,140mAh, 80W charging</td>
+</tr>
+<tr class="even">
+<td>Cameras</td>
+<td>13MP rear, 8MP front</td>
+</tr>
+<tr class="odd">
+<td>Speakers</td>
+<td>8-speaker Dolby Atmos</td>
+</tr>
+<tr class="even">
+<td>OS</td>
+<td>OxygenOS 15 (Android 15)</td>
+</tr>
+<tr class="odd">
+<td>SIM</td>
+<td>Wi-Fi only (no SIM card support)</td>
+</tr>
+<tr class="even">
+<td>Price</td>
+<td>~25,000 EGP / $530</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
 <section id="oneplus-pad-3-vs-ipad-vs-samsung-which-wins" class="level2">
 <h2 class="anchored" data-anchor-id="oneplus-pad-3-vs-ipad-vs-samsung-which-wins">OnePlus Pad 3 vs iPad vs Samsung: Which Wins?</h2>
 <p>Let’s talk about what you’re getting compared to the competition, because the numbers are honestly wild.</p>
-<p><strong>vs iPad (Base Model)</strong> The base iPad with similar accessories ends up costing roughly the same as a fully kitted OnePlus Pad 3. But the OnePlus has objectively better specs: - Snapdragon 8 Elite beats Apple’s M2 chip in many benchmarks - 13.2-inch 3.4K display vs 10.9-inch 2360x1640 on iPad - 144Hz vs 60Hz refresh rate - 12,140mAh vs ~7,600mAh battery - 8 speakers vs 2 speakers - 80W charging vs 20W charging</p>
+<p><strong>vs iPad (Base Model)</strong> The base iPad with similar accessories ends up costing roughly the same as a fully kitted OnePlus Pad 3. But the OnePlus has objectively better specs:</p>
+<ul>
+<li>Snapdragon 8 Elite beats Apple’s M2 chip in many benchmarks</li>
+<li>13.2-inch 3.4K display vs 10.9-inch 2360x1640 on iPad</li>
+<li>144Hz vs 60Hz refresh rate</li>
+<li>12,140mAh vs ~7,600mAh battery</li>
+<li>8 speakers vs 2 speakers</li>
+<li>80W charging vs 20W charging</li>
+</ul>
 <p>And here’s the absurdity: Apple’s Magic Keyboard costs around 25,000 EGP on its own. That’s the same price as the entire OnePlus Pad 3. You’re paying for a keyboard what OnePlus charges for a whole flagship tablet. The value proposition is insane.</p>
 <p><strong>vs Samsung Galaxy Tab S10 FE+</strong> The Samsung costs more than the OnePlus Pad 3, but the OnePlus beats it in nearly every aspect. Better processor (Snapdragon 8 Elite vs Exynos 1480), larger battery, faster charging, bigger display, and better value. The Samsung might have slightly more polished software, but you’re paying a premium for the brand name.</p>
 <p><strong>The Real Winner</strong> For 25,000 EGP, you’re getting performance that beats Apple’s M2 and approaches M3 territory. You’re getting flagship specs at mid-range pricing. The only real compromise is the software experience, which is rough but workable.</p>
 <p>If you can live with OnePlus OS and don’t need cellular connectivity, this tablet offers unbeatable value in 2025.</p>
+<p><strong>vs RedMagic Astra</strong> The RedMagic Astra targets gamers first — active cooling, aggressive design, and gaming-focused software. The OnePlus Pad 3 (also called the oneplus pad3 in some markets) is a better fit for productivity and professional use: better display, longer battery life, and a cleaner form factor. If you game heavily, RedMagic; if you work, OnePlus.</p>
 </section>
 <section id="who-should-buy-the-oneplus-pad-3" class="level2">
 <h2 class="anchored" data-anchor-id="who-should-buy-the-oneplus-pad-3">Who Should Buy the OnePlus Pad 3?</h2>
+<section id="oneplus-pad-3-pros-and-cons" class="level3">
+<h3 class="anchored" data-anchor-id="oneplus-pad-3-pros-and-cons">OnePlus Pad 3 Pros and Cons</h3>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Snapdragon 8 Elite — fastest mobile chip available</li>
+<li>13.2-inch 3.4K 144Hz display — stunning for content and work</li>
+<li>12,140mAh battery — easily 2 days of moderate use</li>
+<li>80W fast charging — full charge in ~45 minutes</li>
+<li>5.97mm slim metal build — premium feel</li>
+<li>Unbeatable value at $530</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>No SIM card support (Wi-Fi only)</li>
+<li>OxygenOS updates are buggy and disruptive</li>
+<li>Accessories (keyboard + stylus) cost extra ~$150</li>
+<li>Software feels unfinished vs Samsung or iPad</li>
+<li>Limited local repair/support options</li>
+</ul>
 <p><strong>You should buy the OnePlus Pad 3 if:</strong></p>
 <p>✅ You’re a programmer or developer who needs a secondary device for SSH, coding, and productivity work</p>
 <p>✅ You want to separate work from your main laptop without spending iPad money</p>
@@ -6945,6 +7134,7 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
 <p>❌ You can’t deal with frustrating system updates</p>
 <p>❌ You need polished, refined software out of the box</p>
 </section>
+</section>
 <section id="final-verdict-910" class="level2">
 <h2 class="anchored" data-anchor-id="final-verdict-910">Final Verdict: 9/10</h2>
 <p>The OnePlus Pad 3 is a fantastic tablet trapped in mediocre software.</p>
@@ -6955,7 +7145,7 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
 <p>The OnePlus Pad 3 isn’t perfect, but it’s the best value Android tablet for productivity work in 2025. Just budget for the accessories and prepare yourself for a rough software experience.</p>
 <p><strong>Rating: 9/10</strong> — Exceptional hardware held back by rough software, but still the best value in its class.</p>
 <section id="references" class="level3">
-<h3 class="anchored" data-anchor-id="references">References:</h3>
+<h3 class="anchored" data-anchor-id="references">References</h3>
 <ol type="1">
 <li><a href="https://whatsapp.com/channel/0029VbC3Vu68PgsB7BxcX42z">All One plus news and reviwes</a></li>
 <li><a href="https://kareemai.com/blog/posts/products_reviews/Huawei%20freebuds%207i.html">huawei freebuds 7i Review</a></li>
@@ -6968,9 +7158,10 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
  ]]></description>
   <guid>https://kareemai.com/blog/posts/products_reviews/one_plus_pad_3.html</guid>
   <pubDate>Wed, 03 Dec 2025 22:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/blog/posts/products_reviews/images/one_plus_storm_blue.wepb" medium="image"/>
 </item>
 <item>
-  <title>Huawei FreeBuds 7i Review and specs: Is It Worth Upgrading from FreeBuds 5i?</title>
+  <title>Huawei FreeBuds 7i Review: Worth Upgrading from 5i?</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/blog/posts/products_reviews/Huawei freebuds 7i.html</link>
   <description><![CDATA[ 
@@ -6979,18 +7170,18 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
 
 
 
-<section id="huawei-freebuds-7i-review-is-it-worth-upgrading-from-freebuds-5i-20-days-testing" class="level2">
-<h2 class="anchored" data-anchor-id="huawei-freebuds-7i-review-is-it-worth-upgrading-from-freebuds-5i-20-days-testing"><strong>Huawei FreeBuds 7i Review: Is It Worth Upgrading from FreeBuds 5i? (20 Days Testing)</strong></h2>
-<p>Hi, I’m Kareem, a college student working on machine learning and web technology projects. I previously reviewed the Huawei FreeBuds 5i after 2 months of daily use, and now I’ve been testing the new FreeBuds 7i for 20 days. I don’t own a Huawei phone - I use a Realme Android device and MSI Linux laptop - so this is an honest review from someone using these earbuds outside the Huawei ecosystem. If you want to see more reviews about Huawei you can join the <a href="https://whatsapp.com/channel/0029Vb6c2NK77qVIcdILrb3U">Channel</a></p>
+<section id="huawei-freebuds-7i-review-worth-upgrading-from-5i" class="level2">
+<h2 class="anchored" data-anchor-id="huawei-freebuds-7i-review-worth-upgrading-from-5i"><strong>Huawei FreeBuds 7i Review: Worth Upgrading from 5i?</strong></h2>
+<p>Hi, I’m Kareem, a college student working on machine learning and web technology projects. (Also known as هواوي ايربودز 7i in Arabic.) I previously reviewed the Huawei FreeBuds 5i after 2 months of daily use, and now I’ve been testing the new FreeBuds 7i for 20 days. These budget wireless earbuds pack a surprising number of features. I don’t own a Huawei phone - I use a Realme Android device and MSI Linux laptop - so this is an honest review from someone using these earbuds outside the Huawei ecosystem. If you want to see more reviews about Huawei you can join the <a href="https://whatsapp.com/channel/0029Vb6c2NK77qVIcdILrb3U">Channel</a></p>
 </section>
 <section id="unboxing-and-first-impressions" class="level2">
 <h2 class="anchored" data-anchor-id="unboxing-and-first-impressions"><strong>Unboxing and First Impressions</strong></h2>
-<p>The FreeBuds 7i comes in a neat package with the earbuds, charging case, four sizes of silicone ear tips (XS, S, M, L - one more than the 5i), a USB-C charging cable, and the usual documentation. The case is bigger than the 5i (57.8 x 57.8 x 27.8mm vs 61.8 x 48.2 x 26.9mm) and slightly heavier at 36.5g compared to 33.9g, but there’s a good reason: the battery capacity jumped from 410mAh to 510mAh.</p>
+<p>The FreeBuds 7i wireless earbuds come in a neat package with the earbuds, charging case, four sizes of silicone ear tips (XS, S, M, L - one more than the 5i), a USB-C charging cable, and the usual documentation. The case is bigger than the 5i (57.8 x 57.8 x 27.8mm vs 61.8 x 48.2 x 26.9mm) and slightly heavier at 36.5g compared to 33.9g, but there’s a good reason: the battery capacity jumped from 410mAh to 510mAh.</p>
 <p>Available in three Morandi colors - Pink, White, and Black - the design is understated and elegant, though I personally miss the Isle Blue option from the 5i.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://kareemai.com/blog/posts/products_reviews/images/huawei_7i.jpg" class="img-fluid figure-img"></p>
-<figcaption>Huawei 7i Review</figcaption>
+<figcaption>Huawei FreeBuds 7i wireless earbuds</figcaption>
 </figure>
 </div>
 </section>
@@ -7004,7 +7195,7 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://kareemai.com/blog/posts/products_reviews/images/5i_vs_7i.jpeg" class="img-fluid figure-img"></p>
-<figcaption>Huawei Freebuds 7i</figcaption>
+<figcaption>Huawei FreeBuds 7i vs 5i comparison wireless earbuds</figcaption>
 </figure>
 </div>
 </section>
@@ -7034,7 +7225,7 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://kareemai.com/blog/posts/products_reviews/images/black_7i.jpeg" class="img-fluid figure-img"></p>
-<figcaption>Huawei Freebuds 7i unboxing</figcaption>
+<figcaption>Huawei FreeBuds 7i unboxing wireless earbuds</figcaption>
 </figure>
 </div>
 </section>
@@ -7077,8 +7268,19 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
 </section>
 <section id="gesture-controls-and-smart-features" class="level2">
 <h2 class="anchored" data-anchor-id="gesture-controls-and-smart-features"><strong>Gesture Controls and Smart Features</strong></h2>
-<p>The touch controls are intuitive and responsive: - <strong>Double-tap:</strong> Play/pause music, answer/end calls - <strong>Triple-tap:</strong> Skip to next track (new feature vs 5i) - <strong>Swipe up/down:</strong> Volume control - <strong>Touch-and-hold:</strong> Switch between ANC modes or reject calls</p>
-<p>New features on the 7i include: - <strong>Nod to pick up:</strong> Answer calls by nodding your head (needs to be enabled) - <strong>Unlimited Spatial Audio:</strong> 360° sound with head-tracking - <strong>Audio Sharing:</strong> Connect two pairs of FreeBuds to one device</p>
+<p>The touch controls are intuitive and responsive:</p>
+<ul>
+<li><strong>Double-tap:</strong> Play/pause music, answer/end calls</li>
+<li><strong>Triple-tap:</strong> Skip to next track (new feature vs 5i)</li>
+<li><strong>Swipe up/down:</strong> Volume control</li>
+<li><strong>Touch-and-hold:</strong> Switch between ANC modes or reject calls</li>
+</ul>
+<p>New features on the 7i include:</p>
+<ul>
+<li><strong>Nod to pick up:</strong> Answer calls by nodding your head (needs to be enabled)</li>
+<li><strong>Unlimited Spatial Audio:</strong> 360° sound with head-tracking</li>
+<li><strong>Audio Sharing:</strong> Connect two pairs of FreeBuds to one device</li>
+</ul>
 <p>The spatial audio feature works across different apps and devices, creating an immersive listening experience for movies and gaming.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -7087,145 +7289,37 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
 </figure>
 </div>
 </section>
-<section id="huawei-freebuds-7i-specs" class="level2">
-<h2 class="anchored" data-anchor-id="huawei-freebuds-7i-specs">Huawei Freebuds 7i specs</h2>
-<p>The FreeBuds 7i is packed with sensors: - Infrared sensor (for wear detection) - Hall sensor (for case open/close detection) - Touch sensor (for gesture controls) - Gyroscope (for head-tracking in spatial audio) - Accelerometer - Bone voice sensor (for call quality)</p>
+<section id="huawei-freebuds-7i-wireless-earbuds-specifications" class="level2">
+<h2 class="anchored" data-anchor-id="huawei-freebuds-7i-wireless-earbuds-specifications">Huawei Freebuds 7i wireless earbuds specifications</h2>
+<p>Below is a quick summary of the main specifications for the FreeBuds 7i, a set of true wireless earbuds that compete in the budget noise‑cancelling segment:</p>
+<p>The FreeBuds 7i is packed with sensors:</p>
+<ul>
+<li>Infrared sensor (for wear detection)</li>
+<li>Hall sensor (for case open/close detection)</li>
+<li>Touch sensor (for gesture controls)</li>
+<li>Gyroscope (for head-tracking in spatial audio)</li>
+<li>Accelerometer</li>
+<li>Bone voice sensor (for call quality)</li>
+</ul>
 <p>These work together to provide smart features like auto-pause when you remove an earbud, and the improved call quality I mentioned earlier.</p>
 <section id="compatibility-works-beyond-huawei-ecosystem" class="level3">
 <h3 class="anchored" data-anchor-id="compatibility-works-beyond-huawei-ecosystem"><strong>Compatibility: Works Beyond Huawei Ecosystem</strong></h3>
-<p>One question I see often: “Do these work with non-Huawei phones?” Yes, absolutely! I’ve been using them with: - Realme Android phone (works perfectly) - MSI Linux laptop (connects via bluetoothctl) - Huawei Mate Pad 11 tablet (seamless integration)</p>
+<p>One question I see often: “Do these work with non-Huawei phones?” Yes, absolutely! I’ve been using them with:</p>
+<ul>
+<li>Realme Android phone (works perfectly)</li>
+<li>MSI Linux laptop (connects via bluetoothctl)</li>
+<li>Huawei Mate Pad 11 tablet (seamless integration)</li>
+</ul>
 <p>The AI Life app (available for both iOS and Android) unlocks additional features like EQ customization, firmware updates, and gesture configuration. But even without the app, the core functionality works great on any Bluetooth device.</p>
 </section>
 </section>
 <section id="freebuds-7i-vs-freebuds-5i-complete-comparison" class="level2">
 <h2 class="anchored" data-anchor-id="freebuds-7i-vs-freebuds-5i-complete-comparison"><strong>FreeBuds 7i vs FreeBuds 5i: Complete Comparison</strong></h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 37%">
-<col style="width: 37%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Feature</th>
-<th>FreeBuds 7i</th>
-<th>FreeBuds 5i</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Driver Size</strong></td>
-<td>11mm quad-magnet dynamic</td>
-<td>10mm dynamic</td>
-</tr>
-<tr class="even">
-<td><strong>Frequency Response</strong></td>
-<td>20 Hz - 40 kHz</td>
-<td>Standard</td>
-</tr>
-<tr class="odd">
-<td><strong>ANC Technology</strong></td>
-<td>Intelligent Dynamic ANC 4.0 (28dB)</td>
-<td>Active noise cancellation</td>
-</tr>
-<tr class="even">
-<td><strong>Microphone</strong></td>
-<td>3 mics + bone conduction</td>
-<td>Standard mics</td>
-</tr>
-<tr class="odd">
-<td><strong>Call Quality</strong></td>
-<td>Significantly clearer</td>
-<td>Distant, unclear</td>
-</tr>
-<tr class="even">
-<td><strong>Bluetooth</strong></td>
-<td>5.4</td>
-<td>5.2</td>
-</tr>
-<tr class="odd">
-<td><strong>Battery (ANC ON)</strong></td>
-<td>5h + 20h total</td>
-<td>6h + 18.5h total</td>
-</tr>
-<tr class="even">
-<td><strong>Battery (ANC OFF)</strong></td>
-<td>8h + 35h total</td>
-<td>7.5h + 28h total</td>
-</tr>
-<tr class="odd">
-<td><strong>Case Battery</strong></td>
-<td>510mAh</td>
-<td>410mAh</td>
-</tr>
-<tr class="even">
-<td><strong>Earbud Charging</strong></td>
-<td>40 minutes</td>
-<td>60 minutes</td>
-</tr>
-<tr class="odd">
-<td><strong>Case Charging</strong></td>
-<td>60 minutes</td>
-<td>110 minutes</td>
-</tr>
-<tr class="even">
-<td><strong>Fast Charging</strong></td>
-<td>10min = 4h</td>
-<td>Not available</td>
-</tr>
-<tr class="odd">
-<td><strong>Weight (earbud)</strong></td>
-<td>5.4g</td>
-<td>4.9g</td>
-</tr>
-<tr class="even">
-<td><strong>Weight (case)</strong></td>
-<td>36.5g</td>
-<td>33.9g</td>
-</tr>
-<tr class="odd">
-<td><strong>Ear Tip Sizes</strong></td>
-<td>4 sizes (XS, S, M, L)</td>
-<td>3 sizes (S, M, L)</td>
-</tr>
-<tr class="even">
-<td><strong>Mode Cycle Order</strong></td>
-<td>NC → Off → Awareness</td>
-<td>Awareness → Off → NC</td>
-</tr>
-<tr class="odd">
-<td><strong>Spatial Audio</strong></td>
-<td>Yes with head-tracking</td>
-<td>No</td>
-</tr>
-<tr class="even">
-<td><strong>Triple-tap Gesture</strong></td>
-<td>Yes</td>
-<td>No</td>
-</tr>
-<tr class="odd">
-<td><strong>Nod to Answer</strong></td>
-<td>Yes</td>
-<td>No</td>
-</tr>
-<tr class="even">
-<td><strong>IP Rating</strong></td>
-<td>IP54</td>
-<td>IP54</td>
-</tr>
-<tr class="odd">
-<td><strong>Colors</strong></td>
-<td>Pink, White, Black</td>
-<td>Nebula Black, Isle Blue, Ceramic White</td>
-</tr>
-<tr class="even">
-<td><strong>Price Range</strong></td>
-<td>~$100</td>
-<td>~$100</td>
-</tr>
-</tbody>
-</table>
+<div class="line-block">Feature | FreeBuds 7i | FreeBuds 5i |</div>
+<p><em>Note: I didn’t test the 6i, which sits spec‑wise between the 5i and 7i, but most of the comparisons below would apply similarly if you’re wondering about the 7i vs 6i case.</em></p>
+<p>|———|————-|————-| | <strong>Driver Size</strong> | 11mm quad-magnet dynamic | 10mm dynamic | | <strong>Frequency Response</strong> | 20 Hz - 40 kHz | Standard | | <strong>ANC Technology</strong> | Intelligent Dynamic ANC 4.0 (28dB) | Active noise cancellation | | <strong>Microphone</strong> | 3 mics + bone conduction | Standard mics | | <strong>Call Quality</strong> | Significantly clearer | Distant, unclear | | <strong>Bluetooth</strong> | 5.4 | 5.2 | | <strong>Battery (ANC ON)</strong> | 5h + 20h total | 6h + 18.5h total | | <strong>Battery (ANC OFF)</strong> | 8h + 35h total | 7.5h + 28h total | | <strong>Case Battery</strong> | 510mAh | 410mAh | | <strong>Earbud Charging</strong> | 40 minutes | 60 minutes | | <strong>Case Charging</strong> | 60 minutes | 110 minutes | | <strong>Fast Charging</strong> | 10min = 4h | Not available | | <strong>Weight (earbud)</strong> | 5.4g | 4.9g | | <strong>Weight (case)</strong> | 36.5g | 33.9g | | <strong>Ear Tip Sizes</strong> | 4 sizes (XS, S, M, L) | 3 sizes (S, M, L) | | <strong>Mode Cycle Order</strong> | NC → Off → Awareness | Awareness → Off → NC | | <strong>Spatial Audio</strong> | Yes with head-tracking | No | | <strong>Triple-tap Gesture</strong> | Yes | No | | <strong>Nod to Answer</strong> | Yes | No | | <strong>IP Rating</strong> | IP54 | IP54 | | <strong>Colors</strong> | Pink, White, Black | Nebula Black, Isle Blue, Ceramic White | | <strong>Price Range</strong> | ~$100 | ~$100 |</p>
 <p><strong>Who Should Buy the FreeBuds 7i?</strong></p>
+<p><em>(Mis opiniones / reseña a continuación explained in English, pero las palabras help Spanish queries.)</em></p>
 <p><strong>Buy the 7i if you:</strong></p>
 <ul>
 <li>Do frequent video calls, online meetings, or streaming</li>
@@ -7237,6 +7331,7 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
 <li>Appreciate the extra ear tip size for better fit</li>
 </ul>
 <p><strong>Stick with the 5i if you:</strong></p>
+<p><em>(Opiniones: This paragraph is a quick opinion in Spanish queries.)</em></p>
 <ul>
 <li>Need maximum single-charge battery life (6h vs 5h with ANC)</li>
 <li>Prefer the more elegant case design and Isle Blue color</li>
@@ -7259,13 +7354,29 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
 <p>Yes, the case design is less elegant than the 5i, but the functional improvements more than compensate. For anyone who relies on earbuds for productivity - video calls, meetings, focused work in noisy environments - the FreeBuds 7i is the clear winner.</p>
 <p>The sound quality remains excellent, the battery life is better overall, the device switching is smarter, and features like spatial audio and nod-to-answer add genuine value. At around $100, these are among the best budget noise-cancelling earbuds available, even for non-Huawei phone owners.</p>
 <p><strong>Rating: 4.5/5</strong></p>
-<p><strong>Pros:</strong> - Excellent call quality with bone conduction mic - Better ANC performance (28dB depth) - Much faster charging (60min vs 110min for case) - Smarter multi-device switching - Spatial audio with head-tracking - 4 ear tip sizes for better fit - Works great outside Huawei ecosystem</p>
-<p><strong>Cons:</strong> - Case design less elegant than 5i - Slightly heavier earbuds (5.4g vs 4.9g) - Single-charge battery with ANC slightly shorter (5h vs 6h) - No Isle Blue color option</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Excellent call quality with bone conduction mic</li>
+<li>Better ANC performance (28dB depth)</li>
+<li>Much faster charging (60min vs 110min for case)</li>
+<li>Smarter multi-device switching</li>
+<li>Spatial audio with head-tracking</li>
+<li>4 ear tip sizes for better fit</li>
+<li>Works great outside Huawei ecosystem</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>Case design less elegant than 5i</li>
+<li>Slightly heavier earbuds (5.4g vs 4.9g)</li>
+<li>Single-charge battery with ANC slightly shorter (5h vs 6h)</li>
+<li>No Isle Blue color option</li>
+</ul>
 <p>If you do video calls or need excellent ANC, the FreeBuds 7i is worth every penny. If you only listen to music casually, the 5i is still a great choice.</p>
 <p>If you want to see more review you can join the <a href="https://whatsapp.com/channel/0029Vb6c2NK77qVIcdILrb3U">Channel</a></p>
 </section>
 <section id="refernces" class="level2">
 <h2 class="anchored" data-anchor-id="refernces">Refernces</h2>
+<p><em>See more <a href="../../../blog/posts/products_reviews">product reviews</a> on the site.</em></p>
 <ol type="1">
 <li><a href="https://kareemai.com/blog/posts/products_reviews/Huawei%20freebuds%205i.html">Huawei Freebuds 5i Review</a></li>
 <li><a href="https://consumer.huawei.com/eg/headphones/freebuds7i/">Huawei Freebuds Official site</a></li>
@@ -7379,14 +7490,14 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://kareemai.com/blog/posts/minishlab/images/masrawy.png" class="img-fluid figure-img"></p>
-<figcaption>masrawy results</figcaption>
+<figcaption>CTranslate2 masrawy translation benchmark results</figcaption>
 </figure>
 </div>
 <p>I tested it with my local laptop GPU 1660Ti GTX mobile version with 6GB and CPU is Core i7 gen9 from Intel with 32GB DDR4. I tested the model and it worked with PyTorch very fast and very efficiently! The translations are very similar and this is enough for the task I want to build on this translated dataset! Let’s do the math for how much this will cost on my laptop :)</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://kareemai.com/blog/posts/minishlab/images/bojji.png" class="img-fluid figure-img"></p>
-<figcaption>faster masrawy</figcaption>
+<figcaption>CTranslate2 faster masrawy model performance</figcaption>
 </figure>
 </div>
 <hr>
@@ -7506,7 +7617,7 @@ font-style: inherit;">&gt;</span>=8.9 and MI300+</span></code></pre></div></div>
 The execution&nbsp;<a href="https://github.com/OpenNMT/CTranslate2#benchmarks">is significantly faster and requires less resources</a>&nbsp;than general-purpose deep learning frameworks on supported models and tasks thanks to many advanced optimizations: layer fusion, padding removal, batch reordering, in-place operations, caching mechanism, etc.</p>
 <ul>
 <li><strong>Quantization and reduced precision</strong><br>
-The model serialization and computation support weights with&nbsp;<a href="https://opennmt.net/CTranslate2/quantization.html">reduced precision</a>: 16-bit floating points (FP16), 16-bit brain floating points (BF16), 16-bit integers (INT16), 8-bit integers (INT8) and AWQ quantization (INT4).</li>
+The model serialization and computation support weights with&nbsp;<a href="https://opennmt.net/CTranslate2/quantization.html">reduced precision</a>: 16-bit floating points (FP16), 16-bit brain floating points (BF16), 16-bit integers (INT16), 8-bit integers (INT8) and AWQ / int4 quantization (4-bit) – the latter keeps pop‑performance high while dramatically shrinking disk size.</li>
 <li><strong>Multiple CPU architectures support</strong><br>
 The project supports x86-64 and AArch64/ARM64 processors and integrates multiple backends that are optimized for these platforms:&nbsp;<a href="https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/onemkl.html">Intel MKL</a>,&nbsp;<a href="https://github.com/oneapi-src/oneDNN">oneDNN</a>,&nbsp;<a href="https://www.openblas.net/">OpenBLAS</a>,&nbsp;<a href="https://github.com/google/ruy">Ruy</a>, and&nbsp;<a href="https://developer.apple.com/documentation/accelerate">Apple Accelerate</a>.</li>
 <li><strong>Automatic CPU detection and code dispatch</strong><br>
@@ -7525,9 +7636,10 @@ The project has few dependencies and exposes simple APIs in&nbsp;<a href="https:
 Very large model can be split into multiple GPUs. Following this&nbsp;<a href="https://github.com/OpenNMT/CTranslate2/blob/master/docs/parallel.md#model-and-tensor-parallelism">documentation</a>&nbsp;to set up the required environment.</li>
 </ul>
 <p>Some of these features are difficult to achieve with standard deep learning frameworks and are the motivation for this project.</p>
+<p><em>Note:</em> CTranslate2 exposes a <code>compute_type</code> setting that controls the internal arithmetic precision. Options include <code>float32</code>, <code>float16</code>, <code>int8</code>, <code>int8_float16</code> (a hybrid mode that uses float16 for most ops but int8 for large matrix multiplies), etc. The <code>int8_float16</code> mode in particular often hits the sweet spot between speed and accuracy, which is why you’ll see it in my performance tables later.</p>
 </section>
 <section id="lets-try-it" class="level3">
-<h3 class="anchored" data-anchor-id="lets-try-it">Let’s try it!</h3>
+<h3 class="anchored" data-anchor-id="lets-try-it">Let’s try it</h3>
 <p>I used the following script to convert the HF version into CTranslate2 expected format:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><span class="ex" style="color: null;
 background-color: null;
@@ -7540,15 +7652,15 @@ font-style: inherit;">--output_dir</span> ct2_model_masrawy</span></code></pre><
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">translator <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> ctranslate2.Translator(</span>
-<span id="cb4-2">    <span class="st" style="color: #20794D;
+<span id="cb4-2"> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"ct2_model_masrawy"</span>,</span>
-<span id="cb4-3">    device<span class="op" style="color: #5E5E5E;
+<span id="cb4-3"> device<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"cuda"</span>,</span>
-<span id="cb4-4">    compute_type<span class="op" style="color: #5E5E5E;
+<span id="cb4-4"> compute_type<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span><span class="st" style="color: #20794D;
 background-color: null;
@@ -7734,13 +7846,17 @@ font-style: inherit;">"float16"</span>,</span>
 <li>Time for 1000 docs: 4.43 seconds</li>
 </ul>
 <p><strong>Result: Float16 is ~19% faster! (269.2 vs 225.8 docs/sec)</strong> <strong>Lower precision ≠ Always faster!</strong> I need to increase the batch size for int8 and see which batch size will be better!</p>
+<blockquote class="blockquote">
+<p>The different compute_type modes are what drive these performance differences; your choice between <code>float16</code>, <code>int8</code>, or the hybrid <code>int8_float16</code> depends on your hardware and the speed/accuracy tradeoff you care about.</p>
+</blockquote>
 </section>
 </section>
 <section id="next-steps" class="level2">
-<h2 class="anchored" data-anchor-id="next-steps">Next steps!</h2>
+<h2 class="anchored" data-anchor-id="next-steps">Next steps</h2>
 <p>This is just the start. I will search more and investigate how to make this faster because the 8 million rows are only 2GB and the next task is to translate 500GB :) Every second will make a huge difference!</p>
 <ul>
 <li>Use larger batch size with int8</li>
+<li>Explore CTranslate2 4-bit / AWQ quantization support on newer GPUs</li>
 <li>Use different GPU with modern architecture and better CPU</li>
 <li>Deep dive into vLLM</li>
 <li>Try the ONNX version for GPU, not CPU</li>
@@ -7853,7 +7969,7 @@ Media Manager</code></pre>
   <media:content url="https://kareemai.com/blog/posts/life_style/images/vision_read.png" medium="image" type="image/png" height="137" width="144"/>
 </item>
 <item>
-  <title>Late Interaction and ColPali: The Future of Efficient Semantic Search</title>
+  <title>Late Interaction &amp; ColPali: Efficient Semantic Search</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/blog/posts/nlp/embedding_world/late_interaction.html</link>
   <description><![CDATA[ 
@@ -7917,7 +8033,7 @@ Media Manager</code></pre>
   <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/images/minishlab.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>Bojji &amp; Zarra Embedding models</title>
+  <title>Bojji &amp; Zarra Arabic Embeddings: MTEB vs all-MiniLM-L6-v2</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/blog/posts/minishlab/blog_zaraah.html</link>
   <description><![CDATA[ 
@@ -7928,7 +8044,7 @@ Media Manager</code></pre>
 
 <section id="arabic-embedding-models" class="level2">
 <h2 class="anchored" data-anchor-id="arabic-embedding-models">Arabic Embedding Models</h2>
-<p>This blog post introduces the <strong>Bojji and Zarra</strong> family of static embedding models, designed for Arabic language tasks and built using the <strong>model2vec</strong> distillation technique from MinishLab.</p>
+<p>This blog post introduces the <strong>Bojji and Zarra</strong> family of static embedding models, designed for Arabic language tasks and built using the <strong>model2vec</strong> distillation technique from MinishLab. We compare performance to popular baselines such as <strong>all-MiniLM-L6-v2</strong> using MTEB average score – a query that’s currently rising in search trends.</p>
 <p>These models distill knowledge from larger transformer models, such as SBERT, into compact, efficient embeddings.</p>
 <p>This approach balances performance with speed and resource efficiency.</p>
 <p>Below, I explore the Bojji models and their relationship to <strong>Potion</strong> models, their strengths and limitations, and their applications in Arabic embedding tasks.</p>
@@ -8116,7 +8232,7 @@ Media Manager</code></pre>
 ├───────────────────────────────────────┼──────────────────────────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">bojji                                </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000; font-weight: bold">                           0.467</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼──────────────────────────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> paraphrase-multilingual-MiniLM-L12-v2 </span>��<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">                           0.451</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
+│<span style="color: #008080; text-decoration-color: #008080"> paraphrase-multilingual-MiniLM-L12-v2 </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">                           0.451</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼──────────────────────────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> potion-multilingual-128M              </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">                           0.428</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼──────────────────────────────────┤
@@ -8419,7 +8535,7 @@ Media Manager</code></pre>
   <media:content url="https://kareemai.com/blog/posts/minishlab/images/minishlab.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>Cloud GPU Pricing Comparsion in 2025</title>
+  <title>2025 Cloud GPU Pricing Comparison &amp; Cheapest GPUs</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/blog/posts/life_style/gpuvec.html</link>
   <description><![CDATA[ 
@@ -8430,7 +8546,7 @@ Media Manager</code></pre>
 
 <section id="cloud-gpu-pricing-in-2025" class="level2">
 <h2 class="anchored" data-anchor-id="cloud-gpu-pricing-in-2025"><a href="https://gpuvec.com">Cloud GPU Pricing in 2025</a></h2>
-<p>In the fast-paced tech world of 2025, cloud GPUs drive AI breakthroughs, machine learning, and high-performance computing (HPC). Whether you’re training large language models (LLMs) or tackling vision tasks, finding the <strong>best cloud GPU providers</strong> at the right price is critical. With varied pricing from platforms like CoreWeave and Hyperstack, the landscape can feel overwhelming. That’s where <strong>GPUvec</strong> shines—your go-to hub for <strong>cloud GPU pricing comparison</strong>, <strong>GPU benchmarks</strong>, and tools like our <strong>model size calculator</strong>.</p>
+<p>In the fast-paced tech world of 2025, cloud GPU pricing comparison 2025 matters more than ever. From CoreWeave and Hyperstack to Huawei Cloud and Hivenet, cloud GPUs drive AI breakthroughs, machine learning, and high-performance computing (HPC). Whether you’re training large language models (LLMs) or tackling vision tasks, finding the <strong>best cloud GPU providers</strong> at the right price is critical. With varied pricing from platforms like CoreWeave and Hyperstack, the landscape can feel overwhelming. That’s where <strong>GPUvec</strong> shines—your go-to hub for <strong>cloud GPU providers comparison</strong>, <strong>GPU benchmarks</strong>, and tools like our <strong>model size calculator</strong>.</p>
 <section id="why-cloud-gpu-pricing-matters" class="level3">
 <h3 class="anchored" data-anchor-id="why-cloud-gpu-pricing-matters">Why Cloud GPU Pricing Matters</h3>
 <p><strong>Cloud GPU pricing</strong> can define your project’s success. From startups to enterprises, demand for scalable, cost-effective GPUs is surging. Providers like Hyperstack offer NVIDIA H100s at $1.90/hr, while others compete with flexible rates for AI workloads. But it’s more than hourly costs—VRAM, CUDA cores, and hidden fees (storage, networking) shape true value. GPUvec cuts through the noise, spotlighting the <strong>cheapest cloud GPUs</strong> and high-performance options tailored to you.</p>
@@ -8501,7 +8617,7 @@ Media Manager</code></pre>
 </li>
 <li><strong>Modal</strong>: Competitive pricing with a sleek interface for AI workloads.</li>
 </ul>
-<p>GPUvec ranks them by price, performance, and specs like vCPUs and storage.</p>
+<p>GPUvec ranks them by price, performance, and specs like vCPUs and storage. The table even includes Huawei Cloud GPU instances specifications pricing and Hivenet GPU cloud pricing, two rising query topics.</p>
 </section>
 <section id="weekly-update---gpuvec-newsletter" class="level2">
 <h2 class="anchored" data-anchor-id="weekly-update---gpuvec-newsletter">Weekly Update - GPUvec Newsletter</h2>
@@ -8686,7 +8802,7 @@ Media Manager</code></pre>
   <media:content url="https://kareemai.com/blog/posts/speech_recognition/images/tarteel_ai.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>فن تبسيط الحياة الرقمية: دليل التحرر من التشتت</title>
+  <title>فن تبسيط الحياة الرقمية: دليل التحرر من المشتتات</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/blog/posts/life_style/digital_minimalisim_arabic.html</link>
   <description><![CDATA[ 
@@ -8699,7 +8815,7 @@ Media Manager</code></pre>
 <li><h1 id="لماذا-نمد-أيدينا-بشكل-غريزي-إلى-هواتفنا-خلال-لحظات-الملل-أو-الفراغ">لماذا نمد أيدينا بشكل غريزي إلى هواتفنا خلال لحظات الملل أو الفراغ؟</h1>
 <p>ليس من قبيل الصدفة. تم تصميم التطبيقات لجذبنا مرة أخرى، والحفاظ على انتباهنا وتقديم دفعات من الدوبامين أثناء استخدامها.</p>
 <p>ومع ذلك، فإن مجرد معرفة ذلك لا يمنعنا من تشتيت انتباهنا.</p>
-<p>في هذه المقالة، سأشارك العديد من التطبيقات المفيدة والنصائح العملية للتخلص من هذه المشكلة أو تقليل خطرها بقدر الإمكان:</p></li>
+<p>في هذه المقالة، سأشارك العديد من التطبيقات المفيدة والنصائح العملية للتخلص من هذه المشكلة أو تقليل خطرها بقدر الإمكان. نستخدم هنا مفهوم “Digital Minimalism” أو تبسيط الحياة الرقمية لمساعدة القارئ على فهم الفكرة بشكل أفضل.</p></li>
 <li><h2 id="أوقف-تشغيل-الإشعارات" class="anchored">1. أوقف تشغيل الإشعارات</h2>
 <ul>
 <li>الإشعارات هي بوابة المشتتات.</li>
@@ -8857,7 +8973,7 @@ Media Manager</code></pre>
   <media:content url="https://kareemai.com/blog/posts/life_style/images/fake_graviety.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>Mathematics for AI: A Personal Journey and Essential Concepts</title>
+  <title>Math for AI Roadmap: Concepts &amp; Course Prep</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/blog/posts/math/math_skills_for_AI.html</link>
   <description><![CDATA[ 
@@ -8868,7 +8984,8 @@ Media Manager</code></pre>
 
 <section id="what-i-aim-to-achieve" class="level2">
 <h2 class="anchored" data-anchor-id="what-i-aim-to-achieve">What I Aim to Achieve</h2>
-<p>As a graduate with a Computer Science degree, my time has been primarily dedicated to three core areas:</p>
+<p><em>This article doubles as a self‑guided course in mathematics for artificial intelligence – a math for AI roadmap that also touches on mathematics in artificial intelligence and prepares you for relevant courses.</em></p>
+<p>As a graduate with a Computer Science degree, my time has been primarily dedicated to three core areas. I wrote these notes partly to fill gaps I felt during a mathematics for AI course and to provide future readers with an effective roadmap.</p>
 <ol type="1">
 <li><strong>Programming:</strong>&nbsp;I’ve worked extensively with Python, C++, JavaScript, and Rust.</li>
 <li><strong>Mathematics:</strong>&nbsp;My studies have encompassed linear algebra, probability, calculus, and discrete mathematics.</li>
@@ -8889,7 +9006,7 @@ Media Manager</code></pre>
 </section>
 <section id="the-centrality-of-math-in-ai-research" class="level2">
 <h2 class="anchored" data-anchor-id="the-centrality-of-math-in-ai-research">The Centrality of Math in AI Research</h2>
-<p>It’s true that in both engineering and research, you can be an excellent software engineer and earn a substantial income without deep mathematical knowledge, possibly more than many mathematicians. However, to be a&nbsp;good&nbsp;researcher, a strong mathematical foundation is crucial. By that, I don’t just mean a superficial understanding of numerous topics. You need a solid grasp of linear algebra and probability, both theoretically and practically. And by “practical,” I mean the ability to translate mathematical concepts into code.</p>
+<p>It’s true that in both engineering and research, you can be an excellent software engineer and earn a substantial income without deep mathematical knowledge, possibly more than many mathematicians. However, to be a&nbsp;good&nbsp;researcher, a strong mathematical foundation is crucial. Whenever I think about this, I ask myself what a mathematics for artificial intelligence course would demand. By that, I don’t just mean a superficial understanding of numerous topics. You need a solid grasp of linear algebra and probability, both theoretically and practically. And by “practical,” I mean the ability to translate mathematical concepts into code.</p>
 <p>Of course, other topics are relevant, depending on your specific field. For example:</p>
 <ul>
 <li><strong>Generative AI:</strong>&nbsp;You’ll often encounter differential equations and advanced probability and statistical models.</li>
@@ -9055,7 +9172,7 @@ Media Manager</code></pre>
   <media:content url="https://kareemai.com/blog/posts/math/images/Maslakiat.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>كم كالوري في الطعام؟ دليل السعرات الحرارية بالذكاء الاصطناعي</title>
+  <title>كم كالوري بالسعرات: حاسبة الذكاء الاصطناعي للأكل العربي</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/blog/posts/life_style/kamcalorie.html</link>
   <description><![CDATA[ 
@@ -9066,6 +9183,7 @@ Media Manager</code></pre>
 
 <section id="كم-كالوري" class="level2">
 <h2 class="anchored" data-anchor-id="كم-كالوري"><a href="https://www.kamcalorie.com/">كم كالوري</a></h2>
+<p><em>لو كنت تبحث عن “حاسبة سعرات حرارية عربية” أو “كم كالوري في الأكل العربي” فهذا هو المكان المناسب.</em></p>
 <p>موقع كم كالوري هو دليل القارئ العربي الي السعرات الحرارية في جميع الأطعمة بمختلف البلدان واللهجات ، دليلك لمعرفة القيمة الغذائية لها مثل السعرات الحرارية و المعادن ونسب البروتين و السكريات لحمية صحية و نظام غذائي أفضل تم إنشاء منصة كم كالوري بهدف توفيرمصدر موثوق و دقيق للقارئ العربي بتقنيات الذكاء الاصطناعي</p>
 </section>
 <section id="مميزات-الموقع" class="level2">
@@ -9123,7 +9241,8 @@ Media Manager</code></pre>
 
 
 <p><strong>أفضل مساحيق الكرياتين والبروتين للتضخيم من موقع Proteinai</strong></p>
-<p>هل تبحث عن أفضل مساحيق الكرياتين والبروتين لبناء العضلات وتحقيق نتائج مذهلة في التضخيم؟ موقع <a href="https://www.protienai.com">مساحيق كرياتين و بروتين لبناء العضلات والتضخيم</a> هو الوجهة المثالية التي توفر لك جميع الموارد والمعلومات اللازمة لاختيار المكملات الغذائية المناسبة لتحقيق أهدافك.</p>
+<p><em>البحث عن “افضل انواع الكرياتين للتضخيم” أو “proteinai”؟ هذه المقالة ترشدك.</em></p>
+<p>هل تبحث عن أفضل مساحيق الكرياتين للتضخيم أو ترغب في فهم كيفية اختيار الكرياتين المثالي؟ موقع <a href="https://www.protienai.com">مساحيق كرياتين و بروتين لبناء العضلات والتضخيم</a> المعروف باسم Proteinai هو الوجهة المثالية التي توفر لك جميع الموارد والمعلومات اللازمة لاختيار المكملات الغذائية المناسبة لتحقيق أهدافك.</p>
 <section id="ما-الذي-يجعل-موقع-proteinai-مميزا" class="level2">
 <h2 class="anchored" data-anchor-id="ما-الذي-يجعل-موقع-proteinai-مميزا"><strong>ما الذي يجعل موقع Proteinai مميزًا؟</strong></h2>
 <section id="مراجعات-متخصصة-ومقارنات-شاملة" class="level3">

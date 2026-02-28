@@ -8,9 +8,9 @@
 
 <meta name="author" content="kareem">
 <meta name="dcterms.date" content="2025-05-15">
-<meta name="description" content="Bojji and Zarra model2vec family model analysis and testing on Arabic Embeddings tasks.">
+<meta name="description" content="Analyze Bojji and Zarra model2vec embeddings for Arabic, compare MTEB average score with all-MiniLM-L6-v2 and other static models.">
 
-<title>Bojji &amp; Zarra Embedding models – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
+<title>Bojji &amp; Zarra Arabic Embeddings: MTEB vs all-MiniLM-L6-v2 – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -86,13 +86,13 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <!-- Fonts are embedded locally via shimmering-fonts.css -->
-<meta property="og:title" content="Bojji &amp; Zarra Embedding models – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
-<meta property="og:description" content="Bojji and Zarra model2vec family model analysis and testing on Arabic Embeddings tasks.">
+<meta property="og:title" content="Bojji &amp; Zarra Arabic Embeddings: MTEB vs all-MiniLM-L6-v2 – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta property="og:description" content="Analyze Bojji and Zarra model2vec embeddings for Arabic, compare MTEB average score with all-MiniLM-L6-v2 and other static models.">
 <meta property="og:image" content="https://kareemai.com/blog/posts/minishlab/images/minishlab.jpg">
 <meta property="og:site_name" content="Abdelkareem Elkhateb">
 <meta property="og:locale" content="en_US">
-<meta name="twitter:title" content="Bojji &amp; Zarra Embedding models – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
-<meta name="twitter:description" content="Bojji and Zarra model2vec family model analysis and testing on Arabic Embeddings tasks.">
+<meta name="twitter:title" content="Bojji &amp; Zarra Arabic Embeddings: MTEB vs all-MiniLM-L6-v2 – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta name="twitter:description" content="Analyze Bojji and Zarra model2vec embeddings for Arabic, compare MTEB average score with all-MiniLM-L6-v2 and other static models.">
 <meta name="twitter:image" content="https://kareemai.com/blog/posts/minishlab/images/minishlab.jpg">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary_large_image">
@@ -278,8 +278,8 @@ window.addEventListener('scroll', () => {
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Bojji & Zarra Embedding models",
-  "description": "Bojji and Zarra model2vec family model analysis and testing on Arabic Embeddings tasks.",
+  "headline": "Bojji & Zarra Arabic Embeddings: MTEB vs all-MiniLM-L6-v2",
+  "description": "Analyze Bojji and Zarra model2vec embeddings for Arabic, compare MTEB average score with all-MiniLM-L6-v2 and other static models.",
   "author": {"@type": "Person", "name": "kareem"},
   "datePublished": "May 15, 2025",
   "publisher": {
@@ -408,7 +408,7 @@ window.addEventListener('scroll', () => {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Bojji &amp; Zarra Embedding models</h1>
+<h1 class="title">Bojji &amp; Zarra Arabic Embeddings: MTEB vs all-MiniLM-L6-v2</h1>
   <div class="quarto-categories">
     <div class="quarto-category">blogging</div>
     <div class="quarto-category">embedding</div>
@@ -420,7 +420,7 @@ window.addEventListener('scroll', () => {
 
 <div>
   <div class="description">
-    Bojji and Zarra model2vec family model analysis and testing on Arabic Embeddings tasks.
+    Analyze Bojji and Zarra model2vec embeddings for Arabic, compare MTEB average score with all-MiniLM-L6-v2 and other static models.
   </div>
 </div>
 
@@ -451,7 +451,7 @@ window.addEventListener('scroll', () => {
 
 <section id="arabic-embedding-models" class="level2">
 <h2 class="anchored" data-anchor-id="arabic-embedding-models">Arabic Embedding Models</h2>
-<p>This blog post introduces the <strong>Bojji and Zarra</strong> family of static embedding models, designed for Arabic language tasks and built using the <strong>model2vec</strong> distillation technique from MinishLab.</p>
+<p>This blog post introduces the <strong>Bojji and Zarra</strong> family of static embedding models, designed for Arabic language tasks and built using the <strong>model2vec</strong> distillation technique from MinishLab. We compare performance to popular baselines such as <strong>all-MiniLM-L6-v2</strong> using MTEB average score – a query that’s currently rising in search trends.</p>
 <p>These models distill knowledge from larger transformer models, such as SBERT, into compact, efficient embeddings.</p>
 <p>This approach balances performance with speed and resource efficiency.</p>
 <p>Below, I explore the Bojji models and their relationship to <strong>Potion</strong> models, their strengths and limitations, and their applications in Arabic embedding tasks.</p>
@@ -641,7 +641,7 @@ window.addEventListener('scroll', () => {
 ├───────────────────────────────────────┼──────────────────────────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">bojji                                </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000; font-weight: bold">                           0.467</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼──────────────────────────────────┤
-│<span style="color: #008080; text-decoration-color: #008080"> paraphrase-multilingual-MiniLM-L12-v2 </span>��<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">                           0.451</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
+│<span style="color: #008080; text-decoration-color: #008080"> paraphrase-multilingual-MiniLM-L12-v2 </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">                           0.451</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼──────────────────────────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> potion-multilingual-128M              </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">                           0.428</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼──────────────────────────────────┤

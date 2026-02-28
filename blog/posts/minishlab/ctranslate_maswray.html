@@ -8,7 +8,7 @@
 
 <meta name="author" content="kareem">
 <meta name="dcterms.date" content="2025-10-03">
-<meta name="description" content="How I reduced translation costs from $32,000 to $0 using small models and CTranslate2 optimization, achieving 4-6x speed improvements">
+<meta name="description" content="From $32k to $0 translating with small models and CTranslate2; includes compute_type int8_float16, quantization 4-bit, and 4-6x speed gains.">
 
 <title>From $32,000 to $0 with Small Models and CTranslate2 – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
 <style>
@@ -122,14 +122,14 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 <style>html{ scroll-behavior: smooth; }</style>
 <!-- Fonts are embedded locally via shimmering-fonts.css -->
 <meta property="og:title" content="From $32,000 to $0 with Small Models and CTranslate2 – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
-<meta property="og:description" content="How I reduced translation costs from $32,000 to $0 using small models and CTranslate2 optimization, achieving 4-6x speed improvements">
+<meta property="og:description" content="From $32k to $0 translating with small models and CTranslate2; includes compute_type int8_float16, quantization 4-bit, and 4-6x speed gains.">
 <meta property="og:image" content="https://kareemai.com/blog/posts/minishlab/images/bojji.png">
 <meta property="og:site_name" content="Abdelkareem Elkhateb">
 <meta property="og:image:height" content="1536">
 <meta property="og:image:width" content="1024">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:title" content="From $32,000 to $0 with Small Models and CTranslate2 – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
-<meta name="twitter:description" content="How I reduced translation costs from $32,000 to $0 using small models and CTranslate2 optimization, achieving 4-6x speed improvements">
+<meta name="twitter:description" content="From $32k to $0 translating with small models and CTranslate2; includes compute_type int8_float16, quantization 4-bit, and 4-6x speed gains.">
 <meta name="twitter:image" content="https://kareemai.com/blog/posts/minishlab/images/bojji.png">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary_large_image">
@@ -315,7 +315,7 @@ window.addEventListener('scroll', () => {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "From $32,000 to $0 with Small Models and CTranslate2",
-  "description": "How I reduced translation costs from $32,000 to $0 using small models and CTranslate2 optimization, achieving 4-6x speed improvements",
+  "description": "From $32k to $0 translating with small models and CTranslate2; includes compute_type int8_float16, quantization 4-bit, and 4-6x speed gains.",
   "author": {"@type": "Person", "name": "kareem"},
   "datePublished": "October 3, 2025",
   "publisher": {
@@ -425,13 +425,13 @@ window.addEventListener('scroll', () => {
   <li><a href="#more-search-and-ctranslate-magic" id="toc-more-search-and-ctranslate-magic" class="nav-link" data-scroll-target="#more-search-and-ctranslate-magic">More search and Ctranslate magic 🎩</a>
   <ul class="collapse">
   <li><a href="#key-features-of-ctranslate" id="toc-key-features-of-ctranslate" class="nav-link" data-scroll-target="#key-features-of-ctranslate">Key features of Ctranslate</a></li>
-  <li><a href="#lets-try-it" id="toc-lets-try-it" class="nav-link" data-scroll-target="#lets-try-it">Let’s try it!</a></li>
+  <li><a href="#lets-try-it" id="toc-lets-try-it" class="nav-link" data-scroll-target="#lets-try-it">Let’s try it</a></li>
   </ul></li>
   <li><a href="#getting-help-from-the-titan-rtx-24gb" id="toc-getting-help-from-the-titan-rtx-24gb" class="nav-link" data-scroll-target="#getting-help-from-the-titan-rtx-24gb">Getting help from the Titan RTX 24GB</a>
   <ul class="collapse">
   <li><a href="#why-float16-is-faster-than-int8" id="toc-why-float16-is-faster-than-int8" class="nav-link" data-scroll-target="#why-float16-is-faster-than-int8">Why float16 is faster than int8</a></li>
   </ul></li>
-  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next steps!</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next steps</a></li>
   </ul>
 </nav>
     </div>
@@ -454,7 +454,7 @@ window.addEventListener('scroll', () => {
 
 <div>
   <div class="description">
-    How I reduced translation costs from $32,000 to $0 using small models and CTranslate2 optimization, achieving 4-6x speed improvements
+    From $32k to $0 translating with small models and CTranslate2; includes compute_type int8_float16, quantization 4-bit, and 4-6x speed gains.
   </div>
 </div>
 
@@ -574,14 +574,14 @@ window.addEventListener('scroll', () => {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/masrawy.png" class="img-fluid figure-img"></p>
-<figcaption>masrawy results</figcaption>
+<figcaption>CTranslate2 masrawy translation benchmark results</figcaption>
 </figure>
 </div>
 <p>I tested it with my local laptop GPU 1660Ti GTX mobile version with 6GB and CPU is Core i7 gen9 from Intel with 32GB DDR4. I tested the model and it worked with PyTorch very fast and very efficiently! The translations are very similar and this is enough for the task I want to build on this translated dataset! Let’s do the math for how much this will cost on my laptop :)</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/bojji.png" class="img-fluid figure-img"></p>
-<figcaption>faster masrawy</figcaption>
+<figcaption>CTranslate2 faster masrawy model performance</figcaption>
 </figure>
 </div>
 <hr>
@@ -681,7 +681,7 @@ window.addEventListener('scroll', () => {
 The execution&nbsp;<a href="https://github.com/OpenNMT/CTranslate2#benchmarks">is significantly faster and requires less resources</a>&nbsp;than general-purpose deep learning frameworks on supported models and tasks thanks to many advanced optimizations: layer fusion, padding removal, batch reordering, in-place operations, caching mechanism, etc.</p>
 <ul>
 <li><strong>Quantization and reduced precision</strong><br>
-The model serialization and computation support weights with&nbsp;<a href="https://opennmt.net/CTranslate2/quantization.html">reduced precision</a>: 16-bit floating points (FP16), 16-bit brain floating points (BF16), 16-bit integers (INT16), 8-bit integers (INT8) and AWQ quantization (INT4).</li>
+The model serialization and computation support weights with&nbsp;<a href="https://opennmt.net/CTranslate2/quantization.html">reduced precision</a>: 16-bit floating points (FP16), 16-bit brain floating points (BF16), 16-bit integers (INT16), 8-bit integers (INT8) and AWQ / int4 quantization (4-bit) – the latter keeps pop‑performance high while dramatically shrinking disk size.</li>
 <li><strong>Multiple CPU architectures support</strong><br>
 The project supports x86-64 and AArch64/ARM64 processors and integrates multiple backends that are optimized for these platforms:&nbsp;<a href="https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/onemkl.html">Intel MKL</a>,&nbsp;<a href="https://github.com/oneapi-src/oneDNN">oneDNN</a>,&nbsp;<a href="https://www.openblas.net/">OpenBLAS</a>,&nbsp;<a href="https://github.com/google/ruy">Ruy</a>, and&nbsp;<a href="https://developer.apple.com/documentation/accelerate">Apple Accelerate</a>.</li>
 <li><strong>Automatic CPU detection and code dispatch</strong><br>
@@ -700,16 +700,17 @@ The project has few dependencies and exposes simple APIs in&nbsp;<a href="https:
 Very large model can be split into multiple GPUs. Following this&nbsp;<a href="https://github.com/OpenNMT/CTranslate2/blob/master/docs/parallel.md#model-and-tensor-parallelism">documentation</a>&nbsp;to set up the required environment.</li>
 </ul>
 <p>Some of these features are difficult to achieve with standard deep learning frameworks and are the motivation for this project.</p>
+<p><em>Note:</em> CTranslate2 exposes a <code>compute_type</code> setting that controls the internal arithmetic precision. Options include <code>float32</code>, <code>float16</code>, <code>int8</code>, <code>int8_float16</code> (a hybrid mode that uses float16 for most ops but int8 for large matrix multiplies), etc. The <code>int8_float16</code> mode in particular often hits the sweet spot between speed and accuracy, which is why you’ll see it in my performance tables later.</p>
 </section>
 <section id="lets-try-it" class="level3">
-<h3 class="anchored" data-anchor-id="lets-try-it">Let’s try it!</h3>
+<h3 class="anchored" data-anchor-id="lets-try-it">Let’s try it</h3>
 <p>I used the following script to convert the HF version into CTranslate2 expected format:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ct2-transformers-converter</span> <span class="at">--model</span> NAMAA-Space/masrawy-english-to-egyptian-arabic-translator-v2.9 <span class="at">--output_dir</span> ct2_model_masrawy</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>then i used the model with this version</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>translator <span class="op">=</span> ctranslate2.Translator(</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ct2_model_masrawy"</span>,</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    device<span class="op">=</span><span class="st">"cuda"</span>,</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    compute_type<span class="op">=</span><span class="st">"float16"</span>,</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a> <span class="st">"ct2_model_masrawy"</span>,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a> device<span class="op">=</span><span class="st">"cuda"</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a> compute_type<span class="op">=</span><span class="st">"float16"</span>,</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>It worked and was very fast - much, much faster!</p>
 <hr>
@@ -891,13 +892,17 @@ Very large model can be split into multiple GPUs. Following this&nbsp;<a href="h
 <li>Time for 1000 docs: 4.43 seconds</li>
 </ul>
 <p><strong>Result: Float16 is ~19% faster! (269.2 vs 225.8 docs/sec)</strong> <strong>Lower precision ≠ Always faster!</strong> I need to increase the batch size for int8 and see which batch size will be better!</p>
+<blockquote class="blockquote">
+<p>The different compute_type modes are what drive these performance differences; your choice between <code>float16</code>, <code>int8</code>, or the hybrid <code>int8_float16</code> depends on your hardware and the speed/accuracy tradeoff you care about.</p>
+</blockquote>
 </section>
 </section>
 <section id="next-steps" class="level2">
-<h2 class="anchored" data-anchor-id="next-steps">Next steps!</h2>
+<h2 class="anchored" data-anchor-id="next-steps">Next steps</h2>
 <p>This is just the start. I will search more and investigate how to make this faster because the 8 million rows are only 2GB and the next task is to translate 500GB :) Every second will make a huge difference!</p>
 <ul>
 <li>Use larger batch size with int8</li>
+<li>Explore CTranslate2 4-bit / AWQ quantization support on newer GPUs</li>
 <li>Use different GPU with modern architecture and better CPU</li>
 <li>Deep dive into vLLM</li>
 <li>Try the ONNX version for GPU, not CPU</li>
