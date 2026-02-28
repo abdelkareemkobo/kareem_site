@@ -1,6 +1,6 @@
 ---
-title: "What is Federated Learning"
-description: "A quick introduction to Federated Learning Systems, comparing them with centralized machine learning systems in a simple style."
+title: "Federated Learning: Definition, Examples & Benefits"
+description: "Learn what Federated Learning is, how it works with decentralized data, examples like Gboard, and why it's crucial for privacy and low-bandwidth training."
 authors: kareem
 date: 2024-11-12
 draft: false
@@ -14,6 +14,7 @@ order: 1
 ---
 
 You're on a mission to create the purest, sweetest, and healthiest honey in the world. As a mad scientist, you want to improve your beehive's efficiency and ensure no one can steal your secret recipe for magic honey.  
+*This federated learning system overview covers its definition, examples like Gboard, and compares it to centralized machine learning.*
 After researching how to set up your beehive system—how the bees should communicate, and where to collect nectar in a protected way to guard against wasps that want to steal your honey and harm your beehive—you discover that a Federated Beehive could meet all your needs. However, it adds complexity to your system and requires a new mindset.
 
 ## Traditional ML Systems (Centralized)

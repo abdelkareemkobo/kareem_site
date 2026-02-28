@@ -12,11 +12,12 @@ tags:
   - huawei
   - review
 ogImage: '""'
+image: images/mate_pad_11.jpeg
 ---
 
 ## Table of contents
 
-Here is an expanded version of your blog post with some additional details:
+Here is an expanded version of your blog post with some additional details. This review highlights both the pros and cons, particularly the tablet's limitations with Google services and occasional Linux integration issues:
 
 ## Why I bought it
 
@@ -83,9 +84,9 @@ Overall, while the Huawei tablet offers excellent hardware, the software experie
 
 ## references
 
-- https://www.noteshelf.net/
-- https://www.gboxlab.com/
-- https://www.infinitestudio.art/painter.php
+- <https://www.noteshelf.net/>
+- <https://www.gboxlab.com/>
+- <https://www.infinitestudio.art/painter.php>
 
 ---
 

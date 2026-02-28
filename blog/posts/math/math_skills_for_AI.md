@@ -1,5 +1,5 @@
 ---
-title: "Mathematics for AI: A Personal Journey and Essential Concepts"
+title: "Math for AI Roadmap: Concepts & Course Prep"
 description: "Explore my roadmap for mastering the mathematical foundations of AI, covering linear algebra, calculus, and probability for machine learning research."
 date: 2025-01-27
 categories:
@@ -13,7 +13,9 @@ author: kareem
 
 ## What I Aim to Achieve
 
-As a graduate with a Computer Science degree, my time has been primarily dedicated to three core areas:
+*This article doubles as a self‑guided course in mathematics for artificial intelligence – a math for AI roadmap that also touches on mathematics in artificial intelligence and prepares you for relevant courses.*
+
+As a graduate with a Computer Science degree, my time has been primarily dedicated to three core areas. I wrote these notes partly to fill gaps I felt during a mathematics for AI course and to provide future readers with an effective roadmap.
 
 1. **Programming:** I've worked extensively with Python, C++, JavaScript, and Rust.
 2. **Mathematics:** My studies have encompassed linear algebra, probability, calculus, and discrete mathematics.
@@ -34,7 +36,7 @@ Currently, I'm involved in:
 
 ## The Centrality of Math in AI Research
 
-It's true that in both engineering and research, you can be an excellent software engineer and earn a substantial income without deep mathematical knowledge, possibly more than many mathematicians. However, to be a good researcher, a strong mathematical foundation is crucial. By that, I don't just mean a superficial understanding of numerous topics. You need a solid grasp of linear algebra and probability, both theoretically and practically. And by "practical," I mean the ability to translate mathematical concepts into code.
+It's true that in both engineering and research, you can be an excellent software engineer and earn a substantial income without deep mathematical knowledge, possibly more than many mathematicians. However, to be a good researcher, a strong mathematical foundation is crucial. Whenever I think about this, I ask myself what a mathematics for artificial intelligence course would demand. By that, I don't just mean a superficial understanding of numerous topics. You need a solid grasp of linear algebra and probability, both theoretically and practically. And by "practical," I mean the ability to translate mathematical concepts into code.
 
 Of course, other topics are relevant, depending on your specific field. For example:
 
@@ -90,47 +92,47 @@ I start reading the first the page and the author was talking to me and the word
 
 **Translations of the Arabic Quotes (with slight interpretations for clarity):**
 
-1.  **"ولكن ثمة عامل له في نفسي حفاوة خاصة ، عامل يفسر كثيرا من فشل الطموحات و الأحلام ... هذا العامل بكل اختصار: هو أن الخطط فوق الصخور و الارجل مازالت ناعمة ما حفيت بعد..."**
+1. **"ولكن ثمة عامل له في نفسي حفاوة خاصة ، عامل يفسر كثيرا من فشل الطموحات و الأحلام ... هذا العامل بكل اختصار: هو أن الخطط فوق الصخور و الارجل مازالت ناعمة ما حفيت بعد..."**
 
     - Translation: "But there is a factor that resonates deeply within me, a factor that explains much of the failure of ambitions and dreams... This factor, in short, is that the plans are laid on rocks, but our feet are still tender, not yet calloused."
     - Interpretation: This emphasizes the gap between grand plans and the lack of practical experience or the "hard knocks" that build resilience and skill.
 
-2.  **"إذا كان المرء ينام حتي تجهرك أشعة الحمرة في عينية و يبسط خوان الطعام كلما اشتهي ، ويخصص الأوقات الطويلة للقهوة و الشاي و العصائر و الفطائر ، ولا يسمح لنفسه بأن تتنازل عن أي فرصة فسحة أو مسامرات مع أصحابة ، و لا يستطيع كبح جماح تصفح الإنترنت أن يسرق ساعاته ، اذا كان المرء كذلك .. وما زال يرجو ان تتحقق يوما ما خططه العلمية و الدعوية و الإصلاحية ، فمثل هذا الشخص قد استأصل عقله ، و زرع بدلا منه مصباح علاء الدين"**
+2. **"إذا كان المرء ينام حتي تجهرك أشعة الحمرة في عينية و يبسط خوان الطعام كلما اشتهي ، ويخصص الأوقات الطويلة للقهوة و الشاي و العصائر و الفطائر ، ولا يسمح لنفسه بأن تتنازل عن أي فرصة فسحة أو مسامرات مع أصحابة ، و لا يستطيع كبح جماح تصفح الإنترنت أن يسرق ساعاته ، اذا كان المرء كذلك .. وما زال يرجو ان تتحقق يوما ما خططه العلمية و الدعوية و الإصلاحية ، فمثل هذا الشخص قد استأصل عقله ، و زرع بدلا منه مصباح علاء الدين"**
 
     - Translation: "If a person sleeps until the red rays of the sun glare in their eyes, lays out a feast whenever they desire, dedicates long periods to coffee, tea, juices, and pastries, never allows themselves to miss an opportunity for leisure or socializing with friends, and cannot restrain themselves from internet browsing stealing their hours—if a person is like this and still hopes that their scientific, religious, or reformist plans will one day be realized, then such a person has removed their mind and planted Aladdin's lamp in its place."
     - Interpretation: This strongly condemns a life of indulgence and procrastination, suggesting that those who wish to achieve great things must sacrifice leisure and work diligently. They cannot expect to magically fulfill ambitions like Aladdin with his lamp.
 
-3.  **"لا يستطاع العلم براحة الجسم"**
+3. **"لا يستطاع العلم براحة الجسم"**
 
     - Translation: "Knowledge cannot be attained with bodily comfort."
     - Interpretation: This is a concise statement emphasizing the necessity of effort and sacrifice in the pursuit of learning.
 
-4.  **"الكمالات كلها لا تنال إلا بحظ من المشقة و لا يعبر إليها إلا علي جسر من التعب"**
+4. **"الكمالات كلها لا تنال إلا بحظ من المشقة و لا يعبر إليها إلا علي جسر من التعب"**
 
     - Translation: "All perfections are not achieved except through a portion of hardship, and they cannot be crossed except on a bridge of fatigue."
     - Interpretation: This highlights that excellence and mastery require sustained effort, difficulty, and resilience.
 
-5.  **"تلمح فجر الأجر يهن ظلام التكليف"**
+5. **"تلمح فجر الأجر يهن ظلام التكليف"**
 
     - Translation: "You perceive the dawn of reward makes the darkness of duty pale."
     - Interpretation: This suggests that the hope of reward and the meaningful impact of your work make the hard work and sacrifice worthwhile.
 
-6.  **"بقدر ما تتعني تنال ما تتمني"**
+6. **"بقدر ما تتعني تنال ما تتمني"**
 
     - Translation: "To the extent that you exert yourself, to that extent you will achieve what you desire."
     - Interpretation: This is a direct statement of the relationship between effort and achievement.
 
-7.  **"ولم تعطني الأيام نوما مسكنا ألذ به ، إلا بنوم مشرد"**
+7. **"ولم تعطني الأيام نوما مسكنا ألذ به ، إلا بنوم مشرد"**
 
     - Translation: "The days have not given me a comforting sleep more delicious than a scattered one."
     - Interpretation: This beautifully evokes the idea that true rest is often earned by hard work and might not always be the most comfortable.
 
-8.  **"و اذا كانت النفوس كبارا تعبت في مرادها الأجسام"**
+8. **"و اذا كانت النفوس كبارا تعبت في مرادها الأجسام"**
 
     - Translation: "If the souls are great, the bodies will toil in pursuit of their desires."
     - Interpretation: This highlights that ambitious goals require a commitment to hard work that will test the physical body.
 
-9.  **"وكذلك يحذر من التنقل من كتاب الي كتاب من غير موجب فإنه علامة الضجر وعدم الفلاح"**
+9. **"وكذلك يحذر من التنقل من كتاب الي كتاب من غير موجب فإنه علامة الضجر وعدم الفلاح"**
 
     - Translation: "Likewise, he warns against moving from book to book without a valid reason, for it is a sign of boredom and lack of success."
     - Interpretation: This advises against haphazardly abandoning study materials, highlighting that deep learning comes from thorough exploration.

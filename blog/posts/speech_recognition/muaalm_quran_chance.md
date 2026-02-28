@@ -1,5 +1,5 @@
 ---
-title: "Optimizing Quranic AI Models: Tarteel & Muaalem El Quran | Part 2"
+title: "Tarteel & Muaalem El Quran: Optimizing Quranic AI Part 2"
 description: "Discover how I optimized the Muaalem El Quran model using TensorRT and ONNX. A deep dive into Quranic speech recognition and my journey with Tarteel AI."
 date: 2025-12-26
 author: kareem
@@ -16,19 +16,19 @@ image: images/tarteel_ai.jpg
 
 ## The Journey Continues | Tarteel AI career
 
-Last year, I wrote about [my dream to work at Tarteel](https://kareemai.com/blog/posts/speech_recognition/my_dream_job_at_tarteel.html). 
+Last year, I wrote about [my dream to work at Tarteel](https://kareemai.com/blog/posts/speech_recognition/my_dream_job_at_tarteel.html).
 
-It was a heartfelt post about my passion for Quranic technology. No one from Tarteel reached out  :) which was expected. 
+It was a heartfelt post about my passion for Quranic technology. No one from Tarteel reached out  :) which was expected.
 
 Feeling passionate isn't enough; you must be a strong engineer and demonstrate your skills so companies see the value in hiring you.
 
 **Talking is easy. Acting is hard.**
 
-Some people messaged me on LinkedIn saying they shared the same feelings. Others mentioned they knew people at Tarteel and offered to help. 
+Some people messaged me on LinkedIn saying they shared the same feelings. Others mentioned they knew people at Tarteel and offered to help.
 
 But honestly, I didn't pursue this dream as actively as I should have.
 
-Instead, I joined **xbites**, a real estate AI company where I learned invaluable lessons about building agentic systems, creating production-ready models, and meeting business requirements. 
+Instead, I joined **xbites**, a real estate AI company where I learned invaluable lessons about building agentic systems, creating production-ready models, and meeting business requirements.
 
 We had hard times and a lot of fun.
 
@@ -40,7 +40,7 @@ This is my last week at xbites — I'm moving to another opportunity. But what a
 
 I'm building a habit of daily TIL (Today I Learned) posts to improve my learning and share knowledge with others. This blog is part of that journey.
 
-I'm excited to share my work on **muaalem El Quran** , an open-source Quranic recitation model developed by **Abdalla Amal**. 
+I'm excited to share my work on **muaalem El Quran** , an open-source Quranic recitation model developed by **Abdalla Amal**.
 
 It's designed as an alternative to Tarteel for the developer community, enabling anyone to build their own solutions on top of it.
 
@@ -117,6 +117,7 @@ The GTX 1660 Ti lacks support, limiting the benefits of `torch.compile`'s optimi
 ONNX (Open Neural Network Exchange) allows models to run on optimized inference engines. We exported the PyTorch model to ONNX format and tested different execution providers.
 
 **CUDA Execution Provider:**
+
 ```python
 session = ort.InferenceSession(
     "model.onnx",
@@ -185,7 +186,7 @@ session = ort.InferenceSession(
 
 CTranslate2 is a C++ inference engine optimized for transformer models. It supports INT8 quantization which compresses weights to 8-bit integers.
 
-And the model here is the base part after trying to implement a Class wrapper so I will be able to convert the modified architecture with Ctranslate2 because their automatic script failed to convert it. 
+And the model here is the base part after trying to implement a Class wrapper so I will be able to convert the modified architecture with Ctranslate2 because their automatic script failed to convert it.
 
 ```python
 # Convert model
@@ -252,6 +253,7 @@ curl -X POST http://localhost:8000/predict \
 ```
 
 **Response:**
+
 ```json
 {
   "phonemes": "ءِنَلَاهَبِكُلِشَيءِنعَلِۦمُ",
@@ -263,7 +265,7 @@ curl -X POST http://localhost:8000/predict \
 
 ---
 
-## The Dependency Hell with ONNX 
+## The Dependency Hell with ONNX
 
 *Okay let me be real with you.*
 
@@ -271,7 +273,7 @@ I spent more time fighting package versions than actually optimizing the model. 
 
 So you install `librosa` because you need audio stuff. It pulls in `numba`. Numba wants `numpy<=2.0`. Fine whatever.
 
-Then you need `onnxruntime-gpu`. Guess what? It wants `numpy>=2.1`. 
+Then you need `onnxruntime-gpu`. Guess what? It wants `numpy>=2.1`.
 
 Everything breaks. You Google. Stack Overflow says "just downgrade". You downgrade. Now `onnxruntime` breaks. Great.
 
@@ -282,6 +284,7 @@ And don't get me started on `ctranslate2` — the moment you install it, it down
 I ran `uv pip install tensorrt`. Waited. And waited. **12 hours later** — still downloading. I gave up and went to sleep.
 
 Next day I found out you need NVIDIA's special index:
+
 ```bash
 pip install tensorrt --extra-index-url https://pypi.nvidia.com
 ```
@@ -289,6 +292,7 @@ pip install tensorrt --extra-index-url https://pypi.nvidia.com
 Took 30 mins. WHY IS THIS NOT THE DEFAULT.
 
 **Honestly?** Just use different virtual environments. Don't be like me trying to fit everything in one place. Your sanity is worth more.
+
 ## Key Learnings
 
 1. **Know your hardware**: GTX 1660 Ti lacks Tensor Cores, so FP16 without TensorRT hurts performance

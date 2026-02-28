@@ -1,6 +1,6 @@
 ---
 title: "Mastering Data Structures for Machine Learning Engineering"
-description: "Mastering Data Structures and Algorithms as a Machine Learning Engineer to improve problem-solving skills and move beyond Jupyter notebooks."
+description: "Data structures & algorithms for ML engineers: boost problem-solving, grasp complexity, and move beyond Jupyter."
 author: kareem
 date: 2024-10-4
 draft: false
@@ -9,9 +9,12 @@ tags:
   - blogging
   - ds
   - algorithms
+image: images/til.jpg
 ---
 
 ## Why revisit DS and algorithms
+
+*This post serves as a self‑study roadmap for mastering data structures for machine learning engineering.*
 
 - I am a fresh graduate from AI college, i spent the last 4 years learning about both Computer science and AI.
 - I was learning some math, machine learning , Deep learning and a lot of programming with python and C++, spent some a lot of time learning web also for freelance jobs.

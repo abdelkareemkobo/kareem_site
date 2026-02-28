@@ -1,6 +1,6 @@
 ---
 title: "Harvard CS197: AI Research Experiences & Deep Learning Guide"
-description: "A review of Harvard CS197: AI Research Experiences. 21 lectures covering deep learning research, paper analysis, and productivity for AI researchers."
+description: "Review of Harvard CS197 (CS 197) AI Research Experiences: 21 lectures on deep-learning research, paper reading, and productivity."
 author: kareem
 date: 2023-07-18
 draft: false
@@ -10,11 +10,12 @@ tags:
   - publish
   - research
   - courses
+image: images/til.jpg
 ---
 
 ## Table of contents
 
-- [ ] This course consists of 21 quick lectures that include valuable experiences and important tips for anyone interested in the field of scientific research, especially deep learning. The course can be completed in approximately one or two days. The title is not very precise, and the content of the lectures ranges from about 8 to 26 pages each. Some topics may not be directly related to the specifics of scientific research, but they are generally very helpful lectures for beginners in the field.
+- [ ] This course (Harvard CS197, also written CS 197) consists of 21 quick lectures that include valuable experiences and important tips for anyone interested in the field of scientific research, especially deep learning. The course can be completed in approximately one or two days. The title is not very precise, and the content of the lectures ranges from about 8 to 26 pages each. Some topics may not be directly related to the specifics of scientific research, but they are generally very helpful lectures for beginners in the field.
 
 ## Reviews
 

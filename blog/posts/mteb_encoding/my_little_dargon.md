@@ -1,6 +1,6 @@
 ---
-title: My little Dragon "kobo"
-description: A review about my MSI Gaming Laptop as a machine learning student and also a web developer! and want to say thanks for this amazing friend who leaved with me for 4 years.
+title: "MSI Gaming Laptop Review: My 4-Year ML Workhorse 'Kobo'"
+description: "MSI gaming laptop review from a machine-learning student: 4-year journey with 'Kobo' GTX 1660 Ti, Linux tweaks, battery & heat notes."
 authors: kareem
 date: 2024-01-01
 draft: false
@@ -9,11 +9,16 @@ tags:
   - blogging
   - publish
   - review
+  - msi
+  - gaming laptop
+  - machine learning
 ogImage: "dargon_1.png"
 status: Idea_Forge
 ---
 
 ## Table of contents
+
+This post is an honest MSI gaming laptop review from the perspective of a machine learning student. It includes my experiences with the GTX 1660 Ti, Linux configuration, battery life, heat, and a comparison to Lenovo systems. You can also read my [MSI vs Lenovo section](#msi-vs-lenovo) later in the article.
 
 ## The time I spend with kobo
 
@@ -25,7 +30,7 @@ I have been using it for 4 years now, and it was a nice period i love that it ha
 
 You can easily say that my laptop is now a part of me i can't live without it any more my dairy, movies, work and college is depending on it
 
-## Who is "Kobo"!
+## Who is "Kobo"
 
 ![Kobo](dragon_2.png)
 
@@ -44,13 +49,13 @@ After buying it, it wasn't configured with Windows, but was another DOS version 
 **The solution:** It was my first year at a computer science college, so the geeky thing was to use Linux. After some search, I installed Ubuntu and then tried a lot of distros like Void Linux, but the one that I picked and still use is the amazing PopOS! which is based on Ubuntu but better than it!  
 The WiFi problem doesn't appear again! And for Nvidia graphics, it's solved in PopOS! which has a command to install some drivers. And everything works smoothly
 
-### The Cost of It!
+### The Cost of It
 
 I bought it for the cost of 20,000 EGP, which at the time I bought it was $X, but now 20,000 EGP is worth $XX due to problems in my country.
 
 Its cost at that time is really high for my budget and family, but I insisted on buying it because I knew it would stay with me for years, so I wanted a good one.
 
-### How I Decided to Buy It!
+### How I Decided to Buy It
 
 The phrase "Machine learning needs an Nvidia GPU" was dancing in my mind, so my main focus was on a nice GPU card in a laptop with a low budget. After some search, I found that the best choices are MSI or Lenovo, but the Lenovo version cost about 4000 EGP more than the MSI.
 
@@ -60,7 +65,7 @@ It wasn't available online, so I had to travel 3 hours to the store that sells i
 
 ---
 
-## I Am Not a Gamer!
+## I Am Not a Gamer
 
 I didn't use it for gaming because I am not a gamer, but I used it heavily in programming and some machine learning and basic computer vision models, and it works so nicely!
 
@@ -79,7 +84,7 @@ Machine learning is a wide area, and you can use the GPU for 3 things:
 
 I was fine with all the ML tasks I tried to do, unless I opened the door to large language models like the GPT family (ChatGPT for example). These models require a lot of memory and need a good graphics card like an RTX 30 or 40 series to test, and there's no chance to train these models on any RTX card!
 
-### Why Not Just Use the Cloud!
+### Why Not Just Use the Cloud
 
 There are two main solutions:
 
@@ -110,7 +115,7 @@ The keyboard is very responsive and well configured with smooth clicks - no issu
 
 I've been using this machine for 4 years and I write a lot. No broken keys have happened despite my clumsy fingers. I have a mechanical keyboard that I sometimes use, but I always miss the feel of the built-in keyboard. The red backlight is decent.
 
-## Finally!
+## Finally
 
 ![Kobo_finally](draong_1.png)
 I just wanted to say that I love "Kobo" and I've spent nice times with it - some really difficult and others really happy. It's been a loyal friend and something to rely on.

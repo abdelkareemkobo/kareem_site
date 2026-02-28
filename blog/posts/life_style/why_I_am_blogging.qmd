@@ -1,10 +1,11 @@
 ---
 title: "Why I am Blogging: The Benefits of Writing as an AI Engineer"
-description: "Explore why blogging is essential for software and machine learning engineers. Learn how a personal blog helps organize knowledge, build a professional presence, and foster learning."
+description: "Why blogging helps software and machine-learning engineers build presence, organize knowledge, and learn."
 date: 2023-07-18
 categories: [life,blogging,publish]
 author: Kareem Elkhateb
 order: 1
+image: images/graviety.jpg
 ---
 
 ## Why I am blogging

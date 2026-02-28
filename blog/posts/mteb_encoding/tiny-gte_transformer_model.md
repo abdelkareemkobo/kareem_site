@@ -1,6 +1,6 @@
 ---
 title: "tiny-gte: Efficient Transformer for Semantic Search"
-description: "Explore tiny-gte, a distilled transformer model for efficient sentence embeddings. Learn about its performance and architecture for use in vector databases and RAG."
+description: "tiny-gte is a 45MB distilled transformer from gte-small that produces 384D embeddings for efficient semantic search and vector DBs."
 date: 2023-10-21
 draft: false
 tags:
@@ -14,11 +14,12 @@ tags:
   - publish
 authors:
   - kareem
+image: images/til.jpg
 ---
 
 ## What is tiny-gte?
 
-The `tiny-gte` model is a specialized [sentence-transformers](https://www.sbert.net/) model designed for extreme efficiency without sacrificing too much accuracy. It maps sentences and paragraphs into a 384-dimensional dense vector space, making it perfect for tasks like clustering, semantic search, and Retrieval-Augmented Generation (RAG).
+The `tiny-gte` model is a specialized [sentence-transformers](https://www.sbert.net/) model designed for extreme efficiency without sacrificing too much accuracy. Distilled from the `thenlper/gte-small` parent, it’s only about 45 MB in size while still outputting 384‑dimensional vectors — a compact footprint that answers questions about **gte-small model size mb** and **gte-small embedding dimension 384**. It maps sentences and paragraphs into this dense vector space, making it perfect for tasks like clustering, semantic search, and Retrieval-Augmented Generation (RAG).
 
 The model is a distilled version of `thenlper/gte-small`. Through distillation, it manages to maintain comparable performance (only slightly lower on benchmarks like MTEB) while being roughly half the size of its parent model.
 

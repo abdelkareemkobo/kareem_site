@@ -1,5 +1,5 @@
 ---
-title: "Super Productivity Review: Best Free Todo App for AI Engineers"
+title: "Super Productivity Review: Best Free Todo App (2026)"
 description: "A detailed review of Super Productivity, the free open source todo app. Explore how I use it for managing AI research, development tasks, and daily productivity."
 author: kareem
 date: 2026-01-09
@@ -15,7 +15,7 @@ image: images/Pasted image 20260109194735.png
 
 ## Why Super Productivity
 
-After 1.5 years of daily use, [Super Productivity](https://super-productivity.com/) has become my only task management system. Not a todo-list, a complete productivity system. And it's free.
+After 1.5 years of daily use, [Super Productivity](https://super-productivity.com/) — also known as the superproductivity app — has become my only task management system. Not a todo-list, a complete productivity system. And it's free.
 
 ### Why It Wins
 
@@ -100,6 +100,30 @@ very cool.
 #### custom backgrounds
 
 ![Super Productivity Custom Backgrounds](images/Pasted image 20260109194640.png)
+
+### Super Productivity vs Todoist
+
+I switched from Todoist after using it for about a year. Here's the honest comparison:
+
+| Feature | Super Productivity | Todoist |
+|---|---|---|
+| Price | **Free** (open source) | Free tier limited, $4-6/mo for full |
+| Offline | ✅ Full offline | ❌ Limited |
+| Time tracking | ✅ Built-in | ❌ Requires integration |
+| Self-hosted sync | ✅ Yes | ❌ No |
+| Mobile app | ✅ Good | ✅ Polished |
+| Collaboration | ❌ Solo only | ✅ Team features |
+| Gantt / timeline | ❌ No | ❌ No (paid add-on) |
+
+**Bottom line**: if you work solo and care about time tracking, offline access, or don't want a subscription — Super Productivity wins. Todoist is better if you need team collaboration or a more polished mobile experience.
+
+---
+
+### Is Super Productivity Completely Free?
+
+**Yes.** Completely free, no ads, no premium tier, no data collection. It's fully open source ([GitHub](https://github.com/johannesjo/super-productivity)). You can use every single feature without paying anything — ever.
+
+---
 
 ### What I Don't Like
 

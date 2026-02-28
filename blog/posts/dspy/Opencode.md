@@ -1,6 +1,6 @@
 ---
 title: "OpenCode: Why It's Different and How to Use It with Python"
-description: Learn about OpenCode's agents, skills, and server. Built in TypeScript but works perfectly with Python for custom AI workflows.
+description: Learn how OpenCode works as programmable AI coding infrastructure. Built in TypeScript, controlled with Python — covering agents, skills, PLAN.md, and MLflow integration.
 author: kareem
 date: 2026-02-19
 draft: false
@@ -543,3 +543,10 @@ The architecture is what makes it different. Not just another chat interface.
 
 - OpenCode docs: [opencode.ai](https://opencode.ai)
 - Follow updates: [@AbdelkareemElk1]
+
+---
+
+**Related Posts:**
+
+- [DSPy: Concepts and Exploration](../dspy/dspy.html)
+- [Building SEO RAT: A Free, Open-Source SEO Tool](../seo/seo_rat_journey.html)

@@ -1,6 +1,6 @@
 ---
-title: MTEB Massive Text Embedding Benchmark
-description: MTEB  Benchmark aims to provide clarity on how models perform on a variety of embedding tasks and thus serves as the gateway  to finding universal text embedding applicable to a variety of tasks.
+title: "MTEB Benchmark: Tasks, Datasets & nDCG@10 Explained"
+description: "Overview of MTEB, covering 58 datasets across 8 tasks, benchmarking models and explaining the nDCG@10 retrieval metric."
 date: 2023-10-28
 draft: false
 featured: true
@@ -14,10 +14,11 @@ tags:
   - publish
 authors:
   - kareem
+image: images/til.jpg
 ---
 ## Introduction
 
-#defintion MTEB: MTEB spans 8 embedding tasks covering a total of 58 datasets and 112 languages. Through the benchmarking of 33 models on MTEB.
+# defintion MTEB: MTEB spans 8 embedding tasks covering a total of 58 datasets and 112 languages. Through the benchmarking of 33 models on MTEB, we also report key retrieval metrics such as nDCG@10 which often determine the ranking of models on the leaderboard.
 
 ## Embedding models
 
@@ -74,7 +75,7 @@ METB is build on a set of desiderat.
 
 ## Tasks and Evaluation
 
-#definition **Bitext Mining**  
+# definition **Bitext Mining**  
 Inputs are two sets of sentences from two different languages. For each sentence in the first set, the best match in the second set needs to be found.
 
 - The matches are commonly translations.
@@ -118,7 +119,7 @@ Inputs are two sets of sentences from two different languages. For each sentence
 
 ---
 
-#sidenote **Non-Transformers** : LASER (Heffernan et al.,2022) is the only context aware non-transformer model we benchmark, relying on an LSTM (Hochreiter and Schmidhuber, 1997) instead. Similar to LaBSE, the model trains on parallel data and focuses on bitext mining applications.
+# sidenote **Non-Transformers** : LASER (Heffernan et al.,2022) is the only context aware non-transformer model we benchmark, relying on an LSTM (Hochreiter and Schmidhuber, 1997) instead. Similar to LaBSE, the model trains on parallel data and focuses on bitext mining applications.
 
 ## Analysis
 
@@ -181,5 +182,5 @@ Thanks for reading. If you have any questions, feel free to comment down below o
 
 ## References
 
-- https://huggingface.co/blog/mteb
-- https://arxiv.org/abs/2210.07316
+- <https://huggingface.co/blog/mteb>
+- <https://arxiv.org/abs/2210.07316>

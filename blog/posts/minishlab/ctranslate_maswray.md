@@ -1,6 +1,6 @@
 ---
 title: From $32,000 to $0 with Small Models and CTranslate2
-description: How I reduced translation costs from $32,000 to $0 using small models and CTranslate2 optimization, achieving 4-6x speed improvements
+description: From $32k to $0 translating with small models and CTranslate2; includes compute_type int8_float16, quantization 4-bit, and 4-6x speed gains.
 author: kareem
 date: 2025-10-03
 draft: false
@@ -62,7 +62,7 @@ was trained on more than _**150,000**_ rows with more than _**10 Million
 tokens**_ for Arabic language. It competes with closed LLMs like GPT-4o and
 Claude-3.5-Sonnet
 
-![masrawy results](images/masrawy.png)
+![CTranslate2 masrawy translation benchmark results](images/masrawy.png)
 
 I tested it with my local laptop GPU 1660Ti GTX mobile version with 6GB and CPU
 is Core i7 gen9 from Intel with 32GB DDR4. I tested the model and it worked with
@@ -70,7 +70,7 @@ PyTorch very fast and very efficiently! The translations are very similar and
 this is enough for the task I want to build on this translated dataset! Let's do
 the math for how much this will cost on my laptop :)
 
-![faster masrawy](images/bojji.png)
+![CTranslate2 faster masrawy model performance](images/bojji.png)
 
 ---
 
@@ -171,7 +171,8 @@ in-place operations, caching mechanism, etc.
   The model serialization and computation support weights
   with [reduced precision](https://opennmt.net/CTranslate2/quantization.html):
   16-bit floating points (FP16), 16-bit brain floating points (BF16), 16-bit
-  integers (INT16), 8-bit integers (INT8) and AWQ quantization (INT4).
+  integers (INT16), 8-bit integers (INT8) and AWQ / int4 quantization (4-bit) –
+  the latter keeps pop‑performance high while dramatically shrinking disk size.
 - **Multiple CPU architectures support**\
   The project supports x86-64 and AArch64/ARM64 processors and integrates
   multiple backends that are optimized for these
@@ -207,7 +208,14 @@ in-place operations, caching mechanism, etc.
 Some of these features are difficult to achieve with standard deep learning
 frameworks and are the motivation for this project.
 
-### Let's try it!
+_Note:_ CTranslate2 exposes a `compute_type` setting that controls the
+internal arithmetic precision. Options include `float32`, `float16`, `int8`,
+`int8_float16` (a hybrid mode that uses float16 for most ops but int8 for large
+matrix multiplies), etc. The `int8_float16` mode in particular often hits the
+sweet spot between speed and accuracy, which is why you'll see it in my
+performance tables later.
+
+### Let's try it
 
 I used the following script to convert the HF version into CTranslate2 expected
 format:
@@ -220,9 +228,9 @@ then i used the model with this version
 
 ```python
 translator = ctranslate2.Translator(
-	"ct2_model_masrawy",
-	device="cuda",
-	compute_type="float16",
+ "ct2_model_masrawy",
+ device="cuda",
+ compute_type="float16",
 )
 ```
 
@@ -277,13 +285,18 @@ the results. I will also increase the size from 100 samples to 1000.
 ≠ Always faster!** I need to increase the batch size for int8 and see which
 batch size will be better!
 
-## Next steps!
+> The different compute_type modes are what drive these performance
+differences; your choice between `float16`, `int8`, or the hybrid `int8_float16`
+depends on your hardware and the speed/accuracy tradeoff you care about.
+
+## Next steps
 
 This is just the start. I will search more and investigate how to make this
 faster because the 8 million rows are only 2GB and the next task is to translate
 500GB :) Every second will make a huge difference!
 
 - Use larger batch size with int8
+- Explore CTranslate2 4-bit / AWQ quantization support on newer GPUs
 - Use different GPU with modern architecture and better CPU
 - Deep dive into vLLM
 - Try the ONNX version for GPU, not CPU

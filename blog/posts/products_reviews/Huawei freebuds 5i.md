@@ -1,6 +1,6 @@
 ---
 title: "Huawei FreeBuds 5i Review: Best Budget ANC Earbuds?"
-description: "A detailed review of the Huawei FreeBuds 5i after 2 months of use. Explore its noise-cancelling performance, sound quality, and compatibility with Linux and Android."
+description: "Two-month Huawei FreeBuds 5i review covering ANC performance, sound, battery, Linux compatibility, and microphone/call quality."
 author: kareem
 date: 2023-12-06
 draft: false
@@ -10,19 +10,18 @@ tags:
   - huawei
   - review
   - product_review
-
+image: images/5i_vs_7i.jpeg
 ---
 
 ## Table of contents
 
 ## Intro
 
-Hi, In this fast blog i will talk about my review with Huawei Freebuds 5i, which is the first noise-cancelling earbuds i have tried.
+Hi, In this fast blog i will talk about my review with Huawei Freebuds 5i, which is the first noise-cancelling earbuds i have tried. After two months I’ll share ANC performance, sound impressions, battery life, Linux compatibility, and microphone/call quality issues.
 This is not an ad or even affiliate product, it's my own review for fun and just seeking of knowledge.
 ![freebuds](https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/headphones/freebuds5i/imges/huawei-freebuds-5i-kv.jpg)
 
-
-## Who am i !
+## Who am i
 
 - I am Kareem, a college student interested in machine learning and web technology.
 - I enjoy working deeply and seeking out quiet places, but I live in an area with some noisy disturbances in the mornings - people walking down the street, kids playing around the house, street vendors - which often interrupt my focus and break my state of flow.
@@ -132,8 +131,8 @@ I've connected the Freebuds to my Linux laptop using the '[bluetoothctl](https:/
 
 ## References
 
-- https://smarttech101.com/bluetoothctl-management-of-bluetooth-devices-in-linux/
-- https://askubuntu.com/questions/1225896/huawei-freebuds-3-pairing-with-ubuntu-18-04
+- <https://smarttech101.com/bluetoothctl-management-of-bluetooth-devices-in-linux/>
+- <https://askubuntu.com/questions/1225896/huawei-freebuds-3-pairing-with-ubuntu-18-04>
 - [كم كالوري](https://kamcalorie.com)
 
 ---
