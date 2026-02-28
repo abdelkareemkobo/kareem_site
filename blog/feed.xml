@@ -6774,8 +6774,8 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
 <hr>
 <p><strong>Related Posts:</strong></p>
 <ul>
-<li><a href="../sparse_embedding/bm25_arabic_qdrant.html">BM25 Arabic Search with Qdrant</a></li>
-<li><a href="../sparse_embedding/bm25_from_scratch.html">BM25 Search Algorithm: Python Implementation from Scratch</a></li>
+<li><a href="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html">BM25 Arabic Search with Qdrant</a></li>
+<li><a href="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html">BM25 Search Algorithm: Python Implementation from Scratch</a></li>
 </ul>
 
 
