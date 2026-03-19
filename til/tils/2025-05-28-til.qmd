@@ -1,6 +1,6 @@
 ---
-title: "PyLate & ColBERT: Learning Vector Retrieval and Arabic Models"
-description: "A comprehensive guide to PyLate and ColBERT for vector retrieval. Explore dataset formats, indexing strategies, and evaluation metrics for Arabic NLP models."
+title: "PyLate Tutorial: Vector Indexing and Retrieval with ColBERT (Complete Guide)"
+description: "PyLate tutorial for ColBERT vector retrieval. Learn dataset formats, PLAID indexing, evaluation metrics, and practical code examples for dense retrieval systems."
 author: kareem
 date: 2025-05-28
 draft: false
@@ -10,17 +10,24 @@ categories:
   - til
 image: "til.jpg"
 ---
-# PyLate & ColBERT Evaluation - Complete Learning Guide
+# PyLate Tutorial: Vector Indexing and Retrieval with ColBERT
 
-## Core Concepts
+**PyLate** is a Python library that simplifies dense vector retrieval with ColBERT (Contextualized Late Interaction over BERT). It handles indexing, querying, and evaluation of dense retrieval systems. This guide covers everything you need to work with PyLate in production: data formats, indexing strategies, and evaluation pipelines.
 
-### What is PyLate?
-**Q: What is PyLate and what does it do?**
-A: PyLate is a Python library for vector retrieval and search, specifically designed for ColBERT models. It provides tools for indexing documents, encoding queries, and performing similarity search.
+## What You'll Learn
 
-### What is ColBERT?
-**Q: How does ColBERT work?**
-A: ColBERT (Contextualized Late Interaction over BERT) creates dense vector representations for documents and queries, then uses late interaction (token-level matching) for retrieval instead of single vector similarity.
+- How PyLate and ColBERT work together for dense retrieval
+- Three dataset formats (Triplet, Structured, Passage Ranking)
+- Data conversion strategies for large datasets
+- PLAID indexing and document processing
+- IR metrics (NDCG, MAP, Recall) and evaluation
+- Common pitfalls and performance optimization
+
+## Core Concepts: PyLate and ColBERT Explained
+
+**PyLate** is a Python library for vector retrieval and search, specifically designed for ColBERT models. It provides tools for indexing documents, encoding queries, and performing similarity search.
+
+**ColBERT** (Contextualized Late Interaction over BERT) creates dense vector representations for documents and queries, then uses late interaction (token-level matching) for retrieval instead of single vector similarity. This approach is faster and more efficient than traditional dense retrieval.
 
 ## Dataset Formats
 

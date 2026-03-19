@@ -1,6 +1,6 @@
 ---
-title: "Domain Migration: Connecting Railway, Vercel, and Cloudflare"
-description: "A guide to moving domains from Hostinger to Porkbun and connecting them with Vercel, Railway, and Cloudflare for better web management."
+title: "How to Connect Porkbun Domains to Vercel and Cloudflare (Step-by-Step)"
+description: "Connect Porkbun domains to Vercel via DNS records and Cloudflare for Railway. Complete steps for domain transfers, WHOIS privacy setup, and DNS propagation troubleshooting."
 author: Kareem
 date: 2025-05-20
 draft: false
@@ -14,6 +14,33 @@ categories:
   - porkbun
   - web
 image: "til.jpg"
+---
+
+## Quick FAQ: Your Domain Setup Questions Answered
+
+**Does Porkbun use Cloudflare?** No, Porkbun is a domain registrar; Cloudflare is a DNS provider. You can use Porkbun's built-in DNS *or* point Porkbun domains to Cloudflare's nameservers for additional features (SSL, DDoS protection, faster propagation).
+
+**How do I connect a Porkbun domain to Vercel?** Add DNS records from Vercel to Porkbun's DNS Management section. For Cloudflare routing: point Porkbun's nameservers to Cloudflare, then add DNS records in Cloudflare.
+
+**Why is Railway waiting for DNS updates?** DNS changes can take 1-2 days to propagate globally. If it's been longer, check that you've added the correct Records in Cloudflare and saved them.
+
+**Can I migrate from Hostinger easily?** Yes—disable WHOIS Privacy and Transfer Lock, get your Authorization Code, and submit to the new registrar (Porkbun).
+
+---
+
+## Managing WHOIS Privacy During Transfer
+
+One critical setting often overlooked: **WHOIS Privacy Protection** (also called "Domain Privacy" in Vercel context).
+
+**Before transferring from Hostinger:**
+1. Disable Privacy Protection (WHOIS Privacy)—this is required for the transfer
+2. Wait for the status to update (usually instant, sometimes 12 hours)
+3. Don't re-enable WHOIS Privacy until after the transfer completes
+
+With Porkbun, you can re-enable Domain Privacy after the transfer is complete for privacy protection.
+
+**Why this matters**: Vercel users often ask about WHOIS privacy—Vercel doesn't manage WHOIS directly, but your registrar does. Keep this enabled for privacy unless you need your contact info public.
+
 ---
 
 ## Moving My Domains
@@ -48,22 +75,55 @@ If your domain is older than 60 days, the transfer typically takes 5 to 7 days. 
 
 Note: If your domain is less than 60 days old, you’ll need to wait until it passes the 60-day mark. There’s talk of this being reduced to 30 days, but as of this writing (May 2025), the 60-day rule applies, per ICANN regulations, not Hostinger or Porkbun.
 
-### Connecting Railway and Vercel with Porkbun
+## Connecting Your Domain: Vercel, Railway, and Cloudflare Setup
 
-Connecting a domain to Vercel is straightforward. Follow the instructions provided by Vercel, which are similar to those for any registrar. Add the necessary DNS records in Porkbun’s **DNS Management** section, accessible from the domain management dashboard under your account menu.
+### Connecting Porkbun Domains to Vercel
 
-Connecting to Railway was trickier. I needed an intermediary, and I chose Cloudflare to manage my Porkbun domain’s DNS. Here’s how it worked:
+Connecting a domain to Vercel is straightforward:
 
+1. In Vercel's dashboard, add your domain from Porkbun
+2. Vercel shows you the DNS records to add
+3. Go to Porkbun's **DNS Management** section (from domain dashboard)
+4. Add the records Vercel specifies
+5. Wait 5-30 minutes for verification
 
-1. Configure Cloudflare to manage your Porkbun domain.
+### Using Cloudflare with Vercel and Porkbun
 
-2. Add the necessary Railway DNS records to Cloudflare.
+If you want Cloudflare's features (DDoS protection, SSL, faster DNS):
 
-3. Wait approximately 1 to 2 days for the DNS changes to propagate.
+1. Add your Porkbun domain to Cloudflare
+2. Cloudflare shows you their nameservers
+3. In Porkbun, update your domain's nameservers to point to Cloudflare's
+4. Add your Vercel DNS records *inside Cloudflare* (not Porkbun)
+5. Wait for nameserver propagation (1-2 hours typical, up to 48 hours)
 
-Once the DNS updates are complete, your domain should work seamlessly with Railway.
+### Setting Up Railway with Cloudflare
+
+Railway also needs DNS records, but your domain needs to work with both Vercel *and* Railway:
+
+1. Configure Cloudflare to manage your Porkbun domain (change nameservers in Porkbun)
+2. Add Railway's DNS records to Cloudflare (not Porkbun directly)
+3. Add Vercel's DNS records to Cloudflare as well
+4. Both services now use Cloudflare's DNS
+
+### Troubleshooting: "Railway Waiting for DNS Update"
+
+If you see this message:
+
+1. **Check propagation**: Use [whatsmydns.net](https://www.whatsmydns.net) to verify your DNS records globally
+2. **Wait longer**: DNS changes can take 1-2 business days to fully propagate
+3. **Verify records in Cloudflare**: Make sure you added the exact records Railway specified
+4. **Check nameservers**: Ensure Porkbun's nameservers still point to Cloudflare (not reverted)
+5. **Refresh**: Try removing and re-adding the domain in Railway after propagation is complete
+
+Most delays happen because:
+- Nameserver changes take time to propagate globally
+- Users add records to Porkbun when they should add them to Cloudflare
+- Records are added with typos (domain must match exactly)
 
 ---
+
+## Why I Switched from Hostinger to Porkbun
 
 ### Internal Resources
 

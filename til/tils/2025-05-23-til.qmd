@@ -1,6 +1,6 @@
 ---
-title: "Brave Leo AI: Using Ollama and local LLMs in your Browser"
-description: "How to configure Brave Leo to use any local LLM provider privately in your browser, like Ollama or vLLM, for a privacy-first AI assistant experience."
+title: "Does Brave Leo Run Locally? Privacy-First AI with Ollama and BYOM"
+description: "Yes, Brave Leo runs locally with anonymous requests and local chat storage. Configure Brave Leo to use any local LLM via BYOM: Ollama, vLLM, or SGLang for private AI in your browser."
 author: kareem
 date: 2025-05-23
 draft: false
@@ -18,11 +18,9 @@ image: "images/brave_leo.png"
 
 ## What’s Brave Leo AI All About?
 
-Brave Leo AI is a super handy, privacy-first AI assistant built right into the Brave browser.
+**Yes—Brave Leo runs locally and privately.** Brave Leo AI is a privacy-first AI assistant built directly into the Brave browser. Unlike cloud-based AI assistants, Leo processes requests through anonymous relays and stores your chat history only on your device—never on Brave's servers.
 
-It’s there to help you out with all sorts of tasks, and it works on your computer (macOS, Windows, Linux) or phone (Android and iOS).
-
-The best part? You don’t need to sign up or log in to use it for free, and it’s designed to keep your data private.
+It works on macOS, Windows, Linux, Android, and iOS. Best part? No sign-up required to use it for free, and with the "Bring Your Own Model" (BYOM) feature, you can connect your own local LLMs like Ollama, vLLM, or SGLang for complete control over your AI experience.
 
 ![Brave Leo with Ollama or VLLM](images/brave_leo.png)
 
