@@ -15,7 +15,157 @@
 <link>https://kareemai.com/blog/feed.html</link>
 </image>
 <generator>quarto-1.8.27</generator>
-<lastBuildDate>Wed, 25 Feb 2026 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 18 Mar 2026 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>HyperRun + ColGrep: A Self-Hosted Alternative to RunLLM</title>
+  <dc:creator>kareem </dc:creator>
+  <link>https://kareemai.com/blog/posts/nlp/embedding_world/hyperrun.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Documentation sites are where developers go for answers, but finding what you need in a large codebase can be frustrating.</p>
+<p>RunLLM solved this by adding an “Ask AI” chat widget to docs, letting users ask questions in natural language and get answers grounded in the actual code.</p>
+<p>But RunLLM is closed-source and hosted. If you want control over your data, your models, and your costs — you’re out of luck.</p>
+<ul>
+<li>maybe you want to let the user use its own AI model (BYOK)
+<ul>
+<li>It’s better for the user and not cost for you</li>
+</ul></li>
+<li>Way faster than the RunLLM</li>
+</ul>
+<div class="callout callout-note" data-callout="note">
+<div class="callout-title-container">
+<p><span class="callout-icon-container"><span class="callout-icon"></span></span><span class="callout-title">RunLLM is more than this</span></p>
+</div>
+<div class="callout-body">
+<p>RunLLM is much more than just a chat with your docs. I first found it in the Documentation of DSPy, I liked it and i use it multiple times so i am trying to replicate this part only with other features as opensource</p>
+</div>
+</div>
+<p>HyperRun is my attempt to build an open-source, self-hosted alternative.</p>
+<p>It combines ColGrep’s semantic code search with LLM chat, and can be embedded in any docs site — Quarto, nbdev, MkDocs, or plain GitHub Pages — with a single line of code.</p>
+<section id="what-is-hyperrun" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-hyperrun">What is HyperRun ?</h2>
+<p>HyperRun lets developers add a semantic code search chat widget to their docs.</p>
+<p>Built on <a href="https://github.com/lightonai/colgrep">ColGrep</a> for indexing, <a href="https://lisette.answer.ai">Lisette</a> for LLM orchestration, and <a href="https://fastht.ml">FastHTML</a> for the UI.</p>
+<section id="hyperrun-features" class="level3">
+<h3 class="anchored" data-anchor-id="hyperrun-features">HyperRun Features</h3>
+<ul>
+<li><p><strong>Semantic code search</strong> — powered by ColGrep’s late-interaction retrieval</p></li>
+<li><p><strong>Streaming chat</strong> — SSE-based responses via HTMX</p></li>
+<li><p><strong>Multi-provider</strong> — supports Anthropic, OpenAI, Google and more via LiteLLM</p></li>
+<li><p><strong>BYOK</strong> — users bring their own API key</p></li>
+<li><p><strong>Chat history</strong> — persistent conversations per session</p></li>
+<li><p><strong>Cost tracking</strong> — per-session token cost display</p></li>
+<li><p><strong>DaisyUI styled</strong> — floating widget with chat bubbles and markdown rendering</p></li>
+<li><p><strong>Embeddable</strong> — drop into any static site (Quarto, MkDocs, GitHub Pages) with one snippet</p></li>
+</ul>
+</section>
+</section>
+<section id="why-colgrep" class="level2">
+<h2 class="anchored" data-anchor-id="why-colgrep">Why ColGrep</h2>
+<p>Most coding agents still use <code>grep</code> to search codebases. It works — but it’s pure pattern matching. If you don’t know the exact function name, you’re stuck guessing. Semantic search (RAG) solves this but introduces problems:</p>
+<ul>
+<li><p>Requires remote storage of your code (security concern)</p></li>
+<li><p>Needs a separate vector DB service running</p></li>
+<li><p>Keeping the index in sync with a fast-moving codebase is hard</p></li>
+</ul>
+<p>ColGrep takes a completely different approach. It’s a Rust CLI tool built by LightOn that:</p>
+<ul>
+<li><p><strong>Mirrors the grep interface</strong> — agents already know how to use it</p></li>
+<li><p><strong>Runs entirely locally</strong> — no remote storage, no separate API service</p></li>
+<li><p><strong>Uses late-interaction retrieval</strong> (ColBERT-style) via LateOn-Code models — not traditional embeddings</p>
+<ul>
+<li>We are using their specialized coding retrieval model 17M</li>
+</ul></li>
+<li><p><strong>Supports hybrid queries</strong> — regex filtering first, then semantic ranking on the filtered results</p></li>
+<li><p><strong>Incremental index updates</strong> — only re-indexes changed files, not the whole repo</p>
+<ul>
+<li>They are using a nice hashing trick 😎</li>
+</ul></li>
+<li><p><strong>Tree-sitter parsing</strong> — extracts functions, classes, signatures, call graphs — not just raw text chunks</p></li>
+</ul>
+<p>The results speak for themselves:</p>
+<ul>
+<li><p>Won <strong>70% of head-to-head comparisons</strong> against vanilla grep with Claude Code</p></li>
+<li><p>Cut token usage by <strong>15.7%</strong> on average</p></li>
+<li><p><strong>56% fewer search operations</strong> needed to find the right code</p></li>
+<li><p>Hard conceptual questions (where you describe behavior, not function names) benefit the most</p></li>
+</ul>
+<div class="callout callout-note" data-callout="note">
+<div class="callout-title-container">
+<p><span class="callout-icon-container"><span class="callout-icon"></span></span><span class="callout-title">Late-interaction vs traditional embeddings</span></p>
+</div>
+<div class="callout-body">
+<p>Traditional embeddings compress an entire code block into a single vector — losing detail. Late-interaction models (like ColBERT) keep per-token vectors, so they can do soft matching between query terms and code tokens. This is why ColGrep handles “find the function that inserts articles into the database” better than a single-vector approach.</p>
+</div>
+</div>
+<p>For HyperRun, ColGrep is the retrieval layer — it finds the relevant code semantically, then Lisette sends it to the LLM for a conversational answer.</p>
+</section>
+<section id="how-it-works" class="level2">
+<h2 class="anchored" data-anchor-id="how-it-works">How It Works</h2>
+<p>HyperRun has two sides — the <strong>Doc Author</strong> who sets it up, and the <strong>End User</strong> who asks questions.</p>
+<section id="doc-author-setup" class="level3">
+<h3 class="anchored" data-anchor-id="doc-author-setup">Doc Author Setup</h3>
+<ol type="1">
+<li>Point HyperRun at your codebase via <code>.env</code></li>
+<li>On startup, ColGrep indexes the repo automatically — <code>colgrep init</code> runs if no index exists</li>
+<li>Add one line to your docs:</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>script src<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"https://your-server/embed"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;&lt;/</span>script<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span></span></code></pre></div></div>
+<p>That’s it. Works with Quarto, nbdev, MkDocs, GitHub Pages — anything that serves HTML.</p>
+</section>
+<section id="what-happens-when-a-user-asks-a-question" class="level3">
+<h3 class="anchored" data-anchor-id="what-happens-when-a-user-asks-a-question">What Happens When a User Asks a Question</h3>
+<ol type="1">
+<li>User clicks “💬 Ask AI” → floating chat panel opens</li>
+<li>User types a question → sent to the server via HTMX</li>
+<li>Server calls <code>colgrep</code> with the query → gets the top matching code snippets</li>
+<li>Lisette’s <code>AsyncChat</code> sends the snippets + question to the LLM as a tool call</li>
+<li>LLM response streams back via SSE → rendered as markdown in the chat bubble</li>
+</ol>
+<p><strong>The LLM never sees your whole codebase — only the relevant snippets ColGrep finds.</strong> This keeps context small, responses fast, and costs low.</p>
+</section>
+<section id="byok" class="level3">
+<h3 class="anchored" data-anchor-id="byok">BYOK</h3>
+<p>End users can click the ⚙️ settings icon, pick a provider (Anthropic, OpenAI, Google, etc.), enter their own API key, and choose a model — all dynamically populated from LiteLLM.</p>
+</section>
+</section>
+<section id="whats-next" class="level2">
+<h2 class="anchored" data-anchor-id="whats-next">What’s Next</h2>
+<p>HyperRun is still early — here’s what I’m working on:</p>
+<ul>
+<li><p><strong>Citations</strong> — show which code snippets the LLM used to answer, so users can verify</p></li>
+<li><p><strong>GitHub Actions</strong> — auto re-index on push, auto deploy the server — zero manual steps</p></li>
+<li><p><strong>Better nbdev support</strong> — ColGrep struggles with <code>.ipynb</code> files, so we index the exported <code>.py</code> package for now</p></li>
+<li><p><strong>Secure BYOK</strong> — move API keys from session cookies to server-side encrypted storage</p></li>
+<li><p><strong>Switching embedding models</strong> — let doc authors choose which ColGrep model to use</p></li>
+</ul>
+<p>If you want to try it or contribute: <a href="https://github.com/abdelkareemkobo/hyperrun">github.com/abdelkareemkobo/hyperrun</a></p>
+
+
+</section>
+
+ ]]></description>
+  <category>blogging</category>
+  <category>til</category>
+  <category>blog/build/project</category>
+  <guid>https://kareemai.com/blog/posts/nlp/embedding_world/hyperrun.html</guid>
+  <pubDate>Wed, 18 Mar 2026 22:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/images/colgrep.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Building SEO RAT: A Free, Open-Source SEO Tool</title>
   <dc:creator>kareem </dc:creator>
@@ -9229,103 +9379,6 @@ Media Manager</code></pre>
   <guid>https://kareemai.com/blog/posts/life_style/kamcalorie.html</guid>
   <pubDate>Tue, 07 Jan 2025 22:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/life_style/images/kcal.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>أفضل أنواع الكرياتين والبروتين لبناء العضلات: دليل شامل</title>
-  <dc:creator>kareem </dc:creator>
-  <link>https://kareemai.com/blog/posts/life_style/protienai.html</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p><strong>أفضل مساحيق الكرياتين والبروتين للتضخيم من موقع Proteinai</strong></p>
-<p><em>البحث عن “افضل انواع الكرياتين للتضخيم” أو “proteinai”؟ هذه المقالة ترشدك.</em></p>
-<p>هل تبحث عن أفضل مساحيق الكرياتين للتضخيم أو ترغب في فهم كيفية اختيار الكرياتين المثالي؟ موقع <a href="https://www.protienai.com">مساحيق كرياتين و بروتين لبناء العضلات والتضخيم</a> المعروف باسم Proteinai هو الوجهة المثالية التي توفر لك جميع الموارد والمعلومات اللازمة لاختيار المكملات الغذائية المناسبة لتحقيق أهدافك.</p>
-<section id="ما-الذي-يجعل-موقع-proteinai-مميزا" class="level2">
-<h2 class="anchored" data-anchor-id="ما-الذي-يجعل-موقع-proteinai-مميزا"><strong>ما الذي يجعل موقع Proteinai مميزًا؟</strong></h2>
-<section id="مراجعات-متخصصة-ومقارنات-شاملة" class="level3">
-<h3 class="anchored" data-anchor-id="مراجعات-متخصصة-ومقارنات-شاملة"><strong>1. مراجعات متخصصة ومقارنات شاملة</strong></h3>
-<p>يقدم موقع <a href="https://www.protienai.com">مساحيق كرياتين و بروتين لبناء العضلات والتضخيم</a> مراجعات دقيقة ومستقلة لأشهر مساحيق البروتين والكرياتين في السوق. من بين المنتجات التي يغطيها الموقع:</p>
-<ul>
-<li><strong>ريدريكس بيج رامي لابس</strong></li>
-<li><strong>Rival Nutrition - Rival Whey</strong></li>
-<li><strong>MuscleTech - Nitro Tech Ripped</strong></li>
-<li><strong>Dymatize - ISO100</strong></li>
-</ul>
-<p>تساعدك المراجعات على فهم المزايا والعيوب لكل منتج بناءً على السعر، المحتوى الغذائي، المكونات، والفعالية. بالإضافة إلى ذلك، يوفر الموقع خاصية المقارنات جنبًا إلى جنب لتحديد الأنسب.</p>
-</section>
-<section id="تصنيفات-مبسطة-لسهولة-الاختيار" class="level3">
-<h3 class="anchored" data-anchor-id="تصنيفات-مبسطة-لسهولة-الاختيار"><strong>2. تصنيفات مبسطة لسهولة الاختيار</strong></h3>
-<p>يسهّل الموقع عملية البحث من خلال تنظيم المنتجات ضمن فئات محددة تناسب احتياجاتك، مثل:</p>
-<ul>
-<li><strong>بناء العضلات (التضخيم)</strong></li>
-<li><strong>إنقاص الوزن (التنشيف)</strong></li>
-<li><strong>التعافي العضلي</strong></li>
-<li><strong>استبدال الوجبات</strong></li>
-<li><strong>خالي من الغلوتين</strong></li>
-<li><strong>نباتي</strong></li>
-<li><strong>عضوي</strong></li>
-</ul>
-</section>
-<section id="أدوات-وموارد-تعليمية" class="level3">
-<h3 class="anchored" data-anchor-id="أدوات-وموارد-تعليمية"><strong>3. أدوات وموارد تعليمية</strong></h3>
-<p>إلى جانب المراجعات والمقارنات، يقدم الموقع مجموعة من الأدوات والموارد لمساعدتك على اتخاذ قرارات مدروسة:</p>
-<ul>
-<li><strong>دليل البروتين:</strong> يوفر معلومات شاملة حول أنواع البروتين المختلفة، فوائدها، ومتى يجب استخدامها.</li>
-<li><strong>قاعدة المعرفة:</strong> تحتوي على شرح وافٍ للمكونات الشائعة في مساحيق البروتين والكرياتين.</li>
-<li><strong>أحدث الأخبار والمقالات:</strong> تبقيك على اطلاع دائم بأحدث التطورات في مجال المكملات الغذائية.</li>
-</ul>
-</section>
-</section>
-<section id="لماذا-تختار-proteinai" class="level2">
-<h2 class="anchored" data-anchor-id="لماذا-تختار-proteinai"><strong>لماذا تختار Proteinai؟</strong></h2>
-<ol type="1">
-<li><strong>شفافية كاملة:</strong> يقدم الموقع مراجعات دقيقة غير متحيزة.</li>
-<li><strong>سهولة الاستخدام:</strong> تصميم بسيط وواجهة مستخدم مريحة.</li>
-<li><strong>تنوع الخيارات:</strong> تغطية شاملة لأفضل المنتجات في السوق.</li>
-</ol>
-</section>
-<section id="كيف-تختار-المكمل-الغذائي-المناسب-لك" class="level2">
-<h2 class="anchored" data-anchor-id="كيف-تختار-المكمل-الغذائي-المناسب-لك"><strong>كيف تختار المكمل الغذائي المناسب لك؟</strong></h2>
-<p>عند اختيار مسحوق البروتين أو الكرياتين، هناك عدة عوامل يجب مراعاتها لضمان الحصول على أفضل النتائج:</p>
-<ol type="1">
-<li><strong>الهدف البدني:</strong> هل تسعى للتضخيم العضلي أم التنشيف؟ مكملات “الواي بروتين كونسنتريت” قد تكون أفضل للتضخيم، بينما “الواي بروتين أيزوليت” هو الخيار الأمثل للتنشيف لقلة الدهون والكربوهيدرات فيه.</li>
-<li><strong>نسبة البروتين في الحصة الواحدة:</strong> تأكد من أن المكمل يوفر كمية كافية من البروتين (عادة بين 20-30 جرام) لكل سكوب.</li>
-<li><strong>نوع الكرياتين:</strong> يعتبر “كرياتين مونوهيدرات” هو النوع الأكثر دراسة وفعالية وثباتاً في تحقيق القوة البدنية وزيادة حجم العضلات.</li>
-<li><strong>السعر مقابل الجودة:</strong> يقدم موقع Proteinai ميزة حساب التكلفة لكل حصة، مما يساعدك في الحصول على أفضل قيمة مقابل مالك.</li>
-</ol>
-</section>
-<section id="أهمية-المقارنة-قبل-الشراء" class="level2">
-<h2 class="anchored" data-anchor-id="أهمية-المقارنة-قبل-الشراء"><strong>أهمية المقارنة قبل الشراء</strong></h2>
-<p>السوق مليء بالخيارات، والاعتماد على الإعلانات فقط قد يكون مضللاً. من خلال استخدام <a href="https://www.protienai.com">موقع بروتين آي</a>، يمكنك مقارنة المكونات الحقيقية والتحقق من تجارب المستخدمين الآخرين. سواء كنت مبتدئاً أو محترفاً في كمال الأجسام، فإن المعلومة الدقيقة هي مفتاحك لتجنب الهدر المالي وتحقيق أقصى استفادة جسدية.</p>
-<p>استفد الآن من موقع <a href="https://www.protienai.com">مساحيق كرياتين و بروتين لبناء العضلات والتضخيم</a> لاختيار المكمل المثالي لتحقيق أهدافك الرياضية والصحية.</p>
-<p>يمكنك أيضاً استخدام موقع “كم كالوري” لتتبع نظامك الغذائي بدقة ومعرفة كافة السعرات الحرارية في وجباتك اليومية: 1. <a href="https://www.kamcalorie.com">كم كالوري - حاسبة السعرات بالذكاء الإصطناعي</a></p>
-<hr>
-<section id="internal-resources" class="level3">
-<h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
-<p>If you’re interested in more about AI engineering and my research, explore these sections:</p>
-<ul>
-<li><a href="../../../papers.html">My Research Papers</a></li>
-<li><a href="../../../oss/opensource.html">Open Source Contributions</a></li>
-<li><a href="../../../til/index.html">Today I Learned: AI Notes</a></li>
-<li><a href="../../../blog/feed.html">Arabic NLP Blog Posts</a></li>
-</ul>
-
-
-</section>
-</section>
-
- ]]></description>
-  <category>blogging</category>
-  <category>idea_Forge</category>
-  <category>publish</category>
-  <category>rough_thoughts</category>
-  <category>life_style</category>
-  <guid>https://kareemai.com/blog/posts/life_style/protienai.html</guid>
-  <pubDate>Tue, 07 Jan 2025 22:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/life_style/images/proteinai.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 </channel>
 </rss>

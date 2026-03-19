@@ -6,6 +6,7 @@
   {
     "listing": "/blog/feed.html",
     "items": [
+      "/blog/posts/nlp/embedding_world/hyperrun.html",
       "/blog/posts/seo/seo_rat_journey.html",
       "/blog/posts/dspy/Opencode.html",
       "/blog/posts/tools_reviews/super_productivity_app.html",

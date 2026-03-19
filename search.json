@@ -1659,6 +1659,41 @@
     "text": "The Three Ideas Behind BM25\n\nTerm Frequency: Words appearing more often in a doc → more relevant\n\nBUT with diminishing returns (5 mentions isn’t 5x better than 1)\n\nInverse Document Frequency: Rare words matter more\n\n“quantum” is more useful than “the”\n\nDocument Length Normalization: Shorter docs are often more focused\n\nA 100-word doc mentioning “python” once may be more relevant than a 10,000-word doc mentioning it once\n\n\nHere is Part 2: BM25 with Qdrant: A real use case for using BM25 with Gemini embeddings to improve search results for real estate.\nAlso the Marimo BM25 Explained\nA benchmark: BM25 Benchmark"
   },
   {
+    "objectID": "blog/posts/nlp/embedding_world/hyperrun.html",
+    "href": "blog/posts/nlp/embedding_world/hyperrun.html",
+    "title": "HyperRun + ColGrep: A Self-Hosted Alternative to RunLLM",
+    "section": "",
+    "text": "Documentation sites are where developers go for answers, but finding what you need in a large codebase can be frustrating.\nRunLLM solved this by adding an “Ask AI” chat widget to docs, letting users ask questions in natural language and get answers grounded in the actual code.\nBut RunLLM is closed-source and hosted. If you want control over your data, your models, and your costs — you’re out of luck.\nHyperRun is my attempt to build an open-source, self-hosted alternative.\nIt combines ColGrep’s semantic code search with LLM chat, and can be embedded in any docs site — Quarto, nbdev, MkDocs, or plain GitHub Pages — with a single line of code."
+  },
+  {
+    "objectID": "blog/posts/nlp/embedding_world/hyperrun.html#what-is-hyperrun",
+    "href": "blog/posts/nlp/embedding_world/hyperrun.html#what-is-hyperrun",
+    "title": "HyperRun + ColGrep: A Self-Hosted Alternative to RunLLM",
+    "section": "What is HyperRun ?",
+    "text": "What is HyperRun ?\nHyperRun lets developers add a semantic code search chat widget to their docs.\nBuilt on ColGrep for indexing, Lisette for LLM orchestration, and FastHTML for the UI.\n\nHyperRun Features\n\nSemantic code search — powered by ColGrep’s late-interaction retrieval\nStreaming chat — SSE-based responses via HTMX\nMulti-provider — supports Anthropic, OpenAI, Google and more via LiteLLM\nBYOK — users bring their own API key\nChat history — persistent conversations per session\nCost tracking — per-session token cost display\nDaisyUI styled — floating widget with chat bubbles and markdown rendering\nEmbeddable — drop into any static site (Quarto, MkDocs, GitHub Pages) with one snippet"
+  },
+  {
+    "objectID": "blog/posts/nlp/embedding_world/hyperrun.html#why-colgrep",
+    "href": "blog/posts/nlp/embedding_world/hyperrun.html#why-colgrep",
+    "title": "HyperRun + ColGrep: A Self-Hosted Alternative to RunLLM",
+    "section": "Why ColGrep",
+    "text": "Why ColGrep\nMost coding agents still use grep to search codebases. It works — but it’s pure pattern matching. If you don’t know the exact function name, you’re stuck guessing. Semantic search (RAG) solves this but introduces problems:\n\nRequires remote storage of your code (security concern)\nNeeds a separate vector DB service running\nKeeping the index in sync with a fast-moving codebase is hard\n\nColGrep takes a completely different approach. It’s a Rust CLI tool built by LightOn that:\n\nMirrors the grep interface — agents already know how to use it\nRuns entirely locally — no remote storage, no separate API service\nUses late-interaction retrieval (ColBERT-style) via LateOn-Code models — not traditional embeddings\n\nWe are using their specialized coding retrieval model 17M\n\nSupports hybrid queries — regex filtering first, then semantic ranking on the filtered results\nIncremental index updates — only re-indexes changed files, not the whole repo\n\nThey are using a nice hashing trick 😎\n\nTree-sitter parsing — extracts functions, classes, signatures, call graphs — not just raw text chunks\n\nThe results speak for themselves:\n\nWon 70% of head-to-head comparisons against vanilla grep with Claude Code\nCut token usage by 15.7% on average\n56% fewer search operations needed to find the right code\nHard conceptual questions (where you describe behavior, not function names) benefit the most\n\n\n\nLate-interaction vs traditional embeddings\n\n\nTraditional embeddings compress an entire code block into a single vector — losing detail. Late-interaction models (like ColBERT) keep per-token vectors, so they can do soft matching between query terms and code tokens. This is why ColGrep handles “find the function that inserts articles into the database” better than a single-vector approach.\n\n\nFor HyperRun, ColGrep is the retrieval layer — it finds the relevant code semantically, then Lisette sends it to the LLM for a conversational answer."
+  },
+  {
+    "objectID": "blog/posts/nlp/embedding_world/hyperrun.html#how-it-works",
+    "href": "blog/posts/nlp/embedding_world/hyperrun.html#how-it-works",
+    "title": "HyperRun + ColGrep: A Self-Hosted Alternative to RunLLM",
+    "section": "How It Works",
+    "text": "How It Works\nHyperRun has two sides — the Doc Author who sets it up, and the End User who asks questions.\n\nDoc Author Setup\n\nPoint HyperRun at your codebase via .env\nOn startup, ColGrep indexes the repo automatically — colgrep init runs if no index exists\nAdd one line to your docs:\n\n&lt;script src=\"https://your-server/embed\"&gt;&lt;/script&gt;\nThat’s it. Works with Quarto, nbdev, MkDocs, GitHub Pages — anything that serves HTML.\n\n\nWhat Happens When a User Asks a Question\n\nUser clicks “💬 Ask AI” → floating chat panel opens\nUser types a question → sent to the server via HTMX\nServer calls colgrep with the query → gets the top matching code snippets\nLisette’s AsyncChat sends the snippets + question to the LLM as a tool call\nLLM response streams back via SSE → rendered as markdown in the chat bubble\n\nThe LLM never sees your whole codebase — only the relevant snippets ColGrep finds. This keeps context small, responses fast, and costs low.\n\n\nBYOK\nEnd users can click the ⚙️ settings icon, pick a provider (Anthropic, OpenAI, Google, etc.), enter their own API key, and choose a model — all dynamically populated from LiteLLM."
+  },
+  {
+    "objectID": "blog/posts/nlp/embedding_world/hyperrun.html#whats-next",
+    "href": "blog/posts/nlp/embedding_world/hyperrun.html#whats-next",
+    "title": "HyperRun + ColGrep: A Self-Hosted Alternative to RunLLM",
+    "section": "What’s Next",
+    "text": "What’s Next\nHyperRun is still early — here’s what I’m working on:\n\nCitations — show which code snippets the LLM used to answer, so users can verify\nGitHub Actions — auto re-index on push, auto deploy the server — zero manual steps\nBetter nbdev support — ColGrep struggles with .ipynb files, so we index the exported .py package for now\nSecure BYOK — move API keys from session cookies to server-side encrypted storage\nSwitching embedding models — let doc authors choose which ColGrep model to use\n\nIf you want to try it or contribute: github.com/abdelkareemkobo/hyperrun"
+  },
+  {
     "objectID": "blog/posts/products_reviews/Huawei freebuds 7i.html",
     "href": "blog/posts/products_reviews/Huawei freebuds 7i.html",
     "title": "Huawei FreeBuds 7i Review: Worth Upgrading from 5i?",
