@@ -475,11 +475,12 @@ window.addEventListener('scroll', () => {
 
 <p>Documentation sites are where developers go for answers, but finding what you need in a large codebase can be frustrating.</p>
 <p>RunLLM solved this by adding an “Ask AI” chat widget to docs, letting users ask questions in natural language and get answers grounded in the actual code.</p>
-<p>But RunLLM is closed-source and hosted. If you want control over your data, your models, and your costs — you’re out of luck.</p>
+<p>But RunLLM is closed-source and hosted.</p>
+<p>If you want control over your data, your models, and your costs — you’re out of luck.</p>
 <ul>
 <li>maybe you want to let the user use its own AI model (BYOK)
 <ul>
-<li>It’s better for the user and not cost for you</li>
+<li>It’s better for the user and no cost for you</li>
 </ul></li>
 <li>Way faster than the RunLLM</li>
 </ul>
@@ -497,6 +498,12 @@ window.addEventListener('scroll', () => {
 <h2 class="anchored" data-anchor-id="what-is-hyperrun">What is HyperRun ?</h2>
 <p>HyperRun lets developers add a semantic code search chat widget to their docs.</p>
 <p>Built on <a href="https://github.com/lightonai/colgrep">ColGrep</a> for indexing, <a href="https://lisette.answer.ai">Lisette</a> for LLM orchestration, and <a href="https://fastht.ml">FastHTML</a> for the UI.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/pylate_hyperun.jpg" class="img-fluid figure-img"></p>
+<figcaption>pylate_hyperun</figcaption>
+</figure>
+</div>
 <section id="hyperrun-features" class="level3">
 <h3 class="anchored" data-anchor-id="hyperrun-features">HyperRun Features</h3>
 <ul>
@@ -513,7 +520,10 @@ window.addEventListener('scroll', () => {
 </section>
 <section id="why-colgrep" class="level2">
 <h2 class="anchored" data-anchor-id="why-colgrep">Why ColGrep</h2>
-<p>Most coding agents still use <code>grep</code> to search codebases. It works — but it’s pure pattern matching. If you don’t know the exact function name, you’re stuck guessing. Semantic search (RAG) solves this but introduces problems:</p>
+<p>Most coding agents still use <code>grep</code> to search codebases.</p>
+<p>It works — but it’s pure pattern matching.</p>
+<p>If you don’t know the exact function name, you’re stuck guessing.</p>
+<p>Semantic search (RAG) solves this but introduces problems:</p>
 <ul>
 <li><p>Requires remote storage of your code (security concern)</p></li>
 <li><p>Needs a separate vector DB service running</p></li>
@@ -546,9 +556,18 @@ window.addEventListener('scroll', () => {
 <p><span class="callout-icon-container"><span class="callout-icon"></span></span><span class="callout-title">Late-interaction vs traditional embeddings</span></p>
 </div>
 <div class="callout-body">
-<p>Traditional embeddings compress an entire code block into a single vector — losing detail. Late-interaction models (like ColBERT) keep per-token vectors, so they can do soft matching between query terms and code tokens. This is why ColGrep handles “find the function that inserts articles into the database” better than a single-vector approach.</p>
+
 </div>
 </div>
+<blockquote class="blockquote">
+<p>Traditional embeddings compress an entire code block into a single vector — losing detail.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Late-interaction models (like ColBERT) keep per-token vectors, so they can do soft matching between query terms and code tokens.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>This is why ColGrep handles “find the function that inserts articles into the database” better than a single-vector approach.</p>
+</blockquote>
 <p>For HyperRun, ColGrep is the retrieval layer — it finds the relevant code semantically, then Lisette sends it to the LLM for a conversational answer.</p>
 </section>
 <section id="how-it-works" class="level2">
