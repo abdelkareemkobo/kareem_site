@@ -3,7 +3,7 @@ title: "HyperRun + ColGrep: A Self-Hosted Alternative to RunLLM"
 description: HyperRun is an open-source, self-hosted alternative to RunLLM. Add an AI-powered "Ask AI" chat widget to any docs site using ColGrep semantic code search, Lisette LLM orchestration, and FastHTML. Supports BYOK, multi-provider, and embeds with one line of code.
 author: kareem
 date: 2026-03-19
-draft: true
+draft: false
 featured: false
 categories:
   - blogging
@@ -15,25 +15,29 @@ Documentation sites are where developers go for answers, but finding what you ne
 
 RunLLM solved this by adding an "Ask AI" chat widget to docs, letting users ask questions in natural language and get answers grounded in the actual code.
 
-But RunLLM is closed-source and hosted. If you want control over your data, your models, and your costs — you're out of luck.
+But RunLLM is closed-source and hosted.
+
+If you want control over your data, your models, and your costs — you're out of luck.
 
 - maybe you want to let the user use its own AI model (BYOK)
- 	- It's better for the user and not cost for you
+  - It's better for the user and no cost for you
 - Way faster than the RunLLM
 
 >[!note] RunLLM is more than this
 >RunLLM is much more than just a chat with your docs.
 >I first found it in the Documentation of DSPy, I liked it and i use it multiple times so i am trying to replicate this part only with other features as opensource
 
-HyperRun is my attempt to build an open-source, self-hosted alternative. 
+HyperRun is my attempt to build an open-source, self-hosted alternative.
 
 It combines ColGrep's semantic code search with LLM chat, and can be embedded in any docs site — Quarto, nbdev, MkDocs, or plain GitHub Pages — with a single line of code.
 
 ## What is HyperRun ?
 
-HyperRun lets developers add a semantic code search chat widget to their docs. 
+HyperRun lets developers add a semantic code search chat widget to their docs.
 
 Built on [ColGrep](https://github.com/lightonai/colgrep) for indexing, [Lisette](https://lisette.answer.ai) for LLM orchestration, and [FastHTML](https://fastht.ml) for the UI.
+
+![pylate_hyperun](images/pylate_hyperun.jpg)
 
 ### HyperRun Features
 
@@ -56,8 +60,11 @@ Built on [ColGrep](https://github.com/lightonai/colgrep) for indexing, [Lisette]
 ## Why ColGrep
 
 Most coding agents still use `grep` to search codebases.
+
 It works — but it's pure pattern matching.
+
 If you don't know the exact function name, you're stuck guessing.
+
 Semantic search (RAG) solves this but introduces problems:
 
 - Requires remote storage of your code (security concern)
@@ -73,12 +80,12 @@ ColGrep takes a completely different approach. It's a Rust CLI tool built by Lig
 - **Runs entirely locally** — no remote storage, no separate API service
 
 - **Uses late-interaction retrieval** (ColBERT-style) via LateOn-Code models — not traditional embeddings
- 	- We are using their specialized coding retrieval model 17M
+  - We are using their specialized coding retrieval model 17M
 
 - **Supports hybrid queries** — regex filtering first, then semantic ranking on the filtered results
 
 - **Incremental index updates** — only re-indexes changed files, not the whole repo
- 	- They are using a nice hashing trick 😎
+  - They are using a nice hashing trick 😎
 - **Tree-sitter parsing** — extracts functions, classes, signatures, call graphs — not just raw text chunks
 
 The results speak for themselves:
@@ -92,8 +99,11 @@ The results speak for themselves:
 - Hard conceptual questions (where you describe behavior, not function names) benefit the most
 
 > [!note] Late-interaction vs traditional embeddings
+
 > Traditional embeddings compress an entire code block into a single vector — losing detail.
+
 > Late-interaction models (like ColBERT) keep per-token vectors, so they can do soft matching between query terms and code tokens.
+
 > This is why ColGrep handles "find the function that inserts articles into the database" better than a single-vector approach.
 
 For HyperRun, ColGrep is the retrieval layer — it finds the relevant code semantically, then Lisette sends it to the LLM for a conversational answer.
