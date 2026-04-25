@@ -15,7 +15,154 @@
 <link>https://kareemai.com/blog/feed.html</link>
 </image>
 <generator>quarto-1.9.37</generator>
-<lastBuildDate>Fri, 17 Apr 2026 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 24 Apr 2026 21:00:00 GMT</lastBuildDate>
+<item>
+  <title>LiteRT and Qualcomm AI Hub: On-Device ML Without the Cloud</title>
+  <dc:creator>kareem </dc:creator>
+  <link>https://kareemai.com/blog/posts/on_device/litert.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>In 2024, Google rebranded TensorFlow Lite as <strong>LiteRT</strong>.</p>
+<p>it came with a new API, broader hardware support, and tighter integration with Qualcomm’s AI ecosystem.</p>
+<p>This post covers what <a href="https://ai.google.dev/edge/litert/next/overview">LiteRT</a> is, when to use <a href="https://aihub.qualcomm.com/resources">Qualcomm AI Hub</a> alongside it, and how to benchmark a model on a real Android device without needing a cloud account or writing any app code.</p>
+<section id="why-on-device-inference" class="level2">
+<h2 class="anchored" data-anchor-id="why-on-device-inference">Why On-Device Inference?</h2>
+<p>Running models on-device instead of a remote server has several practical advantages:</p>
+<ul>
+<li><strong>Privacy</strong>: user data never leaves the device</li>
+<li><strong>Latency</strong>: no network round-trip, response is immediate</li>
+<li><strong>Offline</strong>: works without internet connectivity</li>
+<li><strong>Cost</strong>: no cloud inference bill</li>
+</ul>
+<p>These benefits come with a tradeoff: constrained compute, memory, and power budget on the device.</p>
+</section>
+<section id="what-is-litert" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-litert">What is LiteRT?</h2>
+<p>LiteRT is Google’s on-device ML runtime for Android, iOS, embedded Linux, and microcontrollers.</p>
+<p>It is the direct successor to TensorFlow Lite, with the same <code>.tflite</code> <a href="https://flatbuffers.dev/">flatbuffer format</a>.</p>
+<p>The core runtime supports three execution backends:</p>
+<ul>
+<li><strong>CPU</strong> via XNNPACK (default, broad op coverage)</li>
+<li><strong>GPU</strong> via OpenGL ES / Vulkan delegates</li>
+<li><strong>NPU</strong> via vendor-specific delegates (Qualcomm, MediaTek, etc.)</li>
+</ul>
+<p>Models are converted to <code>.tflite</code> format from PyTorch, TensorFlow, or JAX using the <code>litert-torch</code> or <code>ai-edge-torch</code> Python libraries.</p>
+<section id="litert-vs-litert-lm" class="level3">
+<h3 class="anchored" data-anchor-id="litert-vs-litert-lm">LiteRT vs LiteRT-LM</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 74%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Package</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>LiteRT</strong></td>
+<td>The core runtime — runs <code>.tflite</code> models on Android/iOS/Linux</td>
+</tr>
+<tr class="even">
+<td><strong>LiteRT-LM</strong></td>
+<td>Specialized runtime for LLMs on-device (Gemma, Llama, etc.)</td>
+</tr>
+<tr class="odd">
+<td><strong>litert-torch</strong></td>
+<td>Python library to <strong>convert</strong> PyTorch models → <code>.tflite</code></td>
+</tr>
+<tr class="even">
+<td><strong>ai-edge-torch</strong></td>
+<td>Deprecated predecessor to <code>litert-torch</code></td>
+</tr>
+<tr class="odd">
+<td><strong>ai-edge-quantizer</strong></td>
+<td>Quantizes <code>.tflite</code> models (int8, fp16)</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="converting-a-pytorch-model-to-litert" class="level2">
+<h2 class="anchored" data-anchor-id="converting-a-pytorch-model-to-litert">Converting a PyTorch Model to LiteRT</h2>
+<p>The conversion path from PyTorch to <code>.tflite</code> uses the <code>litert-torch</code> library:</p>
+<pre><code>import torch
+import litert_torch
+
+# Your model must be an nn.Module returning tensors (not dicts)
+model.eval()
+sample_inputs = (torch.randn(1, 438, 160),)
+
+tflite_model = litert_torch.convert(model, sample_inputs)
+tflite_model.export("model.tflite")</code></pre>
+<p>Key requirements:</p>
+<ul>
+<li>Model must use <code>torch.export</code> compatible ops</li>
+<li>Inputs and outputs must be tensors or tuples of tensors (no dicts)</li>
+</ul>
+</section>
+<section id="benchmarking-on-a-real-device-without-writing-any-app-code" class="level2">
+<h2 class="anchored" data-anchor-id="benchmarking-on-a-real-device-without-writing-any-app-code">Benchmarking on a Real Device Without Writing Any App Code</h2>
+<p>One underappreciated feature of LiteRT is that you can benchmark a <code>.tflite</code> model directly on a real Android device using ADB, with no app development required.</p>
+<p>First, install the benchmark APK:</p>
+<pre><code>wget https://storage.googleapis.com/tensorflow-nightly-public/prod/tensorflow/release/lite/tools/nightly/latest/android_aarch64_benchmark_model.apk
+adb install -r -d -g android_aarch64_benchmark_model.apk</code></pre>
+<p>Push your model and run:</p>
+<pre><code>adb push model.tflite /data/local/tmp/
+adb shell am start -S \
+  -n org.tensorflow.lite.benchmark/.BenchmarkModelActivity \
+  --es args '"--graph=/data/local/tmp/model.tflite --num_threads=4"'</code></pre>
+<p>Read results:</p>
+<pre><code>adb logcat | grep "Inference timings"</code></pre>
+<p>This gives you real latency numbers on your target hardware in minutes.</p>
+</section>
+<section id="when-you-need-qualcomm-ai-hub" class="level2">
+<h2 class="anchored" data-anchor-id="when-you-need-qualcomm-ai-hub">When You Need Qualcomm AI Hub</h2>
+<p>The ADB approach runs your model on the CPU delegate by default. To unlock the Qualcomm NPU (Hexagon DSP), you need to compile the model specifically for that chip. This is where Qualcomm AI Hub comes in.</p>
+<p>AI Hub has three products:</p>
+<ul>
+<li><strong>Models</strong>: pre-optimized models ready to download and deploy</li>
+<li><strong>Apps</strong>: sample Android app code to bundle models</li>
+<li><strong>Workbench</strong>: compile and profile your custom model on 50+ hosted Qualcomm devices</li>
+</ul>
+<p>The Workbench workflow in Python:</p>
+<pre><code>import qai_hub
+
+model = qai_hub.upload_model("model.tflite")
+job = qai_hub.submit_compile_job(
+    model,
+    device=qai_hub.Device("Snapdragon 8 Gen 2"),
+    options="--target_runtime tflite"
+)
+compiled_model = job.download_target_model()</code></pre>
+<section id="final-thougts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thougts">Final Thougts</h3>
+<p>This is part of my journey exploring on-device models development. I finished the optimization of voice models on my tablet. I will share the results in the next post. For now you can read more about :</p>
+<ol type="1">
+<li><a href="https://kareemai.com/blog/posts/speech_recognition/my_dream_job_at_tarteel.html">My dream job at Tarteel part 1</a></li>
+<li><a href="https://kareemai.com/blog/posts/speech_recognition/muaalm_quran_chance.html">Muaalem El Quran part 2</a> : the app i was optimizing.d</li>
+</ol>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>blogging</category>
+  <category>blog/review/tool</category>
+  <category>on_device</category>
+  <category>mobile</category>
+  <category>optimization</category>
+  <guid>https://kareemai.com/blog/posts/on_device/litert.html</guid>
+  <pubDate>Fri, 24 Apr 2026 21:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/blog/posts/on_device/images/litert.jpeg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Vector Databases - O’reilly By Nitin Borwankar</title>
   <dc:creator>kareem </dc:creator>
@@ -2823,7 +2970,7 @@ font-style: inherit;">--extra-index-url</span> https://pypi.nvidia.com</span></c
   <category>quran</category>
   <category>job</category>
   <guid>https://kareemai.com/blog/posts/speech_recognition/muaalm_quran_chance.html</guid>
-  <pubDate>Thu, 25 Dec 2025 22:00:00 GMT</pubDate>
+  <pubDate>Thu, 25 Dec 2025 23:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/speech_recognition/images/tarteel_ai.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -4931,7 +5078,7 @@ QPS: 1627.94
   <category>embedding</category>
   <category>qdrant</category>
   <guid>https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html</guid>
-  <pubDate>Fri, 19 Dec 2025 22:00:00 GMT</pubDate>
+  <pubDate>Fri, 19 Dec 2025 23:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/bm25.png" medium="image" type="image/png" height="98" width="144"/>
 </item>
 <item>
@@ -5687,7 +5834,7 @@ font-style: inherit;">"6th Settlement Apartment"</span>, your_query_embedding)</
   <category>qdrant</category>
   <category>sparse</category>
   <guid>https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html</guid>
-  <pubDate>Thu, 18 Dec 2025 22:00:00 GMT</pubDate>
+  <pubDate>Thu, 18 Dec 2025 23:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/xbites_chat.png" medium="image" type="image/png" height="153" width="144"/>
 </item>
 <item>
@@ -6528,7 +6675,7 @@ Query: 'love python'
   <category>embedding</category>
   <category>qdrant</category>
   <guid>https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html</guid>
-  <pubDate>Thu, 18 Dec 2025 22:00:00 GMT</pubDate>
+  <pubDate>Thu, 18 Dec 2025 23:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/bm25.png" medium="image" type="image/png" height="98" width="144"/>
 </item>
 <item>
@@ -7919,7 +8066,7 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
   <category>qdrant</category>
   <category>til</category>
   <guid>https://kareemai.com/blog/posts/minishlab/pyversity_qdrant.html</guid>
-  <pubDate>Sun, 14 Dec 2025 22:00:00 GMT</pubDate>
+  <pubDate>Sun, 14 Dec 2025 23:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/minishlab/images/minishlab.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -8288,7 +8435,7 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
 
  ]]></description>
   <guid>https://kareemai.com/blog/posts/products_reviews/one_plus_pad_3.html</guid>
-  <pubDate>Wed, 03 Dec 2025 22:00:00 GMT</pubDate>
+  <pubDate>Wed, 03 Dec 2025 23:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/products_reviews/images/one_plus_storm_blue.wepb" medium="image"/>
 </item>
 <item>
@@ -8518,7 +8665,7 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
 
  ]]></description>
   <guid>https://kareemai.com/blog/posts/products_reviews/Huawei freebuds 7i.html</guid>
-  <pubDate>Thu, 06 Nov 2025 22:00:00 GMT</pubDate>
+  <pubDate>Thu, 06 Nov 2025 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>From $32,000 to $0 with Small Models and CTranslate2</title>
@@ -9006,7 +9153,7 @@ font-style: inherit;">"float16"</span>,</span>
   <category>cost-optimization</category>
   <category>blogging</category>
   <guid>https://kareemai.com/blog/posts/minishlab/ctranslate_maswray.html</guid>
-  <pubDate>Thu, 02 Oct 2025 21:00:00 GMT</pubDate>
+  <pubDate>Thu, 02 Oct 2025 22:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/minishlab/images/bojji.png" medium="image" type="image/png" height="216" width="144"/>
 </item>
 <item>
@@ -9096,7 +9243,7 @@ Media Manager</code></pre>
   <category>rough_thoughts</category>
   <category>life_style</category>
   <guid>https://kareemai.com/blog/posts/life_style/back_to_rss.html</guid>
-  <pubDate>Mon, 09 Jun 2025 21:00:00 GMT</pubDate>
+  <pubDate>Mon, 09 Jun 2025 22:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/life_style/images/vision_read.png" medium="image" type="image/png" height="137" width="144"/>
 </item>
 <item>
@@ -9160,7 +9307,7 @@ Media Manager</code></pre>
   <category>model2vec</category>
   <category>arabic</category>
   <guid>https://kareemai.com/blog/posts/nlp/embedding_world/late_interaction.html</guid>
-  <pubDate>Wed, 14 May 2025 21:00:00 GMT</pubDate>
+  <pubDate>Wed, 14 May 2025 22:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/images/minishlab.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -9662,7 +9809,7 @@ Media Manager</code></pre>
   <category>model2vec</category>
   <category>arabic</category>
   <guid>https://kareemai.com/blog/posts/minishlab/blog_zaraah.html</guid>
-  <pubDate>Wed, 14 May 2025 21:00:00 GMT</pubDate>
+  <pubDate>Wed, 14 May 2025 22:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/minishlab/images/minishlab.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -9826,7 +9973,7 @@ Media Manager</code></pre>
   <category>rough_thoughts</category>
   <category>life_style</category>
   <guid>https://kareemai.com/blog/posts/life_style/gpuvec.html</guid>
-  <pubDate>Thu, 03 Apr 2025 22:00:00 GMT</pubDate>
+  <pubDate>Thu, 03 Apr 2025 23:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/life_style/images/gpuvec.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
@@ -9931,177 +10078,6 @@ Media Manager</code></pre>
   <guid>https://kareemai.com/blog/posts/speech_recognition/my_dream_job_at_tarteel.html</guid>
   <pubDate>Mon, 17 Mar 2025 22:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/speech_recognition/images/tarteel_ai.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>فن تبسيط الحياة الرقمية: دليل التحرر من المشتتات</title>
-  <dc:creator>kareem </dc:creator>
-  <link>https://kareemai.com/blog/posts/life_style/digital_minimalisim_arabic.html</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<ul>
-<li><h1 id="لماذا-نمد-أيدينا-بشكل-غريزي-إلى-هواتفنا-خلال-لحظات-الملل-أو-الفراغ">لماذا نمد أيدينا بشكل غريزي إلى هواتفنا خلال لحظات الملل أو الفراغ؟</h1>
-<p>ليس من قبيل الصدفة. تم تصميم التطبيقات لجذبنا مرة أخرى، والحفاظ على انتباهنا وتقديم دفعات من الدوبامين أثناء استخدامها.</p>
-<p>ومع ذلك، فإن مجرد معرفة ذلك لا يمنعنا من تشتيت انتباهنا.</p>
-<p>في هذه المقالة، سأشارك العديد من التطبيقات المفيدة والنصائح العملية للتخلص من هذه المشكلة أو تقليل خطرها بقدر الإمكان. نستخدم هنا مفهوم “Digital Minimalism” أو تبسيط الحياة الرقمية لمساعدة القارئ على فهم الفكرة بشكل أفضل.</p></li>
-<li><h2 id="أوقف-تشغيل-الإشعارات" class="anchored">1. أوقف تشغيل الإشعارات</h2>
-<ul>
-<li>الإشعارات هي بوابة المشتتات.</li>
-<li>معظم الإشعارات غير مهمة ولكنها تخلق شعورًا زائفًا بالإلحاح.</li>
-<li>بدلاً من مراجعة إشعارات كل تطبيق على حدة، من الأسهل تبني عقلية أن جميع الإشعارات يجب أن تكون متوقفة بشكل افتراضي.</li>
-<li>أوقف تشغيل كل شيء أولاً، ثم قم بتمكين الإشعارات فقط للتطبيقات الأساسية مثل المراسلة والتقويم.</li>
-</ul></li>
-<li><h2 id="استخدم-أيقونات-سوداء-ومصغرة" class="anchored">2. استخدم أيقونات سوداء ومصغرة</h2>
-<ul>
-<li>تأتي كافة الواجهات بأيقونات كبيرة وملونة، يمكنك معرفة التطبيق بمجرد اللون فقط، فاللون الأصفر هو تطبيق سناب شات واللون البنفسجي هو الإنستجرام.</li>
-<li>يمكنك فتح متجر الثيمات الخاص بجهازك الشخصي وتغيير الأيقونات للون ثابت وموحد، يفضل أسود أو رمادي.</li>
-</ul></li>
-<li><h2 id="أزل-التطبيقات-من-الشاشة-الرئيسية" class="anchored">3. أزل التطبيقات من الشاشة الرئيسية</h2>
-<ul>
-<li>على غرار بيئتنا المادية، فإن ما هو موجود على شاشتنا الرئيسية يصبح إشارات تحفز عاداتنا.</li>
-<li>عندما تكون تطبيقات الوسائط الاجتماعية مرئية بشكل كبير على شاشتك الرئيسية، فمن المرجح أن تفتحها.</li>
-<li>نوصي بنقل التطبيقات المشتتة للانتباه إلى “الخلف”.</li>
-<li>يمكن لمستخدمي أيفون إزالة التطبيقات من الشاشة الرئيسية وتخزينها في مكتبة التطبيقات، بينما يمكن لمستخدمي أندرويد الاحتفاظ بالتطبيقات بالمثل في درج التطبيقات.</li>
-</ul></li>
-<li><h2 id="شغل-فلتر-التدرج-الرمادي" class="anchored">4. شغّل فلتر التدرج الرمادي</h2>
-<ul>
-<li>يمكن أن يؤدي تحويل هاتفك إلى التدرج الرمادي إلى جعل التمرير عبر الوسائط الاجتماعية أقل تشتيتًا على الفور.</li>
-<li>لكنك لست مضطرًا لإبقائه قيد التشغيل طوال الوقت.</li>
-<li>نحن نعلم مدى قوة هذه الأجهزة الصغيرة للعمل الإبداعي والترفيه.</li>
-<li>ما نوصي به هو وجود طريقة بسيطة لتشغيل وإيقاف فلتر التدرج الرمادي، مثل إضافته إلى مركز التحكم على أجهزة iPhone.</li>
-</ul></li>
-<li><h2 id="خد-نفسك---أخر-فتح-التطبيقات" class="anchored">5. خد نفسك - أخّر فتح التطبيقات</h2>
-<ul>
-<li>لإضافة تأخير عند فتح التطبيقات، يمكنك استخدام تطبيق مثل: <a href="https://one-sec.app/">One Sec</a></li>
-<li>يقدم التطبيق وقفة قصيرة في كل مرة تحاول فيها فتح الوسائط الاجتماعية أو التطبيقات الأخرى المحددة.</li>
-<li>يعمل كحاجز شاشة مؤقت بينك وبين المشتتات، مما يساعدك على إمساك نفسك وتحديد ما إذا كنت مشتتًا أو متعمدًا.</li>
-<li>يمكنك استخدام التطبيق على الموبايل أو على الحاسوب.</li>
-</ul></li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/life_style/images/image_1738724671871_0.png" class="img-fluid figure-img"></p>
-<figcaption>One Sec</figcaption>
-</figure>
-</div>
-<ul>
-<li><h2 id="احذف-التطبيقات-غير-الضرورية" class="anchored">6. احذف التطبيقات غير الضرورية</h2>
-<ul>
-<li>إذا كان التطبيق المشتت للانتباه لا يضيف أي قيمة حقيقية، فإن الحل الأبسط غالبًا ما يكون الأفضل.</li>
-<li>احذفه من جهازك تمامًا.</li>
-<li>ثم، استخدم وقتك الذي تم تحريره حديثًا في أنشطة مفيدة.</li>
-<li>من التجارب المثيرة هي حذف تطبيق اليوتيوب من الموبايل واستخدامه من المتصفح، سيقلل هذا من الانغماس ويفضل حذف كلا من المتصفح واليوتيوب!!</li>
-<li>يمكنك التخلص من تطبيق اليوتيوب بالكامل على نظام أندرويد بدون عمل روت باستخدام Adb manager.</li>
-<li>وعندما تريد مشاهدة اليوتيوب أو باقي وسائل التواصل الاجتماعي، يمكنك استخدام الحاسوب فهو أقل عرضة للتشتت والاستخدام في أوقات مثل قبل النوم أو في أثناء المرحاض أو تناول الطعام في المطبخ مثلاً!</li>
-</ul></li>
-<li><h2 id="أعد-تشكيل-عالمك-كما-تريد" class="anchored">7. أعد تشكيل عالمك كما تريد</h2>
-<ul>
-<li><p>إذا ما زلت تريد استخدام بعض التطبيقات، يمكنك التحكم في كيفية العرض وماذا تريد أن ترى وما لا تريد، والتوقف عن التشتت مثلاً.</p></li>
-<li><p>بعض إضافات المتصفح التي تسمح لك بتعديل الموقع:</p>
-<ul>
-<li><a href="https://chromewebstore.google.com/detail/minimal-theme-for-twitter/pobhoodpcipjmedfenaigbeloiidbflp">Minimal theme for twitter</a>: تسمح لك بتغيير إعداد عرض تويتر الخاص بك.</li>
-</ul></li>
-</ul></li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/life_style/images/image_1738724457971_0.png" class="img-fluid figure-img"></p>
-<figcaption>Minimal Theme for Twitter</figcaption>
-</figure>
-</div>
-<ul>
-<li><a href="https://chromewebstore.google.com/detail/unhook-remove-youtube-rec/khncfooichmfjbepaaaebmommgaepoid">Unhook</a></li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/life_style/images/image_1738724551148_0.png" class="img-fluid figure-img"></p>
-<figcaption>Enhancer for Youtube - 1</figcaption>
-</figure>
-</div>
-<ul>
-<li><a href="https://chromewebstore.google.com/detail/enhancer-for-youtube/ponfpcnoihfmfllpaingbgckeeldkhle?hl=en-US">Enhancer for youtube</a></li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/life_style/images/image_1738724511256_0.png" class="img-fluid figure-img"></p>
-<figcaption>Enhancer for Youtube - 2</figcaption>
-</figure>
-</div>
-<ul>
-<li><h2 id="مراقبة-الوقت" class="anchored">8. مراقبة الوقت</h2>
-<ul>
-<li>من التطبيقات المفيدة لمراقبة الوقت على الحاسوب والمفتوحة المصدر أيضًا هي: <a href="https://activitywatch.net/">ActivitWatch</a></li>
-</ul></li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://activitywatch.net/img/screenshots/screenshot-v0.9.3-activity.png" class="img-fluid figure-img"></p>
-<figcaption>Activity Watch Example</figcaption>
-</figure>
-</div>
-<ul>
-<li><h2 id="هاتف-غبي" class="anchored">هاتف غبي</h2>
-<ul>
-<li><p>يمكنك استخدام تطبيق</p>
-<ul>
-<li><a href="https://dumbphone.so/">dumb phone</a></li>
-</ul></li>
-<li><p>يساعدك التطبيق علي اختيار التطبيقات التي تريد فتحها فقط ويقوم بتغيير الايقونة لتصبح اسم مجرد مما يجعلك اكثر وعيا عند محاولتك فتح التطبيق</p></li>
-<li><p>يمكنك تجربة&nbsp;تطبيق الهاتف الغبي&nbsp;باستخدام رابط التنزيل أدناه.</p></li>
-<li><div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/life_style/images/image_1738731874874_0.png" class="img-fluid figure-img"></p>
-<figcaption>dumb phone</figcaption>
-</figure>
-</div></li>
-<li><div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/life_style/images/image_1738731869245_0.png" class="img-fluid figure-img"></p>
-<figcaption>dumb phone example</figcaption>
-</figure>
-</div></li>
-<li><div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/life_style/images/image_1738731860670_0.png" class="img-fluid figure-img"></p>
-<figcaption>review of dumb phone</figcaption>
-</figure>
-</div></li>
-<li></li>
-</ul></li>
-<li><h2 id="مراجع" class="anchored">مراجع</h2>
-<ul>
-<li>مسلكيات</li>
-<li>عمل عميق</li>
-<li>تبسيط الحياة الرقمية</li>
-<li>فن تبسيط الحياة</li>
-</ul></li>
-</ul>
-<hr>
-<section id="مصادر-إضافية-من-الموقع" class="level3">
-<h3 class="anchored" data-anchor-id="مصادر-إضافية-من-الموقع">مصادر إضافية من الموقع</h3>
-<p>إذا كنت مهتماً بمتابعة رحلتي في هندسة الذكاء الاصطناعي ومعالجة اللغات الطبيعية، يمكنك زيارة الأقسام التالية:</p>
-<ul>
-<li><a href="../../../papers.html">أبحاث في معالجة اللغة العربية</a></li>
-<li><a href="../../../oss/opensource.html">مشاريع مفتوحة المصدر</a></li>
-<li><a href="../../../til/index.html">مدونة “تعلمت اليوم” (TIL)</a></li>
-<li><a href="../../../blog/feed.html">فهرس المدونة التقنية</a></li>
-</ul>
-
-
-</section>
-
- ]]></description>
-  <category>blogging</category>
-  <category>idea_Forge</category>
-  <category>publish</category>
-  <category>rough_thoughts</category>
-  <category>life_style</category>
-  <guid>https://kareemai.com/blog/posts/life_style/digital_minimalisim_arabic.html</guid>
-  <pubDate>Tue, 04 Feb 2025 22:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/life_style/images/fake_graviety.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>

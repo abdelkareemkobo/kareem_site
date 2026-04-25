@@ -6,9 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Quick learnings and notes on Arabic NLP, machine learning, Python, Rust, and AI engineering. Daily discoveries from building real-world AI systems.">
+<meta name="author" content="kareem">
+<meta name="dcterms.date" content="2026-04-25">
+<meta name="description" content="A practical guide for ML engineers on converting PyTorch models to LiteRT, benchmarking on real Android devices via ADB, and when to use Qualcomm AI Hub for NPU compilation.">
 
-<title>TILs | Abdelkareem Elkhateb - Arabic NLP &amp; AI – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
+<title>LiteRT and Qualcomm AI Hub: On-Device ML Without the Cloud – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -27,29 +29,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../favicon.ico" rel="icon">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-4147375aad28e86e0c0b867c5ec42731.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-0c33f1f559f04da1bcee1516f29a3f94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-4147375aad28e86e0c0b867c5ec42731.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../favicon.ico" rel="icon">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-4147375aad28e86e0c0b867c5ec42731.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-0c33f1f559f04da1bcee1516f29a3f94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-4147375aad28e86e0c0b867c5ec42731.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,35 +77,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-til-posts .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-til-posts'] = new List('listing-til-posts', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XFPC3M9TMG"></script>
 
 <script type="text/javascript">
@@ -115,20 +86,19 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 </script>
+<style>html{ scroll-behavior: smooth; }</style>
 <!-- Fonts are embedded locally via shimmering-fonts.css -->
-<link rel="alternate" type="application/rss+xml" title="عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist" href="index.xml" data-external="1"><meta property="og:title" content="TILs - Today I Learned | Abdelkareem Elkhateb">
-<meta property="og:description" content="Quick learnings on Arabic NLP, ML, and AI engineering">
-<meta property="og:image" content="https://kareemai.com//quarto.png">
+<meta property="og:title" content="LiteRT and Qualcomm AI Hub: On-Device ML Without the Cloud – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta property="og:description" content="A practical guide for ML engineers on converting PyTorch models to LiteRT, benchmarking on real Android devices via ADB, and when to use Qualcomm AI Hub for NPU compilation.">
+<meta property="og:image" content="https://kareemai.com/blog/posts/on_device/images/litert.jpeg">
 <meta property="og:site_name" content="عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
-<meta property="og:image:height" content="576">
-<meta property="og:image:width" content="960">
 <meta property="og:locale" content="en_US">
-<meta name="twitter:title" content="TILs | Abdelkareem Elkhateb - Arabic NLP &amp; AI">
-<meta name="twitter:description" content="Quick learnings and notes on Arabic NLP, machine learning, Python, Rust, and AI engineering. Daily discoveries from building real-world AI systems.">
-<meta name="twitter:image" content="https://kareemai.com//kareem.jpg">
+<meta name="twitter:title" content="LiteRT and Qualcomm AI Hub: On-Device ML Without the Cloud – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta name="twitter:description" content="A practical guide for ML engineers on converting PyTorch models to LiteRT, benchmarking on real Android devices via ADB, and when to use Qualcomm AI Hub for NPU compilation.">
+<meta name="twitter:image" content="https://kareemai.com/blog/posts/on_device/images/litert.jpeg">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://kareemai.com/til/">
+<link rel="canonical" href="https://kareemai.com/blog/posts/on_device/litert.html">
 </head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
@@ -307,10 +277,10 @@ window.addEventListener('scroll', () => {
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "TILs - Today I Learned",
-  "description": "Quick learnings and notes on Arabic NLP, machine learning, Python, Rust, and AI engineering. Daily discoveries from building real-world AI systems.",
-  "author": {"@type": "Person", "name": "Kareem Elkhateb"},
-  "datePublished": "",
+  "headline": "LiteRT and Qualcomm AI Hub: On-Device ML Without the Cloud",
+  "description": "A practical guide for ML engineers on converting PyTorch models to LiteRT, benchmarking on real Android devices via ADB, and when to use Qualcomm AI Hub for NPU compilation.",
+  "author": {"@type": "Person", "name": "kareem"},
+  "datePublished": "April 25, 2026",
   "publisher": {
     "@type": "Person",
     "name": "Kareem Elkhateb",
@@ -319,38 +289,9 @@ window.addEventListener('scroll', () => {
 }
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="../shimmering-fonts.css">
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../../../shimmering-fonts.css">
+<link rel="stylesheet" href="../../../styles.css">
 
 
 
@@ -366,27 +307,27 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> <i class="bi bi-house" role="img">
+    <a class="nav-link" href="../../../index.html"> <i class="bi bi-house" role="img">
 </i> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../blog/feed.html"> <i class="bi bi-journal-text" role="img">
+    <a class="nav-link" href="../../../blog/feed.html"> <i class="bi bi-journal-text" role="img">
 </i> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../til/index.html" aria-current="page"> <i class="bi bi-lightbulb" role="img">
+    <a class="nav-link" href="../../../til/index.html"> <i class="bi bi-lightbulb" role="img">
 </i> 
 <span class="menu-text">TILs</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../papers.html"> <i class="bi bi-file-text" role="img">
+    <a class="nav-link" href="../../../papers.html"> <i class="bi bi-file-text" role="img">
 </i> 
 <span class="menu-text">Papers</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../publish.html"> <i class="bi bi-book" role="img">
+    <a class="nav-link" href="../../../publish.html"> <i class="bi bi-book" role="img">
 </i> 
 <span class="menu-text">Books</span></a>
   </li>  
@@ -413,12 +354,12 @@ window.Quarto = {
 <span class="menu-text">GPUVec</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../index.xml"> <i class="bi bi-rss" role="img" aria-label="Blog RSS Feed">
+    <a class="nav-link" href="../../../index.xml"> <i class="bi bi-rss" role="img" aria-label="Blog RSS Feed">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../til/index.xml"> <i class="bi bi-rss" role="img" aria-label="TILs RSS Feed">
+    <a class="nav-link" href="../../../til/index.xml"> <i class="bi bi-rss" role="img" aria-label="TILs RSS Feed">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -439,10 +380,16 @@ window.Quarto = {
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#daily-insights-and-micro-learnings" id="toc-daily-insights-and-micro-learnings" class="nav-link active" data-scroll-target="#daily-insights-and-micro-learnings">Daily Insights and Micro-Learnings</a>
+  <li><a href="#why-on-device-inference" id="toc-why-on-device-inference" class="nav-link active" data-scroll-target="#why-on-device-inference">Why On-Device Inference?</a></li>
+  <li><a href="#what-is-litert" id="toc-what-is-litert" class="nav-link" data-scroll-target="#what-is-litert">What is LiteRT?</a>
   <ul class="collapse">
-  <li><a href="#why-i-maintain-a-til" id="toc-why-i-maintain-a-til" class="nav-link" data-scroll-target="#why-i-maintain-a-til">Why I Maintain a TIL?</a></li>
-  <li><a href="#what-youll-find-here" id="toc-what-youll-find-here" class="nav-link" data-scroll-target="#what-youll-find-here">What You’ll Find Here</a></li>
+  <li><a href="#litert-vs-litert-lm" id="toc-litert-vs-litert-lm" class="nav-link" data-scroll-target="#litert-vs-litert-lm">LiteRT vs LiteRT-LM</a></li>
+  </ul></li>
+  <li><a href="#converting-a-pytorch-model-to-litert" id="toc-converting-a-pytorch-model-to-litert" class="nav-link" data-scroll-target="#converting-a-pytorch-model-to-litert">Converting a PyTorch Model to LiteRT</a></li>
+  <li><a href="#benchmarking-on-a-real-device-without-writing-any-app-code" id="toc-benchmarking-on-a-real-device-without-writing-any-app-code" class="nav-link" data-scroll-target="#benchmarking-on-a-real-device-without-writing-any-app-code">Benchmarking on a Real Device Without Writing Any App Code</a></li>
+  <li><a href="#when-you-need-qualcomm-ai-hub" id="toc-when-you-need-qualcomm-ai-hub" class="nav-link" data-scroll-target="#when-you-need-qualcomm-ai-hub">When You Need Qualcomm AI Hub</a>
+  <ul class="collapse">
+  <li><a href="#final-thougts" id="toc-final-thougts" class="nav-link" data-scroll-target="#final-thougts">Final Thougts</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -453,19 +400,38 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">TILs - Today I Learned</h1>
-</div>
+<h1 class="title">LiteRT and Qualcomm AI Hub: On-Device ML Without the Cloud</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">blogging</div>
+    <div class="quarto-category">blog/review/tool</div>
+    <div class="quarto-category">on_device</div>
+    <div class="quarto-category">mobile</div>
+    <div class="quarto-category">optimization</div>
+  </div>
+  </div>
 
 <div>
   <div class="description">
-    Quick learnings and notes on Arabic NLP, machine learning, Python, Rust, and AI engineering. Daily discoveries from building real-world AI systems.
+    A practical guide for ML engineers on converting PyTorch models to LiteRT, benchmarking on real Android devices via ADB, and when to use Qualcomm AI Hub for NPU compilation.
   </div>
 </div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>kareem </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 25, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -475,367 +441,134 @@ window.Quarto = {
 </header>
 
 
-<section id="daily-insights-and-micro-learnings" class="level2">
-<h2 class="anchored" data-anchor-id="daily-insights-and-micro-learnings">Daily Insights and Micro-Learnings</h2>
-<p>Welcome to my <strong>TIL (Today I Learned)</strong> collection. This is a digital garden where I document small, daily discoveries, snippets of code, and interesting facts I encounter while working on <strong>Arabic NLP</strong>, <strong>Machine Learning</strong>, <strong>Python</strong>, and <strong>AI Engineering</strong>.</p>
-<p>In the fast-paced world of technology, especially within the AI and NLP domains, we often encounter small but critical pieces of information that solve specific problems. These might be a particular Python library’s edge case, a Rust performance tip, or a specific nuance in processing Arabic script. This repository is my way of capturing those “lightbulb moments” before they fade.</p>
-<p>Unlike my long-form <a href="../blog/feed.html">blog posts</a>, these notes are brief, unpolished, and focused on single, specific topics. They serve as a quick reference for myself and hopefully a helpful resource for others facing similar technical challenges. If you’re looking for my more structured work, you can check out my <a href="../papers.html">Research Papers</a> or my <a href="../oss/opensource.html">Open Source Projects</a>.</p>
-<section id="why-i-maintain-a-til" class="level3">
-<h3 class="anchored" data-anchor-id="why-i-maintain-a-til">Why I Maintain a TIL?</h3>
-<p>Documenting small wins and learnings daily helps in:</p>
+<p>In 2024, Google rebranded TensorFlow Lite as <strong>LiteRT</strong>.</p>
+<p>it came with a new API, broader hardware support, and tighter integration with Qualcomm’s AI ecosystem.</p>
+<p>This post covers what <a href="https://ai.google.dev/edge/litert/next/overview">LiteRT</a> is, when to use <a href="https://aihub.qualcomm.com/resources">Qualcomm AI Hub</a> alongside it, and how to benchmark a model on a real Android device without needing a cloud account or writing any app code.</p>
+<section id="why-on-device-inference" class="level2">
+<h2 class="anchored" data-anchor-id="why-on-device-inference">Why On-Device Inference?</h2>
+<p>Running models on-device instead of a remote server has several practical advantages:</p>
 <ul>
-<li><p><strong>Knowledge Retention:</strong> Writing it down reinforces the learning and forces a clearer understanding of the solution.</p></li>
-<li><p><strong>Quick Reference:</strong> Finding that specific regex, shell command, or obscure PyTorch function I used last month becomes effortless.</p></li>
-<li><p><strong>Sharing Value:</strong> Even a small note can save someone else hours of debugging. I believe in the power of shared knowledge to elevate the entire engineering community.</p></li>
-<li><p><strong>Tracking Progress:</strong> It provides a chronological record of my technical evolution and the various challenges I’ve tackled over time.</p></li>
+<li><strong>Privacy</strong>: user data never leaves the device</li>
+<li><strong>Latency</strong>: no network round-trip, response is immediate</li>
+<li><strong>Offline</strong>: works without internet connectivity</li>
+<li><strong>Cost</strong>: no cloud inference bill</li>
+</ul>
+<p>These benefits come with a tradeoff: constrained compute, memory, and power budget on the device.</p>
+</section>
+<section id="what-is-litert" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-litert">What is LiteRT?</h2>
+<p>LiteRT is Google’s on-device ML runtime for Android, iOS, embedded Linux, and microcontrollers.</p>
+<p>It is the direct successor to TensorFlow Lite, with the same <code>.tflite</code> <a href="https://flatbuffers.dev/">flatbuffer format</a>.</p>
+<p>The core runtime supports three execution backends:</p>
+<ul>
+<li><strong>CPU</strong> via XNNPACK (default, broad op coverage)</li>
+<li><strong>GPU</strong> via OpenGL ES / Vulkan delegates</li>
+<li><strong>NPU</strong> via vendor-specific delegates (Qualcomm, MediaTek, etc.)</li>
+</ul>
+<p>Models are converted to <code>.tflite</code> format from PyTorch, TensorFlow, or JAX using the <code>litert-torch</code> or <code>ai-edge-torch</code> Python libraries.</p>
+<section id="litert-vs-litert-lm" class="level3">
+<h3 class="anchored" data-anchor-id="litert-vs-litert-lm">LiteRT vs LiteRT-LM</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 74%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Package</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>LiteRT</strong></td>
+<td>The core runtime — runs <code>.tflite</code> models on Android/iOS/Linux</td>
+</tr>
+<tr class="even">
+<td><strong>LiteRT-LM</strong></td>
+<td>Specialized runtime for LLMs on-device (Gemma, Llama, etc.)</td>
+</tr>
+<tr class="odd">
+<td><strong>litert-torch</strong></td>
+<td>Python library to <strong>convert</strong> PyTorch models → <code>.tflite</code></td>
+</tr>
+<tr class="even">
+<td><strong>ai-edge-torch</strong></td>
+<td>Deprecated predecessor to <code>litert-torch</code></td>
+</tr>
+<tr class="odd">
+<td><strong>ai-edge-quantizer</strong></td>
+<td>Quantizes <code>.tflite</code> models (int8, fp16)</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="converting-a-pytorch-model-to-litert" class="level2">
+<h2 class="anchored" data-anchor-id="converting-a-pytorch-model-to-litert">Converting a PyTorch Model to LiteRT</h2>
+<p>The conversion path from PyTorch to <code>.tflite</code> uses the <code>litert-torch</code> library:</p>
+<pre><code>import torch
+import litert_torch
+
+# Your model must be an nn.Module returning tensors (not dicts)
+model.eval()
+sample_inputs = (torch.randn(1, 438, 160),)
+
+tflite_model = litert_torch.convert(model, sample_inputs)
+tflite_model.export("model.tflite")</code></pre>
+<p>Key requirements:</p>
+<ul>
+<li>Model must use <code>torch.export</code> compatible ops</li>
+<li>Inputs and outputs must be tensors or tuples of tensors (no dicts)</li>
 </ul>
 </section>
-<section id="what-youll-find-here" class="level3">
-<h3 class="anchored" data-anchor-id="what-youll-find-here">What You’ll Find Here</h3>
-<p>The TILs cover a wide range of topics that reflect my daily work and interests:</p>
+<section id="benchmarking-on-a-real-device-without-writing-any-app-code" class="level2">
+<h2 class="anchored" data-anchor-id="benchmarking-on-a-real-device-without-writing-any-app-code">Benchmarking on a Real Device Without Writing Any App Code</h2>
+<p>One underappreciated feature of LiteRT is that you can benchmark a <code>.tflite</code> model directly on a real Android device using ADB, with no app development required.</p>
+<p>First, install the benchmark APK:</p>
+<pre><code>wget https://storage.googleapis.com/tensorflow-nightly-public/prod/tensorflow/release/lite/tools/nightly/latest/android_aarch64_benchmark_model.apk
+adb install -r -d -g android_aarch64_benchmark_model.apk</code></pre>
+<p>Push your model and run:</p>
+<pre><code>adb push model.tflite /data/local/tmp/
+adb shell am start -S \
+  -n org.tensorflow.lite.benchmark/.BenchmarkModelActivity \
+  --es args '"--graph=/data/local/tmp/model.tflite --num_threads=4"'</code></pre>
+<p>Read results:</p>
+<pre><code>adb logcat | grep "Inference timings"</code></pre>
+<p>This gives you real latency numbers on your target hardware in minutes.</p>
+</section>
+<section id="when-you-need-qualcomm-ai-hub" class="level2">
+<h2 class="anchored" data-anchor-id="when-you-need-qualcomm-ai-hub">When You Need Qualcomm AI Hub</h2>
+<p>The ADB approach runs your model on the CPU delegate by default. To unlock the Qualcomm NPU (Hexagon DSP), you need to compile the model specifically for that chip. This is where Qualcomm AI Hub comes in.</p>
+<p>AI Hub has three products:</p>
 <ul>
-<li><p><strong>Arabic NLP:</strong> Tips on handling RTL text, tokenization strategies, and model fine-tuning.</p></li>
-<li><p><strong>AI Engineering:</strong> Insights into MLOps, model deployment, and infrastructure optimization.</p></li>
-<li><p><strong>Programming Languages:</strong> Snippets and best practices for Python, Rust, and Go.</p></li>
-<li><p><strong>Developer Tools:</strong> Productivity hacks, CLI tricks, and configuration tips for Linux and macOS environments.</p></li>
+<li><strong>Models</strong>: pre-optimized models ready to download and deploy</li>
+<li><strong>Apps</strong>: sample Android app code to bundle models</li>
+<li><strong>Workbench</strong>: compile and profile your custom model on 50+ hosted Qualcomm devices</li>
 </ul>
-<p>You can browse the entries below. If you have any questions or want to discuss a specific learning, feel free to get in touch with me on my <a href="../index.html">homepage</a>.</p>
+<p>The Workbench workflow in Python:</p>
+<pre><code>import qai_hub
 
+model = qai_hub.upload_model("model.tflite")
+job = qai_hub.submit_compile_job(
+    model,
+    device=qai_hub.Device("Snapdragon 8 Gen 2"),
+    options="--target_runtime tflite"
+)
+compiled_model = job.download_target_model()</code></pre>
+<section id="final-thougts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thougts">Final Thougts</h3>
+<p>This is part of my journey exploring on-device models development. I finished the optimization of voice models on my tablet. I will share the results in the next post. For now you can read more about :</p>
+<ol type="1">
+<li><a href="https://kareemai.com/blog/posts/speech_recognition/my_dream_job_at_tarteel.html">My dream job at Tarteel part 1</a></li>
+<li><a href="https://kareemai.com/blog/posts/speech_recognition/muaalm_quran_chance.html">Muaalem El Quran part 2</a> : the app i was optimizing.d</li>
+</ol>
 
 
 </section>
 </section>
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-til-posts">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="YmxvZ2dpbmclMkN0aWwlMkNibG9nJTJGb3BpbmlvbiUyRnRlY2g=" data-listing-date-sort="1765753200000" data-listing-file-modified-sort="1768824512611" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="375">
-<div class="thumbnail"><a href="../til/tils/2025-12-15.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/til.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-12-15.html" class="no-external">AI Research Challenges: The GPU Barrier for Researchers</a>
-</h3>
-<div class="delink listing-description"><a href="../til/tils/2025-12-15.html" class="no-external">
-<p>Exploring the challenges of AI research without…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-12-15.html" class="no-external">
-<div class="listing-date">
-Dec 15, 2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="YmxvZ2dpbmclMkN0aWwlMkNibG9nJTJGc3RhdHVzJTJGY29tcGxldGUlMkNibG9nJTJGc3RhdHVzJTJGcHVibGlzaGVkJTJDcnVzdA==" data-listing-date-sort="1765666800000" data-listing-file-modified-sort="1772258220273" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="554">
-<div class="thumbnail"><a href="../til/tils/2025-12-14.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/til.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-12-14.html" class="no-external">Rust for Machine Learning: Building AI Tools and Data Pipelines in 2026</a>
-</h3>
-<div class="delink listing-description"><a href="../til/tils/2025-12-14.html" class="no-external">
-<p>Learning Rust for ML engineering—building AI…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-12-14.html" class="no-external">
-<div class="listing-date">
-Dec 14, 2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="YmxvZ2dpbmclMkN0aWwlMkNibG9nJTJGc3RhdHVzJTJGcHVibGlzaGVkJTJDYmxvZyUyRnN0YXR1cyUyRmNvbXBsZXRlJTJDYmxvZyUyRmxlYXJuJTJGam91cm5leQ==" data-listing-date-sort="1765580400000" data-listing-file-modified-sort="1772257764067" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="556">
-<div class="thumbnail"><a href="../til/tils/2025-12-13.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/til.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-12-13.html" class="no-external">Arabic NLP Fundamentals: From Sparse Embeddings and BM25 to Dynamic Programming</a>
-</h3>
-<div class="delink listing-description"><a href="../til/tils/2025-12-13.html" class="no-external">
-<p>Rebuilding NLP fundamentals for Arabic: TF-IDF…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-12-13.html" class="no-external">
-<div class="listing-date">
-Dec 13, 2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="YmxvZ2dpbmclMkN0aWwlMkNubHAlMkNhaSUyQ2Jsb2clMkZsZWFybiUyRmNvbmNlcHQlMkNibG9nJTJGYmVuY2htYXJrJTJDYmxvZyUyRnN0YXR1cyUyRmNvbXBsZXRl" data-listing-date-sort="1760997600000" data-listing-file-modified-sort="1772257843720" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1236">
-<div class="thumbnail"><a href="../til/tils/2025-10-21.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/til.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-10-21.html" class="no-external">Arabic Tokenizer Comparison: AraModernBert vs AraBERT v2 (With Metrics)</a>
-</h3>
-<div class="delink listing-description"><a href="../til/tils/2025-10-21.html" class="no-external">
-<p>AraModernBert vs AraBERT v2 tokenizers for…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-10-21.html" class="no-external">
-<div class="listing-date">
-Oct 21, 2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="YmxvZ2dpbmclMkN0aWw=" data-listing-date-sort="1749160800000" data-listing-file-modified-sort="1768826140557" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="748">
-<div class="thumbnail"><a href="../til/tils/2025-06-06-til.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/til.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-06-06-til.html" class="no-external">AI Engineering Careers: Connecting with Minds in Machine Learning</a>
-</h3>
-<div class="delink listing-description"><a href="../til/tils/2025-06-06-til.html" class="no-external">
-<p>Reflections on landing an AI engineering role…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-06-06-til.html" class="no-external">
-<div class="listing-date">
-Jun 6, 2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="YmxvZ2dpbmclMkN0aWw=" data-listing-date-sort="1748383200000" data-listing-file-modified-sort="1772257971412" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="808">
-<div class="thumbnail"><a href="../til/tils/2025-05-28-til.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/til.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-05-28-til.html" class="no-external">PyLate Tutorial: Vector Indexing and Retrieval with ColBERT (Complete Guide)</a>
-</h3>
-<div class="delink listing-description"><a href="../til/tils/2025-05-28-til.html" class="no-external">
-<p>PyLate tutorial for ColBERT vector retrieval.…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-05-28-til.html" class="no-external">
-<div class="listing-date">
-May 28, 2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="YmxvZ2dpbmclMkN0aWwlMkNtYWNoaW5lLWxlYXJuaW5nJTJDcHl0aG9uJTJDcmFn" data-listing-date-sort="1748124000000" data-listing-file-modified-sort="1768826168628" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1003">
-<div class="thumbnail"><a href="../til/tils/2025-05-25-til.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/images/raptor.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-05-25-til.html" class="no-external">Meta’s RAPTOR RAG, DFloat11 Compression &amp; Pyrefly Guide</a>
-</h3>
-<div class="delink listing-description"><a href="../til/tils/2025-05-25-til.html" class="no-external">
-<p>A complete guide to Meta’s RAPTOR RAG technique…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-05-25-til.html" class="no-external">
-<div class="listing-date">
-May 25, 2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="YmxvZ2dpbmclMkN0aWwlMkN3ZWIlMkNhaSUyQ2xsbSUyQ2xvY2FsX2xsbSUyQ29sbGFtYQ==" data-listing-date-sort="1747951200000" data-listing-file-modified-sort="1772257971467" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="625">
-<div class="thumbnail"><a href="../til/tils/2025-05-23-til.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/images/brave_leo.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-05-23-til.html" class="no-external">Does Brave Leo Run Locally? Privacy-First AI with Ollama and BYOM</a>
-</h3>
-<div class="delink listing-description"><a href="../til/tils/2025-05-23-til.html" class="no-external">
-<p>Yes, Brave Leo runs locally with anonymous…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-05-23-til.html" class="no-external">
-<div class="listing-date">
-May 23, 2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-categories="YmxvZ2dpbmclMkN0aWwlMkMlRDglQUElRDglQjIlRDklODMlRDklOEElRDklODc=" data-listing-date-sort="1747778400000" data-listing-file-modified-sort="1768826185036" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1162">
-<div class="thumbnail"><a href="../til/tils/2025-05-21-til.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/images/isreal.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-05-21-til.html" class="no-external">البوصلة الحقيقية: تأملات في تزكية النفس وإخلاص النية في طلب العلم</a>
-</h3>
-<div class="delink listing-description"><a href="../til/tils/2025-05-21-til.html" class="no-external">
-<p>تأملات حول التوجه إلى الله وتزكية النفس،…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-05-21-til.html" class="no-external">
-<div class="listing-date">
-May 21, 2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="9" data-categories="YmxvZ2dpbmclMkN0aWwlMkNzZW8lMkNkb21haW5zJTJDdmVyY2VsJTJDcG9ya2J1biUyQ3dlYg==" data-listing-date-sort="1747692000000" data-listing-file-modified-sort="1772257971467" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="910">
-<div class="thumbnail"><a href="../til/tils/2025-05-20-til.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/til.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-05-20-til.html" class="no-external">How to Connect Porkbun Domains to Vercel and Cloudflare (Step-by-Step)</a>
-</h3>
-<div class="delink listing-description"><a href="../til/tils/2025-05-20-til.html" class="no-external">
-<p>Connect Porkbun domains to Vercel via DNS…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-05-20-til.html" class="no-external">
-<div class="listing-date">
-May 20, 2025
-</div>
-<div class="listing-author">
-Kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="10" data-categories="YmxvZ2dpbmclMkN0aWwlMkNzZW8lMkNzdWJzdGFjaw==" data-listing-date-sort="1747605600000" data-listing-file-modified-sort="1768826198847" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1029">
-<div class="thumbnail"><a href="../til/tils/2025-05-19-til.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/images/old_ahead_of_ai.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-05-19-til.html" class="no-external">AI Research Blogging: Why Substack Matters for Researchers</a>
-</h3>
-<div class="delink listing-description"><a href="../til/tils/2025-05-19-til.html" class="no-external">
-<p>Insights on starting a Substack for AI…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-05-19-til.html" class="no-external">
-<div class="listing-date">
-May 19, 2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="11" data-categories="YmxvZ2dpbmclMkN0aWwlMkNxZHJhbnQ=" data-listing-date-sort="1747519200000" data-listing-file-modified-sort="1767135461850" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="698">
-<div class="thumbnail"><a href="../til/tils/2025-05-18-til.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/til.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-05-18-til.html" class="no-external">Explore the Qdrant Blog core concepts | Part 1</a>
-</h3>
-<div class="delink listing-description"><a href="../til/tils/2025-05-18-til.html" class="no-external">
-<p>This a 2 hours daily exploring and summarizing…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-05-18-til.html" class="no-external">
-<div class="listing-date">
-May 18, 2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="12" data-categories="YmxvZ2dpbmclMkN0aWw=" data-listing-date-sort="1747432800000" data-listing-file-modified-sort="1768823412927" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="574">
-<div class="thumbnail"><a href="../til/tils/2025-05-17-til.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/til.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-05-17-til.html" class="no-external">Learning in Public: Why I Started My TIL Journey</a>
-</h3>
-<div class="delink listing-description"><a href="../til/tils/2025-05-17-til.html" class="no-external">
-<p>Starting a Today I Learned (TIL) series to…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-05-17-til.html" class="no-external">
-<div class="listing-date">
-May 17, 2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const root =
@@ -1617,6 +1350,38 @@ function copyLink() {
     }
   });
   </script>
+<input type="hidden" id="giscus-base-theme" value="preferred_color_scheme">
+<input type="hidden" id="giscus-alt-theme" value="preferred_color_scheme">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      if (authorPrefersDark) {
+          [baseTheme, altTheme] = [altTheme, baseTheme];
+      }
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "abdelkareemkobo/kareem_site";
+    script.dataset.repoId = "R_kgDOQxY8kw";
+    script.dataset.category = "Comments";
+    script.dataset.categoryId = "DIC_kwDOQxY8k84C0aRf";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1650,7 +1415,7 @@ function copyLink() {
     </a>
   </li>  
     <li class="nav-item compact">
-    <a class="nav-link" href="../index.xml">
+    <a class="nav-link" href="../../../index.xml">
       <i class="bi bi-rss" role="img" aria-label="RSS Feed">
 </i> 
     </a>
@@ -1666,4 +1431,5 @@ function copyLink() {
 
 
 
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
