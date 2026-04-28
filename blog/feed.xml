@@ -15,7 +15,67 @@
 <link>https://kareemai.com/blog/feed.html</link>
 </image>
 <generator>quarto-1.9.37</generator>
-<lastBuildDate>Fri, 24 Apr 2026 21:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 27 Apr 2026 21:00:00 GMT</lastBuildDate>
+<item>
+  <title>Hacker AI Engineer Interview 2026 Example</title>
+  <dc:creator>kareem </dc:creator>
+  <link>https://kareemai.com/blog/posts/ml_life/hacker_rank_ai_intereviw.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="hackerrank-ai-engineer-interview" class="level2">
+<h2 class="anchored" data-anchor-id="hackerrank-ai-engineer-interview">HackerRank AI Engineer Interview</h2>
+<p>I was applying to a company for a junior AI role.</p>
+<p>I’m not here to talk about the company or the role, but about the idea of using a dumb system like HackerRank to assess your knowledge.</p>
+<p>The interview was just 3 questions, and the time limit was 2 hours and 40 minutes.</p>
+<section id="prompt-engineering" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-engineering">Prompt Engineering</h3>
+<p>It’s a question about creating a prompt for an LLM to do some finance equations, to test if the model will answer the user correctly.</p>
+<p>It’s a very simple and easy question, but the problem is:</p>
+<p>what model are they using to follow the prompt?</p>
+<p>There are 6 questions.</p>
+<p>4 of them need the output to be just a number, and 2 need it to be in the following format:</p>
+<ul>
+<li>Final Price: $42, Discount Price: $23</li>
+</ul>
+<p>When you try to instruct the LLM to do this, it fails.</p>
+<p>I don’t think there is room to improve this, the model is very small and doesn’t follow instructions correctly.</p>
+<p>This doesn’t assess how much knowledge you have about small LLMs and how to use them.</p>
+<p><strong>That’s a different story.</strong></p>
+</section>
+<section id="sql-question" class="level3">
+<h3 class="anchored" data-anchor-id="sql-question">SQL Question</h3>
+<p>A SQL question about using aggregations and aliases, a medium-difficulty question.</p>
+<p>But the hard part was that the answer shouldn’t be in table format and should be tab-separated.</p>
+<p>As someone who has been working with SQL through ORMs for all my use cases, I had never encountered this case, so I spent around an hour figuring out how to do it.</p>
+<p>I don’t think this assesses anything more than just syntax.</p>
+</section>
+<section id="rag-built-with-langchain-langgraph-and-faiss" class="level3">
+<h3 class="anchored" data-anchor-id="rag-built-with-langchain-langgraph-and-faiss">RAG Built with LangChain, LangGraph, and FAISS</h3>
+<p>Two Python files where you need to fill in the missing methods.</p>
+<p>The problem here is that to write these methods, you must remember the exact syntax for these specific tools — which I don’t even use.</p>
+<p>I use DSPy and Qdrant for most of my work. I’ve used FAISS before, but I’m not going to memorize how to import its modules.</p>
+</section>
+<section id="final-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<p>Using HackerRank for this type of role, if it shows anything, it shows that the people running the interview don’t know much about AI engineering.</p>
+<p>read more : <a href="https://kareemai.com/blog/posts/on_device/litert.html">LiteRT and Qualcomm AI Hub</a> <a href="https://kareemai.com/blog/posts/nlp/embedding_world/vector_database_book.html">Vector Databases Book O’reilly</a> <a href="https://kareemai.com/">Abdelkareem Elkhateb</a> <a href="https://www.hackerrank.com/">HackerRank</a></p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>blogging</category>
+  <category>til</category>
+  <category>blog/opinion/tech</category>
+  <guid>https://kareemai.com/blog/posts/ml_life/hacker_rank_ai_intereviw.html</guid>
+  <pubDate>Mon, 27 Apr 2026 21:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/blog/posts/ml_life/images/hackerank.jpeg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>LiteRT and Qualcomm AI Hub: On-Device ML Without the Cloud</title>
   <dc:creator>kareem </dc:creator>
@@ -2970,7 +3030,7 @@ font-style: inherit;">--extra-index-url</span> https://pypi.nvidia.com</span></c
   <category>quran</category>
   <category>job</category>
   <guid>https://kareemai.com/blog/posts/speech_recognition/muaalm_quran_chance.html</guid>
-  <pubDate>Thu, 25 Dec 2025 23:00:00 GMT</pubDate>
+  <pubDate>Thu, 25 Dec 2025 22:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/speech_recognition/images/tarteel_ai.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -5078,7 +5138,7 @@ QPS: 1627.94
   <category>embedding</category>
   <category>qdrant</category>
   <guid>https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html</guid>
-  <pubDate>Fri, 19 Dec 2025 23:00:00 GMT</pubDate>
+  <pubDate>Fri, 19 Dec 2025 22:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/bm25.png" medium="image" type="image/png" height="98" width="144"/>
 </item>
 <item>
@@ -5834,7 +5894,7 @@ font-style: inherit;">"6th Settlement Apartment"</span>, your_query_embedding)</
   <category>qdrant</category>
   <category>sparse</category>
   <guid>https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html</guid>
-  <pubDate>Thu, 18 Dec 2025 23:00:00 GMT</pubDate>
+  <pubDate>Thu, 18 Dec 2025 22:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/xbites_chat.png" medium="image" type="image/png" height="153" width="144"/>
 </item>
 <item>
@@ -6675,7 +6735,7 @@ Query: 'love python'
   <category>embedding</category>
   <category>qdrant</category>
   <guid>https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html</guid>
-  <pubDate>Thu, 18 Dec 2025 23:00:00 GMT</pubDate>
+  <pubDate>Thu, 18 Dec 2025 22:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/bm25.png" medium="image" type="image/png" height="98" width="144"/>
 </item>
 <item>
@@ -8066,7 +8126,7 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
   <category>qdrant</category>
   <category>til</category>
   <guid>https://kareemai.com/blog/posts/minishlab/pyversity_qdrant.html</guid>
-  <pubDate>Sun, 14 Dec 2025 23:00:00 GMT</pubDate>
+  <pubDate>Sun, 14 Dec 2025 22:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/minishlab/images/minishlab.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -8435,7 +8495,7 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
 
  ]]></description>
   <guid>https://kareemai.com/blog/posts/products_reviews/one_plus_pad_3.html</guid>
-  <pubDate>Wed, 03 Dec 2025 23:00:00 GMT</pubDate>
+  <pubDate>Wed, 03 Dec 2025 22:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/products_reviews/images/one_plus_storm_blue.wepb" medium="image"/>
 </item>
 <item>
@@ -8665,7 +8725,7 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
 
  ]]></description>
   <guid>https://kareemai.com/blog/posts/products_reviews/Huawei freebuds 7i.html</guid>
-  <pubDate>Thu, 06 Nov 2025 23:00:00 GMT</pubDate>
+  <pubDate>Thu, 06 Nov 2025 22:00:00 GMT</pubDate>
 </item>
 <item>
   <title>From $32,000 to $0 with Small Models and CTranslate2</title>
@@ -9153,7 +9213,7 @@ font-style: inherit;">"float16"</span>,</span>
   <category>cost-optimization</category>
   <category>blogging</category>
   <guid>https://kareemai.com/blog/posts/minishlab/ctranslate_maswray.html</guid>
-  <pubDate>Thu, 02 Oct 2025 22:00:00 GMT</pubDate>
+  <pubDate>Thu, 02 Oct 2025 21:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/minishlab/images/bojji.png" medium="image" type="image/png" height="216" width="144"/>
 </item>
 <item>
@@ -9243,7 +9303,7 @@ Media Manager</code></pre>
   <category>rough_thoughts</category>
   <category>life_style</category>
   <guid>https://kareemai.com/blog/posts/life_style/back_to_rss.html</guid>
-  <pubDate>Mon, 09 Jun 2025 22:00:00 GMT</pubDate>
+  <pubDate>Mon, 09 Jun 2025 21:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/life_style/images/vision_read.png" medium="image" type="image/png" height="137" width="144"/>
 </item>
 <item>
@@ -9307,7 +9367,7 @@ Media Manager</code></pre>
   <category>model2vec</category>
   <category>arabic</category>
   <guid>https://kareemai.com/blog/posts/nlp/embedding_world/late_interaction.html</guid>
-  <pubDate>Wed, 14 May 2025 22:00:00 GMT</pubDate>
+  <pubDate>Wed, 14 May 2025 21:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/images/minishlab.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -9809,7 +9869,7 @@ Media Manager</code></pre>
   <category>model2vec</category>
   <category>arabic</category>
   <guid>https://kareemai.com/blog/posts/minishlab/blog_zaraah.html</guid>
-  <pubDate>Wed, 14 May 2025 22:00:00 GMT</pubDate>
+  <pubDate>Wed, 14 May 2025 21:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/minishlab/images/minishlab.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -9973,111 +10033,8 @@ Media Manager</code></pre>
   <category>rough_thoughts</category>
   <category>life_style</category>
   <guid>https://kareemai.com/blog/posts/life_style/gpuvec.html</guid>
-  <pubDate>Thu, 03 Apr 2025 23:00:00 GMT</pubDate>
+  <pubDate>Thu, 03 Apr 2025 22:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/life_style/images/gpuvec.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>my dream job at Tarteel</title>
-  <dc:creator>kareem </dc:creator>
-  <link>https://kareemai.com/blog/posts/speech_recognition/my_dream_job_at_tarteel.html</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="why-tarteel-not-fang" class="level2">
-<h2 class="anchored" data-anchor-id="why-tarteel-not-fang">Why Tarteel, Not FANG?</h2>
-<ul>
-<li>As a Muslim, my ultimate goal isn’t just to accumulate wealth or knowledge for their own sake. I’m guided by broader concepts like taqwa (God-consciousness), righteous deeds, and sincere intentions.</li>
-<li>With only one short life to live, I want to make the most of it in the best way possible.</li>
-<li>Working at big tech companies as a programmer offers good financial rewards and significant technical growth, along with practical experience,though it comes with its fair share of challenges. However, it also means operating under the umbrella of foreign companies with their own agendas and ideologies. Take the major players like Google, Facebook, X, and Amazon, for example.</li>
-<li>Their leaders, in one way or another, have supported the occupation of Gaza, contributed to the suffering of children, and restricted our freedom of expression.</li>
-<li>Our accounts get banned, our voices silenced, and these companies provide both material and moral support to oppressive entities with every means at their disposal.</li>
-<li>I’m not denying that working for such companies might be permissible under certain Islamic legal perspectives, but personally, I have no desire to be part of them. So, where do I want to go instead? Do I even have rules?</li>
-<li>The truth is, I do have specific criteria for the kind of work environment I want to invest my time in. Here’s what I’m looking for:</li>
-<li>A workplace that respects my faith, including what’s halal and haram, and honors religious practices.
-<ul>
-<li>A place that fosters my growth beyond just financial gain. As someone passionate about data science, I want to join a team grounded in strong scientific principles, up-to-date with advancements, and focused on innovation, not blind imitation or merely using what’s available.</li>
-<li>A supportive, ambitious team led by kind and fair management.</li>
-<li>A team working on meaningful projects with real humanitarian impact,projects that benefit society without involving anything forbidden, even if they’re not explicitly religious.</li>
-</ul></li>
-<li><strong>That’s when my eyes turned to Tarteel.</strong></li>
-<li>I first came across it during high school, watching episodes featuring <a href="https://www.youtube.com/watch?v=100Qq-mLDbMo">Hazem Al-Siddiq and Abdul Latif</a> discussing the idea behind Tarteel and its early beginnings. Even now, after graduating, I’ve kept up with the company’s progress.</li>
-<li>From what I can see, it embodies everything I’m looking for—at least on the surface—and I assume the best of the people working there.</li>
-<li><strong>My dream for the next two years is to join the Tarteel team.</strong></li>
-</ul>
-</section>
-<section id="tarteels-vision" class="level2">
-<h2 class="anchored" data-anchor-id="tarteels-vision">Tarteel’s Vision</h2>
-<p>Tarteel AI is the world’s leading app for Quran memorization and recitation. It’s a tool that supports millions of Muslims globally by providing features to help them memorize and connect with the Quran. When you read their application page, it’s genuinely inspiring:</p>
-<ul>
-<li>Fully remote work: work anytime, anywhere.</li>
-<li>A balance of dunya and akhira: an Islamic workweek, Islamic holidays, and a culture rooted in faith.</li>
-<li>Unlimited time off (with manager approval).</li>
-<li>Yearly team retreats and off-sites.</li>
-<li>The freedom to work in your thobe, abaya, or traditional clothing from the comfort of home.</li>
-<li>A chance to be part of a company leading AI and technology innovation in the Muslim community.</li>
-<li>An opportunity to contribute to impactful projects that benefit Muslims worldwide.</li>
-</ul>
-</section>
-<section id="machine-learning-engineer-at-tarteel" class="level2">
-<h2 class="anchored" data-anchor-id="machine-learning-engineer-at-tarteel">Machine Learning Engineer at Tarteel</h2>
-<p>Tarteel is always seeking talented individuals passionate about advancing the state of the Muslim ummah through their unique skills. They encourage applicants to share as much as possible about their interests and abilities.</p>
-<p>So, here’s my story: I’ve applied to Tarteel 4 times!</p>
-<ul>
-<li>The first time was during my second year of college, seeking an internship. My skills were basic, I had just started learning about deep learning, but the advice they gave me was encouraging and kind.</li>
-<li>After graduation, I applied again but was rejected without explanation. I assume it’s because I was a fresh graduate, and they likely needed someone with experience in large-scale projects. That’s fair.</li>
-<li>Seven months later, just before Ramadan 2026, Tarteel announced internship opportunities for the first time. I applied but wasn’t accepted. The competition was tough, and I don’t think I was the strongest candidate at the time, no hard feelings!</li>
-<li>What now? I’m determined to prove I have the knowledge and skills to contribute. Here’s what I’m currently working on:
-<ul>
-<li>Arabic NLP, LLMs, and speech recognition with the Namma community, where I’m contributing to open-source projects and research papers.</li>
-<li>A remote research lab in Russia, which is accelerating my technical growth.</li>
-<li>Plans to join a company to learn about cloud deployment, model optimization, and GPU workloads.</li>
-<li>Studying Quranic sciences and Tajweed to deepen my connection to the field.</li>
-<li>Building small projects inspired by Tarteel’s vision to test my abilities and see where they take me.</li>
-</ul></li>
-</ul>
-</section>
-<section id="skills-i-need-to-master" class="level2">
-<h2 class="anchored" data-anchor-id="skills-i-need-to-master">Skills I Need to Master</h2>
-<p>To succeed, I’m focusing on these key areas:</p>
-<ul>
-<li>Speech recognition and audio processing.</li>
-<li>Nvidia NeMo frameworks.</li>
-<li>SLURM (for managing computing resources).</li>
-<li>S3 (data storage and retrieval).</li>
-<li>Monitoring and analyzing model performance for data-driven improvements.</li>
-</ul>
-</section>
-<section id="my-current-plan" class="level2">
-<h2 class="anchored" data-anchor-id="my-current-plan">My Current Plan</h2>
-<p>I’ve started mastering these skills by taking courses and reading books on state-of-the-art (SOTA) speech recognition models.</p>
-<p>Soon, I’ll share my progress, publish my work, and apply what I’ve learned to Tarteel’s vision. And, of course, I’m making duaa for guidance and success ❤️.</p>
-<p>You can read more here <a href="muaalm_quran_chance.html">Part 2: muaalem El Quran</a></p>
-<section id="social-media" class="level3">
-<h3 class="anchored" data-anchor-id="social-media">Social Media</h3>
-<ul>
-<li><a href="https://huggingface.co/Abdelkareem">Hugging Face</a></li>
-<li><a href="https://www.linkedin.com/in/kareemkobo/">LinkedIn</a></li>
-<li><a href="https://x.com/AbdelkareemElk2">Twitter</a></li>
-<li><a href="https://github.com/abdelkareemkobo">GitHub</a></li>
-</ul>
-
-
-</section>
-</section>
-
- ]]></description>
-  <category>blogging</category>
-  <category>tarteel</category>
-  <category>speech_recognition</category>
-  <category>machine_learning</category>
-  <category>quran</category>
-  <category>job</category>
-  <guid>https://kareemai.com/blog/posts/speech_recognition/my_dream_job_at_tarteel.html</guid>
-  <pubDate>Mon, 17 Mar 2025 22:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/speech_recognition/images/tarteel_ai.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
