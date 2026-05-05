@@ -26,6 +26,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -391,6 +426,19 @@ window.addEventListener('scroll', () => {
   <ul class="collapse">
   <li><a href="#internal-resources" id="toc-internal-resources" class="nav-link" data-scroll-target="#internal-resources">Internal Resources</a></li>
   </ul></li>
+  <li><a href="#practical-example-using-colbert-with-pylate" id="toc-practical-example-using-colbert-with-pylate" class="nav-link" data-scroll-target="#practical-example-using-colbert-with-pylate">Practical Example: Using ColBERT with PyLate</a>
+  <ul class="collapse">
+  <li><a href="#performance-comparison" id="toc-performance-comparison" class="nav-link" data-scroll-target="#performance-comparison">Performance Comparison</a></li>
+  </ul></li>
+  <li><a href="#faq-late-interaction-models" id="toc-faq-late-interaction-models" class="nav-link" data-scroll-target="#faq-late-interaction-models">FAQ: Late Interaction Models</a>
+  <ul class="collapse">
+  <li><a href="#what-is-late-interaction-in-nlp" id="toc-what-is-late-interaction-in-nlp" class="nav-link" data-scroll-target="#what-is-late-interaction-in-nlp">What is late interaction in NLP?</a></li>
+  <li><a href="#is-colbert-better-than-standard-embeddings" id="toc-is-colbert-better-than-standard-embeddings" class="nav-link" data-scroll-target="#is-colbert-better-than-standard-embeddings">Is ColBERT better than standard embeddings?</a></li>
+  <li><a href="#what-is-colpali" id="toc-what-is-colpali" class="nav-link" data-scroll-target="#what-is-colpali">What is ColPali?</a></li>
+  <li><a href="#how-much-storage-do-late-interaction-models-need" id="toc-how-much-storage-do-late-interaction-models-need" class="nav-link" data-scroll-target="#how-much-storage-do-late-interaction-models-need">How much storage do late interaction models need?</a></li>
+  <li><a href="#when-should-i-use-late-interaction-vs.-bi-encoders" id="toc-when-should-i-use-late-interaction-vs.-bi-encoders" class="nav-link" data-scroll-target="#when-should-i-use-late-interaction-vs.-bi-encoders">When should I use late interaction vs.&nbsp;bi-encoders?</a></li>
+  </ul></li>
+  <li><a href="#related-posts" id="toc-related-posts" class="nav-link" data-scroll-target="#related-posts">Related Posts</a></li>
   </ul>
 </nav>
     </div>
@@ -480,9 +528,110 @@ window.addEventListener('scroll', () => {
 <li><a href="../../../til/index.qmd">Today I Learned: AI Engineering Notes</a></li>
 <li><a href="../../feed.qmd">Arabic NLP Blog Posts</a></li>
 </ul>
-
-
 </section>
+</section>
+<section id="practical-example-using-colbert-with-pylate" class="level2">
+<h2 class="anchored" data-anchor-id="practical-example-using-colbert-with-pylate">Practical Example: Using ColBERT with PyLate</h2>
+<p>Here’s how to use a late interaction model for retrieval in Python:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pylate <span class="im">import</span> ColBERT, Indexes, retrieve</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load a pre-trained ColBERT model</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> ColBERT(<span class="st">"lightonai/colbertv2"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Encode documents into token-level embeddings</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>documents <span class="op">=</span> [</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Late interaction models store a vector per token instead of one per document."</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Bi-encoders compress documents into a single vector for fast retrieval."</span>,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Cross-encoders process query and document together for higher accuracy."</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>document_embeddings <span class="op">=</span> model.encode(documents, convert_to_tensor<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Build an index for fast retrieval</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>index <span class="op">=</span> Indexes.FlatIndex()</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>index.add_documents(document_embeddings, documents<span class="op">=</span>documents)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Encode the query</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"What is the difference between bi-encoders and cross-encoders?"</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>query_embedding <span class="op">=</span> model.encode([query], convert_to_tensor<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Retrieve top-k results</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> index.search(query_embedding, k<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> doc, score <span class="kw">in</span> results:</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>score<span class="sc">:.3f}</span><span class="ss">: </span><span class="sc">{</span>doc<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="performance-comparison" class="level3">
+<h3 class="anchored" data-anchor-id="performance-comparison">Performance Comparison</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Model Type</th>
+<th>Speed</th>
+<th>Accuracy</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Bi-Encoder</td>
+<td>Fastest (~1ms/query)</td>
+<td>Good</td>
+<td>Initial retrieval, large-scale search</td>
+</tr>
+<tr class="even">
+<td>Cross-Encoder</td>
+<td>Slowest (~100ms/pair)</td>
+<td>Best</td>
+<td>Re-ranking top results</td>
+</tr>
+<tr class="odd">
+<td>Late Interaction</td>
+<td>Fast (~10ms/query)</td>
+<td>Very Good</td>
+<td>High-accuracy retrieval at scale</td>
+</tr>
+</tbody>
+</table>
+<p>Late interaction gives you 90% of cross-encoder accuracy with 10% of the computational cost.</p>
+</section>
+</section>
+<section id="faq-late-interaction-models" class="level2">
+<h2 class="anchored" data-anchor-id="faq-late-interaction-models">FAQ: Late Interaction Models</h2>
+<section id="what-is-late-interaction-in-nlp" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-late-interaction-in-nlp">What is late interaction in NLP?</h3>
+<p>Late interaction is a retrieval technique where query and document tokens interact at query time rather than during encoding. Models like ColBERT store token-level embeddings for documents and compute similarity using MaxSim operations when a query arrives.</p>
+</section>
+<section id="is-colbert-better-than-standard-embeddings" class="level3">
+<h3 class="anchored" data-anchor-id="is-colbert-better-than-standard-embeddings">Is ColBERT better than standard embeddings?</h3>
+<p>For retrieval tasks requiring fine-grained matching, yes. ColBERT outperforms bi-encoders on most benchmarks while being much faster than cross-encoders. However, it requires more storage since you store one vector per token instead of one per document.</p>
+</section>
+<section id="what-is-colpali" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-colpali">What is ColPali?</h3>
+<p>ColPali applies late interaction to vision-language models for document retrieval. Instead of extracting text from PDFs via OCR, it processes page images directly and matches query tokens to visual patches. This handles tables, charts, and complex layouts better than text-based retrieval.</p>
+</section>
+<section id="how-much-storage-do-late-interaction-models-need" class="level3">
+<h3 class="anchored" data-anchor-id="how-much-storage-do-late-interaction-models-need">How much storage do late interaction models need?</h3>
+<p>Storage is higher than bi-encoders because you store vectors for every token. A 512-token document needs 512 vectors instead of 1. Compression techniques like PLAID indexing and quantization reduce this overhead significantly.</p>
+</section>
+<section id="when-should-i-use-late-interaction-vs.-bi-encoders" class="level3">
+<h3 class="anchored" data-anchor-id="when-should-i-use-late-interaction-vs.-bi-encoders">When should I use late interaction vs.&nbsp;bi-encoders?</h3>
+<p>Use late interaction when retrieval quality is critical and you can afford the extra storage. Use bi-encoders for very large-scale search where speed and storage efficiency matter most. A common hybrid approach: bi-encoder for initial retrieval, late interaction for re-ranking.</p>
+</section>
+</section>
+<section id="related-posts" class="level2">
+<h2 class="anchored" data-anchor-id="related-posts">Related Posts</h2>
+<ul>
+<li><a href="../../../../blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html">BM25 Benchmarking</a> — Comparing sparse retrieval methods</li>
+<li><a href="../../../../blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html">MTEB Benchmark Explained</a> — How embedding models are evaluated</li>
+<li><a href="../../../../blog/posts/mteb_encoding/tiny-gte_transformer_model.html">Tiny-GTE Transformer Model</a> — Efficient transformer architecture for embeddings</li>
+</ul>
+
+
 </section>
 
 </main> <!-- /main -->

@@ -2373,8 +2373,9 @@ font-style: inherit;">return</span> response.json()</span></code></pre></div></d
 <section id="why-super-productivity" class="level2">
 <h2 class="anchored" data-anchor-id="why-super-productivity">Why Super Productivity</h2>
 <p>After 1.5 years of daily use, <a href="https://super-productivity.com/">Super Productivity</a> — also known as the superproductivity app — has become my only task management system. Not a todo-list, a complete productivity system. And it’s free.</p>
-<section id="why-it-wins" class="level3">
-<h3 class="anchored" data-anchor-id="why-it-wins">Why It Wins</h3>
+</section>
+<section id="why-it-wins" class="level2">
+<h2 class="anchored" data-anchor-id="why-it-wins">Why It Wins</h2>
 <ol type="1">
 <li><strong>Free &amp; open source</strong>: no subscriptions, no limits</li>
 <li><strong>Cross-platform</strong>: Linux, Windows, Mac, Android, web</li>
@@ -2384,8 +2385,8 @@ font-style: inherit;">return</span> response.json()</span></code></pre></div></d
 </ol>
 <hr>
 </section>
-<section id="how-i-use-it-daily" class="level3">
-<h3 class="anchored" data-anchor-id="how-i-use-it-daily">How I Use It Daily</h3>
+<section id="how-i-use-it-daily" class="level2">
+<h2 class="anchored" data-anchor-id="how-i-use-it-daily">How I Use It Daily</h2>
 <p>I use it for development, research, and learning projects.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2401,9 +2402,10 @@ font-style: inherit;">return</span> response.json()</span></code></pre></div></d
 <li>Gamified “Finish Day” button celebrates your wins 🎉</li>
 </ul>
 </section>
-<section id="features-i-love" class="level3">
-<h3 class="anchored" data-anchor-id="features-i-love">Features I Love</h3>
-<p><strong>1. Side Notes</strong></p>
+<section id="features-i-love" class="level2">
+<h2 class="anchored" data-anchor-id="features-i-love">Features I Love</h2>
+<section id="side-notes" class="level3">
+<h3 class="anchored" data-anchor-id="side-notes">1. Side Notes</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109191754.png" class="img-fluid figure-img"></p>
@@ -2411,7 +2413,9 @@ font-style: inherit;">return</span> response.json()</span></code></pre></div></d
 </figure>
 </div>
 <p>Each project has a notes section. I add my motivation and the end goal here. Seeing the “why” keeps me focused.</p>
-<p><strong>2. Yesterday Review</strong></p>
+</section>
+<section id="yesterday-review" class="level3">
+<h3 class="anchored" data-anchor-id="yesterday-review">2. Yesterday Review</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109191941.png" class="img-fluid figure-img"></p>
@@ -2419,14 +2423,18 @@ font-style: inherit;">return</span> response.json()</span></code></pre></div></d
 </figure>
 </div>
 <hr>
-<p><strong>3. Schedule View</strong></p>
+</section>
+<section id="schedule-view" class="level3">
+<h3 class="anchored" data-anchor-id="schedule-view">3. Schedule View</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109192101.png" class="img-fluid figure-img"></p>
 <figcaption>Super Productivity Schedule View</figcaption>
 </figure>
 </div>
-<p><strong>4. Focus Mode</strong></p>
+</section>
+<section id="focus-mode" class="level3">
+<h3 class="anchored" data-anchor-id="focus-mode">4. Focus Mode</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109192217.png" class="img-fluid figure-img"></p>
@@ -2434,7 +2442,9 @@ font-style: inherit;">return</span> response.json()</span></code></pre></div></d
 </figure>
 </div>
 <p>The 4 icons at the top track daily habits with one click.</p>
-<p><strong>5. Project Organization</strong></p>
+</section>
+<section id="project-organization" class="level3">
+<h3 class="anchored" data-anchor-id="project-organization">5. Project Organization</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109192336.png" class="img-fluid figure-img"></p>
@@ -2442,10 +2452,11 @@ font-style: inherit;">return</span> response.json()</span></code></pre></div></d
 </figure>
 </div>
 <p>Folders → Projects → Tasks. Clean hierarchy for everything.</p>
-<p><strong>It has also tags but i don’t use tags</strong></p>
+<p><strong>It also has tags but I don’t use tags</strong></p>
 </section>
-<section id="end-of-day-flow" class="level3">
-<h3 class="anchored" data-anchor-id="end-of-day-flow">End of Day Flow</h3>
+</section>
+<section id="end-of-day-flow" class="level2">
+<h2 class="anchored" data-anchor-id="end-of-day-flow">End of Day Flow</h2>
 <p>When you hit “Finish Day”, you get 3 steps:</p>
 <ol type="1">
 <li><p><strong>Review</strong>: summary of what you did</p></li>
@@ -2459,13 +2470,13 @@ font-style: inherit;">return</span> response.json()</span></code></pre></div></d
 <figcaption>Super Productivity Calendar Integration</figcaption>
 </figure>
 </div>
-<section id="markdown-support" class="level4">
-<h4 class="anchored" data-anchor-id="markdown-support">markdown support</h4>
+<section id="markdown-support" class="level3">
+<h3 class="anchored" data-anchor-id="markdown-support">Markdown Support</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb1-1">Task X #blogging 2h @work</span></code></pre></div></div>
 <p>This is converted into task X with tag blogging and 2 hours estimated in the Project <strong>Work</strong> very cool.</p>
 </section>
-<section id="custom-backgrounds" class="level4">
-<h4 class="anchored" data-anchor-id="custom-backgrounds">custom backgrounds</h4>
+<section id="custom-backgrounds" class="level3">
+<h3 class="anchored" data-anchor-id="custom-backgrounds">Custom Backgrounds</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109194640.png" class="img-fluid figure-img"></p>
@@ -2474,8 +2485,8 @@ font-style: inherit;">return</span> response.json()</span></code></pre></div></d
 </div>
 </section>
 </section>
-<section id="super-productivity-vs-todoist" class="level3">
-<h3 class="anchored" data-anchor-id="super-productivity-vs-todoist">Super Productivity vs Todoist</h3>
+<section id="super-productivity-vs-todoist" class="level2">
+<h2 class="anchored" data-anchor-id="super-productivity-vs-todoist">Super Productivity vs Todoist</h2>
 <p>I switched from Todoist after using it for about a year. Here’s the honest comparison:</p>
 <table class="caption-top table">
 <thead>
@@ -2526,27 +2537,50 @@ font-style: inherit;">return</span> response.json()</span></code></pre></div></d
 <p><strong>Bottom line</strong>: if you work solo and care about time tracking, offline access, or don’t want a subscription — Super Productivity wins. Todoist is better if you need team collaboration or a more polished mobile experience.</p>
 <hr>
 </section>
-<section id="is-super-productivity-completely-free" class="level3">
-<h3 class="anchored" data-anchor-id="is-super-productivity-completely-free">Is Super Productivity Completely Free?</h3>
+<section id="is-super-productivity-completely-free" class="level2">
+<h2 class="anchored" data-anchor-id="is-super-productivity-completely-free">Is Super Productivity Completely Free?</h2>
 <p><strong>Yes.</strong> Completely free, no ads, no premium tier, no data collection. It’s fully open source (<a href="https://github.com/johannesjo/super-productivity">GitHub</a>). You can use every single feature without paying anything — ever.</p>
 <hr>
 </section>
-<section id="what-i-dont-like" class="level3">
-<h3 class="anchored" data-anchor-id="what-i-dont-like">What I Don’t Like</h3>
+<section id="what-i-dont-like" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-dont-like">What I Don’t Like</h2>
 <ol type="1">
 <li><strong>Dated icons</strong>: the icons are old and search for specific one hard <img src="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109193215.png" class="img-fluid" alt="Super Productivity Dated Icons"></li>
 <li><strong>No Gantt chart</strong>: would help for longer projects</li>
 <li><strong>Sync conflicts</strong>: when using two devices simultaneously, it asks which data to keep. Apps like TickTick handle this more smoothly. I wish there was smarter merging.</li>
 </ol>
 </section>
-<section id="final-thoughts" class="level3">
-<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<section id="faq-super-productivity" class="level2">
+<h2 class="anchored" data-anchor-id="faq-super-productivity">FAQ: Super Productivity</h2>
+<section id="is-super-productivity-really-free" class="level3">
+<h3 class="anchored" data-anchor-id="is-super-productivity-really-free">Is Super Productivity really free?</h3>
+<p>Yes. Completely free, no ads, no premium tier, no data collection. It’s fully open source (<a href="https://github.com/johannesjo/super-productivity">GitHub</a>). You can use every single feature without paying anything — ever.</p>
+</section>
+<section id="does-super-productivity-work-offline" class="level3">
+<h3 class="anchored" data-anchor-id="does-super-productivity-work-offline">Does Super Productivity work offline?</h3>
+<p>Yes, Super Productivity works fully offline. All your data is stored locally. You can export to JSON or CSV anytime, and there is no vendor lock-in.</p>
+</section>
+<section id="can-i-sync-super-productivity-across-devices" class="level3">
+<h3 class="anchored" data-anchor-id="can-i-sync-super-productivity-across-devices">Can I sync Super Productivity across devices?</h3>
+<p>Yes, you can self-host sync via Dropbox, WebDAV, or local file sync. However, sync conflicts can occur when using two devices simultaneously. Apps like TickTick handle merging more smoothly.</p>
+</section>
+<section id="is-super-productivity-better-than-todoist" class="level3">
+<h3 class="anchored" data-anchor-id="is-super-productivity-better-than-todoist">Is Super Productivity better than Todoist?</h3>
+<p>If you work solo and care about time tracking, offline access, or don’t want a subscription — Super Productivity wins. Todoist is better if you need team collaboration or a more polished mobile experience.</p>
+</section>
+<section id="does-super-productivity-have-a-mobile-app" class="level3">
+<h3 class="anchored" data-anchor-id="does-super-productivity-have-a-mobile-app">Does Super Productivity have a mobile app?</h3>
+<p>Yes, Super Productivity has an Android app and a web version. The mobile experience is good, though not as polished as dedicated mobile-first apps like Todoist.</p>
+</section>
+</section>
+<section id="final-thoughts" class="level2">
+<h2 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h2>
 <p>There are features I still haven’t explored. The developer responds quickly and respectfully to issues.</p>
 <p>Remember this all in a free app without ads, data leakage,…etc!</p>
 <p>Give it a try: <a href="https://super-productivity.com/">super-productivity.com</a></p>
 </section>
-<section id="more-resources" class="level3">
-<h3 class="anchored" data-anchor-id="more-resources">More Resources</h3>
+<section id="more-resources" class="level2">
+<h2 class="anchored" data-anchor-id="more-resources">More Resources</h2>
 <p>If you’re interested in more tool reviews or my journey in AI, check out these posts:</p>
 <ol type="1">
 <li><a href="https://kareemai.com/blog/posts/life_style/back_to_rss.html">Getting back to RSS</a></li>
@@ -2556,7 +2590,6 @@ font-style: inherit;">return</span> response.json()</span></code></pre></div></d
 <p>You can also explore my <a href="../../../papers.html">Research Papers</a> or see my <a href="../../../oss/opensource.html">Open Source Projects</a>.</p>
 
 
-</section>
 </section>
 
  ]]></description>
@@ -8482,11 +8515,46 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
 <p>Would I buy it again? Yes. Despite the software frustrations and the lack of SIM support, this tablet does exactly what I needed: a fast, lightweight, long-lasting secondary device for work that didn’t cost iPad money. The Snapdragon 8 Elite performance, massive battery, and beautiful display make it worth every compromise.</p>
 <p>The OnePlus Pad 3 isn’t perfect, but it’s the best value Android tablet for productivity work in 2025. Just budget for the accessories and prepare yourself for a rough software experience.</p>
 <p><strong>Rating: 9/10</strong> — Exceptional hardware held back by rough software, but still the best value in its class.</p>
+</section>
+<section id="faq-oneplus-pad-3" class="level2">
+<h2 class="anchored" data-anchor-id="faq-oneplus-pad-3">FAQ: OnePlus Pad 3</h2>
+<section id="is-the-oneplus-pad-3-good-for-coding-and-programming" class="level3">
+<h3 class="anchored" data-anchor-id="is-the-oneplus-pad-3-good-for-coding-and-programming">Is the OnePlus Pad 3 good for coding and programming?</h3>
+<p>Yes, the OnePlus Pad 3 is excellent for coding. The Snapdragon 8 Elite handles VS Code, SSH clients, and remote development smoothly. The 13.2-inch 3.4K display gives you enough screen real estate for actual work.</p>
+</section>
+<section id="does-oneplus-pad-3-support-a-sim-card" class="level3">
+<h3 class="anchored" data-anchor-id="does-oneplus-pad-3-support-a-sim-card">Does OnePlus Pad 3 support a SIM card?</h3>
+<p>No, the OnePlus Pad 3 is Wi-Fi only. There is no SIM card support or cellular connectivity.</p>
+</section>
+<section id="how-long-does-the-oneplus-pad-3-battery-last" class="level3">
+<h3 class="anchored" data-anchor-id="how-long-does-the-oneplus-pad-3-battery-last">How long does the OnePlus Pad 3 battery last?</h3>
+<p>The 12,140mAh battery easily lasts 2 days of moderate use. OnePlus claims up to 18 hours of video playback. For active work — coding, browsing, note-taking — you can get through a full day without charging.</p>
+</section>
+<section id="is-oneplus-pad-3-better-than-ipad" class="level3">
+<h3 class="anchored" data-anchor-id="is-oneplus-pad-3-better-than-ipad">Is OnePlus Pad 3 better than iPad?</h3>
+<p>For raw specs and value, yes. The OnePlus Pad 3 has a better display (13.2-inch 3.4K 144Hz vs 10.9-inch 60Hz), larger battery, faster charging, and more speakers. However, iPad has better software polish and ecosystem integration.</p>
+</section>
+<section id="does-oneplus-pad-3-come-with-a-stylus-and-keyboard" class="level3">
+<h3 class="anchored" data-anchor-id="does-oneplus-pad-3-come-with-a-stylus-and-keyboard">Does OnePlus Pad 3 come with a stylus and keyboard?</h3>
+<p>No.&nbsp;The tablet comes with just the device and a USB cable. The Stylo 2 stylus and Smart Keyboard are sold separately.</p>
+</section>
+<section id="what-are-the-disadvantages-of-oneplus-pad-3" class="level3">
+<h3 class="anchored" data-anchor-id="what-are-the-disadvantages-of-oneplus-pad-3">What are the disadvantages of OnePlus Pad 3?</h3>
+<p>The main disadvantages are buggy system updates, unfinished stock software, no cellular support, and accessories that cost extra. The software experience is the biggest weakness.</p>
+</section>
+</section>
+<section id="related-reviews" class="level2">
+<h2 class="anchored" data-anchor-id="related-reviews">Related Reviews</h2>
+<ul>
+<li><a href="../../../blog/posts/products_reviews/Huawei_mate_pad_11.html">Huawei MatePad 11 Review</a> — One year later: the good and the bad</li>
+<li><a href="../../../blog/posts/products_reviews/Huawei_watch_gt_4_experience.html">Huawei Watch GT 4 Review</a> — GPS, sleep tracking, and 14-day battery life</li>
+<li><a href="../../../blog/posts/products_reviews/Huawei freebuds 7i.html">Huawei FreeBuds 7i Review</a> — Best budget wireless earbuds for calls?</li>
+</ul>
 <section id="references" class="level3">
 <h3 class="anchored" data-anchor-id="references">References</h3>
 <ol type="1">
-<li><a href="https://whatsapp.com/channel/0029VbC3Vu68PgsB7BxcX42z">All One plus news and reviwes</a></li>
-<li><a href="https://kareemai.com/blog/posts/products_reviews/Huawei%20freebuds%207i.html">huawei freebuds 7i Review</a></li>
+<li><a href="https://whatsapp.com/channel/0029VbC3Vu68PgsB7BxcX42z">All OnePlus news and reviews</a></li>
+<li><a href="https://kareemai.com/blog/posts/products_reviews/Huawei%20freebuds%207i.html">Huawei FreeBuds 7i Review</a></li>
 </ol>
 
 
@@ -8677,13 +8745,32 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
 <li>Are satisfied with current ANC performance</li>
 <li>Want slightly lighter earbuds (4.9g vs 5.4g)</li>
 </ul>
-<section id="common-questions-about-freebuds-7i" class="level3">
-<h3 class="anchored" data-anchor-id="common-questions-about-freebuds-7i"><strong>Common Questions About FreeBuds 7i</strong></h3>
-<p><strong>Q: Do FreeBuds 7i work with iPhone?</strong> Yes, they work with any Bluetooth device including iPhones. Download the AI Life app for iOS to access advanced features.</p>
-<p><strong>Q: How is the microphone quality for calls?</strong> Excellent. The bone conduction mic combined with AI noise cancellation delivers clear voice quality even in noisy environments up to 90 dB.</p>
-<p><strong>Q: Can I use just one earbud?</strong> Yes, both earbuds work independently. You can use either the left or right earbud alone.</p>
-<p><strong>Q: Are they good for working out?</strong> Yes, the IP54 rating makes them dust-tight and splash-resistant. Just wipe them dry after workouts.</p>
-<p><strong>Q: How’s the latency for gaming?</strong> The Bluetooth 5.4 connection provides low latency suitable for casual mobile gaming, though dedicated gaming earbuds might perform better for competitive play.</p>
+</section>
+<section id="faq-huawei-freebuds-7i" class="level2">
+<h2 class="anchored" data-anchor-id="faq-huawei-freebuds-7i">FAQ: Huawei FreeBuds 7i</h2>
+<section id="do-freebuds-7i-work-with-iphone" class="level3">
+<h3 class="anchored" data-anchor-id="do-freebuds-7i-work-with-iphone">Do FreeBuds 7i work with iPhone?</h3>
+<p>Yes, they work with any Bluetooth device including iPhones. Download the AI Life app for iOS to access advanced features like EQ customization and firmware updates.</p>
+</section>
+<section id="how-is-the-microphone-quality-for-calls" class="level3">
+<h3 class="anchored" data-anchor-id="how-is-the-microphone-quality-for-calls">How is the microphone quality for calls?</h3>
+<p>Excellent. The bone conduction mic combined with AI noise cancellation delivers clear voice quality even in noisy environments up to 90 dB. My colleagues noticed the improvement immediately on the first day of use.</p>
+</section>
+<section id="can-i-use-just-one-earbud" class="level3">
+<h3 class="anchored" data-anchor-id="can-i-use-just-one-earbud">Can I use just one earbud?</h3>
+<p>Yes, both earbuds work independently. You can use either the left or right earbud alone.</p>
+</section>
+<section id="are-they-good-for-working-out" class="level3">
+<h3 class="anchored" data-anchor-id="are-they-good-for-working-out">Are they good for working out?</h3>
+<p>Yes, the IP54 rating makes them dust-tight and splash-resistant. Just wipe them dry after workouts.</p>
+</section>
+<section id="hows-the-latency-for-gaming" class="level3">
+<h3 class="anchored" data-anchor-id="hows-the-latency-for-gaming">How’s the latency for gaming?</h3>
+<p>The Bluetooth 5.4 connection provides low latency suitable for casual mobile gaming, though dedicated gaming earbuds might perform better for competitive play.</p>
+</section>
+<section id="is-freebuds-7i-worth-upgrading-from-5i" class="level3">
+<h3 class="anchored" data-anchor-id="is-freebuds-7i-worth-upgrading-from-5i">Is FreeBuds 7i worth upgrading from 5i?</h3>
+<p>If you do video calls, need better ANC, or want faster charging — yes. If you only listen to music casually and are happy with the 5i, the upgrade is less urgent.</p>
 </section>
 </section>
 <section id="final-verdict-is-the-freebuds-7i-worth-it" class="level2">
@@ -8712,12 +8799,21 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
 <p>If you do video calls or need excellent ANC, the FreeBuds 7i is worth every penny. If you only listen to music casually, the 5i is still a great choice.</p>
 <p>If you want to see more review you can join the <a href="https://whatsapp.com/channel/0029Vb6c2NK77qVIcdILrb3U">Channel</a></p>
 </section>
-<section id="refernces" class="level2">
-<h2 class="anchored" data-anchor-id="refernces">Refernces</h2>
+<section id="related-reviews" class="level2">
+<h2 class="anchored" data-anchor-id="related-reviews">Related Reviews</h2>
+<ul>
+<li><a href="../../../blog/posts/products_reviews/Huawei freebuds 5i.html">Huawei FreeBuds 5i Review</a> — 2 months of daily use</li>
+<li><a href="../../../blog/posts/products_reviews/Huawei_mate_pad_11.html">Huawei MatePad 11 Review</a> — One year later: the good and the bad</li>
+<li><a href="../../../blog/posts/products_reviews/Huawei_watch_gt_4_experience.html">Huawei Watch GT 4 Review</a> — GPS, sleep tracking, and 14-day battery life</li>
+<li><a href="../../../blog/posts/products_reviews/one_plus_pad_3.html">OnePlus Pad 3 Review</a> — Best Android tablet for productivity in 2025</li>
+</ul>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
 <p><em>See more <a href="../../../blog/posts/products_reviews">product reviews</a> on the site.</em></p>
 <ol type="1">
-<li><a href="https://kareemai.com/blog/posts/products_reviews/Huawei%20freebuds%205i.html">Huawei Freebuds 5i Review</a></li>
-<li><a href="https://consumer.huawei.com/eg/headphones/freebuds7i/">Huawei Freebuds Official site</a></li>
+<li><a href="https://kareemai.com/blog/posts/products_reviews/Huawei%20freebuds%205i.html">Huawei FreeBuds 5i Review</a></li>
+<li><a href="https://consumer.huawei.com/eg/headphones/freebuds7i/">Huawei FreeBuds Official Site</a></li>
 </ol>
 
 
@@ -9226,7 +9322,8 @@ font-style: inherit;">"float16"</span>,</span>
 
 
 
-<p>Hi! These are my thoughts on digital minimalism and staying ahead in AI without burning out.</p>
+<p>As an AI engineer and researcher, I consume a lot of information — papers, blog posts, Twitter threads, Discord discussions. Over time, this turned into a constant state of distraction. I couldn’t finish projects because I was always “keeping up.”</p>
+<p>This post explains why I moved back to RSS, stopped using social media for professional updates, and how digital minimalism helps me stay productive without burning out.</p>
 <section id="the-flood-of-information" class="level2">
 <h2 class="anchored" data-anchor-id="the-flood-of-information">The Flood of Information</h2>
 <p>I use <a href="https://github.com/yang991178/fluent-reader">Fluent Reader</a> to keep track of the feeds I love, covering topics like machine learning (ML), life, and more. <img src="https://kareemai.com/blog/posts/life_style/images/vision_read.png" class="img-fluid" alt="Fluent Reader"></p>
@@ -9281,6 +9378,37 @@ Media Manager</code></pre>
 <p>Want to find me? Visit my customized space at kareeai.com.</p>
 <p>All my love,</p>
 <p>Kareem</p>
+</section>
+<section id="faq-digital-minimalism-for-developers" class="level2">
+<h2 class="anchored" data-anchor-id="faq-digital-minimalism-for-developers">FAQ: Digital Minimalism for Developers</h2>
+<section id="what-is-digital-minimalism" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-digital-minimalism">What is digital minimalism?</h3>
+<p>Digital minimalism is a philosophy of using technology intentionally rather than habitually. It means keeping the tools that add real value and removing the ones that fragment your attention — like infinite-scroll social media feeds.</p>
+</section>
+<section id="is-rss-still-useful-in-2025" class="level3">
+<h3 class="anchored" data-anchor-id="is-rss-still-useful-in-2025">Is RSS still useful in 2025?</h3>
+<p>Yes. RSS is the best way to follow specific sources without algorithms deciding what you see. Tools like <a href="https://github.com/yang991178/fluent-reader">Fluent Reader</a> and <a href="https://feedly.com/">Feedly</a> make RSS modern and usable. You can even follow YouTube channels via RSS.</p>
+</section>
+<section id="how-do-i-follow-ai-research-without-twitter" class="level3">
+<h3 class="anchored" data-anchor-id="how-do-i-follow-ai-research-without-twitter">How do I follow AI research without Twitter?</h3>
+<p>Use RSS feeds from sources like <a href="https://www.answer.ai/">Answer.AI</a>, <a href="https://huggingface.co/blog">Hugging Face Blog</a>, <a href="https://paperswithcode.com/">Papers with Code</a>, and individual researchers’ blogs. Join focused Discord servers for discussions.</p>
+</section>
+<section id="does-deleting-social-media-hurt-your-career" class="level3">
+<h3 class="anchored" data-anchor-id="does-deleting-social-media-hurt-your-career">Does deleting social media hurt your career?</h3>
+<p>Not in my experience. I landed two jobs through friend referrals and open-source connections — not LinkedIn. A strong GitHub profile and Hugging Face presence matter more than a polished LinkedIn profile for technical roles.</p>
+</section>
+<section id="what-rss-reader-should-i-use" class="level3">
+<h3 class="anchored" data-anchor-id="what-rss-reader-should-i-use">What RSS reader should I use?</h3>
+<p>I use <a href="https://github.com/yang991178/fluent-reader">Fluent Reader</a> on desktop and mobile. It’s open source, fast, and supports syncing across devices. Other good options include Feedly, Inoreader, and NetNewsWire (Mac/iOS).</p>
+</section>
+</section>
+<section id="related-posts" class="level2">
+<h2 class="anchored" data-anchor-id="related-posts">Related Posts</h2>
+<ul>
+<li><a href="../../../blog/posts/tools_reviews/super_productivity_app.html">Super Productivity Review</a> — The free open-source task manager I use to stay organized</li>
+<li><a href="../../../blog/posts/seo/how_i_use_nlp_for_seo.html">How I Use NLP for SEO</a> — Automating content optimization with Python</li>
+<li><a href="../../../blog/posts/products_reviews/Huawei_watch_gt_4_experience.html">Huawei Watch GT 4 Review</a> — Long-term review of a distraction-free smartwatch</li>
+</ul>
 <hr>
 <section id="internal-resources" class="level3">
 <h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
@@ -9355,9 +9483,184 @@ Media Manager</code></pre>
 <li><a href="../../../til/index.qmd">Today I Learned: AI Engineering Notes</a></li>
 <li><a href="../../feed.qmd">Arabic NLP Blog Posts</a></li>
 </ul>
-
-
 </section>
+</section>
+<section id="practical-example-using-colbert-with-pylate" class="level2">
+<h2 class="anchored" data-anchor-id="practical-example-using-colbert-with-pylate">Practical Example: Using ColBERT with PyLate</h2>
+<p>Here’s how to use a late interaction model for retrieval in Python:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> pylate <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> ColBERT, Indexes, retrieve</span>
+<span id="cb1-2"></span>
+<span id="cb1-3"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Load a pre-trained ColBERT model</span></span>
+<span id="cb1-4">model <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> ColBERT(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"lightonai/colbertv2"</span>)</span>
+<span id="cb1-5"></span>
+<span id="cb1-6"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Encode documents into token-level embeddings</span></span>
+<span id="cb1-7">documents <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [</span>
+<span id="cb1-8">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Late interaction models store a vector per token instead of one per document."</span>,</span>
+<span id="cb1-9">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Bi-encoders compress documents into a single vector for fast retrieval."</span>,</span>
+<span id="cb1-10">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Cross-encoders process query and document together for higher accuracy."</span></span>
+<span id="cb1-11">]</span>
+<span id="cb1-12"></span>
+<span id="cb1-13">document_embeddings <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> model.encode(documents, convert_to_tensor<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span>)</span>
+<span id="cb1-14"></span>
+<span id="cb1-15"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Build an index for fast retrieval</span></span>
+<span id="cb1-16">index <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> Indexes.FlatIndex()</span>
+<span id="cb1-17">index.add_documents(document_embeddings, documents<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>documents)</span>
+<span id="cb1-18"></span>
+<span id="cb1-19"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Encode the query</span></span>
+<span id="cb1-20">query <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"What is the difference between bi-encoders and cross-encoders?"</span></span>
+<span id="cb1-21">query_embedding <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> model.encode([query], convert_to_tensor<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span>)</span>
+<span id="cb1-22"></span>
+<span id="cb1-23"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Retrieve top-k results</span></span>
+<span id="cb1-24">results <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> index.search(query_embedding, k<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>)</span>
+<span id="cb1-25"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> doc, score <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> results:</span>
+<span id="cb1-26">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>score<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:.3f}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">: </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>doc<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span></code></pre></div></div>
+<section id="performance-comparison" class="level3">
+<h3 class="anchored" data-anchor-id="performance-comparison">Performance Comparison</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Model Type</th>
+<th>Speed</th>
+<th>Accuracy</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Bi-Encoder</td>
+<td>Fastest (~1ms/query)</td>
+<td>Good</td>
+<td>Initial retrieval, large-scale search</td>
+</tr>
+<tr class="even">
+<td>Cross-Encoder</td>
+<td>Slowest (~100ms/pair)</td>
+<td>Best</td>
+<td>Re-ranking top results</td>
+</tr>
+<tr class="odd">
+<td>Late Interaction</td>
+<td>Fast (~10ms/query)</td>
+<td>Very Good</td>
+<td>High-accuracy retrieval at scale</td>
+</tr>
+</tbody>
+</table>
+<p>Late interaction gives you 90% of cross-encoder accuracy with 10% of the computational cost.</p>
+</section>
+</section>
+<section id="faq-late-interaction-models" class="level2">
+<h2 class="anchored" data-anchor-id="faq-late-interaction-models">FAQ: Late Interaction Models</h2>
+<section id="what-is-late-interaction-in-nlp" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-late-interaction-in-nlp">What is late interaction in NLP?</h3>
+<p>Late interaction is a retrieval technique where query and document tokens interact at query time rather than during encoding. Models like ColBERT store token-level embeddings for documents and compute similarity using MaxSim operations when a query arrives.</p>
+</section>
+<section id="is-colbert-better-than-standard-embeddings" class="level3">
+<h3 class="anchored" data-anchor-id="is-colbert-better-than-standard-embeddings">Is ColBERT better than standard embeddings?</h3>
+<p>For retrieval tasks requiring fine-grained matching, yes. ColBERT outperforms bi-encoders on most benchmarks while being much faster than cross-encoders. However, it requires more storage since you store one vector per token instead of one per document.</p>
+</section>
+<section id="what-is-colpali" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-colpali">What is ColPali?</h3>
+<p>ColPali applies late interaction to vision-language models for document retrieval. Instead of extracting text from PDFs via OCR, it processes page images directly and matches query tokens to visual patches. This handles tables, charts, and complex layouts better than text-based retrieval.</p>
+</section>
+<section id="how-much-storage-do-late-interaction-models-need" class="level3">
+<h3 class="anchored" data-anchor-id="how-much-storage-do-late-interaction-models-need">How much storage do late interaction models need?</h3>
+<p>Storage is higher than bi-encoders because you store vectors for every token. A 512-token document needs 512 vectors instead of 1. Compression techniques like PLAID indexing and quantization reduce this overhead significantly.</p>
+</section>
+<section id="when-should-i-use-late-interaction-vs.-bi-encoders" class="level3">
+<h3 class="anchored" data-anchor-id="when-should-i-use-late-interaction-vs.-bi-encoders">When should I use late interaction vs.&nbsp;bi-encoders?</h3>
+<p>Use late interaction when retrieval quality is critical and you can afford the extra storage. Use bi-encoders for very large-scale search where speed and storage efficiency matter most. A common hybrid approach: bi-encoder for initial retrieval, late interaction for re-ranking.</p>
+</section>
+</section>
+<section id="related-posts" class="level2">
+<h2 class="anchored" data-anchor-id="related-posts">Related Posts</h2>
+<ul>
+<li><a href="../../../../blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html">BM25 Benchmarking</a> — Comparing sparse retrieval methods</li>
+<li><a href="../../../../blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html">MTEB Benchmark Explained</a> — How embedding models are evaluated</li>
+<li><a href="../../../../blog/posts/mteb_encoding/tiny-gte_transformer_model.html">Tiny-GTE Transformer Model</a> — Efficient transformer architecture for embeddings</li>
+</ul>
+
+
 </section>
 
  ]]></description>

@@ -8,7 +8,7 @@
 
 <meta name="author" content="Kareem Elkhateb">
 <meta name="dcterms.date" content="2023-07-18">
-<meta name="description" content="Use NLP and Python to boost SEO with keyword integration, content analysis, trend prediction and semantic SEO.">
+<meta name="description" content="A practical guide to using Python and NLP for SEO automation. Covers Google Search Console API, keyword extraction, content gap analysis, and semantic search for real websites.">
 
 <title>How I Use NLP to Improve Website SEO: A Practical Guide – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
 <style>
@@ -25,6 +25,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -89,12 +124,12 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 <style>html{ scroll-behavior: smooth; }</style>
 <!-- Fonts are embedded locally via shimmering-fonts.css -->
 <meta property="og:title" content="How I Use NLP to Improve Website SEO: A Practical Guide – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
-<meta property="og:description" content="Use NLP and Python to boost SEO with keyword integration, content analysis, trend prediction and semantic SEO.">
+<meta property="og:description" content="A practical guide to using Python and NLP for SEO automation. Covers Google Search Console API, keyword extraction, content gap analysis, and semantic search for real websites.">
 <meta property="og:image" content="https://kareemai.com/blog/posts/seo/images/seo_rat.jpeg">
 <meta property="og:site_name" content="عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:title" content="How I Use NLP to Improve Website SEO: A Practical Guide – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
-<meta name="twitter:description" content="Use NLP and Python to boost SEO with keyword integration, content analysis, trend prediction and semantic SEO.">
+<meta name="twitter:description" content="A practical guide to using Python and NLP for SEO automation. Covers Google Search Console API, keyword extraction, content gap analysis, and semantic search for real websites.">
 <meta name="twitter:image" content="https://kareemai.com/blog/posts/seo/images/seo_rat.jpeg">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary_large_image">
@@ -278,7 +313,7 @@ window.addEventListener('scroll', () => {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "How I Use NLP to Improve Website SEO: A Practical Guide",
-  "description": "Use NLP and Python to boost SEO with keyword integration, content analysis, trend prediction and semantic SEO.",
+  "description": "A practical guide to using Python and NLP for SEO automation. Covers Google Search Console API, keyword extraction, content gap analysis, and semantic search for real websites.",
   "author": {"@type": "Person", "name": "Kareem Elkhateb"},
   "datePublished": "July 18, 2023",
   "publisher": {
@@ -380,18 +415,29 @@ window.addEventListener('scroll', () => {
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#understanding-the-landscape" id="toc-understanding-the-landscape" class="nav-link active" data-scroll-target="#understanding-the-landscape">Understanding the Landscape</a></li>
-  <li><a href="#daily-downloads-and-keyword-integration" id="toc-daily-downloads-and-keyword-integration" class="nav-link" data-scroll-target="#daily-downloads-and-keyword-integration">1. Daily Downloads and Keyword Integration</a></li>
-  <li><a href="#content-analysis-and-optimization" id="toc-content-analysis-and-optimization" class="nav-link" data-scroll-target="#content-analysis-and-optimization">2. Content Analysis and Optimization</a></li>
-  <li><a href="#predictive-analytics-and-trend-spotting" id="toc-predictive-analytics-and-trend-spotting" class="nav-link" data-scroll-target="#predictive-analytics-and-trend-spotting">3. Predictive Analytics and Trend Spotting</a></li>
-  <li><a href="#semantic-and-exact-match-integration" id="toc-semantic-and-exact-match-integration" class="nav-link" data-scroll-target="#semantic-and-exact-match-integration">4. Semantic and Exact Match Integration</a></li>
-  <li><a href="#leveling-up-the-game" id="toc-leveling-up-the-game" class="nav-link" data-scroll-target="#leveling-up-the-game">Leveling Up the Game</a>
+  <li><a href="#why-nlp-for-seo" id="toc-why-nlp-for-seo" class="nav-link active" data-scroll-target="#why-nlp-for-seo">Why NLP for SEO?</a></li>
+  <li><a href="#the-workflow" id="toc-the-workflow" class="nav-link" data-scroll-target="#the-workflow">The Workflow</a>
   <ul class="collapse">
-  <li><a href="#level-1" id="toc-level-1" class="nav-link" data-scroll-target="#level-1">Level 1:</a></li>
-  <li><a href="#level-2" id="toc-level-2" class="nav-link" data-scroll-target="#level-2">Level 2:</a></li>
-  <li><a href="#level-3" id="toc-level-3" class="nav-link" data-scroll-target="#level-3">Level 3:</a></li>
-  <li><a href="#level-4" id="toc-level-4" class="nav-link" data-scroll-target="#level-4">Level 4:</a></li>
+  <li><a href="#step-1-download-search-console-data" id="toc-step-1-download-search-console-data" class="nav-link" data-scroll-target="#step-1-download-search-console-data">Step 1: Download Search Console Data</a></li>
+  <li><a href="#step-2-extract-keywords-and-topics" id="toc-step-2-extract-keywords-and-topics" class="nav-link" data-scroll-target="#step-2-extract-keywords-and-topics">Step 2: Extract Keywords and Topics</a></li>
+  <li><a href="#step-3-find-content-gaps" id="toc-step-3-find-content-gaps" class="nav-link" data-scroll-target="#step-3-find-content-gaps">Step 3: Find Content Gaps</a></li>
+  <li><a href="#step-4-semantic-keyword-clustering" id="toc-step-4-semantic-keyword-clustering" class="nav-link" data-scroll-target="#step-4-semantic-keyword-clustering">Step 4: Semantic Keyword Clustering</a></li>
+  <li><a href="#step-5-optimize-page-content" id="toc-step-5-optimize-page-content" class="nav-link" data-scroll-target="#step-5-optimize-page-content">Step 5: Optimize Page Content</a></li>
   </ul></li>
+  <li><a href="#real-results" id="toc-real-results" class="nav-link" data-scroll-target="#real-results">Real Results</a>
+  <ul class="collapse">
+  <li><a href="#what-changed" id="toc-what-changed" class="nav-link" data-scroll-target="#what-changed">What Changed</a></li>
+  </ul></li>
+  <li><a href="#tools-i-use" id="toc-tools-i-use" class="nav-link" data-scroll-target="#tools-i-use">Tools I Use</a></li>
+  <li><a href="#faq-nlp-for-seo" id="toc-faq-nlp-for-seo" class="nav-link" data-scroll-target="#faq-nlp-for-seo">FAQ: NLP for SEO</a>
+  <ul class="collapse">
+  <li><a href="#can-nlp-really-improve-seo-rankings" id="toc-can-nlp-really-improve-seo-rankings" class="nav-link" data-scroll-target="#can-nlp-really-improve-seo-rankings">Can NLP really improve SEO rankings?</a></li>
+  <li><a href="#do-i-need-to-know-python-to-use-nlp-for-seo" id="toc-do-i-need-to-know-python-to-use-nlp-for-seo" class="nav-link" data-scroll-target="#do-i-need-to-know-python-to-use-nlp-for-seo">Do I need to know Python to use NLP for SEO?</a></li>
+  <li><a href="#what-is-semantic-seo" id="toc-what-is-semantic-seo" class="nav-link" data-scroll-target="#what-is-semantic-seo">What is semantic SEO?</a></li>
+  <li><a href="#how-often-should-i-run-this-analysis" id="toc-how-often-should-i-run-this-analysis" class="nav-link" data-scroll-target="#how-often-should-i-run-this-analysis">How often should I run this analysis?</a></li>
+  <li><a href="#which-embedding-model-should-i-use-for-semantic-analysis" id="toc-which-embedding-model-should-i-use-for-semantic-analysis" class="nav-link" data-scroll-target="#which-embedding-model-should-i-use-for-semantic-analysis">Which embedding model should I use for semantic analysis?</a></li>
+  </ul></li>
+  <li><a href="#leveling-up" id="toc-leveling-up" class="nav-link" data-scroll-target="#leveling-up">Leveling Up</a></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
@@ -413,7 +459,7 @@ window.addEventListener('scroll', () => {
 
 <div>
   <div class="description">
-    Use NLP and Python to boost SEO with keyword integration, content analysis, trend prediction and semantic SEO.
+    A practical guide to using Python and NLP for SEO automation. Covers Google Search Console API, keyword extraction, content gap analysis, and semantic search for real websites.
   </div>
 </div>
 
@@ -442,70 +488,202 @@ window.addEventListener('scroll', () => {
 </header>
 
 
-<p><strong>Unlocking SEO Potential with NLP: A Journey of Website Optimization</strong></p>
-<p>In the vast digital landscape, the visibility of a website amidst the sea of search results can make or break its success. Search Engine Optimization (SEO) stands as the beacon guiding businesses towards the shores of higher visibility and traffic. As the digital realm evolves, so do the strategies employed to enhance SEO. One such frontier that holds immense promise is the integration of Natural Language Processing (NLP) into SEO practices. This guide focuses on using Python for NLP and semantic SEO – typical examples of applying NLP for SEO so you can mine keyword ideas and optimize content around actual queries.</p>
-<section id="understanding-the-landscape" class="level2">
-<h2 class="anchored" data-anchor-id="understanding-the-landscape">Understanding the Landscape</h2>
-<p>SEO isn’t just about optimizing keywords anymore; it’s about understanding user intent, predicting trends, and delivering value-rich content. Harnessing the power of NLP, we embark on a journey to revolutionize SEO practices for our websites. Here’s how we’re leveraging NLP to bolster our SEO efforts:</p>
+<p><strong>Using Python and NLP to automate SEO analysis, find content gaps, and improve rankings for real websites.</strong></p>
+<p>This guide shows the exact workflow I use to optimize landing pages for local service businesses and content sites. No fluff — just Python code, real data, and measurable results.</p>
+<section id="why-nlp-for-seo" class="level2">
+<h2 class="anchored" data-anchor-id="why-nlp-for-seo">Why NLP for SEO?</h2>
+<p>Search engines now understand intent, not just keywords. Writing “best plumber Cairo” 20 times no longer works. You need to cover topics comprehensively, answer related questions, and match the semantic intent behind queries.</p>
+<p>NLP helps you:</p>
+<ol type="1">
+<li><strong>Mine real queries</strong> from Google Search Console that your pages already rank for</li>
+<li><strong>Find content gaps</strong> — queries you appear for but don’t explicitly answer</li>
+<li><strong>Analyze competitor content</strong> to see what topics they cover that you don’t</li>
+<li><strong>Measure semantic similarity</strong> between your content and top-ranking pages</li>
+</ol>
 </section>
-<section id="daily-downloads-and-keyword-integration" class="level2">
-<h2 class="anchored" data-anchor-id="daily-downloads-and-keyword-integration">1. Daily Downloads and Keyword Integration</h2>
-<p>We kickstart our journey by integrating Google Search Console into our workflow. By fetching daily downloads of our top queries, we gain invaluable insights into user behavior and preferences. These queries are seamlessly integrated into a specific folder, forming the backbone of our content optimization strategy.</p>
+<section id="the-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="the-workflow">The Workflow</h2>
+<section id="step-1-download-search-console-data" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-download-search-console-data">Step 1: Download Search Console Data</h3>
+<p>I fetch daily query data via the Google Search Console API. This gives me the actual terms people use to find my sites.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> googleapiclient.discovery <span class="im">import</span> build</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.oauth2 <span class="im">import</span> service_account</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_gsc_queries(site_url, days<span class="op">=</span><span class="dv">28</span>):</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    credentials <span class="op">=</span> service_account.Credentials.from_service_account_file(</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">'gsc-credentials.json'</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        scopes<span class="op">=</span>[<span class="st">'https://www.googleapis.com/auth/webmasters.readonly'</span>]</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    service <span class="op">=</span> build(<span class="st">'webmasters'</span>, <span class="st">'v3'</span>, credentials<span class="op">=</span>credentials)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    request <span class="op">=</span> {</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="st">'startDate'</span>: (datetime.now() <span class="op">-</span> timedelta(days<span class="op">=</span>days)).strftime(<span class="st">'%Y-%m-</span><span class="sc">%d</span><span class="st">'</span>),</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        <span class="st">'endDate'</span>: datetime.now().strftime(<span class="st">'%Y-%m-</span><span class="sc">%d</span><span class="st">'</span>),</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        <span class="st">'dimensions'</span>: [<span class="st">'query'</span>, <span class="st">'page'</span>],</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        <span class="st">'rowLimit'</span>: <span class="dv">25000</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    response <span class="op">=</span> service.searchanalytics().query(siteUrl<span class="op">=</span>site_url, body<span class="op">=</span>request).execute()</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> response.get(<span class="st">'rows'</span>, [])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="content-analysis-and-optimization" class="level2">
-<h2 class="anchored" data-anchor-id="content-analysis-and-optimization">2. Content Analysis and Optimization</h2>
-<p>NLP comes into play as we meticulously analyze our content to ensure alignment with the top queries identified. By leveraging NLP techniques, we ascertain the presence of these keywords within our content, ensuring relevance and resonance with our audience’s search intent.</p>
+<section id="step-2-extract-keywords-and-topics" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-extract-keywords-and-topics">Step 2: Extract Keywords and Topics</h3>
+<p>Once I have the query list, I use NLP to group them by topic and identify patterns.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> spacy</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> collections <span class="im">import</span> Counter</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>nlp <span class="op">=</span> spacy.load(<span class="st">'en_core_web_sm'</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> extract_topics(queries, min_freq<span class="op">=</span><span class="dv">3</span>):</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Extract noun phrases and entities from search queries."""</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    topics <span class="op">=</span> Counter()</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> query <span class="kw">in</span> queries:</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        doc <span class="op">=</span> nlp(query.lower())</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Extract noun chunks and named entities</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> chunk <span class="kw">in</span> doc.noun_chunks:</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="bu">len</span>(chunk.text.split()) <span class="op">&lt;=</span> <span class="dv">4</span>:</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>                topics[chunk.text] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {k: v <span class="cf">for</span> k, v <span class="kw">in</span> topics.items() <span class="cf">if</span> v <span class="op">&gt;=</span> min_freq}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This tells me what topics people actually search for. For example, on a cleaning services site, I discovered queries like “تنظيف فلل العين” (villa cleaning Al Ain) and “شركة تنظيف بالساعة” (hourly cleaning company) that I wasn’t targeting explicitly.</p>
 </section>
-<section id="predictive-analytics-and-trend-spotting" class="level2">
-<h2 class="anchored" data-anchor-id="predictive-analytics-and-trend-spotting">3. Predictive Analytics and Trend Spotting</h2>
-<p>Powered by NLP, we delve into the realm of predictive analytics to forecast future trends. By analyzing historical data and current patterns, we identify emerging trends and capitalize on them proactively. This enables us to stay ahead of the curve and position our content strategically to meet evolving user demands.</p>
+<section id="step-3-find-content-gaps" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-find-content-gaps">Step 3: Find Content Gaps</h3>
+<p>I compare Search Console queries against my page content to find gaps — queries where my site appears but the page doesn’t directly answer.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sentence_transformers <span class="im">import</span> SentenceTransformer</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics.pairwise <span class="im">import</span> cosine_similarity</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> SentenceTransformer(<span class="st">'all-MiniLM-L6-v2'</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_content_gaps(queries, page_content, threshold<span class="op">=</span><span class="fl">0.55</span>):</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Find queries with low semantic similarity to page content."""</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    page_embedding <span class="op">=</span> model.encode([page_content])</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    gaps <span class="op">=</span> []</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> query <span class="kw">in</span> queries:</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        query_embedding <span class="op">=</span> model.encode([query])</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>        similarity <span class="op">=</span> cosine_similarity(query_embedding, page_embedding)[<span class="dv">0</span>][<span class="dv">0</span>]</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> similarity <span class="op">&lt;</span> threshold:</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>            gaps.append((query, similarity))</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">sorted</span>(gaps, key<span class="op">=</span><span class="kw">lambda</span> x: x[<span class="dv">1</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If a query has low similarity to my page, it means my content doesn’t cover that topic well. I add an H2 section answering that specific query.</p>
 </section>
-<section id="semantic-and-exact-match-integration" class="level2">
-<h2 class="anchored" data-anchor-id="semantic-and-exact-match-integration">4. Semantic and Exact Match Integration</h2>
-<p>NLP empowers us to delve deeper into the semantics of language, enabling us to differentiate between exact matches and similar meanings. Through advanced NLP algorithms, we ensure that our content not only features exact keyword matches but also resonates with synonymous terms, enhancing its visibility across diverse search queries.</p>
+<section id="step-4-semantic-keyword-clustering" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-semantic-keyword-clustering">Step 4: Semantic Keyword Clustering</h3>
+<p>Instead of targeting single keywords, I group related queries into topic clusters using embeddings. This helps me plan content that covers entire topics comprehensively.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> KMeans</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cluster_queries(queries, n_clusters<span class="op">=</span><span class="dv">8</span>):</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Group search queries into topic clusters using embeddings."""</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    embeddings <span class="op">=</span> model.encode(queries)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    kmeans <span class="op">=</span> KMeans(n_clusters<span class="op">=</span>n_clusters, random_state<span class="op">=</span><span class="dv">42</span>, n_init<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    labels <span class="op">=</span> kmeans.fit_predict(embeddings)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    clusters <span class="op">=</span> {}</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> query, label <span class="kw">in</span> <span class="bu">zip</span>(queries, labels):</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>        clusters.setdefault(label, []).append(query)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> clusters</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>For a home services site, clusters might look like: - <strong>Cluster 0</strong>: “تنظيف منازل”, “تنظيف فلل”, “تنظيف شقق” (residential cleaning) - <strong>Cluster 1</strong>: “تنظيف كنب”, “تنظيف سجاد”, “تنظيف مكيفات” (specialized cleaning) - <strong>Cluster 2</strong>: “اسعار التنظيف”, “تكلفة تنظيف الفيلا” (pricing queries)</p>
+<p>Each cluster becomes a content section or a separate page.</p>
 </section>
-<section id="leveling-up-the-game" class="level2">
-<h2 class="anchored" data-anchor-id="leveling-up-the-game">Leveling Up the Game</h2>
-<p>As we progress on our journey of NLP-driven SEO optimization, we outline a roadmap for leveling up our capabilities:</p>
-<section id="level-1" class="level3">
-<h3 class="anchored" data-anchor-id="level-1">Level 1:</h3>
+<section id="step-5-optimize-page-content" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-optimize-page-content">Step 5: Optimize Page Content</h3>
+<p>I rewrite page sections to naturally incorporate the queries from each cluster. The key is answering the intent, not stuffing keywords.</p>
+<p>For example, if queries show people asking “كم سعر تنظيف الفيلا؟” (how much does villa cleaning cost?), I add a dedicated pricing H2 with transparent pricing tables rather than vague marketing text.</p>
+</section>
+</section>
+<section id="real-results" class="level2">
+<h2 class="anchored" data-anchor-id="real-results">Real Results</h2>
+<p>I applied this workflow to three sites:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Site</th>
+<th>Niche</th>
+<th>Key Improvement</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://www.alainclean.com/">Alain Clean</a></td>
+<td>Home cleaning Al Ain</td>
+<td>Added 6 service-specific H2s, FAQ sections, cross-links between services</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.tanorfix.com/">Tanor Fix</a></td>
+<td>Oven repair Riyadh</td>
+<td>Removed keyword stuffing, added natural service descriptions, how-it-works section</td>
+</tr>
+<tr class="odd">
+<td><a href="https://kareemai.com/">Kareem AI</a></td>
+<td>Arabic NLP blog</td>
+<td>Added FAQ sections to high-impression posts, fixed heading hierarchy, internal cross-links</td>
+</tr>
+</tbody>
+</table>
+<section id="what-changed" class="level3">
+<h3 class="anchored" data-anchor-id="what-changed">What Changed</h3>
+<p><strong>Alain Clean</strong>: Before optimization, the services page had generic descriptions. After analyzing Search Console queries, I added specific sections for “تنظيف فلل”, “تنظيف كنب”, “تنظيف بعد التشطيب” — each with unique content, pricing context, and links to related services. Internal links increased from 3 to 18 per page.</p>
+<p><strong>Tanor Fix</strong>: The original content had keyword stuffing — “صيانة افران غاز بالرياض” repeated 15+ times in unnatural ways. I rewrote all descriptions to be helpful first, using the keyword naturally 2-3 times per section. Added a “how it works” section explaining the repair process step by step.</p>
+<p><strong>Kareem AI</strong>: Search Console showed 0 CTR for high-impression pages like the Huawei MatePad 11 review. I expanded the content from a simple review to include a detailed “Disadvantages” section, FAQ with 6 specific questions, and related product links. Heading structure was fixed from H1→H3 skips to proper H1→H2→H3 hierarchy.</p>
+</section>
+</section>
+<section id="tools-i-use" class="level2">
+<h2 class="anchored" data-anchor-id="tools-i-use">Tools I Use</h2>
 <ul>
-<li><strong>Data Management</strong>: Implementing robust data storage solutions tailored to multiple websites.</li>
-<li><strong>Visualization</strong>: Crafting compelling visualizations using tools like Bokeh and Plotly.</li>
-<li><strong>Machine Learning Models</strong>: Developing forecasting models to predict future trends.</li>
-<li><strong>Semantic Search</strong>: Leveraging vector databases for semantic and exact search capabilities.</li>
+<li><strong>Google Search Console API</strong> — raw query and impression data</li>
+<li><strong>spaCy</strong> — keyword extraction and entity recognition</li>
+<li><strong>Sentence-Transformers</strong> — semantic similarity and clustering</li>
+<li><strong>scikit-learn</strong> — KMeans clustering of query embeddings</li>
+<li><strong>pandas</strong> — data manipulation and CSV exports</li>
+<li><strong>Quarto</strong> — static site generation with proper SEO metadata</li>
 </ul>
 </section>
-<section id="level-2" class="level3">
-<h3 class="anchored" data-anchor-id="level-2">Level 2:</h3>
-<ul>
-<li><strong>Optimization</strong>: Streamlining our codebase through asynchronous processing and caching mechanisms.</li>
-</ul>
+<section id="faq-nlp-for-seo" class="level2">
+<h2 class="anchored" data-anchor-id="faq-nlp-for-seo">FAQ: NLP for SEO</h2>
+<section id="can-nlp-really-improve-seo-rankings" class="level3">
+<h3 class="anchored" data-anchor-id="can-nlp-really-improve-seo-rankings">Can NLP really improve SEO rankings?</h3>
+<p>Yes, but indirectly. NLP helps you understand what users actually search for and what your content is missing. Better content coverage leads to higher relevance, which leads to better rankings. It’s not a magic trick — it’s data-driven content improvement.</p>
 </section>
-<section id="level-3" class="level3">
-<h3 class="anchored" data-anchor-id="level-3">Level 3:</h3>
-<ul>
-<li><strong>Product Development</strong>: Exploring avenues to transform our NLP-driven SEO framework into software products like WordPress plugins or desktop applications.</li>
-</ul>
+<section id="do-i-need-to-know-python-to-use-nlp-for-seo" class="level3">
+<h3 class="anchored" data-anchor-id="do-i-need-to-know-python-to-use-nlp-for-seo">Do I need to know Python to use NLP for SEO?</h3>
+<p>For automation at scale, yes. But you can start manually: export Search Console data to CSV, read through queries, and identify patterns. The Python scripts just make this faster and more systematic.</p>
 </section>
-<section id="level-4" class="level3">
-<h3 class="anchored" data-anchor-id="level-4">Level 4:</h3>
-<ul>
-<li><strong>Innovation</strong>: Drawing inspiration from industry leaders to create bespoke solutions, such as an Arabic version of our SEO platform akin to UberSuggest and Guni Rank.</li>
-</ul>
+<section id="what-is-semantic-seo" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-semantic-seo">What is semantic SEO?</h3>
+<p>Semantic SEO is about covering topics comprehensively rather than targeting single keywords. Google’s NLP models (like BERT and MUM) understand relationships between concepts. If your page covers “تنظيف منازل” but also mentions “تنظيف بعد البناء”, “تنظيف عميق”, and “اسعار التنظيف”, Google sees it as more authoritative on the topic.</p>
 </section>
+<section id="how-often-should-i-run-this-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="how-often-should-i-run-this-analysis">How often should I run this analysis?</h3>
+<p>I run it monthly for active sites. Search patterns change seasonally — “تنظيف قبل رمضان” spikes before Ramadan, for example. Regular analysis catches these trends early.</p>
+</section>
+<section id="which-embedding-model-should-i-use-for-semantic-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="which-embedding-model-should-i-use-for-semantic-analysis">Which embedding model should I use for semantic analysis?</h3>
+<p><code>all-MiniLM-L6-v2</code> is fast and good enough for query clustering. For Arabic content, I use multilingual models like <code>paraphrase-multilingual-MiniLM-L12-v2</code> or specialized Arabic embeddings from <a href="https://www.namaa.space/">NAMMA</a>.</p>
+</section>
+</section>
+<section id="leveling-up" class="level2">
+<h2 class="anchored" data-anchor-id="leveling-up">Leveling Up</h2>
+<p>This workflow can be extended further:</p>
+<p><strong>Level 1 — Automation</strong> - Schedule daily GSC downloads with cron jobs - Store data in SQLite or DuckDB for historical analysis - Build dashboards with Streamlit or Plotly</p>
+<p><strong>Level 2 — Competitor Analysis</strong> - Scrape competitor pages and extract their topics - Compare your content coverage vs.&nbsp;theirs using embeddings - Identify topics they rank for that you don’t cover</p>
+<p><strong>Level 3 — Predictive Trends</strong> - Use time-series forecasting on query volumes - Identify rising queries before they peak - Create content ahead of demand spikes</p>
+<p><strong>Level 4 — Arabic SEO Tools</strong> - Arabic tokenization and morphological analysis with CAMeL Tools - RTL text handling for Arabic query processing - Dialect-aware keyword extraction (Egyptian, Gulf, Levantine)</p>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>I mainly using NLP with python to improve my landing pages for home services like the following services: Here are the markdown links with target titles for the provided text:</p>
+<p>NLP doesn’t replace good writing — it makes your writing more targeted. By starting with real search queries instead of guessing keywords, you create content that actually answers what people are looking for.</p>
+<p>The sites I optimize using this workflow:</p>
 <ol type="1">
-<li><a href="https://anwan.me/">منصة صناعة المحتوي العربي</a></li>
-<li><a href="https://kamcalorie.com">كم كالوري في الموز</a></li>
-<li><a href="https://www.tanorfix.com/">صيانة افران غاز بالرياض</a></li>
-<li><a href="https://www.smaagarden.com/">شركة تنسيق حدائق بالمدينة المنورة</a></li>
-<li><a href="https://www.alainclean.com/">شركة تنظيف منازل في العين</a></li>
+<li><a href="https://anwan.me/">منصة صناعة المحتوي العربي</a> — Arabic content generation</li>
+<li><a href="https://kamcalorie.com">كم كالوري في الموز</a> — Arabic nutrition search</li>
+<li><a href="https://www.tanorfix.com/">صيانة افران غاز بالرياض</a> — Oven repair Riyadh</li>
+<li><a href="https://www.smaagarden.com/">شركة تنسيق حدائق بالمدينة المنورة</a> — Gardening services</li>
+<li><a href="https://www.alainclean.com/">شركة تنظيف منازل في العين</a> — Home cleaning Al Ain</li>
 </ol>
-<p>In the ever-evolving landscape of SEO, the integration of NLP marks a paradigm shift towards more sophisticated and nuanced optimization strategies. By harnessing the power of NLP, we not only decipher the language of search but also anticipate and cater to the evolving needs of our audience. As we continue to refine our approach and explore new frontiers, the synergy between NLP and SEO promises to redefine the digital landscape, empowering businesses to thrive in an era of unparalleled connectivity and discovery. you can read more articles on my <a href="https://kareemai.com/blog/feed.html">blog</a></p>
+<p>For more on Arabic NLP and building production AI systems, explore my <a href="../../../papers.html">Research Papers</a> or check out my <a href="../../../blog/posts/nlp/embedding_world/hyperrun.html">embedding model research</a>.</p>
 
 
 </section>

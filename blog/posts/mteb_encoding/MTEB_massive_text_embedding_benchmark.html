@@ -393,6 +393,15 @@ window.addEventListener('scroll', () => {
   <ul class="collapse">
   <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis">Analysis</a></li>
   <li><a href="#efficiency" id="toc-efficiency" class="nav-link" data-scroll-target="#efficiency">Efficiency</a></li>
+  <li><a href="#faq-mteb-benchmark" id="toc-faq-mteb-benchmark" class="nav-link" data-scroll-target="#faq-mteb-benchmark">FAQ: MTEB Benchmark</a>
+  <ul class="collapse">
+  <li><a href="#what-is-mteb-in-nlp" id="toc-what-is-mteb-in-nlp" class="nav-link" data-scroll-target="#what-is-mteb-in-nlp">What is MTEB in NLP?</a></li>
+  <li><a href="#what-does-ndcg10-mean-in-mteb" id="toc-what-does-ndcg10-mean-in-mteb" class="nav-link" data-scroll-target="#what-does-ndcg10-mean-in-mteb">What does nDCG@10 mean in MTEB?</a></li>
+  <li><a href="#how-many-datasets-are-in-mteb" id="toc-how-many-datasets-are-in-mteb" class="nav-link" data-scroll-target="#how-many-datasets-are-in-mteb">How many datasets are in MTEB?</a></li>
+  <li><a href="#which-model-performs-best-on-mteb" id="toc-which-model-performs-best-on-mteb" class="nav-link" data-scroll-target="#which-model-performs-best-on-mteb">Which model performs best on MTEB?</a></li>
+  <li><a href="#is-mteb-open-source" id="toc-is-mteb-open-source" class="nav-link" data-scroll-target="#is-mteb-open-source">Is MTEB open source?</a></li>
+  </ul></li>
+  <li><a href="#related-posts" id="toc-related-posts" class="nav-link" data-scroll-target="#related-posts">Related Posts</a></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul></li>
@@ -607,6 +616,37 @@ window.addEventListener('scroll', () => {
 <hr>
 <p>You can check the GTE architecture here, it’s highly related to MTEB: <a href="tiny-gte_transformer_model.html">Tiny-GTE Transformer Model</a></p>
 <hr>
+</section>
+<section id="faq-mteb-benchmark" class="level2">
+<h2 class="anchored" data-anchor-id="faq-mteb-benchmark">FAQ: MTEB Benchmark</h2>
+<section id="what-is-mteb-in-nlp" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-mteb-in-nlp">What is MTEB in NLP?</h3>
+<p>MTEB (Massive Text Embedding Benchmark) is a standard benchmark for evaluating text embedding models. It spans 8 embedding tasks covering 58 datasets and 112 languages, enabling fair comparison across different models and use cases.</p>
+</section>
+<section id="what-does-ndcg10-mean-in-mteb" class="level3">
+<h3 class="anchored" data-anchor-id="what-does-ndcg10-mean-in-mteb">What does nDCG@10 mean in MTEB?</h3>
+<p>nDCG@10 (Normalized Discounted Cumulative Gain at 10) is the main metric for retrieval tasks in MTEB. It measures how well a model ranks relevant documents in the top 10 results, rewarding models that place the most relevant documents higher in the ranking.</p>
+</section>
+<section id="how-many-datasets-are-in-mteb" class="level3">
+<h3 class="anchored" data-anchor-id="how-many-datasets-are-in-mteb">How many datasets are in MTEB?</h3>
+<p>MTEB consists of 58 datasets covering 112 languages across 8 tasks: bitext mining, classification, clustering, pair classification, reranking, retrieval, STS, and summarization.</p>
+</section>
+<section id="which-model-performs-best-on-mteb" class="level3">
+<h3 class="anchored" data-anchor-id="which-model-performs-best-on-mteb">Which model performs best on MTEB?</h3>
+<p>No single model claims state-of-the-art on all MTEB tasks. Performance varies by task: ST5-XXL dominates classification, SGPT-5.8B-msmarco leads retrieval, and MPNet is competitive on clustering and reranking despite being 50x smaller.</p>
+</section>
+<section id="is-mteb-open-source" class="level3">
+<h3 class="anchored" data-anchor-id="is-mteb-open-source">Is MTEB open source?</h3>
+<p>Yes, MTEB is fully open source. You can evaluate any embedding model with less than 10 lines of code using the MTEB Python package available on PyPI and GitHub.</p>
+</section>
+</section>
+<section id="related-posts" class="level2">
+<h2 class="anchored" data-anchor-id="related-posts">Related Posts</h2>
+<ul>
+<li><a href="tiny-gte_transformer_model.html">Tiny-GTE Transformer Model</a> — Efficient transformer architecture for embedding tasks</li>
+<li><a href="../../../blog/posts/tools_reviews/super_productivity_app.html">Super Productivity Review</a> — Best free todo app for researchers</li>
+<li><a href="../../../blog/posts/nlp/embedding_world/hyperrun.html">Embedding World: HyperRun</a> — My research on Arabic embeddings</li>
+</ul>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>

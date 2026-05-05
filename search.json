@@ -18,7 +18,7 @@
     "href": "papers.html#collaboration-and-further-reading",
     "title": "Research Papers | Arabic NLP, OCR & Medical AI Publications",
     "section": "Collaboration and Further Reading",
-    "text": "Collaboration and Further Reading\nI am always open to collaborating on research projects related to Arabic NLP, healthcare AI, or model optimization. If you are interested in discussing any of these papers or have ideas for future research, please feel free to reach out.\nYou can also explore my practical implementations and technical deep dives on my Blog or check out my Open Source Projects to see how I apply these research concepts in production environments. For a broader overview of my professional background, you can visit my Homepage."
+    "text": "Collaboration and Further Reading\nI am always open to collaborating on research projects related to Arabic NLP, healthcare AI, or model optimization. If you are interested in discussing any of these papers or have ideas for future research, please feel free to reach out.\nYou can also explore my practical implementations and technical deep dives on my Blog or check out my Open Source Projects to see how I apply these research concepts in production environments. For a broader overview of my professional background, you can visit my Homepage.\n\nRelated Technical Posts\n\nMTEB Benchmark Explained — Understanding the standard benchmark for text embedding models\nTiny-GTE Transformer Model — Efficient transformer architecture for embedding tasks\nHyperRun: Arabic Embedding Research — My work on efficient Arabic embedding models"
   },
   {
     "objectID": "oss/opensource.html",
@@ -501,56 +501,56 @@
     "href": "blog/posts/seo/how_i_use_nlp_for_seo.html",
     "title": "How I Use NLP to Improve Website SEO: A Practical Guide",
     "section": "",
-    "text": "Unlocking SEO Potential with NLP: A Journey of Website Optimization\nIn the vast digital landscape, the visibility of a website amidst the sea of search results can make or break its success. Search Engine Optimization (SEO) stands as the beacon guiding businesses towards the shores of higher visibility and traffic. As the digital realm evolves, so do the strategies employed to enhance SEO. One such frontier that holds immense promise is the integration of Natural Language Processing (NLP) into SEO practices. This guide focuses on using Python for NLP and semantic SEO – typical examples of applying NLP for SEO so you can mine keyword ideas and optimize content around actual queries."
+    "text": "Using Python and NLP to automate SEO analysis, find content gaps, and improve rankings for real websites.\nThis guide shows the exact workflow I use to optimize landing pages for local service businesses and content sites. No fluff — just Python code, real data, and measurable results."
   },
   {
-    "objectID": "blog/posts/seo/how_i_use_nlp_for_seo.html#understanding-the-landscape",
-    "href": "blog/posts/seo/how_i_use_nlp_for_seo.html#understanding-the-landscape",
+    "objectID": "blog/posts/seo/how_i_use_nlp_for_seo.html#why-nlp-for-seo",
+    "href": "blog/posts/seo/how_i_use_nlp_for_seo.html#why-nlp-for-seo",
     "title": "How I Use NLP to Improve Website SEO: A Practical Guide",
-    "section": "Understanding the Landscape",
-    "text": "Understanding the Landscape\nSEO isn’t just about optimizing keywords anymore; it’s about understanding user intent, predicting trends, and delivering value-rich content. Harnessing the power of NLP, we embark on a journey to revolutionize SEO practices for our websites. Here’s how we’re leveraging NLP to bolster our SEO efforts:"
+    "section": "Why NLP for SEO?",
+    "text": "Why NLP for SEO?\nSearch engines now understand intent, not just keywords. Writing “best plumber Cairo” 20 times no longer works. You need to cover topics comprehensively, answer related questions, and match the semantic intent behind queries.\nNLP helps you:\n\nMine real queries from Google Search Console that your pages already rank for\nFind content gaps — queries you appear for but don’t explicitly answer\nAnalyze competitor content to see what topics they cover that you don’t\nMeasure semantic similarity between your content and top-ranking pages"
   },
   {
-    "objectID": "blog/posts/seo/how_i_use_nlp_for_seo.html#daily-downloads-and-keyword-integration",
-    "href": "blog/posts/seo/how_i_use_nlp_for_seo.html#daily-downloads-and-keyword-integration",
+    "objectID": "blog/posts/seo/how_i_use_nlp_for_seo.html#the-workflow",
+    "href": "blog/posts/seo/how_i_use_nlp_for_seo.html#the-workflow",
     "title": "How I Use NLP to Improve Website SEO: A Practical Guide",
-    "section": "1. Daily Downloads and Keyword Integration",
-    "text": "1. Daily Downloads and Keyword Integration\nWe kickstart our journey by integrating Google Search Console into our workflow. By fetching daily downloads of our top queries, we gain invaluable insights into user behavior and preferences. These queries are seamlessly integrated into a specific folder, forming the backbone of our content optimization strategy."
+    "section": "The Workflow",
+    "text": "The Workflow\n\nStep 1: Download Search Console Data\nI fetch daily query data via the Google Search Console API. This gives me the actual terms people use to find my sites.\nfrom googleapiclient.discovery import build\nfrom google.oauth2 import service_account\n\ndef get_gsc_queries(site_url, days=28):\n    credentials = service_account.Credentials.from_service_account_file(\n        'gsc-credentials.json',\n        scopes=['https://www.googleapis.com/auth/webmasters.readonly']\n    )\n    service = build('webmasters', 'v3', credentials=credentials)\n\n    request = {\n        'startDate': (datetime.now() - timedelta(days=days)).strftime('%Y-%m-%d'),\n        'endDate': datetime.now().strftime('%Y-%m-%d'),\n        'dimensions': ['query', 'page'],\n        'rowLimit': 25000\n    }\n\n    response = service.searchanalytics().query(siteUrl=site_url, body=request).execute()\n    return response.get('rows', [])\n\n\nStep 2: Extract Keywords and Topics\nOnce I have the query list, I use NLP to group them by topic and identify patterns.\nimport spacy\nfrom collections import Counter\n\nnlp = spacy.load('en_core_web_sm')\n\ndef extract_topics(queries, min_freq=3):\n    \"\"\"Extract noun phrases and entities from search queries.\"\"\"\n    topics = Counter()\n    for query in queries:\n        doc = nlp(query.lower())\n        # Extract noun chunks and named entities\n        for chunk in doc.noun_chunks:\n            if len(chunk.text.split()) &lt;= 4:\n                topics[chunk.text] += 1\n    return {k: v for k, v in topics.items() if v &gt;= min_freq}\nThis tells me what topics people actually search for. For example, on a cleaning services site, I discovered queries like “تنظيف فلل العين” (villa cleaning Al Ain) and “شركة تنظيف بالساعة” (hourly cleaning company) that I wasn’t targeting explicitly.\n\n\nStep 3: Find Content Gaps\nI compare Search Console queries against my page content to find gaps — queries where my site appears but the page doesn’t directly answer.\nfrom sentence_transformers import SentenceTransformer\nfrom sklearn.metrics.pairwise import cosine_similarity\n\nmodel = SentenceTransformer('all-MiniLM-L6-v2')\n\ndef find_content_gaps(queries, page_content, threshold=0.55):\n    \"\"\"Find queries with low semantic similarity to page content.\"\"\"\n    page_embedding = model.encode([page_content])\n    gaps = []\n\n    for query in queries:\n        query_embedding = model.encode([query])\n        similarity = cosine_similarity(query_embedding, page_embedding)[0][0]\n        if similarity &lt; threshold:\n            gaps.append((query, similarity))\n\n    return sorted(gaps, key=lambda x: x[1])\nIf a query has low similarity to my page, it means my content doesn’t cover that topic well. I add an H2 section answering that specific query.\n\n\nStep 4: Semantic Keyword Clustering\nInstead of targeting single keywords, I group related queries into topic clusters using embeddings. This helps me plan content that covers entire topics comprehensively.\nfrom sklearn.cluster import KMeans\nimport numpy as np\n\ndef cluster_queries(queries, n_clusters=8):\n    \"\"\"Group search queries into topic clusters using embeddings.\"\"\"\n    embeddings = model.encode(queries)\n    kmeans = KMeans(n_clusters=n_clusters, random_state=42, n_init=10)\n    labels = kmeans.fit_predict(embeddings)\n\n    clusters = {}\n    for query, label in zip(queries, labels):\n        clusters.setdefault(label, []).append(query)\n\n    return clusters\nFor a home services site, clusters might look like: - Cluster 0: “تنظيف منازل”, “تنظيف فلل”, “تنظيف شقق” (residential cleaning) - Cluster 1: “تنظيف كنب”, “تنظيف سجاد”, “تنظيف مكيفات” (specialized cleaning) - Cluster 2: “اسعار التنظيف”, “تكلفة تنظيف الفيلا” (pricing queries)\nEach cluster becomes a content section or a separate page.\n\n\nStep 5: Optimize Page Content\nI rewrite page sections to naturally incorporate the queries from each cluster. The key is answering the intent, not stuffing keywords.\nFor example, if queries show people asking “كم سعر تنظيف الفيلا؟” (how much does villa cleaning cost?), I add a dedicated pricing H2 with transparent pricing tables rather than vague marketing text."
   },
   {
-    "objectID": "blog/posts/seo/how_i_use_nlp_for_seo.html#content-analysis-and-optimization",
-    "href": "blog/posts/seo/how_i_use_nlp_for_seo.html#content-analysis-and-optimization",
+    "objectID": "blog/posts/seo/how_i_use_nlp_for_seo.html#real-results",
+    "href": "blog/posts/seo/how_i_use_nlp_for_seo.html#real-results",
     "title": "How I Use NLP to Improve Website SEO: A Practical Guide",
-    "section": "2. Content Analysis and Optimization",
-    "text": "2. Content Analysis and Optimization\nNLP comes into play as we meticulously analyze our content to ensure alignment with the top queries identified. By leveraging NLP techniques, we ascertain the presence of these keywords within our content, ensuring relevance and resonance with our audience’s search intent."
+    "section": "Real Results",
+    "text": "Real Results\nI applied this workflow to three sites:\n\n\n\nSite\nNiche\nKey Improvement\n\n\n\n\nAlain Clean\nHome cleaning Al Ain\nAdded 6 service-specific H2s, FAQ sections, cross-links between services\n\n\nTanor Fix\nOven repair Riyadh\nRemoved keyword stuffing, added natural service descriptions, how-it-works section\n\n\nKareem AI\nArabic NLP blog\nAdded FAQ sections to high-impression posts, fixed heading hierarchy, internal cross-links\n\n\n\n\nWhat Changed\nAlain Clean: Before optimization, the services page had generic descriptions. After analyzing Search Console queries, I added specific sections for “تنظيف فلل”, “تنظيف كنب”, “تنظيف بعد التشطيب” — each with unique content, pricing context, and links to related services. Internal links increased from 3 to 18 per page.\nTanor Fix: The original content had keyword stuffing — “صيانة افران غاز بالرياض” repeated 15+ times in unnatural ways. I rewrote all descriptions to be helpful first, using the keyword naturally 2-3 times per section. Added a “how it works” section explaining the repair process step by step.\nKareem AI: Search Console showed 0 CTR for high-impression pages like the Huawei MatePad 11 review. I expanded the content from a simple review to include a detailed “Disadvantages” section, FAQ with 6 specific questions, and related product links. Heading structure was fixed from H1→H3 skips to proper H1→H2→H3 hierarchy."
   },
   {
-    "objectID": "blog/posts/seo/how_i_use_nlp_for_seo.html#predictive-analytics-and-trend-spotting",
-    "href": "blog/posts/seo/how_i_use_nlp_for_seo.html#predictive-analytics-and-trend-spotting",
+    "objectID": "blog/posts/seo/how_i_use_nlp_for_seo.html#tools-i-use",
+    "href": "blog/posts/seo/how_i_use_nlp_for_seo.html#tools-i-use",
     "title": "How I Use NLP to Improve Website SEO: A Practical Guide",
-    "section": "3. Predictive Analytics and Trend Spotting",
-    "text": "3. Predictive Analytics and Trend Spotting\nPowered by NLP, we delve into the realm of predictive analytics to forecast future trends. By analyzing historical data and current patterns, we identify emerging trends and capitalize on them proactively. This enables us to stay ahead of the curve and position our content strategically to meet evolving user demands."
+    "section": "Tools I Use",
+    "text": "Tools I Use\n\nGoogle Search Console API — raw query and impression data\nspaCy — keyword extraction and entity recognition\nSentence-Transformers — semantic similarity and clustering\nscikit-learn — KMeans clustering of query embeddings\npandas — data manipulation and CSV exports\nQuarto — static site generation with proper SEO metadata"
   },
   {
-    "objectID": "blog/posts/seo/how_i_use_nlp_for_seo.html#semantic-and-exact-match-integration",
-    "href": "blog/posts/seo/how_i_use_nlp_for_seo.html#semantic-and-exact-match-integration",
+    "objectID": "blog/posts/seo/how_i_use_nlp_for_seo.html#faq-nlp-for-seo",
+    "href": "blog/posts/seo/how_i_use_nlp_for_seo.html#faq-nlp-for-seo",
     "title": "How I Use NLP to Improve Website SEO: A Practical Guide",
-    "section": "4. Semantic and Exact Match Integration",
-    "text": "4. Semantic and Exact Match Integration\nNLP empowers us to delve deeper into the semantics of language, enabling us to differentiate between exact matches and similar meanings. Through advanced NLP algorithms, we ensure that our content not only features exact keyword matches but also resonates with synonymous terms, enhancing its visibility across diverse search queries."
+    "section": "FAQ: NLP for SEO",
+    "text": "FAQ: NLP for SEO\n\nCan NLP really improve SEO rankings?\nYes, but indirectly. NLP helps you understand what users actually search for and what your content is missing. Better content coverage leads to higher relevance, which leads to better rankings. It’s not a magic trick — it’s data-driven content improvement.\n\n\nDo I need to know Python to use NLP for SEO?\nFor automation at scale, yes. But you can start manually: export Search Console data to CSV, read through queries, and identify patterns. The Python scripts just make this faster and more systematic.\n\n\nWhat is semantic SEO?\nSemantic SEO is about covering topics comprehensively rather than targeting single keywords. Google’s NLP models (like BERT and MUM) understand relationships between concepts. If your page covers “تنظيف منازل” but also mentions “تنظيف بعد البناء”, “تنظيف عميق”, and “اسعار التنظيف”, Google sees it as more authoritative on the topic.\n\n\nHow often should I run this analysis?\nI run it monthly for active sites. Search patterns change seasonally — “تنظيف قبل رمضان” spikes before Ramadan, for example. Regular analysis catches these trends early.\n\n\nWhich embedding model should I use for semantic analysis?\nall-MiniLM-L6-v2 is fast and good enough for query clustering. For Arabic content, I use multilingual models like paraphrase-multilingual-MiniLM-L12-v2 or specialized Arabic embeddings from NAMMA."
   },
   {
-    "objectID": "blog/posts/seo/how_i_use_nlp_for_seo.html#leveling-up-the-game",
-    "href": "blog/posts/seo/how_i_use_nlp_for_seo.html#leveling-up-the-game",
+    "objectID": "blog/posts/seo/how_i_use_nlp_for_seo.html#leveling-up",
+    "href": "blog/posts/seo/how_i_use_nlp_for_seo.html#leveling-up",
     "title": "How I Use NLP to Improve Website SEO: A Practical Guide",
-    "section": "Leveling Up the Game",
-    "text": "Leveling Up the Game\nAs we progress on our journey of NLP-driven SEO optimization, we outline a roadmap for leveling up our capabilities:\n\nLevel 1:\n\nData Management: Implementing robust data storage solutions tailored to multiple websites.\nVisualization: Crafting compelling visualizations using tools like Bokeh and Plotly.\nMachine Learning Models: Developing forecasting models to predict future trends.\nSemantic Search: Leveraging vector databases for semantic and exact search capabilities.\n\n\n\nLevel 2:\n\nOptimization: Streamlining our codebase through asynchronous processing and caching mechanisms.\n\n\n\nLevel 3:\n\nProduct Development: Exploring avenues to transform our NLP-driven SEO framework into software products like WordPress plugins or desktop applications.\n\n\n\nLevel 4:\n\nInnovation: Drawing inspiration from industry leaders to create bespoke solutions, such as an Arabic version of our SEO platform akin to UberSuggest and Guni Rank."
+    "section": "Leveling Up",
+    "text": "Leveling Up\nThis workflow can be extended further:\nLevel 1 — Automation - Schedule daily GSC downloads with cron jobs - Store data in SQLite or DuckDB for historical analysis - Build dashboards with Streamlit or Plotly\nLevel 2 — Competitor Analysis - Scrape competitor pages and extract their topics - Compare your content coverage vs. theirs using embeddings - Identify topics they rank for that you don’t cover\nLevel 3 — Predictive Trends - Use time-series forecasting on query volumes - Identify rising queries before they peak - Create content ahead of demand spikes\nLevel 4 — Arabic SEO Tools - Arabic tokenization and morphological analysis with CAMeL Tools - RTL text handling for Arabic query processing - Dialect-aware keyword extraction (Egyptian, Gulf, Levantine)"
   },
   {
     "objectID": "blog/posts/seo/how_i_use_nlp_for_seo.html#conclusion",
     "href": "blog/posts/seo/how_i_use_nlp_for_seo.html#conclusion",
     "title": "How I Use NLP to Improve Website SEO: A Practical Guide",
     "section": "Conclusion",
-    "text": "Conclusion\nI mainly using NLP with python to improve my landing pages for home services like the following services: Here are the markdown links with target titles for the provided text:\n\nمنصة صناعة المحتوي العربي\nكم كالوري في الموز\nصيانة افران غاز بالرياض\nشركة تنسيق حدائق بالمدينة المنورة\nشركة تنظيف منازل في العين\n\nIn the ever-evolving landscape of SEO, the integration of NLP marks a paradigm shift towards more sophisticated and nuanced optimization strategies. By harnessing the power of NLP, we not only decipher the language of search but also anticipate and cater to the evolving needs of our audience. As we continue to refine our approach and explore new frontiers, the synergy between NLP and SEO promises to redefine the digital landscape, empowering businesses to thrive in an era of unparalleled connectivity and discovery. you can read more articles on my blog"
+    "text": "Conclusion\nNLP doesn’t replace good writing — it makes your writing more targeted. By starting with real search queries instead of guessing keywords, you create content that actually answers what people are looking for.\nThe sites I optimize using this workflow:\n\nمنصة صناعة المحتوي العربي — Arabic content generation\nكم كالوري في الموز — Arabic nutrition search\nصيانة افران غاز بالرياض — Oven repair Riyadh\nشركة تنسيق حدائق بالمدينة المنورة — Gardening services\nشركة تنظيف منازل في العين — Home cleaning Al Ain\n\nFor more on Arabic NLP and building production AI systems, explore my Research Papers or check out my embedding model research."
   },
   {
     "objectID": "blog/posts/products_reviews/one_plus_pad_3.html",
@@ -683,7 +683,21 @@
     "href": "blog/posts/products_reviews/one_plus_pad_3.html#final-verdict-910",
     "title": "OnePlus Pad 3 Review (2025) - Researcher Review",
     "section": "Final Verdict: 9/10",
-    "text": "Final Verdict: 9/10\nThe OnePlus Pad 3 is a fantastic tablet trapped in mediocre software.\nThe hardware is exceptional. The Snapdragon 8 Elite performance is incredible. The 13.2-inch 3.4K 144Hz display is stunning. The 12,140mAh battery life is outstanding. The 8-speaker audio system is phenomenal. The 5.97mm ultra-slim metal design is gorgeous. For 25,000 EGP, you’re getting specs that compete with devices costing twice as much.\nBut the software experience is frustrating. The system updates are terrible. The built-in apps feel unfinished. OnePlus clearly put all their effort into hardware and phoned it in on software.\nHere’s the thing though: if you’re like me and you’re installing your own apps anyway — VS Code, Obsidian, Super Productivity, Brave — the stock software doesn’t matter as much. You’re building your own environment. The hardware gives you an exceptional foundation to work with.\nWould I buy it again? Yes. Despite the software frustrations and the lack of SIM support, this tablet does exactly what I needed: a fast, lightweight, long-lasting secondary device for work that didn’t cost iPad money. The Snapdragon 8 Elite performance, massive battery, and beautiful display make it worth every compromise.\nThe OnePlus Pad 3 isn’t perfect, but it’s the best value Android tablet for productivity work in 2025. Just budget for the accessories and prepare yourself for a rough software experience.\nRating: 9/10 — Exceptional hardware held back by rough software, but still the best value in its class.\n\nReferences\n\nAll One plus news and reviwes\nhuawei freebuds 7i Review"
+    "text": "Final Verdict: 9/10\nThe OnePlus Pad 3 is a fantastic tablet trapped in mediocre software.\nThe hardware is exceptional. The Snapdragon 8 Elite performance is incredible. The 13.2-inch 3.4K 144Hz display is stunning. The 12,140mAh battery life is outstanding. The 8-speaker audio system is phenomenal. The 5.97mm ultra-slim metal design is gorgeous. For 25,000 EGP, you’re getting specs that compete with devices costing twice as much.\nBut the software experience is frustrating. The system updates are terrible. The built-in apps feel unfinished. OnePlus clearly put all their effort into hardware and phoned it in on software.\nHere’s the thing though: if you’re like me and you’re installing your own apps anyway — VS Code, Obsidian, Super Productivity, Brave — the stock software doesn’t matter as much. You’re building your own environment. The hardware gives you an exceptional foundation to work with.\nWould I buy it again? Yes. Despite the software frustrations and the lack of SIM support, this tablet does exactly what I needed: a fast, lightweight, long-lasting secondary device for work that didn’t cost iPad money. The Snapdragon 8 Elite performance, massive battery, and beautiful display make it worth every compromise.\nThe OnePlus Pad 3 isn’t perfect, but it’s the best value Android tablet for productivity work in 2025. Just budget for the accessories and prepare yourself for a rough software experience.\nRating: 9/10 — Exceptional hardware held back by rough software, but still the best value in its class."
+  },
+  {
+    "objectID": "blog/posts/products_reviews/one_plus_pad_3.html#faq-oneplus-pad-3",
+    "href": "blog/posts/products_reviews/one_plus_pad_3.html#faq-oneplus-pad-3",
+    "title": "OnePlus Pad 3 Review (2025) - Researcher Review",
+    "section": "FAQ: OnePlus Pad 3",
+    "text": "FAQ: OnePlus Pad 3\n\nIs the OnePlus Pad 3 good for coding and programming?\nYes, the OnePlus Pad 3 is excellent for coding. The Snapdragon 8 Elite handles VS Code, SSH clients, and remote development smoothly. The 13.2-inch 3.4K display gives you enough screen real estate for actual work.\n\n\nDoes OnePlus Pad 3 support a SIM card?\nNo, the OnePlus Pad 3 is Wi-Fi only. There is no SIM card support or cellular connectivity.\n\n\nHow long does the OnePlus Pad 3 battery last?\nThe 12,140mAh battery easily lasts 2 days of moderate use. OnePlus claims up to 18 hours of video playback. For active work — coding, browsing, note-taking — you can get through a full day without charging.\n\n\nIs OnePlus Pad 3 better than iPad?\nFor raw specs and value, yes. The OnePlus Pad 3 has a better display (13.2-inch 3.4K 144Hz vs 10.9-inch 60Hz), larger battery, faster charging, and more speakers. However, iPad has better software polish and ecosystem integration.\n\n\nDoes OnePlus Pad 3 come with a stylus and keyboard?\nNo. The tablet comes with just the device and a USB cable. The Stylo 2 stylus and Smart Keyboard are sold separately.\n\n\nWhat are the disadvantages of OnePlus Pad 3?\nThe main disadvantages are buggy system updates, unfinished stock software, no cellular support, and accessories that cost extra. The software experience is the biggest weakness."
+  },
+  {
+    "objectID": "blog/posts/products_reviews/one_plus_pad_3.html#related-reviews",
+    "href": "blog/posts/products_reviews/one_plus_pad_3.html#related-reviews",
+    "title": "OnePlus Pad 3 Review (2025) - Researcher Review",
+    "section": "Related Reviews",
+    "text": "Related Reviews\n\nHuawei MatePad 11 Review — One year later: the good and the bad\nHuawei Watch GT 4 Review — GPS, sleep tracking, and 14-day battery life\nHuawei FreeBuds 7i Review — Best budget wireless earbuds for calls?\n\n\nReferences\n\nAll OnePlus news and reviews\nHuawei FreeBuds 7i Review"
   },
   {
     "objectID": "blog/posts/products_reviews/Huawei_mate_pad_11.html",
@@ -714,11 +728,11 @@
     "text": "Pros\n\nExcellent audio quality with quad speakers\nGorgeous 10.95-inch LCD display\n\n2560x1600 resolution\n120Hz refresh rate for smooth visuals\n\nFast charging capabilities\n\nLarge 7250 mAh battery\nSupports 22.5W fast wired charging\n\nComfortable lightweight design, easy to use for long periods\nSeamless integration with other Huawei devices like watches and earbuds\nResponsive stylus with good palm rejection"
   },
   {
-    "objectID": "blog/posts/products_reviews/Huawei_mate_pad_11.html#cons",
-    "href": "blog/posts/products_reviews/Huawei_mate_pad_11.html#cons",
+    "objectID": "blog/posts/products_reviews/Huawei_mate_pad_11.html#disadvantages-of-huawei-matepad-11",
+    "href": "blog/posts/products_reviews/Huawei_mate_pad_11.html#disadvantages-of-huawei-matepad-11",
     "title": "Huawei MatePad 11 Review: One Year Without Google Services",
-    "section": "Cons",
-    "text": "Cons\n\nTablet gets hot with prolonged intensive use like drawing or taking notes. Quite annoying.\nBattery life is decent but not enough to last a full day with heavy usage\nFrequent ads in App Gallery and default music app are frustrating\n\nShould not see ads just trying to open App Gallery\nDefault music app tries to push online streaming service with more ads\n\nMany apps spam notifications asking to reopen them. Very irritating.\n\nIf you want to see more reviews about Huawei you can join the Channel"
+    "section": "Disadvantages of Huawei MatePad 11",
+    "text": "Disadvantages of Huawei MatePad 11\nIf you are researching the disadvantages of Huawei MatePad 11, here is the honest breakdown after one year of daily use:\n\nTablet gets hot with prolonged intensive use like drawing or taking notes. This is quite annoying during long sessions.\nBattery life is decent but not enough to last a full day with heavy usage. Expect to charge daily if you use it intensively.\nFrequent ads in App Gallery and default music app are frustrating. You should not see ads just trying to open App Gallery. The default music app tries to push online streaming services with more ads.\nMany apps spam notifications asking to reopen them. Very irritating and hurts the user experience.\nNo Google Mobile Services (GMS) means many apps either don’t work or need workarounds like Gbox or APK Pure.\nLinux integration is poor compared to standard Android tablets. File transfers require a cable, and syncing is buggy.\n\nIf you want to see more reviews about Huawei you can join the Channel"
   },
   {
     "objectID": "blog/posts/products_reviews/Huawei_mate_pad_11.html#using-huawei-devices-with-linux",
@@ -735,11 +749,18 @@
     "text": "Issues with Google Services on Huawei\n\nStylus Apps\n\nInfinite Painter drawing app has broken stylus support and no pressure sensitivity\nNoteShelf note taking app can’t sync properly with cloud drives\nNebo note taking app has subpar palm rejection and no Arabic language support\nFlexcil best ebook reader/annotator but lacks Google Drive integration\n\n\n\nGbox Solution\n\nProvides access to YouTube, Maps and other Google apps\nAvailable on App Gallery with native integration\nMinimal battery drain\nBut lacks support for many Google services like Podcasts\nBuggy syncing with Google Keep\nCan’t leverage Google Drive within other apps\n\n\n\nAPK Pure\n\nApps sometimes fail to open, just black screen\nToo many ads\nLacks reliability compared to Play Store\n\nOverall, while the Huawei tablet offers excellent hardware, the software experience is hampered by lack of Google services. This leads to janky third party solutions and poor integration with Linux systems. I still enjoy using the tablet but hope someday Huawei can properly resolve these issues."
   },
   {
+    "objectID": "blog/posts/products_reviews/Huawei_mate_pad_11.html#faq-huawei-matepad-11",
+    "href": "blog/posts/products_reviews/Huawei_mate_pad_11.html#faq-huawei-matepad-11",
+    "title": "Huawei MatePad 11 Review: One Year Without Google Services",
+    "section": "FAQ: Huawei MatePad 11",
+    "text": "FAQ: Huawei MatePad 11\n\nWhat are the main disadvantages of Huawei MatePad 11?\nThe main disadvantages are overheating during intensive tasks, battery life that won’t last a full workday under heavy use, frequent ads in App Gallery, notification spam from apps, and the lack of Google Mobile Services which requires workarounds for many apps.\n\n\nDoes Huawei MatePad 11 support Google services?\nNo, the Huawei MatePad 11 does not come with Google Mobile Services (GMS) pre-installed. You can use workarounds like Gbox or APK Pure, but these are not as reliable as native Google Play Store.\n\n\nIs Huawei MatePad 11 good for students?\nThe hardware is excellent for students — great display, good stylus support, and solid audio. However, the software limitations due to missing Google services can be frustrating if you rely on apps like Google Drive, Google Docs, or specific academic apps.\n\n\nHow does Huawei MatePad 11 work with Linux?\nIntegration with Linux is limited. File transfers require a cable, wireless sharing is not available, and syncing with tools like Syncthing is slow and buggy. You will need third-party apps like KDE Connect for basic notification syncing.\n\n\nWhat is the best alternative to Huawei MatePad 11?\nIf you need Google services, consider the OnePlus Pad 3 or Samsung Galaxy Tab S9 series. If you are already in the Huawei ecosystem and can live without Google, the MatePad 11 hardware is excellent for the price."
+  },
+  {
     "objectID": "blog/posts/products_reviews/Huawei_mate_pad_11.html#references",
     "href": "blog/posts/products_reviews/Huawei_mate_pad_11.html#references",
     "title": "Huawei MatePad 11 Review: One Year Without Google Services",
-    "section": "references",
-    "text": "references\n\nhttps://www.noteshelf.net/\nhttps://www.gboxlab.com/\nhttps://www.infinitestudio.art/painter.php\n\n\n\nInternal Resources\nIf you found this hardware review useful, you might also be interested in my other posts and projects:\n\nHuawei Freebuds 7i Review\nOne Plus Pad 3 Review\nMy Research Papers\nOpen Source Contributions\nToday I Learned: AI Engineering Notes"
+    "section": "References",
+    "text": "References\n\nhttps://www.noteshelf.net/\nhttps://www.gboxlab.com/\nhttps://www.infinitestudio.art/painter.php\n\n\n\nInternal Resources\nIf you found this hardware review useful, you might also be interested in my other posts and projects:\n\nHuawei Freebuds 7i Review\nOne Plus Pad 3 Review\nHuawei Watch GT 4 Review\nMy Research Papers\nOpen Source Contributions\nToday I Learned: AI Engineering Notes"
   },
   {
     "objectID": "blog/posts/products_reviews/Huawei freebuds 5i.html#intro",
@@ -903,6 +924,27 @@
     "text": "Ecosystem and Tools\nIf you want to implement Late Interaction today, these are the projects to watch: - ColBERTv2: The optimized version of the original late interaction model. - PyLate: A flexible Python library for training and using late interaction models. - PLAID: An extremely fast engine for searching ColBERT vectors. - Model2Vec: While focused on static embeddings, it shows the trend towards more efficient representation learning.\nLate interaction is transforming how we think about retrieval, moving us away from “one vector fits all” towards a more nuanced, token-aware future.\n\n\nInternal Resources\nIf you’re interested in more technical deep dives or information on my research, check out these sections:\n\nMy Research Papers\nOpen Source Contributions\nToday I Learned: AI Engineering Notes\nArabic NLP Blog Posts"
   },
   {
+    "objectID": "blog/posts/nlp/embedding_world/late_interaction.html#practical-example-using-colbert-with-pylate",
+    "href": "blog/posts/nlp/embedding_world/late_interaction.html#practical-example-using-colbert-with-pylate",
+    "title": "Late Interaction & ColPali: Efficient Semantic Search",
+    "section": "Practical Example: Using ColBERT with PyLate",
+    "text": "Practical Example: Using ColBERT with PyLate\nHere’s how to use a late interaction model for retrieval in Python:\nfrom pylate import ColBERT, Indexes, retrieve\n\n# Load a pre-trained ColBERT model\nmodel = ColBERT(\"lightonai/colbertv2\")\n\n# Encode documents into token-level embeddings\ndocuments = [\n    \"Late interaction models store a vector per token instead of one per document.\",\n    \"Bi-encoders compress documents into a single vector for fast retrieval.\",\n    \"Cross-encoders process query and document together for higher accuracy.\"\n]\n\ndocument_embeddings = model.encode(documents, convert_to_tensor=True)\n\n# Build an index for fast retrieval\nindex = Indexes.FlatIndex()\nindex.add_documents(document_embeddings, documents=documents)\n\n# Encode the query\nquery = \"What is the difference between bi-encoders and cross-encoders?\"\nquery_embedding = model.encode([query], convert_to_tensor=True)\n\n# Retrieve top-k results\nresults = index.search(query_embedding, k=3)\nfor doc, score in results:\n    print(f\"{score:.3f}: {doc}\")\n\nPerformance Comparison\n\n\n\n\n\n\n\n\n\nModel Type\nSpeed\nAccuracy\nUse Case\n\n\n\n\nBi-Encoder\nFastest (~1ms/query)\nGood\nInitial retrieval, large-scale search\n\n\nCross-Encoder\nSlowest (~100ms/pair)\nBest\nRe-ranking top results\n\n\nLate Interaction\nFast (~10ms/query)\nVery Good\nHigh-accuracy retrieval at scale\n\n\n\nLate interaction gives you 90% of cross-encoder accuracy with 10% of the computational cost."
+  },
+  {
+    "objectID": "blog/posts/nlp/embedding_world/late_interaction.html#faq-late-interaction-models",
+    "href": "blog/posts/nlp/embedding_world/late_interaction.html#faq-late-interaction-models",
+    "title": "Late Interaction & ColPali: Efficient Semantic Search",
+    "section": "FAQ: Late Interaction Models",
+    "text": "FAQ: Late Interaction Models\n\nWhat is late interaction in NLP?\nLate interaction is a retrieval technique where query and document tokens interact at query time rather than during encoding. Models like ColBERT store token-level embeddings for documents and compute similarity using MaxSim operations when a query arrives.\n\n\nIs ColBERT better than standard embeddings?\nFor retrieval tasks requiring fine-grained matching, yes. ColBERT outperforms bi-encoders on most benchmarks while being much faster than cross-encoders. However, it requires more storage since you store one vector per token instead of one per document.\n\n\nWhat is ColPali?\nColPali applies late interaction to vision-language models for document retrieval. Instead of extracting text from PDFs via OCR, it processes page images directly and matches query tokens to visual patches. This handles tables, charts, and complex layouts better than text-based retrieval.\n\n\nHow much storage do late interaction models need?\nStorage is higher than bi-encoders because you store vectors for every token. A 512-token document needs 512 vectors instead of 1. Compression techniques like PLAID indexing and quantization reduce this overhead significantly.\n\n\nWhen should I use late interaction vs. bi-encoders?\nUse late interaction when retrieval quality is critical and you can afford the extra storage. Use bi-encoders for very large-scale search where speed and storage efficiency matter most. A common hybrid approach: bi-encoder for initial retrieval, late interaction for re-ranking."
+  },
+  {
+    "objectID": "blog/posts/nlp/embedding_world/late_interaction.html#related-posts",
+    "href": "blog/posts/nlp/embedding_world/late_interaction.html#related-posts",
+    "title": "Late Interaction & ColPali: Efficient Semantic Search",
+    "section": "Related Posts",
+    "text": "Related Posts\n\nBM25 Benchmarking — Comparing sparse retrieval methods\nMTEB Benchmark Explained — How embedding models are evaluated\nTiny-GTE Transformer Model — Efficient transformer architecture for embeddings"
+  },
+  {
     "objectID": "blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html",
     "href": "blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html",
     "title": "BM25 Part 3: Benchmarking Python BM25 Libraries",
@@ -1027,6 +1069,20 @@
     "title": "MTEB Benchmark: Tasks, Datasets & nDCG@10 Explained",
     "section": "Efficiency",
     "text": "Efficiency\nMaximum speed -&gt; Word Embedding models offer maximum speed with Glove taking the lead on both performance and speed, thus making the choice simple in this case\nMaximum performance -&gt; If latency is less important than performance Depending on the task at hand, GTR-XXL, ST5-XXL or SGPT-5.8B may be the right choice,\nSpeed and Peformance -&gt; The fine-tuned MPNet and MiniLM models lead the middle cluster making the choice easy.\n\nYou can check the GTE architecture here, it’s highly related to MTEB: Tiny-GTE Transformer Model"
+  },
+  {
+    "objectID": "blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html#faq-mteb-benchmark",
+    "href": "blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html#faq-mteb-benchmark",
+    "title": "MTEB Benchmark: Tasks, Datasets & nDCG@10 Explained",
+    "section": "FAQ: MTEB Benchmark",
+    "text": "FAQ: MTEB Benchmark\n\nWhat is MTEB in NLP?\nMTEB (Massive Text Embedding Benchmark) is a standard benchmark for evaluating text embedding models. It spans 8 embedding tasks covering 58 datasets and 112 languages, enabling fair comparison across different models and use cases.\n\n\nWhat does nDCG@10 mean in MTEB?\nnDCG@10 (Normalized Discounted Cumulative Gain at 10) is the main metric for retrieval tasks in MTEB. It measures how well a model ranks relevant documents in the top 10 results, rewarding models that place the most relevant documents higher in the ranking.\n\n\nHow many datasets are in MTEB?\nMTEB consists of 58 datasets covering 112 languages across 8 tasks: bitext mining, classification, clustering, pair classification, reranking, retrieval, STS, and summarization.\n\n\nWhich model performs best on MTEB?\nNo single model claims state-of-the-art on all MTEB tasks. Performance varies by task: ST5-XXL dominates classification, SGPT-5.8B-msmarco leads retrieval, and MPNet is competitive on clustering and reranking despite being 50x smaller.\n\n\nIs MTEB open source?\nYes, MTEB is fully open source. You can evaluate any embedding model with less than 10 lines of code using the MTEB Python package available on PyPI and GitHub."
+  },
+  {
+    "objectID": "blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html#related-posts",
+    "href": "blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html#related-posts",
+    "title": "MTEB Benchmark: Tasks, Datasets & nDCG@10 Explained",
+    "section": "Related Posts",
+    "text": "Related Posts\n\nTiny-GTE Transformer Model — Efficient transformer architecture for embedding tasks\nSuper Productivity Review — Best free todo app for researchers\nEmbedding World: HyperRun — My research on Arabic embeddings"
   },
   {
     "objectID": "blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html#conclusion",
@@ -1194,7 +1250,7 @@
     "href": "blog/posts/life_style/back_to_rss.html",
     "title": "Digital Minimalism: Getting Back to RSS for AI Engineers",
     "section": "",
-    "text": "Hi! These are my thoughts on digital minimalism and staying ahead in AI without burning out."
+    "text": "As an AI engineer and researcher, I consume a lot of information — papers, blog posts, Twitter threads, Discord discussions. Over time, this turned into a constant state of distraction. I couldn’t finish projects because I was always “keeping up.”\nThis post explains why I moved back to RSS, stopped using social media for professional updates, and how digital minimalism helps me stay productive without burning out."
   },
   {
     "objectID": "blog/posts/life_style/back_to_rss.html#the-flood-of-information",
@@ -1236,7 +1292,21 @@
     "href": "blog/posts/life_style/back_to_rss.html#next-ideas",
     "title": "Digital Minimalism: Getting Back to RSS for AI Engineers",
     "section": "Next Ideas",
-    "text": "Next Ideas\nI have many changes I want to implement and thoughts to refine. I’m working on improving:\nActivity Watch\nTodo Manager\nThoughts Logging\nMedia Manager\nI’m also focusing on better habits like sleeping, eating, and walking.\nWant to find me? Visit my customized space at kareeai.com.\nAll my love,\nKareem\n\n\nInternal Resources\nIf you found these thoughts on digital minimalism and productivity useful, you might also be interested in:\n\nMy Research Papers\nOpen Source Projects\nToday I Learned: AI Engineering Notes\nArabic NLP Blog Posts"
+    "text": "Next Ideas\nI have many changes I want to implement and thoughts to refine. I’m working on improving:\nActivity Watch\nTodo Manager\nThoughts Logging\nMedia Manager\nI’m also focusing on better habits like sleeping, eating, and walking.\nWant to find me? Visit my customized space at kareeai.com.\nAll my love,\nKareem"
+  },
+  {
+    "objectID": "blog/posts/life_style/back_to_rss.html#faq-digital-minimalism-for-developers",
+    "href": "blog/posts/life_style/back_to_rss.html#faq-digital-minimalism-for-developers",
+    "title": "Digital Minimalism: Getting Back to RSS for AI Engineers",
+    "section": "FAQ: Digital Minimalism for Developers",
+    "text": "FAQ: Digital Minimalism for Developers\n\nWhat is digital minimalism?\nDigital minimalism is a philosophy of using technology intentionally rather than habitually. It means keeping the tools that add real value and removing the ones that fragment your attention — like infinite-scroll social media feeds.\n\n\nIs RSS still useful in 2025?\nYes. RSS is the best way to follow specific sources without algorithms deciding what you see. Tools like Fluent Reader and Feedly make RSS modern and usable. You can even follow YouTube channels via RSS.\n\n\nHow do I follow AI research without Twitter?\nUse RSS feeds from sources like Answer.AI, Hugging Face Blog, Papers with Code, and individual researchers’ blogs. Join focused Discord servers for discussions.\n\n\nDoes deleting social media hurt your career?\nNot in my experience. I landed two jobs through friend referrals and open-source connections — not LinkedIn. A strong GitHub profile and Hugging Face presence matter more than a polished LinkedIn profile for technical roles.\n\n\nWhat RSS reader should I use?\nI use Fluent Reader on desktop and mobile. It’s open source, fast, and supports syncing across devices. Other good options include Feedly, Inoreader, and NetNewsWire (Mac/iOS)."
+  },
+  {
+    "objectID": "blog/posts/life_style/back_to_rss.html#related-posts",
+    "href": "blog/posts/life_style/back_to_rss.html#related-posts",
+    "title": "Digital Minimalism: Getting Back to RSS for AI Engineers",
+    "section": "Related Posts",
+    "text": "Related Posts\n\nSuper Productivity Review — The free open-source task manager I use to stay organized\nHow I Use NLP for SEO — Automating content optimization with Python\nHuawei Watch GT 4 Review — Long-term review of a distraction-free smartwatch\n\n\n\nInternal Resources\nIf you found these thoughts on digital minimalism and productivity useful, you might also be interested in:\n\nMy Research Papers\nOpen Source Projects\nToday I Learned: AI Engineering Notes\nArabic NLP Blog Posts"
   },
   {
     "objectID": "blog/posts/fl/what_is_federated_learning.html",
@@ -1887,7 +1957,14 @@
     "href": "blog/posts/products_reviews/Huawei freebuds 7i.html#freebuds-7i-vs-freebuds-5i-complete-comparison",
     "title": "Huawei FreeBuds 7i Review: Worth Upgrading from 5i?",
     "section": "FreeBuds 7i vs FreeBuds 5i: Complete Comparison",
-    "text": "FreeBuds 7i vs FreeBuds 5i: Complete Comparison\nFeature | FreeBuds 7i | FreeBuds 5i |\nNote: I didn’t test the 6i, which sits spec‑wise between the 5i and 7i, but most of the comparisons below would apply similarly if you’re wondering about the 7i vs 6i case.\n|———|————-|————-| | Driver Size | 11mm quad-magnet dynamic | 10mm dynamic | | Frequency Response | 20 Hz - 40 kHz | Standard | | ANC Technology | Intelligent Dynamic ANC 4.0 (28dB) | Active noise cancellation | | Microphone | 3 mics + bone conduction | Standard mics | | Call Quality | Significantly clearer | Distant, unclear | | Bluetooth | 5.4 | 5.2 | | Battery (ANC ON) | 5h + 20h total | 6h + 18.5h total | | Battery (ANC OFF) | 8h + 35h total | 7.5h + 28h total | | Case Battery | 510mAh | 410mAh | | Earbud Charging | 40 minutes | 60 minutes | | Case Charging | 60 minutes | 110 minutes | | Fast Charging | 10min = 4h | Not available | | Weight (earbud) | 5.4g | 4.9g | | Weight (case) | 36.5g | 33.9g | | Ear Tip Sizes | 4 sizes (XS, S, M, L) | 3 sizes (S, M, L) | | Mode Cycle Order | NC → Off → Awareness | Awareness → Off → NC | | Spatial Audio | Yes with head-tracking | No | | Triple-tap Gesture | Yes | No | | Nod to Answer | Yes | No | | IP Rating | IP54 | IP54 | | Colors | Pink, White, Black | Nebula Black, Isle Blue, Ceramic White | | Price Range | ~$100 | ~$100 |\nWho Should Buy the FreeBuds 7i?\n(Mis opiniones / reseña a continuación explained in English, pero las palabras help Spanish queries.)\nBuy the 7i if you:\n\nDo frequent video calls, online meetings, or streaming\nWant the best call quality in this price range\nNeed better active noise cancellation\nValue faster charging (60min vs 110min for case)\nSwitch between multiple devices regularly\nWant spatial audio with head-tracking\nAppreciate the extra ear tip size for better fit\n\nStick with the 5i if you:\n(Opiniones: This paragraph is a quick opinion in Spanish queries.)\n\nNeed maximum single-charge battery life (6h vs 5h with ANC)\nPrefer the more elegant case design and Isle Blue color\nRarely make calls or do video meetings\nAre satisfied with current ANC performance\nWant slightly lighter earbuds (4.9g vs 5.4g)\n\n\nCommon Questions About FreeBuds 7i\nQ: Do FreeBuds 7i work with iPhone? Yes, they work with any Bluetooth device including iPhones. Download the AI Life app for iOS to access advanced features.\nQ: How is the microphone quality for calls? Excellent. The bone conduction mic combined with AI noise cancellation delivers clear voice quality even in noisy environments up to 90 dB.\nQ: Can I use just one earbud? Yes, both earbuds work independently. You can use either the left or right earbud alone.\nQ: Are they good for working out? Yes, the IP54 rating makes them dust-tight and splash-resistant. Just wipe them dry after workouts.\nQ: How’s the latency for gaming? The Bluetooth 5.4 connection provides low latency suitable for casual mobile gaming, though dedicated gaming earbuds might perform better for competitive play."
+    "text": "FreeBuds 7i vs FreeBuds 5i: Complete Comparison\nFeature | FreeBuds 7i | FreeBuds 5i |\nNote: I didn’t test the 6i, which sits spec‑wise between the 5i and 7i, but most of the comparisons below would apply similarly if you’re wondering about the 7i vs 6i case.\n|———|————-|————-| | Driver Size | 11mm quad-magnet dynamic | 10mm dynamic | | Frequency Response | 20 Hz - 40 kHz | Standard | | ANC Technology | Intelligent Dynamic ANC 4.0 (28dB) | Active noise cancellation | | Microphone | 3 mics + bone conduction | Standard mics | | Call Quality | Significantly clearer | Distant, unclear | | Bluetooth | 5.4 | 5.2 | | Battery (ANC ON) | 5h + 20h total | 6h + 18.5h total | | Battery (ANC OFF) | 8h + 35h total | 7.5h + 28h total | | Case Battery | 510mAh | 410mAh | | Earbud Charging | 40 minutes | 60 minutes | | Case Charging | 60 minutes | 110 minutes | | Fast Charging | 10min = 4h | Not available | | Weight (earbud) | 5.4g | 4.9g | | Weight (case) | 36.5g | 33.9g | | Ear Tip Sizes | 4 sizes (XS, S, M, L) | 3 sizes (S, M, L) | | Mode Cycle Order | NC → Off → Awareness | Awareness → Off → NC | | Spatial Audio | Yes with head-tracking | No | | Triple-tap Gesture | Yes | No | | Nod to Answer | Yes | No | | IP Rating | IP54 | IP54 | | Colors | Pink, White, Black | Nebula Black, Isle Blue, Ceramic White | | Price Range | ~$100 | ~$100 |\nWho Should Buy the FreeBuds 7i?\n(Mis opiniones / reseña a continuación explained in English, pero las palabras help Spanish queries.)\nBuy the 7i if you:\n\nDo frequent video calls, online meetings, or streaming\nWant the best call quality in this price range\nNeed better active noise cancellation\nValue faster charging (60min vs 110min for case)\nSwitch between multiple devices regularly\nWant spatial audio with head-tracking\nAppreciate the extra ear tip size for better fit\n\nStick with the 5i if you:\n(Opiniones: This paragraph is a quick opinion in Spanish queries.)\n\nNeed maximum single-charge battery life (6h vs 5h with ANC)\nPrefer the more elegant case design and Isle Blue color\nRarely make calls or do video meetings\nAre satisfied with current ANC performance\nWant slightly lighter earbuds (4.9g vs 5.4g)"
+  },
+  {
+    "objectID": "blog/posts/products_reviews/Huawei freebuds 7i.html#faq-huawei-freebuds-7i",
+    "href": "blog/posts/products_reviews/Huawei freebuds 7i.html#faq-huawei-freebuds-7i",
+    "title": "Huawei FreeBuds 7i Review: Worth Upgrading from 5i?",
+    "section": "FAQ: Huawei FreeBuds 7i",
+    "text": "FAQ: Huawei FreeBuds 7i\n\nDo FreeBuds 7i work with iPhone?\nYes, they work with any Bluetooth device including iPhones. Download the AI Life app for iOS to access advanced features like EQ customization and firmware updates.\n\n\nHow is the microphone quality for calls?\nExcellent. The bone conduction mic combined with AI noise cancellation delivers clear voice quality even in noisy environments up to 90 dB. My colleagues noticed the improvement immediately on the first day of use.\n\n\nCan I use just one earbud?\nYes, both earbuds work independently. You can use either the left or right earbud alone.\n\n\nAre they good for working out?\nYes, the IP54 rating makes them dust-tight and splash-resistant. Just wipe them dry after workouts.\n\n\nHow’s the latency for gaming?\nThe Bluetooth 5.4 connection provides low latency suitable for casual mobile gaming, though dedicated gaming earbuds might perform better for competitive play.\n\n\nIs FreeBuds 7i worth upgrading from 5i?\nIf you do video calls, need better ANC, or want faster charging — yes. If you only listen to music casually and are happy with the 5i, the upgrade is less urgent."
   },
   {
     "objectID": "blog/posts/products_reviews/Huawei freebuds 7i.html#final-verdict-is-the-freebuds-7i-worth-it",
@@ -1897,25 +1974,32 @@
     "text": "Final Verdict: Is the FreeBuds 7i Worth It?\nAfter 20 days of daily use, the Huawei FreeBuds 7i is a meaningful upgrade over the 5i. The microphone quality improvement is immediately noticeable - my colleagues commented on it the first day. The Intelligent Dynamic ANC 4.0 delivers genuinely better noise cancellation, and the faster charging is a game-changer (60 minutes vs 110 minutes for the case).\nYes, the case design is less elegant than the 5i, but the functional improvements more than compensate. For anyone who relies on earbuds for productivity - video calls, meetings, focused work in noisy environments - the FreeBuds 7i is the clear winner.\nThe sound quality remains excellent, the battery life is better overall, the device switching is smarter, and features like spatial audio and nod-to-answer add genuine value. At around $100, these are among the best budget noise-cancelling earbuds available, even for non-Huawei phone owners.\nRating: 4.5/5\nPros:\n\nExcellent call quality with bone conduction mic\nBetter ANC performance (28dB depth)\nMuch faster charging (60min vs 110min for case)\nSmarter multi-device switching\nSpatial audio with head-tracking\n4 ear tip sizes for better fit\nWorks great outside Huawei ecosystem\n\nCons:\n\nCase design less elegant than 5i\nSlightly heavier earbuds (5.4g vs 4.9g)\nSingle-charge battery with ANC slightly shorter (5h vs 6h)\nNo Isle Blue color option\n\nIf you do video calls or need excellent ANC, the FreeBuds 7i is worth every penny. If you only listen to music casually, the 5i is still a great choice.\nIf you want to see more review you can join the Channel"
   },
   {
-    "objectID": "blog/posts/products_reviews/Huawei freebuds 7i.html#refernces",
-    "href": "blog/posts/products_reviews/Huawei freebuds 7i.html#refernces",
+    "objectID": "blog/posts/products_reviews/Huawei freebuds 7i.html#related-reviews",
+    "href": "blog/posts/products_reviews/Huawei freebuds 7i.html#related-reviews",
     "title": "Huawei FreeBuds 7i Review: Worth Upgrading from 5i?",
-    "section": "Refernces",
-    "text": "Refernces\nSee more product reviews on the site.\n\nHuawei Freebuds 5i Review\nHuawei Freebuds Official site"
+    "section": "Related Reviews",
+    "text": "Related Reviews\n\nHuawei FreeBuds 5i Review — 2 months of daily use\nHuawei MatePad 11 Review — One year later: the good and the bad\nHuawei Watch GT 4 Review — GPS, sleep tracking, and 14-day battery life\nOnePlus Pad 3 Review — Best Android tablet for productivity in 2025"
+  },
+  {
+    "objectID": "blog/posts/products_reviews/Huawei freebuds 7i.html#references",
+    "href": "blog/posts/products_reviews/Huawei freebuds 7i.html#references",
+    "title": "Huawei FreeBuds 7i Review: Worth Upgrading from 5i?",
+    "section": "References",
+    "text": "References\nSee more product reviews on the site.\n\nHuawei FreeBuds 5i Review\nHuawei FreeBuds Official Site"
   },
   {
     "objectID": "blog/posts/products_reviews/Huawei_watch_gt_4_experience.html",
     "href": "blog/posts/products_reviews/Huawei_watch_gt_4_experience.html",
     "title": "Huawei Watch GT 4 Review – GPS & Sleep Tracking in India",
     "section": "",
-    "text": "This review answers common queries in multiple languages – 中文, ไทย, العربية, українська, and español – about GPS accuracy, sleep tracking, waterproofing, and calorie measurements during intense workouts.\n\nI bought it from Amazon for 13,000 EGP, shipping it to India where I live. I opened it immediately, and it looked so nice; I was very happy with its design and feel.\nI charged it with the wireless stand.\nI wore it after an hour and took some time to download the Huawei Health app on my Realme6 mobile."
+    "text": "I bought the Huawei Watch GT 4 from Amazon for 13,000 EGP and shipped it to India where I live. After more than a year of daily use, this long-term review covers GPS accuracy, sleep tracking, battery life, language support, and real-world performance for runners and fitness enthusiasts.\nThis review also answers common queries in multiple languages – 中文, ไทย, العربية, українська, and español – about GPS accuracy, sleep tracking, waterproofing, and calorie measurements during intense workouts.\n\nI opened it immediately, and it looked so nice; I was very happy with its design and feel.\nI charged it with the wireless stand.\nI wore it after an hour and took some time to download the Huawei Health app on my Realme6 mobile."
   },
   {
-    "objectID": "blog/posts/products_reviews/Huawei_watch_gt_4_experience.html#buying-the-huawei-gt4",
-    "href": "blog/posts/products_reviews/Huawei_watch_gt_4_experience.html#buying-the-huawei-gt4",
+    "objectID": "blog/posts/products_reviews/Huawei_watch_gt_4_experience.html#buying-the-huawei-watch-gt-4",
+    "href": "blog/posts/products_reviews/Huawei_watch_gt_4_experience.html#buying-the-huawei-watch-gt-4",
     "title": "Huawei Watch GT 4 Review – GPS & Sleep Tracking in India",
     "section": "",
-    "text": "This review answers common queries in multiple languages – 中文, ไทย, العربية, українська, and español – about GPS accuracy, sleep tracking, waterproofing, and calorie measurements during intense workouts.\n\nI bought it from Amazon for 13,000 EGP, shipping it to India where I live. I opened it immediately, and it looked so nice; I was very happy with its design and feel.\nI charged it with the wireless stand.\nI wore it after an hour and took some time to download the Huawei Health app on my Realme6 mobile."
+    "text": "I bought the Huawei Watch GT 4 from Amazon for 13,000 EGP and shipped it to India where I live. After more than a year of daily use, this long-term review covers GPS accuracy, sleep tracking, battery life, language support, and real-world performance for runners and fitness enthusiasts.\nThis review also answers common queries in multiple languages – 中文, ไทย, العربية, українська, and español – about GPS accuracy, sleep tracking, waterproofing, and calorie measurements during intense workouts.\n\nI opened it immediately, and it looked so nice; I was very happy with its design and feel.\nI charged it with the wireless stand.\nI wore it after an hour and took some time to download the Huawei Health app on my Realme6 mobile."
   },
   {
     "objectID": "blog/posts/products_reviews/Huawei_watch_gt_4_experience.html#feeling-pain",
@@ -2002,11 +2086,25 @@
     "text": "I broked the glass of the huawei gt4\n\nThe watch broke on the first day of college, probably because I pressed my hand too hard on a marble surface or something similar at the university.\nI immediately contacted customer service, and a representative answered—I can’t remember her name—but she was incredibly polite, understanding, and helpful. I spoke to her again shortly after, and she asked me for specific information about the watch to check if it was under warranty or not. She followed up with me two days later, then again a day after that, and again two days later until I managed to get the invoice from Amazon. She tried to solve the issue by recommending an exchange and even told me which day to go when there would be discounts on the products.\nHonestly, it was the best customer service experience I’ve ever had. She was able to go beyond being just a robot to become someone who understands, values, and helps—a human experience that brings joy.\nAt the very least, I had to document and acknowledge that she is someone exceptional. I requested to give her a rating, and I did. I’m really happy about that.\nBut I haven’t fixed the watch yet because there are no spare parts available in Egypt."
   },
   {
+    "objectID": "blog/posts/products_reviews/Huawei_watch_gt_4_experience.html#faq-huawei-watch-gt-4",
+    "href": "blog/posts/products_reviews/Huawei_watch_gt_4_experience.html#faq-huawei-watch-gt-4",
+    "title": "Huawei Watch GT 4 Review – GPS & Sleep Tracking in India",
+    "section": "FAQ: Huawei Watch GT 4",
+    "text": "FAQ: Huawei Watch GT 4\n\nIs the Huawei Watch GT 4 accurate for GPS tracking?\nYes, GPS accuracy is one of the highlight specs. I tested it across India and it tracked routes reliably. When GPS locks, distance and pace measurements are quite close to dedicated GPS running watches.\n\n\nHow accurate is Huawei Watch GT 4 sleep tracking?\nThe accuracy of the sleep detector is almost perfect. Sometimes, when you leave the watch near you for 6 hours, it detects that you are sleeping, but this has only happened maybe three times this year. Sleep cycles and duration are spot on.\n\n\nDoes Huawei Watch GT 4 support Arabic language?\nYes, the Huawei Watch GT 4 supports Arabic, Chinese, Thai, Ukrainian, Spanish, and many other languages. You can read messages in multiple languages without any problem.\n\n\nHow long does the Huawei Watch GT 4 battery last?\nThe best thing about the watch is the 14-day battery life. I charge it for 30 minutes per week, and even when I use the always-on display, the battery doesn’t drain much.\n\n\nIs Huawei Watch GT 4 waterproof?\nYes, the watch is water-resistant and supports pool swimming tracking. It handles sweat and rain without issues.\n\n\nCan you answer calls on Huawei Watch GT 4?\nYes, answering calls from the watch is really nice if you’re at home, but not so much if you’re outside on the street due to speaker volume limitations.\n\n\nWhat are the disadvantages of Huawei Watch GT 4?\n\nHeart rate tracking is a little slow compared to real-time detection (around 3 seconds delay)\nAuto-detection of activities may only start after 20 minutes of walking\nCalorie logging requires the phone app, which is inconvenient\nLimited third-party app ecosystem compared to Wear OS or Apple Watch\nNo Google services integration"
+  },
+  {
+    "objectID": "blog/posts/products_reviews/Huawei_watch_gt_4_experience.html#related-reviews",
+    "href": "blog/posts/products_reviews/Huawei_watch_gt_4_experience.html#related-reviews",
+    "title": "Huawei Watch GT 4 Review – GPS & Sleep Tracking in India",
+    "section": "Related Reviews",
+    "text": "Related Reviews\n\nHuawei MatePad 11 Review — One year later, the good and the bad\nHuawei FreeBuds 7i Review — Best budget wireless earbuds for calls?\nOnePlus Pad 3 Review — Best Android tablet for productivity in 2025"
+  },
+  {
     "objectID": "blog/posts/products_reviews/Huawei_watch_gt_4_experience.html#references",
     "href": "blog/posts/products_reviews/Huawei_watch_gt_4_experience.html#references",
     "title": "Huawei Watch GT 4 Review – GPS & Sleep Tracking in India",
     "section": "References",
-    "text": "References\n\nHuawei freebuds 5i review\nHuawei watch gt4"
+    "text": "References\n\nHuawei FreeBuds 5i Review\nHuawei Watch GT 4 Official Site"
   },
   {
     "objectID": "blog/posts/seo/google_ads_black_box.html",
@@ -2363,14 +2461,84 @@
     "href": "blog/posts/tools_reviews/super_productivity_app.html",
     "title": "Super Productivity Review: Best Free Todo App (2026)",
     "section": "",
-    "text": "After 1.5 years of daily use, Super Productivity — also known as the superproductivity app — has become my only task management system. Not a todo-list, a complete productivity system. And it’s free.\n\n\n\nFree & open source: no subscriptions, no limits\nCross-platform: Linux, Windows, Mac, Android, web\nSimple to start, deep when you need it: hidden gems everywhere 💎\nKeyboard-first: fast for power users\nNo vendor lock-in: export to JSON or CSV anytime\n\n\n\n\n\nI use it for development, research, and learning projects.\n\n\n\nSuper Productivity\n\n\nHere’s a snapshot of my today tasks:\n\nParent tasks show total estimated time\nSubtasks track time individually\nRepeating tasks for daily habits\nGamified “Finish Day” button celebrates your wins 🎉\n\n\n\n\n1. Side Notes\n\n\n\nSuper Productivity SideNote\n\n\nEach project has a notes section. I add my motivation and the end goal here. Seeing the “why” keeps me focused.\n2. Yesterday Review\n\n\n\nSuper Productivity Yesterday Review\n\n\n\n3. Schedule View\n\n\n\nSuper Productivity Schedule View\n\n\n4. Focus Mode\n\n\n\nSuper Productivity Focus Mode\n\n\nThe 4 icons at the top track daily habits with one click.\n5. Project Organization\n\n\n\nSuper Productivity Project Organization\n\n\nFolders → Projects → Tasks. Clean hierarchy for everything.\nIt has also tags but i don’t use tags\n\n\n\nWhen you hit “Finish Day”, you get 3 steps:\n\nReview: summary of what you did\nEvaluate: rate your day \nPlan Tomorrow: set up the next day \n\nAlso includes calendar integration,linear, github..etc!\n\n\n\nSuper Productivity Calendar Integration\n\n\n\n\nTask X #blogging 2h @work\nThis is converted into task X with tag blogging and 2 hours estimated in the Project Work very cool.\n\n\n\n\n\n\nSuper Productivity Custom Backgrounds\n\n\n\n\n\n\nI switched from Todoist after using it for about a year. Here’s the honest comparison:\n\n\n\nFeature\nSuper Productivity\nTodoist\n\n\n\n\nPrice\nFree (open source)\nFree tier limited, $4-6/mo for full\n\n\nOffline\n✅ Full offline\n❌ Limited\n\n\nTime tracking\n✅ Built-in\n❌ Requires integration\n\n\nSelf-hosted sync\n✅ Yes\n❌ No\n\n\nMobile app\n✅ Good\n✅ Polished\n\n\nCollaboration\n❌ Solo only\n✅ Team features\n\n\nGantt / timeline\n❌ No\n❌ No (paid add-on)\n\n\n\nBottom line: if you work solo and care about time tracking, offline access, or don’t want a subscription — Super Productivity wins. Todoist is better if you need team collaboration or a more polished mobile experience.\n\n\n\n\nYes. Completely free, no ads, no premium tier, no data collection. It’s fully open source (GitHub). You can use every single feature without paying anything — ever.\n\n\n\n\n\nDated icons: the icons are old and search for specific one hard \nNo Gantt chart: would help for longer projects\nSync conflicts: when using two devices simultaneously, it asks which data to keep. Apps like TickTick handle this more smoothly. I wish there was smarter merging.\n\n\n\n\nThere are features I still haven’t explored. The developer responds quickly and respectfully to issues.\nRemember this all in a free app without ads, data leakage,…etc!\nGive it a try: super-productivity.com\n\n\n\nIf you’re interested in more tool reviews or my journey in AI, check out these posts:\n\nGetting back to RSS\nOne Plus Pad 3 Review\nHuawei Freebuds 7i Review\n\nYou can also explore my Research Papers or see my Open Source Projects."
+    "text": "After 1.5 years of daily use, Super Productivity — also known as the superproductivity app — has become my only task management system. Not a todo-list, a complete productivity system. And it’s free."
   },
   {
     "objectID": "blog/posts/tools_reviews/super_productivity_app.html#why-super-productivity",
     "href": "blog/posts/tools_reviews/super_productivity_app.html#why-super-productivity",
     "title": "Super Productivity Review: Best Free Todo App (2026)",
     "section": "",
-    "text": "After 1.5 years of daily use, Super Productivity — also known as the superproductivity app — has become my only task management system. Not a todo-list, a complete productivity system. And it’s free.\n\n\n\nFree & open source: no subscriptions, no limits\nCross-platform: Linux, Windows, Mac, Android, web\nSimple to start, deep when you need it: hidden gems everywhere 💎\nKeyboard-first: fast for power users\nNo vendor lock-in: export to JSON or CSV anytime\n\n\n\n\n\nI use it for development, research, and learning projects.\n\n\n\nSuper Productivity\n\n\nHere’s a snapshot of my today tasks:\n\nParent tasks show total estimated time\nSubtasks track time individually\nRepeating tasks for daily habits\nGamified “Finish Day” button celebrates your wins 🎉\n\n\n\n\n1. Side Notes\n\n\n\nSuper Productivity SideNote\n\n\nEach project has a notes section. I add my motivation and the end goal here. Seeing the “why” keeps me focused.\n2. Yesterday Review\n\n\n\nSuper Productivity Yesterday Review\n\n\n\n3. Schedule View\n\n\n\nSuper Productivity Schedule View\n\n\n4. Focus Mode\n\n\n\nSuper Productivity Focus Mode\n\n\nThe 4 icons at the top track daily habits with one click.\n5. Project Organization\n\n\n\nSuper Productivity Project Organization\n\n\nFolders → Projects → Tasks. Clean hierarchy for everything.\nIt has also tags but i don’t use tags\n\n\n\nWhen you hit “Finish Day”, you get 3 steps:\n\nReview: summary of what you did\nEvaluate: rate your day \nPlan Tomorrow: set up the next day \n\nAlso includes calendar integration,linear, github..etc!\n\n\n\nSuper Productivity Calendar Integration\n\n\n\n\nTask X #blogging 2h @work\nThis is converted into task X with tag blogging and 2 hours estimated in the Project Work very cool.\n\n\n\n\n\n\nSuper Productivity Custom Backgrounds\n\n\n\n\n\n\nI switched from Todoist after using it for about a year. Here’s the honest comparison:\n\n\n\nFeature\nSuper Productivity\nTodoist\n\n\n\n\nPrice\nFree (open source)\nFree tier limited, $4-6/mo for full\n\n\nOffline\n✅ Full offline\n❌ Limited\n\n\nTime tracking\n✅ Built-in\n❌ Requires integration\n\n\nSelf-hosted sync\n✅ Yes\n❌ No\n\n\nMobile app\n✅ Good\n✅ Polished\n\n\nCollaboration\n❌ Solo only\n✅ Team features\n\n\nGantt / timeline\n❌ No\n❌ No (paid add-on)\n\n\n\nBottom line: if you work solo and care about time tracking, offline access, or don’t want a subscription — Super Productivity wins. Todoist is better if you need team collaboration or a more polished mobile experience.\n\n\n\n\nYes. Completely free, no ads, no premium tier, no data collection. It’s fully open source (GitHub). You can use every single feature without paying anything — ever.\n\n\n\n\n\nDated icons: the icons are old and search for specific one hard \nNo Gantt chart: would help for longer projects\nSync conflicts: when using two devices simultaneously, it asks which data to keep. Apps like TickTick handle this more smoothly. I wish there was smarter merging.\n\n\n\n\nThere are features I still haven’t explored. The developer responds quickly and respectfully to issues.\nRemember this all in a free app without ads, data leakage,…etc!\nGive it a try: super-productivity.com\n\n\n\nIf you’re interested in more tool reviews or my journey in AI, check out these posts:\n\nGetting back to RSS\nOne Plus Pad 3 Review\nHuawei Freebuds 7i Review\n\nYou can also explore my Research Papers or see my Open Source Projects."
+    "text": "After 1.5 years of daily use, Super Productivity — also known as the superproductivity app — has become my only task management system. Not a todo-list, a complete productivity system. And it’s free."
+  },
+  {
+    "objectID": "blog/posts/tools_reviews/super_productivity_app.html#why-it-wins",
+    "href": "blog/posts/tools_reviews/super_productivity_app.html#why-it-wins",
+    "title": "Super Productivity Review: Best Free Todo App (2026)",
+    "section": "Why It Wins",
+    "text": "Why It Wins\n\nFree & open source: no subscriptions, no limits\nCross-platform: Linux, Windows, Mac, Android, web\nSimple to start, deep when you need it: hidden gems everywhere 💎\nKeyboard-first: fast for power users\nNo vendor lock-in: export to JSON or CSV anytime"
+  },
+  {
+    "objectID": "blog/posts/tools_reviews/super_productivity_app.html#how-i-use-it-daily",
+    "href": "blog/posts/tools_reviews/super_productivity_app.html#how-i-use-it-daily",
+    "title": "Super Productivity Review: Best Free Todo App (2026)",
+    "section": "How I Use It Daily",
+    "text": "How I Use It Daily\nI use it for development, research, and learning projects.\n\n\n\nSuper Productivity\n\n\nHere’s a snapshot of my today tasks:\n\nParent tasks show total estimated time\nSubtasks track time individually\nRepeating tasks for daily habits\nGamified “Finish Day” button celebrates your wins 🎉"
+  },
+  {
+    "objectID": "blog/posts/tools_reviews/super_productivity_app.html#features-i-love",
+    "href": "blog/posts/tools_reviews/super_productivity_app.html#features-i-love",
+    "title": "Super Productivity Review: Best Free Todo App (2026)",
+    "section": "Features I Love",
+    "text": "Features I Love\n\n1. Side Notes\n\n\n\nSuper Productivity SideNote\n\n\nEach project has a notes section. I add my motivation and the end goal here. Seeing the “why” keeps me focused.\n\n\n2. Yesterday Review\n\n\n\nSuper Productivity Yesterday Review\n\n\n\n\n\n3. Schedule View\n\n\n\nSuper Productivity Schedule View\n\n\n\n\n4. Focus Mode\n\n\n\nSuper Productivity Focus Mode\n\n\nThe 4 icons at the top track daily habits with one click.\n\n\n5. Project Organization\n\n\n\nSuper Productivity Project Organization\n\n\nFolders → Projects → Tasks. Clean hierarchy for everything.\nIt also has tags but I don’t use tags"
+  },
+  {
+    "objectID": "blog/posts/tools_reviews/super_productivity_app.html#end-of-day-flow",
+    "href": "blog/posts/tools_reviews/super_productivity_app.html#end-of-day-flow",
+    "title": "Super Productivity Review: Best Free Todo App (2026)",
+    "section": "End of Day Flow",
+    "text": "End of Day Flow\nWhen you hit “Finish Day”, you get 3 steps:\n\nReview: summary of what you did\nEvaluate: rate your day \nPlan Tomorrow: set up the next day \n\nAlso includes calendar integration,linear, github..etc!\n\n\n\nSuper Productivity Calendar Integration\n\n\n\nMarkdown Support\nTask X #blogging 2h @work\nThis is converted into task X with tag blogging and 2 hours estimated in the Project Work very cool.\n\n\nCustom Backgrounds\n\n\n\nSuper Productivity Custom Backgrounds"
+  },
+  {
+    "objectID": "blog/posts/tools_reviews/super_productivity_app.html#super-productivity-vs-todoist",
+    "href": "blog/posts/tools_reviews/super_productivity_app.html#super-productivity-vs-todoist",
+    "title": "Super Productivity Review: Best Free Todo App (2026)",
+    "section": "Super Productivity vs Todoist",
+    "text": "Super Productivity vs Todoist\nI switched from Todoist after using it for about a year. Here’s the honest comparison:\n\n\n\nFeature\nSuper Productivity\nTodoist\n\n\n\n\nPrice\nFree (open source)\nFree tier limited, $4-6/mo for full\n\n\nOffline\n✅ Full offline\n❌ Limited\n\n\nTime tracking\n✅ Built-in\n❌ Requires integration\n\n\nSelf-hosted sync\n✅ Yes\n❌ No\n\n\nMobile app\n✅ Good\n✅ Polished\n\n\nCollaboration\n❌ Solo only\n✅ Team features\n\n\nGantt / timeline\n❌ No\n❌ No (paid add-on)\n\n\n\nBottom line: if you work solo and care about time tracking, offline access, or don’t want a subscription — Super Productivity wins. Todoist is better if you need team collaboration or a more polished mobile experience."
+  },
+  {
+    "objectID": "blog/posts/tools_reviews/super_productivity_app.html#is-super-productivity-completely-free",
+    "href": "blog/posts/tools_reviews/super_productivity_app.html#is-super-productivity-completely-free",
+    "title": "Super Productivity Review: Best Free Todo App (2026)",
+    "section": "Is Super Productivity Completely Free?",
+    "text": "Is Super Productivity Completely Free?\nYes. Completely free, no ads, no premium tier, no data collection. It’s fully open source (GitHub). You can use every single feature without paying anything — ever."
+  },
+  {
+    "objectID": "blog/posts/tools_reviews/super_productivity_app.html#what-i-dont-like",
+    "href": "blog/posts/tools_reviews/super_productivity_app.html#what-i-dont-like",
+    "title": "Super Productivity Review: Best Free Todo App (2026)",
+    "section": "What I Don’t Like",
+    "text": "What I Don’t Like\n\nDated icons: the icons are old and search for specific one hard \nNo Gantt chart: would help for longer projects\nSync conflicts: when using two devices simultaneously, it asks which data to keep. Apps like TickTick handle this more smoothly. I wish there was smarter merging."
+  },
+  {
+    "objectID": "blog/posts/tools_reviews/super_productivity_app.html#faq-super-productivity",
+    "href": "blog/posts/tools_reviews/super_productivity_app.html#faq-super-productivity",
+    "title": "Super Productivity Review: Best Free Todo App (2026)",
+    "section": "FAQ: Super Productivity",
+    "text": "FAQ: Super Productivity\n\nIs Super Productivity really free?\nYes. Completely free, no ads, no premium tier, no data collection. It’s fully open source (GitHub). You can use every single feature without paying anything — ever.\n\n\nDoes Super Productivity work offline?\nYes, Super Productivity works fully offline. All your data is stored locally. You can export to JSON or CSV anytime, and there is no vendor lock-in.\n\n\nCan I sync Super Productivity across devices?\nYes, you can self-host sync via Dropbox, WebDAV, or local file sync. However, sync conflicts can occur when using two devices simultaneously. Apps like TickTick handle merging more smoothly.\n\n\nIs Super Productivity better than Todoist?\nIf you work solo and care about time tracking, offline access, or don’t want a subscription — Super Productivity wins. Todoist is better if you need team collaboration or a more polished mobile experience.\n\n\nDoes Super Productivity have a mobile app?\nYes, Super Productivity has an Android app and a web version. The mobile experience is good, though not as polished as dedicated mobile-first apps like Todoist."
+  },
+  {
+    "objectID": "blog/posts/tools_reviews/super_productivity_app.html#final-thoughts",
+    "href": "blog/posts/tools_reviews/super_productivity_app.html#final-thoughts",
+    "title": "Super Productivity Review: Best Free Todo App (2026)",
+    "section": "Final Thoughts",
+    "text": "Final Thoughts\nThere are features I still haven’t explored. The developer responds quickly and respectfully to issues.\nRemember this all in a free app without ads, data leakage,…etc!\nGive it a try: super-productivity.com"
+  },
+  {
+    "objectID": "blog/posts/tools_reviews/super_productivity_app.html#more-resources",
+    "href": "blog/posts/tools_reviews/super_productivity_app.html#more-resources",
+    "title": "Super Productivity Review: Best Free Todo App (2026)",
+    "section": "More Resources",
+    "text": "More Resources\nIf you’re interested in more tool reviews or my journey in AI, check out these posts:\n\nGetting back to RSS\nOne Plus Pad 3 Review\nHuawei Freebuds 7i Review\n\nYou can also explore my Research Papers or see my Open Source Projects."
   },
   {
     "objectID": "blog/feed.html",
@@ -2678,14 +2846,14 @@
     "href": "index.html",
     "title": "Abdelkareem Elkhateb",
     "section": "",
-    "text": "Arabic NLP Researcher.\nI make AI models small, fast, and actually useful.\n\n\nGitHub Research Hire me   Qabilah    LinkedIn \n  X \n\n\n\nاللغة ليست عِلمًا .. بل هي شيء فوق العلم لغتنا في خطر داهم .. ونحن أيضًا “Language is not a science — it is something above science. Our language is in danger — and so are we.”\n\n\n\n\n\nI’m an NLP Engineer at Xbites, building the AI backend for Darin.\nI also research with Hamza Salem Lab on Arabic embeddings and contributer to NAMMA for open-source Arabic AI.\nMy thesis focuses on making transformers run efficiently on CPUs.\n\n\n7papers\n\n\n54citations\n\n\n962papers read\n\n\n\n\n\n\n\n\n\n113× smaller than AraBERTv2, 94% accuracy. Runs on edge devices. → GitHub\n\n\n\nTiny Arabic models for phones. → Read more\n\n\n\nArabic nutrition search. → Try it\n\n\n\nGPU pricing & ML benchmarks. → Check it\n\n\n\n\nkareem01095134688@gmail.com · Upwork · GitHub\n\n\n\n\n\n\nفقالَ: إن تَصدُقِ اللَّهَ يَصدُقْكَ"
+    "text": "Abdelkareem Elkhateb - Arabic NLP Researcher and AI Engineer\n\n\n\n\nArabic NLP Researcher & AI Engineer\nI build efficient AI models, semantic search systems, and production ML pipelines for Arabic and multilingual applications.\n\n\nGitHub Research Hire me   Qabilah    LinkedIn \n  X \n\n\n\nاللغة ليست عِلمًا .. بل هي شيء فوق العلم لغتنا في خطر داهم .. ونحن أيضًا “Language is not a science — it is something above science. Our language is in danger — and so are we.”\n\n\n\n\n\nI’m an NLP Engineer at Xbites, building the AI backend for Darin.\nI also research with Hamza Salem Lab on Arabic embeddings and contribute to NAMMA for open-source Arabic AI.\nMy thesis focuses on making transformers run efficiently on CPUs. I write about Arabic NLP, embedding models, and building production AI systems.\n\n\n7papers\n\n\n54citations\n\n\n962papers read\n\n\n\n\n\n\n\n\n\n113× smaller than AraBERTv2, 94% accuracy. Runs on edge devices. → GitHub\n\n\n\nTiny Arabic models for phones. → Read more\n\n\n\nArabic nutrition search. → Try it\n\n\n\nGPU pricing & ML benchmarks. → Check it\n\n\n\n\n\n\n\n\n\nWhy I switched from Todoist to this open-source productivity system after 1.5 years of daily use.\n\n\n\nThe best Android tablet for productivity in 2025? Snapdragon 8 Elite, 13.2-inch display, and real-world coding experience.\n\n\n\nGPS accuracy, 14-day battery life, sleep tracking, and using it in India — one year later.\n\n\n\nA deep dive into the standard benchmark for evaluating text embedding models.\n\n\n\nAutomating content optimization with Python, Google Search Console API, and semantic similarity.\n\n\n\nWhy I moved back to RSS, quit social media for professional updates, and how it improved my focus.\n\n\n\n\nkareem01095134688@gmail.com · Upwork · GitHub\n\n\n\n\n\n\nفقالَ: إن تَصدُقِ اللَّهَ يَصدُقْكَ"
   },
   {
     "objectID": "index.html#who-am-i",
     "href": "index.html#who-am-i",
     "title": "Abdelkareem Elkhateb",
     "section": "",
-    "text": "I’m an NLP Engineer at Xbites, building the AI backend for Darin.\nI also research with Hamza Salem Lab on Arabic embeddings and contributer to NAMMA for open-source Arabic AI.\nMy thesis focuses on making transformers run efficiently on CPUs.\n\n\n7papers\n\n\n54citations\n\n\n962papers read"
+    "text": "I’m an NLP Engineer at Xbites, building the AI backend for Darin.\nI also research with Hamza Salem Lab on Arabic embeddings and contribute to NAMMA for open-source Arabic AI.\nMy thesis focuses on making transformers run efficiently on CPUs. I write about Arabic NLP, embedding models, and building production AI systems.\n\n\n7papers\n\n\n54citations\n\n\n962papers read"
   },
   {
     "objectID": "index.html#projects",
@@ -2693,6 +2861,13 @@
     "title": "Abdelkareem Elkhateb",
     "section": "",
     "text": "113× smaller than AraBERTv2, 94% accuracy. Runs on edge devices. → GitHub\n\n\n\nTiny Arabic models for phones. → Read more\n\n\n\nArabic nutrition search. → Try it\n\n\n\nGPU pricing & ML benchmarks. → Check it"
+  },
+  {
+    "objectID": "index.html#recent-writing",
+    "href": "index.html#recent-writing",
+    "title": "Abdelkareem Elkhateb",
+    "section": "",
+    "text": "Why I switched from Todoist to this open-source productivity system after 1.5 years of daily use.\n\n\n\nThe best Android tablet for productivity in 2025? Snapdragon 8 Elite, 13.2-inch display, and real-world coding experience.\n\n\n\nGPS accuracy, 14-day battery life, sleep tracking, and using it in India — one year later.\n\n\n\nA deep dive into the standard benchmark for evaluating text embedding models.\n\n\n\nAutomating content optimization with Python, Google Search Console API, and semantic similarity.\n\n\n\nWhy I moved back to RSS, quit social media for professional updates, and how it improved my focus.\n\n\n\n\nkareem01095134688@gmail.com · Upwork · GitHub\n\n\n\n\n\n\nفقالَ: إن تَصدُقِ اللَّهَ يَصدُقْكَ"
   },
   {
     "objectID": "publish.html",
