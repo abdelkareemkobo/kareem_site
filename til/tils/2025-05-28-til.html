@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2025-05-28">
 <meta name="description" content="PyLate tutorial for ColBERT vector retrieval. Learn dataset formats, PLAID indexing, evaluation metrics, and practical code examples for dense retrieval systems.">
 
-<title>PyLate Tutorial: Vector Indexing and Retrieval with ColBERT (Complete Guide) – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
+<title>PyLate Tutorial: Vector Indexing and Retrieval with ColBERT (Complete Guide) – Abdelkareem Elkhateb</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -122,12 +122,12 @@ gtag('js', new Date());
 gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 </script>
 <!-- Fonts are embedded locally via shimmering-fonts.css -->
-<meta property="og:title" content="PyLate Tutorial: Vector Indexing and Retrieval with ColBERT (Complete Guide) – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta property="og:title" content="PyLate Tutorial: Vector Indexing and Retrieval with ColBERT (Complete Guide) – Abdelkareem Elkhateb">
 <meta property="og:description" content="PyLate tutorial for ColBERT vector retrieval. Learn dataset formats, PLAID indexing, evaluation metrics, and practical code examples for dense retrieval systems.">
 <meta property="og:image" content="https://kareemai.com/til/tils/til.jpg">
-<meta property="og:site_name" content="عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta property="og:site_name" content="Abdelkareem Elkhateb">
 <meta property="og:locale" content="en_US">
-<meta name="twitter:title" content="PyLate Tutorial: Vector Indexing and Retrieval with ColBERT (Complete Guide) – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta name="twitter:title" content="PyLate Tutorial: Vector Indexing and Retrieval with ColBERT (Complete Guide) – Abdelkareem Elkhateb">
 <meta name="twitter:description" content="PyLate tutorial for ColBERT vector retrieval. Learn dataset formats, PLAID indexing, evaluation metrics, and practical code examples for dense retrieval systems.">
 <meta name="twitter:image" content="https://kareemai.com/til/tils/til.jpg">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
@@ -388,7 +388,7 @@ window.addEventListener('scroll', () => {
 <span class="menu-text">GPUVec</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img" aria-label="Blog RSS Feed">
+    <a class="nav-link" href="../../blog/feed.xml"> <i class="bi bi-rss" role="img" aria-label="Blog RSS Feed">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -414,8 +414,7 @@ window.addEventListener('scroll', () => {
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#pylate-tutorial-vector-indexing-and-retrieval-with-colbert" id="toc-pylate-tutorial-vector-indexing-and-retrieval-with-colbert" class="nav-link active" data-scroll-target="#pylate-tutorial-vector-indexing-and-retrieval-with-colbert">PyLate Tutorial: Vector Indexing and Retrieval with ColBERT</a>
-  <ul class="collapse">
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#what-youll-learn" id="toc-what-youll-learn" class="nav-link" data-scroll-target="#what-youll-learn">What You’ll Learn</a></li>
   <li><a href="#core-concepts-pylate-and-colbert-explained" id="toc-core-concepts-pylate-and-colbert-explained" class="nav-link" data-scroll-target="#core-concepts-pylate-and-colbert-explained">Core Concepts: PyLate and ColBERT Explained</a></li>
   <li><a href="#dataset-formats" id="toc-dataset-formats" class="nav-link" data-scroll-target="#dataset-formats">Dataset Formats</a>
@@ -456,7 +455,6 @@ window.addEventListener('scroll', () => {
   <li><a href="#standard-ir-metrics" id="toc-standard-ir-metrics" class="nav-link" data-scroll-target="#standard-ir-metrics">Standard IR Metrics</a></li>
   <li><a href="#interpreting-results" id="toc-interpreting-results" class="nav-link" data-scroll-target="#interpreting-results">Interpreting Results</a></li>
   <li><a href="#internal-resources" id="toc-internal-resources" class="nav-link" data-scroll-target="#internal-resources">Internal Resources</a></li>
-  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -505,9 +503,10 @@ window.addEventListener('scroll', () => {
 </header>
 
 
-<section id="pylate-tutorial-vector-indexing-and-retrieval-with-colbert" class="level1">
-<h1>PyLate Tutorial: Vector Indexing and Retrieval with ColBERT</h1>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <p><strong>PyLate</strong> is a Python library that simplifies dense vector retrieval with ColBERT (Contextualized Late Interaction over BERT). It handles indexing, querying, and evaluation of dense retrieval systems. This guide covers everything you need to work with PyLate in production: data formats, indexing strategies, and evaluation pipelines.</p>
+</section>
 <section id="what-youll-learn" class="level2">
 <h2 class="anchored" data-anchor-id="what-youll-learn">What You’ll Learn</h2>
 <ul>
@@ -644,12 +643,11 @@ window.addEventListener('scroll', () => {
 <ul>
 <li><a href="../../papers.html">My Research Papers</a></li>
 <li><a href="../../oss/opensource.html">Open Source Contributions</a></li>
-<li><a href="../../til/index.html">Today I Learned Index</a></li>
+<li><a href="../index.html">Today I Learned Index</a></li>
 <li><a href="../../blog/feed.html">Main Blog Index</a></li>
 </ul>
 
 
-</section>
 </section>
 </section>
 
@@ -1108,7 +1106,7 @@ function copyLink() {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/kareemai\.com\/");
+        var filterRegex = new RegExp("https:\/\/kareemai\.com");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -1500,7 +1498,7 @@ function copyLink() {
     </a>
   </li>  
     <li class="nav-item compact">
-    <a class="nav-link" href="../../index.xml">
+    <a class="nav-link" href="../../blog/feed.xml">
       <i class="bi bi-rss" role="img" aria-label="RSS Feed">
 </i> 
     </a>

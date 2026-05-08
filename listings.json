@@ -6,6 +6,7 @@
   {
     "listing": "/blog/feed.html",
     "items": [
+      "/blog/posts/products_reviews/Building_AI_PC_In_Egypt.html",
       "/blog/posts/ml_life/hacker_rank_ai_intereviw.html",
       "/blog/posts/on_device/litert.html",
       "/blog/posts/nlp/embedding_world/vector_database_book.html",

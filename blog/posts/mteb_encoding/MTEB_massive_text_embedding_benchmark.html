@@ -9,7 +9,7 @@
 <meta name="dcterms.date" content="2023-10-28">
 <meta name="description" content="Overview of MTEB, covering 58 datasets across 8 tasks, benchmarking models and explaining the nDCG@10 retrieval metric.">
 
-<title>MTEB Benchmark: Tasks, Datasets &amp; nDCG@10 Explained – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
+<title>MTEB Benchmark: Tasks, Datasets &amp; nDCG@10 Explained – Abdelkareem Elkhateb</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -87,12 +87,12 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <!-- Fonts are embedded locally via shimmering-fonts.css -->
-<meta property="og:title" content="MTEB Benchmark: Tasks, Datasets &amp; nDCG@10 Explained – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta property="og:title" content="MTEB Benchmark: Tasks, Datasets &amp; nDCG@10 Explained – Abdelkareem Elkhateb">
 <meta property="og:description" content="Overview of MTEB, covering 58 datasets across 8 tasks, benchmarking models and explaining the nDCG@10 retrieval metric.">
 <meta property="og:image" content="https://kareemai.com/blog/posts/mteb_encoding/images/til.jpg">
-<meta property="og:site_name" content="عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta property="og:site_name" content="Abdelkareem Elkhateb">
 <meta property="og:locale" content="en_US">
-<meta name="twitter:title" content="MTEB Benchmark: Tasks, Datasets &amp; nDCG@10 Explained – عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist">
+<meta name="twitter:title" content="MTEB Benchmark: Tasks, Datasets &amp; nDCG@10 Explained – Abdelkareem Elkhateb">
 <meta name="twitter:description" content="Overview of MTEB, covering 58 datasets across 8 tasks, benchmarking models and explaining the nDCG@10 retrieval metric.">
 <meta name="twitter:image" content="https://kareemai.com/blog/posts/mteb_encoding/images/til.jpg">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
@@ -353,7 +353,7 @@ window.addEventListener('scroll', () => {
 <span class="menu-text">GPUVec</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../../../index.xml"> <i class="bi bi-rss" role="img" aria-label="Blog RSS Feed">
+    <a class="nav-link" href="../../../blog/feed.xml"> <i class="bi bi-rss" role="img" aria-label="Blog RSS Feed">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -380,17 +380,15 @@ window.addEventListener('scroll', () => {
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#defintion-mteb-mteb-spans-8-embedding-tasks-covering-a-total-of-58-datasets-and-112-languages.-through-the-benchmarking-of-33-models-on-mteb-we-also-report-key-retrieval-metrics-such-as-ndcg10-which-often-determine-the-ranking-of-models-on-the-leaderboard." id="toc-defintion-mteb-mteb-spans-8-embedding-tasks-covering-a-total-of-58-datasets-and-112-languages.-through-the-benchmarking-of-33-models-on-mteb-we-also-report-key-retrieval-metrics-such-as-ndcg10-which-often-determine-the-ranking-of-models-on-the-leaderboard." class="nav-link" data-scroll-target="#defintion-mteb-mteb-spans-8-embedding-tasks-covering-a-total-of-58-datasets-and-112-languages.-through-the-benchmarking-of-33-models-on-mteb-we-also-report-key-retrieval-metrics-such-as-ndcg10-which-often-determine-the-ranking-of-models-on-the-leaderboard.">defintion MTEB: MTEB spans 8 embedding tasks covering a total of 58 datasets and 112 languages. Through the benchmarking of 33 models on MTEB, we also report key retrieval metrics such as nDCG@10 which often determine the ranking of models on the leaderboard.</a>
-  <ul class="collapse">
   <li><a href="#embedding-models" id="toc-embedding-models" class="nav-link" data-scroll-target="#embedding-models">Embedding models</a></li>
   <li><a href="#the-problem" id="toc-the-problem" class="nav-link" data-scroll-target="#the-problem">The problem</a></li>
   <li><a href="#the-solution-with-this-benchmark" id="toc-the-solution-with-this-benchmark" class="nav-link" data-scroll-target="#the-solution-with-this-benchmark">The solution with this benchmark</a></li>
   <li><a href="#the-mteb-desiderata" id="toc-the-mteb-desiderata" class="nav-link" data-scroll-target="#the-mteb-desiderata">The MTEB Desiderata</a></li>
-  <li><a href="#tasks-and-evaluation" id="toc-tasks-and-evaluation" class="nav-link" data-scroll-target="#tasks-and-evaluation">Tasks and Evaluation</a></li>
-  </ul></li>
-  <li><a href="#definition-bitext-mining" id="toc-definition-bitext-mining" class="nav-link" data-scroll-target="#definition-bitext-mining">definition <strong>Bitext Mining</strong></a></li>
-  <li><a href="#sidenote-non-transformers-laser-heffernan-et-al.2022-is-the-only-context-aware-non-transformer-model-we-benchmark-relying-on-an-lstm-hochreiter-and-schmidhuber-1997-instead.-similar-to-labse-the-model-trains-on-parallel-data-and-focuses-on-bitext-mining-applications." id="toc-sidenote-non-transformers-laser-heffernan-et-al.2022-is-the-only-context-aware-non-transformer-model-we-benchmark-relying-on-an-lstm-hochreiter-and-schmidhuber-1997-instead.-similar-to-labse-the-model-trains-on-parallel-data-and-focuses-on-bitext-mining-applications." class="nav-link" data-scroll-target="#sidenote-non-transformers-laser-heffernan-et-al.2022-is-the-only-context-aware-non-transformer-model-we-benchmark-relying-on-an-lstm-hochreiter-and-schmidhuber-1997-instead.-similar-to-labse-the-model-trains-on-parallel-data-and-focuses-on-bitext-mining-applications.">sidenote <strong>Non-Transformers</strong> : LASER (Heffernan et al.,2022) is the only context aware non-transformer model we benchmark, relying on an LSTM (Hochreiter and Schmidhuber, 1997) instead. Similar to LaBSE, the model trains on parallel data and focuses on bitext mining applications.</a>
+  <li><a href="#tasks-and-evaluation" id="toc-tasks-and-evaluation" class="nav-link" data-scroll-target="#tasks-and-evaluation">Tasks and Evaluation</a>
   <ul class="collapse">
+  <li><a href="#definition-bitext-mining" id="toc-definition-bitext-mining" class="nav-link" data-scroll-target="#definition-bitext-mining">definition <strong>Bitext Mining</strong></a></li>
+  <li><a href="#sidenote-non-transformers-laser-heffernan-et-al.2022-is-the-only-context-aware-non-transformer-model-we-benchmark-relying-on-an-lstm-hochreiter-and-schmidhuber-1997-instead.-similar-to-labse-the-model-trains-on-parallel-data-and-focuses-on-bitext-mining-applications." id="toc-sidenote-non-transformers-laser-heffernan-et-al.2022-is-the-only-context-aware-non-transformer-model-we-benchmark-relying-on-an-lstm-hochreiter-and-schmidhuber-1997-instead.-similar-to-labse-the-model-trains-on-parallel-data-and-focuses-on-bitext-mining-applications." class="nav-link" data-scroll-target="#sidenote-non-transformers-laser-heffernan-et-al.2022-is-the-only-context-aware-non-transformer-model-we-benchmark-relying-on-an-lstm-hochreiter-and-schmidhuber-1997-instead.-similar-to-labse-the-model-trains-on-parallel-data-and-focuses-on-bitext-mining-applications.">sidenote <strong>Non-Transformers</strong> : LASER (Heffernan et al.,2022) is the only context aware non-transformer model we benchmark, relying on an LSTM (Hochreiter and Schmidhuber, 1997) instead. Similar to LaBSE, the model trains on parallel data and focuses on bitext mining applications.</a></li>
+  </ul></li>
   <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis">Analysis</a></li>
   <li><a href="#efficiency" id="toc-efficiency" class="nav-link" data-scroll-target="#efficiency">Efficiency</a></li>
   <li><a href="#faq-mteb-benchmark" id="toc-faq-mteb-benchmark" class="nav-link" data-scroll-target="#faq-mteb-benchmark">FAQ: MTEB Benchmark</a>
@@ -404,7 +402,6 @@ window.addEventListener('scroll', () => {
   <li><a href="#related-posts" id="toc-related-posts" class="nav-link" data-scroll-target="#related-posts">Related Posts</a></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
@@ -450,9 +447,8 @@ window.addEventListener('scroll', () => {
 
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p><strong>MTEB</strong> spans 8 embedding tasks covering a total of 58 datasets and 112 languages. Through the benchmarking of 33 models on MTEB, we also report key retrieval metrics such as nDCG@10 which often determine the ranking of models on the leaderboard.</p>
 </section>
-<section id="defintion-mteb-mteb-spans-8-embedding-tasks-covering-a-total-of-58-datasets-and-112-languages.-through-the-benchmarking-of-33-models-on-mteb-we-also-report-key-retrieval-metrics-such-as-ndcg10-which-often-determine-the-ranking-of-models-on-the-leaderboard." class="level1">
-<h1>defintion MTEB: MTEB spans 8 embedding tasks covering a total of 58 datasets and 112 languages. Through the benchmarking of 33 models on MTEB, we also report key retrieval metrics such as nDCG@10 which often determine the ranking of models on the leaderboard.</h1>
 <section id="embedding-models" class="level2">
 <h2 class="anchored" data-anchor-id="embedding-models">Embedding models</h2>
 <ul>
@@ -527,10 +523,8 @@ window.addEventListener('scroll', () => {
 </section>
 <section id="tasks-and-evaluation" class="level2">
 <h2 class="anchored" data-anchor-id="tasks-and-evaluation">Tasks and Evaluation</h2>
-</section>
-</section>
-<section id="definition-bitext-mining" class="level1">
-<h1>definition <strong>Bitext Mining</strong></h1>
+<section id="definition-bitext-mining" class="level3">
+<h3 class="anchored" data-anchor-id="definition-bitext-mining">definition <strong>Bitext Mining</strong></h3>
 <p>Inputs are two sets of sentences from two different languages. For each sentence in the first set, the best match in the second set needs to be found.</p>
 <ul>
 <li>The matches are commonly translations.</li>
@@ -556,8 +550,10 @@ window.addEventListener('scroll', () => {
 </ul>
 <hr>
 </section>
-<section id="sidenote-non-transformers-laser-heffernan-et-al.2022-is-the-only-context-aware-non-transformer-model-we-benchmark-relying-on-an-lstm-hochreiter-and-schmidhuber-1997-instead.-similar-to-labse-the-model-trains-on-parallel-data-and-focuses-on-bitext-mining-applications." class="level1">
-<h1>sidenote <strong>Non-Transformers</strong> : LASER (Heffernan et al.,2022) is the only context aware non-transformer model we benchmark, relying on an LSTM (Hochreiter and Schmidhuber, 1997) instead. Similar to LaBSE, the model trains on parallel data and focuses on bitext mining applications.</h1>
+<section id="sidenote-non-transformers-laser-heffernan-et-al.2022-is-the-only-context-aware-non-transformer-model-we-benchmark-relying-on-an-lstm-hochreiter-and-schmidhuber-1997-instead.-similar-to-labse-the-model-trains-on-parallel-data-and-focuses-on-bitext-mining-applications." class="level3">
+<h3 class="anchored" data-anchor-id="sidenote-non-transformers-laser-heffernan-et-al.2022-is-the-only-context-aware-non-transformer-model-we-benchmark-relying-on-an-lstm-hochreiter-and-schmidhuber-1997-instead.-similar-to-labse-the-model-trains-on-parallel-data-and-focuses-on-bitext-mining-applications.">sidenote <strong>Non-Transformers</strong> : LASER (Heffernan et al.,2022) is the only context aware non-transformer model we benchmark, relying on an LSTM (Hochreiter and Schmidhuber, 1997) instead. Similar to LaBSE, the model trains on parallel data and focuses on bitext mining applications.</h3>
+</section>
+</section>
 <section id="analysis" class="level2">
 <h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
 <ul>
@@ -665,7 +661,6 @@ window.addEventListener('scroll', () => {
 </ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1123,7 +1118,7 @@ function copyLink() {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/kareemai\.com\/");
+        var filterRegex = new RegExp("https:\/\/kareemai\.com");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -1515,7 +1510,7 @@ function copyLink() {
     </a>
   </li>  
     <li class="nav-item compact">
-    <a class="nav-link" href="../../../index.xml">
+    <a class="nav-link" href="../../../blog/feed.xml">
       <i class="bi bi-rss" role="img" aria-label="RSS Feed">
 </i> 
     </a>

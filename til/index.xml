@@ -5,13 +5,13 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
+<title>Abdelkareem Elkhateb</title>
 <link>https://kareemai.com/til/</link>
 <atom:link href="https://kareemai.com/til/index.xml" rel="self" type="application/rss+xml"/>
 <description>Latest TILs by Kareem</description>
 <image>
 <url>https://kareemai.com/kareem.jpg</url>
-<title>عبد الكريم الخطيب - Abdelkareem Elkhateb | AI Researcher &amp; Arabic NLP Specialist</title>
+<title>Abdelkareem Elkhateb</title>
 <link>https://kareemai.com/til/</link>
 </image>
 <generator>quarto-1.9.37</generator>
@@ -32,7 +32,7 @@
 <hr>
 <section id="more-from-my-site" class="level3">
 <h3 class="anchored" data-anchor-id="more-from-my-site">More from my site</h3>
-<p>If you enjoyed this reflection on the state of AI research hardware, you might also be interested in my <a href="../../papers.html">Research Papers</a> where I share the results of my work, or my <a href="../../blog/feed.html">Main Blog</a> for deeper technical dives. You can also return to my <a href="../../index.html">Homepage</a>.</p>
+<p>If you enjoyed this reflection on the state of AI research hardware, you might also be interested in my [Research Papers]((../../papers.html) where I share the results of my work, or my [Main Blog]((../../blog/feed.html) for deeper technical dives. You can also return to my [Homepage]((../../index.html).</p>
 
 
 </section>
@@ -127,10 +127,10 @@ font-style: inherit;">}</span></span></code></pre></div></div>
 <h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
 <p>If you’re interested in more about Rust, AI engineering, and my research, explore these sections:</p>
 <ul>
-<li><a href="../../papers.html">My Research Papers</a></li>
-<li><a href="../../oss/opensource.html">Open Source Contributions</a></li>
-<li><a href="../../til/index.html">Today I Learned Index</a></li>
-<li><a href="../../blog/feed.html">Main Blog Index</a></li>
+<li>[My Research Papers]((../../papers.html)</li>
+<li>[Open Source Contributions]((../../oss/opensource.html)</li>
+<li>[Today I Learned Index]((../index.html)</li>
+<li>[Main Blog Index]((../../blog/feed.html)</li>
 </ul>
 
 
@@ -268,7 +268,7 @@ font-style: inherit;">}</span></span></code></pre></div></div>
 </section>
 <section id="internal-resources" class="level3">
 <h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
-<p>If you are interested in more structured deep dives, check out my <a href="../../blog/feed.html">Blog</a> or my <a href="../../papers.html">Research Papers</a>. For my work on tools and libraries, visit the <a href="../../oss/opensource.html">Open Source</a> section. You can also explore more daily notes in the <a href="../../til/index.html">TIL Index</a>.</p>
+<p>If you are interested in more structured deep dives, check out my [Blog]((../../blog/feed.html) or my [Research Papers]((../../papers.html). For my work on tools and libraries, visit the [Open Source]((../../oss/opensource.html) section. You can also explore more daily notes in the [TIL Index]((../index.html).</p>
 
 
 </section>
@@ -585,7 +585,7 @@ font-style: inherit;">"total_tokens"</span>: number_of_tokens</span>
 <p>The key lesson: <strong>don’t assume all tokenizers are equal</strong>. A few hours of evaluation can save months of headaches and significant costs down the line.</p>
 <section id="internal-resources" class="level3">
 <h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
-<p>For more insights into Arabic NLP and AI engineering, visit my <a href="../../papers.html">Research Papers</a> or explore my <a href="../../oss/opensource.html">Open Source Projects</a>. You can also find more daily discoveries in the <a href="../../til/index.html">TIL Index</a>.</p>
+<p>For more insights into Arabic NLP and AI engineering, visit my [Research Papers]((../../papers.html) or explore my [Open Source Projects]((../../oss/opensource.html). You can also find more daily discoveries in the [TIL Index]((../index.html).</p>
 </section>
 </section>
 <section id="code-repository" class="level2">
@@ -700,10 +700,10 @@ font-style: inherit;">"total_tokens"</span>: number_of_tokens</span>
 <h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
 <p>If you found these career reflections and thoughts on the AI field useful, you might also be interested in:</p>
 <ul>
-<li><a href="../../papers.html">My Research Papers</a></li>
-<li><a href="../../oss/opensource.html">Open Source Contributions</a></li>
-<li><a href="../../blog/feed.html">Main Blog Index</a></li>
-<li><a href="../../til/index.html">Today I Learned Index</a></li>
+<li>[My Research Papers]((../../papers.html)</li>
+<li>[Open Source Contributions]((../../oss/opensource.html)</li>
+<li>[Main Blog Index]((../../blog/feed.html)</li>
+<li>[Today I Learned Index]((../index.html)</li>
 </ul>
 
 
@@ -726,9 +726,10 @@ font-style: inherit;">"total_tokens"</span>: number_of_tokens</span>
 
 
 
-<section id="pylate-tutorial-vector-indexing-and-retrieval-with-colbert" class="level1">
-<h1>PyLate Tutorial: Vector Indexing and Retrieval with ColBERT</h1>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <p><strong>PyLate</strong> is a Python library that simplifies dense vector retrieval with ColBERT (Contextualized Late Interaction over BERT). It handles indexing, querying, and evaluation of dense retrieval systems. This guide covers everything you need to work with PyLate in production: data formats, indexing strategies, and evaluation pipelines.</p>
+</section>
 <section id="what-youll-learn" class="level2">
 <h2 class="anchored" data-anchor-id="what-youll-learn">What You’ll Learn</h2>
 <ul>
@@ -952,12 +953,11 @@ font-style: inherit;"># process each negative document</span></span></code></pre
 <ul>
 <li><a href="../../papers.html">My Research Papers</a></li>
 <li><a href="../../oss/opensource.html">Open Source Contributions</a></li>
-<li><a href="../../til/index.html">Today I Learned Index</a></li>
+<li><a href="../index.html">Today I Learned Index</a></li>
 <li><a href="../../blog/feed.html">Main Blog Index</a></li>
 </ul>
 
 
-</section>
 </section>
 </section>
 
@@ -1154,10 +1154,10 @@ font-style: inherit;"># process each negative document</span></span></code></pre
 <h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
 <p>If you’re interested in more about AI engineering and my research, explore these sections:</p>
 <ul>
-<li><a href="../../papers.html">My Research Papers</a></li>
-<li><a href="../../oss/opensource.html">Open Source Contributions</a></li>
-<li><a href="../../til/index.html">Today I Learned Index</a></li>
-<li><a href="../../blog/feed.html">Main Blog Index</a></li>
+<li>[My Research Papers]((../../papers.html)</li>
+<li>[Open Source Contributions]((../../oss/opensource.html)</li>
+<li>[Today I Learned Index]((../index.html)</li>
+<li>[Main Blog Index]((../../blog/feed.html)</li>
 </ul>
 
 
@@ -1267,10 +1267,10 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div></div>
 <h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
 <p>If you’re interested in more about local LLMs and my AI research, explore these sections:</p>
 <ul>
-<li><a href="../../papers.html">My Research Papers</a></li>
-<li><a href="../../oss/opensource.html">Open Source Contributions</a></li>
-<li><a href="../../til/index.html">Today I Learned Index</a></li>
-<li><a href="../../blog/feed.html">Main Blog Index</a></li>
+<li>[My Research Papers]((../../papers.html)</li>
+<li>[Open Source Contributions]((../../oss/opensource.html)</li>
+<li>[Today I Learned Index]((../index.html)</li>
+<li>[Main Blog Index]((../../blog/feed.html)</li>
 </ul>
 
 
@@ -1366,10 +1366,10 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div></div>
 <h3 class="anchored" data-anchor-id="مصادر-إضافية-من-الموقع">مصادر إضافية من الموقع</h3>
 <p>إذا كنت مهتماً بمتابعة رحلتي في هندسة الذكاء الاصطناعي ومعالجة اللغات الطبيعية، يمكنك زيارة الأقسام التالية:</p>
 <ul>
-<li><a href="../../papers.html">أبحاث في معالجة اللغة العربية</a></li>
-<li><a href="../../oss/opensource.html">مشاريع مفتوحة المصدر</a></li>
-<li><a href="../../til/index.html">مدونة “تعلمت اليوم” (TIL)</a></li>
-<li><a href="../../blog/feed.html">فهرس المدونة التقنية</a></li>
+<li>[أبحاث في معالجة اللغة العربية]((../../papers.html)</li>
+<li>[مشاريع مفتوحة المصدر]((../../oss/opensource.html)</li>
+<li>[مدونة “تعلمت اليوم” (TIL)]((../index.html)</li>
+<li>[فهرس المدونة التقنية]((../../blog/feed.html)</li>
 </ul>
 
 
@@ -1486,10 +1486,10 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div></div>
 <h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
 <p>If you’re interested in more about web development and my AI research, explore these sections:</p>
 <ul>
-<li><a href="../../papers.html">My Research Papers</a></li>
-<li><a href="../../oss/opensource.html">Open Source Contributions</a></li>
-<li><a href="../../til/index.html">Today I Learned Index</a></li>
-<li><a href="../../blog/feed.html">Main Blog Index</a></li>
+<li>[My Research Papers]((../../papers.html)</li>
+<li>[Open Source Contributions]((../../oss/opensource.html)</li>
+<li>[Today I Learned Index]((../index.html)</li>
+<li>[Main Blog Index]((../../blog/feed.html)</li>
 </ul>
 
 
@@ -1639,10 +1639,10 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div></div>
 <h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
 <p>If you’re interested in more about AI engineering and my research, explore these sections:</p>
 <ul>
-<li><a href="../../papers.html">My Research Papers</a></li>
-<li><a href="../../oss/opensource.html">Open Source Contributions</a></li>
-<li><a href="../../til/index.html">Today I Learned Index</a></li>
-<li><a href="../../blog/feed.html">Main Blog Index</a></li>
+<li>[My Research Papers]((../../papers.html)</li>
+<li>[Open Source Contributions]((../../oss/opensource.html)</li>
+<li>[Today I Learned Index]((../index.html)</li>
+<li>[Main Blog Index]((../../blog/feed.html)</li>
 </ul>
 
 
