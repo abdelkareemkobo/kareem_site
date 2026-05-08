@@ -124,7 +124,7 @@ In upcoming posts, I will explain the components of Federated Learning in greate
 
 If you're interested in more about AI engineering and my research, explore these sections:
 
-- [My Research Papers](../../../papers.qmd)
-- [Open Source Contributions](../../../oss/opensource.qmd)
-- [Today I Learned: AI Notes](../../../til/index.qmd)
-- [Arabic NLP Blog Posts](../../feed.qmd)
+- [My Research Papers]((../../../papers.html)
+- [Open Source Contributions]((../../../oss/opensource.html)
+- [Today I Learned: AI Notes]((../../../til/index.html)
+- [Arabic NLP Blog Posts]((../../feed.html)

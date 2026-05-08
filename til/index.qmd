@@ -37,7 +37,7 @@ Welcome to my **TIL (Today I Learned)** collection. This is a digital garden whe
 
 In the fast-paced world of technology, especially within the AI and NLP domains, we often encounter small but critical pieces of information that solve specific problems. These might be a particular Python library's edge case, a Rust performance tip, or a specific nuance in processing Arabic script. This repository is my way of capturing those "lightbulb moments" before they fade.
 
-Unlike my long-form [blog posts](../blog/feed.qmd), these notes are brief, unpolished, and focused on single, specific topics. They serve as a quick reference for myself and hopefully a helpful resource for others facing similar technical challenges. If you're looking for my more structured work, you can check out my [Research Papers](../papers.qmd) or my [Open Source Projects](../oss/opensource.qmd).
+Unlike my long-form [blog posts]((../blog/feed.html), these notes are brief, unpolished, and focused on single, specific topics. They serve as a quick reference for myself and hopefully a helpful resource for others facing similar technical challenges. If you're looking for my more structured work, you can check out my [Research Papers]((../papers.html) or my [Open Source Projects]((../oss/opensource.html).
 
 ### Why I Maintain a TIL?
 
@@ -63,4 +63,4 @@ The TILs cover a wide range of topics that reflect my daily work and interests:
 
 - **Developer Tools:** Productivity hacks, CLI tricks, and configuration tips for Linux and macOS environments.
 
-You can browse the entries below. If you have any questions or want to discuss a specific learning, feel free to get in touch with me on my [homepage](../index.qmd).
+You can browse the entries below. If you have any questions or want to discuss a specific learning, feel free to get in touch with me on my [homepage]((../index.html).

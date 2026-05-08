@@ -202,10 +202,10 @@ Then, I will expand on these approaches in blog posts and other materials on top
 
 If you are interested in how these mathematical foundations apply to real-world AI systems, check out these sections:
 
-- [My Research Papers](../../../papers.qmd)
-- [Open Source Projects](../../../oss/opensource.qmd)
-- [Today I Learned: Daily AI Engineering Notes](../../../til/index.qmd)
-- [Arabic NLP Blog Posts](../../feed.qmd)
+- [My Research Papers]((../../../papers.html)
+- [Open Source Projects]((../../../oss/opensource.html)
+- [Today I Learned: Daily AI Engineering Notes]((../../../til/index.html)
+- [Arabic NLP Blog Posts]((../../feed.html)
 
 This approach isn't limited to math. It extends to every skill, including CSS, Deep Learning implementation with pure PyTorch code, and so on.
 

@@ -10,8 +10,9 @@ featured: true
 author: kareem
 ---
 
-Hi!
-These are my thoughts on digital minimalism and staying ahead in AI without burning out.
+As an AI engineer and researcher, I consume a lot of information — papers, blog posts, Twitter threads, Discord discussions. Over time, this turned into a constant state of distraction. I couldn't finish projects because I was always "keeping up."
+
+This post explains why I moved back to RSS, stopped using social media for professional updates, and how digital minimalism helps me stay productive without burning out.
 
 ## The Flood of Information
 
@@ -109,13 +110,36 @@ All my love,
 
 Kareem
 
+## FAQ: Digital Minimalism for Developers
+
+### What is digital minimalism?
+Digital minimalism is a philosophy of using technology intentionally rather than habitually. It means keeping the tools that add real value and removing the ones that fragment your attention — like infinite-scroll social media feeds.
+
+### Is RSS still useful in 2025?
+Yes. RSS is the best way to follow specific sources without algorithms deciding what you see. Tools like [Fluent Reader](https://github.com/yang991178/fluent-reader) and [Feedly](https://feedly.com/) make RSS modern and usable. You can even follow YouTube channels via RSS.
+
+### How do I follow AI research without Twitter?
+Use RSS feeds from sources like [Answer.AI](https://www.answer.ai/), [Hugging Face Blog](https://huggingface.co/blog), [Papers with Code](https://paperswithcode.com/), and individual researchers' blogs. Join focused Discord servers for discussions.
+
+### Does deleting social media hurt your career?
+Not in my experience. I landed two jobs through friend referrals and open-source connections — not LinkedIn. A strong GitHub profile and Hugging Face presence matter more than a polished LinkedIn profile for technical roles.
+
+### What RSS reader should I use?
+I use [Fluent Reader](https://github.com/yang991178/fluent-reader) on desktop and mobile. It's open source, fast, and supports syncing across devices. Other good options include Feedly, Inoreader, and NetNewsWire (Mac/iOS).
+
+## Related Posts
+
+- [Super Productivity Review](/blog/posts/tools_reviews/super_productivity_app.html) — The free open-source task manager I use to stay organized
+- [How I Use NLP for SEO](/blog/posts/seo/how_i_use_nlp_for_seo.html) — Automating content optimization with Python
+- [Huawei Watch GT 4 Review](/blog/posts/products_reviews/Huawei_watch_gt_4_experience.html) — Long-term review of a distraction-free smartwatch
+
 ---
 
 ### Internal Resources
 
 If you found these thoughts on digital minimalism and productivity useful, you might also be interested in:
 
-- [My Research Papers](../../../papers.qmd)
-- [Open Source Projects](../../../oss/opensource.qmd)
-- [Today I Learned: AI Engineering Notes](../../../til/index.qmd)
-- [Arabic NLP Blog Posts](../../feed.qmd)
+- [My Research Papers]((../../../papers.html)
+- [Open Source Projects]((../../../oss/opensource.html)
+- [Today I Learned: AI Engineering Notes]((../../../til/index.html)
+- [Arabic NLP Blog Posts]((../../feed.html)

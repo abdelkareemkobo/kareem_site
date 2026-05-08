@@ -10,7 +10,7 @@ categories:
   - til
 image: "til.jpg"
 ---
-# PyLate Tutorial: Vector Indexing and Retrieval with ColBERT
+## Overview
 
 **PyLate** is a Python library that simplifies dense vector retrieval with ColBERT (Contextualized Late Interaction over BERT). It handles indexing, querying, and evaluation of dense retrieval systems. This guide covers everything you need to work with PyLate in production: data formats, indexing strategies, and evaluation pipelines.
 
@@ -206,7 +206,7 @@ This comprehensive guide covers all the key concepts, trade-offs, and practical 
 
 If you're interested in more about vector retrieval and my AI research, explore these sections:
 
-- [My Research Papers](../../papers.qmd)
-- [Open Source Contributions](../../oss/opensource.qmd)
-- [Today I Learned Index](../index.qmd)
-- [Main Blog Index](../../blog/feed.qmd)
+- [My Research Papers](../../papers.html)
+- [Open Source Contributions](../../oss/opensource.html)
+- [Today I Learned Index](../index.html)
+- [Main Blog Index](../../blog/feed.html)

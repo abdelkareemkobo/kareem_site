@@ -38,6 +38,6 @@ In the rapidly evolving field of Artificial Intelligence, the gap between academ
 
 I believe that for AI to be truly useful, it must be accessible, efficient, and well-understood. This is especially true for the Arabic language, which presents unique linguistic and technical challenges. Through these posts, I aim to provide a resource for fellow engineers and researchers who are passionate about building the next generation of intelligent systems.
 
-By documenting my journey, I hope to contribute to a more robust AI ecosystem. If you are interested in my academic background, you can explore my [Research Papers](../papers.qmd). For a look at the tools and libraries I build, visit my [Open Source Projects](../oss/opensource.qmd). I also maintain a [Today I Learned](../til/index.qmd) section for smaller, daily technical discoveries.
+By documenting my journey, I hope to contribute to a more robust AI ecosystem. If you are interested in my academic background, you can explore my [Research Papers]((../papers.html). For a look at the tools and libraries I build, visit my [Open Source Projects]((../oss/opensource.html). I also maintain a [Today I Learned]((../til/index.html) section for smaller, daily technical discoveries.
 
 Explore the latest posts below, or filter by category to find specific topics of interest.

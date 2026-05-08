@@ -129,7 +129,7 @@ Most delays happen because:
 
 If you're interested in more about web development and my AI research, explore these sections:
 
-- [My Research Papers](../../papers.qmd)
-- [Open Source Contributions](../../oss/opensource.qmd)
-- [Today I Learned Index](../index.qmd)
-- [Main Blog Index](../../blog/feed.qmd)
+- [My Research Papers]((../../papers.html)
+- [Open Source Contributions]((../../oss/opensource.html)
+- [Today I Learned Index]((../index.html)
+- [Main Blog Index]((../../blog/feed.html)

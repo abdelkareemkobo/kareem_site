@@ -47,7 +47,7 @@ image: images/til.jpg
 
 If you found this journey into software engineering fundamentals useful, you might also like:
 
-- [My Blog Index](../../feed.qmd)
-- [Research Papers](../../../papers.qmd)
-- [Open Source Projects](../../../oss/opensource.qmd)
-- [Today I Learned](../../../til/index.qmd)
+- [My Blog Index]((../../feed.html)
+- [Research Papers]((../../../papers.html)
+- [Open Source Projects]((../../../oss/opensource.html)
+- [Today I Learned]((../../../til/index.html)

@@ -46,7 +46,7 @@ Here is the corrected version with grammar errors fixed and improved clarity, wh
 
 If you found these career reflections and thoughts on the AI field useful, you might also be interested in:
 
-- [My Research Papers](../../papers.qmd)
-- [Open Source Contributions](../../oss/opensource.qmd)
-- [Main Blog Index](../../blog/feed.qmd)
-- [Today I Learned Index](../index.qmd)
+- [My Research Papers]((../../papers.html)
+- [Open Source Contributions]((../../oss/opensource.html)
+- [Main Blog Index]((../../blog/feed.html)
+- [Today I Learned Index]((../index.html)

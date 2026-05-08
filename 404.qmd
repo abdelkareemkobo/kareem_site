@@ -9,7 +9,7 @@ comments: false
 
 ::: {.error-404}
 
-# 🤖 404
+## 🤖 404
 
 ### Oops! This page went to train on more data...
 

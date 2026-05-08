@@ -107,6 +107,6 @@ During my time as a staff machine learning engineer at GitHub (2017 - 2022), I l
 
 ## Connect and Explore
 
-My open source work is deeply connected to my research and practical engineering. You can explore the theoretical side of these technologies in my [Research Papers](../papers.qmd) or read about their implementation in production on my [Blog](../blog/feed.qmd).
+My open source work is deeply connected to my research and practical engineering. You can explore the theoretical side of these technologies in my [Research Papers]((../papers.html) or read about their implementation in production on my [Blog]((../blog/feed.html).
 
-For smaller daily updates and technical snippets, check out my [Today I Learned](../til/index.qmd) section. You can also return to my [Homepage](../index.qmd) for a general overview of my work.
+For smaller daily updates and technical snippets, check out my [Today I Learned]((../til/index.html) section. You can also return to my [Homepage]((../index.html) for a general overview of my work.

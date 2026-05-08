@@ -34,4 +34,10 @@ Below is a curated list of my academic publications and research papers, reflect
 
 I am always open to collaborating on research projects related to Arabic NLP, healthcare AI, or model optimization. If you are interested in discussing any of these papers or have ideas for future research, please feel free to reach out.
 
-You can also explore my practical implementations and technical deep dives on my [Blog](blog/feed.qmd) or check out my [Open Source Projects](oss/opensource.qmd) to see how I apply these research concepts in production environments. For a broader overview of my professional background, you can visit my [Homepage](index.qmd).
+You can also explore my practical implementations and technical deep dives on my [Blog]((blog/feed.html) or check out my [Open Source Projects]((oss/opensource.html) to see how I apply these research concepts in production environments. For a broader overview of my professional background, you can visit my [Homepage]((index.html).
+
+### Related Technical Posts
+
+- [MTEB Benchmark Explained](blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.md) — Understanding the standard benchmark for text embedding models
+- [Tiny-GTE Transformer Model](blog/posts/mteb_encoding/tiny-gte_transformer_model.md) — Efficient transformer architecture for embedding tasks
+- [HyperRun: Arabic Embedding Research](blog/posts/nlp/embedding_world/hyperrun.md) — My work on efficient Arabic embedding models

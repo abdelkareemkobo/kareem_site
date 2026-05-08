@@ -16,7 +16,7 @@ This section is dedicated to my upcoming books and long-form technical guides. I
 
 ### Why Long-form Content?
 
-While my [blog](blog/feed.qmd) and [Today I Learned](til/index.qmd) notes are great for quick insights, some topics require a more comprehensive and structured approach. Books allow for a deep dive into architectural patterns, theoretical foundations, and end-to-end implementation details that are often too complex for a single article.
+While my [blog]((blog/feed.html) and [Today I Learned]((til/index.html) notes are great for quick insights, some topics require a more comprehensive and structured approach. Books allow for a deep dive into architectural patterns, theoretical foundations, and end-to-end implementation details that are often too complex for a single article.
 
 ### Current Projects in Progress
 
@@ -28,6 +28,6 @@ While my [blog](blog/feed.qmd) and [Today I Learned](til/index.qmd) notes are gr
 
 The content for these publications is "still cooking" and undergoing thorough review to ensure technical accuracy and clarity. I believe in releasing well-researched and practically applicable material that can serve as a long-term reference for the community.
 
-If you are interested in my academic work in the meantime, please visit my [Research Papers](papers.qmd). I will announce official releases for these books here and on my [main blog](blog/feed.qmd).
+If you are interested in my academic work in the meantime, please visit my [Research Papers]((papers.html). I will announce official releases for these books here and on my [main blog]((blog/feed.html).
 
-You can also find more about my professional background on my [homepage](index.qmd).
+You can also find more about my professional background on my [homepage]((index.html).

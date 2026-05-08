@@ -158,7 +158,7 @@ Lecture 21 : Model Showdown
 
 If you found this review of AI research methodologies useful, you might also be interested in:
 
-- [My Research Papers](../../../papers.qmd)
-- [Open Source Contributions](../../../oss/opensource.qmd)
-- [Today I Learned: AI Engineering Notes](../../../til/index.qmd)
-- [Arabic NLP Blog Posts](../../feed.qmd)
+- [My Research Papers]((../../../papers.html)
+- [Open Source Contributions]((../../../oss/opensource.html)
+- [Today I Learned: AI Engineering Notes]((../../../til/index.html)
+- [Arabic NLP Blog Posts]((../../feed.html)

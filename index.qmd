@@ -18,19 +18,47 @@ twitter-card:
 format:
   html:
     anchor-sections: true
+    include-in-header:
+      text: |
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Abdelkareem Elkhateb",
+          "url": "https://kareemai.com",
+          "image": "https://kareemai.com/kareem.jpg",
+          "jobTitle": "Arabic NLP Researcher & AI Engineer",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Xbites"
+          },
+          "alumniOf": {
+            "@type": "Organization",
+            "name": "Hamza Salem Lab"
+          },
+          "sameAs": [
+            "https://github.com/abdelkareemkobo",
+            "https://scholar.google.com/citations?user=lF1wxvcAAAAJ",
+            "https://www.linkedin.com/in/abdelkareem-elkhateb-202b6b377/",
+            "https://x.com/AbdelkareemElk1",
+            "https://soundcloud.com/abdelkareem-elkhateb"
+          ],
+          "description": "AI Researcher specializing in Arabic NLP. Building efficient embedding models, semantic search systems, and production AI for 500M+ Arabic speakers."
+        }
+        </script>
 ---
 
 ::: {.home-centered}
 
 ::: {.hero-section}
-![](kareem.jpg){.hero-avatar}
+<img src="kareem.jpg" alt="Abdelkareem Elkhateb - Arabic NLP Researcher and AI Engineer" class="hero-avatar">
 
 ::: {.hero-intro}
 # Abdelkareem Elkhateb
 
-**Arabic NLP Researcher.**
+**Arabic NLP Researcher & AI Engineer**
 
-I make AI models small, fast, and actually useful.
+I build efficient AI models, semantic search systems, and production ML pipelines for Arabic and multilingual applications.
 :::
 
 
@@ -65,9 +93,9 @@ I make AI models small, fast, and actually useful.
 
 I'm an NLP Engineer at **[Xbites](https://xbites.io)**, building the AI backend for Darin.
 
-I also research with **[Hamza Salem Lab](https://www.enghamzasalem.com/)** on Arabic embeddings and contributer to **[NAMMA](https://www.namaa.space/)** for open-source Arabic AI.
+I also research with **[Hamza Salem Lab](https://www.enghamzasalem.com/)** on Arabic embeddings and contribute to **[NAMMA](https://www.namaa.space/)** for open-source Arabic AI.
 
-My thesis focuses on making transformers run efficiently on CPUs.
+My thesis focuses on making transformers run efficiently on CPUs. I write about [Arabic NLP](/blog/feed.html), [embedding models](/blog/posts/nlp/embedding_world/hyperrun.html), and [building production AI systems](/blog/posts/seo/how_i_use_nlp_for_seo.html).
 
 <div class="stats-row">
 <div class="stat"><span class="num">7</span><span class="label">papers</span></div>
@@ -110,6 +138,46 @@ GPU pricing & ML benchmarks.
 :::
 
 
+
+---
+
+---
+
+## Recent Writing
+
+::: {.projects-grid}
+
+::: {.project-card}
+### [Super Productivity: Best Free Todo App](/blog/posts/tools_reviews/super_productivity_app.html)
+Why I switched from Todoist to this open-source productivity system after 1.5 years of daily use.
+:::
+
+::: {.project-card}
+### [OnePlus Pad 3 Review](/blog/posts/products_reviews/one_plus_pad_3.html)
+The best Android tablet for productivity in 2025? Snapdragon 8 Elite, 13.2-inch display, and real-world coding experience.
+:::
+
+::: {.project-card}
+### [Huawei Watch GT 4 Long-Term Review](/blog/posts/products_reviews/Huawei_watch_gt_4_experience.html)
+GPS accuracy, 14-day battery life, sleep tracking, and using it in India — one year later.
+:::
+
+::: {.project-card}
+### [MTEB: Massive Text Embedding Benchmark](/blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html)
+A deep dive into the standard benchmark for evaluating text embedding models.
+:::
+
+::: {.project-card}
+### [How I Use NLP for SEO](/blog/posts/seo/how_i_use_nlp_for_seo.html)
+Automating content optimization with Python, Google Search Console API, and semantic similarity.
+:::
+
+::: {.project-card}
+### [Digital Minimalism for AI Engineers](/blog/posts/life_style/back_to_rss.html)
+Why I moved back to RSS, quit social media for professional updates, and how it improved my focus.
+:::
+
+:::
 
 ---
 

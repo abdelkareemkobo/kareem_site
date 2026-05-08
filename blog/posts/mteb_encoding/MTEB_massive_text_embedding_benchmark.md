@@ -18,7 +18,7 @@ image: images/til.jpg
 ---
 ## Introduction
 
-# defintion MTEB: MTEB spans 8 embedding tasks covering a total of 58 datasets and 112 languages. Through the benchmarking of 33 models on MTEB, we also report key retrieval metrics such as nDCG@10 which often determine the ranking of models on the leaderboard.
+**MTEB** spans 8 embedding tasks covering a total of 58 datasets and 112 languages. Through the benchmarking of 33 models on MTEB, we also report key retrieval metrics such as nDCG@10 which often determine the ranking of models on the leaderboard.
 
 ## Embedding models
 
@@ -75,7 +75,7 @@ METB is build on a set of desiderat.
 
 ## Tasks and Evaluation
 
-# definition **Bitext Mining**  
+### definition **Bitext Mining**  
 Inputs are two sets of sentences from two different languages. For each sentence in the first set, the best match in the second set needs to be found.
 
 - The matches are commonly translations.
@@ -119,7 +119,7 @@ Inputs are two sets of sentences from two different languages. For each sentence
 
 ---
 
-# sidenote **Non-Transformers** : LASER (Heffernan et al.,2022) is the only context aware non-transformer model we benchmark, relying on an LSTM (Hochreiter and Schmidhuber, 1997) instead. Similar to LaBSE, the model trains on parallel data and focuses on bitext mining applications.
+### sidenote **Non-Transformers** : LASER (Heffernan et al.,2022) is the only context aware non-transformer model we benchmark, relying on an LSTM (Hochreiter and Schmidhuber, 1997) instead. Similar to LaBSE, the model trains on parallel data and focuses on bitext mining applications.
 
 ## Analysis
 
@@ -170,6 +170,29 @@ Inputs are two sets of sentences from two different languages. For each sentence
 You can check the GTE architecture here, it's highly related to MTEB: [Tiny-GTE Transformer Model](tiny-gte_transformer_model.html)
 
 ---
+
+## FAQ: MTEB Benchmark
+
+### What is MTEB in NLP?
+MTEB (Massive Text Embedding Benchmark) is a standard benchmark for evaluating text embedding models. It spans 8 embedding tasks covering 58 datasets and 112 languages, enabling fair comparison across different models and use cases.
+
+### What does nDCG@10 mean in MTEB?
+nDCG@10 (Normalized Discounted Cumulative Gain at 10) is the main metric for retrieval tasks in MTEB. It measures how well a model ranks relevant documents in the top 10 results, rewarding models that place the most relevant documents higher in the ranking.
+
+### How many datasets are in MTEB?
+MTEB consists of 58 datasets covering 112 languages across 8 tasks: bitext mining, classification, clustering, pair classification, reranking, retrieval, STS, and summarization.
+
+### Which model performs best on MTEB?
+No single model claims state-of-the-art on all MTEB tasks. Performance varies by task: ST5-XXL dominates classification, SGPT-5.8B-msmarco leads retrieval, and MPNet is competitive on clustering and reranking despite being 50x smaller.
+
+### Is MTEB open source?
+Yes, MTEB is fully open source. You can evaluate any embedding model with less than 10 lines of code using the MTEB Python package available on PyPI and GitHub.
+
+## Related Posts
+
+- [Tiny-GTE Transformer Model](tiny-gte_transformer_model.html) — Efficient transformer architecture for embedding tasks
+- [Super Productivity Review](/blog/posts/tools_reviews/super_productivity_app.html) — Best free todo app for researchers
+- [Embedding World: HyperRun](/blog/posts/nlp/embedding_world/hyperrun.html) — My research on Arabic embeddings
 
 ## Conclusion
 

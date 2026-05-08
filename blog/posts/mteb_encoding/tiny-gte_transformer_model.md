@@ -64,7 +64,7 @@ On the Massive Text Embedding Benchmark (MTEB), `tiny-gte` performs impressively
 
 If you're looking for more technical deep dives or information on my research, check out these sections:
 
-- [My Research Papers](../../../papers.qmd)
-- [Open Source Contributions](../../../oss/opensource.qmd)
-- [Today I Learned: AI Engineering Notes](../../../til/index.qmd)
-- [Arabic NLP Blog Posts](../../feed.qmd)
+- [My Research Papers]((../../../papers.html)
+- [Open Source Contributions]((../../../oss/opensource.html)
+- [Today I Learned: AI Engineering Notes]((../../../til/index.html)
+- [Arabic NLP Blog Posts]((../../feed.html)
