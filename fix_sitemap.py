@@ -12,10 +12,7 @@ def fix_sitemap():
     content = sitemap_path.read_text()
     
     # Fix index.html URLs to use clean directory URLs
-    # Replace /index.html with /
     content = re.sub(r'<loc>(https://kareemai\.com)/index\.html</loc>', r'<loc>\1/</loc>', content)
-    
-    # Replace /subdir/index.html with /subdir/
     content = re.sub(r'<loc>(https://kareemai\.com/[^<]+)/index\.html</loc>', r'<loc>\1/</loc>', content)
     
     sitemap_path.write_text(content)

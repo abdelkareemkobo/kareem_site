@@ -153,4 +153,6 @@ HyperRun is still early — here's what I'm working on:
 
 - **Switching embedding models** — let doc authors choose which ColGrep model to use
 
+For a deep dive into the streaming UI architecture, see [HyperRun Deep Dive: FastHTML, HTMX, and SSE](hyperun_fasthtml.html).
+
 If you want to try it or contribute: [github.com/abdelkareemkobo/hyperrun](https://github.com/abdelkareemkobo/hyperrun)

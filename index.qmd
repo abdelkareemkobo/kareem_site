@@ -95,7 +95,7 @@ I'm an NLP Engineer at **[Xbites](https://xbites.io)**, building the AI backend 
 
 I also research with **[Hamza Salem Lab](https://www.enghamzasalem.com/)** on Arabic embeddings and contribute to **[NAMMA](https://www.namaa.space/)** for open-source Arabic AI.
 
-My thesis focuses on making transformers run efficiently on CPUs. I write about [Arabic NLP](/blog/feed.html), [embedding models](/blog/posts/nlp/embedding_world/hyperrun.html), and [building production AI systems](/blog/posts/seo/how_i_use_nlp_for_seo.html).
+My thesis focuses on making transformers run efficiently on CPUs. I write about [Arabic NLP](/blog/feed.html), [embedding models](/blog/posts/nlp/embedding_world/index.html), and [building production AI systems](/blog/posts/seo/how_i_use_nlp_for_seo.html).
 
 <div class="stats-row">
 <div class="stat"><span class="num">7</span><span class="label">papers</span></div>
@@ -178,6 +178,11 @@ Why I moved back to RSS, quit social media for professional updates, and how it 
 :::
 
 :::
+
+<p style="text-align: center; margin-top: 1rem;">
+<a href="/blog/feed.html">View all posts →</a> ·
+<a href="/blog/posts/nlp/embedding_world/index.html">Embedding series →</a>
+</p>
 
 ---
 

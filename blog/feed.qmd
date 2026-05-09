@@ -22,7 +22,7 @@ listing:
   filter-ui: false
   categories: false
   feed: true
-  page-size: 25
+  page-size: 100
   fields: [image, date, title, description, categories, reading-time]
   date-format: "MMM D, YYYY"
   max-description-length: 80

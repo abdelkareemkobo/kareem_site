@@ -1,0 +1,50 @@
+---
+pagetitle: "Embedding Models & Vector Search | Kareem Elkhateb"
+title: "Embedding World"
+description: "Deep dives into text embeddings, vector databases, sparse retrieval, and semantic search. A curated collection of articles on building production-ready search systems."
+image: false
+sidebar: false
+toc: false
+comments: false
+search: true
+open-graph:
+  title: "Embedding Models & Vector Search"
+  description: "Articles on embeddings, BM25, vector DBs, and semantic search"
+  image: "/mind.svg"
+listing:
+  id: embedding-posts
+  type: default
+  image-align: right
+  sort: "date desc"
+  contents:
+   - "*.md"
+   - "*.qmd"
+   - "*.ipynb"
+   - "sparse_embedding/*.md"
+   - "sparse_embedding/*.qmd"
+   - "sparse_embedding/*.ipynb"
+  sort-ui: false
+  filter-ui: false
+  categories: true
+  feed: true
+  page-size: 50
+  fields: [image, date, title, description, categories, reading-time]
+  date-format: "MMM D, YYYY"
+  max-description-length: 80
+---
+
+## Embedding Models, Vector Databases & Semantic Search
+
+This is a curated collection of my writing on **text embeddings**, **sparse retrieval**, **vector databases**, and **semantic search architecture**.
+
+If you're building search systems or RAG pipelines, start here:
+
+- **[HyperRun](hyperrun.html)** — A self-hosted AI docs widget with semantic code search
+- **[HyperRun + FastHTML](hyperun_fasthtml.html)** — Streaming chat architecture with HTMX and SSE
+- **[Late Interaction](late_interaction.html)** — ColBERT and multi-vector retrieval explained
+- **[BM25 from Scratch](sparse_embedding/bm25_from_scratch.html)** — Implementing classical sparse retrieval
+- **[BM25 + Qdrant for Arabic](sparse_embedding/bm25_arabic_qdrant.html)** — Practical sparse+dense hybrid search
+- **[BM25 Benchmarks](sparse_embedding/bm25_benchmark_full.html)** — Full comparison across datasets
+- **[Vector Database Book](vector_database_book.html)** — Notes on building vector search systems
+
+[← Back to all blog posts](/blog/feed.html)
