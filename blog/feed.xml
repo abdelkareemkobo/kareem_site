@@ -675,6 +675,7 @@ font-style: inherit;">&gt;</span></span></code></pre></div></div>
 <li><p><strong>Secure BYOK</strong> — move API keys from session cookies to server-side encrypted storage</p></li>
 <li><p><strong>Switching embedding models</strong> — let doc authors choose which ColGrep model to use</p></li>
 </ul>
+<p>For a deep dive into the streaming UI architecture, see <a href="hyperun_fasthtml.html">HyperRun Deep Dive: FastHTML, HTMX, and SSE</a>.</p>
 <p>If you want to try it or contribute: <a href="https://github.com/abdelkareemkobo/hyperrun">github.com/abdelkareemkobo/hyperrun</a></p>
 
 

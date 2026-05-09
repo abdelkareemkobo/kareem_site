@@ -6,11 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="kareem">
-<meta name="dcterms.date" content="2026-03-19">
-<meta name="description" content="HyperRun is an open-source, self-hosted alternative to RunLLM. Add an AI-powered “Ask AI” chat widget to any docs site using ColGrep semantic code search, Lisette LLM orchestration, and FastHTML. Supports BYOK, multi-provider, and embeds with one line of code.">
+<meta name="description" content="Deep dives into text embeddings, vector databases, sparse retrieval, and semantic search. A curated collection of articles on building production-ready search systems.">
 
-<title>HyperRun + ColGrep: A Self-Hosted Alternative to RunLLM – Abdelkareem Elkhateb</title>
+<title>Embedding Models &amp; Vector Search | Kareem Elkhateb – Abdelkareem Elkhateb</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,41 +24,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -71,6 +34,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../../">
 <link href="../../../../favicon.ico" rel="icon">
+<script src="../../../../site_libs/quarto-listing/list.min.js"></script>
+<script src="../../../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../../../site_libs/quarto-html/popper.min.js"></script>
@@ -112,6 +77,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-embedding-posts .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-date','listing-title','listing-description','listing-categories','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-embedding-posts'] = new List('listing-embedding-posts', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XFPC3M9TMG"></script>
 
 <script type="text/javascript">
@@ -123,17 +117,17 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <!-- Fonts are embedded locally via shimmering-fonts.css -->
-<meta property="og:title" content="HyperRun + ColGrep: A Self-Hosted Alternative to RunLLM – Abdelkareem Elkhateb">
-<meta property="og:description" content="HyperRun is an open-source, self-hosted alternative to RunLLM. Add an AI-powered “Ask AI” chat widget to any docs site using ColGrep semantic code search, Lisette LLM orchestration, and FastHTML. Supports BYOK, multi-provider, and embeds with one line of code.">
-<meta property="og:image" content="https://kareemai.com/blog/posts/nlp/embedding_world/images/colgrep.jpg">
+<link rel="alternate" type="application/rss+xml" title="Abdelkareem Elkhateb" href="index.xml" data-external="1"><meta property="og:title" content="Embedding Models &amp; Vector Search">
+<meta property="og:description" content="Articles on embeddings, BM25, vector DBs, and semantic search">
+<meta property="og:image" content="https://kareemai.com/mind.svg">
 <meta property="og:site_name" content="Abdelkareem Elkhateb">
 <meta property="og:locale" content="en_US">
-<meta name="twitter:title" content="HyperRun + ColGrep: A Self-Hosted Alternative to RunLLM – Abdelkareem Elkhateb">
-<meta name="twitter:description" content="HyperRun is an open-source, self-hosted alternative to RunLLM. Add an AI-powered “Ask AI” chat widget to any docs site using ColGrep semantic code search, Lisette LLM orchestration, and FastHTML. Supports BYOK, multi-provider, and embeds with one line of code.">
-<meta name="twitter:image" content="https://kareemai.com/blog/posts/nlp/embedding_world/images/colgrep.jpg">
+<meta name="twitter:title" content="Embedding Models &amp; Vector Search | Kareem Elkhateb">
+<meta name="twitter:description" content="Deep dives into text embeddings, vector databases, sparse retrieval, and semantic search. A curated collection of articles on building production-ready search systems.">
+<meta name="twitter:image" content="https://kareemai.com/kareem.jpg">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://kareemai.com/blog/posts/nlp/embedding_world/hyperrun.html">
+<link rel="canonical" href="https://kareemai.com/blog/posts/nlp/embedding_world/">
 </head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
@@ -312,10 +306,10 @@ window.addEventListener('scroll', () => {
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "HyperRun + ColGrep: A Self-Hosted Alternative to RunLLM",
-  "description": "HyperRun is an open-source, self-hosted alternative to RunLLM. Add an AI-powered “Ask AI” chat widget to any docs site using ColGrep semantic code search, Lisette LLM orchestration, and FastHTML. Supports BYOK, multi-provider, and embeds with one line of code.",
-  "author": {"@type": "Person", "name": "kareem"},
-  "datePublished": "March 19, 2026",
+  "headline": "Embedding World",
+  "description": "Deep dives into text embeddings, vector databases, sparse retrieval, and semantic search. A curated collection of articles on building production-ready search systems.",
+  "author": {"@type": "Person", "name": "Kareem Elkhateb"},
+  "datePublished": "",
   "publisher": {
     "@type": "Person",
     "name": "Kareem Elkhateb",
@@ -324,6 +318,35 @@ window.addEventListener('scroll', () => {
 }
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../../../shimmering-fonts.css">
 <link rel="stylesheet" href="../../../../styles.css">
@@ -411,61 +434,26 @@ window.addEventListener('scroll', () => {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Contents</h2>
-   
-  <ul>
-  <li><a href="#what-is-hyperrun" id="toc-what-is-hyperrun" class="nav-link active" data-scroll-target="#what-is-hyperrun">What is HyperRun ?</a>
-  <ul class="collapse">
-  <li><a href="#hyperrun-features" id="toc-hyperrun-features" class="nav-link" data-scroll-target="#hyperrun-features">HyperRun Features</a></li>
-  </ul></li>
-  <li><a href="#why-colgrep" id="toc-why-colgrep" class="nav-link" data-scroll-target="#why-colgrep">Why ColGrep</a></li>
-  <li><a href="#how-it-works" id="toc-how-it-works" class="nav-link" data-scroll-target="#how-it-works">How It Works</a>
-  <ul class="collapse">
-  <li><a href="#doc-author-setup" id="toc-doc-author-setup" class="nav-link" data-scroll-target="#doc-author-setup">Doc Author Setup</a></li>
-  <li><a href="#what-happens-when-a-user-asks-a-question" id="toc-what-happens-when-a-user-asks-a-question" class="nav-link" data-scroll-target="#what-happens-when-a-user-asks-a-question">What Happens When a User Asks a Question</a></li>
-  <li><a href="#byok" id="toc-byok" class="nav-link" data-scroll-target="#byok">BYOK</a></li>
-  </ul></li>
-  <li><a href="#whats-next" id="toc-whats-next" class="nav-link" data-scroll-target="#whats-next">What’s Next</a></li>
-  </ul>
-</nav>
-    </div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="YXJhYmlj">arabic <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YmxvZyUyRmJ1aWxkJTJGcHJvamVjdA==">blog/build/project <span class="quarto-category-count">(2)</span></div><div class="category" data-category="YmxvZyUyRnJldmlldyUyRmJvb2s=">blog/review/book <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YmxvZ2dpbmc=">blogging <span class="quarto-category-count">(7)</span></div><div class="category" data-category="ZW1iZWRkaW5n">embedding <span class="quarto-category-count">(4)</span></div><div class="category" data-category="bWluaXNobGFi">minishlab <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bW9kZWwydmVj">model2vec <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cWRyYW50">qdrant <span class="quarto-category-count">(3)</span></div><div class="category" data-category="c3BhcnNl">sparse <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dGls">til <span class="quarto-category-count">(3)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">HyperRun + ColGrep: A Self-Hosted Alternative to RunLLM</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">blogging</div>
-    <div class="quarto-category">til</div>
-    <div class="quarto-category">blog/build/project</div>
-  </div>
-  </div>
+<h1 class="title">Embedding World</h1>
+</div>
 
 <div>
   <div class="description">
-    HyperRun is an open-source, self-hosted alternative to RunLLM. Add an AI-powered “Ask AI” chat widget to any docs site using ColGrep semantic code search, Lisette LLM orchestration, and FastHTML. Supports BYOK, multi-provider, and embeds with one line of code.
+    Deep dives into text embeddings, vector databases, sparse retrieval, and semantic search. A curated collection of articles on building production-ready search systems.
   </div>
 </div>
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>kareem </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">March 19, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -475,149 +463,260 @@ window.addEventListener('scroll', () => {
 </header>
 
 
-<p>Documentation sites are where developers go for answers, but finding what you need in a large codebase can be frustrating.</p>
-<p>RunLLM solved this by adding an “Ask AI” chat widget to docs, letting users ask questions in natural language and get answers grounded in the actual code.</p>
-<p>But RunLLM is closed-source and hosted.</p>
-<p>If you want control over your data, your models, and your costs — you’re out of luck.</p>
+<section id="embedding-models-vector-databases-semantic-search" class="level2">
+<h2 class="anchored" data-anchor-id="embedding-models-vector-databases-semantic-search">Embedding Models, Vector Databases &amp; Semantic Search</h2>
+<p>This is a curated collection of my writing on <strong>text embeddings</strong>, <strong>sparse retrieval</strong>, <strong>vector databases</strong>, and <strong>semantic search architecture</strong>.</p>
+<p>If you’re building search systems or RAG pipelines, start here:</p>
 <ul>
-<li>maybe you want to let the user use its own AI model (BYOK)
-<ul>
-<li>It’s better for the user and no cost for you</li>
-</ul></li>
-<li>Way faster than the RunLLM</li>
+<li><strong><a href="hyperrun.html">HyperRun</a></strong> — A self-hosted AI docs widget with semantic code search</li>
+<li><strong><a href="hyperun_fasthtml.html">HyperRun + FastHTML</a></strong> — Streaming chat architecture with HTMX and SSE</li>
+<li><strong><a href="late_interaction.html">Late Interaction</a></strong> — ColBERT and multi-vector retrieval explained</li>
+<li><strong><a href="sparse_embedding/bm25_from_scratch.html">BM25 from Scratch</a></strong> — Implementing classical sparse retrieval</li>
+<li><strong><a href="sparse_embedding/bm25_arabic_qdrant.html">BM25 + Qdrant for Arabic</a></strong> — Practical sparse+dense hybrid search</li>
+<li><strong><a href="sparse_embedding/bm25_benchmark_full.html">BM25 Benchmarks</a></strong> — Full comparison across datasets</li>
+<li><strong><a href="vector_database_book.html">Vector Database Book</a></strong> — Notes on building vector search systems</li>
 </ul>
-<div class="callout callout-note" data-callout="note">
-<div class="callout-title-container">
-<p><span class="callout-icon-container"><span class="callout-icon"></span></span><span class="callout-title">RunLLM is more than this</span></p>
-</div>
-<div class="callout-body">
-<p>RunLLM is much more than just a chat with your docs. I first found it in the Documentation of DSPy, I liked it and i use it multiple times so i am trying to replicate this part only with other features as opensource</p>
-</div>
-</div>
-<p>HyperRun is my attempt to build an open-source, self-hosted alternative.</p>
-<p>It combines ColGrep’s semantic code search with LLM chat, and can be embedded in any docs site — Quarto, nbdev, MkDocs, or plain GitHub Pages — with a single line of code.</p>
-<section id="what-is-hyperrun" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-hyperrun">What is HyperRun ?</h2>
-<p>HyperRun lets developers add a semantic code search chat widget to their docs.</p>
-<p>Built on <a href="https://github.com/lightonai/colgrep">ColGrep</a> for indexing, <a href="https://lisette.answer.ai">Lisette</a> for LLM orchestration, and <a href="https://fastht.ml">FastHTML</a> for the UI.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/pylate_hyperun.jpg" class="img-fluid figure-img"></p>
-<figcaption>pylate_hyperun</figcaption>
-</figure>
-</div>
-<section id="hyperrun-features" class="level3">
-<h3 class="anchored" data-anchor-id="hyperrun-features">HyperRun Features</h3>
-<ul>
-<li><p><strong>Semantic code search</strong> — powered by ColGrep’s late-interaction retrieval</p></li>
-<li><p><strong>Streaming chat</strong> — SSE-based responses via HTMX</p></li>
-<li><p><strong>Multi-provider</strong> — supports Anthropic, OpenAI, Google and more via LiteLLM</p></li>
-<li><p><strong>BYOK</strong> — users bring their own API key</p></li>
-<li><p><strong>Chat history</strong> — persistent conversations per session</p></li>
-<li><p><strong>Cost tracking</strong> — per-session token cost display</p></li>
-<li><p><strong>DaisyUI styled</strong> — floating widget with chat bubbles and markdown rendering</p></li>
-<li><p><strong>Embeddable</strong> — drop into any static site (Quarto, MkDocs, GitHub Pages) with one snippet</p></li>
-</ul>
-</section>
-</section>
-<section id="why-colgrep" class="level2">
-<h2 class="anchored" data-anchor-id="why-colgrep">Why ColGrep</h2>
-<p>Most coding agents still use <code>grep</code> to search codebases.</p>
-<p>It works — but it’s pure pattern matching.</p>
-<p>If you don’t know the exact function name, you’re stuck guessing.</p>
-<p>Semantic search (RAG) solves this but introduces problems:</p>
-<ul>
-<li><p>Requires remote storage of your code (security concern)</p></li>
-<li><p>Needs a separate vector DB service running</p></li>
-<li><p>Keeping the index in sync with a fast-moving codebase is hard</p></li>
-</ul>
-<p>ColGrep takes a completely different approach. It’s a Rust CLI tool built by LightOn that:</p>
-<ul>
-<li><p><strong>Mirrors the grep interface</strong> — agents already know how to use it</p></li>
-<li><p><strong>Runs entirely locally</strong> — no remote storage, no separate API service</p></li>
-<li><p><strong>Uses late-interaction retrieval</strong> (ColBERT-style) via LateOn-Code models — not traditional embeddings</p>
-<ul>
-<li>We are using their specialized coding retrieval model 17M</li>
-</ul></li>
-<li><p><strong>Supports hybrid queries</strong> — regex filtering first, then semantic ranking on the filtered results</p></li>
-<li><p><strong>Incremental index updates</strong> — only re-indexes changed files, not the whole repo</p>
-<ul>
-<li>They are using a nice hashing trick 😎</li>
-</ul></li>
-<li><p><strong>Tree-sitter parsing</strong> — extracts functions, classes, signatures, call graphs — not just raw text chunks</p></li>
-</ul>
-<p>The results speak for themselves:</p>
-<ul>
-<li><p>Won <strong>70% of head-to-head comparisons</strong> against vanilla grep with Claude Code</p></li>
-<li><p>Cut token usage by <strong>15.7%</strong> on average</p></li>
-<li><p><strong>56% fewer search operations</strong> needed to find the right code</p></li>
-<li><p>Hard conceptual questions (where you describe behavior, not function names) benefit the most</p></li>
-</ul>
-<div class="callout callout-note" data-callout="note">
-<div class="callout-title-container">
-<p><span class="callout-icon-container"><span class="callout-icon"></span></span><span class="callout-title">Late-interaction vs traditional embeddings</span></p>
-</div>
-<div class="callout-body">
+<p><a href="../../../../blog/feed.html">← Back to all blog posts</a></p>
 
-</div>
-</div>
-<blockquote class="blockquote">
-<p>Traditional embeddings compress an entire code block into a single vector — losing detail.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Late-interaction models (like ColBERT) keep per-token vectors, so they can do soft matching between query terms and code tokens.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>This is why ColGrep handles “find the function that inserts articles into the database” better than a single-vector approach.</p>
-</blockquote>
-<p>For HyperRun, ColGrep is the retrieval layer — it finds the relevant code semantically, then Lisette sends it to the LLM for a conversational answer.</p>
-</section>
-<section id="how-it-works" class="level2">
-<h2 class="anchored" data-anchor-id="how-it-works">How It Works</h2>
-<p>HyperRun has two sides — the <strong>Doc Author</strong> who sets it up, and the <strong>End User</strong> who asks questions.</p>
-<section id="doc-author-setup" class="level3">
-<h3 class="anchored" data-anchor-id="doc-author-setup">Doc Author Setup</h3>
-<ol type="1">
-<li>Point HyperRun at your codebase via <code>.env</code></li>
-<li>On startup, ColGrep indexes the repo automatically — <code>colgrep init</code> runs if no index exists</li>
-<li>Add one line to your docs:</li>
-</ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>script src<span class="op">=</span><span class="st">"https://your-server/embed"</span><span class="op">&gt;&lt;/</span>script<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>That’s it. Works with Quarto, nbdev, MkDocs, GitHub Pages — anything that serves HTML.</p>
-</section>
-<section id="what-happens-when-a-user-asks-a-question" class="level3">
-<h3 class="anchored" data-anchor-id="what-happens-when-a-user-asks-a-question">What Happens When a User Asks a Question</h3>
-<ol type="1">
-<li>User clicks “💬 Ask AI” → floating chat panel opens</li>
-<li>User types a question → sent to the server via HTMX</li>
-<li>Server calls <code>colgrep</code> with the query → gets the top matching code snippets</li>
-<li>Lisette’s <code>AsyncChat</code> sends the snippets + question to the LLM as a tool call</li>
-<li>LLM response streams back via SSE → rendered as markdown in the chat bubble</li>
-</ol>
-<p><strong>The LLM never sees your whole codebase — only the relevant snippets ColGrep finds.</strong> This keeps context small, responses fast, and costs low.</p>
-</section>
-<section id="byok" class="level3">
-<h3 class="anchored" data-anchor-id="byok">BYOK</h3>
-<p>End users can click the ⚙️ settings icon, pick a provider (Anthropic, OpenAI, Google, etc.), enter their own API key, and choose a model — all dynamically populated from LiteLLM.</p>
-</section>
-</section>
-<section id="whats-next" class="level2">
-<h2 class="anchored" data-anchor-id="whats-next">What’s Next</h2>
-<p>HyperRun is still early — here’s what I’m working on:</p>
-<ul>
-<li><p><strong>Citations</strong> — show which code snippets the LLM used to answer, so users can verify</p></li>
-<li><p><strong>GitHub Actions</strong> — auto re-index on push, auto deploy the server — zero manual steps</p></li>
-<li><p><strong>Better nbdev support</strong> — ColGrep struggles with <code>.ipynb</code> files, so we index the exported <code>.py</code> package for now</p></li>
-<li><p><strong>Secure BYOK</strong> — move API keys from session cookies to server-side encrypted storage</p></li>
-<li><p><strong>Switching embedding models</strong> — let doc authors choose which ColGrep model to use</p></li>
-</ul>
-<p>For a deep dive into the streaming UI architecture, see <a href="hyperun_fasthtml.html">HyperRun Deep Dive: FastHTML, HTMX, and SSE</a>.</p>
-<p>If you want to try it or contribute: <a href="https://github.com/abdelkareemkobo/hyperrun">github.com/abdelkareemkobo/hyperrun</a></p>
 
 
 </section>
 
-</main> <!-- /main -->
+<div class="quarto-listing quarto-listing-container-default" id="listing-embedding-posts">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="YmxvZ2dpbmclMkN0aWwlMkNibG9nJTJGcmV2aWV3JTJGYm9vaw==" data-listing-date-sort="1776463200000" data-listing-file-modified-sort="1776536351884" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="275">
+<div class="thumbnail"><a href="../../../../blog/posts/nlp/embedding_world/vector_database_book.html" class="no-external">
+
+<img loading="lazy" src="../../../../blog/posts/nlp/embedding_world/images/vector_database_book.jpg" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../../../../blog/posts/nlp/embedding_world/vector_database_book.html" class="no-external">Vector Databases - O’reilly By Nitin Borwankar</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmxvZyUyRnJldmlldyUyRmJvb2s='); return false;">blog/review/book</div>
+
+</div>
+<div class="delink listing-description"><a href="../../../../blog/posts/nlp/embedding_world/vector_database_book.html" class="no-external">
+<p>Review of a new book about Vector database from O’reilly</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../../../../blog/posts/nlp/embedding_world/vector_database_book.html" class="no-external">
+<div class="listing-date">
+Apr 18, 2026
+</div>
+<div class="listing-reading-time">2 min</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="YmxvZ2dpbmclMkN0aWwlMkNibG9nJTJGYnVpbGQlMkZwcm9qZWN0" data-listing-date-sort="1773871200000" data-listing-file-modified-sort="1778330164342" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="875">
+<div class="thumbnail"><a href="../../../../blog/posts/nlp/embedding_world/hyperrun.html" class="no-external">
+
+<img loading="lazy" src="../../../../blog/posts/nlp/embedding_world/images/colgrep.jpg" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../../../../blog/posts/nlp/embedding_world/hyperrun.html" class="no-external">HyperRun + ColGrep: A Self-Hosted Alternative to RunLLM</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmxvZyUyRmJ1aWxkJTJGcHJvamVjdA=='); return false;">blog/build/project</div>
+
+</div>
+<div class="delink listing-description"><a href="../../../../blog/posts/nlp/embedding_world/hyperrun.html" class="no-external">
+<p>HyperRun is an open-source, self-hosted alternative to RunLLM. Add an…</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../../../../blog/posts/nlp/embedding_world/hyperrun.html" class="no-external">
+<div class="listing-date">
+Mar 19, 2026
+</div>
+<div class="listing-reading-time">5 min</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="YmxvZ2dpbmclMkN0aWwlMkNibG9nJTJGYnVpbGQlMkZwcm9qZWN0" data-listing-date-sort="1773871200000" data-listing-file-modified-sort="1773974432240" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="22" data-listing-word-count-sort="4300">
+<div class="thumbnail"><a href="../../../../blog/posts/nlp/embedding_world/hyperun_fasthtml.html" class="no-external">
+
+<img loading="lazy" src="../../../../blog/posts/nlp/embedding_world/images/colgrep.jpg" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../../../../blog/posts/nlp/embedding_world/hyperun_fasthtml.html" class="no-external">HyperRun Deep Dive: Streaming Chat Architecture with FastHTML, HTMX, and SSE</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmxvZyUyRmJ1aWxkJTJGcHJvamVjdA=='); return false;">blog/build/project</div>
+
+</div>
+<div class="delink listing-description"><a href="../../../../blog/posts/nlp/embedding_world/hyperun_fasthtml.html" class="no-external">
+<p>How I built a real-time AI chat widget with zero React, zero WebSockets, and…</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../../../../blog/posts/nlp/embedding_world/hyperun_fasthtml.html" class="no-external">
+<div class="listing-date">
+Mar 19, 2026
+</div>
+<div class="listing-reading-time">22 min</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="YmxvZ2dpbmclMkNlbWJlZGRpbmclMkNxZHJhbnQ=" data-listing-date-sort="1766181600000" data-listing-file-modified-sort="1772249508003" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="414">
+<div class="thumbnail"><a href="../../../../blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html" class="no-external">
+
+<img loading="lazy" src="../../../../blog/posts/nlp/embedding_world/sparse_embedding/images/bm25.png" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../../../../blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html" class="no-external">BM25 Part 3: Benchmarking Python BM25 Libraries</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZW1iZWRkaW5n'); return false;">embedding</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cWRyYW50'); return false;">qdrant</div>
+
+</div>
+<div class="delink listing-description"><a href="../../../../blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html" class="no-external">
+<p>Benchmarking BM25 implementations: bm25-sparse, rankbm25, numpy vectorization…</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../../../../blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html" class="no-external">
+<div class="listing-date">
+Dec 20, 2025
+</div>
+<div class="listing-reading-time">3 min</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-categories="YmxvZ2dpbmclMkNlbWJlZGRpbmclMkNxZHJhbnQlMkNzcGFyc2U=" data-listing-date-sort="1766095200000" data-listing-file-modified-sort="1768822688105" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1386">
+<div class="thumbnail"><a href="../../../../blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html" class="no-external">
+
+<img loading="lazy" src="../../../../blog/posts/nlp/embedding_world/sparse_embedding/images/xbites_chat.png" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../../../../blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html" class="no-external">BM25 Explained Part 2 | Qdrant hybrid search for real estate</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZW1iZWRkaW5n'); return false;">embedding</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cWRyYW50'); return false;">qdrant</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c3BhcnNl'); return false;">sparse</div>
+
+</div>
+<div class="delink listing-description"><a href="../../../../blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html" class="no-external">
+<p>Step-by-step guide to building a bilingual hybrid search system using Qdrant…</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../../../../blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html" class="no-external">
+<div class="listing-date">
+Dec 19, 2025
+</div>
+<div class="listing-reading-time">7 min</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-categories="YmxvZ2dpbmclMkNlbWJlZGRpbmclMkNxZHJhbnQ=" data-listing-date-sort="1766095200000" data-listing-file-modified-sort="1768822675527" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="786">
+<div class="thumbnail"><a href="../../../../blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html" class="no-external">
+
+<img loading="lazy" src="../../../../blog/posts/nlp/embedding_world/sparse_embedding/images/bm25.png" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../../../../blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html" class="no-external">BM25 Search Algorithm: Python Implementation from Scratch</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZW1iZWRkaW5n'); return false;">embedding</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cWRyYW50'); return false;">qdrant</div>
+
+</div>
+<div class="delink listing-description"><a href="../../../../blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html" class="no-external">
+<p>Learn how BM25 improves search relevance over TF-IDF. This guide covers the…</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../../../../blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html" class="no-external">
+<div class="listing-date">
+Dec 19, 2025
+</div>
+<div class="listing-reading-time">4 min</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-categories="YmxvZ2dpbmclMkNlbWJlZGRpbmclMkNtaW5pc2hsYWIlMkNtb2RlbDJ2ZWMlMkNhcmFiaWM=" data-listing-date-sort="1747256400000" data-listing-file-modified-sort="1778148711906" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="869">
+<div class="thumbnail"><a href="../../../../blog/posts/nlp/embedding_world/late_interaction.html" class="no-external">
+
+<img loading="lazy" src="../../../../blog/posts/nlp/embedding_world/images/minishlab.jpg" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../../../../blog/posts/nlp/embedding_world/late_interaction.html" class="no-external">Late Interaction &amp; ColPali: Efficient Semantic Search</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZW1iZWRkaW5n'); return false;">embedding</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('bWluaXNobGFi'); return false;">minishlab</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('bW9kZWwydmVj'); return false;">model2vec</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YXJhYmlj'); return false;">arabic</div>
+
+</div>
+<div class="delink listing-description"><a href="../../../../blog/posts/nlp/embedding_world/late_interaction.html" class="no-external">
+<p>Explore Late Interaction models like ColBERT and ColPali for efficient…</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../../../../blog/posts/nlp/embedding_world/late_interaction.html" class="no-external">
+<div class="listing-date">
+May 15, 2025
+</div>
+<div class="listing-reading-time">5 min</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const root =
@@ -1399,38 +1498,6 @@ function copyLink() {
     }
   });
   </script>
-<input type="hidden" id="giscus-base-theme" value="preferred_color_scheme">
-<input type="hidden" id="giscus-alt-theme" value="preferred_color_scheme">
-<script>
-  function loadGiscus() {
-    // Function to get the theme based on body class
-    const getTheme = () => {
-      let baseTheme = document.getElementById('giscus-base-theme').value;
-      let altTheme = document.getElementById('giscus-alt-theme').value;
-      if (authorPrefersDark) {
-          [baseTheme, altTheme] = [altTheme, baseTheme];
-      }
-      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
-    };
-    const script = document.createElement("script");
-    script.src = "https://giscus.app/client.js";
-    script.async = true;
-    script.dataset.repo = "abdelkareemkobo/kareem_site";
-    script.dataset.repoId = "R_kgDOQxY8kw";
-    script.dataset.category = "Comments";
-    script.dataset.categoryId = "DIC_kwDOQxY8k84C0aRf";
-    script.dataset.mapping = "pathname";
-    script.dataset.reactionsEnabled = "1";
-    script.dataset.emitMetadata = "0";
-    script.dataset.inputPosition = "top";
-    script.dataset.theme = getTheme();
-    script.dataset.lang = "en";
-    script.crossOrigin = "anonymous";
-    // Append the script to the desired div instead of at the end of the body
-    document.getElementById("quarto-content").appendChild(script);
-  }
-  loadGiscus();
-</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
