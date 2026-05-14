@@ -10,12 +10,12 @@
 <atom:link href="https://kareemai.com/blog/posts/nlp/embedding_world/index.xml" rel="self" type="application/rss+xml"/>
 <description>Deep dives into text embeddings, vector databases, sparse retrieval, and semantic search. A curated collection of articles on building production-ready search systems.</description>
 <image>
-<url>https://kareemai.com/kareem.jpg</url>
+<url>https://kareemai.com/kareem.webp</url>
 <title>Abdelkareem Elkhateb</title>
 <link>https://kareemai.com/blog/posts/nlp/embedding_world/</link>
 </image>
-<generator>quarto-1.9.37</generator>
-<lastBuildDate>Fri, 17 Apr 2026 22:00:00 GMT</lastBuildDate>
+<generator>quarto-1.9.36</generator>
+<lastBuildDate>Fri, 17 Apr 2026 21:00:00 GMT</lastBuildDate>
 <item>
   <title>Vector Databases - O’reilly By Nitin Borwankar</title>
   <dc:creator>kareem </dc:creator>
@@ -80,8 +80,8 @@
   <category>til</category>
   <category>blog/review/book</category>
   <guid>https://kareemai.com/blog/posts/nlp/embedding_world/vector_database_book.html</guid>
-  <pubDate>Fri, 17 Apr 2026 22:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/images/vector_database_book.jpg" medium="image" type="image/jpeg"/>
+  <pubDate>Fri, 17 Apr 2026 21:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/images/vector_database_book.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>HyperRun + ColGrep: A Self-Hosted Alternative to RunLLM</title>
@@ -120,7 +120,7 @@
 <p>Built on <a href="https://github.com/lightonai/colgrep">ColGrep</a> for indexing, <a href="https://lisette.answer.ai">Lisette</a> for LLM orchestration, and <a href="https://fastht.ml">FastHTML</a> for the UI.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/nlp/embedding_world/images/pylate_hyperun.jpg" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/blog/posts/nlp/embedding_world/images/pylate_hyperun.webp" class="img-fluid figure-img"></p>
 <figcaption>pylate_hyperun</figcaption>
 </figure>
 </div>
@@ -250,8 +250,8 @@ font-style: inherit;">&gt;</span></span></code></pre></div></div>
   <category>til</category>
   <category>blog/build/project</category>
   <guid>https://kareemai.com/blog/posts/nlp/embedding_world/hyperrun.html</guid>
-  <pubDate>Wed, 18 Mar 2026 22:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/images/colgrep.jpg" medium="image" type="image/jpeg"/>
+  <pubDate>Wed, 18 Mar 2026 21:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/images/colgrep.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>HyperRun Deep Dive: Streaming Chat Architecture with FastHTML, HTMX, and SSE</title>
@@ -1145,8 +1145,8 @@ font-style: inherit;"># ✓ works</span></span></code></pre></div></div>
   <category>til</category>
   <category>blog/build/project</category>
   <guid>https://kareemai.com/blog/posts/nlp/embedding_world/hyperun_fasthtml.html</guid>
-  <pubDate>Wed, 18 Mar 2026 22:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/images/colgrep.jpg" medium="image" type="image/jpeg"/>
+  <pubDate>Wed, 18 Mar 2026 21:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/images/colgrep.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>BM25 Part 3: Benchmarking Python BM25 Libraries</title>
@@ -3253,7 +3253,7 @@ QPS: 1627.94
   <category>embedding</category>
   <category>qdrant</category>
   <guid>https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html</guid>
-  <pubDate>Fri, 19 Dec 2025 22:00:00 GMT</pubDate>
+  <pubDate>Fri, 19 Dec 2025 21:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/bm25.png" medium="image" type="image/png" height="98" width="144"/>
 </item>
 <item>
@@ -4009,7 +4009,7 @@ font-style: inherit;">"6th Settlement Apartment"</span>, your_query_embedding)</
   <category>qdrant</category>
   <category>sparse</category>
   <guid>https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html</guid>
-  <pubDate>Thu, 18 Dec 2025 22:00:00 GMT</pubDate>
+  <pubDate>Thu, 18 Dec 2025 21:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/xbites_chat.png" medium="image" type="image/png" height="153" width="144"/>
 </item>
 <item>
@@ -4850,7 +4850,7 @@ Query: 'love python'
   <category>embedding</category>
   <category>qdrant</category>
   <guid>https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html</guid>
-  <pubDate>Thu, 18 Dec 2025 22:00:00 GMT</pubDate>
+  <pubDate>Thu, 18 Dec 2025 21:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/bm25.png" medium="image" type="image/png" height="98" width="144"/>
 </item>
 <item>

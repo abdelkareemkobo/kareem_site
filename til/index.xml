@@ -10,12 +10,12 @@
 <atom:link href="https://kareemai.com/til/index.xml" rel="self" type="application/rss+xml"/>
 <description>Latest TILs by Kareem</description>
 <image>
-<url>https://kareemai.com/kareem.jpg</url>
+<url>https://kareemai.com/kareem.webp</url>
 <title>Abdelkareem Elkhateb</title>
 <link>https://kareemai.com/til/</link>
 </image>
-<generator>quarto-1.9.37</generator>
-<lastBuildDate>Sun, 14 Dec 2025 22:00:00 GMT</lastBuildDate>
+<generator>quarto-1.9.36</generator>
+<lastBuildDate>Sun, 14 Dec 2025 21:00:00 GMT</lastBuildDate>
 <item>
   <title>AI Research Challenges: The GPU Barrier for Researchers</title>
   <dc:creator>kareem </dc:creator>
@@ -32,7 +32,7 @@
 <hr>
 <section id="more-from-my-site" class="level3">
 <h3 class="anchored" data-anchor-id="more-from-my-site">More from my site</h3>
-<p>If you enjoyed this reflection on the state of AI research hardware, you might also be interested in my [Research Papers]((../../papers.html) where I share the results of my work, or my [Main Blog]((../../blog/feed.html) for deeper technical dives. You can also return to my [Homepage]((../../index.html).</p>
+<p>If you enjoyed this reflection on the state of AI research hardware, you might also be interested in my <a href="../../papers.html">Research Papers</a> where I share the results of my work, or my <a href="../../blog/feed.html">Main Blog</a> for deeper technical dives. You can also return to my <a href="../../index.html">Homepage</a>.</p>
 
 
 </section>
@@ -42,8 +42,8 @@
   <category>til</category>
   <category>blog/opinion/tech</category>
   <guid>https://kareemai.com/til/tils/2025-12-15.html</guid>
-  <pubDate>Sun, 14 Dec 2025 22:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/til/tils/til.jpg" medium="image" type="image/jpeg"/>
+  <pubDate>Sun, 14 Dec 2025 21:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/til/tils/til.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>Rust for Machine Learning: Building AI Tools and Data Pipelines in 2026</title>
@@ -127,10 +127,10 @@ font-style: inherit;">}</span></span></code></pre></div></div>
 <h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
 <p>If you’re interested in more about Rust, AI engineering, and my research, explore these sections:</p>
 <ul>
-<li>[My Research Papers]((../../papers.html)</li>
-<li>[Open Source Contributions]((../../oss/opensource.html)</li>
-<li>[Today I Learned Index]((../index.html)</li>
-<li>[Main Blog Index]((../../blog/feed.html)</li>
+<li><a href="../../papers.html">My Research Papers</a></li>
+<li><a href="../../oss/opensource.html">Open Source Contributions</a></li>
+<li><a href="../index.html">Today I Learned Index</a></li>
+<li><a href="../../blog/feed.html">Main Blog Index</a></li>
 </ul>
 
 
@@ -144,8 +144,8 @@ font-style: inherit;">}</span></span></code></pre></div></div>
   <category>blog/status/published</category>
   <category>rust</category>
   <guid>https://kareemai.com/til/tils/2025-12-14.html</guid>
-  <pubDate>Sat, 13 Dec 2025 22:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/til/tils/til.jpg" medium="image" type="image/jpeg"/>
+  <pubDate>Sat, 13 Dec 2025 21:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/til/tils/til.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>Arabic NLP Fundamentals: From Sparse Embeddings and BM25 to Dynamic Programming</title>
@@ -268,7 +268,7 @@ font-style: inherit;">}</span></span></code></pre></div></div>
 </section>
 <section id="internal-resources" class="level3">
 <h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
-<p>If you are interested in more structured deep dives, check out my [Blog]((../../blog/feed.html) or my [Research Papers]((../../papers.html). For my work on tools and libraries, visit the [Open Source]((../../oss/opensource.html) section. You can also explore more daily notes in the [TIL Index]((../index.html).</p>
+<p>If you are interested in more structured deep dives, check out my <a href="../../blog/feed.html">Blog</a> or my <a href="../../papers.html">Research Papers</a>. For my work on tools and libraries, visit the <a href="../../oss/opensource.html">Open Source</a> section. You can also explore more daily notes in the <a href="../index.html">TIL Index</a>.</p>
 
 
 </section>
@@ -281,8 +281,8 @@ font-style: inherit;">}</span></span></code></pre></div></div>
   <category>blog/status/complete</category>
   <category>blog/learn/journey</category>
   <guid>https://kareemai.com/til/tils/2025-12-13.html</guid>
-  <pubDate>Fri, 12 Dec 2025 22:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/til/tils/til.jpg" medium="image" type="image/jpeg"/>
+  <pubDate>Fri, 12 Dec 2025 21:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/til/tils/til.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>Arabic Tokenizer Comparison: AraModernBert vs AraBERT v2 (With Metrics)</title>
@@ -585,7 +585,7 @@ font-style: inherit;">"total_tokens"</span>: number_of_tokens</span>
 <p>The key lesson: <strong>don’t assume all tokenizers are equal</strong>. A few hours of evaluation can save months of headaches and significant costs down the line.</p>
 <section id="internal-resources" class="level3">
 <h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
-<p>For more insights into Arabic NLP and AI engineering, visit my [Research Papers]((../../papers.html) or explore my [Open Source Projects]((../../oss/opensource.html). You can also find more daily discoveries in the [TIL Index]((../index.html).</p>
+<p>For more insights into Arabic NLP and AI engineering, visit my <a href="../../papers.html">Research Papers</a> or explore my <a href="../../oss/opensource.html">Open Source Projects</a>. You can also find more daily discoveries in the <a href="../index.html">TIL Index</a>.</p>
 </section>
 </section>
 <section id="code-repository" class="level2">
@@ -653,7 +653,7 @@ font-style: inherit;">"total_tokens"</span>: number_of_tokens</span>
   <category>blog/status/complete</category>
   <guid>https://kareemai.com/til/tils/2025-10-21.html</guid>
   <pubDate>Mon, 20 Oct 2025 21:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/til/tils/til.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://kareemai.com/til/tils/til.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>AI Engineering Careers: Connecting with Minds in Machine Learning</title>
@@ -700,10 +700,10 @@ font-style: inherit;">"total_tokens"</span>: number_of_tokens</span>
 <h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
 <p>If you found these career reflections and thoughts on the AI field useful, you might also be interested in:</p>
 <ul>
-<li>[My Research Papers]((../../papers.html)</li>
-<li>[Open Source Contributions]((../../oss/opensource.html)</li>
-<li>[Main Blog Index]((../../blog/feed.html)</li>
-<li>[Today I Learned Index]((../index.html)</li>
+<li><a href="../../papers.html">My Research Papers</a></li>
+<li><a href="../../oss/opensource.html">Open Source Contributions</a></li>
+<li><a href="../../blog/feed.html">Main Blog Index</a></li>
+<li><a href="../index.html">Today I Learned Index</a></li>
 </ul>
 
 
@@ -714,7 +714,7 @@ font-style: inherit;">"total_tokens"</span>: number_of_tokens</span>
   <category>til</category>
   <guid>https://kareemai.com/til/tils/2025-06-06-til.html</guid>
   <pubDate>Thu, 05 Jun 2025 21:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/til/tils/til.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://kareemai.com/til/tils/til.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>PyLate Tutorial: Vector Indexing and Retrieval with ColBERT (Complete Guide)</title>
@@ -966,7 +966,7 @@ font-style: inherit;"># process each negative document</span></span></code></pre
   <category>til</category>
   <guid>https://kareemai.com/til/tils/2025-05-28-til.html</guid>
   <pubDate>Tue, 27 May 2025 21:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/til/tils/til.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://kareemai.com/til/tils/til.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>Meta’s RAPTOR RAG, DFloat11 Compression &amp; Pyrefly Guide</title>
@@ -992,7 +992,7 @@ font-style: inherit;"># process each negative document</span></span></code></pre
 <h2 class="anchored" data-anchor-id="what-is-raptor-rag-complete-guide-to-metas-raptor-technique">What is RAPTOR RAG? Complete Guide to Meta’s RAPTOR Technique</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/til/tils/images/raptor.png" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/til/tils/images/raptor.webp" class="img-fluid figure-img"></p>
 <figcaption>raptor rag</figcaption>
 </figure>
 </div>
@@ -1025,7 +1025,7 @@ font-style: inherit;"># process each negative document</span></span></code></pre
 <h3 class="anchored" data-anchor-id="querying-raptor-rag">Querying RAPTOR RAG</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/til/tils/images/raptor_query.png" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/til/tils/images/raptor_query.webp" class="img-fluid figure-img"></p>
 <figcaption>query RAPTOR rag</figcaption>
 </figure>
 </div>
@@ -1062,7 +1062,7 @@ font-style: inherit;"># process each negative document</span></span></code></pre
 <h3 class="anchored" data-anchor-id="how-dfloat11-works">How DFloat11 Works</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/til/tils/images/df11.png" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/til/tils/images/df11.webp" class="img-fluid figure-img"></p>
 <figcaption>DFloat11 encoding</figcaption>
 </figure>
 </div>
@@ -1154,10 +1154,10 @@ font-style: inherit;"># process each negative document</span></span></code></pre
 <h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
 <p>If you’re interested in more about AI engineering and my research, explore these sections:</p>
 <ul>
-<li>[My Research Papers]((../../papers.html)</li>
-<li>[Open Source Contributions]((../../oss/opensource.html)</li>
-<li>[Today I Learned Index]((../index.html)</li>
-<li>[Main Blog Index]((../../blog/feed.html)</li>
+<li><a href="../../papers.html">My Research Papers</a></li>
+<li><a href="../../oss/opensource.html">Open Source Contributions</a></li>
+<li><a href="../index.html">Today I Learned Index</a></li>
+<li><a href="../../blog/feed.html">Main Blog Index</a></li>
 </ul>
 
 
@@ -1172,7 +1172,7 @@ font-style: inherit;"># process each negative document</span></span></code></pre
   <category>rag</category>
   <guid>https://kareemai.com/til/tils/2025-05-25-til.html</guid>
   <pubDate>Sat, 24 May 2025 21:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/til/tils/images/raptor.png" medium="image" type="image/png" height="47" width="144"/>
+  <media:content url="https://kareemai.com/til/tils/images/raptor.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>Does Brave Leo Run Locally? Privacy-First AI with Ollama and BYOM</title>
@@ -1190,7 +1190,7 @@ font-style: inherit;"># process each negative document</span></span></code></pre
 <p>It works on macOS, Windows, Linux, Android, and iOS. Best part? No sign-up required to use it for free, and with the “Bring Your Own Model” (BYOM) feature, you can connect your own local LLMs like Ollama, vLLM, or SGLang for complete control over your AI experience.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/til/tils/images/brave_leo.png" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/til/tils/images/brave_leo.webp" class="img-fluid figure-img"></p>
 <figcaption>Brave Leo with Ollama or VLLM</figcaption>
 </figure>
 </div>
@@ -1267,10 +1267,10 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div></div>
 <h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
 <p>If you’re interested in more about local LLMs and my AI research, explore these sections:</p>
 <ul>
-<li>[My Research Papers]((../../papers.html)</li>
-<li>[Open Source Contributions]((../../oss/opensource.html)</li>
-<li>[Today I Learned Index]((../index.html)</li>
-<li>[Main Blog Index]((../../blog/feed.html)</li>
+<li><a href="../../papers.html">My Research Papers</a></li>
+<li><a href="../../oss/opensource.html">Open Source Contributions</a></li>
+<li><a href="../index.html">Today I Learned Index</a></li>
+<li><a href="../../blog/feed.html">Main Blog Index</a></li>
 </ul>
 
 
@@ -1287,7 +1287,7 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div></div>
   <category>ollama</category>
   <guid>https://kareemai.com/til/tils/2025-05-23-til.html</guid>
   <pubDate>Thu, 22 May 2025 21:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/til/tils/images/brave_leo.png" medium="image" type="image/png" height="71" width="144"/>
+  <media:content url="https://kareemai.com/til/tils/images/brave_leo.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>البوصلة الحقيقية: تأملات في تزكية النفس وإخلاص النية في طلب العلم</title>
@@ -1312,7 +1312,7 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div></div>
 <p>بداية من الباحثين لأصحاب الشركات للمواقع التي أقوم بالاستضافة عليها إلي الكورسات و مجتمعات التقنية..بل تزيد الحسرة عندي بحثي في بيانات لتطوير نموذج صغير لمهمة من مهام اللغة العربية أجد البيانات أين !ومن يعمل عليها !</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/til/tils/images/isreal.png" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/til/tils/images/isreal.webp" class="img-fluid figure-img"></p>
 <figcaption>الشعور بالعجز</figcaption>
 </figure>
 </div>
@@ -1366,10 +1366,10 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div></div>
 <h3 class="anchored" data-anchor-id="مصادر-إضافية-من-الموقع">مصادر إضافية من الموقع</h3>
 <p>إذا كنت مهتماً بمتابعة رحلتي في هندسة الذكاء الاصطناعي ومعالجة اللغات الطبيعية، يمكنك زيارة الأقسام التالية:</p>
 <ul>
-<li>[أبحاث في معالجة اللغة العربية]((../../papers.html)</li>
-<li>[مشاريع مفتوحة المصدر]((../../oss/opensource.html)</li>
-<li>[مدونة “تعلمت اليوم” (TIL)]((../index.html)</li>
-<li>[فهرس المدونة التقنية]((../../blog/feed.html)</li>
+<li><a href="../../papers.html">أبحاث في معالجة اللغة العربية</a></li>
+<li><a href="../../oss/opensource.html">مشاريع مفتوحة المصدر</a></li>
+<li><a href="../index.html">مدونة “تعلمت اليوم” (TIL)</a></li>
+<li><a href="../../blog/feed.html">فهرس المدونة التقنية</a></li>
 </ul>
 
 
@@ -1382,7 +1382,7 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div></div>
   <category>تزكيه</category>
   <guid>https://kareemai.com/til/tils/2025-05-21-til.html</guid>
   <pubDate>Tue, 20 May 2025 21:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/til/tils/images/isreal.png" medium="image" type="image/png" height="78" width="144"/>
+  <media:content url="https://kareemai.com/til/tils/images/isreal.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>How to Connect Porkbun Domains to Vercel and Cloudflare (Step-by-Step)</title>
@@ -1486,10 +1486,10 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div></div>
 <h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
 <p>If you’re interested in more about web development and my AI research, explore these sections:</p>
 <ul>
-<li>[My Research Papers]((../../papers.html)</li>
-<li>[Open Source Contributions]((../../oss/opensource.html)</li>
-<li>[Today I Learned Index]((../index.html)</li>
-<li>[Main Blog Index]((../../blog/feed.html)</li>
+<li><a href="../../papers.html">My Research Papers</a></li>
+<li><a href="../../oss/opensource.html">Open Source Contributions</a></li>
+<li><a href="../index.html">Today I Learned Index</a></li>
+<li><a href="../../blog/feed.html">Main Blog Index</a></li>
 </ul>
 
 
@@ -1506,7 +1506,7 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div></div>
   <category>web</category>
   <guid>https://kareemai.com/til/tils/2025-05-20-til.html</guid>
   <pubDate>Mon, 19 May 2025 21:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/til/tils/til.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://kareemai.com/til/tils/til.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>AI Research Blogging: Why Substack Matters for Researchers</title>
@@ -1573,7 +1573,7 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div></div>
 <p>This is very silly if you respect your readers’ minds!</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/til/tils/images/old_ahead_of_ai.jpg" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/til/tils/images/old_ahead_of_ai.webp" class="img-fluid figure-img"></p>
 <figcaption>Ahead of AI subscribers in 2024</figcaption>
 </figure>
 </div>
@@ -1639,10 +1639,10 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div></div>
 <h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
 <p>If you’re interested in more about AI engineering and my research, explore these sections:</p>
 <ul>
-<li>[My Research Papers]((../../papers.html)</li>
-<li>[Open Source Contributions]((../../oss/opensource.html)</li>
-<li>[Today I Learned Index]((../index.html)</li>
-<li>[Main Blog Index]((../../blog/feed.html)</li>
+<li><a href="../../papers.html">My Research Papers</a></li>
+<li><a href="../../oss/opensource.html">Open Source Contributions</a></li>
+<li><a href="../index.html">Today I Learned Index</a></li>
+<li><a href="../../blog/feed.html">Main Blog Index</a></li>
 </ul>
 
 
@@ -1656,7 +1656,7 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div></div>
   <category>substack</category>
   <guid>https://kareemai.com/til/tils/2025-05-19-til.html</guid>
   <pubDate>Sun, 18 May 2025 21:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/til/tils/images/old_ahead_of_ai.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://kareemai.com/til/tils/images/old_ahead_of_ai.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>Explore the Qdrant Blog core concepts | Part 1</title>
@@ -1745,7 +1745,7 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div></div>
   <category>qdrant</category>
   <guid>https://kareemai.com/til/tils/2025-05-18-til.html</guid>
   <pubDate>Sat, 17 May 2025 21:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/til/tils/til.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://kareemai.com/til/tils/til.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>Learning in Public: Why I Started My TIL Journey</title>
@@ -1813,7 +1813,7 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div></div>
   <category>til</category>
   <guid>https://kareemai.com/til/tils/2025-05-17-til.html</guid>
   <pubDate>Fri, 16 May 2025 21:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/til/tils/til.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://kareemai.com/til/tils/til.webp" medium="image" type="image/webp"/>
 </item>
 </channel>
 </rss>

@@ -10,11 +10,11 @@
 <atom:link href="https://kareemai.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
 <description>Articles on Arabic NLP, efficient AI models, semantic search, and machine learning engineering. Deep dives into building production AI systems by Abdelkareem Elkhateb.</description>
 <image>
-<url>https://kareemai.com/kareem.jpg</url>
+<url>https://kareemai.com/kareem.webp</url>
 <title>Abdelkareem Elkhateb</title>
 <link>https://kareemai.com/blog/feed.html</link>
 </image>
-<generator>quarto-1.9.37</generator>
+<generator>quarto-1.9.36</generator>
 <lastBuildDate>Thu, 07 May 2026 21:00:00 GMT</lastBuildDate>
 <item>
   <title>My Journey building a PC for AI Research in Egypt</title>
@@ -94,7 +94,7 @@
 <p>The investment pays for itself in less than a year compared to cloud costs.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/products_reviews/images/pc1.jpeg" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/blog/posts/products_reviews/images/pc1.webp" class="img-fluid figure-img"></p>
 <figcaption>Colab vs PC builds</figcaption>
 </figure>
 </div>
@@ -160,7 +160,7 @@
 </table>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/products_reviews/images/pc3.jpeg" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/blog/posts/products_reviews/images/pc3.webp" class="img-fluid figure-img"></p>
 <figcaption>AI PC Components 2026</figcaption>
 </figure>
 </div>
@@ -194,7 +194,7 @@
 <p>You will need them if you have to return, ship, or store any component.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/products_reviews/images/pc4.jpeg" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/blog/posts/products_reviews/images/pc4.webp" class="img-fluid figure-img"></p>
 <figcaption>Building PC RTX5090 for AI</figcaption>
 </figure>
 </div>
@@ -230,7 +230,7 @@
 <p>Stay tuned! <a href="https://kareemai.com/">Kareem AI Blog</a> <a href="https://kareemai.com/blog/posts/on_device/litert.html">LiteRT Review</a> <a href="https://kareemai.com/blog/posts/ml_life/hacker_rank_ai_intereviw.html">HackerRank AI Interview</a> <a href="https://kareemai.com/blog/posts/nlp/embedding_world/vector_database_book.html">Vector Databses Book Review</a></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/products_reviews/images/pc6.jpeg" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/blog/posts/products_reviews/images/pc6.webp" class="img-fluid figure-img"></p>
 <figcaption>KoboX</figcaption>
 </figure>
 </div>
@@ -243,7 +243,7 @@
   <category>blog/learn/journey</category>
   <guid>https://kareemai.com/blog/posts/products_reviews/Building_AI_PC_In_Egypt.html</guid>
   <pubDate>Thu, 07 May 2026 21:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/products_reviews/images/pc2.jpeg" medium="image" type="image/jpeg"/>
+  <media:content url="https://kareemai.com/blog/posts/products_reviews/images/pc2.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>Hacker AI Engineer Interview 2026 Example</title>
@@ -450,7 +450,7 @@ compiled_model = job.download_target_model()</code></pre>
   <category>optimization</category>
   <guid>https://kareemai.com/blog/posts/on_device/litert.html</guid>
   <pubDate>Fri, 24 Apr 2026 21:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/on_device/images/litert.jpeg" medium="image" type="image/jpeg"/>
+  <media:content url="https://kareemai.com/blog/posts/on_device/images/litert.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>Vector Databases - O’reilly By Nitin Borwankar</title>
@@ -516,8 +516,8 @@ compiled_model = job.download_target_model()</code></pre>
   <category>til</category>
   <category>blog/review/book</category>
   <guid>https://kareemai.com/blog/posts/nlp/embedding_world/vector_database_book.html</guid>
-  <pubDate>Fri, 17 Apr 2026 22:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/images/vector_database_book.jpg" medium="image" type="image/jpeg"/>
+  <pubDate>Fri, 17 Apr 2026 21:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/images/vector_database_book.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>HyperRun + ColGrep: A Self-Hosted Alternative to RunLLM</title>
@@ -556,7 +556,7 @@ compiled_model = job.download_target_model()</code></pre>
 <p>Built on <a href="https://github.com/lightonai/colgrep">ColGrep</a> for indexing, <a href="https://lisette.answer.ai">Lisette</a> for LLM orchestration, and <a href="https://fastht.ml">FastHTML</a> for the UI.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/nlp/embedding_world/images/pylate_hyperun.jpg" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/blog/posts/nlp/embedding_world/images/pylate_hyperun.webp" class="img-fluid figure-img"></p>
 <figcaption>pylate_hyperun</figcaption>
 </figure>
 </div>
@@ -686,8 +686,8 @@ font-style: inherit;">&gt;</span></span></code></pre></div></div>
   <category>til</category>
   <category>blog/build/project</category>
   <guid>https://kareemai.com/blog/posts/nlp/embedding_world/hyperrun.html</guid>
-  <pubDate>Wed, 18 Mar 2026 22:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/images/colgrep.jpg" medium="image" type="image/jpeg"/>
+  <pubDate>Wed, 18 Mar 2026 21:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/images/colgrep.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>HyperRun Deep Dive: Streaming Chat Architecture with FastHTML, HTMX, and SSE</title>
@@ -1581,8 +1581,8 @@ font-style: inherit;"># ✓ works</span></span></code></pre></div></div>
   <category>til</category>
   <category>blog/build/project</category>
   <guid>https://kareemai.com/blog/posts/nlp/embedding_world/hyperun_fasthtml.html</guid>
-  <pubDate>Wed, 18 Mar 2026 22:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/images/colgrep.jpg" medium="image" type="image/jpeg"/>
+  <pubDate>Wed, 18 Mar 2026 21:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/images/colgrep.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>Building SEO RAT: A Free, Open-Source SEO Tool</title>
@@ -1687,8 +1687,8 @@ font-style: inherit;"># ✓ works</span></span></code></pre></div></div>
   <category>ai</category>
   <category>ads</category>
   <guid>https://kareemai.com/blog/posts/seo/seo_rat_journey.html</guid>
-  <pubDate>Wed, 25 Feb 2026 22:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/seo/images/seo_rat.jpeg" medium="image" type="image/jpeg"/>
+  <pubDate>Wed, 25 Feb 2026 21:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/blog/posts/seo/images/seo_rat.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>OpenCode: Why It’s Different and How to Use It with Python</title>
@@ -2587,8 +2587,8 @@ font-style: inherit;">return</span> response.json()</span></code></pre></div></d
   <category>dspy</category>
   <category>blog/build/project</category>
   <guid>https://kareemai.com/blog/posts/dspy/Opencode.html</guid>
-  <pubDate>Wed, 18 Feb 2026 22:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/dspy/images/Opencode.jpg" medium="image" type="image/jpeg"/>
+  <pubDate>Wed, 18 Feb 2026 21:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/blog/posts/dspy/images/Opencode.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>Super Productivity Review: Best Free Todo App (2026)</title>
@@ -2620,7 +2620,7 @@ font-style: inherit;">return</span> response.json()</span></code></pre></div></d
 <p>I use it for development, research, and learning projects.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109191415.png" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109191415.webp" class="img-fluid figure-img"></p>
 <figcaption>Super Productivity</figcaption>
 </figure>
 </div>
@@ -2638,7 +2638,7 @@ font-style: inherit;">return</span> response.json()</span></code></pre></div></d
 <h3 class="anchored" data-anchor-id="side-notes">1. Side Notes</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109191754.png" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109191754.webp" class="img-fluid figure-img"></p>
 <figcaption>Super Productivity SideNote</figcaption>
 </figure>
 </div>
@@ -2648,7 +2648,7 @@ font-style: inherit;">return</span> response.json()</span></code></pre></div></d
 <h3 class="anchored" data-anchor-id="yesterday-review">2. Yesterday Review</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109191941.png" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109191941.webp" class="img-fluid figure-img"></p>
 <figcaption>Super Productivity Yesterday Review</figcaption>
 </figure>
 </div>
@@ -2658,7 +2658,7 @@ font-style: inherit;">return</span> response.json()</span></code></pre></div></d
 <h3 class="anchored" data-anchor-id="schedule-view">3. Schedule View</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109192101.png" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109192101.webp" class="img-fluid figure-img"></p>
 <figcaption>Super Productivity Schedule View</figcaption>
 </figure>
 </div>
@@ -2667,7 +2667,7 @@ font-style: inherit;">return</span> response.json()</span></code></pre></div></d
 <h3 class="anchored" data-anchor-id="focus-mode">4. Focus Mode</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109192217.png" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109192217.webp" class="img-fluid figure-img"></p>
 <figcaption>Super Productivity Focus Mode</figcaption>
 </figure>
 </div>
@@ -2677,7 +2677,7 @@ font-style: inherit;">return</span> response.json()</span></code></pre></div></d
 <h3 class="anchored" data-anchor-id="project-organization">5. Project Organization</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109192336.png" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109192336.webp" class="img-fluid figure-img"></p>
 <figcaption>Super Productivity Project Organization</figcaption>
 </figure>
 </div>
@@ -2690,13 +2690,13 @@ font-style: inherit;">return</span> response.json()</span></code></pre></div></d
 <p>When you hit “Finish Day”, you get 3 steps:</p>
 <ol type="1">
 <li><p><strong>Review</strong>: summary of what you did</p></li>
-<li><p><strong>Evaluate</strong>: rate your day <img src="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109192652.png" class="img-fluid" alt="Super Productivity Evaluate"></p></li>
-<li><p><strong>Plan Tomorrow</strong>: set up the next day <img src="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109192640.png" class="img-fluid" alt="Super Productivity Plan Tomorrow"></p></li>
+<li><p><strong>Evaluate</strong>: rate your day <img src="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109192652.webp" class="img-fluid" alt="Super Productivity Evaluate"></p></li>
+<li><p><strong>Plan Tomorrow</strong>: set up the next day <img src="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109192640.webp" class="img-fluid" alt="Super Productivity Plan Tomorrow"></p></li>
 </ol>
 <p>Also includes calendar integration,linear, github..etc!</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109194735.png" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109194735.webp" class="img-fluid figure-img"></p>
 <figcaption>Super Productivity Calendar Integration</figcaption>
 </figure>
 </div>
@@ -2709,7 +2709,7 @@ font-style: inherit;">return</span> response.json()</span></code></pre></div></d
 <h3 class="anchored" data-anchor-id="custom-backgrounds">Custom Backgrounds</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109194640.png" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109194640.webp" class="img-fluid figure-img"></p>
 <figcaption>Super Productivity Custom Backgrounds</figcaption>
 </figure>
 </div>
@@ -2775,7 +2775,7 @@ font-style: inherit;">return</span> response.json()</span></code></pre></div></d
 <section id="what-i-dont-like" class="level2">
 <h2 class="anchored" data-anchor-id="what-i-dont-like">What I Don’t Like</h2>
 <ol type="1">
-<li><strong>Dated icons</strong>: the icons are old and search for specific one hard <img src="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109193215.png" class="img-fluid" alt="Super Productivity Dated Icons"></li>
+<li><strong>Dated icons</strong>: the icons are old and search for specific one hard <img src="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109193215.webp" class="img-fluid" alt="Super Productivity Dated Icons"></li>
 <li><strong>No Gantt chart</strong>: would help for longer projects</li>
 <li><strong>Sync conflicts</strong>: when using two devices simultaneously, it asks which data to keep. Apps like TickTick handle this more smoothly. I wish there was smarter merging.</li>
 </ol>
@@ -2817,7 +2817,7 @@ font-style: inherit;">return</span> response.json()</span></code></pre></div></d
 <li><a href="https://kareemai.com/blog/posts/products_reviews/one_plus_pad_3.html">One Plus Pad 3 Review</a></li>
 <li><a href="https://kareemai.com/blog/posts/products_reviews/Huawei%20freebuds%207i.html">Huawei Freebuds 7i Review</a></li>
 </ol>
-<p>You can also explore my [Research Papers]((../../../papers.html) or see my [Open Source Projects]((../../../oss/opensource.html).</p>
+<p>You can also explore my <a href="../../../papers.html">Research Papers</a> or see my <a href="../../../oss/opensource.html">Open Source Projects</a>.</p>
 
 
 </section>
@@ -2828,8 +2828,8 @@ font-style: inherit;">return</span> response.json()</span></code></pre></div></d
   <category>blog/status/draft</category>
   <category>blog/review/tool</category>
   <guid>https://kareemai.com/blog/posts/tools_reviews/super_productivity_app.html</guid>
-  <pubDate>Thu, 08 Jan 2026 22:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109194735.png" medium="image" type="image/png" height="284" width="144"/>
+  <pubDate>Thu, 08 Jan 2026 21:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109194735.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>Tarteel &amp; Muaalem El Quran: Optimizing Quranic AI Part 2</title>
@@ -3293,8 +3293,8 @@ font-style: inherit;">--extra-index-url</span> https://pypi.nvidia.com</span></c
   <category>quran</category>
   <category>job</category>
   <guid>https://kareemai.com/blog/posts/speech_recognition/muaalm_quran_chance.html</guid>
-  <pubDate>Thu, 25 Dec 2025 22:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/speech_recognition/images/tarteel_ai.jpg" medium="image" type="image/jpeg"/>
+  <pubDate>Thu, 25 Dec 2025 21:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/blog/posts/speech_recognition/images/tarteel_ai.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>BM25 Part 3: Benchmarking Python BM25 Libraries</title>
@@ -5401,764 +5401,8 @@ QPS: 1627.94
   <category>embedding</category>
   <category>qdrant</category>
   <guid>https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html</guid>
-  <pubDate>Fri, 19 Dec 2025 22:00:00 GMT</pubDate>
+  <pubDate>Fri, 19 Dec 2025 21:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/bm25.png" medium="image" type="image/png" height="98" width="144"/>
-</item>
-<item>
-  <title>BM25 Explained Part 2 | Qdrant hybrid search for real estate</title>
-  <dc:creator>kareem </dc:creator>
-  <link>https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="building-hybrid-search-for-real-estate-with-qdrant-and-bm25" class="level2">
-<h2 class="anchored" data-anchor-id="building-hybrid-search-for-real-estate-with-qdrant-and-bm25">Building Hybrid Search for Real Estate with Qdrant and BM25</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/xbites_chat.png" class="img-fluid figure-img"></p>
-<figcaption>xbites mena real esate ai</figcaption>
-</figure>
-</div>
-<section id="the-problem" class="level3">
-<h3 class="anchored" data-anchor-id="the-problem">The Problem</h3>
-<p>When building a real estate search system, I ran into a frustrating issue: dense vector search kept returning the wrong locations. A query for “6th Settlement Apartment” would return properties in “5th Settlement” or “New Cairo” instead.</p>
-<p>I was using Gemini’s embedding model, which performs well for both English and Arabic. But even strong embeddings struggle with domain-specific data where names are nearly identical:</p>
-<ul>
-<li>El Patio Vera</li>
-<li>El Patio Solo</li>
-<li>El Patio Casa</li>
-</ul>
-<p>These project names fall outside the embedding model’s training distribution.</p>
-<p>The semantic similarity between them is too high for dense search to distinguish.</p>
-<p>My property chunks contain full descriptions like “Villa in El Patio Vera, 3 bedrooms, 1,000,000 EGP”. Semantic search handles most queries well, but some searches are fundamentally lexical. I needed both approaches working together.</p>
-<hr>
-</section>
-</section>
-<section id="when-dense-search-fails" class="level2">
-<h2 class="anchored" data-anchor-id="when-dense-search-fails">When Dense Search Fails</h2>
-<p>My dataset contained 12,877 real estate properties across Egypt with location names like:</p>
-<ul>
-<li>6th Settlement, 5th Settlement</li>
-<li>6th of October, 5th of October</li>
-<li>Sheikh Zayed, New Zayed</li>
-<li>El Alamein, North Coast</li>
-</ul>
-<p>When a user searched for “6th Settlement Apartment less than 10 million”, the dense vector results looked like this:</p>
-<pre><code>5th Settlement, New Cairo - 9.5M
-5th Settlement, New Cairo - 9.3M
-El Alamein, North Coast - 5.6M
-5th Settlement, New Cairo - 9.4M
-El Alamein, North Coast - 5.7M</code></pre>
-<p>Zero results from 6th Settlement. The embedding model treated “6th” and “5th” as semantically similar because they are both ordinal numbers. The word “Settlement” matched in both cases, pushing the semantic similarity even higher. This is exactly where lexical matching would help.</p>
-<hr>
-</section>
-<section id="why-hybrid-search-works" class="level2">
-<h2 class="anchored" data-anchor-id="why-hybrid-search-works">Why Hybrid Search Works</h2>
-<p>Dense vectors and BM25 have complementary strengths.</p>
-<p>Dense vectors understand meaning. They know that “apartment”, “flat”, and “unit” refer to similar things. They handle typos and variations gracefully. But they struggle with exact matches where surface-level differences matter, like distinguishing “6th” from “5th”.</p>
-<p>BM25 sparse vectors match tokens exactly. The token “6th” will never match “5th”. This works across languages without additional configuration. The downside is that BM25 has no semantic understanding. It cannot recognize that “apartment” and “flat” mean the same thing.</p>
-<p>By combining both approaches, you get semantic understanding when you need it and exact matching when that matters more.</p>
-<p>The architecture looks like this:</p>
-<pre><code>User Query: "6th Settlement Apartment"
-                    |
-         +----------+----------+
-         |                     |
-   Dense Search          BM25 Search
-   (100 candidates)      (30 candidates)
-         |                     |
-         +----------+----------+
-                    |
-              RRF Fusion
-                    |
-             Final Results</code></pre>
-<p>Reciprocal Rank Fusion combines the rankings from both approaches, giving weight to results that appear highly ranked in either or both lists.</p>
-<hr>
-</section>
-<section id="challenge-1-reducing-token-noise" class="level2">
-<h2 class="anchored" data-anchor-id="challenge-1-reducing-token-noise">Challenge 1: Reducing Token Noise</h2>
-<p>The first problem I encountered was tokenization noise. Raw property chunks contained everything: URLs, metadata IDs, field names, and numeric values.</p>
-<p>A typical chunk looked like:</p>
-<pre><code>"Palm Hills, Palm Hills New Cairo, Apartment, 15.3M EGP,
-154 sqm, metadata_id_123, https://example.com/file.pdf, ..."</code></pre>
-<p>Tokenizing this produced over 13,000 unique tokens across the corpus. Most of these were useless for search: URL fragments, random IDs, and field names that would never appear in user queries.</p>
-<p>The solution was to extract only the fields that users would actually search for:</p>
-<ul>
-<li>Developer name</li>
-<li>Project name</li>
-<li>Unit type</li>
-<li>Location and sublocation</li>
-</ul>
-<p>After filtering, a chunk became:</p>
-<pre><code>"Palm Hills Palm Hills New Cairo Apartment 5th Settlement New Cairo"</code></pre>
-<p>This reduced the vocabulary from 13,000 tokens to 1,941, an 86% reduction. The BM25 index became faster and more accurate because every remaining token was meaningful.</p>
-<hr>
-</section>
-<section id="challenge-2-handling-stopwords" class="level2">
-<h2 class="anchored" data-anchor-id="challenge-2-handling-stopwords">Challenge 2: Handling Stopwords</h2>
-<p>Common words like “of”, “in”, and “the” added noise to the BM25 scores. Since this was a bilingual system supporting Arabic and English, I needed stopwords for both languages:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1">STOPWORDS <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> {</span>
-<span id="cb5-2">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># English</span></span>
-<span id="cb5-3">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'the'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'a'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'an'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'of'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'in'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'on'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'at'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'to'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'for'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'and'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'or'</span>,</span>
-<span id="cb5-4">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Arabic</span></span>
-<span id="cb5-5">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'في'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'من'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'إلى'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'على'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'عن'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'مع'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'هذا'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'هذه'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'ذلك'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'التي'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'الذي'</span></span>
-<span id="cb5-6">}</span></code></pre></div></div>
-<p>Removing these ensured that queries like “apartment in 6th Settlement” focused on the meaningful tokens rather than matching every document containing “in”.</p>
-<hr>
-</section>
-<section id="challenge-3-n-gram-tokenization" class="level2">
-<h2 class="anchored" data-anchor-id="challenge-3-n-gram-tokenization">Challenge 3: N-gram Tokenization</h2>
-<p>With basic tokenization, similar location names still overlapped too much:</p>
-<pre><code>"6th Settlement" → ['6th', 'settlement']
-"5th Settlement" → ['5th', 'settlement']</code></pre>
-<p>Both share the token “settlement”, so BM25 would give partial credit to 5th Settlement results even when the user explicitly asked for 6th Settlement.</p>
-<p>The solution was to add bigrams, two-word phrases joined with an underscore:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">def</span> tokenize_ngram(text: <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">str</span>) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-&gt;</span> List[<span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">str</span>]:</span>
-<span id="cb7-2">    words <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> [w <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">for</span> w <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">in</span> text.split() <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">if</span> w <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">not</span> <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">in</span> STOPWORDS]</span>
-<span id="cb7-3">    tokens <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> words.copy()</span>
-<span id="cb7-4">    </span>
-<span id="cb7-5">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">in</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">range</span>(<span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">len</span>(words) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>):</span>
-<span id="cb7-6">        tokens.append(<span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;">f"</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">{</span>words[i]<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">}</span><span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;">_</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">{</span>words[i<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>]<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">}</span><span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span>)</span>
-<span id="cb7-7">    </span>
-<span id="cb7-8">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">return</span> tokens</span></code></pre></div></div>
-<p>Now the tokenization produces:</p>
-<pre><code>"6th Settlement" → ['6th', 'settlement', '6th_settlement']
-"5th Settlement" → ['5th', 'settlement', '5th_settlement']</code></pre>
-<p>The bigram “6th_settlement” is unique and will only match documents containing that exact phrase. This dramatically improved precision for location-specific queries.</p>
-<hr>
-</section>
-<section id="challenge-4-data-imbalance" class="level2">
-<h2 class="anchored" data-anchor-id="challenge-4-data-imbalance">Challenge 4: Data Imbalance</h2>
-<p>Even with proper tokenization, some brands dominated the results unfairly. My dataset had:</p>
-<ul>
-<li>Palm Hills: 718 properties</li>
-<li>El Patio: 49 properties</li>
-</ul>
-<p>When searching for “El Patio apartment”, BM25 would often return Palm Hills results first because the sheer frequency of Palm Hills in the corpus gave it higher term frequency scores.</p>
-<p>The solution was to adjust the balance between dense and sparse search in the hybrid approach. By retrieving more candidates from dense search (100) and fewer from BM25 (30), I gave semantic understanding more influence in the final ranking. This allowed the dense embeddings, which correctly understood “El Patio” as a distinct entity, to override BM25’s frequency bias.</p>
-</section>
-<section id="rrf-reciprocal-rank-fusion-explained" class="level2">
-<h2 class="anchored" data-anchor-id="rrf-reciprocal-rank-fusion-explained">RRF (Reciprocal Rank Fusion) Explained</h2>
-<p>RRF is a method for combining rankings from multiple search systems.</p>
-<p>c How It Works</p>
-<p>Instead of averaging scores (which can be misleading when different systems use different scales), RRF uses <strong>rank positions</strong>.</p>
-<p><strong>Formula:</strong></p>
-<pre><code>RRF_score = Σ (1 / (k + rank))</code></pre>
-<p>Where: - <code>k</code> = constant (usually 60) - <code>rank</code> = position in that ranking (1st, 2nd, 3rd…)</p>
-<section id="example" class="level3">
-<h3 class="anchored" data-anchor-id="example">Example</h3>
-<p>Query: “6th Settlement Apartment”</p>
-<p><strong>Dense Search Rankings:</strong> 1. Result A (6th Settlement) → score = 1/(60+1) = 0.0164 2. Result B (New Cairo) → score = 1/(60+2) = 0.0161 3. Result C (5th Settlement) → score = 1/(60+3) = 0.0159</p>
-<p><strong>BM25 Rankings:</strong> 1. Result A (6th Settlement) → score = 1/(60+1) = 0.0164 2. Result D (6th October) → score = 1/(60+2) = 0.0161 3. Result C (5th Settlement) → score = 1/(60+3) = 0.0159</p>
-<p><strong>Combined RRF Scores:</strong> - Result A: 0.0164 + 0.0164 = <strong>0.0328</strong> (appears in both, ranked 1st) - Result C: 0.0159 + 0.0159 = <strong>0.0318</strong> (appears in both) - Result B: 0.0161 (only in dense) - Result D: 0.0161 (only in BM25)</p>
-<p>Result A wins because it ranked highly in <strong>both</strong> systems!</p>
-<hr>
-</section>
-</section>
-<section id="results" class="level2">
-<h2 class="anchored" data-anchor-id="results">Results</h2>
-<p>After implementing hybrid search with these optimizations, the same query that previously failed now worked correctly.</p>
-<p>Query: “6th Settlement Apartment less than 10 million”</p>
-<p>Before (Dense Only):</p>
-<pre><code>5th Settlement - 9.5M
-5th Settlement - 9.3M
-El Alamein - 5.6M</code></pre>
-<p>After (Hybrid with BM25):</p>
-<pre><code>6th Settlement - 8.0M
-6th Settlement - 9.5M
-6th Settlement - 7.2M</code></pre>
-<hr>
-</section>
-<section id="key-takeaways" class="level2">
-<h2 class="anchored" data-anchor-id="key-takeaways">Key Takeaways</h2>
-<ol type="1">
-<li><p>Filter your tokens aggressively. Remove everything that users would never search for.</p></li>
-<li><p>Use n-grams for multi-word entities. Bigrams turn “6th Settlement” into a unique, matchable token.</p></li>
-<li><p>Handle stopwords in all supported languages. A bilingual system needs bilingual stopword lists.</p></li>
-<li><p>Balance dense and sparse weights based on your data. If one brand dominates your corpus, give more weight to semantic search.</p></li>
-<li><p>Hybrid search is not always necessary. If pure semantic search works for your use case, the added complexity of BM25 may not be worth it. Use hybrid when exact matches matter and when you have domain-specific vocabulary that embeddings handle poorly.</p></li>
-</ol>
-<div id="e0b03459" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Step 1: Install dependencies</span></span>
-<span id="cb12-2"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># pip install qdrant-client rank-bm25</span></span>
-<span id="cb12-3"></span>
-<span id="cb12-4"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> re</span>
-<span id="cb12-5"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">from</span> typing <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> List</span>
-<span id="cb12-6"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> pickle</span>
-<span id="cb12-7"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">from</span> rank_bm25 <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> BM25Okapi</span>
-<span id="cb12-8"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">from</span> qdrant_client <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> QdrantClient, models</span>
-<span id="cb12-9"></span>
-<span id="cb12-10"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Step 2: Define tokenizer with stopwords and bigrams</span></span>
-<span id="cb12-11">STOPWORDS <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> {</span>
-<span id="cb12-12">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"the"</span>,</span>
-<span id="cb12-13">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"a"</span>,</span>
-<span id="cb12-14">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"an"</span>,</span>
-<span id="cb12-15">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"of"</span>,</span>
-<span id="cb12-16">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"in"</span>,</span>
-<span id="cb12-17">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"on"</span>,</span>
-<span id="cb12-18">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"at"</span>,</span>
-<span id="cb12-19">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"to"</span>,</span>
-<span id="cb12-20">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"for"</span>,</span>
-<span id="cb12-21">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"and"</span>,</span>
-<span id="cb12-22">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"or"</span>,</span>
-<span id="cb12-23">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"في"</span>,</span>
-<span id="cb12-24">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"من"</span>,</span>
-<span id="cb12-25">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"إلى"</span>,</span>
-<span id="cb12-26">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"على"</span>,</span>
-<span id="cb12-27">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"عن"</span>,</span>
-<span id="cb12-28">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"مع"</span>,</span>
-<span id="cb12-29">}</span>
-<span id="cb12-30"></span>
-<span id="cb12-31"></span>
-<span id="cb12-32"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">def</span> tokenize_ngram(text: <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">str</span>) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-&gt;</span> List[<span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">str</span>]:</span>
-<span id="cb12-33">    text <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> text.lower()</span>
-<span id="cb12-34">    text <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> re.sub(<span class="vs" style="color: #20794D;
-background-color: null;
-font-style: inherit;">r"</span><span class="pp" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">[^</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">\w\s</span><span class="pp" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">]</span><span class="vs" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">" "</span>, text)</span>
-<span id="cb12-35">    words <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> [w <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">for</span> w <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">in</span> text.split() <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">if</span> w <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">not</span> <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">in</span> STOPWORDS]</span>
-<span id="cb12-36">    tokens <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> words.copy()</span>
-<span id="cb12-37">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">in</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">range</span>(<span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">len</span>(words) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>):</span>
-<span id="cb12-38">        tokens.append(<span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;">f"</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">{</span>words[i]<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">}</span><span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;">_</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">{</span>words[i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>]<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">}</span><span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span>)</span>
-<span id="cb12-39">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">return</span> tokens</span></code></pre></div></div>
-</div>
-<div id="8181bd16" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Step 3: Build BM25 index from your filtered chunks</span></span>
-<span id="cb13-2">filtered_chunks <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> [<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"palm hills apartment 5th settlement new cairo"</span>, ...]  <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Your data</span></span>
-<span id="cb13-3">tokenized_corpus <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> [tokenize_ngram(chunk) <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">for</span> chunk <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">in</span> filtered_chunks]</span>
-<span id="cb13-4">bm25 <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> BM25Okapi(tokenized_corpus)</span>
-<span id="cb13-5"></span>
-<span id="cb13-6"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Save for later use</span></span>
-<span id="cb13-7"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">with</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">open</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"bm25_index.pkl"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"wb"</span>) <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> f:</span>
-<span id="cb13-8">    pickle.dump(bm25, f)</span>
-<span id="cb13-9"></span>
-<span id="cb13-10"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Step 4: Create hybrid collection in Qdrant</span></span>
-<span id="cb13-11">client <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> QdrantClient(url<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"your-url"</span>, api_key<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"your-key"</span>)</span>
-<span id="cb13-12"></span>
-<span id="cb13-13">client.create_collection(</span>
-<span id="cb13-14">    collection_name<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"hybrid_collection"</span>,</span>
-<span id="cb13-15">    vectors_config<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>{</span>
-<span id="cb13-16">        <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"dense"</span>: models.VectorParams(size<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3072</span>, distance<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>models.Distance.COSINE)</span>
-<span id="cb13-17">    },</span>
-<span id="cb13-18">    sparse_vectors_config<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>{<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"text-sparse"</span>: models.SparseVectorParams()},</span>
-<span id="cb13-19">)</span></code></pre></div></div>
-</div>
-<div id="d51cef0c" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Step 5: Convert text to sparse vector using BM25 scores</span></span>
-<span id="cb14-2"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">def</span> text_to_sparse_vector(text: <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">str</span>, bm25_index) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-&gt;</span> models.SparseVector:</span>
-<span id="cb14-3">    tokens <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> tokenize_ngram(text)</span>
-<span id="cb14-4">    scores <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> bm25_index.get_scores(tokens)</span>
-<span id="cb14-5"></span>
-<span id="cb14-6">    indices <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> []</span>
-<span id="cb14-7">    values <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> []</span>
-<span id="cb14-8">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">for</span> idx, score <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">in</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">enumerate</span>(scores):</span>
-<span id="cb14-9">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">if</span> score <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&gt;</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>:</span>
-<span id="cb14-10">            indices.append(idx)</span>
-<span id="cb14-11">            values.append(<span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">float</span>(score))</span>
-<span id="cb14-12"></span>
-<span id="cb14-13">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">return</span> models.SparseVector(indices<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>indices, values<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>values)</span>
-<span id="cb14-14"></span>
-<span id="cb14-15"></span>
-<span id="cb14-16"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Step 6: Upload documents with both vectors</span></span>
-<span id="cb14-17"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">for</span> i, (chunk, dense_embedding, metadata) <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">in</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">enumerate</span>(</span>
-<span id="cb14-18">    <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">zip</span>(filtered_chunks, embeddings, metadata_list)</span>
-<span id="cb14-19">):</span>
-<span id="cb14-20">    client.upsert(</span>
-<span id="cb14-21">        collection_name<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"hybrid_collection"</span>,</span>
-<span id="cb14-22">        points<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>[</span>
-<span id="cb14-23">            models.PointStruct(</span>
-<span id="cb14-24">                <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">id</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>i,</span>
-<span id="cb14-25">                payload<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>metadata,</span>
-<span id="cb14-26">                vector<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>{</span>
-<span id="cb14-27">                    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"dense"</span>: dense_embedding,</span>
-<span id="cb14-28">                    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"text-sparse"</span>: text_to_sparse_vector(chunk, bm25),</span>
-<span id="cb14-29">                },</span>
-<span id="cb14-30">            )</span>
-<span id="cb14-31">        ],</span>
-<span id="cb14-32">    )</span></code></pre></div></div>
-</div>
-<div id="6257b62b" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Step 7: Hybrid search with RRF fusion</span></span>
-<span id="cb15-2"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">def</span> hybrid_search(query_text: <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">str</span>, query_dense_vector: <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">list</span>, limit: <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">int</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">10</span>):</span>
-<span id="cb15-3">    query_sparse <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> text_to_sparse_vector(query_text, bm25)</span>
-<span id="cb15-4"></span>
-<span id="cb15-5">    results <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> client.query_points(</span>
-<span id="cb15-6">        collection_name<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"hybrid_collection"</span>,</span>
-<span id="cb15-7">        prefetch<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>[</span>
-<span id="cb15-8">            models.Prefetch(query<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>query_dense_vector, using<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"dense"</span>, limit<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>),</span>
-<span id="cb15-9">            models.Prefetch(query<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>query_sparse, using<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"text-sparse"</span>, limit<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">30</span>),</span>
-<span id="cb15-10">        ],</span>
-<span id="cb15-11">        query<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>models.FusionQuery(fusion<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>models.Fusion.RRF),</span>
-<span id="cb15-12">        limit<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>limit,</span>
-<span id="cb15-13">    )</span>
-<span id="cb15-14">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">return</span> results.points</span>
-<span id="cb15-15"></span>
-<span id="cb15-16"></span>
-<span id="cb15-17"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Usage</span></span>
-<span id="cb15-18">results <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> hybrid_search(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"6th Settlement Apartment"</span>, your_query_embedding)</span></code></pre></div></div>
-</div>
-<section id="references" class="level3">
-<h3 class="anchored" data-anchor-id="references">References</h3>
-<ol type="1">
-<li><a href="https://www.xbites.io/">Xbites Real Estate AI</a></li>
-<li><a href="https://qdrant.tech/articles/hybrid-search/">Qdrand Hybrid search</a></li>
-<li><a href="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html">Bm25 part 1</a></li>
-<li><a href="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html">Bm25 part 3</a></li>
-</ol>
-
-
-</section>
-</section>
-
- ]]></description>
-  <category>blogging</category>
-  <category>embedding</category>
-  <category>qdrant</category>
-  <category>sparse</category>
-  <guid>https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html</guid>
-  <pubDate>Thu, 18 Dec 2025 22:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/xbites_chat.png" medium="image" type="image/png" height="153" width="144"/>
 </item>
 <item>
   <title>BM25 Search Algorithm: Python Implementation from Scratch</title>
@@ -6998,8 +6242,764 @@ Query: 'love python'
   <category>embedding</category>
   <category>qdrant</category>
   <guid>https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html</guid>
-  <pubDate>Thu, 18 Dec 2025 22:00:00 GMT</pubDate>
+  <pubDate>Thu, 18 Dec 2025 21:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/bm25.png" medium="image" type="image/png" height="98" width="144"/>
+</item>
+<item>
+  <title>BM25 Explained Part 2 | Qdrant hybrid search for real estate</title>
+  <dc:creator>kareem </dc:creator>
+  <link>https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="building-hybrid-search-for-real-estate-with-qdrant-and-bm25" class="level2">
+<h2 class="anchored" data-anchor-id="building-hybrid-search-for-real-estate-with-qdrant-and-bm25">Building Hybrid Search for Real Estate with Qdrant and BM25</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/xbites_chat.png" class="img-fluid figure-img"></p>
+<figcaption>xbites mena real esate ai</figcaption>
+</figure>
+</div>
+<section id="the-problem" class="level3">
+<h3 class="anchored" data-anchor-id="the-problem">The Problem</h3>
+<p>When building a real estate search system, I ran into a frustrating issue: dense vector search kept returning the wrong locations. A query for “6th Settlement Apartment” would return properties in “5th Settlement” or “New Cairo” instead.</p>
+<p>I was using Gemini’s embedding model, which performs well for both English and Arabic. But even strong embeddings struggle with domain-specific data where names are nearly identical:</p>
+<ul>
+<li>El Patio Vera</li>
+<li>El Patio Solo</li>
+<li>El Patio Casa</li>
+</ul>
+<p>These project names fall outside the embedding model’s training distribution.</p>
+<p>The semantic similarity between them is too high for dense search to distinguish.</p>
+<p>My property chunks contain full descriptions like “Villa in El Patio Vera, 3 bedrooms, 1,000,000 EGP”. Semantic search handles most queries well, but some searches are fundamentally lexical. I needed both approaches working together.</p>
+<hr>
+</section>
+</section>
+<section id="when-dense-search-fails" class="level2">
+<h2 class="anchored" data-anchor-id="when-dense-search-fails">When Dense Search Fails</h2>
+<p>My dataset contained 12,877 real estate properties across Egypt with location names like:</p>
+<ul>
+<li>6th Settlement, 5th Settlement</li>
+<li>6th of October, 5th of October</li>
+<li>Sheikh Zayed, New Zayed</li>
+<li>El Alamein, North Coast</li>
+</ul>
+<p>When a user searched for “6th Settlement Apartment less than 10 million”, the dense vector results looked like this:</p>
+<pre><code>5th Settlement, New Cairo - 9.5M
+5th Settlement, New Cairo - 9.3M
+El Alamein, North Coast - 5.6M
+5th Settlement, New Cairo - 9.4M
+El Alamein, North Coast - 5.7M</code></pre>
+<p>Zero results from 6th Settlement. The embedding model treated “6th” and “5th” as semantically similar because they are both ordinal numbers. The word “Settlement” matched in both cases, pushing the semantic similarity even higher. This is exactly where lexical matching would help.</p>
+<hr>
+</section>
+<section id="why-hybrid-search-works" class="level2">
+<h2 class="anchored" data-anchor-id="why-hybrid-search-works">Why Hybrid Search Works</h2>
+<p>Dense vectors and BM25 have complementary strengths.</p>
+<p>Dense vectors understand meaning. They know that “apartment”, “flat”, and “unit” refer to similar things. They handle typos and variations gracefully. But they struggle with exact matches where surface-level differences matter, like distinguishing “6th” from “5th”.</p>
+<p>BM25 sparse vectors match tokens exactly. The token “6th” will never match “5th”. This works across languages without additional configuration. The downside is that BM25 has no semantic understanding. It cannot recognize that “apartment” and “flat” mean the same thing.</p>
+<p>By combining both approaches, you get semantic understanding when you need it and exact matching when that matters more.</p>
+<p>The architecture looks like this:</p>
+<pre><code>User Query: "6th Settlement Apartment"
+                    |
+         +----------+----------+
+         |                     |
+   Dense Search          BM25 Search
+   (100 candidates)      (30 candidates)
+         |                     |
+         +----------+----------+
+                    |
+              RRF Fusion
+                    |
+             Final Results</code></pre>
+<p>Reciprocal Rank Fusion combines the rankings from both approaches, giving weight to results that appear highly ranked in either or both lists.</p>
+<hr>
+</section>
+<section id="challenge-1-reducing-token-noise" class="level2">
+<h2 class="anchored" data-anchor-id="challenge-1-reducing-token-noise">Challenge 1: Reducing Token Noise</h2>
+<p>The first problem I encountered was tokenization noise. Raw property chunks contained everything: URLs, metadata IDs, field names, and numeric values.</p>
+<p>A typical chunk looked like:</p>
+<pre><code>"Palm Hills, Palm Hills New Cairo, Apartment, 15.3M EGP,
+154 sqm, metadata_id_123, https://example.com/file.pdf, ..."</code></pre>
+<p>Tokenizing this produced over 13,000 unique tokens across the corpus. Most of these were useless for search: URL fragments, random IDs, and field names that would never appear in user queries.</p>
+<p>The solution was to extract only the fields that users would actually search for:</p>
+<ul>
+<li>Developer name</li>
+<li>Project name</li>
+<li>Unit type</li>
+<li>Location and sublocation</li>
+</ul>
+<p>After filtering, a chunk became:</p>
+<pre><code>"Palm Hills Palm Hills New Cairo Apartment 5th Settlement New Cairo"</code></pre>
+<p>This reduced the vocabulary from 13,000 tokens to 1,941, an 86% reduction. The BM25 index became faster and more accurate because every remaining token was meaningful.</p>
+<hr>
+</section>
+<section id="challenge-2-handling-stopwords" class="level2">
+<h2 class="anchored" data-anchor-id="challenge-2-handling-stopwords">Challenge 2: Handling Stopwords</h2>
+<p>Common words like “of”, “in”, and “the” added noise to the BM25 scores. Since this was a bilingual system supporting Arabic and English, I needed stopwords for both languages:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1">STOPWORDS <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> {</span>
+<span id="cb5-2">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># English</span></span>
+<span id="cb5-3">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'the'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'a'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'an'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'of'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'in'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'on'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'at'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'to'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'for'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'and'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'or'</span>,</span>
+<span id="cb5-4">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Arabic</span></span>
+<span id="cb5-5">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'في'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'من'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'إلى'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'على'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'عن'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'مع'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'هذا'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'هذه'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'ذلك'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'التي'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'الذي'</span></span>
+<span id="cb5-6">}</span></code></pre></div></div>
+<p>Removing these ensured that queries like “apartment in 6th Settlement” focused on the meaningful tokens rather than matching every document containing “in”.</p>
+<hr>
+</section>
+<section id="challenge-3-n-gram-tokenization" class="level2">
+<h2 class="anchored" data-anchor-id="challenge-3-n-gram-tokenization">Challenge 3: N-gram Tokenization</h2>
+<p>With basic tokenization, similar location names still overlapped too much:</p>
+<pre><code>"6th Settlement" → ['6th', 'settlement']
+"5th Settlement" → ['5th', 'settlement']</code></pre>
+<p>Both share the token “settlement”, so BM25 would give partial credit to 5th Settlement results even when the user explicitly asked for 6th Settlement.</p>
+<p>The solution was to add bigrams, two-word phrases joined with an underscore:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> tokenize_ngram(text: <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">str</span>) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span> List[<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">str</span>]:</span>
+<span id="cb7-2">    words <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [w <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> w <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> text.split() <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> w <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">not</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> STOPWORDS]</span>
+<span id="cb7-3">    tokens <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> words.copy()</span>
+<span id="cb7-4">    </span>
+<span id="cb7-5">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(words) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>):</span>
+<span id="cb7-6">        tokens.append(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>words[i]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">_</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>words[i<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span>
+<span id="cb7-7">    </span>
+<span id="cb7-8">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> tokens</span></code></pre></div></div>
+<p>Now the tokenization produces:</p>
+<pre><code>"6th Settlement" → ['6th', 'settlement', '6th_settlement']
+"5th Settlement" → ['5th', 'settlement', '5th_settlement']</code></pre>
+<p>The bigram “6th_settlement” is unique and will only match documents containing that exact phrase. This dramatically improved precision for location-specific queries.</p>
+<hr>
+</section>
+<section id="challenge-4-data-imbalance" class="level2">
+<h2 class="anchored" data-anchor-id="challenge-4-data-imbalance">Challenge 4: Data Imbalance</h2>
+<p>Even with proper tokenization, some brands dominated the results unfairly. My dataset had:</p>
+<ul>
+<li>Palm Hills: 718 properties</li>
+<li>El Patio: 49 properties</li>
+</ul>
+<p>When searching for “El Patio apartment”, BM25 would often return Palm Hills results first because the sheer frequency of Palm Hills in the corpus gave it higher term frequency scores.</p>
+<p>The solution was to adjust the balance between dense and sparse search in the hybrid approach. By retrieving more candidates from dense search (100) and fewer from BM25 (30), I gave semantic understanding more influence in the final ranking. This allowed the dense embeddings, which correctly understood “El Patio” as a distinct entity, to override BM25’s frequency bias.</p>
+</section>
+<section id="rrf-reciprocal-rank-fusion-explained" class="level2">
+<h2 class="anchored" data-anchor-id="rrf-reciprocal-rank-fusion-explained">RRF (Reciprocal Rank Fusion) Explained</h2>
+<p>RRF is a method for combining rankings from multiple search systems.</p>
+<p>c How It Works</p>
+<p>Instead of averaging scores (which can be misleading when different systems use different scales), RRF uses <strong>rank positions</strong>.</p>
+<p><strong>Formula:</strong></p>
+<pre><code>RRF_score = Σ (1 / (k + rank))</code></pre>
+<p>Where: - <code>k</code> = constant (usually 60) - <code>rank</code> = position in that ranking (1st, 2nd, 3rd…)</p>
+<section id="example" class="level3">
+<h3 class="anchored" data-anchor-id="example">Example</h3>
+<p>Query: “6th Settlement Apartment”</p>
+<p><strong>Dense Search Rankings:</strong> 1. Result A (6th Settlement) → score = 1/(60+1) = 0.0164 2. Result B (New Cairo) → score = 1/(60+2) = 0.0161 3. Result C (5th Settlement) → score = 1/(60+3) = 0.0159</p>
+<p><strong>BM25 Rankings:</strong> 1. Result A (6th Settlement) → score = 1/(60+1) = 0.0164 2. Result D (6th October) → score = 1/(60+2) = 0.0161 3. Result C (5th Settlement) → score = 1/(60+3) = 0.0159</p>
+<p><strong>Combined RRF Scores:</strong> - Result A: 0.0164 + 0.0164 = <strong>0.0328</strong> (appears in both, ranked 1st) - Result C: 0.0159 + 0.0159 = <strong>0.0318</strong> (appears in both) - Result B: 0.0161 (only in dense) - Result D: 0.0161 (only in BM25)</p>
+<p>Result A wins because it ranked highly in <strong>both</strong> systems!</p>
+<hr>
+</section>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<p>After implementing hybrid search with these optimizations, the same query that previously failed now worked correctly.</p>
+<p>Query: “6th Settlement Apartment less than 10 million”</p>
+<p>Before (Dense Only):</p>
+<pre><code>5th Settlement - 9.5M
+5th Settlement - 9.3M
+El Alamein - 5.6M</code></pre>
+<p>After (Hybrid with BM25):</p>
+<pre><code>6th Settlement - 8.0M
+6th Settlement - 9.5M
+6th Settlement - 7.2M</code></pre>
+<hr>
+</section>
+<section id="key-takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="key-takeaways">Key Takeaways</h2>
+<ol type="1">
+<li><p>Filter your tokens aggressively. Remove everything that users would never search for.</p></li>
+<li><p>Use n-grams for multi-word entities. Bigrams turn “6th Settlement” into a unique, matchable token.</p></li>
+<li><p>Handle stopwords in all supported languages. A bilingual system needs bilingual stopword lists.</p></li>
+<li><p>Balance dense and sparse weights based on your data. If one brand dominates your corpus, give more weight to semantic search.</p></li>
+<li><p>Hybrid search is not always necessary. If pure semantic search works for your use case, the added complexity of BM25 may not be worth it. Use hybrid when exact matches matter and when you have domain-specific vocabulary that embeddings handle poorly.</p></li>
+</ol>
+<div id="e0b03459" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Step 1: Install dependencies</span></span>
+<span id="cb12-2"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># pip install qdrant-client rank-bm25</span></span>
+<span id="cb12-3"></span>
+<span id="cb12-4"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> re</span>
+<span id="cb12-5"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> typing <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> List</span>
+<span id="cb12-6"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> pickle</span>
+<span id="cb12-7"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> rank_bm25 <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> BM25Okapi</span>
+<span id="cb12-8"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> qdrant_client <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> QdrantClient, models</span>
+<span id="cb12-9"></span>
+<span id="cb12-10"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Step 2: Define tokenizer with stopwords and bigrams</span></span>
+<span id="cb12-11">STOPWORDS <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> {</span>
+<span id="cb12-12">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"the"</span>,</span>
+<span id="cb12-13">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"a"</span>,</span>
+<span id="cb12-14">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"an"</span>,</span>
+<span id="cb12-15">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"of"</span>,</span>
+<span id="cb12-16">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"in"</span>,</span>
+<span id="cb12-17">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"on"</span>,</span>
+<span id="cb12-18">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"at"</span>,</span>
+<span id="cb12-19">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"to"</span>,</span>
+<span id="cb12-20">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"for"</span>,</span>
+<span id="cb12-21">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"and"</span>,</span>
+<span id="cb12-22">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"or"</span>,</span>
+<span id="cb12-23">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"في"</span>,</span>
+<span id="cb12-24">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"من"</span>,</span>
+<span id="cb12-25">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"إلى"</span>,</span>
+<span id="cb12-26">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"على"</span>,</span>
+<span id="cb12-27">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"عن"</span>,</span>
+<span id="cb12-28">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"مع"</span>,</span>
+<span id="cb12-29">}</span>
+<span id="cb12-30"></span>
+<span id="cb12-31"></span>
+<span id="cb12-32"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> tokenize_ngram(text: <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">str</span>) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span> List[<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">str</span>]:</span>
+<span id="cb12-33">    text <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> text.lower()</span>
+<span id="cb12-34">    text <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> re.sub(<span class="vs" style="color: #20794D;
+background-color: null;
+font-style: inherit;">r"</span><span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">[^</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">\w\s</span><span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">]</span><span class="vs" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">" "</span>, text)</span>
+<span id="cb12-35">    words <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [w <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> w <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> text.split() <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> w <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">not</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> STOPWORDS]</span>
+<span id="cb12-36">    tokens <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> words.copy()</span>
+<span id="cb12-37">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(words) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>):</span>
+<span id="cb12-38">        tokens.append(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>words[i]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">_</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>words[i <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span>
+<span id="cb12-39">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> tokens</span></code></pre></div></div>
+</div>
+<div id="8181bd16" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Step 3: Build BM25 index from your filtered chunks</span></span>
+<span id="cb13-2">filtered_chunks <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"palm hills apartment 5th settlement new cairo"</span>, ...]  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Your data</span></span>
+<span id="cb13-3">tokenized_corpus <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [tokenize_ngram(chunk) <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> chunk <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> filtered_chunks]</span>
+<span id="cb13-4">bm25 <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> BM25Okapi(tokenized_corpus)</span>
+<span id="cb13-5"></span>
+<span id="cb13-6"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Save for later use</span></span>
+<span id="cb13-7"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">with</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">open</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"bm25_index.pkl"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"wb"</span>) <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> f:</span>
+<span id="cb13-8">    pickle.dump(bm25, f)</span>
+<span id="cb13-9"></span>
+<span id="cb13-10"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Step 4: Create hybrid collection in Qdrant</span></span>
+<span id="cb13-11">client <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> QdrantClient(url<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"your-url"</span>, api_key<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"your-key"</span>)</span>
+<span id="cb13-12"></span>
+<span id="cb13-13">client.create_collection(</span>
+<span id="cb13-14">    collection_name<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"hybrid_collection"</span>,</span>
+<span id="cb13-15">    vectors_config<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>{</span>
+<span id="cb13-16">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"dense"</span>: models.VectorParams(size<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3072</span>, distance<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>models.Distance.COSINE)</span>
+<span id="cb13-17">    },</span>
+<span id="cb13-18">    sparse_vectors_config<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>{<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"text-sparse"</span>: models.SparseVectorParams()},</span>
+<span id="cb13-19">)</span></code></pre></div></div>
+</div>
+<div id="d51cef0c" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Step 5: Convert text to sparse vector using BM25 scores</span></span>
+<span id="cb14-2"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> text_to_sparse_vector(text: <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">str</span>, bm25_index) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span> models.SparseVector:</span>
+<span id="cb14-3">    tokens <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> tokenize_ngram(text)</span>
+<span id="cb14-4">    scores <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> bm25_index.get_scores(tokens)</span>
+<span id="cb14-5"></span>
+<span id="cb14-6">    indices <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> []</span>
+<span id="cb14-7">    values <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> []</span>
+<span id="cb14-8">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> idx, score <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">enumerate</span>(scores):</span>
+<span id="cb14-9">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> score <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>:</span>
+<span id="cb14-10">            indices.append(idx)</span>
+<span id="cb14-11">            values.append(<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">float</span>(score))</span>
+<span id="cb14-12"></span>
+<span id="cb14-13">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> models.SparseVector(indices<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>indices, values<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>values)</span>
+<span id="cb14-14"></span>
+<span id="cb14-15"></span>
+<span id="cb14-16"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Step 6: Upload documents with both vectors</span></span>
+<span id="cb14-17"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> i, (chunk, dense_embedding, metadata) <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">enumerate</span>(</span>
+<span id="cb14-18">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">zip</span>(filtered_chunks, embeddings, metadata_list)</span>
+<span id="cb14-19">):</span>
+<span id="cb14-20">    client.upsert(</span>
+<span id="cb14-21">        collection_name<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"hybrid_collection"</span>,</span>
+<span id="cb14-22">        points<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>[</span>
+<span id="cb14-23">            models.PointStruct(</span>
+<span id="cb14-24">                <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">id</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>i,</span>
+<span id="cb14-25">                payload<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>metadata,</span>
+<span id="cb14-26">                vector<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>{</span>
+<span id="cb14-27">                    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"dense"</span>: dense_embedding,</span>
+<span id="cb14-28">                    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"text-sparse"</span>: text_to_sparse_vector(chunk, bm25),</span>
+<span id="cb14-29">                },</span>
+<span id="cb14-30">            )</span>
+<span id="cb14-31">        ],</span>
+<span id="cb14-32">    )</span></code></pre></div></div>
+</div>
+<div id="6257b62b" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Step 7: Hybrid search with RRF fusion</span></span>
+<span id="cb15-2"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> hybrid_search(query_text: <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">str</span>, query_dense_vector: <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">list</span>, limit: <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>):</span>
+<span id="cb15-3">    query_sparse <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> text_to_sparse_vector(query_text, bm25)</span>
+<span id="cb15-4"></span>
+<span id="cb15-5">    results <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> client.query_points(</span>
+<span id="cb15-6">        collection_name<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"hybrid_collection"</span>,</span>
+<span id="cb15-7">        prefetch<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>[</span>
+<span id="cb15-8">            models.Prefetch(query<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>query_dense_vector, using<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"dense"</span>, limit<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>),</span>
+<span id="cb15-9">            models.Prefetch(query<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>query_sparse, using<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"text-sparse"</span>, limit<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">30</span>),</span>
+<span id="cb15-10">        ],</span>
+<span id="cb15-11">        query<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>models.FusionQuery(fusion<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>models.Fusion.RRF),</span>
+<span id="cb15-12">        limit<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>limit,</span>
+<span id="cb15-13">    )</span>
+<span id="cb15-14">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> results.points</span>
+<span id="cb15-15"></span>
+<span id="cb15-16"></span>
+<span id="cb15-17"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Usage</span></span>
+<span id="cb15-18">results <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> hybrid_search(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"6th Settlement Apartment"</span>, your_query_embedding)</span></code></pre></div></div>
+</div>
+<section id="references" class="level3">
+<h3 class="anchored" data-anchor-id="references">References</h3>
+<ol type="1">
+<li><a href="https://www.xbites.io/">Xbites Real Estate AI</a></li>
+<li><a href="https://qdrant.tech/articles/hybrid-search/">Qdrand Hybrid search</a></li>
+<li><a href="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html">Bm25 part 1</a></li>
+<li><a href="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html">Bm25 part 3</a></li>
+</ol>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>blogging</category>
+  <category>embedding</category>
+  <category>qdrant</category>
+  <category>sparse</category>
+  <guid>https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html</guid>
+  <pubDate>Thu, 18 Dec 2025 21:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/xbites_chat.png" medium="image" type="image/png" height="153" width="144"/>
 </item>
 <item>
   <title>Diversifying Search Results with Pyversity and Qdrant</title>
@@ -8389,7 +8389,7 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
   <category>qdrant</category>
   <category>til</category>
   <guid>https://kareemai.com/blog/posts/minishlab/pyversity_qdrant.html</guid>
-  <pubDate>Sun, 14 Dec 2025 22:00:00 GMT</pubDate>
+  <pubDate>Sun, 14 Dec 2025 21:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/minishlab/images/minishlab.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -8793,7 +8793,7 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
 
  ]]></description>
   <guid>https://kareemai.com/blog/posts/products_reviews/one_plus_pad_3.html</guid>
-  <pubDate>Wed, 03 Dec 2025 22:00:00 GMT</pubDate>
+  <pubDate>Wed, 03 Dec 2025 21:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/products_reviews/images/one_plus_storm_blue.wepb" medium="image"/>
 </item>
 <item>
@@ -8816,7 +8816,7 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
 <p>Available in three Morandi colors - Pink, White, and Black - the design is understated and elegant, though I personally miss the Isle Blue option from the 5i.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/products_reviews/images/huawei_7i.jpg" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/blog/posts/products_reviews/images/huawei_7i.webp" class="img-fluid figure-img"></p>
 <figcaption>Huawei FreeBuds 7i wireless earbuds</figcaption>
 </figure>
 </div>
@@ -8830,7 +8830,7 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
 <p>For anyone who does frequent video calls, online meetings, or even streaming, this upgrade alone justifies the purchase.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/products_reviews/images/5i_vs_7i.jpeg" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/blog/posts/products_reviews/images/5i_vs_7i.webp" class="img-fluid figure-img"></p>
 <figcaption>Huawei FreeBuds 7i vs 5i comparison wireless earbuds</figcaption>
 </figure>
 </div>
@@ -8860,7 +8860,7 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
 <p>For the Linux users out there: yes, it connects via bluetoothctl, though you might need to restart Bluetooth occasionally for a clean connection - same as with the 5i.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/products_reviews/images/black_7i.jpeg" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/blog/posts/products_reviews/images/black_7i.webp" class="img-fluid figure-img"></p>
 <figcaption>Huawei FreeBuds 7i unboxing wireless earbuds</figcaption>
 </figure>
 </div>
@@ -8920,7 +8920,7 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
 <p>The spatial audio feature works across different apps and devices, creating an immersive listening experience for movies and gaming.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/products_reviews/images/overview_7i.jpeg" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/blog/posts/products_reviews/images/overview_7i.webp" class="img-fluid figure-img"></p>
 <figcaption>Freebuds 7i</figcaption>
 </figure>
 </div>
@@ -9051,7 +9051,7 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
 
  ]]></description>
   <guid>https://kareemai.com/blog/posts/products_reviews/Huawei freebuds 7i.html</guid>
-  <pubDate>Thu, 06 Nov 2025 22:00:00 GMT</pubDate>
+  <pubDate>Thu, 06 Nov 2025 21:00:00 GMT</pubDate>
 </item>
 <item>
   <title>From $32,000 to $0 with Small Models and CTranslate2</title>
@@ -9153,14 +9153,14 @@ Selection Scores: [1.939636  1.524907  1.3047718 1.2576772 1.1047928 1.0550355]<
 <p>It’s a 240M parameter small model trained to translate English into Egyptian. It was trained on more than <em><strong>150,000</strong></em> rows with more than <em><strong>10 Million tokens</strong></em> for Arabic language. It competes with closed LLMs like GPT-4o and Claude-3.5-Sonnet</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/minishlab/images/masrawy.png" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/blog/posts/minishlab/images/masrawy.webp" class="img-fluid figure-img"></p>
 <figcaption>CTranslate2 masrawy translation benchmark results</figcaption>
 </figure>
 </div>
 <p>I tested it with my local laptop GPU 1660Ti GTX mobile version with 6GB and CPU is Core i7 gen9 from Intel with 32GB DDR4. I tested the model and it worked with PyTorch very fast and very efficiently! The translations are very similar and this is enough for the task I want to build on this translated dataset! Let’s do the math for how much this will cost on my laptop :)</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/minishlab/images/bojji.png" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/blog/posts/minishlab/images/bojji.webp" class="img-fluid figure-img"></p>
 <figcaption>CTranslate2 faster masrawy model performance</figcaption>
 </figure>
 </div>
@@ -9540,7 +9540,7 @@ font-style: inherit;">"float16"</span>,</span>
   <category>blogging</category>
   <guid>https://kareemai.com/blog/posts/minishlab/ctranslate_maswray.html</guid>
   <pubDate>Thu, 02 Oct 2025 21:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/minishlab/images/bojji.png" medium="image" type="image/png" height="216" width="144"/>
+  <media:content url="https://kareemai.com/blog/posts/minishlab/images/bojji.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>Digital Minimalism: Getting Back to RSS for AI Engineers</title>
@@ -9556,7 +9556,7 @@ font-style: inherit;">"float16"</span>,</span>
 <p>This post explains why I moved back to RSS, stopped using social media for professional updates, and how digital minimalism helps me stay productive without burning out.</p>
 <section id="the-flood-of-information" class="level2">
 <h2 class="anchored" data-anchor-id="the-flood-of-information">The Flood of Information</h2>
-<p>I use <a href="https://github.com/yang991178/fluent-reader">Fluent Reader</a> to keep track of the feeds I love, covering topics like machine learning (ML), life, and more. <img src="https://kareemai.com/blog/posts/life_style/images/vision_read.png" class="img-fluid" alt="Fluent Reader"></p>
+<p>I use <a href="https://github.com/yang991178/fluent-reader">Fluent Reader</a> to keep track of the feeds I love, covering topics like machine learning (ML), life, and more. <img src="https://kareemai.com/blog/posts/life_style/images/vision_read.webp" class="img-fluid" alt="Fluent Reader"></p>
 <p>Yesterday, I read an article from <a href="https://www.answer.ai/posts/2025-06-05-readbench.html">Answerdotai</a> about Vision Language Models (VLMs).</p>
 <p>I spent about 15 minutes diving into the ideas and reflecting on how they relate to my recent projects using Colpali and DSE.</p>
 <p>Today, I opened X.com and saw a thread by Benjamin about the same article.</p>
@@ -9594,7 +9594,7 @@ Don’t leave comments—email me instead.</code></pre>
 <section id="back-to-rss-discord" class="level2">
 <h2 class="anchored" data-anchor-id="back-to-rss-discord">Back to RSS + Discord</h2>
 <p>After five years, I’ve identified the sources I value and noticed a pattern. Why not collect them in one managed place, free from algorithms and ads? That’s where RSS comes in. I love it—it’s a superpower! When I first learned about RSS in college, I pictured an old Englishman in a garden reading about obscure topics. Now, I’ve become that “old man” who craves calm, minimal, and boring tools.</p>
-<p>You can even follow YouTube channels via RSS without opening a browser! <img src="https://kareemai.com/blog/posts/life_style/images/fluent_reader.png" class="img-fluid" alt="Fluent Reader"></p>
+<p>You can even follow YouTube channels via RSS without opening a browser! <img src="https://kareemai.com/blog/posts/life_style/images/fluent_reader.webp" class="img-fluid" alt="Fluent Reader"></p>
 <p>For interacting with people, Discord channels are better. I can still reach folks like Jeremy and Tom there.</p>
 </section>
 <section id="next-ideas" class="level2">
@@ -9644,10 +9644,10 @@ Media Manager</code></pre>
 <h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
 <p>If you found these thoughts on digital minimalism and productivity useful, you might also be interested in:</p>
 <ul>
-<li>[My Research Papers]((../../../papers.html)</li>
-<li>[Open Source Projects]((../../../oss/opensource.html)</li>
-<li>[Today I Learned: AI Engineering Notes]((../../../til/index.html)</li>
-<li>[Arabic NLP Blog Posts]((../../feed.html)</li>
+<li><a href="../../../papers.html">My Research Papers</a></li>
+<li><a href="../../../oss/opensource.html">Open Source Projects</a></li>
+<li><a href="../../../til/index.html">Today I Learned: AI Engineering Notes</a></li>
+<li><a href="../../feed.html">Arabic NLP Blog Posts</a></li>
 </ul>
 
 
@@ -9662,7 +9662,7 @@ Media Manager</code></pre>
   <category>life_style</category>
   <guid>https://kareemai.com/blog/posts/life_style/back_to_rss.html</guid>
   <pubDate>Mon, 09 Jun 2025 21:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/life_style/images/vision_read.png" medium="image" type="image/png" height="137" width="144"/>
+  <media:content url="https://kareemai.com/blog/posts/life_style/images/vision_read.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>Late Interaction &amp; ColPali: Efficient Semantic Search</title>
