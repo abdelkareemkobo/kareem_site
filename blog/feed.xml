@@ -9925,7 +9925,7 @@ font-style: inherit;">"</span>)</span></code></pre></div></div>
 <p>I liken them to Bojji from <em>Ousama Ranking</em> small in size but capable of competing with giants like Jina AI and BGE models.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/minishlab/images/bojji.png" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/blog/posts/minishlab/images/bojji.webp" class="img-fluid figure-img"></p>
 <figcaption>Bojji Embedding</figcaption>
 </figure>
 </div>
@@ -10102,7 +10102,7 @@ font-style: inherit;">"</span>)</span></code></pre></div></div>
 │<span style="color: #008080; text-decoration-color: #008080"> Arabic-MiniLM-L12-v2-all-nli-triplet  </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">                           0.478</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼──────────────────────────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">bojji                                </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000; font-weight: bold">                           0.467</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
-├───────────────────────────────────────┼��─────────────────────────────────┤
+├───────────────────────────────────────┼���─────────────────────────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> paraphrase-multilingual-MiniLM-L12-v2 </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">                           0.451</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼──────────────────────────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> potion-multilingual-128M              </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">                           0.428</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
