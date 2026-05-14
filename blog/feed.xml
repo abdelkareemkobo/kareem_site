@@ -303,7 +303,7 @@
   <category>blog/opinion/tech</category>
   <guid>https://kareemai.com/blog/posts/ml_life/hacker_rank_ai_intereviw.html</guid>
   <pubDate>Mon, 27 Apr 2026 21:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/ml_life/images/hackerank.jpeg" medium="image" type="image/jpeg"/>
+  <media:content url="https://kareemai.com/blog/posts/ml_life/images/hackerank.svg" medium="image" type="image/svg+xml"/>
 </item>
 <item>
   <title>LiteRT and Qualcomm AI Hub: On-Device ML Without the Cloud</title>
