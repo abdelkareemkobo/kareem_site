@@ -41,15 +41,16 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-html/popper.min.js" defer></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js" defer></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js" defer></script>
+<link rel="preload" as="style" href="../../../site_libs/bootstrap/bootstrap-4147375aad28e86e0c0b867c5ec42731.min.css">
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+
+<noscript><link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles"></noscript>
+<noscript><link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles"></noscript>
 <script src="../../../site_libs/bootstrap/bootstrap.min.js" defer></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../site_libs/bootstrap/bootstrap-4147375aad28e86e0c0b867c5ec42731.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../../site_libs/bootstrap/bootstrap-dark-0c33f1f559f04da1bcee1516f29a3f94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark" media="print" onload="this.media='all'"><noscript><link href="../../../site_libs/bootstrap/bootstrap-dark-0c33f1f559f04da1bcee1516f29a3f94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"></noscript>
-<link href="../../../site_libs/bootstrap/bootstrap-4147375aad28e86e0c0b867c5ec42731.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-4147375aad28e86e0c0b867c5ec42731.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light" media="print" onload="this.media='all'"><noscript><link href="../../../site_libs/bootstrap/bootstrap-4147375aad28e86e0c0b867c5ec42731.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light"></noscript>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -94,12 +95,12 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="Bojji &amp; Zarra Arabic Embeddings: MTEB vs all-MiniLM-L6-v2 – Abdelkareem Elkhateb">
 <meta property="og:description" content="Analyze Bojji and Zarra model2vec embeddings for Arabic, compare MTEB average score with all-MiniLM-L6-v2 and other static models.">
-<meta property="og:image" content="https://kareemai.com/blog/posts/minishlab/images/minishlab.jpg">
+<meta property="og:image" content="https://kareemai.com/blog/posts/minishlab/images/minishlab.webp">
 <meta property="og:site_name" content="Abdelkareem Elkhateb">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:title" content="Bojji &amp; Zarra Arabic Embeddings: MTEB vs all-MiniLM-L6-v2 – Abdelkareem Elkhateb">
 <meta name="twitter:description" content="Analyze Bojji and Zarra model2vec embeddings for Arabic, compare MTEB average score with all-MiniLM-L6-v2 and other static models.">
-<meta name="twitter:image" content="https://kareemai.com/blog/posts/minishlab/images/minishlab.jpg">
+<meta name="twitter:image" content="https://kareemai.com/blog/posts/minishlab/images/minishlab.webp">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://kareemai.com/blog/posts/minishlab/blog_zaraah.html">
@@ -646,7 +647,7 @@ window.addEventListener('scroll', () => {
 │<span style="color: #008080; text-decoration-color: #008080"> Arabic-MiniLM-L12-v2-all-nli-triplet  </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">                           0.478</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼──────────────────────────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008000; text-decoration-color: #008000; font-weight: bold">bojji                                </span><span style="color: #008080; text-decoration-color: #008080"> </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000; font-weight: bold">                           0.467</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
-├───────────────────────────────────────┼──────────────────────────────────┤
+├───────────────────────────────────────┼��─────────────────────────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> paraphrase-multilingual-MiniLM-L12-v2 </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">                           0.451</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
 ├───────────────────────────────────────┼──────────────────────────────────┤
 │<span style="color: #008080; text-decoration-color: #008080"> potion-multilingual-128M              </span>│<span style="color: #008000; text-decoration-color: #008000"> </span><span style="color: #808000; text-decoration-color: #808000">                           0.428</span><span style="color: #008000; text-decoration-color: #008000"> </span>│
@@ -925,7 +926,7 @@ window.addEventListener('scroll', () => {
 <p>It’s just the start with initial tests, there is more to explore from the base models, datasets and the new features from minishlab which will try to narrow the gab between model2vec and sentence-transformers.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/bojji_and_zarra.png" class="img-fluid figure-img"></p>
+<p><img src="images/bojji_and_zarra.webp" class="img-fluid figure-img"></p>
 <figcaption>zarra and Bojji</figcaption>
 </figure>
 </div>

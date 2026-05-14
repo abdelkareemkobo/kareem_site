@@ -50,13 +50,6 @@
 	src: url("fonts/recursive-s-300-500-normal-72c26f14.woff2") format("woff2");
 }
 
-/* Apache License 2.0 https://developers.google.com/fonts/docs/material_icons#licensing */
-@font-face {
-	font-family: "Material Icons (Filled)";
-	font-display: swap;
-	src: url("fonts/material-icons-filled-400-normal-556a6a8b.woff2") format("woff2");
-}
-
 /* === Local font embeds: Amiri + JetBrains Mono === */
 /* arabic */
 @font-face {

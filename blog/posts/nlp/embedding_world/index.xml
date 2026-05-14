@@ -3254,7 +3254,7 @@ QPS: 1627.94
   <category>qdrant</category>
   <guid>https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html</guid>
   <pubDate>Fri, 19 Dec 2025 21:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/bm25.png" medium="image" type="image/png" height="98" width="144"/>
+  <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/bm25.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>BM25 Explained Part 2 | Qdrant hybrid search for real estate</title>
@@ -3270,7 +3270,7 @@ QPS: 1627.94
 <h2 class="anchored" data-anchor-id="building-hybrid-search-for-real-estate-with-qdrant-and-bm25">Building Hybrid Search for Real Estate with Qdrant and BM25</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/xbites_chat.png" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/xbites_chat.webp" class="img-fluid figure-img"></p>
 <figcaption>xbites mena real esate ai</figcaption>
 </figure>
 </div>
@@ -4010,7 +4010,7 @@ font-style: inherit;">"6th Settlement Apartment"</span>, your_query_embedding)</
   <category>sparse</category>
   <guid>https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html</guid>
   <pubDate>Thu, 18 Dec 2025 21:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/xbites_chat.png" medium="image" type="image/png" height="153" width="144"/>
+  <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/xbites_chat.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>BM25 Search Algorithm: Python Implementation from Scratch</title>
@@ -4031,7 +4031,7 @@ font-style: inherit;">"6th Settlement Apartment"</span>, your_query_embedding)</
 <p><strong>you will find a marimo version in the references that will help you understand the equation better.</strong></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/bm_25_marimo.png" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/bm_25_marimo.webp" class="img-fluid figure-img"></p>
 <figcaption>marimo bm25</figcaption>
 </figure>
 </div>
@@ -4851,7 +4851,7 @@ Query: 'love python'
   <category>qdrant</category>
   <guid>https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html</guid>
   <pubDate>Thu, 18 Dec 2025 21:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/bm25.png" medium="image" type="image/png" height="98" width="144"/>
+  <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/bm25.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>Late Interaction &amp; ColPali: Efficient Semantic Search</title>
@@ -5090,7 +5090,7 @@ font-style: inherit;">"</span>)</span></code></pre></div></div>
   <category>arabic</category>
   <guid>https://kareemai.com/blog/posts/nlp/embedding_world/late_interaction.html</guid>
   <pubDate>Wed, 14 May 2025 21:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/images/minishlab.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/images/minishlab.webp" medium="image" type="image/webp"/>
 </item>
 </channel>
 </rss>

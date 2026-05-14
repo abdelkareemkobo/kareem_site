@@ -76,15 +76,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../../../site_libs/quarto-html/popper.min.js" defer></script>
 <script src="../../../../../site_libs/quarto-html/tippy.umd.min.js" defer></script>
 <script src="../../../../../site_libs/quarto-html/anchor.min.js" defer></script>
+<link rel="preload" as="style" href="../../../../../site_libs/bootstrap/bootstrap-4147375aad28e86e0c0b867c5ec42731.min.css">
 <link href="../../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+
+<noscript><link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles"></noscript>
+<noscript><link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles"></noscript>
 <script src="../../../../../site_libs/bootstrap/bootstrap.min.js" defer></script>
 <link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../../../site_libs/bootstrap/bootstrap-4147375aad28e86e0c0b867c5ec42731.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../../../../site_libs/bootstrap/bootstrap-dark-0c33f1f559f04da1bcee1516f29a3f94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark" media="print" onload="this.media='all'"><noscript><link href="../../../../../site_libs/bootstrap/bootstrap-dark-0c33f1f559f04da1bcee1516f29a3f94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"></noscript>
-<link href="../../../../../site_libs/bootstrap/bootstrap-4147375aad28e86e0c0b867c5ec42731.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../../site_libs/bootstrap/bootstrap-4147375aad28e86e0c0b867c5ec42731.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light" media="print" onload="this.media='all'"><noscript><link href="../../../../../site_libs/bootstrap/bootstrap-4147375aad28e86e0c0b867c5ec42731.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light"></noscript>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -129,18 +130,14 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="BM25 Search Algorithm: Python Implementation from Scratch – Abdelkareem Elkhateb">
 <meta property="og:description" content="Learn how BM25 improves search relevance over TF-IDF. This guide covers the math and Python code for implementing BM25 ranking from scratch with clear examples.">
-<meta property="og:image" content="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/bm25.png">
+<meta property="og:image" content="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/bm25.webp">
 <meta property="og:site_name" content="Abdelkareem Elkhateb">
-<meta property="og:image:height" content="1272">
-<meta property="og:image:width" content="1877">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:title" content="BM25 Search Algorithm: Python Implementation from Scratch – Abdelkareem Elkhateb">
 <meta name="twitter:description" content="Learn how BM25 improves search relevance over TF-IDF. This guide covers the math and Python code for implementing BM25 ranking from scratch with clear examples.">
-<meta name="twitter:image" content="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/bm25.png">
+<meta name="twitter:image" content="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/bm25.webp">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image-height" content="1272">
-<meta name="twitter:image-width" content="1877">
 <link rel="canonical" href="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html">
 </head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
@@ -530,7 +527,7 @@ window.Quarto = {
 <p><strong>you will find a marimo version in the references that will help you understand the equation better.</strong></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/bm_25_marimo.png" class="img-fluid figure-img"></p>
+<p><img src="images/bm_25_marimo.webp" class="img-fluid figure-img"></p>
 <figcaption>marimo bm25</figcaption>
 </figure>
 </div>
