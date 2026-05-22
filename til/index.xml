@@ -14,7 +14,7 @@
 <title>Abdelkareem Elkhateb</title>
 <link>https://kareemai.com/til/</link>
 </image>
-<generator>quarto-1.9.36</generator>
+<generator>quarto-1.9.37</generator>
 <lastBuildDate>Sun, 14 Dec 2025 21:00:00 GMT</lastBuildDate>
 <item>
   <title>AI Research Challenges: The GPU Barrier for Researchers</title>
@@ -1718,7 +1718,7 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div></div>
 </section>
 <section id="static-embedding-with-qdrant-and-model2vec" class="level2">
 <h2 class="anchored" data-anchor-id="static-embedding-with-qdrant-and-model2vec">Static Embedding with Qdrant and Model2vec</h2>
-<p>Static embedding from minishLab reduce the model size with 15x reduction and up to 500x speed increase while the maintain more than 85% of the performance levels. it’s like our <a href="https://kareemai.com/blog/posts/minishlab/zaraah.html">zaraah model</a> for arabic.</p>
+<p>Static embedding from minishLab reduce the model size with 15x reduction and up to 500x speed increase while the maintain more than 85% of the performance levels. it’s like our <a href="https://kareemai.com/blog/posts/minishlab/blog_zaraah.html">zaraah model</a> for arabic.</p>
 <p>Static embedding are dense embedding so you can also use with qdrant collections. The retrieval is not going to be any faster becuase static embeddings. but the speedup is in creating the vectors from your data and encoding the queries.</p>
 <p>If you want to make the retrieval faster use the following: 1. Matryoshka Embeddings 2. Quantization methods like (Scalar and Binary Quantization) ### When to use Static Embeddings ?</p>
 <ol type="1">
