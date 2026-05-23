@@ -329,6 +329,19 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+svg,
+img[src$=".svg"] {
+    max-width: 100%;
+    height: auto;
+}
+
+article img[src$=".svg"],
+.blog-post img[src$=".svg"],
+.quarto-post img[src$=".svg"] {
+    max-height: 200px;
+    object-fit: contain;
+}
 hr {
     border: none;
     height: 1px;
@@ -546,13 +559,6 @@ article {
     text-align: center;
 }
 
-.home-centered .project-card {
-    text-align: center;
-    max-width: 60ch;
-    margin: 0 auto;
-    width: 100%;
-}
-
 .home-centered .foldable-heading {
     justify-content: center;
     text-align: center;
@@ -562,16 +568,10 @@ article {
     margin-right: 0.35rem;
 }
 
-.home-centered .work-section > p,
-.home-centered .project-card > p {
+.home-centered .work-section > p {
     margin-left: auto;
     margin-right: auto;
     max-width: 65ch;
-}
-
-.home-centered .project-card h3,
-.home-centered .project-card a {
-    text-align: center;
 }
 
 /* Hero Section */
@@ -690,6 +690,9 @@ article {
     padding: 1.1rem 0;
     transition: border-color 0.15s ease;
     font-family: var(--font);
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
 }
 
 .project-card:hover {
@@ -698,6 +701,21 @@ article {
 
 .project-card.featured {
     border-left: none;
+}
+
+.project-thumb {
+    width: 72px;
+    height: 72px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+    background: var(--surface);
+    border: 1px solid var(--ui);
+}
+
+.project-card-body {
+    flex: 1;
+    min-width: 0;
 }
 
 .project-card h3 {
@@ -721,6 +739,57 @@ article {
 }
 
 .project-card a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.home-centered .project-card {
+    text-align: left;
+    max-width: 60ch;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.home-centered .project-thumb {
+    width: 72px;
+    height: 72px;
+}
+
+/* Paper Cards */
+.paper-card {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--ui);
+    border-radius: 0;
+    padding: 1rem 0;
+    font-family: var(--font);
+}
+
+.paper-card:hover {
+    border-color: var(--ui-2);
+}
+
+.paper-card strong {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--tx);
+}
+
+.paper-meta {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--tx-3);
+    margin: 0.2rem 0 0.4rem;
+}
+
+.paper-card a {
+    font-size: 0.9rem;
+    color: var(--bl);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.paper-card a:hover {
     text-decoration: underline;
     text-underline-offset: 3px;
 }
@@ -965,14 +1034,21 @@ article {
     
     .project-card {
         padding: 1rem 0;
+        gap: 0.75rem;
     }
     
     .project-card h3 {
         font-size: 1rem !important;
     }
     
-    .project-card > p {
+    .project-card > p,
+    .project-card-body > p {
         font-size: 0.9rem;
+    }
+
+    .project-thumb {
+        width: 56px;
+        height: 56px;
     }
 
     .newsletter-box {
@@ -1606,6 +1682,18 @@ figcaption,
     object-fit: cover;
     height: 140px;
     width: 100%;
+}
+
+.quarto-listing-default .thumbnail img[src$=".svg"],
+.quarto-listing-default img.thumbnail-image[src$=".svg"],
+.quarto-grid-item .thumbnail img[src$=".svg"],
+.quarto-grid-item img.thumbnail-image[src$=".svg"] {
+    object-fit: contain !important;
+    width: 100% !important;
+    height: 100px !important;
+    max-height: 100px !important;
+    padding: 0.5rem;
+    background: var(--bg-2);
 }
 
 /* Default listing (if used) */

@@ -1,36 +1,40 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://kareemai.com/README.sync-conflict-20260523-064405-6F432NM.html</loc>
+    <lastmod>2026-05-10T22:19:37.000Z</lastmod>
+  </url>
+  <url>
     <loc>https://kareemai.com/</loc>
-    <lastmod>2026-05-21T23:51:19.262Z</lastmod>
+    <lastmod>2026-05-23T04:45:54.450Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/til/tils/2025-05-19-til.html</loc>
-    <lastmod>2025-05-19T00:00:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/til/tils/2025-12-15.html</loc>
-    <lastmod>2025-12-15T00:00:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/til/tils/2025-12-13.html</loc>
-    <lastmod>2025-12-13T00:00:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/til/tils/2025-05-17-til.html</loc>
-    <lastmod>2025-05-17T00:00:00Z</lastmod>
+    <loc>https://kareemai.com/til/tils/2025-05-21-til.html</loc>
+    <lastmod>2025-05-21T00:00:00Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/til/tils/2025-05-25-til.html</loc>
     <lastmod>2025-05-25T00:00:00Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/til/tils/2025-06-06-til.html</loc>
-    <lastmod>2025-06-06T00:00:00Z</lastmod>
+    <loc>https://kareemai.com/til/tils/2025-10-21.html</loc>
+    <lastmod>2025-10-21T00:00:00Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/til/tils/2025-05-23-til.html</loc>
-    <lastmod>2025-05-23T00:00:00Z</lastmod>
+    <loc>https://kareemai.com/til/tils/2025-12-14.html</loc>
+    <lastmod>2025-12-14T00:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/til/tils/2025-05-28-til.html</loc>
+    <lastmod>2025-05-28T00:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/til/tils/2025-05-20-til.html</loc>
+    <lastmod>2025-05-20T00:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/til/tils/2025-06-06-til.html</loc>
+    <lastmod>2025-06-06T00:00:00Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/oss/opensource.html</loc>
@@ -45,100 +49,44 @@
     <lastmod>2025-10-03T00:00:00Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/blog/posts/ml_life/hacker_rank_ai_intereviw.html</loc>
-    <lastmod>2026-04-28T00:00:00Z</lastmod>
+    <loc>https://kareemai.com/blog/posts/ml_life/cv_of_failure.html</loc>
+    <lastmod>2026-05-23T00:00:00Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/blog/posts/seo/the_curse_of_seo.html</loc>
-    <lastmod>2024-07-31T00:00:00Z</lastmod>
+    <loc>https://kareemai.com/blog/posts/seo/google_ads_black_box.html</loc>
+    <lastmod>2024-10-05T00:00:00Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/blog/posts/seo/how_i_use_nlp_for_seo.html</loc>
-    <lastmod>2023-07-18T00:00:00Z</lastmod>
+    <loc>https://kareemai.com/blog/posts/seo/seo_rat_journey.html</loc>
+    <lastmod>2026-02-26T00:00:00Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/blog/posts/math/math_skills_for_AI.html</loc>
-    <lastmod>2025-01-27T00:00:00Z</lastmod>
+    <loc>https://kareemai.com/blog/posts/speech_recognition/my_dream_job_at_tarteel.html</loc>
+    <lastmod>2025-03-18T00:00:00Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/blog/posts/speech_recognition/muaalm_quran_chance.html</loc>
-    <lastmod>2025-12-26T00:00:00Z</lastmod>
+    <loc>https://kareemai.com/blog/posts/dspy/Opencode.html</loc>
+    <lastmod>2026-02-19T00:00:00Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/blog/posts/nlp/embedding_world/late_interaction.html</loc>
-    <lastmod>2025-05-15T00:00:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/posts/nlp/embedding_world/hyperrun.html</loc>
+    <loc>https://kareemai.com/blog/posts/nlp/embedding_world/hyperun_fasthtml.html</loc>
     <lastmod>2026-03-19T00:00:00Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html</loc>
+    <loc>https://kareemai.com/blog/posts/nlp/embedding_world/vector_database_book.html</loc>
+    <lastmod>2026-04-18T00:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html</loc>
     <lastmod>2025-12-19T00:00:00Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html</loc>
-    <lastmod>2025-12-20T00:00:00Z</lastmod>
+    <loc>https://kareemai.com/blog/posts/nlp/embedding_world/</loc>
+    <lastmod>2026-05-10T21:56:32.000Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/blog/posts/life_style/why_I_am_blogging.html</loc>
-    <lastmod>2023-07-18T00:00:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/posts/life_style/protienai.html</loc>
-    <lastmod>2025-01-08T00:00:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/posts/life_style/back_to_rss.html</loc>
-    <lastmod>2025-06-10T00:00:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/posts/mteb_encoding/my_little_dargon.html</loc>
-    <lastmod>2024-01-01T00:00:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/posts/fl/what_is_federated_learning.html</loc>
-    <lastmod>2024-11-12T00:00:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/posts/products_reviews/Huawei freebuds 5i.html</loc>
-    <lastmod>2023-12-06T00:00:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/posts/products_reviews/Building_AI_PC_In_Egypt.html</loc>
-    <lastmod>2026-05-08T00:00:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/posts/products_reviews/Huawei_watch_gt_4_experience.html</loc>
+    <loc>https://kareemai.com/blog/posts/ds_and_algo/master_ds.html</loc>
     <lastmod>2024-10-04T00:00:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/feed.html</loc>
-    <lastmod>2026-05-14T08:38:05.816Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/posts/courses/havrard CS197 AI research experiences.html</loc>
-    <lastmod>2023-07-18T00:00:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/posts/products_reviews/Huawei_mate_pad_11.html</loc>
-    <lastmod>2023-12-07T00:00:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/posts/products_reviews/Huawei freebuds 7i.html</loc>
-    <lastmod>2025-11-07T00:00:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/posts/products_reviews/one_plus_pad_3.html</loc>
-    <lastmod>2025-12-04T00:00:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html</loc>
-    <lastmod>2023-10-28T00:00:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/posts/mteb_encoding/tiny-gte_transformer_model.html</loc>
-    <lastmod>2023-10-21T00:00:00Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/life_style/digital_minimalisim_arabic.html</loc>
@@ -149,6 +97,62 @@
     <lastmod>2025-04-04T00:00:00Z</lastmod>
   </url>
   <url>
+    <loc>https://kareemai.com/blog/posts/life_style/why_I_am_blogging.html</loc>
+    <lastmod>2023-07-18T00:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/mteb_encoding/tiny-gte_transformer_model.html</loc>
+    <lastmod>2023-10-21T00:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html</loc>
+    <lastmod>2023-10-28T00:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/products_reviews/one_plus_pad_3.html</loc>
+    <lastmod>2025-12-04T00:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/products_reviews/Huawei freebuds 7i.html</loc>
+    <lastmod>2025-11-07T00:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/products_reviews/Huawei_mate_pad_11.html</loc>
+    <lastmod>2023-12-07T00:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/courses/havrard CS197 AI research experiences.html</loc>
+    <lastmod>2023-07-18T00:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/feed.html</loc>
+    <lastmod>2026-05-23T04:46:28.622Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/products_reviews/Huawei_watch_gt_4_experience.html</loc>
+    <lastmod>2024-10-04T00:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/products_reviews/Building_AI_PC_In_Egypt.html</loc>
+    <lastmod>2026-05-08T00:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/products_reviews/Huawei freebuds 5i.html</loc>
+    <lastmod>2023-12-06T00:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/fl/what_is_federated_learning.html</loc>
+    <lastmod>2024-11-12T00:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/mteb_encoding/my_little_dargon.html</loc>
+    <lastmod>2024-01-01T00:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/life_style/protienai.html</loc>
+    <lastmod>2025-01-08T00:00:00Z</lastmod>
+  </url>
+  <url>
     <loc>https://kareemai.com/blog/posts/life_style/kamcalorie.html</loc>
     <lastmod>2025-01-08T00:00:00Z</lastmod>
   </url>
@@ -157,40 +161,44 @@
     <lastmod>2024-07-10T00:00:00Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/blog/posts/ds_and_algo/master_ds.html</loc>
-    <lastmod>2024-10-04T00:00:00Z</lastmod>
+    <loc>https://kareemai.com/blog/posts/life_style/back_to_rss.html</loc>
+    <lastmod>2025-06-10T00:00:00Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/blog/posts/nlp/embedding_world/</loc>
-    <lastmod>2026-05-10T21:56:32.000Z</lastmod>
+    <loc>https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html</loc>
+    <lastmod>2025-12-20T00:00:00Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html</loc>
+    <loc>https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html</loc>
     <lastmod>2025-12-19T00:00:00Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/blog/posts/nlp/embedding_world/vector_database_book.html</loc>
-    <lastmod>2026-04-18T00:00:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/blog/posts/nlp/embedding_world/hyperun_fasthtml.html</loc>
+    <loc>https://kareemai.com/blog/posts/nlp/embedding_world/hyperrun.html</loc>
     <lastmod>2026-03-19T00:00:00Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/blog/posts/dspy/Opencode.html</loc>
-    <lastmod>2026-02-19T00:00:00Z</lastmod>
+    <loc>https://kareemai.com/blog/posts/nlp/embedding_world/late_interaction.html</loc>
+    <lastmod>2025-05-15T00:00:00Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/blog/posts/speech_recognition/my_dream_job_at_tarteel.html</loc>
-    <lastmod>2025-03-18T00:00:00Z</lastmod>
+    <loc>https://kareemai.com/blog/posts/speech_recognition/muaalm_quran_chance.html</loc>
+    <lastmod>2025-12-26T00:00:00Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/blog/posts/seo/seo_rat_journey.html</loc>
-    <lastmod>2026-02-26T00:00:00Z</lastmod>
+    <loc>https://kareemai.com/blog/posts/math/math_skills_for_AI.html</loc>
+    <lastmod>2025-01-27T00:00:00Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/blog/posts/seo/google_ads_black_box.html</loc>
-    <lastmod>2024-10-05T00:00:00Z</lastmod>
+    <loc>https://kareemai.com/blog/posts/seo/how_i_use_nlp_for_seo.html</loc>
+    <lastmod>2023-07-18T00:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/seo/the_curse_of_seo.html</loc>
+    <lastmod>2024-07-31T00:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/blog/posts/ml_life/hacker_rank_ai_intereviw.html</loc>
+    <lastmod>2026-04-28T00:00:00Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/on_device/litert.html</loc>
@@ -206,38 +214,42 @@
   </url>
   <url>
     <loc>https://kareemai.com/til/</loc>
-    <lastmod>2026-05-14T08:56:23.957Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/til/tils/2025-05-21-til.html</loc>
-    <lastmod>2025-05-21T00:00:00Z</lastmod>
+    <lastmod>2026-05-23T04:48:45.381Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/til/tils/2025-05-18-til.html</loc>
     <lastmod>2025-05-18T00:00:00Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/til/tils/2025-05-20-til.html</loc>
-    <lastmod>2025-05-20T00:00:00Z</lastmod>
+    <loc>https://kareemai.com/til/tils/2025-05-17-til.html</loc>
+    <lastmod>2025-05-17T00:00:00Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/til/tils/2025-05-28-til.html</loc>
-    <lastmod>2025-05-28T00:00:00Z</lastmod>
+    <loc>https://kareemai.com/til/tils/2025-12-13.html</loc>
+    <lastmod>2025-12-13T00:00:00Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/til/tils/2025-12-14.html</loc>
-    <lastmod>2025-12-14T00:00:00Z</lastmod>
+    <loc>https://kareemai.com/til/tils/2025-12-15.html</loc>
+    <lastmod>2025-12-15T00:00:00Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/til/tils/2025-10-21.html</loc>
-    <lastmod>2025-10-21T00:00:00Z</lastmod>
+    <loc>https://kareemai.com/til/tils/2025-05-23-til.html</loc>
+    <lastmod>2025-05-23T00:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/til/tils/2025-05-19-til.html</loc>
+    <lastmod>2025-05-19T00:00:00Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/papers.html</loc>
-    <lastmod>2026-05-14T08:38:05.816Z</lastmod>
+    <lastmod>2026-05-23T04:50:42.749Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/publish.html</loc>
     <lastmod>2026-05-14T08:38:05.816Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/README.sync-conflict-20260523-064329-6F432NM.html</loc>
+    <lastmod>2026-05-10T22:19:37.000Z</lastmod>
   </url>
 </urlset>

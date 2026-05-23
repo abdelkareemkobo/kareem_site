@@ -374,15 +374,9 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#research-overview" id="toc-research-overview" class="nav-link active" data-scroll-target="#research-overview">Research Overview</a>
-  <ul class="collapse">
-  <li><a href="#arabic-language-technology" id="toc-arabic-language-technology" class="nav-link" data-scroll-target="#arabic-language-technology">Arabic Language Technology</a></li>
+  <li><a href="#arabic-language-technology" id="toc-arabic-language-technology" class="nav-link active" data-scroll-target="#arabic-language-technology">Arabic Language Technology</a></li>
   <li><a href="#healthcare-and-medical-ai" id="toc-healthcare-and-medical-ai" class="nav-link" data-scroll-target="#healthcare-and-medical-ai">Healthcare and Medical AI</a></li>
-  </ul></li>
-  <li><a href="#collaboration-and-further-reading" id="toc-collaboration-and-further-reading" class="nav-link" data-scroll-target="#collaboration-and-further-reading">Collaboration and Further Reading</a>
-  <ul class="collapse">
-  <li><a href="#related-technical-posts" id="toc-related-technical-posts" class="nav-link" data-scroll-target="#related-technical-posts">Related Technical Posts</a></li>
-  </ul></li>
+  <li><a href="#federated-learning-llms" id="toc-federated-learning-llms" class="nav-link" data-scroll-target="#federated-learning-llms">Federated Learning &amp; LLMs</a></li>
   </ul>
 </nav>
     </div>
@@ -414,40 +408,52 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 </header>
 
 
-<section id="research-overview" class="level2">
-<h2 class="anchored" data-anchor-id="research-overview">Research Overview</h2>
-<p>My research focuses on the intersection of Machine Learning, Natural Language Processing (NLP), and Healthcare. I am particularly interested in developing robust AI systems for under-represented languages like Arabic and applying advanced computer vision techniques to medical diagnostics. My goal is to bridge the gap between theoretical AI research and practical, impactful applications that solve real-world problems in diverse domains.</p>
-<p>I believe that the future of AI lies in its ability to be both performant and interpretable. This philosophy guides my work, whether I am optimizing transformer models for Arabic text recognition or developing explainable models for healthcare diagnostics. By making AI systems more transparent and efficient, we can ensure they are adopted more widely and responsibly in critical sectors.</p>
-<p>Below is a curated list of my academic publications and research papers, reflecting my contributions to these fields:</p>
+<p>Academic publications on Arabic OCR, medical AI, federated learning, and efficient NLP — bridging research and production for under-represented languages.</p>
 <section id="arabic-language-technology" class="level3">
 <h3 class="anchored" data-anchor-id="arabic-language-technology">Arabic Language Technology</h3>
-<ul>
-<li><a href="https://www.researchgate.net/publication/392372128_QARI-OCR_High-Fidelity_Arabic_Text_Recognition_through_Multimodal_Large_Language_Model_Adaptation?_sg%5B0%5D=Ddb9kwrghDtknsstHB3jlx1WzktpoFiMyRPptkC8aa65gsBxoJELnyU0eWOEMdJZc7iDzAWz_H6F-tcBgH5cEFeAxcJSKj_KPbQmRJ4U.0revArIdJ55OwTpYSzjXCjzvTRcpqs6fjm7JpaoCoUTXQ3fpCpx0DPLOF7UnmV8HWDrYSY9_QqO1XfHUzMtApQ&amp;_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6ImxvZ2luIiwicGFnZSI6InByb2ZpbGUiLCJwcmV2aW91c1BhZ2UiOiJwcm9maWxlIiwicG9zaXRpb24iOiJwYWdlQ29udGVudCJ9fQ">QARI-OCR</a>: <strong>High-Fidelity Arabic Text Recognition through Multimodal Large Language Model Adaptation</strong>. This work explores how multimodal LLMs can be adapted to achieve state-of-the-art results in Arabic Optical Character Recognition (OCR), addressing the unique challenges of the Arabic script.</li>
-</ul>
+<div class="paper-card">
+<p><strong>QARI-OCR: High-Fidelity Arabic Text Recognition through Multimodal LLM Adaptation</strong><br>
+<span class="paper-meta">2025 · 11 citations · arXiv</span><br>
+<a href="https://arxiv.org/abs/2506.02295">arXiv</a></p>
+</div>
 </section>
 <section id="healthcare-and-medical-ai" class="level3">
 <h3 class="anchored" data-anchor-id="healthcare-and-medical-ai">Healthcare and Medical AI</h3>
-<ul>
-<li><p><a href="https://www.researchgate.net/publication/375102394_Explainable_Artificial_Intelligence_of_Multi-level_Stacking_Ensemble_for_Detection_of_Alzheimer's_Disease_based_on_Particle_Swarm_Optimization_and_the_Sub-scores_of_Cognitive_Biomarkers">XAI for Alzheimer’s Diseases based on Particle Swarm Optimization</a>: <strong>Explainable Artificial Intelligence of Multi-Level Stacking Ensemble for Detection of Alzheimer’s Disease Based on Particle Swarm Optimization and the Sub-Scores of Cognitive Biomarkers</strong>. This paper presents a novel approach to early detection of Alzheimer’s using an ensemble model optimized via Particle Swarm Optimization (PSO), with a strong emphasis on model explainability.</p></li>
-<li><p><a href="https://www.researchgate.net/publication/390783955_Optimizing_Medical_Image_Classification_Leveraging_Advanced_Segmentation_Models_for_Enhanced_Object_Detection_in_Real-World_Scenarios?_sg%5B0%5D=Ddb9kwrghDtknsstHB3jlx1WzktpoFiMyRPptkC8aa65gsBxoJELnyU0eWOEMdJZc7iDzAWz_H6F-tcBgH5cEFeAxcJSKj_KPbQmRJ4U.0revArIdJ55OwTpYSzjXCjzvTRcpqs6fjm7JpaoCoUTXQ3fpCpx0DPLOF7UnmV8HWDrYSY9_QqO1XfHUzMtApQ&amp;_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6ImxvZ2luIiwicGFnZSI6InByb2ZpbGUiLCJwcmV2aW91c1BhZ2UiOiJwcm9maWxlIiwicG9zaXRpb24iOiJwYWdlQ29udGVudCJ9fQ">Optimizing Medical Image Classification</a>: <strong>Leveraging Advanced Segmentation Models for Enhanced Object Detection in Real-World Scenarios</strong>. This research focuses on improving the accuracy and reliability of medical image classification by integrating advanced segmentation techniques into the detection pipeline.</p></li>
-<li><p><a href="https://www.researchgate.net/publication/384044186_AI-Powered_ICare_Infant_Cry_Analysis_and_Speech_Therapy?_sg%5B0%5D=Ddb9kwrghDtknsstHB3jlx1WzktpoFiMyRPptkC8aa65gsBxoJELnyU0eWOEMdJZc7iDzAWz_H6F-tcBgH5cEFeAxcJSKj_KPbQmRJ4U.0revArIdJ55OwTpYSzjXCjzvTRcpqs6fjm7JpaoCoUTXQ3fpCpx0DPLOF7UnmV8HWDrYSY9_QqO1XfHUzMtApQ&amp;_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6ImxvZ2luIiwicGFnZSI6InByb2ZpbGUiLCJwcmV2aW91c1BhZ2UiOiJwcm9maWxlIiwicG9zaXRpb24iOiJwYWdlQ29udGVudCJ9fQ">AI-Powered ICare infant cry Analysis and Speech Therapy</a>: <strong>AI-Powered ICare: Infant Cry Analysis and Speech Therapy</strong>. This project investigates the use of artificial intelligence to analyze infant cries, helping parents and clinicians identify needs and potential speech therapy requirements at an early stage.</p></li>
-</ul>
+<div class="paper-card">
+<p><strong>Explainable AI for Alzheimer’s Detection via Particle Swarm Optimization</strong><br>
+<span class="paper-meta">2023 · 65 citations · IEEE Access</span><br>
+<a href="https://www.researchgate.net/publication/375102394">ResearchGate</a></p>
+</div>
+<div class="paper-card">
+<p><strong>Explainable Self-Supervised Learning for Medical Image Diagnosis Based on DINO V2</strong><br>
+<span class="paper-meta">2025 · 8 citations · Scientific Reports</span><br>
+<a href="https://www.nature.com/articles/s41598-025-15604-6">Nature</a></p>
+</div>
+<div class="paper-card">
+<p><strong>Optimizing Medical Image Classification with Advanced Segmentation</strong><br>
+<span class="paper-meta">2024 · ICFTAC</span><br>
+<a href="https://www.researchgate.net/publication/390783955">ResearchGate</a></p>
+</div>
+<div class="paper-card">
+<p><strong>AI-Powered ICare: Infant Cry Analysis and Speech Therapy</strong><br>
+<span class="paper-meta">2024 · 1 citation · Egyptian Journal of AI</span><br>
+<a href="https://www.researchgate.net/publication/384044186">ResearchGate</a></p>
+</div>
+<div class="paper-card">
+<p><strong>Leverage DINOv2 on Parasitic Egg Detection</strong><br>
+<span class="paper-meta">2025 · Springer ISBC</span><br>
+<a href="https://link.springer.com/chapter/10.1007/978-3-031-87721-4_16">Springer</a></p>
+</div>
 </section>
-</section>
-<section id="collaboration-and-further-reading" class="level2">
-<h2 class="anchored" data-anchor-id="collaboration-and-further-reading">Collaboration and Further Reading</h2>
-<p>I am always open to collaborating on research projects related to Arabic NLP, healthcare AI, or model optimization. If you are interested in discussing any of these papers or have ideas for future research, please feel free to reach out.</p>
-<p>You can also explore my practical implementations and technical deep dives on my <a href="blog/feed.html">Blog</a> or check out my <a href="oss/opensource.html">Open Source Projects</a> to see how I apply these research concepts in production environments. For a broader overview of my professional background, you can visit my <a href="index.html">Homepage</a>.</p>
-<section id="related-technical-posts" class="level3">
-<h3 class="anchored" data-anchor-id="related-technical-posts">Related Technical Posts</h3>
-<ul>
-<li><a href="./blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html">MTEB Benchmark Explained</a> — Understanding the standard benchmark for text embedding models</li>
-<li><a href="./blog/posts/mteb_encoding/tiny-gte_transformer_model.html">Tiny-GTE Transformer Model</a> — Efficient transformer architecture for embedding tasks</li>
-<li><a href="./blog/posts/nlp/embedding_world/hyperrun.html">HyperRun: Arabic Embedding Research</a> — My work on efficient Arabic embedding models</li>
-</ul>
+<section id="federated-learning-llms" class="level3">
+<h3 class="anchored" data-anchor-id="federated-learning-llms">Federated Learning &amp; LLMs</h3>
+<div class="paper-card">
+<p><strong>Flowertune: A Cross-Domain Benchmark for Federated Fine-Tuning of LLMs</strong><br>
+<span class="paper-meta">2026 · 11 citations · NeurIPS 2026</span><br>
+<a href="https://arxiv.org/abs/2506.02961">arXiv</a></p>
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

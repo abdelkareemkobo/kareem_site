@@ -3268,12 +3268,7 @@ QPS: 1627.94
 
 <section id="building-hybrid-search-for-real-estate-with-qdrant-and-bm25" class="level2">
 <h2 class="anchored" data-anchor-id="building-hybrid-search-for-real-estate-with-qdrant-and-bm25">Building Hybrid Search for Real Estate with Qdrant and BM25</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/xbites_chat.webp" class="img-fluid figure-img"></p>
-<figcaption>xbites mena real esate ai</figcaption>
-</figure>
-</div>
+<p><img src="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/xbites_chat.webp" alt="xbites mena real esate ai" class="img-fluid figure-img"></p>
 <section id="the-problem" class="level3">
 <h3 class="anchored" data-anchor-id="the-problem">The Problem</h3>
 <p>When building a real estate search system, I ran into a frustrating issue: dense vector search kept returning the wrong locations. A query for “6th Settlement Apartment” would return properties in “5th Settlement” or “New Cairo” instead.</p>
@@ -4029,12 +4024,7 @@ font-style: inherit;">"6th Settlement Apartment"</span>, your_query_embedding)</
 <p>It’s an improvement over TF-IDF that handles term frequency saturation and document length normalization.</p>
 <hr>
 <p><strong>you will find a marimo version in the references that will help you understand the equation better.</strong></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/bm_25_marimo.webp" class="img-fluid figure-img"></p>
-<figcaption>marimo bm25</figcaption>
-</figure>
-</div>
+<p><img src="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/bm_25_marimo.webp" alt="marimo bm25" class="img-fluid figure-img"></p>
 </section>
 <section id="sample-documents" class="level2">
 <h2 class="anchored" data-anchor-id="sample-documents">1. Sample Documents</h2>

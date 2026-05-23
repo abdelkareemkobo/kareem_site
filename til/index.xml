@@ -990,12 +990,7 @@ font-style: inherit;"># process each negative document</span></span></code></pre
 </section>
 <section id="what-is-raptor-rag-complete-guide-to-metas-raptor-technique" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-raptor-rag-complete-guide-to-metas-raptor-technique">What is RAPTOR RAG? Complete Guide to Meta’s RAPTOR Technique</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://kareemai.com/til/tils/images/raptor.webp" class="img-fluid figure-img"></p>
-<figcaption>raptor rag</figcaption>
-</figure>
-</div>
+<p><img src="https://kareemai.com/til/tils/images/raptor.webp" alt="raptor rag" class="img-fluid figure-img"></p>
 <p>RAPTOR RAG is Meta’s innovative technique designed to improve document retrieval performance. While they claim a 20% improvement, my testing shows mixed results depending on the use case.</p>
 <section id="understanding-raptor-rag" class="level3">
 <h3 class="anchored" data-anchor-id="understanding-raptor-rag">Understanding RAPTOR RAG</h3>
@@ -1023,12 +1018,7 @@ font-style: inherit;"># process each negative document</span></span></code></pre
 </section>
 <section id="querying-raptor-rag" class="level3">
 <h3 class="anchored" data-anchor-id="querying-raptor-rag">Querying RAPTOR RAG</h3>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://kareemai.com/til/tils/images/raptor_query.webp" class="img-fluid figure-img"></p>
-<figcaption>query RAPTOR rag</figcaption>
-</figure>
-</div>
+<p><img src="https://kareemai.com/til/tils/images/raptor_query.webp" alt="query RAPTOR rag" class="img-fluid figure-img"></p>
 <p>RAPTOR supports two main querying approaches:</p>
 <ol type="1">
 <li><strong>Tree Traversal</strong> - Navigate through the hierarchical structure</li>
@@ -1060,12 +1050,7 @@ font-style: inherit;"># process each negative document</span></span></code></pre
 <p>DFloat11 (DF11) is a novel, mathematically lossless compression technique that reduces large language model memory usage by about 30% with zero accuracy loss. Unlike traditional quantization methods that can degrade model quality, DF11 uses Huffman coding to compress only the predictable exponent bits of model weights.</p>
 <section id="how-dfloat11-works" class="level3">
 <h3 class="anchored" data-anchor-id="how-dfloat11-works">How DFloat11 Works</h3>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://kareemai.com/til/tils/images/df11.webp" class="img-fluid figure-img"></p>
-<figcaption>DFloat11 encoding</figcaption>
-</figure>
-</div>
+<p><img src="https://kareemai.com/til/tils/images/df11.webp" alt="DFloat11 encoding" class="img-fluid figure-img"></p>
 <p>DFloat11’s compression strategy is elegant in its simplicity:</p>
 <ul>
 <li><strong>Sign and Fraction Bits:</strong> Kept unchanged as they contain high-entropy information</li>
@@ -1188,12 +1173,7 @@ font-style: inherit;"># process each negative document</span></span></code></pre
 <h2 class="anchored" data-anchor-id="whats-brave-leo-ai-all-about">What’s Brave Leo AI All About?</h2>
 <p><strong>Yes—Brave Leo runs locally and privately.</strong> Brave Leo AI is a privacy-first AI assistant built directly into the Brave browser. Unlike cloud-based AI assistants, Leo processes requests through anonymous relays and stores your chat history only on your device—never on Brave’s servers.</p>
 <p>It works on macOS, Windows, Linux, Android, and iOS. Best part? No sign-up required to use it for free, and with the “Bring Your Own Model” (BYOM) feature, you can connect your own local LLMs like Ollama, vLLM, or SGLang for complete control over your AI experience.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://kareemai.com/til/tils/images/brave_leo.webp" class="img-fluid figure-img"></p>
-<figcaption>Brave Leo with Ollama or VLLM</figcaption>
-</figure>
-</div>
+<p><img src="https://kareemai.com/til/tils/images/brave_leo.webp" alt="Brave Leo with Ollama or VLLM" class="img-fluid figure-img"></p>
 <section id="what-can-brave-leo-ai-do" class="level3">
 <h3 class="anchored" data-anchor-id="what-can-brave-leo-ai-do">What Can Brave Leo AI Do?</h3>
 <p>Leo’s got a lot of tricks up its sleeve: - <strong>Summarize Stuff Instantly</strong>: It can give you quick summaries of webpages, PDFs, Google Docs, Google Sheets, or even YouTube videos by reading their transcripts.</p>
@@ -1310,12 +1290,7 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div></div>
 <p>في الحقيقة لا اتذكر عندما تم إطلاق deepseek وقرات عن الشركة التي تقف ورائها..لماذا لم تكرر التجربة عربية إسلامية خالصة! ليس مستحيل تقنيا ونحن أولي بلغتنا وتراثنا من غيرنا من الشعوب خصوصا ..أن تكون هذه الشعوب لديها كراهية متشعبه خاصة لدينك وشعبك ولنا في فلسطين عبرة فيما يحدث فيها من تنكيل و جرائم لا احب حتي التفكر فيها. لكن ما يزيد الحزن والضعف والهم والغمة ..أن تجد من الريادة في مجالك و تخصصك أغلبهم من هولاء الصنف الذي يقتل إخوتك بدم بارد!</p>
 <p>كيف تسعد نفسك وانت تابع لهولاء تنتظر منهم أن يعطوك بعض الفتتات من العلم لتذهب لتنتفخ به نفسك وتظن أن لديك شي من علم وهو فتات.</p>
 <p>بداية من الباحثين لأصحاب الشركات للمواقع التي أقوم بالاستضافة عليها إلي الكورسات و مجتمعات التقنية..بل تزيد الحسرة عندي بحثي في بيانات لتطوير نموذج صغير لمهمة من مهام اللغة العربية أجد البيانات أين !ومن يعمل عليها !</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://kareemai.com/til/tils/images/isreal.webp" class="img-fluid figure-img"></p>
-<figcaption>الشعور بالعجز</figcaption>
-</figure>
-</div>
+<p><img src="https://kareemai.com/til/tils/images/isreal.webp" alt="الشعور بالعجز" class="img-fluid figure-img"></p>
 <p>يقومون بتجميع و تطوير نماذج تخدم فهم اللهجة الشامية تساعدهم في كل أعمالهم..وليس هذا وقت الحديث..</p>
 <p>العوائق كثير مادية و معرفية وكثير لكن سقف الممكن مذهل..و هناك أمل و إن لم يكن يكفي أن تموت وانت تحاول وتنكر بقلبك وهذا أضعف الإيمان.</p>
 </section>
@@ -1571,12 +1546,7 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div></div>
 <p>No scams, no “read this paper,” “look at this book,” “here are the top 1000 chatbots that are better than 10 who are better than GPT!!”</p>
 <p>Oh my god, QwenClaudeMixtral just released a model that will convert space into water in the year 1021932103120931920.</p>
 <p>This is very silly if you respect your readers’ minds!</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://kareemai.com/til/tils/images/old_ahead_of_ai.webp" class="img-fluid figure-img"></p>
-<figcaption>Ahead of AI subscribers in 2024</figcaption>
-</figure>
-</div>
+<p><img src="https://kareemai.com/til/tils/images/old_ahead_of_ai.webp" alt="Ahead of AI subscribers in 2024" class="img-fluid figure-img"></p>
 <p>What about now?</p>
 <p>He has more than 105k+ and is #71 Rising in Technology. I don’t know why 71!! He must be top 5.</p>
 <p><strong>Jay Alammar</strong> =&gt; 23k+ subscribers</p>
