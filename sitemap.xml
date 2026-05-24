@@ -1,10 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://kareemai.com/README.sync-conflict-20260523-064405-6F432NM.html</loc>
-    <lastmod>2026-05-10T22:19:37.000Z</lastmod>
-  </url>
-  <url>
     <loc>https://kareemai.com/</loc>
     <lastmod>2026-05-23T04:45:54.450Z</lastmod>
   </url>
@@ -247,9 +243,5 @@
   <url>
     <loc>https://kareemai.com/publish.html</loc>
     <lastmod>2026-05-14T08:38:05.816Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/README.sync-conflict-20260523-064329-6F432NM.html</loc>
-    <lastmod>2026-05-10T22:19:37.000Z</lastmod>
   </url>
 </urlset>
