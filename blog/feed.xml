@@ -15,7 +15,90 @@
 <link>https://kareemai.com/blog/feed.html</link>
 </image>
 <generator>quarto-1.9.37</generator>
-<lastBuildDate>Fri, 22 May 2026 21:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 24 May 2026 21:00:00 GMT</lastBuildDate>
+<item>
+  <title>Fine-Tuning Gemma 3 for Arabic Tool Calling: A No-RAG Approach</title>
+  <dc:creator>Abdelkareem </dc:creator>
+  <link>https://kareemai.com/blog/posts/nlp/gemma_tool_calling.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="what-is-tool-calling-or-function-calling" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-tool-calling-or-function-calling">What is Tool Calling or Function Calling?</h2>
+<p><strong><a href="https://www.ibm.com/think/topics/tool-calling">Tool Calling</a></strong> : it’s ability of AI models to interact with external tools, APIs or Systems to enhance their functions. They are the key for agentic AI. It allows autonomous systems to complete complex tasks be decrease the work overload from the llm to be the llm with the tools like solutions.</p>
+<p>You could think it’s like a toolkit you give it to the carpenter instead of just the saw it has a whole toolkit that can :</p>
+<ol type="1">
+<li>Call databases</li>
+<li>Run CLI tools like grep..etc</li>
+</ol>
+<p><strong>It shifts LLms from passive assistants into proactive digital agents</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://kareemai.com/blog/posts/nlp/embedding_world/images/gemma3_app.jpg" class="img-fluid figure-img"></p>
+<figcaption>Arabic Tool Calling Gemma</figcaption>
+</figure>
+</div>
+</section>
+<section id="why-gemma-3-for-arabic" class="level2">
+<h2 class="anchored" data-anchor-id="why-gemma-3-for-arabic">Why Gemma 3 for Arabic?</h2>
+<p>Gemma 3 stands out for three reasons when working with Arabic:</p>
+<ol type="1">
+<li><strong>Multilingual training</strong> : Google trained on diverse Arabic web text, not just English unlike qwen models thay are better at coding but not arabic langauge.</li>
+<li><strong>Efficiency</strong> : 1B parameters run fast even on limited hardware (critical for accessibility) I am using it on my amd cpu :)</li>
+</ol>
+<p>The 1B variant is particularly interesting: small enough to fine-tune on a single GPU, yet capable of learning structured outputs like tool calls.</p>
+</section>
+<section id="arabic-tool-calling-with-gemma" class="level2">
+<h2 class="anchored" data-anchor-id="arabic-tool-calling-with-gemma">Arabic Tool Calling with gemma</h2>
+<p>My goal is to fine-tune a gemma model to be good at on-device application and be able to use grep efficiently without the need for Embedding models and Rag systems.</p>
+<p>We know that Arabic search tools struggle with:</p>
+<ul>
+<li><strong>Morphological complexity</strong> — Arabic words have many forms (كتب، يكتب، كاتب، مكتوب)</li>
+<li><strong>Dialect diversity</strong> — Modern Standard Arabic vs.&nbsp;regional variations</li>
+<li><strong>Resource scarcity</strong> — Less training data than English</li>
+</ul>
+<p>Our approach: teach the model to extract keywords and delegate to <code>grep</code>, a battle-tested tool that handles Arabic text well.</p>
+<p>This shifts the burden from the LLM (which might hallucinate) to proven infrastructure.</p>
+</section>
+<section id="building-training-data" class="level2">
+<h2 class="anchored" data-anchor-id="building-training-data">Building Training Data</h2>
+<p>We started with <a href="https://github.com/project-miracl/miracl">MIRACL</a>, a multilingual retrieval benchmark with Arabic passages and questions.</p>
+<p>But we needed tool-calling examples.</p>
+<p>Our approach was simple but effective:</p>
+<ol type="1">
+<li>Take the human-written queries from MIRACL</li>
+<li>For each query, identify a single keyword that would find the relevant passage via <code>grep</code> with its variants.</li>
+</ol>
+<div class="callout callout-note callout-example" data-callout="example">
+<div class="callout-title-container">
+<p><span class="callout-icon-container"><span class="callout-icon"></span></span><span class="callout-title">Arabic Tool calling Training</span></p>
+</div>
+<div class="callout-body">
+<p>من هو بدر شاكر السياب output : [بدر ، شاكر ، السياب ، سياب ، بدر شاكر] This is done using a DSPy programm and <em>gemini-3-flash-preview</em></p>
+</div>
+</div>
+<ol start="3" type="1">
+<li>Format as Gemma 3 chat: user query → assistant tool call This gave us 6,217 synthetic (query, keyword) pairs for training without manual annotation.</li>
+</ol>
+<p><em>This is done with just a python code script.</em></p>
+</section>
+<section id="evaluation-reality" class="level2">
+<h2 class="anchored" data-anchor-id="evaluation-reality"><strong>Evaluation Reality</strong></h2>
+<p>We built a 96-question test set from SILMA.</p>
+<p>Our metric was simple: does <code>grep(keyword="...")</code> find the correct document? When everything returned 0%, we debugged.</p>
+<p>The issue wasn’t the model architecture , it was format consistency.</p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://kareemai.com/blog/posts/nlp/gemma_tool_calling.html</guid>
+  <pubDate>Sun, 24 May 2026 21:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/images/gemma_3_functioncalling.webp" medium="image" type="image/webp"/>
+</item>
 <item>
   <title>Kareem CV of Failures</title>
   <dc:creator>kareem </dc:creator>
@@ -9723,245 +9806,6 @@ Media Manager</code></pre>
   <guid>https://kareemai.com/blog/posts/life_style/back_to_rss.html</guid>
   <pubDate>Mon, 09 Jun 2025 21:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/life_style/images/vision_read.webp" medium="image" type="image/webp"/>
-</item>
-<item>
-  <title>Late Interaction &amp; ColPali: Efficient Semantic Search</title>
-  <dc:creator>kareem </dc:creator>
-  <link>https://kareemai.com/blog/posts/nlp/embedding_world/late_interaction.html</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="beyond-bi-encoders-the-rise-of-late-interaction" class="level2">
-<h2 class="anchored" data-anchor-id="beyond-bi-encoders-the-rise-of-late-interaction">Beyond Bi-Encoders: The Rise of Late Interaction</h2>
-<p>In the world of Information Retrieval (IR), we usually face a trade-off between speed and accuracy.</p>
-<section id="bi-encoders-the-speed-kings" class="level3">
-<h3 class="anchored" data-anchor-id="bi-encoders-the-speed-kings">1. Bi-Encoders (The Speed Kings)</h3>
-<p>Bi-encoders (like standard BERT embeddings) encode the query and the document independently into a single vector. Search is just a cosine similarity between these two points. It’s incredibly fast (sub-millisecond) but loses fine-grained details because the entire document is compressed into one fixed-size vector.</p>
-</section>
-<section id="cross-encoders-the-accuracy-masters" class="level3">
-<h3 class="anchored" data-anchor-id="cross-encoders-the-accuracy-masters">2. Cross-Encoders (The Accuracy Masters)</h3>
-<p>Cross-encoders feed both the query and the document into the model simultaneously (Early Interaction). The model can attend to every word in the query relative to every word in the document. This is highly accurate but computationally expensive because you must run the model for every single query-document pair. You can’t pre-compute embeddings.</p>
-</section>
-<section id="late-interaction-the-best-of-both-worlds" class="level3">
-<h3 class="anchored" data-anchor-id="late-interaction-the-best-of-both-worlds">3. Late Interaction: The Best of Both Worlds</h3>
-<p>Late Interaction models, pioneered by <strong>ColBERT</strong>, bridge this gap. Instead of one vector per document, they store a vector for <strong>every single token</strong> in the document.</p>
-<p>When a query comes in: 1. The query is encoded into token-level embeddings. 2. A <strong>MaxSim</strong> (Maximum Similarity) operation is performed: for each query token, we find the document token that matches it best. 3. We sum these maximum similarities to get the final score.</p>
-<p>This allows the model to perform fine-grained matching (like a cross-encoder) while still allowing document embeddings to be pre-computed (like a bi-encoder).</p>
-</section>
-<section id="colpali-retrieval-without-ocr" class="level3">
-<h3 class="anchored" data-anchor-id="colpali-retrieval-without-ocr">ColPali: Retrieval Without OCR</h3>
-<p>One of the most exciting recent developments is <strong>ColPali</strong>. Traditional PDF retrieval requires a complex pipeline: OCR the text, chunk it, and then embed it. This often fails on tables, charts, and complex layouts.</p>
-<p>ColPali applies the Late Interaction principle to vision models (PaliGemma). It treats image patches of a PDF page as “tokens.” Instead of reading text, it “looks” at the page and matches query tokens directly to visual features.</p>
-<p><strong>Key Benefits of ColPali:</strong> - <strong>Layout Aware:</strong> It understands that a caption belongs to a specific image. - <strong>OCR-Free:</strong> No more messy text extraction from scanned documents. - <strong>Superior Retrieval:</strong> It outperforms traditional text-based RAG on visually rich documents.</p>
-<hr>
-</section>
-</section>
-<section id="ecosystem-and-tools" class="level2">
-<h2 class="anchored" data-anchor-id="ecosystem-and-tools">Ecosystem and Tools</h2>
-<p>If you want to implement Late Interaction today, these are the projects to watch: - <strong>ColBERTv2:</strong> The optimized version of the original late interaction model. - <strong>PyLate:</strong> A flexible Python library for training and using late interaction models. - <strong>PLAID:</strong> An extremely fast engine for searching ColBERT vectors. - <strong>Model2Vec:</strong> While focused on static embeddings, it shows the trend towards more efficient representation learning.</p>
-<p>Late interaction is transforming how we think about retrieval, moving us away from “one vector fits all” towards a more nuanced, token-aware future.</p>
-<hr>
-<section id="internal-resources" class="level3">
-<h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
-<p>If you’re interested in more technical deep dives or information on my research, check out these sections:</p>
-<ul>
-<li><a href="../../../papers.html">My Research Papers</a></li>
-<li><a href="../../../oss/opensource.html">Open Source Contributions</a></li>
-<li><a href="../../../til/index.html">Today I Learned: AI Engineering Notes</a></li>
-<li><a href="../../feed.html">Arabic NLP Blog Posts</a></li>
-</ul>
-</section>
-</section>
-<section id="practical-example-using-colbert-with-pylate" class="level2">
-<h2 class="anchored" data-anchor-id="practical-example-using-colbert-with-pylate">Practical Example: Using ColBERT with PyLate</h2>
-<p>Here’s how to use a late interaction model for retrieval in Python:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">from</span> pylate <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> ColBERT, Indexes, retrieve</span>
-<span id="cb1-2"></span>
-<span id="cb1-3"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Load a pre-trained ColBERT model</span></span>
-<span id="cb1-4">model <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> ColBERT(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"lightonai/colbertv2"</span>)</span>
-<span id="cb1-5"></span>
-<span id="cb1-6"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Encode documents into token-level embeddings</span></span>
-<span id="cb1-7">documents <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> [</span>
-<span id="cb1-8">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Late interaction models store a vector per token instead of one per document."</span>,</span>
-<span id="cb1-9">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Bi-encoders compress documents into a single vector for fast retrieval."</span>,</span>
-<span id="cb1-10">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Cross-encoders process query and document together for higher accuracy."</span></span>
-<span id="cb1-11">]</span>
-<span id="cb1-12"></span>
-<span id="cb1-13">document_embeddings <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> model.encode(documents, convert_to_tensor<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">True</span>)</span>
-<span id="cb1-14"></span>
-<span id="cb1-15"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Build an index for fast retrieval</span></span>
-<span id="cb1-16">index <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> Indexes.FlatIndex()</span>
-<span id="cb1-17">index.add_documents(document_embeddings, documents<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>documents)</span>
-<span id="cb1-18"></span>
-<span id="cb1-19"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Encode the query</span></span>
-<span id="cb1-20">query <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"What is the difference between bi-encoders and cross-encoders?"</span></span>
-<span id="cb1-21">query_embedding <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> model.encode([query], convert_to_tensor<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">True</span>)</span>
-<span id="cb1-22"></span>
-<span id="cb1-23"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Retrieve top-k results</span></span>
-<span id="cb1-24">results <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> index.search(query_embedding, k<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>)</span>
-<span id="cb1-25"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">for</span> doc, score <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">in</span> results:</span>
-<span id="cb1-26">    <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;">f"</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">{</span>score<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:.3f}</span><span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;">: </span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">{</span>doc<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">}</span><span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span>)</span></code></pre></div></div>
-<section id="performance-comparison" class="level3">
-<h3 class="anchored" data-anchor-id="performance-comparison">Performance Comparison</h3>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Model Type</th>
-<th>Speed</th>
-<th>Accuracy</th>
-<th>Use Case</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Bi-Encoder</td>
-<td>Fastest (~1ms/query)</td>
-<td>Good</td>
-<td>Initial retrieval, large-scale search</td>
-</tr>
-<tr class="even">
-<td>Cross-Encoder</td>
-<td>Slowest (~100ms/pair)</td>
-<td>Best</td>
-<td>Re-ranking top results</td>
-</tr>
-<tr class="odd">
-<td>Late Interaction</td>
-<td>Fast (~10ms/query)</td>
-<td>Very Good</td>
-<td>High-accuracy retrieval at scale</td>
-</tr>
-</tbody>
-</table>
-<p>Late interaction gives you 90% of cross-encoder accuracy with 10% of the computational cost.</p>
-</section>
-</section>
-<section id="faq-late-interaction-models" class="level2">
-<h2 class="anchored" data-anchor-id="faq-late-interaction-models">FAQ: Late Interaction Models</h2>
-<section id="what-is-late-interaction-in-nlp" class="level3">
-<h3 class="anchored" data-anchor-id="what-is-late-interaction-in-nlp">What is late interaction in NLP?</h3>
-<p>Late interaction is a retrieval technique where query and document tokens interact at query time rather than during encoding. Models like ColBERT store token-level embeddings for documents and compute similarity using MaxSim operations when a query arrives.</p>
-</section>
-<section id="is-colbert-better-than-standard-embeddings" class="level3">
-<h3 class="anchored" data-anchor-id="is-colbert-better-than-standard-embeddings">Is ColBERT better than standard embeddings?</h3>
-<p>For retrieval tasks requiring fine-grained matching, yes. ColBERT outperforms bi-encoders on most benchmarks while being much faster than cross-encoders. However, it requires more storage since you store one vector per token instead of one per document.</p>
-</section>
-<section id="what-is-colpali" class="level3">
-<h3 class="anchored" data-anchor-id="what-is-colpali">What is ColPali?</h3>
-<p>ColPali applies late interaction to vision-language models for document retrieval. Instead of extracting text from PDFs via OCR, it processes page images directly and matches query tokens to visual patches. This handles tables, charts, and complex layouts better than text-based retrieval.</p>
-</section>
-<section id="how-much-storage-do-late-interaction-models-need" class="level3">
-<h3 class="anchored" data-anchor-id="how-much-storage-do-late-interaction-models-need">How much storage do late interaction models need?</h3>
-<p>Storage is higher than bi-encoders because you store vectors for every token. A 512-token document needs 512 vectors instead of 1. Compression techniques like PLAID indexing and quantization reduce this overhead significantly.</p>
-</section>
-<section id="when-should-i-use-late-interaction-vs.-bi-encoders" class="level3">
-<h3 class="anchored" data-anchor-id="when-should-i-use-late-interaction-vs.-bi-encoders">When should I use late interaction vs.&nbsp;bi-encoders?</h3>
-<p>Use late interaction when retrieval quality is critical and you can afford the extra storage. Use bi-encoders for very large-scale search where speed and storage efficiency matter most. A common hybrid approach: bi-encoder for initial retrieval, late interaction for re-ranking.</p>
-</section>
-</section>
-<section id="related-posts" class="level2">
-<h2 class="anchored" data-anchor-id="related-posts">Related Posts</h2>
-<ul>
-<li><a href="../../../../blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html">BM25 Benchmarking</a> — Comparing sparse retrieval methods</li>
-<li><a href="../../../../blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html">MTEB Benchmark Explained</a> — How embedding models are evaluated</li>
-<li><a href="../../../../blog/posts/mteb_encoding/tiny-gte_transformer_model.html">Tiny-GTE Transformer Model</a> — Efficient transformer architecture for embeddings</li>
-</ul>
-
-
-</section>
-
- ]]></description>
-  <category>blogging</category>
-  <category>embedding</category>
-  <category>minishlab</category>
-  <category>model2vec</category>
-  <category>arabic</category>
-  <guid>https://kareemai.com/blog/posts/nlp/embedding_world/late_interaction.html</guid>
-  <pubDate>Wed, 14 May 2025 21:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/images/minishlab.webp" medium="image" type="image/webp"/>
 </item>
 </channel>
 </rss>
