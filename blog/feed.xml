@@ -77,21 +77,9 @@
 <p><span class="callout-icon-container"><span class="callout-icon"></span></span><span class="callout-title">Arabic Tool calling Training</span></p>
 </div>
 <div class="callout-body">
-
+<p>من هو بدر شاكر السياب output : [بدر ، شاكر ، السياب ، سياب ، بدر شاكر] This is done using a DSPy programm and <em>gemini-3-flash-preview</em></p>
 </div>
 </div>
-<blockquote class="blockquote">
-<p>من هو بدر شاكر السياب</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>output :</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>[بدر ، شاكر ، السياب ، سياب ، بدر شاكر]</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>This is done using a DSPy programm and <em>gemini-3-flash-preview</em></p>
-</blockquote>
 <ol start="3" type="1">
 <li>Format as Gemma 3 chat: user query → assistant tool call This gave us 6,217 synthetic (query, keyword) pairs for training without manual annotation.</li>
 </ol>
