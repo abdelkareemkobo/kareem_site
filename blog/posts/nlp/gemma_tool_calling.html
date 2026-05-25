@@ -394,6 +394,7 @@ window.addEventListener('scroll', () => {
   <li><a href="#arabic-tool-calling-with-gemma" id="toc-arabic-tool-calling-with-gemma" class="nav-link" data-scroll-target="#arabic-tool-calling-with-gemma">Arabic Tool Calling with gemma</a></li>
   <li><a href="#building-training-data" id="toc-building-training-data" class="nav-link" data-scroll-target="#building-training-data">Building Training Data</a></li>
   <li><a href="#evaluation-reality" id="toc-evaluation-reality" class="nav-link" data-scroll-target="#evaluation-reality"><strong>Evaluation Reality</strong></a></li>
+  <li><a href="#learned-lessons" id="toc-learned-lessons" class="nav-link" data-scroll-target="#learned-lessons">Learned Lessons</a></li>
   </ul>
 </nav>
     </div>
@@ -488,9 +489,21 @@ window.addEventListener('scroll', () => {
 <p><span class="callout-icon-container"><span class="callout-icon"></span></span><span class="callout-title">Arabic Tool calling Training</span></p>
 </div>
 <div class="callout-body">
-<p>من هو بدر شاكر السياب output : [بدر ، شاكر ، السياب ، سياب ، بدر شاكر] This is done using a DSPy programm and <em>gemini-3-flash-preview</em></p>
+
 </div>
 </div>
+<blockquote class="blockquote">
+<p>من هو بدر شاكر السياب</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>output :</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>[بدر ، شاكر ، السياب ، سياب ، بدر شاكر]</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>This is done using a DSPy programm and <em>gemini-3-flash-preview</em></p>
+</blockquote>
 <ol start="3" type="1">
 <li>Format as Gemma 3 chat: user query → assistant tool call This gave us 6,217 synthetic (query, keyword) pairs for training without manual annotation.</li>
 </ol>
@@ -501,6 +514,13 @@ window.addEventListener('scroll', () => {
 <p>We built a 96-question test set from SILMA.</p>
 <p>Our metric was simple: does <code>grep(keyword="...")</code> find the correct document? When everything returned 0%, we debugged.</p>
 <p>The issue wasn’t the model architecture , it was format consistency.</p>
+</section>
+<section id="learned-lessons" class="level2">
+<h2 class="anchored" data-anchor-id="learned-lessons">Learned Lessons</h2>
+<ol type="1">
+<li>Don’t fine-tune the whole model on just toolcalling after 2000 samples or more it will start losing it’s ability to answer normal question.</li>
+</ol>
+<p>I will share the code and the results soon!</p>
 
 
 </section>
