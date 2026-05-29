@@ -46,7 +46,7 @@
   <media:content url="https://kareemai.com/til/tils/til.webp" medium="image" type="image/webp"/>
 </item>
 <item>
-  <title>Rust for Machine Learning: Building AI Tools and Data Pipelines in 2026</title>
+  <title>Rust for ML: Building AI Tools and Data Pipelines in 2026</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/til/tils/2025-12-14.html</link>
   <description><![CDATA[ 
@@ -148,7 +148,7 @@ font-style: inherit;">}</span></span></code></pre></div></div>
   <media:content url="https://kareemai.com/til/tils/til.webp" medium="image" type="image/webp"/>
 </item>
 <item>
-  <title>Arabic NLP Fundamentals: From Sparse Embeddings and BM25 to Dynamic Programming</title>
+  <title>Arabic NLP Fundamentals: Sparse Embeddings, BM25 &amp; Dynamic Programming</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/til/tils/2025-12-13.html</link>
   <description><![CDATA[ 
@@ -285,7 +285,7 @@ font-style: inherit;">}</span></span></code></pre></div></div>
   <media:content url="https://kareemai.com/til/tils/til.webp" medium="image" type="image/webp"/>
 </item>
 <item>
-  <title>Arabic Tokenizer Comparison: AraModernBert vs AraBERT v2 (With Metrics)</title>
+  <title>AraModernBert vs AraBERT v2: Arabic Tokenizer Comparison</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/til/tils/2025-10-21.html</link>
   <description><![CDATA[ 
@@ -717,7 +717,7 @@ font-style: inherit;">"total_tokens"</span>: number_of_tokens</span>
   <media:content url="https://kareemai.com/til/tils/til.webp" medium="image" type="image/webp"/>
 </item>
 <item>
-  <title>PyLate Tutorial: Vector Indexing and Retrieval with ColBERT (Complete Guide)</title>
+  <title>PyLate Tutorial: Vector Indexing and Retrieval with ColBERT</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/til/tils/2025-05-28-til.html</link>
   <description><![CDATA[ 

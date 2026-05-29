@@ -107,7 +107,7 @@
   <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/images/gemma_3_functioncalling.webp" medium="image" type="image/webp"/>
 </item>
 <item>
-  <title>Kareem CV of Failures</title>
+  <title>Kareem CV of Failures ‘Rejections build Career’</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/blog/posts/ml_life/cv_of_failure.html</link>
   <description><![CDATA[ 
@@ -116,6 +116,7 @@
 
 
 
+<p>I’m sharing these because failure isn’t the opposite of success — it’s part of it. Every rejection here pushed me somewhere better, even when it didn’t feel that way at the time.</p>
 <section id="corona-period" class="level2">
 <h2 class="anchored" data-anchor-id="corona-period">2019 corona Period</h2>
 <ul>
@@ -163,6 +164,7 @@
 <li>Didn’t get accepted at <a href="https://bizrah.com/">Bizarh</a> competition</li>
 </ul>
 <p>More failures are coming soon! wish me luck :)</p>
+<p>Looking back, the pattern is clear: most of my rejections came from timing or circumstances, not ability. The MBZUAI rejection pushed me to do independent research that turned out better than what I’d have done there. The failed SEO websites taught me more about business than any course could. A CV of failures isn’t about dwelling on the past — it’s about seeing the thread that connects them to where you end up.</p>
 <p><a href="https://kareemai.com/blog/posts/products_reviews/Building_AI_PC_In_Egypt.html">Building PC for AI research</a> <a href="https://kareemai.com/blog/posts/ml_life/hacker_rank_ai_intereviw.html">HackerRank AI Interview</a> <a href="https://kareemai.com/blog/posts/on_device/litert.html">LiteRT and QAI Hub</a> <a href="https://kareemai.com/blog/posts/nlp/embedding_world/vector_database_book.html">Vector Databases Book Review</a></p>
 
 
@@ -664,7 +666,7 @@ compiled_model = job.download_target_model()</code></pre>
 <p><a href="https://weaviate.io/blog">Weaviate</a></p>
 <section id="who-am-i" class="level3">
 <h3 class="anchored" data-anchor-id="who-am-i">Who am I ?</h3>
-<p>I am just 2 years experience in AI and RAG but it’s obvious it’s not good book.</p>
+<p>I am just 2 years experience in AI and RAG but it’s obvious it’s not good book. Save your money and time on this one.</p>
 <p>This review is written by : <a href="https://kareemai.com/">Kareem Elkhateb AI Engineer</a></p>
 
 
@@ -850,7 +852,7 @@ font-style: inherit;">&gt;</span></span></code></pre></div></div>
   <media:content url="https://kareemai.com/blog/posts/nlp/embedding_world/images/colgrep.webp" medium="image" type="image/webp"/>
 </item>
 <item>
-  <title>HyperRun Deep Dive: Streaming Chat Architecture with FastHTML, HTMX, and SSE</title>
+  <title>HyperRun Deep Dive: Streaming Chat with FastHTML, HTMX, and SSE</title>
   <dc:creator>kareem </dc:creator>
   <link>https://kareemai.com/blog/posts/nlp/embedding_world/hyperun_fasthtml.html</link>
   <description><![CDATA[ 
