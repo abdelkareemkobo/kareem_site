@@ -324,7 +324,12 @@ window.addEventListener('scroll', () => {
   "headline": "From $32,000 to $0 with Small Models and CTranslate2",
   "description": "From $32k to $0 translating with small models and CTranslate2; includes compute_type int8_float16, quantization 4-bit, and 4-6x speed gains.",
   "author": {"@type": "Person", "name": "kareem"},
-  "datePublished": "October 3, 2025",
+  "datePublished": "2025-10-03",
+  "image": "images/bojji.webp",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://kareemai.com"
+  },
   "publisher": {
     "@type": "Person",
     "name": "Kareem Elkhateb",
@@ -786,7 +791,7 @@ Very large model can be split into multiple GPUs. Following this&nbsp;<a href="h
 </section>
 <section id="getting-help-from-the-titan-rtx-24gb" class="level2">
 <h2 class="anchored" data-anchor-id="getting-help-from-the-titan-rtx-24gb">Getting help from the Titan RTX 24GB</h2>
-<p>One of my friends offered me access to his workstation which has dual GPU Titan RTX. It’s an old GPU but it’s far better than my little <a href="https://kareemai.com/blog/posts/mteb_encoding/my_little_dargon.html">kobo</a>.</p>
+<p>One of my friends offered me access to his workstation which has dual GPU Titan RTX. It’s an old GPU but it’s far better than my little <a href="https://kareemai.com/blog/posts/mteb_encoding/my_little_dargon.html">kobo</a>. Small-model optimization like this also applies to <a href="https://kareemai.com/blog/posts/mteb_encoding/tiny-gte_transformer_model.html">compact embedding models</a> and <a href="https://kareemai.com/blog/posts/on_device/litert.html">on-device deployment with LiteRT</a>.</p>
 <p>I found that the optimal batch is 64 after some tries. Let’s use this and see the results. I will also increase the size from 100 samples to 1000.</p>
 <table class="caption-top table">
 <colgroup>
@@ -916,6 +921,7 @@ Very large model can be split into multiple GPUs. Following this&nbsp;<a href="h
 <li>Try again with torchao</li>
 </ul>
 <p>Thanks for your time! Here is the converted version on Hugging Face: <a href="https://huggingface.co/Abdelkareem/faster_masrawy">ctranslate_masrawy</a>. Small models can save your life ^ ^</p>
+<p>If you’re interested in running small models efficiently, also check out <a href="https://kareemai.com/blog/posts/mteb_encoding/tiny-gte_transformer_model.html">tiny-gte for compact semantic search</a> and <a href="https://kareemai.com/blog/posts/on_device/litert.html">on-device ML with LiteRT</a>.</p>
 
 
 </section>

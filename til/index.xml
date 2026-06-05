@@ -30,6 +30,14 @@
 <p>This is my life being a GPU poor, I want to fine-tune an embedding model which is something trivial in the AI compute I will need to get GPU and based on the dataset size to fine-tune in my college it’s a titan rtx it takes 72 so all my ideas and research will wait until the 72 finishes!</p>
 <p>The lack of immediate feedback is the bottleneck for ai if I was an engineer a frontend developer every change I made I see an immediate feedback on the screen, the flow continue until I had a good prototype in less than 2 hours and I can change ..etc this is what makes AI sicks! Any idea about anything to validate it you will spend months if you are GPU poor and doing ai research on kaggle or colap free instances is not good experience if you will use the free you are limited but the VRAM, time until they suspend the instance…etc this is not how AI programming should be. <strong>I hope I can get an rtx 5090 in the next months</strong></p>
 <hr>
+<section id="related-tils" class="level3">
+<h3 class="anchored" data-anchor-id="related-tils">Related TILs</h3>
+<ul>
+<li><a href="../../til/tils/2025-05-25-til.html">Meta’s RAPTOR RAG, DFloat11 Compression &amp; Pyrefly Guide</a></li>
+<li><a href="../../til/tils/2025-06-06-til.html">AI Engineering Careers: Connecting with Minds in ML</a></li>
+<li><a href="../../til/tils/2025-12-13.html">Arabic NLP Fundamentals: Sparse Embeddings &amp; BM25</a></li>
+</ul>
+</section>
 <section id="more-from-my-site" class="level3">
 <h3 class="anchored" data-anchor-id="more-from-my-site">More from my site</h3>
 <p>If you enjoyed this reflection on the state of AI research hardware, you might also be interested in my <a href="../../papers.html">Research Papers</a> where I share the results of my work, or my <a href="../../blog/feed.html">Main Blog</a> for deeper technical dives. You can also return to my <a href="../../index.html">Homepage</a>.</p>
@@ -265,6 +273,15 @@ font-style: inherit;">}</span></span></code></pre></div></div>
 <li><a href="https://web.stanford.edu/~jurafsky/slp3/">The NLP book</a></li>
 </ol>
 <hr>
+</section>
+<section id="related-tils" class="level3">
+<h3 class="anchored" data-anchor-id="related-tils">Related TILs</h3>
+<ul>
+<li><a href="../../til/tils/2025-05-25-til.html">Meta’s RAPTOR RAG, DFloat11 Compression &amp; Pyrefly Guide</a></li>
+<li><a href="../../til/tils/2025-06-06-til.html">AI Engineering Careers: Connecting with Minds in ML</a></li>
+<li><a href="../../til/tils/2025-12-13.html">Arabic NLP Fundamentals: Sparse Embeddings &amp; BM25</a></li>
+<li><a href="../../til/tils/2025-12-15.html">AI Research Challenges: The GPU Barrier</a></li>
+</ul>
 </section>
 <section id="internal-resources" class="level3">
 <h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
@@ -696,6 +713,15 @@ font-style: inherit;">"total_tokens"</span>: number_of_tokens</span>
 <li>I want to say that I have many ideas I want to create and share with other minds. I believe I’ll be able to make a positive impact in the areas I’m passionate about and improve Islamic tech and Arabic NLP.</li>
 </ul>
 <hr>
+<section id="related-tils" class="level3">
+<h3 class="anchored" data-anchor-id="related-tils">Related TILs</h3>
+<ul>
+<li><a href="../../til/tils/2025-05-25-til.html">Meta’s RAPTOR RAG, DFloat11 Compression &amp; Pyrefly Guide</a></li>
+<li><a href="../../til/tils/2025-06-06-til.html">AI Engineering Careers: Connecting with Minds in ML</a></li>
+<li><a href="../../til/tils/2025-12-13.html">Arabic NLP Fundamentals: Sparse Embeddings &amp; BM25</a></li>
+<li><a href="../../til/tils/2025-12-15.html">AI Research Challenges: The GPU Barrier</a></li>
+</ul>
+</section>
 <section id="internal-resources" class="level3">
 <h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
 <p>If you found these career reflections and thoughts on the AI field useful, you might also be interested in:</p>
@@ -1135,6 +1161,14 @@ font-style: inherit;"># process each negative document</span></span></code></pre
 <li><a href="https://docs.llamaindex.ai/">LlamaIndex Documentation</a> - RAG framework integration</li>
 </ol>
 <hr>
+<section id="related-tils" class="level3">
+<h3 class="anchored" data-anchor-id="related-tils">Related TILs</h3>
+<ul>
+<li><a href="../../til/tils/2025-06-06-til.html">AI Engineering Careers: Connecting with Minds in ML</a></li>
+<li><a href="../../til/tils/2025-12-13.html">Arabic NLP Fundamentals: Sparse Embeddings &amp; BM25</a></li>
+<li><a href="../../til/tils/2025-12-15.html">AI Research Challenges: The GPU Barrier</a></li>
+</ul>
+</section>
 <section id="internal-resources" class="level3">
 <h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
 <p>If you’re interested in more about AI engineering and my research, explore these sections:</p>
@@ -1283,7 +1317,7 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div></div>
 <h2 class="anchored" data-anchor-id="السعي-الي-الكمال">السعي الي الكمال</h2>
 <p>في الوقت الحالي .. أنا اقوم بالكثير من المشاريع ومنها الواعد الذي سيكون سبب في إدخال دخل مادي كبير و علمي إن شاء الله.</p>
 <p>حاليا أعمل علي رسالة الماستر + عضو فعال في مجتمعين لتطوير البرمجيات والذكاء الإصطناعي في العالم العربي والإسلامي ولله الحمد والفضل وحده + أعمل في معمل باحثي تابع لاحد الأشخاص المميزة جدا و لدي أعمال باحثيه ومشاريع خاصه من نواحي متعددة.</p>
-<p>أستشعر حاليا كثرة المهام والتشتت الكبير و قلة الوقت والمجهود والكثير ..لكن هذا ليس المشكلة. ما أستشعره هو زيادة الإعجاب بالنفس والبعد عن العبادة من أجل لذة العلم و حظ النفس.</p>
+<p>أستشعر حاليا كثرة المهام والتشتت الكبير و قلة الوقت والمجهود والكثير ..لكن هذا ليس المشكلة. ما أستشعره هو زيادة الإعجاب بالنفس والبعد عن العبادة من أجل لذة العلم و حظ النفس — وهو ما يشبه ما ناقشته في مقال <a href="../../blog/posts/life_style/fake_graviety.html">جاذبية مزيفة وعالم مخادع</a> حول التشتت في عالم الرقمنة.</p>
 <p>و من داخلي لا أقنع بكل ما أقدم ..واري انه هناك المزيد من العلم والمعرفة يجب تحصليها و عدم الرضا بكوني مجرد مستقبل ومعدل لما أستقبله. مجال دراستي هو الذكاء والإصطناعي بتخصصاته و علوم الحاسب.</p>
 <p>ما يزعجني الكثير ..منها لماذا أقوم باستقبال العلم من الخارج ولست أتحدث عن مجرد الشروحات الأجنبية و الأوراق والمشاريع البرمجية وكل هذا ولكن أتحدث عن الريادة في العلم ذاته. أتحدث عن أمثال جيفري هينتون وما بعده ..الرغبة في الوصول الي حافة العلم والإبداع وليس مجرد التعديل وفهم ما يصدرون.</p>
 <p>هل أكتفي بهذا !</p>
@@ -1729,7 +1763,7 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div></div>
 
 <section id="why-til" class="level2">
 <h2 class="anchored" data-anchor-id="why-til">Why TIL ?</h2>
-<p>It helps you overcome the perfacationsim in writting. you don’t need to create great article in depth about things you want to share or learn about..etc, all what you want it to write a thing you were trying to learn or solve today and how you solve it</p>
+<p>It helps you overcome the perfacationsim in writting — which is exactly <a href="../../blog/posts/life_style/why_I_am_blogging.html">why I started blogging in the first place</a>. you don’t need to create great article in depth about things you want to share or learn about..etc, all what you want it to write a thing you were trying to learn or solve today and how you solve it</p>
 <p>which will help me more focused and make the process of learning more easier and useful for me and others</p>
 </section>
 <section id="create-your-own-gravitey" class="level2">
@@ -1752,13 +1786,13 @@ font-style: inherit;">-</span>Instruct</span></code></pre></div></div>
 <section id="what-is-palid-index" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-palid-index">What is PALID index?</h2>
 <p>PLAID index is for indexing very large datasets with Later interaction models like (Colbertv2 &amp; ColPali) IT Solves the storage footprint and allow you to scale to infinity</p>
-<p>They swapped the faiss from facebook what is nice thing because i have multiple bad time to install it especially the GPU version.</p>
+<p>They swapped the faiss from facebook (which I wrote about in <a href="../../blog/posts/nlp/embedding_world/late_interaction.html">my detailed guide on Late Interaction &amp; ColPali</a>) what is nice thing because i have multiple bad time to install it especially the GPU version.</p>
 <p>and used fastkeamns from the amazing <span class="citation" data-cites="bclaive">@bclaive</span> which i really like his work on embeddings</p>
 <p>It’s replacement for Voyager-based HNSW index which was very bad for scaling Late-Interaction retrieval models</p>
 </section>
 <section id="prime-intellect-vs-gpuvec" class="level2">
-<h2 class="anchored" data-anchor-id="prime-intellect-vs-gpuvec">Prime Intellect VS Gpuvec</h2>
-<p>I was creating a website to find and compare the cloud compute instances from all cloud providers in easy and interactive way.</p>
+<h2 class="anchored" data-anchor-id="prime-intellect-vs-gpuvec">Prime Intellect VS <a href="../../blog/posts/life_style/gpuvec.html">GPUVec</a></h2>
+<p>I was creating a website to find and compare the cloud compute instances from all cloud providers in easy and interactive way — you can read more about it in <a href="../../blog/posts/life_style/gpuvec.html">my GPUVec post</a>.</p>
 <p>I started to work on it the last month, but stoped for other work.</p>
 <p>suddenly i found this website which is called Prime intellect.</p>
 <p>And i just want to say,woooooow. it’s a piece of art. The design and information on it and how fast, accurate is very embrassing for my poor gpuvec.com</p>

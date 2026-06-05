@@ -97,6 +97,7 @@
 <li>Don’t fine-tune the whole model on just toolcalling after 2000 samples or more it will start losing it’s ability to answer normal question.</li>
 </ol>
 <p>I will share the code and the results soon!</p>
+<p>For more on retrieval without embeddings, see <a href="../../../blog/posts/nlp/embedding_world/late_interaction.html">Late Interaction &amp; ColPali</a> and <a href="../../../blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html">BM25 Arabic Search with Qdrant</a>. Also check out my <a href="../../../blog/posts/ml_life/cv_of_failure.html">CV of Failures</a> for the lessons learned along the way.</p>
 
 
 </section>
@@ -389,7 +390,7 @@
 <p>I learned a lot of new concepts along the way and genuinely enjoyed every step of the process.</p>
 <p>This post was a quick overview of the experience.</p>
 <p>Once I get the RTX 5090, I will share much more detailed content about the actual AI research and fine-tuning process.</p>
-<p>Stay tuned! <a href="https://kareemai.com/">Kareem AI Blog</a> <a href="https://kareemai.com/blog/posts/on_device/litert.html">LiteRT Review</a> <a href="https://kareemai.com/blog/posts/ml_life/hacker_rank_ai_intereviw.html">HackerRank AI Interview</a> <a href="https://kareemai.com/blog/posts/nlp/embedding_world/vector_database_book.html">Vector Databses Book Review</a></p>
+<p>Stay tuned! <a href="https://kareemai.com/">Kareem AI Blog</a> <a href="https://kareemai.com/blog/posts/on_device/litert.html">LiteRT Review</a> <a href="https://kareemai.com/blog/posts/ml_life/hacker_rank_ai_intereviw.html">HackerRank AI Interview</a> <a href="https://kareemai.com/blog/posts/nlp/embedding_world/vector_database_book.html">Vector Databses Book Review</a> <a href="https://kareemai.com/blog/posts/life_style/gpuvec.html">GPUVec: Cloud GPU Pricing Comparison</a> <a href="https://kareemai.com/blog/posts/ml_life/cv_of_failure.html">CV of Failures: Rejections Build Career</a></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://kareemai.com/blog/posts/products_reviews/images/pc6.webp" class="img-fluid figure-img"></p>
@@ -453,7 +454,7 @@
 <section id="final-thoughts" class="level3">
 <h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
 <p>Using HackerRank for this type of role, if it shows anything, it shows that the people running the interview don’t know much about AI engineering.</p>
-<p>read more : <a href="https://kareemai.com/blog/posts/on_device/litert.html">LiteRT and Qualcomm AI Hub</a> <a href="https://kareemai.com/blog/posts/nlp/embedding_world/vector_database_book.html">Vector Databases Book O’reilly</a> <a href="https://kareemai.com/">Abdelkareem Elkhateb</a> <a href="https://www.hackerrank.com/">HackerRank</a></p>
+<p>read more : <a href="https://kareemai.com/blog/posts/on_device/litert.html">LiteRT and Qualcomm AI Hub</a> <a href="https://kareemai.com/blog/posts/nlp/embedding_world/vector_database_book.html">Vector Databases Book O’reilly</a> <a href="https://kareemai.com/blog/posts/ml_life/cv_of_failure.html">CV of Failures: Rejections Build Career</a> <a href="https://kareemai.com/">Abdelkareem Elkhateb</a> <a href="https://www.hackerrank.com/">HackerRank</a></p>
 
 
 </section>
@@ -598,6 +599,8 @@ compiled_model = job.download_target_model()</code></pre>
 <ol type="1">
 <li><a href="https://kareemai.com/blog/posts/speech_recognition/my_dream_job_at_tarteel.html">My dream job at Tarteel part 1</a></li>
 <li><a href="https://kareemai.com/blog/posts/speech_recognition/muaalm_quran_chance.html">Muaalem El Quran part 2</a> : the app i was optimizing.d</li>
+<li><a href="https://kareemai.com/blog/posts/minishlab/ctranslate_maswray.html">From $32,000 to $0 with CTranslate2</a> : optimization for small models</li>
+<li><a href="https://kareemai.com/blog/posts/mteb_encoding/tiny-gte_transformer_model.html">tiny-gte: Efficient Transformer for Semantic Search</a> : compact on-device embedding models</li>
 </ol>
 
 
@@ -839,6 +842,7 @@ font-style: inherit;">&gt;</span></span></code></pre></div></div>
 </ul>
 <p>For a deep dive into the streaming UI architecture, see <a href="hyperun_fasthtml.html">HyperRun Deep Dive: FastHTML, HTMX, and SSE</a>.</p>
 <p>If you want to try it or contribute: <a href="https://github.com/abdelkareemkobo/hyperrun">github.com/abdelkareemkobo/hyperrun</a></p>
+<p>HyperRun’s semantic search is powered by ColGrep which relies on <a href="late_interaction.html">Late Interaction &amp; ColPali</a> for token-level retrieval. If you’re building AI tooling, also check out <a href="https://kareemai.com/blog/posts/dspy/Opencode.html">OpenCode — a programmable AI coding assistant</a> and <a href="https://kareemai.com/blog/posts/nlp/gemma_tool_calling.html">Fine-Tuning Gemma 3 for Arabic Tool Calling</a>.</p>
 
 
 </section>
@@ -1836,6 +1840,7 @@ font-style: inherit;"># ✓ works</span></span></code></pre></div></div>
 <li>FastHTML</li>
 </ol>
 <p>If you find any design issues or have suggestions, I’d be happy to hear from you!</p>
+<p>For more on how I approach SEO with NLP and automation, read <a href="../../../blog/posts/seo/how_i_use_nlp_for_seo.html">How I Use NLP to Improve Website SEO</a> and <a href="../../../blog/posts/seo/the_curse_of_seo.html">The Curse of SEO</a>.</p>
 <p><strong>This is my attempt at building in public.</strong></p>
 
 
@@ -2736,6 +2741,8 @@ font-style: inherit;">return</span> response.json()</span></code></pre></div></d
 <ul>
 <li><a href="../dspy/dspy.html">DSPy: Concepts and Exploration</a></li>
 <li><a href="../seo/seo_rat_journey.html">Building SEO RAT: A Free, Open-Source SEO Tool</a></li>
+<li><a href="../nlp/embedding_world/hyperrun.html">HyperRun: Self-Hosted AI Docs Chat Widget</a></li>
+<li><a href="../tools_reviews/super_productivity_app.html">Super Productivity: Best Free Todo App</a></li>
 </ul>
 
 
@@ -7139,6 +7146,12 @@ font-style: inherit;">"6th Settlement Apartment"</span>, your_query_embedding)</
 <li><a href="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html">Bm25 part 1</a></li>
 <li><a href="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html">Bm25 part 3</a></li>
 </ol>
+</section>
+<section id="related-posts" class="level3">
+<h3 class="anchored" data-anchor-id="related-posts">Related Posts</h3>
+<ul>
+<li><a href="../../../../../blog/posts/minishlab/pyversity_qdrant.html">Diversifying Search Results with Pyversity and Qdrant</a> — Using Qdrant for search diversification in RAG</li>
+</ul>
 
 
 </section>
@@ -9549,7 +9562,7 @@ font-style: inherit;">"float16"</span>,</span>
 </section>
 <section id="getting-help-from-the-titan-rtx-24gb" class="level2">
 <h2 class="anchored" data-anchor-id="getting-help-from-the-titan-rtx-24gb">Getting help from the Titan RTX 24GB</h2>
-<p>One of my friends offered me access to his workstation which has dual GPU Titan RTX. It’s an old GPU but it’s far better than my little <a href="https://kareemai.com/blog/posts/mteb_encoding/my_little_dargon.html">kobo</a>.</p>
+<p>One of my friends offered me access to his workstation which has dual GPU Titan RTX. It’s an old GPU but it’s far better than my little <a href="https://kareemai.com/blog/posts/mteb_encoding/my_little_dargon.html">kobo</a>. Small-model optimization like this also applies to <a href="https://kareemai.com/blog/posts/mteb_encoding/tiny-gte_transformer_model.html">compact embedding models</a> and <a href="https://kareemai.com/blog/posts/on_device/litert.html">on-device deployment with LiteRT</a>.</p>
 <p>I found that the optimal batch is 64 after some tries. Let’s use this and see the results. I will also increase the size from 100 samples to 1000.</p>
 <table class="caption-top table">
 <colgroup>
@@ -9679,6 +9692,7 @@ font-style: inherit;">"float16"</span>,</span>
 <li>Try again with torchao</li>
 </ul>
 <p>Thanks for your time! Here is the converted version on Hugging Face: <a href="https://huggingface.co/Abdelkareem/faster_masrawy">ctranslate_masrawy</a>. Small models can save your life ^ ^</p>
+<p>If you’re interested in running small models efficiently, also check out <a href="https://kareemai.com/blog/posts/mteb_encoding/tiny-gte_transformer_model.html">tiny-gte for compact semantic search</a> and <a href="https://kareemai.com/blog/posts/on_device/litert.html">on-device ML with LiteRT</a>.</p>
 
 
 </section>

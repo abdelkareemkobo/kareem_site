@@ -241,6 +241,7 @@ font-style: inherit;">&gt;</span></span></code></pre></div></div>
 </ul>
 <p>For a deep dive into the streaming UI architecture, see <a href="hyperun_fasthtml.html">HyperRun Deep Dive: FastHTML, HTMX, and SSE</a>.</p>
 <p>If you want to try it or contribute: <a href="https://github.com/abdelkareemkobo/hyperrun">github.com/abdelkareemkobo/hyperrun</a></p>
+<p>HyperRun’s semantic search is powered by ColGrep which relies on <a href="late_interaction.html">Late Interaction &amp; ColPali</a> for token-level retrieval. If you’re building AI tooling, also check out <a href="https://kareemai.com/blog/posts/dspy/Opencode.html">OpenCode — a programmable AI coding assistant</a> and <a href="https://kareemai.com/blog/posts/nlp/gemma_tool_calling.html">Fine-Tuning Gemma 3 for Arabic Tool Calling</a>.</p>
 
 
 </section>
@@ -3993,6 +3994,12 @@ font-style: inherit;">"6th Settlement Apartment"</span>, your_query_embedding)</
 <li><a href="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html">Bm25 part 1</a></li>
 <li><a href="https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html">Bm25 part 3</a></li>
 </ol>
+</section>
+<section id="related-posts" class="level3">
+<h3 class="anchored" data-anchor-id="related-posts">Related Posts</h3>
+<ul>
+<li><a href="../../../../../blog/posts/minishlab/pyversity_qdrant.html">Diversifying Search Results with Pyversity and Qdrant</a> — Using Qdrant for search diversification in RAG</li>
+</ul>
 
 
 </section>
@@ -5067,6 +5074,7 @@ font-style: inherit;">"</span>)</span></code></pre></div></div>
 <li><a href="../../../../blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html">BM25 Benchmarking</a> — Comparing sparse retrieval methods</li>
 <li><a href="../../../../blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html">MTEB Benchmark Explained</a> — How embedding models are evaluated</li>
 <li><a href="../../../../blog/posts/mteb_encoding/tiny-gte_transformer_model.html">Tiny-GTE Transformer Model</a> — Efficient transformer architecture for embeddings</li>
+<li><a href="../../../../blog/posts/nlp/embedding_world/hyperrun.html">HyperRun + ColGrep</a> — Self-hosted AI docs search using late interaction</li>
 </ul>
 
 

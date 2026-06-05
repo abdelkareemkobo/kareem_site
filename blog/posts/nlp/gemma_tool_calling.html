@@ -289,7 +289,12 @@ window.addEventListener('scroll', () => {
   "headline": "Fine-Tuning Gemma 3 for Arabic Tool Calling: A No-RAG Approach",
   "description": "How we taught a 1B parameter Gemma 3 model to use grep for Arabic information retrieval, avoiding embeddings and RAG systems.",
   "author": {"@type": "Person", "name": "Abdelkareem"},
-  "datePublished": "May 25, 2026",
+  "datePublished": "2026-05-25",
+  "image": "embedding_world/images/gemma_3_functioncalling.webp",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://kareemai.com"
+  },
   "publisher": {
     "@type": "Person",
     "name": "Kareem Elkhateb",
@@ -509,6 +514,7 @@ window.addEventListener('scroll', () => {
 <li>Don’t fine-tune the whole model on just toolcalling after 2000 samples or more it will start losing it’s ability to answer normal question.</li>
 </ol>
 <p>I will share the code and the results soon!</p>
+<p>For more on retrieval without embeddings, see <a href="../../../blog/posts/nlp/embedding_world/late_interaction.html">Late Interaction &amp; ColPali</a> and <a href="../../../blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html">BM25 Arabic Search with Qdrant</a>. Also check out my <a href="../../../blog/posts/ml_life/cv_of_failure.html">CV of Failures</a> for the lessons learned along the way.</p>
 
 
 </section>
