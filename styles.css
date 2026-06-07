@@ -328,6 +328,11 @@ blockquote strong:first-child {
 img {
     max-width: 100%;
     height: auto;
+    aspect-ratio: auto;
+}
+
+img[width][height] {
+    aspect-ratio: attr(width) / attr(height);
 }
 
 svg,
@@ -1505,6 +1510,7 @@ article li,
     display: flex;
     justify-content: flex-end;
     margin: 1rem 0 1.5rem;
+    min-height: 2rem;
 }
 
 .fold-controls-toggle {
@@ -1583,6 +1589,7 @@ article li,
     background: var(--bg-2);
     border: 1px solid var(--ui);
     box-shadow: 0 14px 28px hsl(0 0% 0% / 0.08);
+    min-height: 100px;
 }
 
 .post-hero-image img {
@@ -1590,6 +1597,7 @@ article li,
     height: auto;
     display: block;
     object-fit: cover;
+    aspect-ratio: 16 / 9;
 }
 
 .post-hero-image figcaption {
@@ -2059,6 +2067,18 @@ figcaption,
 
 .copy-feedback.show {
     opacity: 1;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Comments section (Giscus)
+   ───────────────────────────────────────────────────────────── */
+
+.quarto-comments {
+    min-height: 200px;
+}
+
+.quarto-comments iframe {
+    min-height: 200px;
 }
 
 /* ─────────────────────────────────────────────────────────────
