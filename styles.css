@@ -574,6 +574,8 @@ article {
     max-width: 65ch;
 }
 
+
+
 /* Hero Section */
 .hero-section {
     display: grid;
@@ -865,6 +867,29 @@ article {
     font-style: italic;
 }
 
+.arabic-quote-box {
+    direction: rtl;
+    font-family: var(--font-arabic);
+    font-size: 1.2rem;
+    text-align: center;
+    border: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    background: transparent;
+    border-left: none;
+    line-height: 2;
+}
+
+.arabic-quote-box em {
+    display: block;
+    direction: ltr;
+    font-family: var(--font);
+    font-size: 0.9rem;
+    color: var(--tx-3);
+    margin-top: 1rem;
+    font-style: italic;
+}
+
 .arabic-quote.small {
     font-size: 1.1rem;
     padding: 0;
@@ -898,6 +923,117 @@ article {
     border-radius: 6px;
     box-shadow: none;
     font-family: var(--font);
+}
+
+/* Hero tags */
+.hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2rem 0.7rem;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--tx-2);
+    background: var(--bg-2);
+    border: 1px solid var(--ui);
+    border-radius: 100px;
+    letter-spacing: 0.01em;
+}
+
+.home-centered .hero-tags {
+    justify-content: center;
+}
+
+/* Expertise Grid — clean 2-column text layout */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin: 2rem 0;
+    border-bottom: 1px solid var(--ui);
+}
+
+.home-centered .expertise-grid {
+    text-align: left;
+}
+
+.expertise-item {
+    padding: 1.5rem 1.5rem 1.5rem 0;
+    border-top: 1px solid var(--ui);
+}
+
+.expertise-item:nth-child(even) {
+    padding-left: 1.5rem;
+    padding-right: 0;
+    border-left: 1px solid var(--ui);
+}
+
+.expertise-item:nth-last-child(-n+2) {
+    border-bottom: 1px solid var(--ui);
+}
+
+.expertise-item h3 {
+    font-size: 1.05rem !important;
+    margin: 0 0 0.6rem !important;
+    color: var(--tx) !important;
+    font-weight: 650 !important;
+}
+
+.expertise-item p {
+    font-size: 0.9rem;
+    color: var(--tx-2);
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* Category sub-headings in Research section */
+.home-centered section.level3:not([class*="project"]):not([class*="expertise"]) h3.anchored {
+    font-size: 0.85rem !important;
+    margin: 0 0 0.5rem !important;
+    color: var(--tx-3) !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: center !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+.home-centered section.level3:not([class*="project"]):not([class*="expertise"]) h3.anchored::after {
+    display: block;
+    content: "";
+    width: 2rem;
+    height: 1px;
+    background: var(--ui-2);
+    margin: 0.5rem auto 0;
+}
+
+/* Project section divider */
+.projects-grid + h2,
+.expertise-grid + h2 {
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .expertise-item {
+        padding: 1rem 0 !important;
+        border-left: none !important;
+    }
+
+    .tag {
+        font-size: 0.72rem;
+        padding: 0.15rem 0.6rem;
+    }
 }
 
 @media (max-width: 600px) {
