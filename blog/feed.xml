@@ -15,7 +15,572 @@
 <link>https://kareemai.com/blog/feed.html</link>
 </image>
 <generator>quarto-1.9.37</generator>
-<lastBuildDate>Sun, 24 May 2026 21:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 06 Jun 2026 21:00:00 GMT</lastBuildDate>
+<item>
+  <title>Latest TTS Architecture and differences | 2026</title>
+  <dc:creator>kareem </dc:creator>
+  <link>https://kareemai.com/blog/posts/nlp/TTS Architecture V1.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="text-to-speech-models" class="level2">
+<h2 class="anchored" data-anchor-id="text-to-speech-models">Text To Speech Models</h2>
+<p>Exploring the latest and unique tts papers.</p>
+</section>
+<section id="seed-tts" class="level2">
+<h2 class="anchored" data-anchor-id="seed-tts">Seed TTS</h2>
+<p>![[Pasted image 20260607222022.png]]</p>
+<section id="three-unique-contributions" class="level3">
+<h3 class="anchored" data-anchor-id="three-unique-contributions"><strong>Three unique contributions:</strong></h3>
+<ol type="1">
+<li><strong>Self-distillation for voice conversion</strong> — generates pairs of speech with same content/prosody but different timbre, then trains to disentangle them. No special loss functions needed.</li>
+<li><strong>RL post-training (REINFORCE)</strong> — uses WER + SIM as rewards, dramatically improves robustness and emotion control</li>
+<li><strong>Seed-TTSDiT</strong> — a fully diffusion-based variant (no LM) that enables <strong>speech editing</strong> (change one word without re-recording everything)</li>
+</ol>
+<div class="callout callout-note" data-callout="note">
+<div class="callout-title-container">
+<p><span class="callout-icon-container"><span class="callout-icon"></span></span><span class="callout-title">Note</span></p>
+</div>
+<div class="callout-body">
+<p><strong>One key insight about RL they discovered:</strong> Lower WER doesn’t always mean better speech — the model learns to speak more “standardized” but less natural. Classic <strong>reward hacking</strong>.</p>
+</div>
+</div>
+<blockquote class="blockquote">
+
+</blockquote>
+</section>
+</section>
+<section id="spark-tts" class="level2">
+<h2 class="anchored" data-anchor-id="spark-tts">Spark TTS</h2>
+<p>![[Pasted image 20260607222110.png]] It’s an efficient TTS system built on a standard text LLM (Qwen2.5), powered by <strong>BiCodec</strong> : a novel codec that separates <em>content</em> from <em>speaker identity</em> in a fundamentally different way than all other papers.</p>
+<section id="what-is-bicodec" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-bicodec">What is BiCodec ?</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 25%">
+<col style="width: 47%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Token Type</th>
+<th>Count</th>
+<th>Captures</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Semantic tokens</strong></td>
+<td>50/second</td>
+<td>What is said (content, rhythm)</td>
+</tr>
+<tr class="even">
+<td><strong>Global tokens</strong></td>
+<td>32 total per clip</td>
+<td>Who is speaking (voice identity)</td>
+</tr>
+</tbody>
+</table>
+<p>Compare to everyone else who uses 12–50 tokens/second carrying mixed semantic+acoustic info.</p>
+<p>BiCodec’s global tokens are <strong>time-invariant</strong> — they describe the whole voice, not individual frames.</p>
+<div class="callout callout-note callout-question" data-callout="question">
+<div class="callout-title-container">
+<p><span class="callout-icon-container"><span class="callout-icon"></span></span><span class="callout-title">Question</span></p>
+</div>
+<div class="callout-body">
+<p>what if this chunk has missed feelings at same time would global tokens catches these?</p>
+</div>
+</div>
+<p><strong>Why this matters:</strong> The LM only predicts semantic tokens + 32 global tokens.</p>
+<p>No multi-codebook complexity.</p>
+<p>Plugs directly into any standard text LLM.</p>
+</section>
+<section id="voice-creation-via-chain-of-thought" class="level3">
+<h3 class="anchored" data-anchor-id="voice-creation-via-chain-of-thought">Voice Creation via Chain-of-Thought</h3>
+<p>Because speaker identity is isolated in 32 global tokens, you can describe a voice:</p>
+<pre><code>"Female, high pitch, fast speed"
+→ LM predicts fine-grained pitch/speed values
+→ LM predicts 32 global tokens (voice identity)
+→ LM predicts semantic tokens (content)
+→ BiCodec decoder → audio</code></pre>
+<p><strong>No reference audio needed</strong></p>
+</section>
+<section id="voxbox-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="voxbox-dataset">VoxBox Dataset</h3>
+<ul>
+<li>100K hours, English + Chinese</li>
+<li>Annotated with gender, pitch, speaking rate, age, emotion</li>
+<li>Fully open source — fills a major gap in the field</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="spark-tts-performance" class="level2">
+<h2 class="anchored" data-anchor-id="spark-tts-performance">Spark tts Performance</h2>
+<p>On Seed-TTS benchmark (WER ↓):</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Chinese CER</th>
+<th>English WER</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Seed-TTS</td>
+<td>1.12%</td>
+<td>2.25%</td>
+</tr>
+<tr class="even">
+<td>F5-TTS</td>
+<td>1.56%</td>
+<td><strong>1.83%</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>Spark-TTS</strong></td>
+<td><strong>1.20%</strong></td>
+<td>1.98%</td>
+</tr>
+<tr class="even">
+<td>Llasa-8B (8x bigger!)</td>
+<td>1.59%</td>
+<td>2.97%</td>
+</tr>
+</tbody>
+</table>
+<p>Spark-TTS beats an 8B model with only <strong>0.5B parameters</strong>. #ai/voice/tts/paper</p>
+</section>
+<section id="inworld-tts-1-paper-study-notes" class="level1">
+<h1>Inworld TTS-1 Paper — Study Notes</h1>
+<section id="what-is-inworld-tts-ai" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-inworld-tts-ai">What is Inworld TTS AI</h3>
+<p>Inworld AI built two LLM-based text-to-speech models:</p>
+<ul>
+<li><strong>TTS-1</strong> (1.6B params) — fast, real-time, on-device</li>
+<li><strong>TTS-1-Max</strong> (8.8B params) — higher quality, demanding applications</li>
+</ul>
+<p>Both support 11 languages, 48 kHz audio, voice cloning from a short clip, and emotional control.</p>
+<hr>
+</section>
+<section id="inworld-tts-architecture" class="level2">
+<h2 class="anchored" data-anchor-id="inworld-tts-architecture">Inworld TTS Architecture</h2>
+<ul>
+<li>An <strong>audio codec</strong> converts raw audio ↔︎ discrete tokens (like JPEG for audio)</li>
+<li>A <strong>SpeechLM</strong> (LLaMA backbone) generates audio tokens from text + reference audio</li>
+<li>The codec decoder reconstructs the final waveform from those tokens</li>
+</ul>
+<hr>
+</section>
+<section id="inworld-tts-training-pipeline" class="level2">
+<h2 class="anchored" data-anchor-id="inworld-tts-training-pipeline">Inworld TTS Training Pipeline</h2>
+<p>Three stages, same recipe as modern LLMs:</p>
+<ol type="1">
+<li><strong>Pre-training</strong> — ~1M hours of raw audio, unsupervised next-token prediction</li>
+<li><strong>SFT</strong> — ~200k hours of clean filtered audio, supervised imitation</li>
+<li><strong>RL alignment (GRPO)</strong> — rewards-based optimization toward human-preferred output</li>
+</ol>
+<hr>
+<section id="inworld-tts-grpo-rl-alignment" class="level3">
+<h3 class="anchored" data-anchor-id="inworld-tts-grpo-rl-alignment">Inworld TTS GRPO &amp; RL Alignment</h3>
+<ul>
+<li>Generate <strong>8 outputs</strong> per input, score each, reward the above-average ones</li>
+<li>Reward = weighted combination of:
+<ul>
+<li><strong>WER</strong> — did it say the right words? (via Whisper)</li>
+<li><strong>Speaker Similarity (SIM)</strong> — does it sound like the reference voice? (via WavLM embeddings + cosine similarity)</li>
+<li><strong>DNSMOS</strong> — does it sound clean/natural? (neural MOS predictor)</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="audio-codec-48-khz" class="level3">
+<h3 class="anchored" data-anchor-id="audio-codec-48-khz">Audio Codec &amp; 48 kHz</h3>
+<ul>
+<li>Codec bridges raw audio and LLM-friendly tokens</li>
+<li>48 kHz = 48,000 samples/sec → richer high-frequency detail than 16/24 kHz</li>
+<li>They confirmed 48 kHz gave better DNSMOS scores</li>
+</ul>
+<hr>
+</section>
+<section id="inworld-tts-streaming-tricks" class="level3">
+<h3 class="anchored" data-anchor-id="inworld-tts-streaming-tricks">Inworld TTS Streaming Tricks</h3>
+<p>Two problems when concatenating audio chunks in real-time:</p>
+<ol type="1">
+<li><strong>Clicks at boundaries</strong> → solved by only cutting at natural silence points</li>
+<li><strong>Volume jumps</strong> → solved by feeding decoder extra context, then trimming overlap</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="inworld-tts-limitations-especially-for-arabic" class="level2">
+<h2 class="anchored" data-anchor-id="inworld-tts-limitations-especially-for-arabic">Inworld TTS Limitations (especially for Arabic)</h2>
+<ul>
+<li>WavLM (SIM) and DNSMOS were trained mostly on English data</li>
+<li>Reward signals are unreliable for underrepresented languages</li>
+<li>Arabic is <strong>not</strong> among the 11 supported languages</li>
+<li>RL could make things <em>worse</em> if the reward model doesn’t understand the language</li>
+</ul>
+<hr>
+<section id="key-metrics-to-know-for-tts" class="level3">
+<h3 class="anchored" data-anchor-id="key-metrics-to-know-for-tts">Key Metrics to Know for TTS</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>What it measures</th>
+<th>Better =</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>WER</td>
+<td>Word error rate</td>
+<td>Lower</td>
+</tr>
+<tr class="even">
+<td>SIM</td>
+<td>Speaker similarity</td>
+<td>Higher</td>
+</tr>
+<tr class="odd">
+<td>DNSMOS</td>
+<td>Perceptual audio quality</td>
+<td>Higher</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="qwen3-tts" class="level2">
+<h2 class="anchored" data-anchor-id="qwen3-tts">Qwen3-TTS</h2>
+<p>![[Pasted image 20260607222331.png]]</p>
+<section id="what-is-qwen3-tts-architecture" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-qwen3-tts-architecture">What is qwen3-tts architecture</h3>
+<p>Alibaba’s Qwen team’s TTS model family — 10 variants covering different trade-offs between quality, latency, and controllability. Open-sourced under Apache 2.0.</p>
+<p>![[Pasted image 20260607222223.png]]</p>
+</section>
+</section>
+<section id="codebooks-in-tts-explained" class="level2">
+<h2 class="anchored" data-anchor-id="codebooks-in-tts-explained">Codebooks in TTS Explained</h2>
+<p>A <strong>codebook</strong> is a fixed dictionary of sound patterns. Audio is compressed by replacing each chunk with the closest matching index in the dictionary.</p>
+<p><strong>Single codebook:</strong></p>
+<ul>
+<li>One dictionary → one index per frame</li>
+<li>Simple, good for semantics</li>
+<li>Limited acoustic detail</li>
+</ul>
+<p><strong>Multi-codebook (RVQ — Residual Vector Quantization):</strong></p>
+<ul>
+<li>Layer 1: encode audio → get index + leftover error</li>
+<li>Layer 2: encode the error → get index + smaller error</li>
+<li>Layer 3: encode that error… and so on</li>
+<li>Each layer adds finer acoustic detail progressively</li>
+</ul>
+<hr>
+<section id="two-tokenizers" class="level3">
+<h3 class="anchored" data-anchor-id="two-tokenizers">Two Tokenizers</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>25Hz Tokenizer</th>
+<th>12Hz Tokenizer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Codebooks</td>
+<td>1 (size 32768)</td>
+<td>16 (size 2048 each)</td>
+</tr>
+<tr class="even">
+<td>Semantic info</td>
+<td>Strong (built on Qwen2-Audio)</td>
+<td>First codebook only</td>
+</tr>
+<tr class="odd">
+<td>LM workload</td>
+<td>25 predictions/sec</td>
+<td>12.5 predictions/sec</td>
+</tr>
+<tr class="even">
+<td>First packet</td>
+<td>~150ms</td>
+<td>~97ms</td>
+</tr>
+<tr class="odd">
+<td>Best for</td>
+<td>Long speech, quality</td>
+<td>Ultra-low latency</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key insight:</strong> 12Hz is faster despite 16 codebooks because the LM only handles the first codebook — a lightweight module handles the rest.</p>
+<hr>
+</section>
+<section id="training-pipeline" class="level3">
+<h3 class="anchored" data-anchor-id="training-pipeline">Training Pipeline</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 74%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Stage</th>
+<th>What happens</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Pre-training</strong></td>
+<td>5M hours multilingual speech — learns basic text→speech mapping</td>
+</tr>
+<tr class="even">
+<td><strong>High-quality CPT</strong></td>
+<td>Filtered clean data — reduces hallucinations from noisy pre-training</td>
+</tr>
+<tr class="odd">
+<td><strong>Long-context</strong></td>
+<td>Extends from 8k to 32k tokens — enables 10+ minute generation</td>
+</tr>
+<tr class="even">
+<td><strong>DPO</strong></td>
+<td>Preference pairs from human feedback — aligns with human preferences</td>
+</tr>
+<tr class="odd">
+<td><strong>GRPO</strong></td>
+<td>Rule-based rewards — improves stability and task performance</td>
+</tr>
+<tr class="even">
+<td><strong>Speaker fine-tuning</strong></td>
+<td>LoRA fine-tuning on specific voices — improves voice cloning</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="key-contributions" class="level3">
+<h3 class="anchored" data-anchor-id="key-contributions">Key Contributions</h3>
+<ol type="1">
+<li><strong>Dual tokenizer design</strong> — one for quality, one for latency</li>
+<li><strong>5M hours training data</strong> — 5x more than Inworld</li>
+<li><strong>Long-form stability</strong> — seamless 10+ minute generation without artifacts</li>
+<li><strong>Voice controllability</strong> — natural language instructions for voice design</li>
+<li><strong>Cross-lingual cloning</strong> — preserves voice identity across languages (e.g.&nbsp;zh→ko: 66% error reduction vs CosyVoice3)</li>
+<li><strong>Open source</strong> — full weights + tokenizers under Apache 2.0</li>
+</ol>
+</section>
+</section>
+<section id="voxtral-tts" class="level2">
+<h2 class="anchored" data-anchor-id="voxtral-tts">Voxtral TTS</h2>
+<section id="what-it-is-mistral-voxtral" class="level3">
+<h3 class="anchored" data-anchor-id="what-it-is-mistral-voxtral">What It is Mistral Voxtral?</h3>
+<p>Mistral’s multilingual TTS model with a <strong>hybrid architecture</strong> — the key innovation that sets it apart from Inworld and Qwen.</p>
+<p>![[Pasted image 20260607222427.png]]</p>
+</section>
+<section id="the-hybrid-architecture-the-big-idea" class="level3">
+<h3 class="anchored" data-anchor-id="the-hybrid-architecture-the-big-idea">The Hybrid Architecture (The Big Idea)</h3>
+<p>Everyone else: LM generates ALL tokens autoregressively</p>
+<p>Voxtral splits the job:</p>
+<ul>
+<li><strong>LM (autoregressive)</strong> → generates semantic tokens (what to say, rhythm, structure)</li>
+<li><strong>Flow-matching transformer</strong> → generates acoustic tokens (how it sounds, timbre, expressivity)</li>
+</ul>
+<p>This is like stable diffusion but for the acoustic layer — start from noise, refine into rich audio detail in 8 steps.</p>
+<section id="why-this-is-clever" class="level4">
+<h4 class="anchored" data-anchor-id="why-this-is-clever"><strong>Why this is clever:</strong></h4>
+<ul>
+<li>Autoregressive is great for long-range coherence</li>
+<li>Flow-matching is great for rich acoustic detail and expressivity</li>
+<li>Each component does what it’s best at</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="voxtral-codec" class="level3">
+<h3 class="anchored" data-anchor-id="voxtral-codec">Voxtral Codec</h3>
+<ul>
+<li>12.5 Hz, <strong>37 tokens per frame</strong></li>
+<li>1 semantic token (VQ, size 8192) — distilled from <strong>Whisper</strong> for text alignment</li>
+<li>36 acoustic tokens (FSQ — Finite Scalar Quantization, not RVQ!)</li>
+<li>FSQ = each dimension gets quantized to 21 uniform levels independently</li>
+</ul>
+<hr>
+</section>
+<section id="training" class="level3">
+<h3 class="anchored" data-anchor-id="training">Training</h3>
+<ul>
+<li>Pre-training on paired audio + transcripts</li>
+<li><strong>DPO</strong> post-training — adapted for flow-matching (novel contribution)</li>
+</ul>
+<hr>
+</section>
+<section id="key-results" class="level3">
+<h3 class="anchored" data-anchor-id="key-results">Key Results</h3>
+<ul>
+<li><strong>68.4% win rate</strong> over ElevenLabs Flash in voice cloning</li>
+<li>Dominant speaker similarity across all 9 languages</li>
+<li>Arabic specifically: <strong>72.9% win rate</strong> 🎉</li>
+</ul>
+</section>
+</section>
+<section id="f5-tts" class="level2">
+<h2 class="anchored" data-anchor-id="f5-tts">F5-TTS</h2>
+<section id="what-it-is" class="level3">
+<h3 class="anchored" data-anchor-id="what-it-is">What It Is</h3>
+<p>A <strong>fully non-autoregressive</strong> TTS system — no LM, no codebook, no tokenizer.</p>
+<p>Just flow matching directly on mel spectrograms.</p>
+<p>![[Pasted image 20260607222518.png]]</p>
+</section>
+<section id="architecture-comparison-across-all-papers" class="level3">
+<h3 class="anchored" data-anchor-id="architecture-comparison-across-all-papers">Architecture Comparison Across All Papers</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 18%">
+<col style="width: 22%">
+<col style="width: 17%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Inworld</th>
+<th>Qwen</th>
+<th>Voxtral</th>
+<th><strong>F5-TTS</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Approach</td>
+<td>Autoregressive LM</td>
+<td>Autoregressive LM</td>
+<td>Hybrid AR + Flow</td>
+<td><strong>Pure Flow Matching</strong></td>
+</tr>
+<tr class="even">
+<td>Codec/Tokenizer</td>
+<td>X-codec2</td>
+<td>Custom dual tokenizer</td>
+<td>Voxtral Codec</td>
+<td><strong>None (mel spec)</strong></td>
+</tr>
+<tr class="odd">
+<td>Text alignment</td>
+<td>Implicit</td>
+<td>Implicit</td>
+<td>Implicit</td>
+<td><strong>Filler token padding</strong></td>
+</tr>
+<tr class="even">
+<td>Parameters</td>
+<td>1.6B / 8.8B</td>
+<td>0.6B / 1.7B</td>
+<td>4B</td>
+<td><strong>336M</strong></td>
+</tr>
+<tr class="odd">
+<td>Training data</td>
+<td>1M hours</td>
+<td>5M hours</td>
+<td>Not specified</td>
+<td><strong>100K hours</strong></td>
+</tr>
+</tbody>
+</table>
+<p>F5-TTS achieves competitive results with <strong>10x less data</strong> and a <strong>much smaller model</strong>.</p>
+<hr>
+</section>
+<section id="sway-sampling" class="level3">
+<h3 class="anchored" data-anchor-id="sway-sampling">Sway Sampling</h3>
+<p>During flow matching, you take steps from noise (t=0) to speech (t=1). Normally steps are uniform.</p>
+<p>Sway Sampling biases steps toward <strong>smaller t values</strong> (early steps) — because early steps sketch the overall structure of speech (alignment, rhythm), while later steps just add detail.</p>
+<p><img src="https://latex.codecogs.com/png.latex?f_%7Bsway%7D(u;%20s)%20=%20u%20+%20s%20%5Ccdot%20(%5Ccos(%5Cfrac%7B%5Cpi%7D%7B2%7Du)%20-%201%20+%20u)"></p>
+<p>With s = -1 (sway left):</p>
+<ul>
+<li>More steps spent at the beginning → better text alignment</li>
+<li>Fewer total steps needed → faster inference</li>
+<li><strong>RTF of 0.15</strong> — the fastest in this paper set!</li>
+</ul>
+<p>They proved this with a “leak and override” experiment: inject ground truth audio into early steps, then override with different text — with Sway Sampling the model follows the text, without it the model gets stuck on the leaked audio.</p>
+<hr>
+</section>
+<section id="results" class="level3">
+<h3 class="anchored" data-anchor-id="results">Results</h3>
+<p>On Seed-TTS test-en (WER ↓):</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>WER</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ground Truth</td>
+<td>2.06%</td>
+</tr>
+<tr class="even">
+<td>Qwen3-TTS-12Hz-1.7B</td>
+<td><strong>1.24%</strong></td>
+</tr>
+<tr class="odd">
+<td>F5-TTS (32 NFE)</td>
+<td>1.83%</td>
+</tr>
+<tr class="even">
+<td>CosyVoice</td>
+<td>3.39%</td>
+</tr>
+<tr class="odd">
+<td>FireRedTTS</td>
+<td>3.82%</td>
+</tr>
+</tbody>
+</table>
+<p>F5-TTS is competitive despite being <strong>10x smaller</strong> and trained on <strong>50x less data</strong> than Qwen.</p>
+<hr>
+</section>
+<section id="key-limitation" class="level3">
+<h3 class="anchored" data-anchor-id="key-limitation">Key Limitation</h3>
+<p>No fine-grained emotion/style control — it can mimic the reference voice’s emotion but can’t be instructed explicitly like Qwen or Voxtral.</p>
+</section>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ol type="1">
+<li><a href="https://arxiv.org/html/2410.06885v3">F5-TTS</a></li>
+<li><a href="https://arxiv.org/html/2603.25551v2">Voxtral Mistral</a></li>
+<li><a href="https://arxiv.org/html/2406.02430v1">Seed-TTS</a></li>
+<li><a href="https://arxiv.org/abs/2601.15621">Qwen3-TTS</a></li>
+<li><a href="https://arxiv.org/html/2503.01710v1">Spark-TTS</a> more from myside :</li>
+</ol>
+<ul>
+<li><a href="https://kareemai.com/blog/posts/on_device/litert.html">LiteRT</a></li>
+<li><a href="https://kareemai.com/blog/posts/speech_recognition/muaalm_quran_chance.html">Muaalem El Quran</a></li>
+</ul>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>blogging</category>
+  <category>til</category>
+  <category>blog/learn/concept</category>
+  <category>tts</category>
+  <category>nlp</category>
+  <category>a</category>
+  <guid>https://kareemai.com/blog/posts/nlp/TTS Architecture V1.html</guid>
+  <pubDate>Sat, 06 Jun 2026 21:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/blog/posts/nlp/Pasted image 20260607222518.png" medium="image" type="image/png" height="94" width="144"/>
+</item>
 <item>
   <title>Fine-Tuning Gemma 3 for Arabic Tool Calling: A No-RAG Approach</title>
   <dc:creator>Abdelkareem </dc:creator>
@@ -9707,128 +10272,6 @@ font-style: inherit;">"float16"</span>,</span>
   <guid>https://kareemai.com/blog/posts/minishlab/ctranslate_maswray.html</guid>
   <pubDate>Thu, 02 Oct 2025 21:00:00 GMT</pubDate>
   <media:content url="https://kareemai.com/blog/posts/minishlab/images/bojji.webp" medium="image" type="image/webp"/>
-</item>
-<item>
-  <title>Digital Minimalism: Getting Back to RSS for AI Engineers</title>
-  <dc:creator>kareem </dc:creator>
-  <link>https://kareemai.com/blog/posts/life_style/back_to_rss.html</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>As an AI engineer and researcher, I consume a lot of information — papers, blog posts, Twitter threads, Discord discussions. Over time, this turned into a constant state of distraction. I couldn’t finish projects because I was always “keeping up.”</p>
-<p>This post explains why I moved back to RSS, stopped using social media for professional updates, and how digital minimalism helps me stay productive without burning out.</p>
-<section id="the-flood-of-information" class="level2">
-<h2 class="anchored" data-anchor-id="the-flood-of-information">The Flood of Information</h2>
-<p>I use <a href="https://github.com/yang991178/fluent-reader">Fluent Reader</a> to keep track of the feeds I love, covering topics like machine learning (ML), life, and more. <img src="https://kareemai.com/blog/posts/life_style/images/vision_read.webp" alt="Fluent Reader" class="img-fluid figure-img"></p>
-<p>Yesterday, I read an article from <a href="https://www.answer.ai/posts/2025-06-05-readbench.html">Answerdotai</a> about Vision Language Models (VLMs).</p>
-<p>I spent about 15 minutes diving into the ideas and reflecting on how they relate to my recent projects using Colpali and DSE.</p>
-<p>Today, I opened X.com and saw a thread by Benjamin about the same article.</p>
-<p>I skimmed it but couldn’t recall anything meaningful! There was no real engagement—just a fleeting sense of encountering new VLM updates.</p>
-<p>I bookmarked the post, thinking I’d revisit it for my next project or research idea that could “change my life.” Spoiler: I probably won’t.</p>
-</section>
-<section id="is-twitter-the-best-for-ml-maybe" class="level2">
-<h2 class="anchored" data-anchor-id="is-twitter-the-best-for-ml-maybe">Is Twitter the Best for ML? Maybe!</h2>
-<p>My Twitter feed is highly customized, and I use an extension to block distractions.</p>
-<p>Yet, every time I open it, I’m flooded with ideas and AI updates that feel overwhelming.</p>
-<p>It’s one reason I struggle to finish projects. While X is great for staying updated and connecting with top minds in the field, it’s not the only way.</p>
-<p>You can mention people like Jeremy Howard, Tom Arson, or the Hugging Face team and often get a response within an hour—pretty cool!</p>
-<p>I deleted my Twitter account last year but created a new one, hoping to earn from the ad system and share my projects.</p>
-<p>However, I haven’t completed a single project I’m proud to share. Everything’s still in the early stages.</p>
-<p>I don’t need X! These feel like flimsy reasons to stay active there. There’s a way to get the benefits without harming my focus, health, or life.</p>
-</section>
-<section id="personal-branding-and-linkedin" class="level2">
-<h2 class="anchored" data-anchor-id="personal-branding-and-linkedin">Personal Branding and LinkedIn</h2>
-<p>What is LinkedIn? It’s supposed to be your portfolio for job opportunities and personal branding. I’ve tried perfecting my profile, applying for jobs, and sharing work, but I’ve had no offers through LinkedIn. This week, I landed two jobs—one through a friend’s referral and another via open-source connections—without LinkedIn’s help.</p>
-<p>To me, LinkedIn feels fake. The algorithms are broken, and it’s become a waste of time. If you want to learn about me, check my CV and website at kareemai.com.</p>
-<p>By focusing on deep, unique work, I believe I can create my own gravity to attract better opportunities aligned with my interests. Will this work for everyone? Probably not. These are just my thoughts and experiences.</p>
-<p>By the way, a Hugging Face profile might be better for landing AI jobs if you’re creating real, impactful work.</p>
-</section>
-<section id="make-it-hard-for-people-to-reach-you" class="level2">
-<h2 class="anchored" data-anchor-id="make-it-hard-for-people-to-reach-you">Make It Hard for People to Reach You</h2>
-<p>Am I going to live in a cave? No! In a recent meeting, a friend jokingly called me “our search engine.”</p>
-<p>I want to stay connected to what matters and gain maximum benefits without fracturing my attention with short posts or inauthentic interactions.</p>
-<p>There’s freedom in posting something without expecting comments or reactions. If you like it, great! If not, that’s fine too. Why didn’t you like it? Maybe it’s beginner-level or poorly written. I’ll do better next time.</p>
-<p>I’ve set boundaries to manage interactions:</p>
-<pre><code>Don’t send me voice notes—write instead. It’s quicker, and I don’t have to pause everything to listen.
-Don’t call me—send a message first.
-Don’t leave comments—email me instead.</code></pre>
-<p>Tough? Sure. Some people might not like it, but it filters out noise and preserves what’s important. People may get annoyed initially, but they adapt quickly.</p>
-</section>
-<section id="back-to-rss-discord" class="level2">
-<h2 class="anchored" data-anchor-id="back-to-rss-discord">Back to RSS + Discord</h2>
-<p>After five years, I’ve identified the sources I value and noticed a pattern. Why not collect them in one managed place, free from algorithms and ads? That’s where RSS comes in. I love it—it’s a superpower! When I first learned about RSS in college, I pictured an old Englishman in a garden reading about obscure topics. Now, I’ve become that “old man” who craves calm, minimal, and boring tools.</p>
-<p>You can even follow YouTube channels via RSS without opening a browser! <img src="https://kareemai.com/blog/posts/life_style/images/fluent_reader.webp" alt="Fluent Reader" class="img-fluid figure-img"></p>
-<p>For interacting with people, Discord channels are better. I can still reach folks like Jeremy and Tom there.</p>
-</section>
-<section id="next-ideas" class="level2">
-<h2 class="anchored" data-anchor-id="next-ideas">Next Ideas</h2>
-<p>I have many changes I want to implement and thoughts to refine. I’m working on improving:</p>
-<pre><code>Activity Watch
-Todo Manager
-Thoughts Logging
-Media Manager</code></pre>
-<p>I’m also focusing on better habits like sleeping, eating, and walking.</p>
-<p>Want to find me? Visit my customized space at kareeai.com.</p>
-<p>All my love,</p>
-<p>Kareem</p>
-</section>
-<section id="faq-digital-minimalism-for-developers" class="level2">
-<h2 class="anchored" data-anchor-id="faq-digital-minimalism-for-developers">FAQ: Digital Minimalism for Developers</h2>
-<section id="what-is-digital-minimalism" class="level3">
-<h3 class="anchored" data-anchor-id="what-is-digital-minimalism">What is digital minimalism?</h3>
-<p>Digital minimalism is a philosophy of using technology intentionally rather than habitually. It means keeping the tools that add real value and removing the ones that fragment your attention — like infinite-scroll social media feeds.</p>
-</section>
-<section id="is-rss-still-useful-in-2025" class="level3">
-<h3 class="anchored" data-anchor-id="is-rss-still-useful-in-2025">Is RSS still useful in 2025?</h3>
-<p>Yes. RSS is the best way to follow specific sources without algorithms deciding what you see. Tools like <a href="https://github.com/yang991178/fluent-reader">Fluent Reader</a> and <a href="https://feedly.com/">Feedly</a> make RSS modern and usable. You can even follow YouTube channels via RSS.</p>
-</section>
-<section id="how-do-i-follow-ai-research-without-twitter" class="level3">
-<h3 class="anchored" data-anchor-id="how-do-i-follow-ai-research-without-twitter">How do I follow AI research without Twitter?</h3>
-<p>Use RSS feeds from sources like <a href="https://www.answer.ai/">Answer.AI</a>, <a href="https://huggingface.co/blog">Hugging Face Blog</a>, <a href="https://paperswithcode.com/">Papers with Code</a>, and individual researchers’ blogs. Join focused Discord servers for discussions.</p>
-</section>
-<section id="does-deleting-social-media-hurt-your-career" class="level3">
-<h3 class="anchored" data-anchor-id="does-deleting-social-media-hurt-your-career">Does deleting social media hurt your career?</h3>
-<p>Not in my experience. I landed two jobs through friend referrals and open-source connections — not LinkedIn. A strong GitHub profile and Hugging Face presence matter more than a polished LinkedIn profile for technical roles.</p>
-</section>
-<section id="what-rss-reader-should-i-use" class="level3">
-<h3 class="anchored" data-anchor-id="what-rss-reader-should-i-use">What RSS reader should I use?</h3>
-<p>I use <a href="https://github.com/yang991178/fluent-reader">Fluent Reader</a> on desktop and mobile. It’s open source, fast, and supports syncing across devices. Other good options include Feedly, Inoreader, and NetNewsWire (Mac/iOS).</p>
-</section>
-</section>
-<section id="related-posts" class="level2">
-<h2 class="anchored" data-anchor-id="related-posts">Related Posts</h2>
-<ul>
-<li><a href="../../../blog/posts/tools_reviews/super_productivity_app.html">Super Productivity Review</a> — The free open-source task manager I use to stay organized</li>
-<li><a href="../../../blog/posts/seo/how_i_use_nlp_for_seo.html">How I Use NLP for SEO</a> — Automating content optimization with Python</li>
-<li><a href="../../../blog/posts/products_reviews/Huawei_watch_gt_4_experience.html">Huawei Watch GT 4 Review</a> — Long-term review of a distraction-free smartwatch</li>
-</ul>
-<hr>
-<section id="internal-resources" class="level3">
-<h3 class="anchored" data-anchor-id="internal-resources">Internal Resources</h3>
-<p>If you found these thoughts on digital minimalism and productivity useful, you might also be interested in:</p>
-<ul>
-<li><a href="../../../papers.html">My Research Papers</a></li>
-<li><a href="../../../oss/opensource.html">Open Source Projects</a></li>
-<li><a href="../../../til/index.html">Today I Learned: AI Engineering Notes</a></li>
-<li><a href="../../feed.html">Arabic NLP Blog Posts</a></li>
-</ul>
-
-
-</section>
-</section>
-
- ]]></description>
-  <category>blogging</category>
-  <category>idea_Forge</category>
-  <category>publish</category>
-  <category>rough_thoughts</category>
-  <category>life_style</category>
-  <guid>https://kareemai.com/blog/posts/life_style/back_to_rss.html</guid>
-  <pubDate>Mon, 09 Jun 2025 21:00:00 GMT</pubDate>
-  <media:content url="https://kareemai.com/blog/posts/life_style/images/vision_read.webp" medium="image" type="image/webp"/>
 </item>
 </channel>
 </rss>
