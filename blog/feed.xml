@@ -5,13 +5,13 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>Abdelkareem Elkhateb</title>
+<title>عبدالكريم الخطيب</title>
 <link>https://kareemai.com/blog/feed.html</link>
 <atom:link href="https://kareemai.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
-<description>Articles on Arabic NLP, efficient AI models, semantic search, and machine learning engineering. Deep dives into building production AI systems by Abdelkareem Elkhateb.</description>
+<description>مقالات في معالجة اللغة العربية الطبيعية، نماذج الذكاء الاصطناعي الفعالة، البحث الدلالي، وهندسة التعلم الآلي. غوص عميق في بناء أنظمة الذكاء الاصطناعي الإنتاجية بقلم عبدالكريم الخطيب.</description>
 <image>
 <url>https://kareemai.com/kareem.webp</url>
-<title>Abdelkareem Elkhateb</title>
+<title>عبدالكريم الخطيب</title>
 <link>https://kareemai.com/blog/feed.html</link>
 </image>
 <generator>quarto-1.9.37</generator>

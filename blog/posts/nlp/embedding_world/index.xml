@@ -5,13 +5,13 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>Abdelkareem Elkhateb</title>
+<title>عبدالكريم الخطيب</title>
 <link>https://kareemai.com/blog/posts/nlp/embedding_world/</link>
 <atom:link href="https://kareemai.com/blog/posts/nlp/embedding_world/index.xml" rel="self" type="application/rss+xml"/>
 <description>Deep dives into text embeddings, vector databases, sparse retrieval, and semantic search. A curated collection of articles on building production-ready search systems.</description>
 <image>
 <url>https://kareemai.com/kareem.webp</url>
-<title>Abdelkareem Elkhateb</title>
+<title>عبدالكريم الخطيب</title>
 <link>https://kareemai.com/blog/posts/nlp/embedding_world/</link>
 </image>
 <generator>quarto-1.9.37</generator>

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" xml:lang="ar" dir="rtl"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Articles on Arabic NLP, efficient AI models, semantic search, and machine learning engineering. Deep dives into building production AI systems by Abdelkareem Elkhateb.">
+<meta name="description" content="مقالات في معالجة اللغة العربية الطبيعية، نماذج الذكاء الاصطناعي الفعالة، البحث الدلالي، وهندسة التعلم الآلي. غوص عميق في بناء أنظمة الذكاء الاصطناعي الإنتاجية بقلم عبدالكريم الخطيب.">
 
-<title>Abdelkareem Elkhateb - Arabic NLP &amp; AI Research – Abdelkareem Elkhateb</title>
+<title>عبدالكريم الخطيب - أبحاث NLP العربية والذكاء الاصطناعي – عبدالكريم الخطيب</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -65,17 +65,17 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-no-results-text": "لا توجد نتائج",
+    "search-matching-documents-text": "مستندات مطابقة",
+    "search-copy-link-title": "نسخ رابط البحث",
+    "search-hide-matches-text": "إخفاء النتائج الإضافية",
+    "search-more-match-text": "نتيجة إضافية في هذا المستند",
+    "search-more-matches-text": "نتائج إضافية في هذا المستند",
+    "search-clear-button-title": "مسح",
+    "search-text-placeholder": "بحث...",
+    "search-detached-cancel-button-title": "إلغاء",
+    "search-submit-button-title": "بحث",
+    "search-label": "بحث"
   }
 }</script>
 <script>
@@ -159,13 +159,13 @@ window.Quarto = {
 
 <link rel="stylesheet" href="../shimmering-fonts.css">
 <link rel="stylesheet" href="../styles.css">
-<link rel="alternate" type="application/rss+xml" title="Abdelkareem Elkhateb" href="feed.xml" data-external="1"><meta property="og:title" content="Blog | Abdelkareem Elkhateb">
-<meta property="og:description" content="Articles on Arabic NLP, efficient AI, and ML engineering">
+<link rel="alternate" type="application/rss+xml" title="عبدالكريم الخطيب" href="feed.xml" data-external="1"><meta property="og:title" content="المدونة | عبدالكريم الخطيب">
+<meta property="og:description" content="مقالات في NLP العربية، الذكاء الاصطناعي الفعال، وهندسة التعلم الآلي">
 <meta property="og:image" content="https://kareemai.com/mind.svg">
-<meta property="og:site_name" content="Abdelkareem Elkhateb">
-<meta property="og:locale" content="en_US">
-<meta name="twitter:title" content="Abdelkareem Elkhateb - Arabic NLP &amp; AI Research">
-<meta name="twitter:description" content="Articles on Arabic NLP, efficient AI models, semantic search, and machine learning engineering. Deep dives into building production AI systems by Abdelkareem Elkhateb.">
+<meta property="og:site_name" content="عبدالكريم الخطيب">
+<meta property="og:locale" content="ar_SA">
+<meta name="twitter:title" content="عبدالكريم الخطيب - أبحاث NLP العربية والذكاء الاصطناعي">
+<meta name="twitter:description" content="مقالات في معالجة اللغة العربية الطبيعية، نماذج الذكاء الاصطناعي الفعالة، البحث الدلالي، وهندسة التعلم الآلي. غوص عميق في بناء أنظمة الذكاء الاصطناعي الإنتاجية بقلم عبدالكريم الخطيب.">
 <meta name="twitter:image" content="https://kareemai.com/kareem.webp">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary_large_image">
@@ -340,7 +340,7 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-            <div id="quarto-search" class="" title="Search"></div>
+            <div id="quarto-search" class="" title="بحث"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -349,27 +349,27 @@ window.Quarto = {
   <li class="nav-item">
     <a class="nav-link" href="../index.html"> <i class="bi bi-house" role="img">
 </i> 
-<span class="menu-text">Home</span></a>
+<span class="menu-text">الرئيسية</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="../blog/feed.html" aria-current="page"> <i class="bi bi-journal-text" role="img">
 </i> 
-<span class="menu-text">Blog</span></a>
+<span class="menu-text">المدونة</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../til/index.html"> <i class="bi bi-lightbulb" role="img">
 </i> 
-<span class="menu-text">TILs</span></a>
+<span class="menu-text">ملاحظات</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../papers.html"> <i class="bi bi-file-text" role="img">
 </i> 
-<span class="menu-text">Papers</span></a>
+<span class="menu-text">أبحاث</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../publish.html"> <i class="bi bi-book" role="img">
 </i> 
-<span class="menu-text">Books</span></a>
+<span class="menu-text">كتب</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -379,14 +379,14 @@ window.Quarto = {
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://youtube.com/@AbdelkareemElkhatib"> <i class="bi bi-youtube" role="img">
+    <a class="nav-link" href="https://www.youtube.com/@abdelkareemai"> <i class="bi bi-youtube" role="img">
 </i> 
-<span class="menu-text">Videos</span></a>
+<span class="menu-text">فيديوهات</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://www.upwork.com/freelancers/~016a9fea792423bb9a"> <i class="bi bi-briefcase" role="img">
 </i> 
-<span class="menu-text">Hire Me</span></a>
+<span class="menu-text">للتوظيف</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://gpuvec.com"> <i class="bi bi-cpu" role="img">
@@ -394,12 +394,12 @@ window.Quarto = {
 <span class="menu-text">GPUVec</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../blog/feed.xml"> <i class="bi bi-rss" role="img" aria-label="Blog RSS Feed">
+    <a class="nav-link" href="../blog/feed.xml"> <i class="bi bi-rss" role="img" aria-label="خلاصة المدونة">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../til/index.xml"> <i class="bi bi-rss" role="img" aria-label="TILs RSS Feed">
+    <a class="nav-link" href="../til/index.xml"> <i class="bi bi-rss" role="img" aria-label="خلاصة الملاحظات">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -422,12 +422,12 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Blog | Arabic NLP, AI Models &amp; ML Engineering</h1>
+<h1 class="title">المدونة | NLP العربية، نماذج الذكاء الاصطناعي وهندسة التعلم الآلي</h1>
 </div>
 
 <div>
   <div class="description">
-    Articles on Arabic NLP, efficient AI models, semantic search, and machine learning engineering. Deep dives into building production AI systems by Abdelkareem Elkhateb.
+    مقالات في معالجة اللغة العربية الطبيعية، نماذج الذكاء الاصطناعي الفعالة، البحث الدلالي، وهندسة التعلم الآلي. غوص عميق في بناء أنظمة الذكاء الاصطناعي الإنتاجية بقلم عبدالكريم الخطيب.
   </div>
 </div>
 
@@ -444,9 +444,9 @@ window.Quarto = {
 </header>
 
 
-<p>Deep dives on Arabic NLP, efficient AI models, and ML engineering — from optimizing transformers for production to building semantic search systems.</p>
-<p>I write about what I actually build: Arabic embedding models that run on phones, sparse-dense hybrid search with Qdrant, ColBERT for late interaction retrieval, and production ML systems that serve real users. You’ll also find honest product reviews (Huawei FreeBuds, OnePlus Pad), tool comparisons, and reflections on the engineering journey.</p>
-<p>If you’re into Arabic NLP, embeddings, or practical ML — this is the place.</p>
+<p>غوص عميق في معالجة اللغة العربية الطبيعية، نماذج الذكاء الاصطناعي الفعالة، وهندسة التعلم الآلي — من تحسين المحولات للإنتاج إلى بناء أنظمة البحث الدلالي.</p>
+<p>أكتب عمّا أُبنيه فعلياً: نماذج تضمين عربية تعمل على الهواتف، بحث هجين متناثر-كثيف باستخدام Qdrant، و ColBERT للاسترجاع التفاعلي المتأخر، وأنظمة تعلم آلي إنتاجية تخدم مستخدمين حقيقيين. ستجد أيضاً مراجعات صادقة للمنتجات (Huawei FreeBuds, OnePlus Pad)، ومقارنات أدوات، وتأملات في رحلة الهندسة.</p>
+<p>إذا كنت مهتماً بـ NLP العربية أو التضمينات أو التعلم الآلي التطبيقي — فهذا هو المكان المناسب.</p>
 
 
 
@@ -469,7 +469,7 @@ window.Quarto = {
 </div>
 <div class="metadata">
 <a href="../blog/posts/nlp/embedding_world/index.html" class="no-external">
-<div class="listing-reading-time">1 min</div>
+<div class="listing-reading-time">1 دقيقة</div>
 </a>
 </div>
 </div>
@@ -499,9 +499,9 @@ window.Quarto = {
 <div class="metadata">
 <a href="../blog/posts/nlp/Dinvo3 for Arabic Scripts.html" class="no-external">
 <div class="listing-date">
-Jun 8, 2026
+يونيو 8, 2026
 </div>
-<div class="listing-reading-time">1 min</div>
+<div class="listing-reading-time">1 دقيقة</div>
 </a>
 </div>
 </div>
@@ -537,9 +537,9 @@ Jun 8, 2026
 <div class="metadata">
 <a href="../blog/posts/nlp/TTS Architecture V1.html" class="no-external">
 <div class="listing-date">
-Jun 7, 2026
+يونيو 7, 2026
 </div>
-<div class="listing-reading-time">12 min</div>
+<div class="listing-reading-time">12 دقيقة</div>
 </a>
 </div>
 </div>
@@ -560,9 +560,9 @@ Jun 7, 2026
 <div class="metadata">
 <a href="../blog/posts/nlp/gemma_tool_calling.html" class="no-external">
 <div class="listing-date">
-May 25, 2026
+مايو 25, 2026
 </div>
-<div class="listing-reading-time">3 min</div>
+<div class="listing-reading-time">3 دقيقة</div>
 </a>
 </div>
 </div>
@@ -592,9 +592,9 @@ May 25, 2026
 <div class="metadata">
 <a href="../blog/posts/ml_life/cv_of_failure.html" class="no-external">
 <div class="listing-date">
-May 23, 2026
+مايو 23, 2026
 </div>
-<div class="listing-reading-time">2 min</div>
+<div class="listing-reading-time">2 دقيقة</div>
 </a>
 </div>
 </div>
@@ -622,9 +622,9 @@ May 23, 2026
 <div class="metadata">
 <a href="../blog/posts/products_reviews/Building_AI_PC_In_Egypt.html" class="no-external">
 <div class="listing-date">
-May 8, 2026
+مايو 8, 2026
 </div>
-<div class="listing-reading-time">8 min</div>
+<div class="listing-reading-time">8 دقيقة</div>
 </a>
 </div>
 </div>
@@ -654,9 +654,9 @@ May 8, 2026
 <div class="metadata">
 <a href="../blog/posts/ml_life/hacker_rank_ai_intereviw.html" class="no-external">
 <div class="listing-date">
-Apr 28, 2026
+أبريل 28, 2026
 </div>
-<div class="listing-reading-time">2 min</div>
+<div class="listing-reading-time">2 دقيقة</div>
 </a>
 </div>
 </div>
@@ -690,9 +690,9 @@ Apr 28, 2026
 <div class="metadata">
 <a href="../blog/posts/on_device/litert.html" class="no-external">
 <div class="listing-date">
-Apr 25, 2026
+أبريل 25, 2026
 </div>
-<div class="listing-reading-time">4 min</div>
+<div class="listing-reading-time">4 دقيقة</div>
 </a>
 </div>
 </div>
@@ -722,9 +722,9 @@ Apr 25, 2026
 <div class="metadata">
 <a href="../blog/posts/nlp/embedding_world/vector_database_book.html" class="no-external">
 <div class="listing-date">
-Apr 18, 2026
+أبريل 18, 2026
 </div>
-<div class="listing-reading-time">2 min</div>
+<div class="listing-reading-time">2 دقيقة</div>
 </a>
 </div>
 </div>
@@ -754,9 +754,9 @@ Apr 18, 2026
 <div class="metadata">
 <a href="../blog/posts/nlp/embedding_world/hyperrun.html" class="no-external">
 <div class="listing-date">
-Mar 19, 2026
+مارس 19, 2026
 </div>
-<div class="listing-reading-time">5 min</div>
+<div class="listing-reading-time">5 دقيقة</div>
 </a>
 </div>
 </div>
@@ -786,9 +786,9 @@ Mar 19, 2026
 <div class="metadata">
 <a href="../blog/posts/nlp/embedding_world/hyperun_fasthtml.html" class="no-external">
 <div class="listing-date">
-Mar 19, 2026
+مارس 19, 2026
 </div>
-<div class="listing-reading-time">22 min</div>
+<div class="listing-reading-time">22 دقيقة</div>
 </a>
 </div>
 </div>
@@ -824,9 +824,9 @@ Mar 19, 2026
 <div class="metadata">
 <a href="../blog/posts/seo/seo_rat_journey.html" class="no-external">
 <div class="listing-date">
-Feb 26, 2026
+فبراير 26, 2026
 </div>
-<div class="listing-reading-time">3 min</div>
+<div class="listing-reading-time">3 دقيقة</div>
 </a>
 </div>
 </div>
@@ -862,9 +862,9 @@ Feb 26, 2026
 <div class="metadata">
 <a href="../blog/posts/dspy/Opencode.html" class="no-external">
 <div class="listing-date">
-Feb 19, 2026
+فبراير 19, 2026
 </div>
-<div class="listing-reading-time">9 min</div>
+<div class="listing-reading-time">9 دقيقة</div>
 </a>
 </div>
 </div>
@@ -896,9 +896,9 @@ Feb 19, 2026
 <div class="metadata">
 <a href="../blog/posts/tools_reviews/super_productivity_app.html" class="no-external">
 <div class="listing-date">
-Jan 9, 2026
+يناير 9, 2026
 </div>
-<div class="listing-reading-time">4 min</div>
+<div class="listing-reading-time">4 دقيقة</div>
 </a>
 </div>
 </div>
@@ -934,9 +934,9 @@ Jan 9, 2026
 <div class="metadata">
 <a href="../blog/posts/speech_recognition/muaalm_quran_chance.html" class="no-external">
 <div class="listing-date">
-Dec 26, 2025
+ديسمبر 26, 2025
 </div>
-<div class="listing-reading-time">7 min</div>
+<div class="listing-reading-time">7 دقيقة</div>
 </a>
 </div>
 </div>
@@ -966,9 +966,9 @@ Dec 26, 2025
 <div class="metadata">
 <a href="../blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html" class="no-external">
 <div class="listing-date">
-Dec 20, 2025
+ديسمبر 20, 2025
 </div>
-<div class="listing-reading-time">3 min</div>
+<div class="listing-reading-time">3 دقيقة</div>
 </a>
 </div>
 </div>
@@ -998,9 +998,9 @@ Dec 20, 2025
 <div class="metadata">
 <a href="../blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html" class="no-external">
 <div class="listing-date">
-Dec 19, 2025
+ديسمبر 19, 2025
 </div>
-<div class="listing-reading-time">4 min</div>
+<div class="listing-reading-time">4 دقيقة</div>
 </a>
 </div>
 </div>
@@ -1032,9 +1032,9 @@ Dec 19, 2025
 <div class="metadata">
 <a href="../blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html" class="no-external">
 <div class="listing-date">
-Dec 19, 2025
+ديسمبر 19, 2025
 </div>
-<div class="listing-reading-time">8 min</div>
+<div class="listing-reading-time">8 دقيقة</div>
 </a>
 </div>
 </div>
@@ -1068,9 +1068,9 @@ Dec 19, 2025
 <div class="metadata">
 <a href="../blog/posts/minishlab/pyversity_qdrant.html" class="no-external">
 <div class="listing-date">
-Dec 15, 2025
+ديسمبر 15, 2025
 </div>
-<div class="listing-reading-time">4 min</div>
+<div class="listing-reading-time">4 دقيقة</div>
 </a>
 </div>
 </div>
@@ -1091,9 +1091,9 @@ Dec 15, 2025
 <div class="metadata">
 <a href="../blog/posts/products_reviews/one_plus_pad_3.html" class="no-external">
 <div class="listing-date">
-Dec 4, 2025
+ديسمبر 4, 2025
 </div>
-<div class="listing-reading-time">21 min</div>
+<div class="listing-reading-time">21 دقيقة</div>
 </a>
 </div>
 </div>
@@ -1114,9 +1114,9 @@ Dec 4, 2025
 <div class="metadata">
 <a href="../blog/posts/products_reviews/Huawei freebuds 7i.html" class="no-external">
 <div class="listing-date">
-Nov 7, 2025
+نوفمبر 7, 2025
 </div>
-<div class="listing-reading-time">12 min</div>
+<div class="listing-reading-time">12 دقيقة</div>
 </a>
 </div>
 </div>
@@ -1152,9 +1152,9 @@ Nov 7, 2025
 <div class="metadata">
 <a href="../blog/posts/minishlab/ctranslate_maswray.html" class="no-external">
 <div class="listing-date">
-Oct 3, 2025
+أكتوبر 3, 2025
 </div>
-<div class="listing-reading-time">17 min</div>
+<div class="listing-reading-time">17 دقيقة</div>
 </a>
 </div>
 </div>
@@ -1188,9 +1188,9 @@ Oct 3, 2025
 <div class="metadata">
 <a href="../blog/posts/life_style/back_to_rss.html" class="no-external">
 <div class="listing-date">
-Jun 10, 2025
+يونيو 10, 2025
 </div>
-<div class="listing-reading-time">6 min</div>
+<div class="listing-reading-time">6 دقيقة</div>
 </a>
 </div>
 </div>
@@ -1224,9 +1224,9 @@ Jun 10, 2025
 <div class="metadata">
 <a href="../blog/posts/nlp/embedding_world/late_interaction.html" class="no-external">
 <div class="listing-date">
-May 15, 2025
+مايو 15, 2025
 </div>
-<div class="listing-reading-time">5 min</div>
+<div class="listing-reading-time">5 دقيقة</div>
 </a>
 </div>
 </div>
@@ -1260,9 +1260,9 @@ May 15, 2025
 <div class="metadata">
 <a href="../blog/posts/minishlab/blog_zaraah.html" class="no-external">
 <div class="listing-date">
-May 15, 2025
+مايو 15, 2025
 </div>
-<div class="listing-reading-time">6 min</div>
+<div class="listing-reading-time">6 دقيقة</div>
 </a>
 </div>
 </div>
@@ -1296,9 +1296,9 @@ May 15, 2025
 <div class="metadata">
 <a href="../blog/posts/life_style/gpuvec.html" class="no-external">
 <div class="listing-date">
-Apr 4, 2025
+أبريل 4, 2025
 </div>
-<div class="listing-reading-time">4 min</div>
+<div class="listing-reading-time">4 دقيقة</div>
 </a>
 </div>
 </div>
@@ -1334,9 +1334,9 @@ Apr 4, 2025
 <div class="metadata">
 <a href="../blog/posts/speech_recognition/my_dream_job_at_tarteel.html" class="no-external">
 <div class="listing-date">
-Mar 18, 2025
+مارس 18, 2025
 </div>
-<div class="listing-reading-time">5 min</div>
+<div class="listing-reading-time">5 دقيقة</div>
 </a>
 </div>
 </div>
@@ -1370,9 +1370,9 @@ Mar 18, 2025
 <div class="metadata">
 <a href="../blog/posts/life_style/digital_minimalisim_arabic.html" class="no-external">
 <div class="listing-date">
-Feb 5, 2025
+فبراير 5, 2025
 </div>
-<div class="listing-reading-time">4 min</div>
+<div class="listing-reading-time">4 دقيقة</div>
 </a>
 </div>
 </div>
@@ -1410,9 +1410,9 @@ Feb 5, 2025
 <div class="metadata">
 <a href="../blog/posts/math/math_skills_for_AI.html" class="no-external">
 <div class="listing-date">
-Jan 27, 2025
+يناير 27, 2025
 </div>
-<div class="listing-reading-time">17 min</div>
+<div class="listing-reading-time">17 دقيقة</div>
 </a>
 </div>
 </div>
@@ -1446,9 +1446,9 @@ Jan 27, 2025
 <div class="metadata">
 <a href="../blog/posts/life_style/protienai.html" class="no-external">
 <div class="listing-date">
-Jan 8, 2025
+يناير 8, 2025
 </div>
-<div class="listing-reading-time">3 min</div>
+<div class="listing-reading-time">3 دقيقة</div>
 </a>
 </div>
 </div>
@@ -1482,9 +1482,9 @@ Jan 8, 2025
 <div class="metadata">
 <a href="../blog/posts/life_style/kamcalorie.html" class="no-external">
 <div class="listing-date">
-Jan 8, 2025
+يناير 8, 2025
 </div>
-<div class="listing-reading-time">2 min</div>
+<div class="listing-reading-time">2 دقيقة</div>
 </a>
 </div>
 </div>
@@ -1514,9 +1514,9 @@ Jan 8, 2025
 <div class="metadata">
 <a href="../blog/posts/fl/what_is_federated_learning.html" class="no-external">
 <div class="listing-date">
-Nov 12, 2024
+نوفمبر 12, 2024
 </div>
-<div class="listing-reading-time">5 min</div>
+<div class="listing-reading-time">5 دقيقة</div>
 </a>
 </div>
 </div>
@@ -1550,9 +1550,9 @@ Nov 12, 2024
 <div class="metadata">
 <a href="../blog/posts/seo/google_ads_black_box.html" class="no-external">
 <div class="listing-date">
-Oct 5, 2024
+أكتوبر 5, 2024
 </div>
-<div class="listing-reading-time">3 min</div>
+<div class="listing-reading-time">3 دقيقة</div>
 </a>
 </div>
 </div>
@@ -1586,9 +1586,9 @@ Oct 5, 2024
 <div class="metadata">
 <a href="../blog/posts/products_reviews/Huawei_watch_gt_4_experience.html" class="no-external">
 <div class="listing-date">
-Oct 4, 2024
+أكتوبر 4, 2024
 </div>
-<div class="listing-reading-time">9 min</div>
+<div class="listing-reading-time">9 دقيقة</div>
 </a>
 </div>
 </div>
@@ -1609,9 +1609,9 @@ Oct 4, 2024
 <div class="metadata">
 <a href="../blog/posts/ds_and_algo/master_ds.html" class="no-external">
 <div class="listing-date">
-Oct 4, 2024
+أكتوبر 4, 2024
 </div>
-<div class="listing-reading-time">3 min</div>
+<div class="listing-reading-time">3 دقيقة</div>
 </a>
 </div>
 </div>
@@ -1639,9 +1639,9 @@ Oct 4, 2024
 <div class="metadata">
 <a href="../blog/posts/seo/the_curse_of_seo.html" class="no-external">
 <div class="listing-date">
-Jul 31, 2024
+يوليو 31, 2024
 </div>
-<div class="listing-reading-time">5 min</div>
+<div class="listing-reading-time">5 دقيقة</div>
 </a>
 </div>
 </div>
@@ -1675,9 +1675,9 @@ Jul 31, 2024
 <div class="metadata">
 <a href="../blog/posts/life_style/fake_graviety.html" class="no-external">
 <div class="listing-date">
-Jul 10, 2024
+يوليو 10, 2024
 </div>
-<div class="listing-reading-time">12 min</div>
+<div class="listing-reading-time">12 دقيقة</div>
 </a>
 </div>
 </div>
@@ -1698,9 +1698,9 @@ Jul 10, 2024
 <div class="metadata">
 <a href="../blog/posts/mteb_encoding/my_little_dargon.html" class="no-external">
 <div class="listing-date">
-Jan 1, 2024
+يناير 1, 2024
 </div>
-<div class="listing-reading-time">7 min</div>
+<div class="listing-reading-time">7 دقيقة</div>
 </a>
 </div>
 </div>
@@ -1721,9 +1721,9 @@ Jan 1, 2024
 <div class="metadata">
 <a href="../blog/posts/products_reviews/Huawei_mate_pad_11.html" class="no-external">
 <div class="listing-date">
-Dec 7, 2023
+ديسمبر 7, 2023
 </div>
-<div class="listing-reading-time">5 min</div>
+<div class="listing-reading-time">5 دقيقة</div>
 </a>
 </div>
 </div>
@@ -1744,9 +1744,9 @@ Dec 7, 2023
 <div class="metadata">
 <a href="../blog/posts/products_reviews/Huawei freebuds 5i.html" class="no-external">
 <div class="listing-date">
-Dec 6, 2023
+ديسمبر 6, 2023
 </div>
-<div class="listing-reading-time">6 min</div>
+<div class="listing-reading-time">6 دقيقة</div>
 </a>
 </div>
 </div>
@@ -1767,9 +1767,9 @@ Dec 6, 2023
 <div class="metadata">
 <a href="../blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html" class="no-external">
 <div class="listing-date">
-Oct 28, 2023
+أكتوبر 28, 2023
 </div>
-<div class="listing-reading-time">12 min</div>
+<div class="listing-reading-time">12 دقيقة</div>
 </a>
 </div>
 </div>
@@ -1790,9 +1790,9 @@ Oct 28, 2023
 <div class="metadata">
 <a href="../blog/posts/mteb_encoding/tiny-gte_transformer_model.html" class="no-external">
 <div class="listing-date">
-Oct 21, 2023
+أكتوبر 21, 2023
 </div>
-<div class="listing-reading-time">3 min</div>
+<div class="listing-reading-time">3 دقيقة</div>
 </a>
 </div>
 </div>
@@ -1813,9 +1813,9 @@ Oct 21, 2023
 <div class="metadata">
 <a href="../blog/posts/courses/havrard CS197 AI research experiences.html" class="no-external">
 <div class="listing-date">
-Jul 18, 2023
+يوليو 18, 2023
 </div>
-<div class="listing-reading-time">3 min</div>
+<div class="listing-reading-time">3 دقيقة</div>
 </a>
 </div>
 </div>
@@ -1845,9 +1845,9 @@ Jul 18, 2023
 <div class="metadata">
 <a href="../blog/posts/life_style/why_I_am_blogging.html" class="no-external">
 <div class="listing-date">
-Jul 18, 2023
+يوليو 18, 2023
 </div>
-<div class="listing-reading-time">3 min</div>
+<div class="listing-reading-time">3 دقيقة</div>
 </a>
 </div>
 </div>
@@ -1879,14 +1879,14 @@ Jul 18, 2023
 <div class="metadata">
 <a href="../blog/posts/seo/how_i_use_nlp_for_seo.html" class="no-external">
 <div class="listing-date">
-Jul 18, 2023
+يوليو 18, 2023
 </div>
-<div class="listing-reading-time">8 min</div>
+<div class="listing-reading-time">8 دقيقة</div>
 </a>
 </div>
 </div>
 </div>
-<div class="listing-no-matching d-none">No matching items</div>
+<div class="listing-no-matching d-none">لا توجد نتائج مطابقة</div>
 <nav id="blog-posts-pagination" class="listing-pagination" aria-label="Page Navigation">
   <ul class="pagination"></ul>
 </nav>
@@ -1929,7 +1929,7 @@ document.addEventListener("DOMContentLoaded", () => {
     button.type = "button";
     button.className = "heading-fold";
     button.setAttribute("aria-expanded", "true");
-    button.setAttribute("aria-label", "Toggle section");
+    button.setAttribute("aria-label", "تبديل إظهار القسم");
 
     const icon = document.createElement("span");
     icon.className = "heading-fold-icon";
@@ -1957,7 +1957,7 @@ document.addEventListener("DOMContentLoaded", () => {
   toggleAll.type = "button";
   toggleAll.className = "fold-controls-toggle";
   toggleAll.setAttribute("aria-pressed", "false");
-  toggleAll.textContent = "Collapse all";
+  toggleAll.textContent = "طي الكل";
 
   controls.appendChild(toggleAll);
 
@@ -1986,7 +1986,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const allCollapsed = foldables.every((item) =>
       item.heading.classList.contains("is-collapsed")
     );
-    toggleAll.textContent = allCollapsed ? "Expand all" : "Collapse all";
+    toggleAll.textContent = allCollapsed ? "توسيع الكل" : "طي الكل";
     toggleAll.setAttribute("aria-pressed", String(allCollapsed));
   }
 
@@ -2182,7 +2182,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var button = document.createElement("button");
     button.type = "button";
     button.className = "callout-fold";
-    button.setAttribute("aria-label", "Toggle callout");
+    button.setAttribute("aria-label", "تبديل إظهار التنبيه");
 
     var icon = document.createElement("span");
     icon.className = "callout-fold-icon";
@@ -2643,31 +2643,31 @@ document.addEventListener("DOMContentLoaded", () => {
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/abdelkareemkobo">
-      <i class="bi bi-github" role="img" aria-label="GitHub Profile">
+      <i class="bi bi-github" role="img" aria-label="ملف جيت هاب">
 </i> 
     </a>
   </li>  
     <li class="nav-item compact">
     <a class="nav-link" href="https://soundcloud.com/abdelkareem-elkhateb">
-      <i class="bi bi-cloud" role="img" aria-label="SoundCloud">
+      <i class="bi bi-cloud" role="img" aria-label="ساوند كلاود">
 </i> 
     </a>
   </li>  
     <li class="nav-item compact">
     <a class="nav-link" href="mailto:kareem01095134688@gmail.com">
-      <i class="bi bi-google" role="img" aria-label="Email Contact">
+      <i class="bi bi-google" role="img" aria-label="البريد الإلكتروني">
 </i> 
     </a>
   </li>  
     <li class="nav-item compact">
     <a class="nav-link" href="https://www.upwork.com/freelancers/~016a9fea792423bb9a">
-      <i class="bi bi-bank" role="img" aria-label="Upwork Profile">
+      <i class="bi bi-bank" role="img" aria-label="ملف أب وورك">
 </i> 
     </a>
   </li>  
     <li class="nav-item compact">
     <a class="nav-link" href="../blog/feed.xml">
-      <i class="bi bi-rss" role="img" aria-label="RSS Feed">
+      <i class="bi bi-rss" role="img" aria-label="خلاصة RSS">
 </i> 
     </a>
   </li>  
