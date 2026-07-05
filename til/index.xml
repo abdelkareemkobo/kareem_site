@@ -15,7 +15,69 @@
 <link>https://kareemai.com/til/</link>
 </image>
 <generator>quarto-1.9.37</generator>
-<lastBuildDate>Fri, 03 Jul 2026 21:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 04 Jul 2026 21:00:00 GMT</lastBuildDate>
+<item>
+  <title>ماهي LikveKit مقدمة سريعة</title>
+  <dc:creator>kareem </dc:creator>
+  <link>https://kareemai.com/til/tils/LiveKitINtro.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="اي-هي-livekit" class="level2">
+<h2 class="anchored" data-anchor-id="اي-هي-livekit">اي هي LiveKit?</h2>
+<ul>
+<li>مشروع مفتوح المصدر بتستخدمه Openai علشان تبني voice system بتاعها!</li>
+<li>ده يدل علي مدي أهمية المشروع والموثوقية الي بيحملها.</li>
+</ul>
+<p><img src="https://kareemai.com/til/tils/Pasted image 20260705230522.png" class="img-fluid"></p>
+<ul>
+<li>تقدر تبني Vocie AI و تدمج المشروع مع خدمات الموبايل</li>
+<li>بيجي معاها full-stack observability متكامل علشان تدير النموذج الخاص بيك بشكل سلسل.</li>
+</ul>
+</section>
+<section id="livekit-بتشتغل-ازاي" class="level2">
+<h2 class="anchored" data-anchor-id="livekit-بتشتغل-ازاي">LivekIt بتشتغل ازاي؟</h2>
+<p>بتتكون من أكثر من جزء لكن بإختصار:</p>
+<ol type="1">
+<li>المتحدث بيكلم النموذج من خلال تطبيق موبايل أو المتصفح أو من مكالمة موبايل عاديه.</li>
+<li>الكلام بيتم إيصاله بشكل فوري جزء بجزء للنموذج Streaming</li>
+<li>النموذج بيقبل الكلام ويبدا يرد بناء علي البيزنس بتاعك والطريقة الي انت برمجته يرد بيها</li>
+</ol>
+<section id="livekit-بتفصيل-أكثر" class="level3">
+<h3 class="anchored" data-anchor-id="livekit-بتفصيل-أكثر">LiveKit بتفصيل أكثر</h3>
+<ul>
+<li><strong>بتستخدم بروتوكول WebRTC</strong></li>
+<li>البروتوكول ده مخصص إنه :
+<ol type="1">
+<li><p>ينقل الصوت والفيديو بشكل فوري بيختلف تمام عن http</p></li>
+<li><p>بيقدر يتعامل مع الشبكات الردئية والإنقطاعات والتذبذب في الشبكات</p></li>
+<li><p>بيشتغل علي اي متصفح</p>
+<p>المشروع بيقدر انه يستخدمه علشان تبني فوق البر.وتوكول المميزات الي اتكملنا عنها فوق.</p></li>
+</ol></li>
+</ul>
+</section>
+<section id="مقالات-قد-تكون-مفيده" class="level3">
+<h3 class="anchored" data-anchor-id="مقالات-قد-تكون-مفيده">مقالات قد تكون مفيده</h3>
+<ul>
+<li><a href="https://kareemai.com/blog/posts/nlp/TTS%20Architecture%20V1.html">أخر تطورات TTS</a></li>
+<li><a href="https://kareemai.com/blog/posts/ml_life/hacker_rank_ai_intereviw.html">Hacker Rank Interview 2026 for AI</a></li>
+</ul>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>blogging</category>
+  <category>til</category>
+  <category>blog/opinion/tech</category>
+  <guid>https://kareemai.com/til/tils/LiveKitINtro.html</guid>
+  <pubDate>Sat, 04 Jul 2026 21:00:00 GMT</pubDate>
+  <media:content url="https://kareemai.com/til/tils/til.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>فوائد و أضرار عمل قناة يوتيوب لمشاركة المعرفة</title>
   <dc:creator>kareem </dc:creator>

@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="ملاحظات سريعة في الذكاء الاصطناعي، معالجة اللغة العربية، وهندسة التعلم الآلي">
+<meta name="author" content="kareem">
+<meta name="description" content="هي مشروع مفتوح المصدر لبناء وكلاء ذكاء إصطناعي تتعامل مع الصوت و الصورة بشكل لحظي وتشمل كل ما يحتاجه المبرمج">
 
-<title>ملاحظات | عبدالكريم الخطيب - NLP العربية والذكاء الاصطناعي – عبدالكريم الخطيب</title>
+<title>ماهي LikveKit مقدمة سريعة – عبدالكريم الخطيب</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -27,30 +28,28 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js" defer></script>
-<script src="../site_libs/clipboard/clipboard.min.js" defer></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js" defer></script>
-<script src="../site_libs/quarto-search/fuse.min.js" defer></script>
-<script src="../site_libs/quarto-search/quarto-search.js" defer></script>
-<meta name="quarto:offset" content="../">
-<link href="../favicon.ico" rel="icon">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module" defer></script>
-<script src="../site_libs/quarto-html/popper.min.js" defer></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js" defer></script>
-<script src="../site_libs/quarto-html/anchor.min.js" defer></script>
-<link rel="preload" as="style" href="../site_libs/bootstrap/bootstrap-4147375aad28e86e0c0b867c5ec42731.min.css">
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<script src="../../site_libs/quarto-nav/quarto-nav.js" defer></script>
+<script src="../../site_libs/clipboard/clipboard.min.js" defer></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js" defer></script>
+<script src="../../site_libs/quarto-search/fuse.min.js" defer></script>
+<script src="../../site_libs/quarto-search/quarto-search.js" defer></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module" defer></script>
+<script src="../../site_libs/quarto-html/popper.min.js" defer></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js" defer></script>
+<script src="../../site_libs/quarto-html/anchor.min.js" defer></script>
+<link rel="preload" as="style" href="../../site_libs/bootstrap/bootstrap-4147375aad28e86e0c0b867c5ec42731.min.css">
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles" media="print" onload="this.media='all'">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles" media="print" onload="this.media='all'">
-<script src="../site_libs/bootstrap/bootstrap.min.js" defer></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-4147375aad28e86e0c0b867c5ec42731.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-0c33f1f559f04da1bcee1516f29a3f94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark" media="print" onload="this.media='all'">
-<link href="../site_libs/bootstrap/bootstrap-4147375aad28e86e0c0b867c5ec42731.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light" media="print" onload="this.media='all'">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles" media="print" onload="this.media='all'">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles" media="print" onload="this.media='all'">
+<script src="../../site_libs/bootstrap/bootstrap.min.js" defer></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-4147375aad28e86e0c0b867c5ec42731.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-0c33f1f559f04da1bcee1516f29a3f94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark" media="print" onload="this.media='all'">
+<link href="../../site_libs/bootstrap/bootstrap-4147375aad28e86e0c0b867c5ec42731.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light" media="print" onload="this.media='all'">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -78,35 +77,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "بحث"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-til-posts .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-til-posts'] = new List('listing-til-posts', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XFPC3M9TMG"></script>
 
 <script type="text/javascript">
@@ -125,17 +95,17 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 <link rel="preconnect" href="https://giscus.app">
 <link rel="dns-prefetch" href="https://giscus.app">
 <meta name="robots" content="index, follow">
-<link rel="alternate" type="application/rss+xml" title="عبدالكريم الخطيب" href="index.xml" data-external="1"><meta property="og:title" content="ملاحظات يومية | عبدالكريم الخطيب">
-<meta property="og:description" content="ملاحظات سريعة في الذكاء الاصطناعي، معالجة اللغة العربية، وهندسة التعلم الآلي">
-<meta property="og:image" content="https://kareemai.com/quarto.webp">
+<meta property="og:title" content="ماهي LikveKit مقدمة سريعة – عبدالكريم الخطيب">
+<meta property="og:description" content="هي مشروع مفتوح المصدر لبناء وكلاء ذكاء إصطناعي تتعامل مع الصوت و الصورة بشكل لحظي وتشمل كل ما يحتاجه المبرمج">
+<meta property="og:image" content="https://kareemai.com/til/tils/til.jpg">
 <meta property="og:site_name" content="عبدالكريم الخطيب">
 <meta property="og:locale" content="ar_SA">
-<meta name="twitter:title" content="ملاحظات | عبدالكريم الخطيب - NLP العربية والذكاء الاصطناعي">
-<meta name="twitter:description" content="ملاحظات سريعة في الذكاء الاصطناعي، معالجة اللغة العربية، وهندسة التعلم الآلي">
-<meta name="twitter:image" content="https://kareemai.com/kareem.webp">
+<meta name="twitter:title" content="ماهي LikveKit مقدمة سريعة – عبدالكريم الخطيب">
+<meta name="twitter:description" content="هي مشروع مفتوح المصدر لبناء وكلاء ذكاء إصطناعي تتعامل مع الصوت و الصورة بشكل لحظي وتشمل كل ما يحتاجه المبرمج">
+<meta name="twitter:image" content="https://kareemai.com/til/tils/til.jpg">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://kareemai.com/til/">
+<link rel="canonical" href="https://kareemai.com/til/tils/LiveKitINtro.html">
 </head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
@@ -310,39 +280,30 @@ window.addEventListener('scroll', () => {
 });
 </script>
 
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ماهي LikveKit مقدمة سريعة",
+  "description": "هي مشروع مفتوح المصدر لبناء وكلاء ذكاء إصطناعي تتعامل مع الصوت و الصورة بشكل لحظي وتشمل كل ما يحتاجه المبرمج",
+  "author": {"@type": "Person", "name": "kareem"},
+  "datePublished": "5 يوليو 2026",
+  "image": "til.jpg",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://kareemai.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Kareem Elkhateb",
+    "url": "https://kareemai.com"
   }
 }
-window.Quarto = {
-  typesetMath
-};
 </script>
 
-<link rel="stylesheet" href="../shimmering-fonts.css">
-<link rel="stylesheet" href="../styles.css">
+
+<link rel="stylesheet" href="../../shimmering-fonts.css">
+<link rel="stylesheet" href="../../styles.css">
 
 
 
@@ -358,27 +319,27 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> <i class="bi bi-house" role="img">
+    <a class="nav-link" href="../../index.html"> <i class="bi bi-house" role="img">
 </i> 
 <span class="menu-text">الرئيسية</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../blog/feed.html"> <i class="bi bi-journal-text" role="img">
+    <a class="nav-link" href="../../blog/feed.html"> <i class="bi bi-journal-text" role="img">
 </i> 
 <span class="menu-text">المدونة</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../til/index.html" aria-current="page"> <i class="bi bi-lightbulb" role="img">
+    <a class="nav-link" href="../../til/index.html"> <i class="bi bi-lightbulb" role="img">
 </i> 
 <span class="menu-text">ملاحظات</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../papers.html"> <i class="bi bi-file-text" role="img">
+    <a class="nav-link" href="../../papers.html"> <i class="bi bi-file-text" role="img">
 </i> 
 <span class="menu-text">أبحاث</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../publish.html"> <i class="bi bi-book" role="img">
+    <a class="nav-link" href="../../publish.html"> <i class="bi bi-book" role="img">
 </i> 
 <span class="menu-text">كتب</span></a>
   </li>  
@@ -405,12 +366,12 @@ window.Quarto = {
 <span class="menu-text">GPUVec</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../blog/feed.xml"> <i class="bi bi-rss" role="img" aria-label="خلاصة المدونة">
+    <a class="nav-link" href="../../blog/feed.xml"> <i class="bi bi-rss" role="img" aria-label="خلاصة المدونة">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../til/index.xml"> <i class="bi bi-rss" role="img" aria-label="خلاصة الملاحظات">
+    <a class="nav-link" href="../../til/index.xml"> <i class="bi bi-rss" role="img" aria-label="خلاصة الملاحظات">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -426,8 +387,19 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">المحتويات</h2>
+   
+  <ul>
+  <li><a href="#اي-هي-livekit" id="toc-اي-هي-livekit" class="nav-link active" data-scroll-target="#اي-هي-livekit">اي هي LiveKit?</a></li>
+  <li><a href="#livekit-بتشتغل-ازاي" id="toc-livekit-بتشتغل-ازاي" class="nav-link" data-scroll-target="#livekit-بتشتغل-ازاي">LivekIt بتشتغل ازاي؟</a>
+  <ul class="collapse">
+  <li><a href="#livekit-بتفصيل-أكثر" id="toc-livekit-بتفصيل-أكثر" class="nav-link" data-scroll-target="#livekit-بتفصيل-أكثر">LiveKit بتفصيل أكثر</a></li>
+  <li><a href="#مقالات-قد-تكون-مفيده" id="toc-مقالات-قد-تكون-مفيده" class="nav-link" data-scroll-target="#مقالات-قد-تكون-مفيده">مقالات قد تكون مفيده</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -435,19 +407,36 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">ملاحظات يومية في الذكاء الاصطناعي</h1>
-</div>
+<h1 class="title">ماهي LikveKit مقدمة سريعة</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">blogging</div>
+    <div class="quarto-category">til</div>
+    <div class="quarto-category">blog/opinion/tech</div>
+  </div>
+  </div>
 
 <div>
   <div class="description">
-    ملاحظات سريعة في الذكاء الاصطناعي، معالجة اللغة العربية، وهندسة التعلم الآلي
+    هي مشروع مفتوح المصدر لبناء وكلاء ذكاء إصطناعي تتعامل مع الصوت و الصورة بشكل لحظي وتشمل كل ما يحتاجه المبرمج
   </div>
 </div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>kareem </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">5 يوليو 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -457,393 +446,51 @@ window.Quarto = {
 </header>
 
 
-<p>ملاحظات سريعة غير منمّقة عن الذكاء الاصطناعي، معالجة اللغة العربية، وهندسة التعلم الآلي</p>
-<p>نشر ما تعلمته اليوم هو مشاركة مقال مصغر عن ما تعلمته وجربته في اليوم لتثبيت المعلومات ولعلها تكون اكثر نفع للأخرين.</p>
-<p>تتميز هذه المقالات بالقصر في الطول والمعلومات وهي تساعدني أكثر علي تذكر ما اتعلمه علي مدار الأيام كي لا تكون أيام متشابهه!</p>
+<section id="اي-هي-livekit" class="level2">
+<h2 class="anchored" data-anchor-id="اي-هي-livekit">اي هي LiveKit?</h2>
+<ul>
+<li>مشروع مفتوح المصدر بتستخدمه Openai علشان تبني voice system بتاعها!</li>
+<li>ده يدل علي مدي أهمية المشروع والموثوقية الي بيحملها.</li>
+</ul>
+<p><img src="Pasted image 20260705230522.png" class="img-fluid"></p>
+<ul>
+<li>تقدر تبني Vocie AI و تدمج المشروع مع خدمات الموبايل</li>
+<li>بيجي معاها full-stack observability متكامل علشان تدير النموذج الخاص بيك بشكل سلسل.</li>
+</ul>
+</section>
+<section id="livekit-بتشتغل-ازاي" class="level2">
+<h2 class="anchored" data-anchor-id="livekit-بتشتغل-ازاي">LivekIt بتشتغل ازاي؟</h2>
+<p>بتتكون من أكثر من جزء لكن بإختصار:</p>
+<ol type="1">
+<li>المتحدث بيكلم النموذج من خلال تطبيق موبايل أو المتصفح أو من مكالمة موبايل عاديه.</li>
+<li>الكلام بيتم إيصاله بشكل فوري جزء بجزء للنموذج Streaming</li>
+<li>النموذج بيقبل الكلام ويبدا يرد بناء علي البيزنس بتاعك والطريقة الي انت برمجته يرد بيها</li>
+</ol>
+<section id="livekit-بتفصيل-أكثر" class="level3">
+<h3 class="anchored" data-anchor-id="livekit-بتفصيل-أكثر">LiveKit بتفصيل أكثر</h3>
+<ul>
+<li><strong>بتستخدم بروتوكول WebRTC</strong></li>
+<li>البروتوكول ده مخصص إنه :
+<ol type="1">
+<li><p>ينقل الصوت والفيديو بشكل فوري بيختلف تمام عن http</p></li>
+<li><p>بيقدر يتعامل مع الشبكات الردئية والإنقطاعات والتذبذب في الشبكات</p></li>
+<li><p>بيشتغل علي اي متصفح</p>
+<p>المشروع بيقدر انه يستخدمه علشان تبني فوق البر.وتوكول المميزات الي اتكملنا عنها فوق.</p></li>
+</ol></li>
+</ul>
+</section>
+<section id="مقالات-قد-تكون-مفيده" class="level3">
+<h3 class="anchored" data-anchor-id="مقالات-قد-تكون-مفيده">مقالات قد تكون مفيده</h3>
+<ul>
+<li><a href="https://kareemai.com/blog/posts/nlp/TTS%20Architecture%20V1.html">أخر تطورات TTS</a></li>
+<li><a href="https://kareemai.com/blog/posts/ml_life/hacker_rank_ai_intereviw.html">Hacker Rank Interview 2026 for AI</a></li>
+</ul>
 
 
+</section>
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-til-posts">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="YmxvZ2dpbmclMkN0aWwlMkNibG9nJTJGb3BpbmlvbiUyRnRlY2g=" data-listing-date-sort="1783198800000" data-listing-file-modified-sort="1783282194218" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="159">
-<div class="thumbnail"><a href="../til/tils/LiveKitINtro.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/til.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/LiveKitINtro.html" class="no-external">ماهي LikveKit مقدمة سريعة</a>
-</h3>
-<div class="delink listing-description"><a href="../til/tils/LiveKitINtro.html" class="no-external">
-<p>هي مشروع مفتوح المصدر لبناء وكلاء ذكاء إصطناعي…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/LiveKitINtro.html" class="no-external">
-<div class="listing-date">
-05‏/07‏/2026
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="YmxvZ2dpbmclMkN0aWwlMkNibG9nJTJGb3BpbmlvbiUyRmxpZmU=" data-listing-date-sort="1783112400000" data-listing-file-modified-sort="1783183212544" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="459">
-<div class="thumbnail"><a href="../til/tils/start_youtube_channel_as_AI_developer.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/til.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/start_youtube_channel_as_AI_developer.html" class="no-external">فوائد و أضرار عمل قناة يوتيوب لمشاركة المعرفة</a>
-</h3>
-<div class="delink listing-description"><a href="../til/tils/start_youtube_channel_as_AI_developer.html" class="no-external">
-<p>بشارك خواطر تجربة إنشاء قناة لمشاركة المعارف في…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/start_youtube_channel_as_AI_developer.html" class="no-external">
-<div class="listing-date">
-04‏/07‏/2026
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="YmxvZ2dpbmclMkN0aWwlMkNibG9nJTJGb3BpbmlvbiUyRnRlY2g=" data-listing-date-sort="1765746000000" data-listing-file-modified-sort="1780658480073" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="402">
-<div class="thumbnail"><a href="../til/tils/2025-12-15.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/til.webp" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-12-15.html" class="no-external">AI Research Challenges: The GPU Barrier for Researchers</a>
-</h3>
-<div class="delink listing-description"><a href="../til/tils/2025-12-15.html" class="no-external">
-<p>Exploring the challenges of AI research without…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-12-15.html" class="no-external">
-<div class="listing-date">
-15‏/12‏/2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="YmxvZ2dpbmclMkN0aWwlMkNibG9nJTJGc3RhdHVzJTJGY29tcGxldGUlMkNibG9nJTJGc3RhdHVzJTJGcHVibGlzaGVkJTJDcnVzdA==" data-listing-date-sort="1765659600000" data-listing-file-modified-sort="1780045723998" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="554">
-<div class="thumbnail"><a href="../til/tils/2025-12-14.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/til.webp" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-12-14.html" class="no-external">Rust for ML: Building AI Tools and Data Pipelines in 2026</a>
-</h3>
-<div class="delink listing-description"><a href="../til/tils/2025-12-14.html" class="no-external">
-<p>Learning Rust for ML engineering—building AI…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-12-14.html" class="no-external">
-<div class="listing-date">
-14‏/12‏/2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="YmxvZ2dpbmclMkN0aWwlMkNibG9nJTJGc3RhdHVzJTJGcHVibGlzaGVkJTJDYmxvZyUyRnN0YXR1cyUyRmNvbXBsZXRlJTJDYmxvZyUyRmxlYXJuJTJGam91cm5leQ==" data-listing-date-sort="1765573200000" data-listing-file-modified-sort="1780658471631" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="587">
-<div class="thumbnail"><a href="../til/tils/2025-12-13.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/til.webp" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-12-13.html" class="no-external">Arabic NLP Fundamentals: Sparse Embeddings, BM25 &amp; Dynamic Programming</a>
-</h3>
-<div class="delink listing-description"><a href="../til/tils/2025-12-13.html" class="no-external">
-<p>Rebuilding NLP fundamentals for Arabic: TF-IDF…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-12-13.html" class="no-external">
-<div class="listing-date">
-13‏/12‏/2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="YmxvZ2dpbmclMkN0aWwlMkNubHAlMkNhaSUyQ2Jsb2clMkZsZWFybiUyRmNvbmNlcHQlMkNibG9nJTJGYmVuY2htYXJrJTJDYmxvZyUyRnN0YXR1cyUyRmNvbXBsZXRl" data-listing-date-sort="1760994000000" data-listing-file-modified-sort="1780045723374" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1236">
-<div class="thumbnail"><a href="../til/tils/2025-10-21.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/til.webp" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-10-21.html" class="no-external">AraModernBert vs AraBERT v2: Arabic Tokenizer Comparison</a>
-</h3>
-<div class="delink listing-description"><a href="../til/tils/2025-10-21.html" class="no-external">
-<p>AraModernBert vs AraBERT v2 tokenizers for…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-10-21.html" class="no-external">
-<div class="listing-date">
-21‏/10‏/2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="YmxvZ2dpbmclMkN0aWw=" data-listing-date-sort="1749157200000" data-listing-file-modified-sort="1780658471631" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="779">
-<div class="thumbnail"><a href="../til/tils/2025-06-06-til.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/til.webp" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-06-06-til.html" class="no-external">AI Engineering Careers: Connecting with Minds in Machine Learning</a>
-</h3>
-<div class="delink listing-description"><a href="../til/tils/2025-06-06-til.html" class="no-external">
-<p>Reflections on landing an AI engineering role…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-06-06-til.html" class="no-external">
-<div class="listing-date">
-06‏/06‏/2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="YmxvZ2dpbmclMkN0aWw=" data-listing-date-sort="1748379600000" data-listing-file-modified-sort="1780045724733" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="808">
-<div class="thumbnail"><a href="../til/tils/2025-05-28-til.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/til.webp" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-05-28-til.html" class="no-external">PyLate Tutorial: Vector Indexing and Retrieval with ColBERT</a>
-</h3>
-<div class="delink listing-description"><a href="../til/tils/2025-05-28-til.html" class="no-external">
-<p>PyLate tutorial for ColBERT vector retrieval.…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-05-28-til.html" class="no-external">
-<div class="listing-date">
-28‏/05‏/2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-categories="YmxvZ2dpbmclMkN0aWwlMkNtYWNoaW5lLWxlYXJuaW5nJTJDcHl0aG9uJTJDcmFn" data-listing-date-sort="1748120400000" data-listing-file-modified-sort="1780658465291" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1038">
-<div class="thumbnail"><a href="../til/tils/2025-05-25-til.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/images/raptor.webp" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-05-25-til.html" class="no-external">Meta’s RAPTOR RAG, DFloat11 Compression &amp; Pyrefly Guide</a>
-</h3>
-<div class="delink listing-description"><a href="../til/tils/2025-05-25-til.html" class="no-external">
-<p>A complete guide to Meta’s RAPTOR RAG technique…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-05-25-til.html" class="no-external">
-<div class="listing-date">
-25‏/05‏/2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="9" data-categories="YmxvZ2dpbmclMkN0aWwlMkN3ZWIlMkNhaSUyQ2xsbSUyQ2xvY2FsX2xsbSUyQ29sbGFtYQ==" data-listing-date-sort="1747947600000" data-listing-file-modified-sort="1779508690897" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="629">
-<div class="thumbnail"><a href="../til/tils/2025-05-23-til.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/images/brave_leo.webp" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-05-23-til.html" class="no-external">Does Brave Leo Run Locally? Privacy-First AI with Ollama and BYOM</a>
-</h3>
-<div class="delink listing-description"><a href="../til/tils/2025-05-23-til.html" class="no-external">
-<p>Yes, Brave Leo runs locally with anonymous…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-05-23-til.html" class="no-external">
-<div class="listing-date">
-23‏/05‏/2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="10" data-categories="YmxvZ2dpbmclMkN0aWwlMkMlRDglQUElRDglQjIlRDklODMlRDklOEElRDklODc=" data-listing-date-sort="1747774800000" data-listing-file-modified-sort="1780657938681" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1183">
-<div class="thumbnail"><a href="../til/tils/2025-05-21-til.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/images/isreal.webp" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-05-21-til.html" class="no-external">البوصلة الحقيقية: تأملات في تزكية النفس وإخلاص النية في طلب العلم</a>
-</h3>
-<div class="delink listing-description"><a href="../til/tils/2025-05-21-til.html" class="no-external">
-<p>تأملات حول التوجه إلى الله وتزكية النفس،…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-05-21-til.html" class="no-external">
-<div class="listing-date">
-21‏/05‏/2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="11" data-categories="YmxvZ2dpbmclMkN0aWwlMkNzZW8lMkNkb21haW5zJTJDdmVyY2VsJTJDcG9ya2J1biUyQ3dlYg==" data-listing-date-sort="1747688400000" data-listing-file-modified-sort="1778748975529" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="910">
-<div class="thumbnail"><a href="../til/tils/2025-05-20-til.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/til.webp" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-05-20-til.html" class="no-external">How to Connect Porkbun Domains to Vercel and Cloudflare (Step-by-Step)</a>
-</h3>
-<div class="delink listing-description"><a href="../til/tils/2025-05-20-til.html" class="no-external">
-<p>Connect Porkbun domains to Vercel via DNS…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-05-20-til.html" class="no-external">
-<div class="listing-date">
-20‏/05‏/2025
-</div>
-<div class="listing-author">
-Kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="12" data-categories="YmxvZ2dpbmclMkN0aWwlMkNzZW8lMkNzdWJzdGFjaw==" data-listing-date-sort="1747602000000" data-listing-file-modified-sort="1779509577108" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1033">
-<div class="thumbnail"><a href="../til/tils/2025-05-19-til.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/images/old_ahead_of_ai.webp" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-05-19-til.html" class="no-external">AI Research Blogging: Why Substack Matters for Researchers</a>
-</h3>
-<div class="delink listing-description"><a href="../til/tils/2025-05-19-til.html" class="no-external">
-<p>Insights on starting a Substack for AI…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-05-19-til.html" class="no-external">
-<div class="listing-date">
-19‏/05‏/2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="13" data-categories="YmxvZ2dpbmclMkN0aWwlMkNxZHJhbnQ=" data-listing-date-sort="1747515600000" data-listing-file-modified-sort="1779407465130" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="698">
-<div class="thumbnail"><a href="../til/tils/2025-05-18-til.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/til.webp" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-05-18-til.html" class="no-external">Explore the Qdrant Blog core concepts | Part 1</a>
-</h3>
-<div class="delink listing-description"><a href="../til/tils/2025-05-18-til.html" class="no-external">
-<p>This a 2 hours daily exploring and summarizing…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-05-18-til.html" class="no-external">
-<div class="listing-date">
-18‏/05‏/2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="14" data-categories="YmxvZ2dpbmclMkN0aWw=" data-listing-date-sort="1747429200000" data-listing-file-modified-sort="1780657930187" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="610">
-<div class="thumbnail"><a href="../til/tils/2025-05-17-til.html" class="no-external">
-
-<img loading="lazy" src="../til/tils/til.webp" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/tils/2025-05-17-til.html" class="no-external">Learning in Public: Why I Started My TIL Journey</a>
-</h3>
-<div class="delink listing-description"><a href="../til/tils/2025-05-17-til.html" class="no-external">
-<p>Starting a Today I Learned (TIL) series to…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../til/tils/2025-05-17-til.html" class="no-external">
-<div class="listing-date">
-17‏/05‏/2025
-</div>
-<div class="listing-author">
-kareem
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">لا توجد نتائج مطابقة</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const root =
@@ -1647,6 +1294,38 @@ function copyLink() {
     }
   });
   </script>
+<input type="hidden" id="giscus-base-theme" value="preferred_color_scheme">
+<input type="hidden" id="giscus-alt-theme" value="preferred_color_scheme">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      if (authorPrefersDark) {
+          [baseTheme, altTheme] = [altTheme, baseTheme];
+      }
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "abdelkareemkobo/kareem_site";
+    script.dataset.repoId = "R_kgDOQxY8kw";
+    script.dataset.category = "Comments";
+    script.dataset.categoryId = "DIC_kwDOQxY8k84C0aRf";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "ar";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1680,7 +1359,7 @@ function copyLink() {
     </a>
   </li>  
     <li class="nav-item compact">
-    <a class="nav-link" href="../blog/feed.xml">
+    <a class="nav-link" href="../../blog/feed.xml">
       <i class="bi bi-rss" role="img" aria-label="خلاصة RSS">
 </i> 
     </a>

@@ -1,21 +1,14 @@
 [
   {
-    "listing": "/til/index.html",
+    "listing": "/blog/posts/nlp/embedding_world/index.html",
     "items": [
-      "/til/tils/start_youtube_channel_as_AI_developer.html",
-      "/til/tils/2025-12-15.html",
-      "/til/tils/2025-12-14.html",
-      "/til/tils/2025-12-13.html",
-      "/til/tils/2025-10-21.html",
-      "/til/tils/2025-06-06-til.html",
-      "/til/tils/2025-05-28-til.html",
-      "/til/tils/2025-05-25-til.html",
-      "/til/tils/2025-05-23-til.html",
-      "/til/tils/2025-05-21-til.html",
-      "/til/tils/2025-05-20-til.html",
-      "/til/tils/2025-05-19-til.html",
-      "/til/tils/2025-05-18-til.html",
-      "/til/tils/2025-05-17-til.html"
+      "/blog/posts/nlp/embedding_world/vector_database_book.html",
+      "/blog/posts/nlp/embedding_world/hyperrun.html",
+      "/blog/posts/nlp/embedding_world/hyperun_fasthtml.html",
+      "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html",
+      "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html",
+      "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html",
+      "/blog/posts/nlp/embedding_world/late_interaction.html"
     ]
   },
   {
@@ -69,15 +62,23 @@
     ]
   },
   {
-    "listing": "/blog/posts/nlp/embedding_world/index.html",
+    "listing": "/til/index.html",
     "items": [
-      "/blog/posts/nlp/embedding_world/vector_database_book.html",
-      "/blog/posts/nlp/embedding_world/hyperrun.html",
-      "/blog/posts/nlp/embedding_world/hyperun_fasthtml.html",
-      "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html",
-      "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html",
-      "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html",
-      "/blog/posts/nlp/embedding_world/late_interaction.html"
+      "/til/tils/LiveKitINtro.html",
+      "/til/tils/start_youtube_channel_as_AI_developer.html",
+      "/til/tils/2025-12-15.html",
+      "/til/tils/2025-12-14.html",
+      "/til/tils/2025-12-13.html",
+      "/til/tils/2025-10-21.html",
+      "/til/tils/2025-06-06-til.html",
+      "/til/tils/2025-05-28-til.html",
+      "/til/tils/2025-05-25-til.html",
+      "/til/tils/2025-05-23-til.html",
+      "/til/tils/2025-05-21-til.html",
+      "/til/tils/2025-05-20-til.html",
+      "/til/tils/2025-05-19-til.html",
+      "/til/tils/2025-05-18-til.html",
+      "/til/tils/2025-05-17-til.html"
     ]
   }
 ]
