@@ -1,20 +1,9 @@
 [
   {
-    "listing": "/blog/posts/nlp/embedding_world/index.html",
-    "items": [
-      "/blog/posts/nlp/embedding_world/vector_database_book.html",
-      "/blog/posts/nlp/embedding_world/hyperrun.html",
-      "/blog/posts/nlp/embedding_world/hyperun_fasthtml.html",
-      "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html",
-      "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html",
-      "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html",
-      "/blog/posts/nlp/embedding_world/late_interaction.html"
-    ]
-  },
-  {
     "listing": "/blog/feed.html",
     "items": [
       "/blog/posts/nlp/embedding_world/index.html",
+      "/blog/posts/nlp/embedding_world/sakr_v1.html",
       "/blog/posts/nlp/Dinvo3 for Arabic Scripts.html",
       "/blog/posts/nlp/TTS Architecture V1.html",
       "/blog/posts/nlp/gemma_tool_calling.html",
@@ -59,6 +48,19 @@
       "/blog/posts/courses/havrard CS197 AI research experiences.html",
       "/blog/posts/life_style/why_I_am_blogging.html",
       "/blog/posts/seo/how_i_use_nlp_for_seo.html"
+    ]
+  },
+  {
+    "listing": "/blog/posts/nlp/embedding_world/index.html",
+    "items": [
+      "/blog/posts/nlp/embedding_world/sakr_v1.html",
+      "/blog/posts/nlp/embedding_world/vector_database_book.html",
+      "/blog/posts/nlp/embedding_world/hyperrun.html",
+      "/blog/posts/nlp/embedding_world/hyperun_fasthtml.html",
+      "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html",
+      "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html",
+      "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html",
+      "/blog/posts/nlp/embedding_world/late_interaction.html"
     ]
   },
   {

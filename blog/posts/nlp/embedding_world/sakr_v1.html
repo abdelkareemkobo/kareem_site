@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Deep dives into text embeddings, vector databases, sparse retrieval, and semantic search. A curated collection of articles on building production-ready search systems.">
+<meta name="author" content="kareem">
+<meta name="description" content="ماهو نموذج Sakr صقر المخصص لتوليد البيانات باللغة العربية ومدرب علي حوالي 66 مليون صفحة من fine-web dataset يعمل بسرعه فائقة ونتائج متوسطة. شرح تفصيلي.">
 
-<title>Embedding Models &amp; Vector Search | Kareem Elkhateb – عبدالكريم الخطيب</title>
+<title>نموذج صقر بحجم 50 مليون لتوليد البيانات بالعربي يعمل علي CPU – عبدالكريم الخطيب</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -34,8 +35,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../../site_libs/quarto-search/quarto-search.js" defer></script>
 <meta name="quarto:offset" content="../../../../">
 <link href="../../../../favicon.ico" rel="icon">
-<script src="../../../../site_libs/quarto-listing/list.min.js"></script>
-<script src="../../../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module" defer></script>
 <script src="../../../../site_libs/quarto-html/popper.min.js" defer></script>
@@ -78,35 +77,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "بحث"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-embedding-posts .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-description','listing-categories','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-embedding-posts'] = new List('listing-embedding-posts', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XFPC3M9TMG"></script>
 
 <script type="text/javascript">
@@ -126,17 +96,17 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 <link rel="preconnect" href="https://giscus.app">
 <link rel="dns-prefetch" href="https://giscus.app">
 <meta name="robots" content="index, follow">
-<link rel="alternate" type="application/rss+xml" title="عبدالكريم الخطيب" href="index.xml" data-external="1"><meta property="og:title" content="Embedding Models &amp; Vector Search">
-<meta property="og:description" content="Articles on embeddings, BM25, vector DBs, and semantic search">
-<meta property="og:image" content="https://kareemai.com/mind.svg">
+<meta property="og:title" content="نموذج صقر بحجم 50 مليون لتوليد البيانات بالعربي يعمل علي CPU – عبدالكريم الخطيب">
+<meta property="og:description" content="ماهو نموذج Sakr صقر المخصص لتوليد البيانات باللغة العربية ومدرب علي حوالي 66 مليون صفحة من fine-web dataset يعمل بسرعه فائقة ونتائج متوسطة. شرح تفصيلي.">
+<meta property="og:image" content="https://kareemai.com/blog/posts/nlp/embedding_world/images/sakr_2.jpg">
 <meta property="og:site_name" content="عبدالكريم الخطيب">
 <meta property="og:locale" content="ar_SA">
-<meta name="twitter:title" content="Embedding Models &amp; Vector Search | Kareem Elkhateb">
-<meta name="twitter:description" content="Deep dives into text embeddings, vector databases, sparse retrieval, and semantic search. A curated collection of articles on building production-ready search systems.">
-<meta name="twitter:image" content="https://kareemai.com/kareem.webp">
+<meta name="twitter:title" content="نموذج صقر بحجم 50 مليون لتوليد البيانات بالعربي يعمل علي CPU – عبدالكريم الخطيب">
+<meta name="twitter:description" content="ماهو نموذج Sakr صقر المخصص لتوليد البيانات باللغة العربية ومدرب علي حوالي 66 مليون صفحة من fine-web dataset يعمل بسرعه فائقة ونتائج متوسطة. شرح تفصيلي.">
+<meta name="twitter:image" content="https://kareemai.com/blog/posts/nlp/embedding_world/images/sakr_2.jpg">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://kareemai.com/blog/posts/nlp/embedding_world/">
+<link rel="canonical" href="https://kareemai.com/blog/posts/nlp/embedding_world/sakr_v1.html">
 </head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
@@ -311,36 +281,27 @@ window.addEventListener('scroll', () => {
 });
 </script>
 
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "نموذج صقر بحجم 50 مليون لتوليد البيانات بالعربي يعمل علي CPU",
+  "description": "ماهو نموذج Sakr صقر المخصص لتوليد البيانات باللغة العربية ومدرب علي حوالي 66 مليون صفحة من fine-web dataset يعمل بسرعه فائقة ونتائج متوسطة. شرح تفصيلي.",
+  "author": {"@type": "Person", "name": "kareem"},
+  "datePublished": "25 يوليو 2026",
+  "image": "images/sakr_2.jpg",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://kareemai.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Kareem Elkhateb",
+    "url": "https://kareemai.com"
   }
 }
-window.Quarto = {
-  typesetMath
-};
 </script>
+
 
 <link rel="stylesheet" href="../../../../shimmering-fonts.css">
 <link rel="stylesheet" href="../../../../styles.css">
@@ -428,26 +389,65 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">الكل <span class="quarto-category-count">(8)</span></div><div class="category" data-category="YXJhYmlj">arabic <span class="quarto-category-count">(2)</span></div><div class="category" data-category="YmxvZyUyRmJ1aWxkJTJGcHJvamVjdA==">blog/build/project <span class="quarto-category-count">(2)</span></div><div class="category" data-category="YmxvZyUyRnJldmlldyUyRmJvb2s=">blog/review/book <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YmxvZ2dpbmc=">blogging <span class="quarto-category-count">(8)</span></div><div class="category" data-category="ZW1iZWRkaW5n">embedding <span class="quarto-category-count">(4)</span></div><div class="category" data-category="bGxt">llm <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWluaXNobGFi">minishlab <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bW9kZWwydmVj">model2vec <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bmxw">nlp <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cWRyYW50">qdrant <span class="quarto-category-count">(3)</span></div><div class="category" data-category="U0xN">SLM <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3BhcnNl">sparse <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dGls">til <span class="quarto-category-count">(4)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">المحتويات</h2>
+   
+  <ul>
+  <li><a href="#ماهو-صقر-sakr-لمعالجة-اللغة-العربية" id="toc-ماهو-صقر-sakr-لمعالجة-اللغة-العربية" class="nav-link active" data-scroll-target="#ماهو-صقر-sakr-لمعالجة-اللغة-العربية">ماهو صقر Sakr لمعالجة اللغة العربية ؟</a></li>
+  <li><a href="#البيانات-التي-تم-تدريب-عليها" id="toc-البيانات-التي-تم-تدريب-عليها" class="nav-link" data-scroll-target="#البيانات-التي-تم-تدريب-عليها">البيانات التي تم تدريب عليها ؟</a>
+  <ul class="collapse">
+  <li><a href="#مرحلة-التدريب-الأوليه-pretraining" id="toc-مرحلة-التدريب-الأوليه-pretraining" class="nav-link" data-scroll-target="#مرحلة-التدريب-الأوليه-pretraining">مرحلة التدريب الأوليه pretraining</a></li>
+  <li><a href="#مرحلة-التدريب-تحت-الإشراف-sft-لصقر" id="toc-مرحلة-التدريب-تحت-الإشراف-sft-لصقر" class="nav-link" data-scroll-target="#مرحلة-التدريب-تحت-الإشراف-sft-لصقر">مرحلة التدريب تحت الإشراف SFT لصقر</a></li>
+  </ul></li>
+  <li><a href="#إختبارات-سريعة" id="toc-إختبارات-سريعة" class="nav-link" data-scroll-target="#إختبارات-سريعة">إختبارات سريعة ؟</a>
+  <ul class="collapse">
+  <li><a href="#sakr-50m-arabic-نتائج-أوليه-base-version" id="toc-sakr-50m-arabic-نتائج-أوليه-base-version" class="nav-link" data-scroll-target="#sakr-50m-arabic-نتائج-أوليه-base-version">Sakr-50M-Arabic نتائج أوليه Base version</a></li>
+  <li><a href="#sakr-50m-arabic-sft-instruction-eval" id="toc-sakr-50m-arabic-sft-instruction-eval" class="nav-link" data-scroll-target="#sakr-50m-arabic-sft-instruction-eval">sakr-50M-Arabic-SFT — Instruction Eval</a></li>
+  </ul></li>
+  <li><a href="#المشاكل-الحالية-لصقر" id="toc-المشاكل-الحالية-لصقر" class="nav-link" data-scroll-target="#المشاكل-الحالية-لصقر">المشاكل الحالية لصقر</a></li>
+  <li><a href="#أفكار-مستقلبية" id="toc-أفكار-مستقلبية" class="nav-link" data-scroll-target="#أفكار-مستقلبية">أفكار مستقلبية</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Embedding Models &amp; Vector Search Hub</h1>
-</div>
+<h1 class="title">نموذج صقر بحجم 50 مليون لتوليد البيانات بالعربي يعمل علي CPU</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">blogging</div>
+    <div class="quarto-category">til</div>
+    <div class="quarto-category">nlp</div>
+    <div class="quarto-category">arabic</div>
+    <div class="quarto-category">llm</div>
+    <div class="quarto-category">SLM</div>
+  </div>
+  </div>
 
 <div>
   <div class="description">
-    Deep dives into text embeddings, vector databases, sparse retrieval, and semantic search. A curated collection of articles on building production-ready search systems.
+    ماهو نموذج Sakr صقر المخصص لتوليد البيانات باللغة العربية ومدرب علي حوالي 66 مليون صفحة من fine-web dataset يعمل بسرعه فائقة ونتائج متوسطة. شرح تفصيلي.
   </div>
 </div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>kareem </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">25 يوليو 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -457,300 +457,257 @@ window.Quarto = {
 </header>
 
 
-<section id="embedding-models-vector-databases-semantic-search" class="level2">
-<h2 class="anchored" data-anchor-id="embedding-models-vector-databases-semantic-search">Embedding Models, Vector Databases &amp; Semantic Search</h2>
-<p>This is a curated collection of my writing on <strong>text embeddings</strong>, <strong>sparse retrieval</strong>, <strong>vector databases</strong>, and <strong>semantic search architecture</strong>.</p>
-<p>If you’re building search systems or RAG pipelines, start here.</p>
-<p>I’ve spent the last couple of years deep in the embedding world — training tiny Arabic models, implementing BM25 from scratch, and building hybrid search that actually works for Arabic text. This series covers both theory and code, from sparse embeddings to dense retrieval and everything in between.</p>
+<section id="ماهو-صقر-sakr-لمعالجة-اللغة-العربية" class="level2">
+<h2 class="anchored" data-anchor-id="ماهو-صقر-sakr-لمعالجة-اللغة-العربية">ماهو صقر Sakr لمعالجة اللغة العربية ؟</h2>
 <ul>
-<li><strong><a href="hyperrun.html">HyperRun</a></strong> — A self-hosted AI docs widget with semantic code search</li>
-<li><strong><a href="hyperun_fasthtml.html">HyperRun + FastHTML</a></strong> — Streaming chat architecture with HTMX and SSE</li>
-<li><strong><a href="late_interaction.html">Late Interaction</a></strong> — ColBERT and multi-vector retrieval explained</li>
-<li><strong><a href="sparse_embedding/bm25_from_scratch.html">BM25 from Scratch</a></strong> — Implementing classical sparse retrieval</li>
-<li><strong><a href="sparse_embedding/bm25_arabic_qdrant.html">BM25 + Qdrant for Arabic</a></strong> — Practical sparse+dense hybrid search</li>
-<li><strong><a href="sparse_embedding/bm25_benchmark_full.html">BM25 Benchmarks</a></strong> — Full comparison across datasets</li>
-<li><strong><a href="vector_database_book.html">Vector Database Book</a></strong> — Notes on building vector search systems</li>
+<li>صقر هو نسخة عربية من نموذج <a href="https://huggingface.co/SupraLabs/Supra-50M-Base">supra-50m-base</a> وهو يتكون من 50 مليون متغير مدرب من الصفر علي بيانات من الويب من داتا <a href="https://huggingface.co/datasets/HuggingFaceFW/fineweb-2">fine-web-v2</a> النسخة العربية وليس مترجمة للحفاظ علي جودة التوليد.</li>
+<li>يعتبر صقر أصغر نموذج لتوليد البيانات في اللغة العربية، مع الحفاظ علي أداء مقبول جدا.</li>
 </ul>
-<p>Each article builds on the last — start with BM25 if you’re new, then move to late interaction and HyperRun once you’ve got the foundations down.</p>
-<p><a href="../../../../blog/feed.html">← Back to all blog posts</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/sakr.jpg" class="img-fluid figure-img"></p>
+<figcaption>sakr arabic llm 50 million</figcaption>
+</figure>
+</div>
+</section>
+<section id="البيانات-التي-تم-تدريب-عليها" class="level2">
+<h2 class="anchored" data-anchor-id="البيانات-التي-تم-تدريب-عليها">البيانات التي تم تدريب عليها ؟</h2>
+<section id="مرحلة-التدريب-الأوليه-pretraining" class="level3">
+<h3 class="anchored" data-anchor-id="مرحلة-التدريب-الأوليه-pretraining">مرحلة التدريب الأوليه pretraining</h3>
+<ul>
+<li>تم استخدام fineweb-v2 علي اللغة العربية فقط ولا يوجد دعم للغة الإنجيليزية بالكامل ولكن المصطحات بعضها مدعوم مثل كلمة AI وهكذا.</li>
+<li>اللهجات العربية التي تم تدريب الموديل عليها هي:</li>
+<li>“arb_Arab,ary_Arab,arz_Arab,apc_Arab,acm_Arab”</li>
+<li>البيانات تم أخذها من <a href="https://commoncrawl.org/">CommonCrawl</a> من تاريخ 2013 ل2024</li>
+<li>المميز فيها انها مش مترجمة وتم تنظيفها وإزالة الجمل والصفحات المكررة.</li>
+</ul>
+</section>
+<section id="مرحلة-التدريب-تحت-الإشراف-sft-لصقر" class="level3">
+<h3 class="anchored" data-anchor-id="مرحلة-التدريب-تحت-الإشراف-sft-لصقر">مرحلة التدريب تحت الإشراف SFT لصقر</h3>
+<ul>
+<li>تستخدم هذه المرحلة لتوجيه الإجابات من النموذج لتكون أقرب إلي إجابات البشر</li>
+<li>في هذه الخطوة نحتاج الي داتا تحتوي علي السؤال والإجابة التي نريد تعليم النموذج الخاص بينا توليد إجابة قريبه من نفس التوزيع الإحتمالي لها.</li>
+<li>قمت بجمع 3 بيانات وهما :</li>
+</ul>
+<ol type="1">
+<li>2A2I/Arabic-OpenHermes-2.5 (~970k, translated) -&gt; full</li>
+<li>ClusterlabAi/InstAr-500k (~500k, native) -&gt; full</li>
+<li>arbml/CIDAR (~10k, native, high-Q) -&gt; upsampled ~8x</li>
+</ol>
+</section>
+</section>
+<section id="إختبارات-سريعة" class="level2">
+<h2 class="anchored" data-anchor-id="إختبارات-سريعة">إختبارات سريعة ؟</h2>
+<section id="sakr-50m-arabic-نتائج-أوليه-base-version" class="level3">
+<h3 class="anchored" data-anchor-id="sakr-50m-arabic-نتائج-أوليه-base-version">Sakr-50M-Arabic نتائج أوليه Base version</h3>
+<ul>
+<li><p><strong>Model:</strong> <code>sakr-50m-arabic</code></p></li>
+<li><p><strong>Device:</strong> cuda</p></li>
+<li><p><strong>Decoding:</strong> <code>max_new_tokens=120</code>, <code>do_sample=True</code>, <code>temperature=0.8</code>, <code>top_p=0.9</code>, <code>top_k=50</code>, <code>repetition_penalty=1.2</code></p></li>
+</ul>
+<section id="prompt-مرحبا-اسمي" class="level4">
+<h4 class="anchored" data-anchor-id="prompt-مرحبا-اسمي">1. Prompt: مرحبا، اسمي</h4>
+<pre><code>
+مرحبا، اسمي انريده وربك لهجة لبنانية. عمري 30 سنة، متزوجه من ٣سنين، وماما بتستاهل كل شي بحياتي ، وحابة شوف حالي بلبنان وشوف حالي كيف رح كون هون، وبعرف أنو اهلي منفصلين عن بعض ما بيحبوا حدا بهل بلد الا إذا الواحد ما يكون عايش معو أو بياخد من أهله او عم يشتغل لحاله على أرض الواقع . بدي أغير جو وأدرس أكتر بكتير وأحلم بحل أكبر مشكلة بشغلي بس لأني مابفكر غير إني اشتغل لأن الشغل عندكم كتير بيت
+</code></pre>
+</section>
+<section id="prompt-عاصمة-مصر-هي" class="level4">
+<h4 class="anchored" data-anchor-id="prompt-عاصمة-مصر-هي">2. Prompt: عاصمة مصر هي</h4>
+<pre><code>
+عاصمة مصر هي العاصمة الإدارية الجديدة.
 
+ويعد التجمع من أشهر المدن في مصر، فهو يقع على مساحة 30 فدانًا و35 فداناً ويضم حوالي 15 ألف نسمة، وتطل على النيل مباشرة من نهر النيل إلى صحراء مصر التاريخية.
+
+يضم التجمع حديقة كبيرة، تحتوي على عدد كبير جدًا من الزهور التي تجذب الزائر إليها، بالإضافة إلى مجموعة كبيرة ومتنوعة من النباتات والزهور والنباتات النادرة والتي تتميز بألوانها الفريدة والمميزة مثل: زهر البرتقال وحبوب الفاكهة وغيرها الكثير والكثير.
+
+أهم المعالم السياحية في القاهرة :
+
+- قصر ثقافة القصر العينى وشارع الأمير سلطان (2) شارع
+</code></pre>
+</section>
+<section id="prompt-في-يوم-من-الأيام" class="level4">
+<h4 class="anchored" data-anchor-id="prompt-في-يوم-من-الأيام">3. Prompt: في يوم من الأيام</h4>
+<pre><code>
+في يوم من الأيام هانت عليك
+
+أوعى تدفني أوعك تنساني أنا مقدرش اتحمل الفراق يا أغلى حبيبه مش عارفه ايه
+
+يا قلبي يامانسي عمري كله على طول العمر دا انا بحبك موت يا حبيبي
+
+حبيبي اللي كان في بعدك حيل مشتاق ليك يا روحي
+
+كلمات اغنية قلبي ما خانك مرتاح مكتوبة وكاملة 2021. كلمات اغنية لو كنت معاها.
+
+بكرة بعدنا مع بعض ننساك.
+
+بتقول لي يا روح الروح بتقول ايه.
+
+العين دى بتسأل عن اللى جايبنى
+</code></pre>
+</section>
+<section id="prompt-اللغة-العربية-هي" class="level4">
+<h4 class="anchored" data-anchor-id="prompt-اللغة-العربية-هي">4. Prompt: اللغة العربية هي</h4>
+<pre><code>
+اللغة العربية هي اللغة الرسمية في العالم العربي التي تمزج بين اللغتين الناطقتين باللغة الإنجليزية واللغة الأم، وقد اعتمدت اللغة العربية الفصحى بشكل كبير على الترجمة التركية والعربية.
+
+
+
+وتعد اللغة الأمازيغية لغةً خاصةٌ بالنسبة للعرب حيث أنها تأتي مع لغات أخرى مثل: اللغة الفرنسية والأمازيغية والإسبانية والأوراس، كما أن اللغات الأجنبية والفرنسية تعدّ من اللغات السامية، كما أنه تحتوي على مجموعة كبيرة ومتنوعة من المعاني والكلمات والقصص والنصوص المتنوعة الأخرى، كما ان اللغة العربية تعتمد منذ تأسيسها على اللهجة الجزائرية والتي تعود إلى عهد الاستعمار الفرنسي الحديث.
+</code></pre>
+</section>
+<section id="prompt-الطقس-اليوم" class="level4">
+<h4 class="anchored" data-anchor-id="prompt-الطقس-اليوم">5. Prompt: الطقس اليوم</h4>
+<pre><code>
+الطقس اليوم يُطلق على “النادي الأهلي” اسم النادي الذي تأسس في شهر أكتوبر من عام 1960، كما أن كرة القدم تلعب دوراً كبيراً في تطور الرياضة بشكل كبير، وهو ما أدى إلى تحقيق الكثير من الإنجازات والنجاحات التي تحققت بفضل جهود العديد من الأندية الرياضية.
+
+ونقلت صحيفة العربي عن مصدر مطلع قوله إن النادي الاهلي بدأ الموسم الحالي في تطوير كرة القدم عبر الملاعب العالمية بعد قيام الاتحاد الدولي لكرة القدم «فيفا» بتقديم تقرير حول الدوري المصري قبل انطلاق البطولة الدولية المقرر إقامتها في مصر في يونيو المقبل والتي تبدأ يوم 26 نوفمبر القادم ويستمر حتى 5 ديسمبر 2022 مع وصول كأس العالم للأندية 2023 للمرة
+</code></pre>
+</section>
+<section id="prompt-أحب-أن" class="level4">
+<h4 class="anchored" data-anchor-id="prompt-أحب-أن">6. Prompt: أحب أن</h4>
+<pre><code>
+أحب أن أشاهده فى كل مرة.
+
+للكاتبة المصرية شكران مرتجى التى تعتبر من أهم نجمات الأدب العربى، ولها العديد من الأعمال منها:
+
+الصحافة والسينما.. فيلم "كلمنى" الذى تشارك به في بطولته إلى جانب أحمد عز، وأحمد رزق وأمير شاهين، وفيلم "النهاية".
+
+وكانت آخر أعمال الفنان الكبير الراحل فاروق الفيشاوي، مسلسل (العنكبوت) بطولة النجم محمد إمام والفنان صلاح عبد الله والمخرج خالد يوسف والنجم خالد الصاوى .السلام عليكم ورحمه الله وبركاته ،،،،،
+
+الى صاحبه سمو الام
+</code></pre>
+</section>
+</section>
+<section id="sakr-50m-arabic-sft-instruction-eval" class="level3">
+<h3 class="anchored" data-anchor-id="sakr-50m-arabic-sft-instruction-eval">sakr-50M-Arabic-SFT — Instruction Eval</h3>
+<ul>
+<li><p><strong>Date:</strong> 2026-07-24 15:04:32</p></li>
+<li><p><strong>Model:</strong> <code>sakr-50m-arabic-sft-mix/checkpoint-143202</code></p></li>
+<li><p><strong>Device:</strong> cuda</p></li>
+<li><p><strong>Decoding:</strong> <code>max_new_tokens=1200</code>, <code>do_sample=True</code>, <code>temperature=0.1</code>, <code>top_p=0.9</code>, <code>top_k=50</code>, <code>repetition_penalty=1.2</code></p></li>
+</ul>
+<section id="ما-هي-عاصمة-مصر" class="level4">
+<h4 class="anchored" data-anchor-id="ما-هي-عاصمة-مصر">1. ما هي عاصمة مصر؟</h4>
+<pre><code>
+عاصمة مصر القاهرة هي القاهرة.
+</code></pre>
+</section>
+<section id="اكتب-جملة-قصيرة-عن-أهمية-القراءة" class="level4">
+<h4 class="anchored" data-anchor-id="اكتب-جملة-قصيرة-عن-أهمية-القراءة">2. اكتب جملة قصيرة عن أهمية القراءة</h4>
+<pre><code>
+إن قراءة الكتب هي مفتاح لفهم العالم من حولنا، مما يجعل القراء يشعرون بالبهجة والسعادة.
+</code></pre>
+</section>
+<section id="لخص-فوائد-ممارسة-الرياضة-في-نقطتين" class="level4">
+<h4 class="anchored" data-anchor-id="لخص-فوائد-ممارسة-الرياضة-في-نقطتين">3. لخّص فوائد ممارسة الرياضة في نقطتين</h4>
+<pre><code>
+تُعد التمارين الرياضية طريقة رائعة لزيادة القوة البدنية والعقلية، وزيادة اللياقة البدنية، وتحسين الصحة العامة والرفاهية بشكل عام. فيما يلي بعض الفوائد الرئيسية لممارسة الرياضة:
+
+
+
+1. زيادة قوة العضلات: يمكن أن تساعد تمارين التمدد المنتظمة على تحسين لياقة الجسم وتقليل خطر الإصابة بالأمراض المزمنة مثل أمراض القلب والسكري والسرطان وأمراض الكلى والكلى وبعض أنواع السرطان الأخرى.
+
+2. تعزيز المرونة والتوازن: ثبت أن ممارسة النشاط البدني بانتظام يمكن أن يساعد الرياضيين على الحفاظ على مستويات ثابتة من الطاقة لديهم وتعزيز قدرتهم على التكيف مع المواقف الجديدة والبقاء نشطًا.
+
+3. تقليل التوتر والقلق: أظهرت الدراسات أن ممارسة الرياضة تقلل من القلق والتوتر والاكتئاب لدى الرياضيين الذين يعانون من مشاكل صحية عقلية مختلفة. وهذا مهم أيضًا لصحة الدماغ والجهاز العصبي الصحي.
+
+4. تحسين صحة العظام: ثبت أن ممارسة الرياضة تحسن صحة العظام ويمكنها المساعدة في تنظيم وظائف المخ المختلفة، بما في ذلك تقوية العظام وتقوية المفاصل.
+
+5. تحسين النوم: ثبت أن ممارسة الأنشطة الهوائية بانتظام يمكن أن تعزز الاسترخاء وتقلل من التوتر والقلق.
+
+6. تحسين المزاج: ثبت أن ممارسة الرياضة تزيد من اليقظة الذهنية والمزاج، مما قد يؤدي إلى تحسين التركيز والتركيز.
+
+7. تحسين الحالة المزاجية: ثبت أن ممارسة الرياضة يمكن أن تفيد الصحة العقلية والصحة العاطفية للأفراد الذين يعانون من اضطرابات مزاجية أو اكتئاب.
+
+8. تحسين الوظيفة الإدراكية: ثبت أن ممارسة الرياضة يمكن أن تحسن وظيفة الذاكرة والقدرة المعرفية، بالإضافة إلى قدرتها على التعلم والنمو الشخصي.
+
+9. تحسين الدورة الدموية: ثبت أن ممارسة الرياضة يمكن أن تحسن قدرة التحمل والقوة والمرونة، مما يسمح للرياضيين بتحسين وظائفهم العصبية.
+
+10. تحسين عملية الهضم: ثبت أن ممارسة الرياضة يمكن أن تحسن عملية الهضم وتعزز القدرة على هضم الطعام بكفاءة أكبر.
+
+11. تحسين التوازن والتنسيق: ثبت أن ممارسة الرياضة يمكن أن تحسن توازن القوى بين العمل والحياة، مما يزيد من صعوبة التغلب على الشدائد وتحقيق أهداف قابلة للتحقيق.
+
+12. تحسين جودة النوم: ثبت أن ممارسة الرياضة يمكن أن تحسن نوعية نوم الفرد ورفاهيته، مما يجعل من الصعب على الأفراد الحصول على قسط كافٍ من الراحة والاسترخاء أثناء فترات الراحة الطويلة.
+
+13. تحسين الجهاز المناعي: ثبت أن ممارسة الرياضة يمكن أن تحسن جهاز المناعة وتساعد على مكافحة الالتهابات والأمراض المعدية.
+
+14. تحسين الوظائف التنفيذية: ثبت أن ممارسة الرياضة يمكن أن تحسن الكفاءة الإدارية والتنظيم الوظيفي، فضلا عن توفير بيئة عمل داعمة ودعم للموظفين.
+
+15. تحسين نظام المكافأة الغذائي: ثبت أن ممارسة الرياضة يمكن أن تحسن الأداء العام للجسم والعقل، مما يقلل من خطر الإصابة بأمراض مزمنة مثل مرض السكري وارتفاع ضغط الدم ومرض الزهايمر.
+
+16. تحسين التنسيق الاجتماعي: ثبت أن ممارسة الرياضة يمكن أن توفر مستوى عالٍ من التفاهم والدعم العاطفي، حيث يمكن للطلاب التواصل مع الآخرين ومشاركة تجاربهم حول الحياة الواقعية.
+
+17. تحسين المهارات الاجتماعية: ثبت أن ممارسة الرياضة يمكن أن تحسن مهارات الاتصال ومهارات حل المشكلات، مما يجعلها أكثر جاذبية لأولئك الذين يرغبون في ممارسة الرياضة.
+
+18. تحسين الصحة النفسية: ثبت أن ممارسة الرياضة يمكن أن تحسن الرفاهية الجسدية والعاطفية، مما يعزز الشعور بالرفاهية والسعادة.
+
+19- إدارة الوقت: ثبت أن ممارسة الرياضة يمكن أن تحسن الإنتاجية والكفاءة الإجمالية، مما يتيح لك البقاء نشطين ومتحمسين لاتخاذ قرارات مستنيرة بشأن ما يجب القيام به.
+</code></pre>
+</section>
+<section id="أعد-صياغة-الجملة-التالية-بأسلوب-آخر-القراءة-تفتح-آفاق-العقل" class="level4">
+<h4 class="anchored" data-anchor-id="أعد-صياغة-الجملة-التالية-بأسلوب-آخر-القراءة-تفتح-آفاق-العقل">4. أعد صياغة الجملة التالية بأسلوب آخر: القراءة تفتح آفاق العقل</h4>
+<pre><code>
+إن قراءة الكتب في متناول اليد يمكن أن تجعل من الصعب على القارئ فهمها، مما يجعل منه أداة مفيدة للقراءة.
+</code></pre>
+</section>
+<section id="اقترح-ثلاثة-أسماء-لمقهى-عربي" class="level4">
+<h4 class="anchored" data-anchor-id="اقترح-ثلاثة-أسماء-لمقهى-عربي">5. اقترح ثلاثة أسماء لمقهى عربي</h4>
+<pre><code>
+1. مقهى العرب الأصيل
+
+2. مقهى الخليج العربي
+
+3. مقهى الشرق الأوسط
+
+4. مقهى الفجر الذهبي
+
+5. مقهى الخليج العربي
+</code></pre>
+</section>
+<section id="اشرح-ما-هو-الذكاء-الاصطناعي-بكلمات-بسيطة" class="level4">
+<h4 class="anchored" data-anchor-id="اشرح-ما-هو-الذكاء-الاصطناعي-بكلمات-بسيطة">6. اشرح ما هو الذكاء الاصطناعي بكلمات بسيطة</h4>
+<pre><code>
+يعد الذكاء الاصطناعي (AI) تقنية قوية يمكن استخدامها لتطوير أنظمة الكمبيوتر التي يمكنها أداء المهام المعقدة، مثل معالجة اللغة الطبيعية وتحليل المشاعر والتعلم الآلي وحل المشكلات. في هذا النوع من الذكاء الاصطناعي، يتم استخدامه لإنشاء نماذج تنبؤية وتصميمات معقدة للغاية. بالإضافة إلى ذلك، فهو يسمح للآلات بإنشاء تطبيقات أكثر كفاءة وفعالية من حيث التكلفة وأكثر دقة.
+</code></pre>
+</section>
+</section>
+</section>
+<section id="المشاكل-الحالية-لصقر" class="level2">
+<h2 class="anchored" data-anchor-id="المشاكل-الحالية-لصقر">المشاكل الحالية لصقر</h2>
+<ul>
+<li>لا يوجد دعم للتشكيل</li>
+<li>البيانات التي تم التدريب ليها ليست كبيره مقارنة بالنماذج الأخري</li>
+<li>لا يوجد دعم لإستخدام الأدوات toolcalling</li>
+<li>لا يوجد دعم للغة الإنجيلزية.</li>
+</ul>
+</section>
+<section id="أفكار-مستقلبية" class="level2">
+<h2 class="anchored" data-anchor-id="أفكار-مستقلبية">أفكار مستقلبية</h2>
+<p>يوجد الكثير من الأفكار المستقبلية لصقر وأهمها حل المشاكل التي بالأعلي و :</p>
+<ol type="1">
+<li>تغيير المعمارية الخاصه بالنموذج لتكون مبنية علي mamba2</li>
+<li>استخدام DPO لتحسين دقة النموذج</li>
+<li>عمل leaderboard خاصه بالنماذج الصغيره للغة العربية لمقارنة أفضل.</li>
+<li>هل يمكن زياده عدد vocabsize وتقليل عدد المتغيرات وهل سوف يساعد النموذج في التطور بشكل أفضل؟</li>
+</ol>
+<div class="callout callout-note callout-info" data-callout="info">
+<div class="callout-title-container">
+<p><span class="callout-icon-container"><span class="callout-icon"></span></span><span class="callout-title">هل تعلم كم إستغرق تدريب النموذج؟</span></p>
+</div>
+<div class="callout-body">
+<p>استغرق حوالي 19 ساعة علي صديقي الجديد kobox وهو كرت شاشة 5090 astral مع معالج 9950amd!!</p>
+</div>
+</div>
+<p>روابط للنموذج :</p>
+<ul>
+<li><a href="https://huggingface.co/Abdelkareem/sakr-50m-arabic-base">صقر sakr</a></li>
+<li><a href="https://huggingface.co/Abdelkareem/supra-50m-arabic-sft-mix">Abdelkareem/supra-50m-arabic-sft-mix</a></li>
+</ul>
 
 
 </section>
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-embedding-posts">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="YmxvZ2dpbmclMkN0aWwlMkNubHAlMkNhcmFiaWMlMkNsbG0lMkNTTE0=" data-listing-date-sort="1784926800000" data-listing-file-modified-sort="1784997752361" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1469">
-<div class="thumbnail"><a href="../../../../blog/posts/nlp/embedding_world/sakr_v1.html" class="no-external">
-
-<img loading="lazy" src="../../../../blog/posts/nlp/embedding_world/images/sakr_2.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../../../blog/posts/nlp/embedding_world/sakr_v1.html" class="no-external">نموذج صقر بحجم 50 مليون لتوليد البيانات بالعربي يعمل علي CPU</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bmxw'); return false;">nlp</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YXJhYmlj'); return false;">arabic</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGxt'); return false;">llm</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U0xN'); return false;">SLM</div>
-
-</div>
-<div class="delink listing-description"><a href="../../../../blog/posts/nlp/embedding_world/sakr_v1.html" class="no-external">
-<p>ماهو نموذج Sakr صقر المخصص لتوليد البيانات باللغة العربية ومدرب علي حوالي 66…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../../../blog/posts/nlp/embedding_world/sakr_v1.html" class="no-external">
-<div class="listing-date">
-يوليو 25, 2026
-</div>
-<div class="listing-reading-time">8 دقيقة</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="YmxvZ2dpbmclMkN0aWwlMkNibG9nJTJGcmV2aWV3JTJGYm9vaw==" data-listing-date-sort="1776459600000" data-listing-file-modified-sort="1780045739509" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="282">
-<div class="thumbnail"><a href="../../../../blog/posts/nlp/embedding_world/vector_database_book.html" class="no-external">
-
-<img loading="lazy" src="../../../../blog/posts/nlp/embedding_world/images/vector_database_book.webp" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../../../blog/posts/nlp/embedding_world/vector_database_book.html" class="no-external">Vector Databases - O’reilly By Nitin Borwankar</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZyUyRnJldmlldyUyRmJvb2s='); return false;">blog/review/book</div>
-
-</div>
-<div class="delink listing-description"><a href="../../../../blog/posts/nlp/embedding_world/vector_database_book.html" class="no-external">
-<p>Review of a new book about Vector database from O’reilly</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../../../blog/posts/nlp/embedding_world/vector_database_book.html" class="no-external">
-<div class="listing-date">
-أبريل 18, 2026
-</div>
-<div class="listing-reading-time">2 دقيقة</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="YmxvZ2dpbmclMkN0aWwlMkNibG9nJTJGYnVpbGQlMkZwcm9qZWN0" data-listing-date-sort="1773867600000" data-listing-file-modified-sort="1780658546813" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="914">
-<div class="thumbnail"><a href="../../../../blog/posts/nlp/embedding_world/hyperrun.html" class="no-external">
-
-<img loading="lazy" src="../../../../blog/posts/nlp/embedding_world/images/colgrep.webp" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../../../blog/posts/nlp/embedding_world/hyperrun.html" class="no-external">HyperRun + ColGrep: A Self-Hosted Alternative to RunLLM</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZyUyRmJ1aWxkJTJGcHJvamVjdA=='); return false;">blog/build/project</div>
-
-</div>
-<div class="delink listing-description"><a href="../../../../blog/posts/nlp/embedding_world/hyperrun.html" class="no-external">
-<p>HyperRun is an open-source, self-hosted alternative to RunLLM. Add an…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../../../blog/posts/nlp/embedding_world/hyperrun.html" class="no-external">
-<div class="listing-date">
-مارس 19, 2026
-</div>
-<div class="listing-reading-time">5 دقيقة</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="YmxvZ2dpbmclMkN0aWwlMkNibG9nJTJGYnVpbGQlMkZwcm9qZWN0" data-listing-date-sort="1773867600000" data-listing-file-modified-sort="1780045725952" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="22" data-listing-word-count-sort="4300">
-<div class="thumbnail"><a href="../../../../blog/posts/nlp/embedding_world/hyperun_fasthtml.html" class="no-external">
-
-<img loading="lazy" src="../../../../blog/posts/nlp/embedding_world/images/colgrep.webp" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../../../blog/posts/nlp/embedding_world/hyperun_fasthtml.html" class="no-external">HyperRun Deep Dive: Streaming Chat with FastHTML, HTMX, and SSE</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGls'); return false;">til</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZyUyRmJ1aWxkJTJGcHJvamVjdA=='); return false;">blog/build/project</div>
-
-</div>
-<div class="delink listing-description"><a href="../../../../blog/posts/nlp/embedding_world/hyperun_fasthtml.html" class="no-external">
-<p>How I built a real-time AI chat widget with zero React, zero WebSockets, and…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../../../blog/posts/nlp/embedding_world/hyperun_fasthtml.html" class="no-external">
-<div class="listing-date">
-مارس 19, 2026
-</div>
-<div class="listing-reading-time">22 دقيقة</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="YmxvZ2dpbmclMkNlbWJlZGRpbmclMkNxZHJhbnQ=" data-listing-date-sort="1766178000000" data-listing-file-modified-sort="1778750246549" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="414">
-<div class="thumbnail"><a href="../../../../blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html" class="no-external">
-
-<img loading="lazy" src="../../../../blog/posts/nlp/embedding_world/sparse_embedding/images/bm25.webp" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../../../blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html" class="no-external">BM25 Part 3: Benchmarking Python BM25 Libraries</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZW1iZWRkaW5n'); return false;">embedding</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cWRyYW50'); return false;">qdrant</div>
-
-</div>
-<div class="delink listing-description"><a href="../../../../blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html" class="no-external">
-<p>Benchmarking BM25 implementations: bm25-sparse, rankbm25, numpy vectorization…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../../../blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html" class="no-external">
-<div class="listing-date">
-ديسمبر 20, 2025
-</div>
-<div class="listing-reading-time">3 دقيقة</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="YmxvZ2dpbmclMkNlbWJlZGRpbmclMkNxZHJhbnQlMkNzcGFyc2U=" data-listing-date-sort="1766091600000" data-listing-file-modified-sort="1780658064721" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1406">
-<div class="thumbnail"><a href="../../../../blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html" class="no-external">
-
-<img loading="lazy" src="../../../../blog/posts/nlp/embedding_world/sparse_embedding/images/xbites_chat.webp" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../../../blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html" class="no-external">BM25 Explained Part 2 | Qdrant hybrid search for real estate</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZW1iZWRkaW5n'); return false;">embedding</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cWRyYW50'); return false;">qdrant</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c3BhcnNl'); return false;">sparse</div>
-
-</div>
-<div class="delink listing-description"><a href="../../../../blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html" class="no-external">
-<p>Step-by-step guide to building a bilingual hybrid search system using Qdrant…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../../../blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html" class="no-external">
-<div class="listing-date">
-ديسمبر 19, 2025
-</div>
-<div class="listing-reading-time">8 دقيقة</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="YmxvZ2dpbmclMkNlbWJlZGRpbmclMkNxZHJhbnQ=" data-listing-date-sort="1766091600000" data-listing-file-modified-sort="1779508734976" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="790">
-<div class="thumbnail"><a href="../../../../blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html" class="no-external">
-
-<img loading="lazy" src="../../../../blog/posts/nlp/embedding_world/sparse_embedding/images/bm25.webp" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../../../blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html" class="no-external">BM25 Search Algorithm: Python Implementation from Scratch</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZW1iZWRkaW5n'); return false;">embedding</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cWRyYW50'); return false;">qdrant</div>
-
-</div>
-<div class="delink listing-description"><a href="../../../../blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html" class="no-external">
-<p>Learn how BM25 improves search relevance over TF-IDF. This guide covers the…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../../../blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html" class="no-external">
-<div class="listing-date">
-ديسمبر 19, 2025
-</div>
-<div class="listing-reading-time">4 دقيقة</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="YmxvZ2dpbmclMkNlbWJlZGRpbmclMkNtaW5pc2hsYWIlMkNtb2RlbDJ2ZWMlMkNhcmFiaWM=" data-listing-date-sort="1747256400000" data-listing-file-modified-sort="1780658001063" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="880">
-<div class="thumbnail"><a href="../../../../blog/posts/nlp/embedding_world/late_interaction.html" class="no-external">
-
-<img loading="lazy" src="../../../../blog/posts/nlp/embedding_world/images/minishlab.webp" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../../../blog/posts/nlp/embedding_world/late_interaction.html" class="no-external">Late Interaction &amp; ColPali: Efficient Semantic Search</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZW1iZWRkaW5n'); return false;">embedding</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWluaXNobGFi'); return false;">minishlab</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bW9kZWwydmVj'); return false;">model2vec</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YXJhYmlj'); return false;">arabic</div>
-
-</div>
-<div class="delink listing-description"><a href="../../../../blog/posts/nlp/embedding_world/late_interaction.html" class="no-external">
-<p>Explore Late Interaction models like ColBERT and ColPali for efficient…</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../../../blog/posts/nlp/embedding_world/late_interaction.html" class="no-external">
-<div class="listing-date">
-مايو 15, 2025
-</div>
-<div class="listing-reading-time">5 دقيقة</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">لا توجد نتائج مطابقة</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const root =
@@ -1554,6 +1511,38 @@ function copyLink() {
     }
   });
   </script>
+<input type="hidden" id="giscus-base-theme" value="preferred_color_scheme">
+<input type="hidden" id="giscus-alt-theme" value="preferred_color_scheme">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      if (authorPrefersDark) {
+          [baseTheme, altTheme] = [altTheme, baseTheme];
+      }
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "abdelkareemkobo/kareem_site";
+    script.dataset.repoId = "R_kgDOQxY8kw";
+    script.dataset.category = "Comments";
+    script.dataset.categoryId = "DIC_kwDOQxY8k84C0aRf";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "ar";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
