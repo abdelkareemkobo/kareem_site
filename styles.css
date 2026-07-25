@@ -246,7 +246,10 @@ pre {
     color: var(--tx);
     padding: 1rem 1.2rem;
     border-radius: 4px;
-    overflow-x: auto;
+    overflow-x: hidden;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: anywhere;
     margin: 1.5rem 0;
     border: 1px solid var(--ui);
 }
@@ -1207,8 +1210,10 @@ article {
     pre {
         font-size: 0.85rem;
         padding: 0.75rem 1rem;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+        overflow-x: hidden;
+        white-space: pre-wrap;
+        word-break: break-word;
+        overflow-wrap: anywhere;
     }
 
     table {
@@ -2425,6 +2430,58 @@ pre {
     border: 1px solid var(--ui);
     border-radius: 12px;
     box-shadow: inset 0 0 0 1px hsl(0 0% 100% / 0.02);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Code blocks in an RTL document
+   The page is dir="rtl" (Arabic), so code inherits direction:rtl
+   which pushes the start of each line off-screen and makes it look
+   "cut off". Force everything code-related back to LTR and let the
+   block scroll horizontally within the content column.
+   ───────────────────────────────────────────────────────────── */
+pre,
+pre code,
+code,
+div.sourceCode,
+div.sourceCode pre,
+.cell-output pre,
+.code-with-filename pre {
+    direction: ltr;
+    text-align: left;
+    unicode-bidi: isolate;
+}
+
+/* Quarto wraps code in div.sourceCode > pre > code.
+   Constrain to the content column and never overflow it. */
+div.sourceCode,
+pre,
+div.sourceCode pre.sourceCode {
+    max-width: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Wrap long lines automatically instead of scrolling/clipping. */
+pre,
+pre code,
+div.sourceCode pre,
+div.sourceCode pre code,
+.cell-output pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+/* Keep the copy button and filename label on the correct (left) side. */
+.code-copy-button {
+    right: 0.4rem;
+    left: auto;
+}
+
+.code-with-filename .code-with-filename-file {
+    direction: ltr;
+    text-align: left;
 }
 
 /* Tags / categories */
