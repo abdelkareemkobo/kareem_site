@@ -340,41 +340,14 @@ window.addEventListener('scroll', () => {
 <span class="menu-text">أبحاث</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> <i class="bi bi-person" role="img">
+</i> 
+<span class="menu-text">عنّي</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../../../publish.html"> <i class="bi bi-book" role="img">
 </i> 
 <span class="menu-text">كتب</span></a>
-  </li>  
-</ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://t.me/+xRY72sYuiwc0ZGY8"> <i class="bi bi-telegram" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="https://www.youtube.com/@abdelkareemai"> <i class="bi bi-youtube" role="img">
-</i> 
-<span class="menu-text">فيديوهات</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="https://www.upwork.com/freelancers/~016a9fea792423bb9a"> <i class="bi bi-briefcase" role="img">
-</i> 
-<span class="menu-text">للتوظيف</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="https://gpuvec.com"> <i class="bi bi-cpu" role="img">
-</i> 
-<span class="menu-text">GPUVec</span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="../../../blog/feed.xml"> <i class="bi bi-rss" role="img" aria-label="خلاصة المدونة">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="../../../til/index.xml"> <i class="bi bi-rss" role="img" aria-label="خلاصة الملاحظات">
-</i> 
-<span class="menu-text"></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -632,6 +605,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body;
   if (!root) return;
 
+  // Folding is useful inside long articles, but adds noise and empty space on
+  // the homepage and listing pages.
+  if (root.querySelector(".page-wrapper, .quarto-listing")) return;
+
   const headings = Array.from(root.querySelectorAll("h2, h3, h4"));
   const foldables = [];
 
@@ -746,6 +723,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector("#title-block-header");
   if (!header || header.querySelector(".post-hero-image")) return;
 
+  // Social preview images are metadata, not automatically page artwork.
+  // Only article-like pages with real author/date metadata receive a hero.
+  if (document.querySelector(".quarto-listing, .page-wrapper")) return;
+
   const metaImage =
     document.querySelector('meta[property="og:image"]') ||
     document.querySelector('meta[name="twitter:image"]');
@@ -754,7 +735,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector('meta[property="og:image:alt"]') ||
     document.querySelector('meta[name="twitter:image:alt"]');
 
-  if (!metaImage || !header.querySelector(".quarto-title-meta")) return;
+  if (!metaImage || !header.querySelector(".quarto-title-meta-contents")) return;
 
   const rawUrl = metaImage.getAttribute("content");
   if (!rawUrl) return;
@@ -1476,6 +1457,18 @@ function copyLink() {
     <li class="nav-item compact">
     <a class="nav-link" href="https://soundcloud.com/abdelkareem-elkhateb">
       <i class="bi bi-cloud" role="img" aria-label="ساوند كلاود">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/@abdelkareemai">
+      <i class="bi bi-youtube" role="img" aria-label="يوتيوب">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://t.me/+xRY72sYuiwc0ZGY8">
+      <i class="bi bi-telegram" role="img" aria-label="تيليجرام">
 </i> 
     </a>
   </li>  

@@ -52,9 +52,9 @@ body.quarto-light,
     --mark-bg: hsl(var(--accent-hsl) / 0.18);
     --mark-text: var(--tx);
 
-    --font: "Amiri", "Noto Naskh Arabic", "Noto Sans Arabic", "Geeza Pro", "Segoe UI", serif;
-    --font-reading: "Amiri", "Noto Naskh Arabic", "Geeza Pro", serif;
-    --font-arabic: "Amiri", "Noto Naskh Arabic", "Noto Sans Arabic", "Geeza Pro", "Segoe UI", serif;
+    --font: "Noto Sans Arabic UI", "Noto Sans Arabic", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-reading: "Noto Naskh Arabic", "Noto Sans Arabic", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-arabic: "Noto Naskh Arabic", "Noto Sans Arabic", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
     --mono: "JetBrains Mono", "SFMono-Regular", "Menlo", "Consolas", "Liberation Mono", monospace;
 }
 
@@ -3393,4 +3393,106 @@ html.quarto-dark .skill-card:hover {
 
 [dir="rtl"] .education-card {
     text-align: start;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   2026 refinement: clearer type, tighter entry points, one card language
+   ═══════════════════════════════════════════════════════════ */
+
+html.quarto-light,
+body.quarto-light,
+.quarto-light {
+    --accent-hsl: 184 74% 30%;
+    --accent-hover: hsl(184 74% 25%);
+}
+
+/* Avoid stacking the document, wrapper, and hero top padding on the homepage. */
+#quarto-document-content:has(.page-wrapper) {
+    padding-top: 0.75rem;
+}
+
+.page-wrapper {
+    padding-top: 0.25rem;
+}
+
+.hero-modern {
+    padding: 1rem 0 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-name {
+    letter-spacing: 0;
+}
+
+.home-about-link {
+    margin: 1rem 0 2rem;
+    text-align: center;
+    font-family: var(--font) !important;
+    font-size: 0.92rem;
+}
+
+.home-about-link a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.home-about-link a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+/* Long-form Arabic gets a calmer Naskh rhythm; controls stay sans-serif. */
+#quarto-document-content,
+article,
+.quarto-body {
+    font-size: clamp(18px, 1.7vw, 20px);
+    line-height: 1.85;
+    letter-spacing: 0;
+}
+
+.navbar,
+.quarto-title,
+.quarto-title-meta,
+#quarto-margin-sidebar,
+.quarto-listing,
+.btn,
+button,
+input,
+select,
+textarea {
+    font-family: var(--font);
+}
+
+/* Keep cards editorial and consistent instead of mixing elevated and flat UI. */
+.focus-card,
+.project-card-modern,
+.timeline-content,
+.education-card,
+.section-card,
+.quarto-grid-item,
+.quarto-listing-default .quarto-post {
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+.focus-card:hover,
+.project-card-modern:hover,
+.timeline-content:hover,
+.education-card:hover,
+.section-card:hover,
+.quarto-grid-item:hover,
+.quarto-listing-default .quarto-post:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: hsl(var(--accent-hsl) / 0.45);
+}
+
+@media (max-width: 640px) {
+    #quarto-document-content:has(.page-wrapper) {
+        padding-top: 0.35rem;
+    }
+
+    .hero-modern {
+        padding-top: 0.5rem;
+    }
 }

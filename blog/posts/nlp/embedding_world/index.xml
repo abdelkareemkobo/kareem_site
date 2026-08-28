@@ -34,7 +34,7 @@
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/nlp/embedding_world/images/sakr.jpg" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/blog/posts/nlp/embedding_world/sakr.jpg" class="img-fluid figure-img"></p>
 <figcaption>sakr arabic llm 50 million</figcaption>
 </figure>
 </div>
@@ -391,7 +391,7 @@
 <p>Built on <a href="https://github.com/lightonai/colgrep">ColGrep</a> for indexing, <a href="https://lisette.answer.ai">Lisette</a> for LLM orchestration, and <a href="https://fastht.ml">FastHTML</a> for the UI.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://kareemai.com/blog/posts/nlp/embedding_world/images/pylate_hyperun.webp" class="img-fluid figure-img"></p>
+<p><img src="https://kareemai.com/blog/posts/nlp/embedding_world/pylate_hyperun.webp" class="img-fluid figure-img"></p>
 <figcaption>pylate_hyperun</figcaption>
 </figure>
 </div>

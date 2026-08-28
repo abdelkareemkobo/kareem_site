@@ -1,44 +1,52 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://kareemai.com/</loc>
-    <lastmod>2026-07-06T10:53:22.038Z</lastmod>
+    <loc>https://kareemai.com/about.html</loc>
+    <lastmod>2026-08-28T19:23:17.840Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/til/tils/LiveKitINtro.html</loc>
-    <lastmod>2026-07-25T15:56:56.868Z</lastmod>
+    <loc>https://kareemai.com/publish.html</loc>
+    <lastmod>2026-07-04T16:55:36.498Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/til/tils/2025-05-21-til.html</loc>
-    <lastmod>2026-06-05T11:12:18.681Z</lastmod>
+    <loc>https://kareemai.com/papers.html</loc>
+    <lastmod>2026-07-04T16:55:32.662Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/til/tils/2025-05-25-til.html</loc>
-    <lastmod>2026-06-05T11:21:05.291Z</lastmod>
+    <loc>https://kareemai.com/til/tils/start_youtube_channel_as_AI_developer.html</loc>
+    <lastmod>2026-08-17T10:14:07.089Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/til/tils/2025-10-21.html</loc>
-    <lastmod>2026-05-29T09:08:43.374Z</lastmod>
+    <loc>https://kareemai.com/til/tils/2025-05-19-til.html</loc>
+    <lastmod>2026-05-23T04:12:57.108Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/til/tils/2025-12-14.html</loc>
-    <lastmod>2026-05-29T09:08:43.998Z</lastmod>
+    <loc>https://kareemai.com/til/tils/2025-05-23-til.html</loc>
+    <lastmod>2026-05-23T03:58:10.897Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/til/tils/2025-05-28-til.html</loc>
-    <lastmod>2026-05-29T09:08:44.733Z</lastmod>
+    <loc>https://kareemai.com/til/tils/2025-12-15.html</loc>
+    <lastmod>2026-08-17T10:14:07.089Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/til/tils/2025-05-20-til.html</loc>
-    <lastmod>2026-05-14T08:56:15.529Z</lastmod>
+    <loc>https://kareemai.com/til/tils/2025-12-13.html</loc>
+    <lastmod>2026-08-17T10:14:07.089Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/til/tils/2025-06-06-til.html</loc>
-    <lastmod>2026-06-05T11:21:11.631Z</lastmod>
+    <loc>https://kareemai.com/til/tils/2025-05-17-til.html</loc>
+    <lastmod>2026-06-05T11:12:10.187Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/til/tils/2025-05-18-til.html</loc>
+    <lastmod>2026-05-21T23:51:05.130Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/til/</loc>
+    <lastmod>2026-07-04T17:44:20.309Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/tools_reviews/super_productivity_app.html</loc>
-    <lastmod>2026-05-14T08:56:23.223Z</lastmod>
+    <lastmod>2026-08-17T10:14:07.088Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/minishlab/pyversity_qdrant.html</loc>
@@ -46,11 +54,11 @@
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/on_device/litert.html</loc>
-    <lastmod>2026-06-05T11:14:32.878Z</lastmod>
+    <lastmod>2026-08-17T10:14:07.087Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/ml_life/hacker_rank_ai_intereviw.html</loc>
-    <lastmod>2026-06-05T11:20:01.739Z</lastmod>
+    <lastmod>2026-08-17T10:14:07.086Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/seo/the_curse_of_seo.html</loc>
@@ -62,19 +70,19 @@
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/math/math_skills_for_AI.html</loc>
-    <lastmod>2026-05-14T08:56:17.485Z</lastmod>
+    <lastmod>2026-08-17T10:19:22.607Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/speech_recognition/muaalm_quran_chance.html</loc>
-    <lastmod>2026-05-14T08:56:22.774Z</lastmod>
+    <lastmod>2026-08-17T10:14:07.088Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/nlp/Dinvo3%20for%20Arabic%20Scripts.html</loc>
-    <lastmod>2026-06-08T17:21:23.324Z</lastmod>
+    <lastmod>2026-08-17T10:14:07.086Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/nlp/gemma_tool_calling.html</loc>
-    <lastmod>2026-06-05T11:20:45.298Z</lastmod>
+    <lastmod>2026-08-17T10:19:22.607Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/nlp/embedding_world/late_interaction.html</loc>
@@ -82,7 +90,7 @@
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/nlp/embedding_world/hyperrun.html</loc>
-    <lastmod>2026-06-05T11:22:26.813Z</lastmod>
+    <lastmod>2026-08-17T10:19:22.607Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html</loc>
@@ -110,51 +118,51 @@
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/mteb_encoding/my_little_dargon.html</loc>
-    <lastmod>2026-05-14T09:00:36.005Z</lastmod>
+    <lastmod>2026-08-17T10:14:07.086Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/fl/what_is_federated_learning.html</loc>
-    <lastmod>2026-05-14T08:56:15.889Z</lastmod>
+    <lastmod>2026-08-17T10:19:22.607Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/products_reviews/Huawei%20freebuds%205i.html</loc>
-    <lastmod>2026-05-14T08:56:19.836Z</lastmod>
+    <lastmod>2026-08-17T10:14:07.087Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/products_reviews/Building_AI_PC_In_Egypt.html</loc>
-    <lastmod>2026-06-05T11:21:37.543Z</lastmod>
+    <lastmod>2026-08-17T10:19:22.608Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/products_reviews/Huawei_watch_gt_4_experience.html</loc>
-    <lastmod>2026-05-14T08:56:20.455Z</lastmod>
+    <lastmod>2026-08-17T10:19:22.608Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/courses/havrard%20CS197%20AI%20research%20experiences.html</loc>
-    <lastmod>2026-05-14T08:56:15.530Z</lastmod>
+    <lastmod>2026-08-17T10:14:07.085Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/feed.html</loc>
-    <lastmod>2026-07-04T16:40:00.599Z</lastmod>
+    <lastmod>2026-08-28T19:31:25.071Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/products_reviews/Huawei_mate_pad_11.html</loc>
-    <lastmod>2026-05-14T08:56:20.856Z</lastmod>
+    <lastmod>2026-08-17T10:14:07.088Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/products_reviews/Huawei%20freebuds%207i.html</loc>
-    <lastmod>2026-06-07T18:23:15.433Z</lastmod>
+    <lastmod>2026-08-17T10:19:22.608Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/products_reviews/one_plus_pad_3.html</loc>
-    <lastmod>2026-05-23T04:43:21.333Z</lastmod>
+    <lastmod>2026-08-17T10:19:22.609Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html</loc>
-    <lastmod>2026-05-14T08:56:15.530Z</lastmod>
+    <lastmod>2026-08-17T10:14:07.086Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/mteb_encoding/tiny-gte_transformer_model.html</loc>
-    <lastmod>2026-06-05T11:13:59.969Z</lastmod>
+    <lastmod>2026-08-17T10:14:07.086Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/life_style/why_I_am_blogging.html</loc>
@@ -170,11 +178,11 @@
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/ds_and_algo/master_ds.html</loc>
-    <lastmod>2026-05-14T08:56:15.531Z</lastmod>
+    <lastmod>2026-08-17T10:14:07.085Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/nlp/embedding_world/</loc>
-    <lastmod>2026-05-29T09:08:06.984Z</lastmod>
+    <lastmod>2026-08-28T19:31:25.110Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html</loc>
@@ -182,86 +190,86 @@
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/nlp/embedding_world/vector_database_book.html</loc>
-    <lastmod>2026-05-29T09:08:59.509Z</lastmod>
+    <lastmod>2026-08-17T10:14:07.087Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/nlp/embedding_world/hyperun_fasthtml.html</loc>
-    <lastmod>2026-05-29T09:08:45.952Z</lastmod>
+    <lastmod>2026-08-17T10:14:07.087Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/nlp/embedding_world/sakr_v1.html</loc>
-    <lastmod>2026-07-25T16:42:32.361Z</lastmod>
+    <lastmod>2026-08-17T10:19:22.607Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/nlp/TTS%20Architecture%20V1.html</loc>
-    <lastmod>2026-06-07T19:34:01.504Z</lastmod>
+    <lastmod>2026-08-17T10:14:07.086Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/dspy/Opencode.html</loc>
-    <lastmod>2026-06-05T11:12:58.932Z</lastmod>
+    <lastmod>2026-08-17T10:14:07.085Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/speech_recognition/my_dream_job_at_tarteel.html</loc>
-    <lastmod>2026-06-05T11:20:32.848Z</lastmod>
+    <lastmod>2026-08-17T10:14:07.088Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/seo/seo_rat_journey.html</loc>
-    <lastmod>2026-06-05T11:13:32.668Z</lastmod>
+    <lastmod>2026-08-17T10:14:07.088Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/seo/google_ads_black_box.html</loc>
-    <lastmod>2026-05-14T09:00:39.767Z</lastmod>
+    <lastmod>2026-08-17T10:14:07.088Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/ml_life/cv_of_failure.html</loc>
-    <lastmod>2026-05-29T09:07:41.394Z</lastmod>
+    <lastmod>2026-08-17T10:14:07.086Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/minishlab/ctranslate_maswray.html</loc>
-    <lastmod>2026-06-05T11:12:47.578Z</lastmod>
+    <lastmod>2026-08-17T10:19:22.607Z</lastmod>
   </url>
   <url>
     <loc>https://kareemai.com/blog/posts/minishlab/blog_zaraah.html</loc>
     <lastmod>2026-05-23T03:57:58.850Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/til/</loc>
-    <lastmod>2026-07-04T17:44:20.309Z</lastmod>
+    <loc>https://kareemai.com/blog/voice/arabic_turn_detection.html</loc>
+    <lastmod>2026-08-28T19:31:25.149Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/til/tils/2025-05-18-til.html</loc>
-    <lastmod>2026-05-21T23:51:05.130Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/til/tils/2025-05-17-til.html</loc>
-    <lastmod>2026-06-05T11:12:10.187Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kareemai.com/til/tils/2025-12-13.html</loc>
+    <loc>https://kareemai.com/til/tils/2025-06-06-til.html</loc>
     <lastmod>2026-06-05T11:21:11.631Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/til/tils/2025-12-15.html</loc>
-    <lastmod>2026-06-05T11:21:20.073Z</lastmod>
+    <loc>https://kareemai.com/til/tils/2025-05-20-til.html</loc>
+    <lastmod>2026-05-14T08:56:15.529Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/til/tils/2025-05-23-til.html</loc>
-    <lastmod>2026-05-23T03:58:10.897Z</lastmod>
+    <loc>https://kareemai.com/til/tils/2025-05-28-til.html</loc>
+    <lastmod>2026-05-29T09:08:44.733Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/til/tils/2025-05-19-til.html</loc>
-    <lastmod>2026-05-23T04:12:57.108Z</lastmod>
+    <loc>https://kareemai.com/til/tils/2025-12-14.html</loc>
+    <lastmod>2026-08-17T10:14:07.089Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/til/tils/start_youtube_channel_as_AI_developer.html</loc>
-    <lastmod>2026-07-04T16:40:12.544Z</lastmod>
+    <loc>https://kareemai.com/til/tils/2025-10-21.html</loc>
+    <lastmod>2026-08-17T10:14:07.088Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/papers.html</loc>
-    <lastmod>2026-07-04T16:55:32.662Z</lastmod>
+    <loc>https://kareemai.com/til/tils/2025-05-25-til.html</loc>
+    <lastmod>2026-06-05T11:21:05.291Z</lastmod>
   </url>
   <url>
-    <loc>https://kareemai.com/publish.html</loc>
-    <lastmod>2026-07-04T16:55:36.498Z</lastmod>
+    <loc>https://kareemai.com/til/tils/2025-05-21-til.html</loc>
+    <lastmod>2026-06-05T11:12:18.681Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/til/tils/LiveKitINtro.html</loc>
+    <lastmod>2026-08-17T10:14:07.089Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kareemai.com/</loc>
+    <lastmod>2026-08-28T19:32:57.675Z</lastmod>
   </url>
 </urlset>

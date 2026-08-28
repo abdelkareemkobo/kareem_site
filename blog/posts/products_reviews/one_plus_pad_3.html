@@ -340,41 +340,14 @@ window.addEventListener('scroll', () => {
 <span class="menu-text">أبحاث</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> <i class="bi bi-person" role="img">
+</i> 
+<span class="menu-text">عنّي</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../../../publish.html"> <i class="bi bi-book" role="img">
 </i> 
 <span class="menu-text">كتب</span></a>
-  </li>  
-</ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://t.me/+xRY72sYuiwc0ZGY8"> <i class="bi bi-telegram" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="https://www.youtube.com/@abdelkareemai"> <i class="bi bi-youtube" role="img">
-</i> 
-<span class="menu-text">فيديوهات</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="https://www.upwork.com/freelancers/~016a9fea792423bb9a"> <i class="bi bi-briefcase" role="img">
-</i> 
-<span class="menu-text">للتوظيف</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="https://gpuvec.com"> <i class="bi bi-cpu" role="img">
-</i> 
-<span class="menu-text">GPUVec</span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="../../../blog/feed.xml"> <i class="bi bi-rss" role="img" aria-label="خلاصة المدونة">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="../../../til/index.xml"> <i class="bi bi-rss" role="img" aria-label="خلاصة الملاحظات">
-</i> 
-<span class="menu-text"></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -480,7 +453,7 @@ window.addEventListener('scroll', () => {
 <p>The OnePlus Pad 3 packs the world’s fastest mobile CPU — the Snapdragon 8 Elite, 12GB RAM, a massive 12,140mAh battery, and a stunning 13.2-inch 3.4K 144Hz display in a 5.97mm ultra-slim metal body. On paper, it’s competitive with much more expensive tablets. But does it actually work for real productivity? That’s what this review is about.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/big_image.webp" class="img-fluid figure-img"></p>
+<p><img src="big_image.webp" class="img-fluid figure-img"></p>
 <figcaption>One plus pad 3 Review</figcaption>
 </figure>
 </div>
@@ -501,7 +474,7 @@ window.addEventListener('scroll', () => {
 <p>Battery life is exceptional. With a 12,140mAh battery (the highest capacity in its class), I can leave it on standby for days and it barely drains. OnePlus claims up to 18 hours of video playback and up to 6 hours of AAA gaming. In real-world use for work — coding, browsing, note-taking — I’m easily getting through a full day. This is exactly what I wanted: a device I don’t have to babysit with a charger.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/one_plus_storm_blue.webp" class="img-fluid figure-img"></p>
+<p><img src="one_plus_storm_blue.webp" class="img-fluid figure-img"></p>
 <figcaption>One plus Pad 3</figcaption>
 </figure>
 </div>
@@ -521,7 +494,7 @@ window.addEventListener('scroll', () => {
 <p>Charging is fast with the 80W SUPERVOOC charger (sold separately, unfortunately). It charges quickly enough that you can top up during a break and be good for hours.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/one_plus_battery.webp" class="img-fluid figure-img"></p>
+<p><img src="one_plus_battery.webp" class="img-fluid figure-img"></p>
 <figcaption>One plus pad 3 Battery</figcaption>
 </figure>
 </div>
@@ -599,7 +572,7 @@ window.addEventListener('scroll', () => {
 <p>The typing experience matters when you’re coding or writing for hours, so having a proper keyboard setup is worth the investment.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/one_plus_keyboard.webp" class="img-fluid figure-img"></p>
+<p><img src="one_plus_keyboard.webp" class="img-fluid figure-img"></p>
 <figcaption>oneplus pad 3 keyboard</figcaption>
 </figure>
 </div>
@@ -871,6 +844,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body;
   if (!root) return;
 
+  // Folding is useful inside long articles, but adds noise and empty space on
+  // the homepage and listing pages.
+  if (root.querySelector(".page-wrapper, .quarto-listing")) return;
+
   const headings = Array.from(root.querySelectorAll("h2, h3, h4"));
   const foldables = [];
 
@@ -985,6 +962,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector("#title-block-header");
   if (!header || header.querySelector(".post-hero-image")) return;
 
+  // Social preview images are metadata, not automatically page artwork.
+  // Only article-like pages with real author/date metadata receive a hero.
+  if (document.querySelector(".quarto-listing, .page-wrapper")) return;
+
   const metaImage =
     document.querySelector('meta[property="og:image"]') ||
     document.querySelector('meta[name="twitter:image"]');
@@ -993,7 +974,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector('meta[property="og:image:alt"]') ||
     document.querySelector('meta[name="twitter:image:alt"]');
 
-  if (!metaImage || !header.querySelector(".quarto-title-meta")) return;
+  if (!metaImage || !header.querySelector(".quarto-title-meta-contents")) return;
 
   const rawUrl = metaImage.getAttribute("content");
   if (!rawUrl) return;
@@ -1715,6 +1696,18 @@ function copyLink() {
     <li class="nav-item compact">
     <a class="nav-link" href="https://soundcloud.com/abdelkareem-elkhateb">
       <i class="bi bi-cloud" role="img" aria-label="ساوند كلاود">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/@abdelkareemai">
+      <i class="bi bi-youtube" role="img" aria-label="يوتيوب">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://t.me/+xRY72sYuiwc0ZGY8">
+      <i class="bi bi-telegram" role="img" aria-label="تيليجرام">
 </i> 
     </a>
   </li>  

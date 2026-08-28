@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="kareem">
-<meta name="description" content="Sharing my thoughts about my dream to work at Tarteel on Quran as Machine learning Engineer">
+<meta name="description" content="كيف يكتشف المساعد الصوتي أن المتحدث أنهى دوره؟ شرح لطرق اكتشاف نهاية الكلام، من الصمت وVAD إلى النماذج التي تفهم النص والصوت معاً.">
 
-<title>My Dream Job at Tarteel: ML Engineer’s Journey – عبدالكريم الخطيب</title>
+<title>كيف يعرف المساعد الصوتي أنك انتهيت من الكلام؟ – عبدالكريم الخطيب</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -28,28 +28,28 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js" defer></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js" defer></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js" defer></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js" defer></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js" defer></script>
-<meta name="quarto:offset" content="../../../">
-<link href="../../../favicon.ico" rel="icon">
-<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module" defer></script>
-<script src="../../../site_libs/quarto-html/popper.min.js" defer></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js" defer></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js" defer></script>
-<link rel="preload" as="style" href="../../../site_libs/bootstrap/bootstrap-4147375aad28e86e0c0b867c5ec42731.min.css">
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<script src="../../site_libs/quarto-nav/quarto-nav.js" defer></script>
+<script src="../../site_libs/clipboard/clipboard.min.js" defer></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js" defer></script>
+<script src="../../site_libs/quarto-search/fuse.min.js" defer></script>
+<script src="../../site_libs/quarto-search/quarto-search.js" defer></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module" defer></script>
+<script src="../../site_libs/quarto-html/popper.min.js" defer></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js" defer></script>
+<script src="../../site_libs/quarto-html/anchor.min.js" defer></script>
+<link rel="preload" as="style" href="../../site_libs/bootstrap/bootstrap-4147375aad28e86e0c0b867c5ec42731.min.css">
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles" media="print" onload="this.media='all'">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles" media="print" onload="this.media='all'">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js" defer></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-4147375aad28e86e0c0b867c5ec42731.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-0c33f1f559f04da1bcee1516f29a3f94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark" media="print" onload="this.media='all'">
-<link href="../../../site_libs/bootstrap/bootstrap-4147375aad28e86e0c0b867c5ec42731.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light" media="print" onload="this.media='all'">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles" media="print" onload="this.media='all'">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles" media="print" onload="this.media='all'">
+<script src="../../site_libs/bootstrap/bootstrap.min.js" defer></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-4147375aad28e86e0c0b867c5ec42731.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-0c33f1f559f04da1bcee1516f29a3f94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark" media="print" onload="this.media='all'">
+<link href="../../site_libs/bootstrap/bootstrap-4147375aad28e86e0c0b867c5ec42731.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light" media="print" onload="this.media='all'">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -86,7 +86,6 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 </script>
-<style>html{ scroll-behavior: smooth; }</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="dns-prefetch" href="https://fonts.googleapis.com">
@@ -96,18 +95,48 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 <link rel="preconnect" href="https://giscus.app">
 <link rel="dns-prefetch" href="https://giscus.app">
 <meta name="robots" content="index, follow">
-<meta property="og:title" content="My Dream Job at Tarteel: ML Engineer’s Journey – عبدالكريم الخطيب">
-<meta property="og:description" content="Sharing my thoughts about my dream to work at Tarteel on Quran as Machine learning Engineer">
-<meta property="og:image" content="https://kareemai.com/blog/posts/speech_recognition/images/tarteel_ai.webp">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "كيف يعرف المساعد الصوتي أنك انتهيت من الكلام؟",
+  "description": "كيف يكتشف المساعد الصوتي أن المتحدث أنهى دوره؟ شرح لطرق اكتشاف نهاية الكلام، من الصمت وVAD إلى النماذج التي تفهم النص والصوت معاً.",
+  "author": {"@type": "Person", "name": "kareem"},
+  "datePublished": "28 أغسطس 2026",
+  "image": "Pasted image 20260828214126.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://kareemai.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Kareem Elkhateb",
+    "url": "https://kareemai.com"
+  }
+}
+</script>
+
+
+<link rel="stylesheet" href="../../shimmering-fonts.css">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="كيف يعرف المساعد الصوتي أنك انتهيت من الكلام؟ – عبدالكريم الخطيب">
+<meta property="og:description" content="كيف يكتشف المساعد الصوتي أن المتحدث أنهى دوره؟ شرح لطرق اكتشاف نهاية الكلام، من الصمت وVAD إلى النماذج التي تفهم النص والصوت معاً.">
+<meta property="og:image" content="https://kareemai.com/blog/voice/Pasted image 20260828214126.png">
 <meta property="og:site_name" content="عبدالكريم الخطيب">
+<meta property="og:image:height" content="1496">
+<meta property="og:image:width" content="2274">
 <meta property="og:locale" content="ar_SA">
-<meta name="twitter:title" content="My Dream Job at Tarteel: ML Engineer’s Journey – عبدالكريم الخطيب">
-<meta name="twitter:description" content="Sharing my thoughts about my dream to work at Tarteel on Quran as Machine learning Engineer">
-<meta name="twitter:image" content="https://kareemai.com/blog/posts/speech_recognition/images/tarteel_ai.webp">
+<meta name="twitter:title" content="كيف يعرف المساعد الصوتي أنك انتهيت من الكلام؟ – عبدالكريم الخطيب">
+<meta name="twitter:description" content="كيف يكتشف المساعد الصوتي أن المتحدث أنهى دوره؟ شرح لطرق اكتشاف نهاية الكلام، من الصمت وVAD إلى النماذج التي تفهم النص والصوت معاً.">
+<meta name="twitter:image" content="https://kareemai.com/blog/voice/Pasted image 20260828214126.png">
 <meta name="twitter:creator" content="@AbdelkareemElk1">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://kareemai.com/blog/posts/speech_recognition/my_dream_job_at_tarteel.html">
-</head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<meta name="twitter:image-height" content="1496">
+<meta name="twitter:image-width" content="2274">
+<link rel="canonical" href="https://kareemai.com/blog/voice/arabic_turn_detection.html">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -269,45 +298,7 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
     } else {
       toggleColorMode(false);
     }
-  </script><div class="reading-progress" id="reading-progress"></div>
-
-<script>
-window.addEventListener('scroll', () => {
-  const article = document.querySelector('article') || document.body;
-  const scrollTop = window.scrollY;
-  const docHeight = article.scrollHeight - window.innerHeight;
-  const progress = Math.min((scrollTop / docHeight) * 100, 100);
-  document.getElementById('reading-progress').style.width = progress + '%';
-});
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "My Dream Job at Tarteel: ML Engineer’s Journey",
-  "description": "Sharing my thoughts about my dream to work at Tarteel on Quran as Machine learning Engineer",
-  "author": {"@type": "Person", "name": "kareem"},
-  "datePublished": "18 مارس 2025",
-  "image": "images/tarteel_ai.webp",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://kareemai.com"
-  },
-  "publisher": {
-    "@type": "Person",
-    "name": "Kareem Elkhateb",
-    "url": "https://kareemai.com"
-  }
-}
-</script>
-
-
-<link rel="stylesheet" href="../../../shimmering-fonts.css">
-<link rel="stylesheet" href="../../../styles.css">
-
-
-
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -320,32 +311,32 @@ window.addEventListener('scroll', () => {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../index.html"> <i class="bi bi-house" role="img">
+    <a class="nav-link" href="../../index.html"> <i class="bi bi-house" role="img">
 </i> 
 <span class="menu-text">الرئيسية</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../blog/feed.html"> <i class="bi bi-journal-text" role="img">
+    <a class="nav-link" href="../../blog/feed.html"> <i class="bi bi-journal-text" role="img">
 </i> 
 <span class="menu-text">المدونة</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../til/index.html"> <i class="bi bi-lightbulb" role="img">
+    <a class="nav-link" href="../../til/index.html"> <i class="bi bi-lightbulb" role="img">
 </i> 
 <span class="menu-text">ملاحظات</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../papers.html"> <i class="bi bi-file-text" role="img">
+    <a class="nav-link" href="../../papers.html"> <i class="bi bi-file-text" role="img">
 </i> 
 <span class="menu-text">أبحاث</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../about.html"> <i class="bi bi-person" role="img">
+    <a class="nav-link" href="../../about.html"> <i class="bi bi-person" role="img">
 </i> 
 <span class="menu-text">عنّي</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../publish.html"> <i class="bi bi-book" role="img">
+    <a class="nav-link" href="../../publish.html"> <i class="bi bi-book" role="img">
 </i> 
 <span class="menu-text">كتب</span></a>
   </li>  
@@ -366,14 +357,25 @@ window.addEventListener('scroll', () => {
     <h2 id="toc-title">المحتويات</h2>
    
   <ul>
-  <li><a href="#why-tarteel-not-fang" id="toc-why-tarteel-not-fang" class="nav-link active" data-scroll-target="#why-tarteel-not-fang">Why Tarteel, Not FANG?</a></li>
-  <li><a href="#tarteels-vision" id="toc-tarteels-vision" class="nav-link" data-scroll-target="#tarteels-vision">Tarteel’s Vision</a></li>
-  <li><a href="#machine-learning-engineer-at-tarteel" id="toc-machine-learning-engineer-at-tarteel" class="nav-link" data-scroll-target="#machine-learning-engineer-at-tarteel">Machine Learning Engineer at Tarteel</a></li>
-  <li><a href="#skills-i-need-to-master" id="toc-skills-i-need-to-master" class="nav-link" data-scroll-target="#skills-i-need-to-master">Skills I Need to Master</a></li>
-  <li><a href="#my-current-plan" id="toc-my-current-plan" class="nav-link" data-scroll-target="#my-current-plan">My Current Plan</a>
+  <li><a href="#ماهو-end-of-turn-في-تطبيقات-المحادثة-الصوتية" id="toc-ماهو-end-of-turn-في-تطبيقات-المحادثة-الصوتية" class="nav-link active" data-scroll-target="#ماهو-end-of-turn-في-تطبيقات-المحادثة-الصوتية">ماهو End of Turn في تطبيقات المحادثة الصوتية</a></li>
+  <li><a href="#كيفية-بناء-هذا-النوع-من-النماذج" id="toc-كيفية-بناء-هذا-النوع-من-النماذج" class="nav-link" data-scroll-target="#كيفية-بناء-هذا-النوع-من-النماذج">كيفية بناء هذا النوع من النماذج ؟</a>
   <ul class="collapse">
-  <li><a href="#read-more" id="toc-read-more" class="nav-link" data-scroll-target="#read-more">Read More</a></li>
-  <li><a href="#social-media" id="toc-social-media" class="nav-link" data-scroll-target="#social-media">Social Media</a></li>
+  <li><a href="#الإعتماد-علي-الصمت-فقط" id="toc-الإعتماد-علي-الصمت-فقط" class="nav-link" data-scroll-target="#الإعتماد-علي-الصمت-فقط">الإعتماد علي الصمت فقط</a></li>
+  <li><a href="#نموذج-يعتمد-علي-فهم-النص" id="toc-نموذج-يعتمد-علي-فهم-النص" class="nav-link" data-scroll-target="#نموذج-يعتمد-علي-فهم-النص">نموذج يعتمد علي فهم النص</a></li>
+  <li><a href="#نموذج-يعتمد-علي-الصوت" id="toc-نموذج-يعتمد-علي-الصوت" class="nav-link" data-scroll-target="#نموذج-يعتمد-علي-الصوت">نموذج يعتمد علي الصوت</a></li>
+  </ul></li>
+  <li><a href="#نموذج-livekit-v1-لاكتشاف-نهاية-الكلام" id="toc-نموذج-livekit-v1-لاكتشاف-نهاية-الكلام" class="nav-link" data-scroll-target="#نموذج-livekit-v1-لاكتشاف-نهاية-الكلام">نموذج LiveKit v1 لاكتشاف نهاية الكلام</a>
+  <ul class="collapse">
+  <li><a href="#كيف-يعمل-livekit-v1" id="toc-كيف-يعمل-livekit-v1" class="nav-link" data-scroll-target="#كيف-يعمل-livekit-v1">كيف يعمل LiveKit v1؟</a></li>
+  <li><a href="#لماذا-هذا-أفضل-من-نموذج-النص" id="toc-لماذا-هذا-أفضل-من-نموذج-النص" class="nav-link" data-scroll-target="#لماذا-هذا-أفضل-من-نموذج-النص">لماذا هذا أفضل من نموذج النص؟</a></li>
+  <li><a href="#هل-livekit-v1-يعمل-وحده" id="toc-هل-livekit-v1-يعمل-وحده" class="nav-link" data-scroll-target="#هل-livekit-v1-يعمل-وحده">هل LiveKit v1 يعمل وحده؟</a></li>
+  </ul></li>
+  <li><a href="#كيف-يعمل-livekit-v1-ونماذج-eou-الصوتية" id="toc-كيف-يعمل-livekit-v1-ونماذج-eou-الصوتية" class="nav-link" data-scroll-target="#كيف-يعمل-livekit-v1-ونماذج-eou-الصوتية">كيف يعمل LiveKit v1 ونماذج EOU الصوتية؟</a>
+  <ul class="collapse">
+  <li><a href="#الجزء-الذي-يفهم-الكلام-والمعنى" id="toc-الجزء-الذي-يفهم-الكلام-والمعنى" class="nav-link" data-scroll-target="#الجزء-الذي-يفهم-الكلام-والمعنى">الجزء الذي يفهم الكلام والمعنى</a></li>
+  <li><a href="#الجزء-الذي-يفهم-خصائص-الصوت" id="toc-الجزء-الذي-يفهم-خصائص-الصوت" class="nav-link" data-scroll-target="#الجزء-الذي-يفهم-خصائص-الصوت">الجزء الذي يفهم خصائص الصوت</a></li>
+  <li><a href="#دمج-النتائج-واتخاذ-القرار" id="toc-دمج-النتائج-واتخاذ-القرار" class="nav-link" data-scroll-target="#دمج-النتائج-واتخاذ-القرار">دمج النتائج واتخاذ القرار</a></li>
+  <li><a href="#ما-الفرق-بين-v1-و-v1-mini" id="toc-ما-الفرق-بين-v1-و-v1-mini" class="nav-link" data-scroll-target="#ما-الفرق-بين-v1-و-v1-mini">ما الفرق بين v1 و v1-mini؟</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -384,20 +386,16 @@ window.addEventListener('scroll', () => {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">My Dream Job at Tarteel: ML Engineer’s Journey</h1>
+<h1 class="title">كيف يعرف المساعد الصوتي أنك انتهيت من الكلام؟</h1>
   <div class="quarto-categories">
     <div class="quarto-category">blogging</div>
-    <div class="quarto-category">tarteel</div>
-    <div class="quarto-category">speech_recognition</div>
-    <div class="quarto-category">machine_learning</div>
-    <div class="quarto-category">quran</div>
-    <div class="quarto-category">job</div>
+    <div class="quarto-category">til</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Sharing my thoughts about my dream to work at Tarteel on Quran as Machine learning Engineer
+    كيف يكتشف المساعد الصوتي أن المتحدث أنهى دوره؟ شرح لطرق اكتشاف نهاية الكلام، من الصمت وVAD إلى النماذج التي تفهم النص والصوت معاً.
   </div>
 </div>
 
@@ -414,7 +412,7 @@ window.addEventListener('scroll', () => {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">18 مارس 2025</p>
+      <p class="date">28 أغسطس 2026</p>
     </div>
   </div>
   
@@ -426,91 +424,227 @@ window.addEventListener('scroll', () => {
 </header>
 
 
-<section id="why-tarteel-not-fang" class="level2">
-<h2 class="anchored" data-anchor-id="why-tarteel-not-fang">Why Tarteel, Not FANG?</h2>
+<section id="ماهو-end-of-turn-في-تطبيقات-المحادثة-الصوتية" class="level2">
+<h2 class="anchored" data-anchor-id="ماهو-end-of-turn-في-تطبيقات-المحادثة-الصوتية">ماهو End of Turn في تطبيقات المحادثة الصوتية</h2>
+<p>من أكثر التجارب المزعجة عند الحديث مع نماذج الذكاء الإصطناعي الصوتية عندما تتحدث عن شئ ما مثل: كنت عايز اخد رائيك في موضوع مهم و… تقوم ببعض الهمهمة او السكوت الخفيف فتجد ان النموذج بدا في مقاطعتك قبل ان تنهي الجملة.</p>
+<p>تحديد الأدوار في الحديث : ليست هل انتهي الشخص من إصدار الصوت بل هل انتهي من فكرته؟ أم انه سيتابع بعد لحظات؟</p>
+<p>مثلاً، إذا قلت:</p>
+<p>“أريد أن أحجز طاولة لأربعة أشخاص…”</p>
+<p>فالمساعد يجب أن ينتظر.</p>
+<p>أما إذا قلت:</p>
+<p>“أريد أن أحجز طاولة لأربعة أشخاص الساعة الثامنة.”</p>
+<p>فهنا من الطبيعي أن يبدأ بالرد.</p>
+<p>الفرق بين الحالتين لا يعتمد على الكلمات فقط. الإنسان يفهم من نبرة الصوت، وطول التوقف، والتنفس، وطريقة إنهاء الجملة، هل المتحدث انتهى أم لا.</p>
+<p>بدون ذلك تصبح المحادثة غير طبيعية وسرعان ما تتوقف عن التحدث.</p>
+</section>
+<section id="كيفية-بناء-هذا-النوع-من-النماذج" class="level2">
+<h2 class="anchored" data-anchor-id="كيفية-بناء-هذا-النوع-من-النماذج">كيفية بناء هذا النوع من النماذج ؟</h2>
+<p>هناك أكثر من طريقة منها :</p>
+<section id="الإعتماد-علي-الصمت-فقط" class="level3">
+<h3 class="anchored" data-anchor-id="الإعتماد-علي-الصمت-فقط">الإعتماد علي الصمت فقط</h3>
+<p>هذه أبسط طريقة: إذا لم يوجد صوت لفترة محددة، يفترض النظام أن المستخدم انتهى.</p>
+<p>هي سهلة، لكنها تسبب مقاطعات كثيرة، خصوصاً في الكلام الطبيعي.</p>
+<p>أمثلة : Vad Models</p>
+</section>
+<section id="نموذج-يعتمد-علي-فهم-النص" class="level3">
+<h3 class="anchored" data-anchor-id="نموذج-يعتمد-علي-فهم-النص">نموذج يعتمد علي فهم النص</h3>
+<p>يعمل النماذج هنا علي التفريغ الصوتي للكلام ويسال هل انتهي المستخدم من السؤال أم لا؟</p>
+<p>لو كانت الإجابة نعم انتهي يبدا النموذج الاخر في الرد اما لو كانت لا لما ينتهي والجملة ليست مكتملة ينتظر حتي تكتمل الجملة.</p>
+<p>هذه الطريقة سريعة وأسهل ولكنها ليست دقيقة بالقدر الكافي بسبب غياب نبرة الصوت وطريقة الحديث والهمهه في الحديث. مثلا لو قلت : عايز حاجه سقعه. بصيغة أمر فلقدت انتهيت من الجملة.</p>
+<p>اما لو قلت عايز حاجه سقعه ااااا . فمازلت سوف احدد نوع هذا المشروب.</p>
+<p>أمثلة : BertBasd, Small llm models</p>
+</section>
+<section id="نموذج-يعتمد-علي-الصوت" class="level3">
+<h3 class="anchored" data-anchor-id="نموذج-يعتمد-علي-الصوت">نموذج يعتمد علي الصوت</h3>
+<p>هذا النوع هو الأكثر دقة والأكثر تكلفة من ناحية التدريب و تكلفة التشغيل. يعتمد علي المحتوي الصوت (الكلام) ونبرة الصوت وانخفاضها في نهاية الجملة و طول الكلمة الأخيرة والتنفس والإيقاع بين الكلمات.</p>
+<p>أمثلة : نماذج LiveKit V1</p>
+</section>
+</section>
+<section id="نموذج-livekit-v1-لاكتشاف-نهاية-الكلام" class="level2">
+<h2 class="anchored" data-anchor-id="نموذج-livekit-v1-لاكتشاف-نهاية-الكلام">نموذج LiveKit v1 لاكتشاف نهاية الكلام</h2>
+<p>بعد أن فهمنا أن الصمت وحده لا يكفي، وأن فهم النص وحده لا يكفي أيضاً، نصل إلى نوع أقوى من النماذج: نموذج يستمع إلى <strong>الصوت نفسه</strong>.</p>
+<p>أحد الأمثلة على هذا النوع هو <strong>LiveKit Turn Detector v1</strong>.</p>
+<p>هذا النموذج يحاول أن يجيب على سؤال واحد:</p>
+<blockquote class="blockquote">
+<p>هل المستخدم انتهى من دوره في الحديث، أم أنه فقط توقف لحظة وسيكمل؟</p>
+</blockquote>
+<p>الفرق المهم بينه وبين النموذج المعتمد على النص هو أنه لا ينتظر تحويل الكلام إلى نص كامل ثم يقرر.</p>
+<p>بدلاً من ذلك، يأخذ الصوت مباشرة ويحاول فهم:</p>
 <ul>
-<li>As a Muslim, my ultimate goal isn’t just to accumulate wealth or knowledge for their own sake. I’m guided by broader concepts like taqwa (God-consciousness), righteous deeds, and sincere intentions.</li>
-<li>With only one short life to live, I want to make the most of it in the best way possible.</li>
-<li>Working at big tech companies as a programmer offers good financial rewards and significant technical growth, along with practical experience,though it comes with its fair share of challenges. However, it also means operating under the umbrella of foreign companies with their own agendas and ideologies. Take the major players like Google, Facebook, X, and Amazon, for example.</li>
-<li>Their leaders, in one way or another, have supported the occupation of Gaza, contributed to the suffering of children, and restricted our freedom of expression.</li>
-<li>Our accounts get banned, our voices silenced, and these companies provide both material and moral support to oppressive entities with every means at their disposal.</li>
-<li>I’m not denying that working for such companies might be permissible under certain Islamic legal perspectives, but personally, I have no desire to be part of them. So, where do I want to go instead? Do I even have rules?</li>
-<li>The truth is, I do have specific criteria for the kind of work environment I want to invest my time in. Here’s what I’m looking for:</li>
-<li>A workplace that respects my faith, including what’s halal and haram, and honors religious practices.
+<li>ما الذي يقوله المستخدم؟</li>
+<li>كيف يقوله؟</li>
+<li>هل نبرة صوته تشير إلى نهاية؟</li>
+<li>هل التوقف طبيعي أم يبدو كأنه تفكير أو تردد؟</li>
+<li>هل الإيقاع في آخر الجملة يوحي بأنه سيكمل؟</li>
+</ul>
+<p>مثلاً تخيل أن المستخدم قال:</p>
+<blockquote class="blockquote">
+<p>عايز أطلب بيتزا كبيرة…</p>
+</blockquote>
+<p>في هذه اللحظة، النص وحده لا يكفي.</p>
+<p>قد يكون المستخدم انتهى فعلاً، وقد يكون سيكمل بعد قليل:</p>
+<blockquote class="blockquote">
+<p>عايز أطلب بيتزا كبيرة… ومعاها بطاطس.</p>
+</blockquote>
+<p>الكلمات التي وصلت للنظام متشابهة في الحالتين.<br>
+لكن الإنسان يستطيع غالباً معرفة الفرق من طريقة النطق.</p>
+<p>إذا كانت نبرة الصوت نازلة في النهاية، والكلمة الأخيرة انتهت بهدوء، فقد يكون الشخص انتهى.</p>
+<p>أما إذا كانت النبرة ما زالت مرتفعة، أو يوجد تردد، أو مدّ في آخر كلمة، أو توقف قصير بطريقة غير طبيعية، فغالباً الشخص ما زال يكمل فكرته.</p>
+<section id="كيف-يعمل-livekit-v1" class="level3">
+<h3 class="anchored" data-anchor-id="كيف-يعمل-livekit-v1">كيف يعمل LiveKit v1؟</h3>
+<p>يمكن أن نتخيله كأنه يستخدم جزئين في نفس الوقت:</p>
+<ol type="1">
+<li><p><strong>جزء يفهم معنى الكلام</strong></p>
+<p>هذا الجزء يحاول فهم محتوى ما قاله المستخدم.</p>
+<p>مثلاً:</p>
+<blockquote class="blockquote">
+<p>كنت عايز أسألك عن…</p>
+</blockquote>
+<p>الجملة هنا واضحة أنها غير مكتملة، حتى قبل التفكير في نبرة الصوت.</p></li>
+<li><p><strong>جزء يسمع طريقة الكلام</strong></p>
+<p>هذا الجزء يهتم بالأشياء التي لا تظهر في النص، مثل:</p>
 <ul>
-<li>A place that fosters my growth beyond just financial gain. As someone passionate about data science, I want to join a team grounded in strong scientific principles, up-to-date with advancements, and focused on innovation, not blind imitation or merely using what’s available.</li>
-<li>A supportive, ambitious team led by kind and fair management.</li>
-<li>A team working on meaningful projects with real humanitarian impact,projects that benefit society without involving anything forbidden, even if they’re not explicitly religious.</li>
+<li>نبرة الصوت</li>
+<li>ارتفاع أو انخفاض طبقة الصوت</li>
+<li>الإيقاع بين الكلمات</li>
+<li>طول آخر كلمة</li>
+<li>طريقة التوقف</li>
+<li>هل النهاية تبدو حاسمة أم مفتوحة</li>
 </ul></li>
-<li><strong>That’s when my eyes turned to Tarteel.</strong></li>
-<li>I first came across it during high school, watching episodes featuring <a href="https://www.youtube.com/watch?v=100Qq-mLDbMo">Hazem Al-Siddiq and Abdul Latif</a> discussing the idea behind Tarteel and its early beginnings. Even now, after graduating, I’ve kept up with the company’s progress.</li>
-<li>From what I can see, it embodies everything I’m looking for—at least on the surface—and I assume the best of the people working there.</li>
-<li><strong>My dream for the next two years is to join the Tarteel team.</strong></li>
-</ul>
+</ol>
+<p>بعد ذلك يتم دمج معلومات الجزئين، ويخرج النموذج باحتمال:</p>
+<blockquote class="blockquote">
+<p>هل هذه نهاية حقيقية للدور؟</p>
+</blockquote>
 </section>
-<section id="tarteels-vision" class="level2">
-<h2 class="anchored" data-anchor-id="tarteels-vision">Tarteel’s Vision</h2>
-<p>Tarteel AI is the world’s leading app for Quran memorization and recitation. It’s a tool that supports millions of Muslims globally by providing features to help them memorize and connect with the Quran. When you read their application page, it’s genuinely inspiring:</p>
-<ul>
-<li>Fully remote work: work anytime, anywhere.</li>
-<li>A balance of dunya and akhira: an Islamic workweek, Islamic holidays, and a culture rooted in faith.</li>
-<li>Unlimited time off (with manager approval).</li>
-<li>Yearly team retreats and off-sites.</li>
-<li>The freedom to work in your thobe, abaya, or traditional clothing from the comfort of home.</li>
-<li>A chance to be part of a company leading AI and technology innovation in the Muslim community.</li>
-<li>An opportunity to contribute to impactful projects that benefit Muslims worldwide.</li>
-</ul>
+<section id="لماذا-هذا-أفضل-من-نموذج-النص" class="level3">
+<h3 class="anchored" data-anchor-id="لماذا-هذا-أفضل-من-نموذج-النص">لماذا هذا أفضل من نموذج النص؟</h3>
+<p>لأن نموذج النص يفقد جزءاً مهماً من الكلام عندما يحوله إلى كتابة.</p>
+<p>انظر إلى المثالين:</p>
+<blockquote class="blockquote">
+<p>عايز حاجة ساقعة.</p>
+</blockquote>
+<p>و:</p>
+<blockquote class="blockquote">
+<p>عايز حاجة ساقعة… اااا…</p>
+</blockquote>
+<p>قد يكون النص الذي وصل إلى النموذج في لحظة معينة قريباً جداً في الحالتين.</p>
+<p>لكن الصوت مختلف.</p>
+<p>في الجملة الأولى، الشخص قد يكون قالها بنبرة نهائية وانتهى.</p>
+<p>في الثانية، الهمهمة وطريقة المد تعني أن الشخص يفكر وسيكمل، مثلاً:</p>
+<blockquote class="blockquote">
+<p>عايز حاجة ساقعة… اااا… عصير مانجا.</p>
+</blockquote>
+<p>هنا نموذج صوتي مثل LiveKit v1 لديه فرصة أفضل لفهم أن الوقت ليس مناسباً للرد.</p>
 </section>
-<section id="machine-learning-engineer-at-tarteel" class="level2">
-<h2 class="anchored" data-anchor-id="machine-learning-engineer-at-tarteel">Machine Learning Engineer at Tarteel</h2>
-<p>Tarteel is always seeking talented individuals passionate about advancing the state of the Muslim ummah through their unique skills. They encourage applicants to share as much as possible about their interests and abilities.</p>
-<p>So, here’s my story: I’ve applied to Tarteel 4 times!</p>
+<section id="هل-livekit-v1-يعمل-وحده" class="level3">
+<h3 class="anchored" data-anchor-id="هل-livekit-v1-يعمل-وحده">هل LiveKit v1 يعمل وحده؟</h3>
+<p>لا، هو جزء من نظام أكبر للمحادثة الصوتية.</p>
+<p>بشكل مبسط، النظام يعمل كالتالي:</p>
+<ol type="1">
+<li>يصل صوت المستخدم.</li>
+<li>نموذج VAD يكتشف هل يوجد كلام أو صمت.</li>
+<li>عند بداية الصمت، يبدأ نظام تحديد نهاية الدور في التقييم.</li>
+<li>LiveKit v1 يقرر: هل المستخدم انتهى أم لا؟</li>
+<li>إذا كان المستخدم انتهى، يتم إرسال الكلام إلى نموذج الذكاء الاصطناعي ليبدأ الرد.</li>
+<li>إذا لم ينته، ينتظر النظام حتى يصل كلام جديد أو يتأكد أن الدور انتهى.</li>
+</ol>
+<p>إذن VAD يقول:</p>
+<blockquote class="blockquote">
+<p>لا يوجد صوت الآن.</p>
+</blockquote>
+<p>أما LiveKit v1 فيحاول أن يقول:</p>
+<blockquote class="blockquote">
+<p>صحيح، لكن هل هذا الصمت يعني أن المستخدم انتهى فعلاً؟</p>
+</blockquote>
+<p>![[Pasted image 20260828214126.png]]</p>
+</section>
+</section>
+<section id="كيف-يعمل-livekit-v1-ونماذج-eou-الصوتية" class="level2">
+<h2 class="anchored" data-anchor-id="كيف-يعمل-livekit-v1-ونماذج-eou-الصوتية">كيف يعمل LiveKit v1 ونماذج EOU الصوتية؟</h2>
+<p>يمكن تخيل النموذج على أنه يحتوي على جزأين يعملان بالتوازي:</p>
+<ol type="1">
+<li>جزء يفهم <strong>ماذا قال المستخدم</strong>.</li>
+<li>جزء يفهم <strong>كيف قال المستخدم كلامه</strong>.</li>
+</ol>
+<p>ثم يتم دمج معلومات الجزأين لإخراج احتمال أن المستخدم انتهى من دوره في الحديث.</p>
+<section id="الجزء-الذي-يفهم-الكلام-والمعنى" class="level3">
+<h3 class="anchored" data-anchor-id="الجزء-الذي-يفهم-الكلام-والمعنى">الجزء الذي يفهم الكلام والمعنى</h3>
+<p>الصوت يدخل إلى النموذج عبر الخطوات التالية:</p>
+<ol type="1">
+<li><p><strong>Audio Input</strong><br>
+صوت المستخدم الخام.</p></li>
+<li><p><strong>Audio Encoder</strong><br>
+يحول الصوت إلى تمثيلات رقمية (<code>Audio Features</code> أو <code>Embeddings</code>) يمكن للنموذج التعامل معها.</p></li>
+<li><p><strong>Audio-to-LLM Adapter</strong><br>
+يجهز تمثيلات الصوت بالشكل المناسب ليدخل إلى النموذج اللغوي.</p></li>
+<li><p><strong>LLM Backbone</strong><br>
+نموذج لغوي يفهم معنى الكلام والسياق.<br>
+مثلاً: هل الجملة مكتملة؟ أم تبدو مفتوحة ويُتوقع أن يكمل المستخدم؟</p></li>
+</ol>
+<p>يمكن استخدام نموذج لغوي صغير مثل Qwen أو أي LLM مناسب، لكن LiveKit لم تعلن اسم النموذج الذي تستخدمه داخلياً.</p>
+<p>يمكن ايضا إستخدام نموذج مثل Qwen3-ASR حيث انه يوجد بداخله Audio Encoder ويتيح التعامل المباشر مع التمثيلات الداخلية للصوت الذي يخرجه لإنشاء نموج EOU بشكل سريع وابسط.</p>
+</section>
+<section id="الجزء-الذي-يفهم-خصائص-الصوت" class="level3">
+<h3 class="anchored" data-anchor-id="الجزء-الذي-يفهم-خصائص-الصوت">الجزء الذي يفهم خصائص الصوت</h3>
+<p>هذا الجزء لا يهتم فقط بمعنى الكلمات، بل بطريقة نطقها.</p>
+<ol type="1">
+<li><strong>Acoustic Audio Encoder</strong><br>
+يستخرج خصائص صوتية مثل:
 <ul>
-<li>The first time was during my second year of college, seeking an internship. My skills were basic, I had just started learning about deep learning, but the advice they gave me was encouraging and kind.</li>
-<li>After graduation, I applied again but was rejected without explanation. I assume it’s because I was a fresh graduate, and they likely needed someone with experience in large-scale projects. That’s fair.</li>
-<li>Seven months later, just before Ramadan 2026, Tarteel announced internship opportunities for the first time. I applied but wasn’t accepted. The competition was tough, and I don’t think I was the strongest candidate at the time, no hard feelings!</li>
-<li>What now? I’m determined to prove I have the knowledge and skills to contribute. Here’s what I’m currently working on:
-<ul>
-<li>Arabic NLP, LLMs, and speech recognition with the Namma community, where I’m contributing to open-source projects and research papers.</li>
-<li>A remote research lab in Russia, which is accelerating my technical growth.</li>
-<li>Plans to join a company to learn about cloud deployment, model optimization, and GPU workloads.</li>
-<li>Studying Quranic sciences and Tajweed to deepen my connection to the field.</li>
-<li>Building small projects inspired by Tarteel’s vision to test my abilities and see where they take me.</li>
+<li>نبرة الصوت (<code>Pitch</code>)</li>
+<li>شدة الصوت (<code>Energy</code>)</li>
+<li>الإيقاع (<code>Rhythm</code>)</li>
+<li>طول الكلمة الأخيرة</li>
+<li>التردد والهمهمة</li>
+<li>شكل التوقف قبل الصمت</li>
 </ul></li>
-</ul>
+<li><strong>Recurrent Neural Network (RNN)</strong><br>
+تتابع تغيّر هذه الخصائص مع الزمن.</li>
+</ol>
+<p>هذا مهم لأن النموذج لا يريد معرفة شكل آخر لحظة من الصوت فقط، بل يريد فهم ما حدث خلال آخر جزء من الجملة:</p>
+<pre class="text"><code>بداية الجملة → الكلمات الأخيرة → تغير النبرة → بداية الصمت</code></pre>
 </section>
-<section id="skills-i-need-to-master" class="level2">
-<h2 class="anchored" data-anchor-id="skills-i-need-to-master">Skills I Need to Master</h2>
-<p>To succeed, I’m focusing on these key areas:</p>
-<ul>
-<li>Speech recognition and audio processing.</li>
-<li>Nvidia NeMo frameworks.</li>
-<li>SLURM (for managing computing resources).</li>
-<li>S3 (data storage and retrieval).</li>
-<li>Monitoring and analyzing model performance for data-driven improvements.</li>
-</ul>
+<section id="دمج-النتائج-واتخاذ-القرار" class="level3">
+<h3 class="anchored" data-anchor-id="دمج-النتائج-واتخاذ-القرار">دمج النتائج واتخاذ القرار</h3>
+<p>بعد ذلك يتم دمج مخرجات الجزأين:</p>
+<pre class="text"><code>Semantic Features
++
+Acoustic Features
+↓
+Fusion Layer
+↓
+Binary Classifier
+↓
+P(EOT)</code></pre>
+<p>الناتج هو احتمال مثل:</p>
+<pre class="text"><code>P(EOT) = 0.91</code></pre>
+<p>أي أن النموذج يعتقد بنسبة عالية أن المستخدم انتهى من دوره.</p>
+<p>أما إذا كانت النتيجة:</p>
+<pre class="text"><code>P(EOT) = 0.18</code></pre>
+<p>فالنظام يرجح أن المستخدم ما زال يفكر أو سيتابع كلامه.</p>
+<pre><code>
+وأفضل تعديل على رسمك هو تغيير كلمة `المدج` إلى **الدمج**، وتسميته:
+
+```text
+Fusion Layer</code></pre>
+<p>ثم:</p>
+<pre class="text"><code>Binary Classifier
+↓
+P(EOT)</code></pre>
+<p><code>Binary Classifier</code> مناسب هنا لأنه يحسم بين احتمالين:</p>
+<pre class="text"><code>EOT  = المستخدم انتهى
+Hold = المستخدم لم ينته بعد</code></pre>
+<p>هذا يجعل الرسم مرتبطاً مباشرة بمشكلة المقاطعة: إذا كانت <code>P(EOT)</code> منخفضة، ينتظر المساعد؛ وإذا ارتفعت بعد توقف الصوت، يبدأ تجهيز الرد.</p>
 </section>
-<section id="my-current-plan" class="level2">
-<h2 class="anchored" data-anchor-id="my-current-plan">My Current Plan</h2>
-<p>I’ve started mastering these skills by taking courses and reading books on state-of-the-art (SOTA) speech recognition models.</p>
-<p>Soon, I’ll share my progress, publish my work, and apply what I’ve learned to Tarteel’s vision. And, of course, I’m making duaa for guidance and success ❤️.</p>
-<p>You can read more here <a href="muaalm_quran_chance.html">Part 2: muaalem El Quran</a></p>
-<section id="read-more" class="level3">
-<h3 class="anchored" data-anchor-id="read-more">Read More</h3>
+<section id="ما-الفرق-بين-v1-و-v1-mini" class="level3">
+<h3 class="anchored" data-anchor-id="ما-الفرق-بين-v1-و-v1-mini">ما الفرق بين v1 و v1-mini؟</h3>
+<p>يوجد إصداران:</p>
 <ul>
-<li><a href="https://kareemai.com/blog/posts/ml_life/cv_of_failure.html">CV of Failures: Rejections Build Career</a> — Personal rejections and why they matter</li>
-<li><a href="https://kareemai.com/blog/posts/speech_recognition/muaalm_quran_chance.html">Muaalem El Quran: Optimizing Quranic AI</a> — Part 2 of my Tarteel journey</li>
-<li><a href="https://kareemai.com/blog/posts/products_reviews/Building_AI_PC_In_Egypt.html">Building a PC for AI Research in Egypt</a></li>
+<li><strong>LiveKit v1</strong>: النسخة الأكبر والأعلى دقة. تعمل عبر LiveKit Cloud.</li>
+<li><strong>LiveKit v1-mini</strong>: نسخة أصغر وأخف، يمكن تشغيلها محلياً على CPU.</li>
 </ul>
-</section>
-<section id="social-media" class="level3">
-<h3 class="anchored" data-anchor-id="social-media">Social Media</h3>
-<ul>
-<li><a href="https://huggingface.co/Abdelkareem">Hugging Face</a></li>
-<li><a href="https://www.linkedin.com/in/kareemkobo/">LinkedIn</a></li>
-<li><a href="https://x.com/AbdelkareemElk2">Twitter</a></li>
-<li><a href="https://github.com/abdelkareemkobo">GitHub</a></li>
-</ul>
+<p>النسخة الصغيرة تستخدم نفس الفكرة العامة، لكن تم تقليل حجمها وتسريعها لتناسب التشغيل المحلي. لذلك هي مناسبة للتجارب أو الأنظمة التي لا تريد إرسال الصوت إلى خدمة سحابية.</p>
 
 
 </section>
@@ -854,67 +988,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 })();
 </script>
-<div class="share-buttons">
-  <span class="share-label">مشاركة:</span>
-  <a href="#" class="share-btn share-twitter" onclick="shareTwitter()" title="مشاركة على تويتر">
-    <svg width="18" height="18" viewbox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
-  </a>
-  <a href="#" class="share-btn share-linkedin" onclick="shareLinkedIn()" title="مشاركة على لينكد إن">
-    <svg width="18" height="18" viewbox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
-  </a>
-  <a href="#" class="share-btn share-copy" onclick="copyLink()" title="نسخ الرابط">
-    <svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-    <span class="copy-feedback">تم النسخ!</span>
-  </a>
-</div>
-
-<script>
-function shareTwitter() {
-  const url = encodeURIComponent(window.location.href);
-  const title = encodeURIComponent(document.title);
-  window.open(`https://twitter.com/intent/tweet?url=${url}&text=${title}`, '_blank', 'width=550,height=420');
-}
-
-function shareLinkedIn() {
-  const url = encodeURIComponent(window.location.href);
-  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank', 'width=550,height=420');
-}
-
-function copyLink() {
-  navigator.clipboard.writeText(window.location.href).then(() => {
-    const feedback = document.querySelector('.copy-feedback');
-    feedback.classList.add('show');
-    setTimeout(() => feedback.classList.remove('show'), 2000);
-  });
-}
-</script>
-
-<div class="newsletter-section">
-    <p class="newsletter-title">Get updates</p>
-    <div id="newsletter-facade" style="border:1px solid #ddd; border-radius:8px; padding:20px; text-align:center; background:#f9f9f9;">
-        <p style="margin:0 0 12px; font-size:16px;">Subscribe to my newsletter on Substack</p>
-        <button id="load-newsletter" style="padding:10px 24px; font-size:14px; cursor:pointer; border-radius:6px; border:none; background:#FF6719; color:white; font-weight:600;">Open Subscribe Form</button>
-    </div>
-    <div id="newsletter-container" style="display:none;"></div>
-    <script>
-    document.getElementById('load-newsletter').addEventListener('click', function() {
-        var container = document.getElementById('newsletter-container');
-        var facade = document.getElementById('newsletter-facade');
-        facade.style.display = 'none';
-        container.style.display = 'block';
-        var iframe = document.createElement('iframe');
-        iframe.src = 'https://kareemnns.substack.com/embed';
-        iframe.width = '100%';
-        iframe.height = '150';
-        iframe.style.border = 'none';
-        iframe.style.background = 'transparent';
-        iframe.frameBorder = '0';
-        iframe.scrolling = 'no';
-        iframe.title = 'Subscribe to my newsletter';
-        container.appendChild(iframe);
-    });
-    </script>
-</div>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1405,7 +1478,7 @@ function copyLink() {
     </a>
   </li>  
     <li class="nav-item compact">
-    <a class="nav-link" href="../../../blog/feed.xml">
+    <a class="nav-link" href="../../blog/feed.xml">
       <i class="bi bi-rss" role="img" aria-label="خلاصة RSS">
 </i> 
     </a>
@@ -1421,5 +1494,4 @@ function copyLink() {
 
 
 
-<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
