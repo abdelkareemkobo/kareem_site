@@ -28,6 +28,39 @@
   unicode-range: U+0600-06FF, U+0750-077F, U+0870-089F, U+08A0-08FF, U+200C-200F, U+FB50-FDFF, U+FE70-FEFC;
 }
 
+/* === IA Writer Quattro (Latin reading) === */
+@font-face {
+  font-family: 'IA Writer Quattro S';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/ia-writer-quattro-s-400-normal-d6bf1512.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'IA Writer Quattro S';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/ia-writer-quattro-s-400-italic-3fd4a6db.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'IA Writer Quattro S';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/ia-writer-quattro-s-700-normal-f4e3dd67.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'IA Writer Quattro S';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/ia-writer-quattro-s-700-italic-4b084b2a.woff2) format('woff2');
+}
+
 @font-face {
   font-family: 'Noto Sans Arabic UI';
   font-style: normal;

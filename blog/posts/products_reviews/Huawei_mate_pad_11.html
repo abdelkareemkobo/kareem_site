@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" xml:lang="ar" dir="rtl"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.37">
@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="kareem">
+<meta name="dcterms.date" content="2023-12-07">
 <meta name="description" content="A detailed student review of the Huawei MatePad 11 after one year. Exploring life without Google services, app compatibility, and integration with Linux.">
 
 <title>Huawei MatePad 11 Review: One Year Without Google Services – عبدالكريم الخطيب</title>
@@ -288,7 +289,7 @@ window.addEventListener('scroll', () => {
   "headline": "Huawei MatePad 11 Review: One Year Without Google Services",
   "description": "A detailed student review of the Huawei MatePad 11 after one year. Exploring life without Google services, app compatibility, and integration with Linux.",
   "author": {"@type": "Person", "name": "kareem"},
-  "datePublished": "7 ديسمبر 2023",
+  "datePublished": "2023-12-07",
   "image": "images/mate_pad_11.webp",
   "mainEntityOfPage": {
     "@type": "WebPage",
@@ -304,7 +305,7 @@ window.addEventListener('scroll', () => {
 
 
 <link rel="stylesheet" href="../../../shimmering-fonts.css">
-<link rel="stylesheet" href="../../../styles.css">
+<link rel="stylesheet" href="../../../theme.css">
 
 
 
@@ -320,34 +321,28 @@ window.addEventListener('scroll', () => {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../index.html"> <i class="bi bi-house" role="img">
-</i> 
-<span class="menu-text">الرئيسية</span></a>
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">الرئيسية / Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../blog/feed.html"> <i class="bi bi-journal-text" role="img">
-</i> 
-<span class="menu-text">المدونة</span></a>
+    <a class="nav-link" href="../../../blog/feed.html"> 
+<span class="menu-text">المدونة / Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../til/index.html"> <i class="bi bi-lightbulb" role="img">
-</i> 
-<span class="menu-text">ملاحظات</span></a>
+    <a class="nav-link" href="../../../til/index.html"> 
+<span class="menu-text">ملاحظات / Notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../papers.html"> <i class="bi bi-file-text" role="img">
-</i> 
-<span class="menu-text">أبحاث</span></a>
+    <a class="nav-link" href="../../../papers.html"> 
+<span class="menu-text">أبحاث / Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../about.html"> <i class="bi bi-person" role="img">
-</i> 
-<span class="menu-text">عنّي</span></a>
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">عنّي / About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../publish.html"> <i class="bi bi-book" role="img">
-</i> 
-<span class="menu-text">كتب</span></a>
+    <a class="nav-link" href="../../../publish.html"> 
+<span class="menu-text">كتب / Books</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -420,7 +415,7 @@ window.addEventListener('scroll', () => {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">7 ديسمبر 2023</p>
+      <p class="date">December 7, 2023</p>
     </div>
   </div>
   
@@ -564,6 +559,10 @@ window.addEventListener('scroll', () => {
 </main> <!-- /main -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
+  const isArabic = document.documentElement.lang.toLowerCase().startsWith("ar");
+  const labels = isArabic
+    ? { toggle: "تبديل إظهار القسم", collapse: "طي الكل", expand: "توسيع الكل" }
+    : { toggle: "Toggle section", collapse: "Collapse all", expand: "Expand all" };
   const root =
     document.querySelector("#quarto-document-content") ||
     document.querySelector("main.content") ||
@@ -604,7 +603,7 @@ document.addEventListener("DOMContentLoaded", () => {
     button.type = "button";
     button.className = "heading-fold";
     button.setAttribute("aria-expanded", "true");
-    button.setAttribute("aria-label", "تبديل إظهار القسم");
+    button.setAttribute("aria-label", labels.toggle);
 
     const icon = document.createElement("span");
     icon.className = "heading-fold-icon";
@@ -632,7 +631,7 @@ document.addEventListener("DOMContentLoaded", () => {
   toggleAll.type = "button";
   toggleAll.className = "fold-controls-toggle";
   toggleAll.setAttribute("aria-pressed", "false");
-  toggleAll.textContent = "طي الكل";
+  toggleAll.textContent = labels.collapse;
 
   controls.appendChild(toggleAll);
 
@@ -661,7 +660,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const allCollapsed = foldables.every((item) =>
       item.heading.classList.contains("is-collapsed")
     );
-    toggleAll.textContent = allCollapsed ? "توسيع الكل" : "طي الكل";
+    toggleAll.textContent = allCollapsed ? labels.expand : labels.collapse;
     toggleAll.setAttribute("aria-pressed", String(allCollapsed));
   }
 
@@ -901,19 +900,36 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 <div class="share-buttons">
   <span class="share-label">مشاركة:</span>
-  <a href="#" class="share-btn share-twitter" onclick="shareTwitter()" title="مشاركة على تويتر">
+  <a href="#" class="share-btn share-twitter" onclick="shareTwitter(); return false;" title="مشاركة على إكس">
     <svg width="18" height="18" viewbox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
   </a>
-  <a href="#" class="share-btn share-linkedin" onclick="shareLinkedIn()" title="مشاركة على لينكد إن">
+  <a href="#" class="share-btn share-linkedin" onclick="shareLinkedIn(); return false;" title="مشاركة على لينكد إن">
     <svg width="18" height="18" viewbox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
   </a>
-  <a href="#" class="share-btn share-copy" onclick="copyLink()" title="نسخ الرابط">
+  <a href="#" class="share-btn share-copy" onclick="copyLink(); return false;" title="نسخ الرابط">
     <svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
     <span class="copy-feedback">تم النسخ!</span>
   </a>
 </div>
 
 <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const isArabic = document.documentElement.lang.toLowerCase().startsWith('ar');
+  const label = document.querySelector('.share-label');
+  const twitter = document.querySelector('.share-twitter');
+  const linkedin = document.querySelector('.share-linkedin');
+  const copy = document.querySelector('.share-copy');
+  const feedback = document.querySelector('.copy-feedback');
+
+  if (!isArabic) {
+    label.textContent = 'Share:';
+    twitter.title = 'Share on X';
+    linkedin.title = 'Share on LinkedIn';
+    copy.title = 'Copy link';
+    feedback.textContent = 'Copied!';
+  }
+});
+
 function shareTwitter() {
   const url = encodeURIComponent(window.location.href);
   const title = encodeURIComponent(document.title);
@@ -933,31 +949,42 @@ function copyLink() {
   });
 }
 </script>
-
 <div class="newsletter-section">
     <p class="newsletter-title">Get updates</p>
-    <div id="newsletter-facade" style="border:1px solid #ddd; border-radius:8px; padding:20px; text-align:center; background:#f9f9f9;">
-        <p style="margin:0 0 12px; font-size:16px;">Subscribe to my newsletter on Substack</p>
-        <button id="load-newsletter" style="padding:10px 24px; font-size:14px; cursor:pointer; border-radius:6px; border:none; background:#FF6719; color:white; font-weight:600;">Open Subscribe Form</button>
+    <div id="newsletter-facade" class="newsletter-facade">
+        <p class="newsletter-copy">Subscribe to my newsletter on Substack</p>
+        <button id="load-newsletter" class="newsletter-button" type="button">Open subscribe form</button>
     </div>
-    <div id="newsletter-container" style="display:none;"></div>
+    <div id="newsletter-container" class="newsletter-container" hidden=""></div>
     <script>
-    document.getElementById('load-newsletter').addEventListener('click', function() {
+    (function () {
+    var isArabic = document.documentElement.lang.toLowerCase().startsWith('ar');
+    var title = document.querySelector('.newsletter-title');
+    var copy = document.querySelector('.newsletter-copy');
+    var button = document.getElementById('load-newsletter');
+
+    if (isArabic) {
+        title.textContent = 'ابقَ على اطلاع';
+        copy.textContent = 'اشترك في النشرة البريدية على Substack';
+        button.textContent = 'فتح نموذج الاشتراك';
+    }
+
+    button.addEventListener('click', function() {
         var container = document.getElementById('newsletter-container');
         var facade = document.getElementById('newsletter-facade');
-        facade.style.display = 'none';
-        container.style.display = 'block';
+        facade.hidden = true;
+        container.hidden = false;
         var iframe = document.createElement('iframe');
         iframe.src = 'https://kareemnns.substack.com/embed';
         iframe.width = '100%';
         iframe.height = '150';
-        iframe.style.border = 'none';
-        iframe.style.background = 'transparent';
+        iframe.className = 'newsletter-frame';
         iframe.frameBorder = '0';
         iframe.scrolling = 'no';
-        iframe.title = 'Subscribe to my newsletter';
+        iframe.title = isArabic ? 'الاشتراك في النشرة البريدية' : 'Subscribe to my newsletter';
         container.appendChild(iframe);
     });
+    }());
     </script>
 </div>
 <script id="quarto-html-after-body" type="application/javascript">

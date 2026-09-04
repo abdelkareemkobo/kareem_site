@@ -97,7 +97,7 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="shimmering-fonts.css">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="theme.css">
 <meta property="og:title" content="الكتب والمنشورات | عبدالكريم الخطيب">
 <meta property="og:description" content="كتب وأدلة معمّقة في NLP العربية وهندسة الذكاء الاصطناعي">
 <meta property="og:image" content="https://kareemai.com/kareem.webp">
@@ -286,34 +286,28 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> <i class="bi bi-house" role="img">
-</i> 
-<span class="menu-text">الرئيسية</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">الرئيسية / Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog/feed.html"> <i class="bi bi-journal-text" role="img">
-</i> 
-<span class="menu-text">المدونة</span></a>
+    <a class="nav-link" href="./blog/feed.html"> 
+<span class="menu-text">المدونة / Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./til/index.html"> <i class="bi bi-lightbulb" role="img">
-</i> 
-<span class="menu-text">ملاحظات</span></a>
+    <a class="nav-link" href="./til/index.html"> 
+<span class="menu-text">ملاحظات / Notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./papers.html"> <i class="bi bi-file-text" role="img">
-</i> 
-<span class="menu-text">أبحاث</span></a>
+    <a class="nav-link" href="./papers.html"> 
+<span class="menu-text">أبحاث / Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> <i class="bi bi-person" role="img">
-</i> 
-<span class="menu-text">عنّي</span></a>
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">عنّي / About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./publish.html" aria-current="page"> <i class="bi bi-book" role="img">
-</i> 
-<span class="menu-text">كتب</span></a>
+    <a class="nav-link active" href="./publish.html" aria-current="page"> 
+<span class="menu-text">كتب / Books</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -397,6 +391,10 @@ gtag('config', 'G-XFPC3M9TMG', { 'anonymize_ip': true});
 </main> <!-- /main -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
+  const isArabic = document.documentElement.lang.toLowerCase().startsWith("ar");
+  const labels = isArabic
+    ? { toggle: "تبديل إظهار القسم", collapse: "طي الكل", expand: "توسيع الكل" }
+    : { toggle: "Toggle section", collapse: "Collapse all", expand: "Expand all" };
   const root =
     document.querySelector("#quarto-document-content") ||
     document.querySelector("main.content") ||
@@ -437,7 +435,7 @@ document.addEventListener("DOMContentLoaded", () => {
     button.type = "button";
     button.className = "heading-fold";
     button.setAttribute("aria-expanded", "true");
-    button.setAttribute("aria-label", "تبديل إظهار القسم");
+    button.setAttribute("aria-label", labels.toggle);
 
     const icon = document.createElement("span");
     icon.className = "heading-fold-icon";
@@ -465,7 +463,7 @@ document.addEventListener("DOMContentLoaded", () => {
   toggleAll.type = "button";
   toggleAll.className = "fold-controls-toggle";
   toggleAll.setAttribute("aria-pressed", "false");
-  toggleAll.textContent = "طي الكل";
+  toggleAll.textContent = labels.collapse;
 
   controls.appendChild(toggleAll);
 
@@ -494,7 +492,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const allCollapsed = foldables.every((item) =>
       item.heading.classList.contains("is-collapsed")
     );
-    toggleAll.textContent = allCollapsed ? "توسيع الكل" : "طي الكل";
+    toggleAll.textContent = allCollapsed ? labels.expand : labels.collapse;
     toggleAll.setAttribute("aria-pressed", String(allCollapsed));
   }
 
