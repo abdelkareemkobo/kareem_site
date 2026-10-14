@@ -135,3 +135,49 @@ iframe { max-width: 100%; }
   body[data-slug="index"] article .markdown-preview-view > p:first-of-type img { width: 88px; height: 88px; }
   body[data-slug="index"] article .markdown-preview-view > p:first-of-type { margin-inline-start: 16px; }
 }
+
+/* Things colors with a modern portfolio and image-led editorial cards. */
+body[data-slug="index"] article { font-family: var(--headerFont); font-size: 16px; line-height: 1.9; }
+body[data-slug="index"] article .markdown-preview-view > p:first-of-type { float: none; }
+body[data-slug="index"] .page-header { margin-top: 0; }
+.home-hero { position: relative; padding: 56px 36px 40px 240px; border-radius: 24px; background: linear-gradient(135deg, var(--background-secondary), var(--background-primary)); border: 1px solid var(--background-modifier-border); margin-bottom: 56px; min-height: 240px; }
+.home-hero > p:first-child { position: absolute; left: 36px; top: 42px; margin: 0; }
+.home-hero > p:first-child img { width: 160px; height: 180px; object-fit: cover; border-radius: 24px; box-shadow: 0 12px 35px #0001; }
+body[data-slug="index"] .home-hero h1 { font: 700 clamp(2rem, 4vw, 3rem)/1.5 var(--headerFont); margin: 0 0 12px; }
+.home-hero > p:nth-of-type(2) { color: var(--text-accent); font-weight: 700; }
+.home-hero a { display: inline-block; margin: 4px 0 4px 12px; }
+.home-section { margin-block: 48px; }
+.home-section > h2 { font-size: 1.45rem; border: 0; margin-bottom: 24px; }
+.home-grid, .note-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.home-card, .note-card { border: 1px solid var(--background-modifier-border); background: var(--background-primary); border-radius: 18px; padding: 24px; overflow: hidden; margin: 0; box-shadow: 0 4px 20px #00000004; }
+.home-card h3, .home-card h4 { margin-top: 0; background: none; color: var(--text-normal); font: 700 1.1rem/1.7 var(--headerFont); }
+.home-card h3 { color: var(--text-accent); }
+.home-card p { color: var(--text-muted); }
+.home-card > p:first-child:has(img) { margin: -24px -24px 20px; }
+body[data-slug="index"] .home-card img { display: block; width: 100%; max-width: none; height: 210px; object-fit: contain; background: var(--background-secondary); border-radius: 0; }
+.home-card a, .note-card a { background: none; text-decoration: none; }
+.note-card { padding: 0; display: flex; flex-direction: column; }
+.note-cover { display: block; aspect-ratio: 16 / 9; background: var(--background-secondary); overflow: hidden; }
+.note-cover img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 0; }
+.note-card-body { padding: 24px; }
+.note-card h3 { font: 700 1.15rem/1.65 var(--headerFont); margin: 10px 0; }
+.note-card p { font: 400 .95rem/1.85 var(--headerFont); }
+.note-card time { font: 400 .8rem var(--headerFont); }
+.note-card:hover { border-color: var(--text-accent); }
+@media (max-width: 650px) {
+  .home-grid, .note-grid { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .home-hero { padding: 28px 24px; }
+  .home-hero > p:first-child { position: static; float: none; margin-bottom: 24px; }
+  .home-hero > p:first-child img { width: 100px; height: 112px; border-radius: 18px; }
+  .home-section { margin-block: 32px; }
+}
+.home-card:has(> h3):not(:has(> h4)) { grid-column: 1 / -1; padding: 4px 0 0; border: 0; box-shadow: none; background: transparent; }
+.home-card:has(> h3):not(:has(> h4)) h3 { margin: 0; font-size: .95rem; }
+
+body[data-slug="index"] #quartz-body .home-hero > p:first-of-type img { width: 160px; height: 180px; max-width: 160px; object-fit: cover; }
+body[data-slug="index"] #quartz-body .home-hero p, body[data-slug="index"] #quartz-body .home-section p { font: 400 16px/1.95 var(--headerFont); }
+body[data-slug="index"] #quartz-body .home-hero > p:nth-of-type(2) { font-weight: 700; }
+@media(max-width:650px) { body[data-slug="index"] #quartz-body .home-hero > p:first-of-type img { width:100px; height:112px; max-width:100px; } }
+body[data-slug="index"] #quartz-body .home-hero p, body[data-slug="index"] #quartz-body .home-section p, .note-card h3, .note-card p, .note-card time { font-family: "Kareem UI", system-ui, sans-serif; }
+.home-card h4 a { color: var(--text-normal); background: none; }
+a[href^="tel:"] { direction: ltr; unicode-bidi: isolate; }

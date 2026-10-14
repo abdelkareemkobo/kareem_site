@@ -23,11 +23,11 @@ cssclasses:
 
 أبني نماذج ذكاء اصطناعي تفهم العربية وتعمل بكفاءة على الأجهزة محدودة الموارد، من نماذج التضمين والبحث الدلالي إلى أنظمة الصوت والتطبيقات الإنتاجية.
 
-📞 +20 101 364 6887 ✉️ kareem01095134688@gmail.com
+[+20 101 364 6887](tel:+201013646887) · [راسلني](mailto:kareem01095134688@gmail.com)
 
 [جيت‌هاب](https://github.com/abdelkareemkobo) [لينكد إن](https://www.linkedin.com/in/abdelkareem-elkhateb-202b6b377/) [جوجل سكولار](https://scholar.google.com/citations?user=lF1wxvcAAAAJ) [إكس / تويتر](https://x.com/AbdelkareemElk1) [GPUVec](https://gpuvec.com)
 
-ما أعمل عليه
+## ما أعمل عليه
 
 يركّز عملي على معالجة اللغة العربية وبناء نماذج أصغر وأسرع يمكن تشغيلها خارج الخوادم الضخمة.
 
@@ -105,7 +105,7 @@ cssclasses:
 
 ## أبرز المقالات في NLP العربية والذكاء الاصطناعي
 
-![ضبط Gemma 3 لاستدعاء الأدوات بالعربية](/assets/009383c9479bfada110c6d9e.webp)
+![ضبط Gemma 3 لاستدعاء الأدوات بالعربية](/assets/57bfe9754f62fb5d066ec643.webp)
 
 #### [ضبط Gemma 3 لاستدعاء الأدوات بالعربية](/blog/posts/nlp/gemma_tool_calling.md)
 
