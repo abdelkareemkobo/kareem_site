@@ -181,3 +181,8 @@ body[data-slug="index"] #quartz-body .home-hero > p:nth-of-type(2) { font-weight
 body[data-slug="index"] #quartz-body .home-hero p, body[data-slug="index"] #quartz-body .home-section p, .note-card h3, .note-card p, .note-card time { font-family: "Kareem UI", system-ui, sans-serif; }
 .home-card h4 a { color: var(--text-normal); background: none; }
 a[href^="tel:"] { direction: ltr; unicode-bidi: isolate; }
+/* Keep the reading canvas continuous, without the Obsidian app frame. */
+#quartz-root.page { background: var(--background-primary); box-shadow: none; }
+#quartz-body > .center { background: transparent; }
+.darkmode { min-width: 32px; width: 32px; display: inline-flex; align-items: center; justify-content: center; }
+.darkmode svg { width: 20px; height: 20px; fill: none; stroke: currentColor; }

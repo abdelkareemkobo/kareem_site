@@ -13,6 +13,10 @@ async function allFiles(dir) {
 
 export async function optimizeOutput(output) {
   const paths = new Set((await allFiles(output)).map(file => path.relative(output, file).split(path.sep).join('/')))
+  const assetVersions = new Map()
+  for (const name of ['index.css', 'prescript.js', 'postscript.js']) {
+    if (paths.has(name)) assetVersions.set(name, createHash('sha256').update(await fs.readFile(path.join(output, name))).digest('hex').slice(0, 16))
+  }
   const localURL = (ref, file) => {
     try {
       const url = new URL(ref, `https://kareemai.com/${file}`)
@@ -66,6 +70,10 @@ export async function optimizeOutput(output) {
     let hasCode = false
     visit(tree, 'element', node => {
       const p = node.properties
+      for (const key of node.tagName === 'link' ? ['href'] : node.tagName === 'script' ? ['src'] : []) {
+        const local = localURL(p[key], file)
+        if (local && assetVersions.has(local.relative)) p[key] = `/${local.relative}?v=${assetVersions.get(local.relative)}`
+      }
       if (Array.isArray(p.className) && p.className.includes('katex')) hasMath = true
       if (Array.isArray(p.className) && p.className.includes('mermaid')) hasMermaid = true
       if (node.tagName === 'pre') hasCode = true

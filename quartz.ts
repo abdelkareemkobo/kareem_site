@@ -15,6 +15,37 @@ import { StaticResources } from "./quartz/util/resources"
 const config = await loadQuartzConfig({ analytics: process.env.KAREEM_PRODUCTION === "1" ? { provider: "google", tagId: "G-XFPC3M9TMG" } : null })
 export const layout = await loadQuartzLayout()
 const navigation = Navigation()
+navigation.afterDOMLoaded = `(() => {
+  if (window.kareemHeaderReady) return;
+  window.kareemHeaderReady = true;
+  document.addEventListener("click", event => {
+    const target = event.target instanceof Element ? event.target : null;
+    if (target?.closest("button.darkmode")) {
+      const theme = document.documentElement.getAttribute("saved-theme") === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("saved-theme", theme);
+      localStorage.setItem("theme", theme);
+      document.body.classList.remove("theme-light", "theme-dark");
+      document.body.classList.add("theme-" + theme);
+      document.dispatchEvent(new CustomEvent("themechange", { detail: { theme } }));
+    }
+    const toggle = target?.closest(".explorer-toggle");
+    const explorer = toggle?.closest(".explorer");
+    if (explorer) {
+      const closed = explorer.classList.toggle("collapsed");
+      explorer.setAttribute("aria-expanded", String(!closed));
+      toggle.setAttribute("aria-expanded", String(!closed));
+      document.documentElement.classList.toggle("mobile-no-scroll", !closed);
+    }
+  });
+  document.addEventListener("keydown", event => {
+    if (event.key !== "Escape") return;
+    for (const explorer of document.querySelectorAll('.explorer[aria-expanded="true"]')) {
+      explorer.classList.add("collapsed"); explorer.setAttribute("aria-expanded", "false");
+      explorer.querySelector(".explorer-toggle")?.setAttribute("aria-expanded", "false");
+    }
+    document.documentElement.classList.remove("mobile-no-scroll");
+  });
+})();`
 const listing = Listing()
 const contents = Contents()
 // Serve the full Things port once as a fingerprinted, cacheable stylesheet.
@@ -41,9 +72,11 @@ const metadataWrappers = new Map<QuartzComponent, QuartzComponent>()
 const uiWrappers = new Map<QuartzComponent, QuartzComponent>()
 function adaptUI(component: QuartzComponent): QuartzComponent {
   if (uiWrappers.has(component)) return uiWrappers.get(component)!
+  const earlyScripts = Array.isArray(component.beforeDOMLoaded) ? component.beforeDOMLoaded : component.beforeDOMLoaded ? [component.beforeDOMLoaded] : []
+  component.beforeDOMLoaded = earlyScripts.map(script => script.replace(/for\(let e of document\.getElementsByClassName\("darkmode"\)\)e\.addEventListener\("click",n\),window\.addCleanup\(\(\)=>e\.removeEventListener\("click",n\)\);/g, ""))
   const scripts = Array.isArray(component.afterDOMLoaded) ? component.afterDOMLoaded : component.afterDOMLoaded ? [component.afterDOMLoaded] : []
   component.afterDOMLoaded = scripts.map(original => {
-    if (original.includes("[Explorer]") || original.includes("[Graph]")) return original.replaceAll("await fetchData", "await fetchNavigationData")
+    if (original.includes("[Explorer]") || original.includes("[Graph]")) return original.replaceAll("await fetchData", "await fetchNavigationData").replace('l.addEventListener("click",o),s.push(()=>l.removeEventListener("click",o))', "")
     // Flex groups copy their children's scripts when the layout is constructed.
     if (!original.includes('async function Mn(){Ai(),await Ti(),await wi(),Li()}')) return original
     const replacements = [
