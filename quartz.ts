@@ -76,7 +76,9 @@ function adaptUI(component: QuartzComponent): QuartzComponent {
   component.beforeDOMLoaded = earlyScripts.map(script => script.replace(/for\(let e of document\.getElementsByClassName\("darkmode"\)\)e\.addEventListener\("click",n\),window\.addCleanup\(\(\)=>e\.removeEventListener\("click",n\)\);/g, ""))
   const scripts = Array.isArray(component.afterDOMLoaded) ? component.afterDOMLoaded : component.afterDOMLoaded ? [component.afterDOMLoaded] : []
   component.afterDOMLoaded = scripts.map(original => {
-    if (original.includes("[Explorer]") || original.includes("[Graph]")) return original.replaceAll("await fetchData", "await fetchNavigationData").replace('l.addEventListener("click",o),s.push(()=>l.removeEventListener("click",o))', "")
+    if (original.includes("[Explorer]") || original.includes("[Graph]")) return original.replaceAll("await fetchData", "await fetchNavigationData")
+      .replace('l.addEventListener("click",o),s.push(()=>l.removeEventListener("click",o))', "")
+      .replace('n.checkVisibility&&n.checkVisibility()&&(t.classList.add("collapsed")', 'n.checkVisibility&&n.checkVisibility()&&t.getAttribute("aria-expanded")!=="true"&&(t.classList.add("collapsed")')
     // Flex groups copy their children's scripts when the layout is constructed.
     if (!original.includes('async function Mn(){Ai(),await Ti(),await wi(),Li()}')) return original
     const replacements = [
