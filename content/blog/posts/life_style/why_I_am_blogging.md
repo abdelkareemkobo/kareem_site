@@ -1,0 +1,51 @@
+---
+permalink: "/blog/posts/life_style/why_i_am_blogging"
+section: "blog"
+title: 'Why I am Blogging: The Benefits of Writing as an AI Engineer'
+description: Why blogging helps software and machine-learning engineers build presence,
+  organize knowledge, and learn.
+lang: en
+dir: ltr
+author: Kareem Elkhateb
+publish: true
+date: '2023-07-18'
+tags:
+- life
+- blogging
+- publish
+socialImage: images/graviety.webp
+---
+
+## Why I am blogging
+
+Blogging is more than just sharing thoughts; it's a strategic move for any professional in the technical field. As a machine learning engineer, I've found that maintaining a personal site offers benefits that social media platforms simply cannot match. Here are the core reasons why I choose to blog:
+
+1. **Building an Internet Presence:** I am blogging to establish a solid presence on the internet. My hope is to collaborate with people who are genuinely interested in the same niche topics. By putting my thoughts out there, I am essentially "reversing the search process"—instead of looking for opportunities, I'm allowing the right opportunities and people to find me.
+2. **A Living Resume:** A blog serves as a dynamic resume and a blueprint of my existence in the digital world. It shows what I'm working on, how I think, and my progression over time.
+3. **Helping the Community:** My ultimate goal is to help others. By providing valuable content based on my own struggles and solutions, I can make someone else's learning journey slightly easier.
+4. **Knowledge Organization:** Organizing my knowledge and recapping topics helps me experience those valuable "aha" moments! 💡 It's a true test of understanding; if you can't explain it simply in a blog post, you probably don't understand it well enough.
+5. **Ownership of Content:** I am not a fan of social media feeds (Facebook, X/Twitter, or LinkedIn) for long-form technical content. These platforms are designed for engagement, not for reference. A blog is a stable repository for technical knowledge.
+6. **Freedom and Independence:** I value the freedom of speech. On my own domain, I can express my technical opinions and thoughts without the constraints or censorship of social media algorithms.
+7. **Learning in Public:** I want to discuss topics while I'm learning them because they are fresh. This "beginner's mind" perspective is often more helpful to others in a similar position than a post-hoc summary by an expert.
+8. **Focused Learning:** When I know I have to write about a topic, my mind becomes more focused on the subtle details. This makes the entire learning process more enjoyable and rigorous.
+9. **Longevity and Searchability:** Posts on social media disappear within days. A blog post is indexed by search engines and can be found by someone years later. It solves the "feed problem" where valuable knowledge is buried under a mountain of new, less relevant updates.
+
+## Should You Blog Too?
+
+Absolutely. Whether you are a student, a junior developer, or a senior researcher, blogging forces you to communicate clearly. In the age of AI, the ability to synthesize information and present a unique perspective is becoming even more valuable. You don't need a massive audience; you just need to write for yourself and the one person who might be searching for that specific bug fix or explanation tomorrow.
+
+## References
+
+- https://medium.com/@racheltho/why-you-yes-you-should-blog-7d2544ac1045
+
+---
+
+### Internal Resources
+
+If you're interested in more about AI engineering and my research, explore these sections:
+
+- [My Research Papers](../../../papers.html)
+- [Open Source Contributions](https://github.com/abdelkareemkobo?tab=repositories)
+- [Today I Learned: AI Notes](../../../til/index.html)
+- [Learning in Public: Why I Started My TIL Journey](../../../til/tils/2025-05-17-til.html)
+- [Arabic NLP Blog Posts](../../feed.html)

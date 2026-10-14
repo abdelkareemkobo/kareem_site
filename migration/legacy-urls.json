@@ -1,0 +1,274 @@
+[
+  {
+    "old": "/about.html",
+    "current": "/about.html"
+  },
+  {
+    "old": "/blog/feed.html",
+    "current": "/blog/feed.html"
+  },
+  {
+    "old": "/blog/posts/courses/havrard CS197 AI research experiences.html",
+    "current": "/blog/posts/courses/havrard-cs197-ai-research-experiences.html"
+  },
+  {
+    "old": "/blog/posts/ds_and_algo/master_ds.html",
+    "current": "/blog/posts/ds_and_algo/master_ds.html"
+  },
+  {
+    "old": "/blog/posts/dspy/Opencode.html",
+    "current": "/blog/posts/dspy/opencode.html"
+  },
+  {
+    "old": "/blog/posts/fl/what_is_federated_learning.html",
+    "current": "/blog/posts/fl/what_is_federated_learning.html"
+  },
+  {
+    "old": "/blog/posts/life_style/back_to_rss.html",
+    "current": "/blog/posts/life_style/back_to_rss.html"
+  },
+  {
+    "old": "/blog/posts/life_style/digital_minimalisim_arabic.html",
+    "current": "/blog/posts/life_style/digital_minimalisim_arabic.html"
+  },
+  {
+    "old": "/blog/posts/life_style/fake_graviety.html",
+    "current": "/blog/posts/life_style/fake_graviety.html"
+  },
+  {
+    "old": "/blog/posts/life_style/gpuvec.html",
+    "current": "/blog/posts/life_style/gpuvec.html"
+  },
+  {
+    "old": "/blog/posts/life_style/kamcalorie.html",
+    "current": "/blog/posts/life_style/kamcalorie.html"
+  },
+  {
+    "old": "/blog/posts/life_style/protienai.html",
+    "current": "/blog/posts/life_style/protienai.html"
+  },
+  {
+    "old": "/blog/posts/life_style/why_I_am_blogging.html",
+    "current": "/blog/posts/life_style/why_i_am_blogging.html"
+  },
+  {
+    "old": "/blog/posts/math/math_skills_for_AI.html",
+    "current": "/blog/posts/math/math_skills_for_ai.html"
+  },
+  {
+    "old": "/blog/posts/minishlab/blog_zaraah.html",
+    "current": "/blog/posts/minishlab/blog_zaraah.html"
+  },
+  {
+    "old": "/blog/posts/minishlab/ctranslate_maswray.html",
+    "current": "/blog/posts/minishlab/ctranslate_maswray.html"
+  },
+  {
+    "old": "/blog/posts/minishlab/pyversity_qdrant.html",
+    "current": "/blog/posts/minishlab/pyversity_qdrant.html"
+  },
+  {
+    "old": "/blog/posts/ml_life/cv_of_failure.html",
+    "current": "/blog/posts/ml_life/cv_of_failure.html"
+  },
+  {
+    "old": "/blog/posts/ml_life/hacker_rank_ai_intereviw.html",
+    "current": "/blog/posts/ml_life/hacker_rank_ai_intereviw.html"
+  },
+  {
+    "old": "/blog/posts/mteb_encoding/MTEB_massive_text_embedding_benchmark.html",
+    "current": "/blog/posts/mteb_encoding/mteb_massive_text_embedding_benchmark.html"
+  },
+  {
+    "old": "/blog/posts/mteb_encoding/my_little_dargon.html",
+    "current": "/blog/posts/mteb_encoding/my_little_dargon.html"
+  },
+  {
+    "old": "/blog/posts/mteb_encoding/tiny-gte_transformer_model.html",
+    "current": "/blog/posts/mteb_encoding/tiny-gte_transformer_model.html"
+  },
+  {
+    "old": "/blog/posts/nlp/Dinvo3 for Arabic Scripts.html",
+    "current": "/blog/posts/nlp/dinvo3-for-arabic-scripts.html"
+  },
+  {
+    "old": "/blog/posts/nlp/TTS Architecture V1.html",
+    "current": "/blog/posts/nlp/tts-architecture-v1.html"
+  },
+  {
+    "old": "/blog/posts/nlp/embedding_world/hyperrun.html",
+    "current": "/blog/posts/nlp/embedding_world/hyperrun.html"
+  },
+  {
+    "old": "/blog/posts/nlp/embedding_world/hyperun_fasthtml.html",
+    "current": "/blog/posts/nlp/embedding_world/hyperun_fasthtml.html"
+  },
+  {
+    "old": "/blog/posts/nlp/embedding_world/index.html",
+    "current": "/blog/posts/nlp/embedding_world/index.html"
+  },
+  {
+    "old": "/blog/posts/nlp/embedding_world/late_interaction.html",
+    "current": "/blog/posts/nlp/embedding_world/late_interaction.html"
+  },
+  {
+    "old": "/blog/posts/nlp/embedding_world/sakr_v1.html",
+    "current": "/blog/posts/nlp/embedding_world/sakr_v1.html"
+  },
+  {
+    "old": "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html",
+    "current": "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html"
+  },
+  {
+    "old": "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html",
+    "current": "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html"
+  },
+  {
+    "old": "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html",
+    "current": "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html"
+  },
+  {
+    "old": "/blog/posts/nlp/embedding_world/vector_database_book.html",
+    "current": "/blog/posts/nlp/embedding_world/vector_database_book.html"
+  },
+  {
+    "old": "/blog/posts/nlp/gemma_tool_calling.html",
+    "current": "/blog/posts/nlp/gemma_tool_calling.html"
+  },
+  {
+    "old": "/blog/posts/on_device/litert.html",
+    "current": "/blog/posts/on_device/litert.html"
+  },
+  {
+    "old": "/blog/posts/products_reviews/Building_AI_PC_In_Egypt.html",
+    "current": "/blog/posts/products_reviews/building_ai_pc_in_egypt.html"
+  },
+  {
+    "old": "/blog/posts/products_reviews/Huawei freebuds 5i.html",
+    "current": "/blog/posts/products_reviews/huawei-freebuds-5i.html"
+  },
+  {
+    "old": "/blog/posts/products_reviews/Huawei freebuds 7i.html",
+    "current": "/blog/posts/products_reviews/huawei-freebuds-7i.html"
+  },
+  {
+    "old": "/blog/posts/products_reviews/Huawei_mate_pad_11.html",
+    "current": "/blog/posts/products_reviews/huawei_mate_pad_11.html"
+  },
+  {
+    "old": "/blog/posts/products_reviews/Huawei_watch_gt_4_experience.html",
+    "current": "/blog/posts/products_reviews/huawei_watch_gt_4_experience.html"
+  },
+  {
+    "old": "/blog/posts/products_reviews/one_plus_pad_3.html",
+    "current": "/blog/posts/products_reviews/one_plus_pad_3.html"
+  },
+  {
+    "old": "/blog/posts/seo/google_ads_black_box.html",
+    "current": "/blog/posts/seo/google_ads_black_box.html"
+  },
+  {
+    "old": "/blog/posts/seo/how_i_use_nlp_for_seo.html",
+    "current": "/blog/posts/seo/how_i_use_nlp_for_seo.html"
+  },
+  {
+    "old": "/blog/posts/seo/seo_rat_journey.html",
+    "current": "/blog/posts/seo/seo_rat_journey.html"
+  },
+  {
+    "old": "/blog/posts/seo/the_curse_of_seo.html",
+    "current": "/blog/posts/seo/the_curse_of_seo.html"
+  },
+  {
+    "old": "/blog/posts/speech_recognition/muaalm_quran_chance.html",
+    "current": "/blog/posts/speech_recognition/muaalm_quran_chance.html"
+  },
+  {
+    "old": "/blog/posts/speech_recognition/my_dream_job_at_tarteel.html",
+    "current": "/blog/posts/speech_recognition/my_dream_job_at_tarteel.html"
+  },
+  {
+    "old": "/blog/posts/tools_reviews/super_productivity_app.html",
+    "current": "/blog/posts/tools_reviews/super_productivity_app.html"
+  },
+  {
+    "old": "/blog/voice/arabic_turn_detection.html",
+    "current": "/blog/voice/arabic_turn_detection.html"
+  },
+  {
+    "old": "/index.html",
+    "current": "/index.html"
+  },
+  {
+    "old": "/papers.html",
+    "current": "/papers.html"
+  },
+  {
+    "old": "/publish.html",
+    "current": "/publish.html"
+  },
+  {
+    "old": "/til/index.html",
+    "current": "/til/index.html"
+  },
+  {
+    "old": "/til/tils/2025-05-17-til.html",
+    "current": "/til/tils/2025-05-17-til.html"
+  },
+  {
+    "old": "/til/tils/2025-05-18-til.html",
+    "current": "/til/tils/2025-05-18-til.html"
+  },
+  {
+    "old": "/til/tils/2025-05-19-til.html",
+    "current": "/til/tils/2025-05-19-til.html"
+  },
+  {
+    "old": "/til/tils/2025-05-20-til.html",
+    "current": "/til/tils/2025-05-20-til.html"
+  },
+  {
+    "old": "/til/tils/2025-05-21-til.html",
+    "current": "/til/tils/2025-05-21-til.html"
+  },
+  {
+    "old": "/til/tils/2025-05-23-til.html",
+    "current": "/til/tils/2025-05-23-til.html"
+  },
+  {
+    "old": "/til/tils/2025-05-25-til.html",
+    "current": "/til/tils/2025-05-25-til.html"
+  },
+  {
+    "old": "/til/tils/2025-05-28-til.html",
+    "current": "/til/tils/2025-05-28-til.html"
+  },
+  {
+    "old": "/til/tils/2025-06-06-til.html",
+    "current": "/til/tils/2025-06-06-til.html"
+  },
+  {
+    "old": "/til/tils/2025-10-21.html",
+    "current": "/til/tils/2025-10-21.html"
+  },
+  {
+    "old": "/til/tils/2025-12-13.html",
+    "current": "/til/tils/2025-12-13.html"
+  },
+  {
+    "old": "/til/tils/2025-12-14.html",
+    "current": "/til/tils/2025-12-14.html"
+  },
+  {
+    "old": "/til/tils/2025-12-15.html",
+    "current": "/til/tils/2025-12-15.html"
+  },
+  {
+    "old": "/til/tils/LiveKitINtro.html",
+    "current": "/til/tils/livekitintro.html"
+  },
+  {
+    "old": "/til/tils/start_youtube_channel_as_AI_developer.html",
+    "current": "/til/tils/start_youtube_channel_as_ai_developer.html"
+  }
+]

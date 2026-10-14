@@ -1,0 +1,59 @@
+[build]
+  command = "npm run build && npm run verify"
+  publish = "public"
+
+[build.processing.html]
+  pretty_urls = false
+
+[build.environment]
+  NODE_VERSION = "22"
+  KAREEM_PUBLISHED_ONLY = "1"
+
+[context.production.environment]
+  KAREEM_PRODUCTION = "1"
+
+[[headers]]
+  for = "/static/things-*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/static/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, must-revalidate"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/index.css"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/static/*Index.json"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/*.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[context.deploy-preview]
+  command = "npm run build && npm run verify && printf '/*\n  X-Robots-Tag: noindex\n' > public/_headers"
+
+[context.branch-deploy]
+  command = "npm run build && npm run verify && printf '/*\n  X-Robots-Tag: noindex\n' > public/_headers"

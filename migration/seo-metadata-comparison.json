@@ -1,0 +1,954 @@
+{
+  "/about.html": {
+    "old": {
+      "description": "الخبرات المهنية والتعليمية لعبدالكريم الخطيب، باحث في معالجة اللغة العربية الطبيعية ومهندس ذكاء اصطناعي متخصص في النماذج الفعالة وأنظمة البحث الدلالي.",
+      "title": "عن عبدالكريم الخطيب | باحث NLP ومهندس ذكاء اصطناعي – عبدالكريم الخطيب",
+      "og:title": "عن عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/kareem.webp"
+    },
+    "current": {
+      "title": "عن عبدالكريم الخطيب | باحث NLP ومهندس ذكاء اصطناعي",
+      "og:title": "عن عبدالكريم الخطيب | باحث NLP ومهندس ذكاء اصطناعي",
+      "og:image": "https://kareemai.com/assets/9a80a90db120ccc59edca0a4.webp",
+      "description": "الخبرات المهنية والتعليمية لعبدالكريم الخطيب، باحث في معالجة اللغة العربية الطبيعية ومهندس ذكاء اصطناعي متخصص في النماذج الفعالة وأنظمة البحث الدلالي."
+    }
+  },
+  "/blog/feed.html": {
+    "old": {
+      "description": "مقالات وتجارب عملية في معالجة اللغة العربية، نماذج الذكاء الاصطناعي، البحث الدلالي، وهندسة التعلم الآلي بقلم عبدالكريم الخطيب.",
+      "title": "مدونة عبدالكريم الخطيب | الذكاء الاصطناعي ومعالجة اللغة العربية – عبدالكريم الخطيب",
+      "og:title": "مدونة عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/mind.svg"
+    },
+    "current": {
+      "title": "مدونة عبدالكريم الخطيب | الذكاء الاصطناعي ومعالجة اللغة العربية",
+      "og:title": "مدونة عبدالكريم الخطيب | الذكاء الاصطناعي ومعالجة اللغة العربية",
+      "og:image": "https://kareemai.com/static/kareem.webp",
+      "description": "مقالات وتجارب عملية في معالجة اللغة العربية، نماذج الذكاء الاصطناعي، البحث الدلالي، وهندسة التعلم الآلي بقلم عبدالكريم الخطيب."
+    }
+  },
+  "/blog/posts/courses/havrard-cs197-ai-research-experiences.html": {
+    "old": {
+      "description": "Review of Harvard CS197 (CS 197) AI Research Experiences: 21 lectures on deep-learning research, paper reading, and productivity.",
+      "title": "Harvard CS197: AI Research Experiences & Deep Learning Guide – عبدالكريم الخطيب",
+      "og:title": "Harvard CS197: AI Research Experiences & Deep Learning Guide – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/courses/images/til.webp"
+    },
+    "current": {
+      "title": "Harvard CS197: AI Research Experiences & Deep Learning Guide | عبدالكريم الخطيب",
+      "og:title": "Harvard CS197: AI Research Experiences & Deep Learning Guide | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/a549e7cebe09955213b3ab9f.webp",
+      "description": "Review of Harvard CS197 (CS 197) AI Research Experiences: 21 lectures on deep-learning research, paper reading, and productivity."
+    }
+  },
+  "/blog/posts/ds_and_algo/master_ds.html": {
+    "old": {
+      "description": "Data structures & algorithms for ML engineers: boost problem-solving, grasp complexity, and move beyond Jupyter.",
+      "title": "Mastering Data Structures for Machine Learning Engineering – عبدالكريم الخطيب",
+      "og:title": "Mastering Data Structures for Machine Learning Engineering – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/ds_and_algo/images/til.webp"
+    },
+    "current": {
+      "title": "Mastering Data Structures for Machine Learning Engineering | عبدالكريم الخطيب",
+      "og:title": "Mastering Data Structures for Machine Learning Engineering | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/a549e7cebe09955213b3ab9f.webp",
+      "description": "Data structures & algorithms for ML engineers: boost problem-solving, grasp complexity, and move beyond Jupyter."
+    }
+  },
+  "/blog/posts/dspy/opencode.html": {
+    "old": {
+      "description": "Learn how OpenCode works as programmable AI coding infrastructure. Built in TypeScript, controlled with Python — covering agents, skills, PLAN.md, and MLflow integration.",
+      "title": "OpenCode: Why It’s Different and How to Use It with Python – عبدالكريم الخطيب",
+      "og:title": "OpenCode: Why It’s Different and How to Use It with Python – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/dspy/images/Opencode.webp"
+    },
+    "current": {
+      "title": "OpenCode: Why It's Different and How to Use It with Python | عبدالكريم الخطيب",
+      "og:title": "OpenCode: Why It's Different and How to Use It with Python | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/b76a68ad8c9b380e3b701f30.webp",
+      "description": "Learn how OpenCode works as programmable AI coding infrastructure. Built in TypeScript, controlled with Python — covering agents, skills, PLAN.md, and MLflow integration."
+    }
+  },
+  "/blog/posts/fl/what_is_federated_learning.html": {
+    "old": {
+      "description": "Learn what Federated Learning is, how it works with decentralized data, examples like Gboard, and why it’s crucial for privacy and low-bandwidth training.",
+      "title": "Federated Learning: Definition, Examples & Benefits – عبدالكريم الخطيب",
+      "og:title": "Federated Learning: Definition, Examples & Benefits – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/fl/images/federate_learning.webp"
+    },
+    "current": {
+      "title": "Federated Learning: Definition, Examples & Benefits | عبدالكريم الخطيب",
+      "og:title": "Federated Learning: Definition, Examples & Benefits | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/32cf4af85633c2b1ddf28e87.webp",
+      "description": "Learn what Federated Learning is, how it works with decentralized data, examples like Gboard, and why it's crucial for privacy and low-bandwidth training."
+    }
+  },
+  "/blog/posts/life_style/back_to_rss.html": {
+    "old": {
+      "description": "Explore digital minimalism and staying ahead in AI without burnout. Learn why I’m moving back to RSS for curated content and better focus.",
+      "title": "Digital Minimalism: Getting Back to RSS for AI Engineers – عبدالكريم الخطيب",
+      "og:title": "Digital Minimalism: Getting Back to RSS for AI Engineers – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/life_style/images/vision_read.webp"
+    },
+    "current": {
+      "title": "Digital Minimalism: Getting Back to RSS for AI Engineers | عبدالكريم الخطيب",
+      "og:title": "Digital Minimalism: Getting Back to RSS for AI Engineers | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/6101722b17c6004f4b7732e4.webp",
+      "description": "Explore digital minimalism and staying ahead in AI without burnout. Learn why I'm moving back to RSS for curated content and better focus."
+    }
+  },
+  "/blog/posts/life_style/digital_minimalisim_arabic.html": {
+    "old": {
+      "description": "نصائح تطبيقية للتحرر من المشتتات الرقمية وتبسيط الحياة الرقمية (Digital Minimalism)، مع أدوات وخطوات لبقاء تركيزك في عصر الهواتف.",
+      "title": "فن تبسيط الحياة الرقمية: دليل التحرر من المشتتات – عبدالكريم الخطيب",
+      "og:title": "فن تبسيط الحياة الرقمية: دليل التحرر من المشتتات – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/life_style/images/fake_graviety.webp"
+    },
+    "current": {
+      "title": "فن تبسيط الحياة الرقمية: دليل التحرر من المشتتات | عبدالكريم الخطيب",
+      "og:title": "فن تبسيط الحياة الرقمية: دليل التحرر من المشتتات | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/ea2e16476e42cfa23e6601a9.webp",
+      "description": "نصائح تطبيقية للتحرر من المشتتات الرقمية وتبسيط الحياة الرقمية (Digital Minimalism)، مع أدوات وخطوات لبقاء تركيزك في عصر الهواتف."
+    }
+  },
+  "/blog/posts/life_style/fake_graviety.html": {
+    "old": {
+      "description": "مخاوف عن الوقوع في جاذبية الآخرين وأهوائهم والابتعاد عن الهدف الرئيسي. كيف تحافظ على بوصلتك الأساسية وتتجنب التشتت في عالم مخادع.",
+      "title": "جاذبية مزيفة و عالم مخادع: كيف تحافظ على بوصلتك؟ – عبدالكريم الخطيب",
+      "og:title": "جاذبية مزيفة و عالم مخادع: كيف تحافظ على بوصلتك؟ – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/life_style/images/burn_out.webp"
+    },
+    "current": {
+      "title": "جاذبية مزيفة و عالم مخادع: كيف تحافظ على بوصلتك؟ | عبدالكريم الخطيب",
+      "og:title": "جاذبية مزيفة و عالم مخادع: كيف تحافظ على بوصلتك؟ | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/e46c4b70e09543d4b176db91.webp",
+      "description": "مخاوف عن الوقوع في جاذبية الآخرين وأهوائهم والابتعاد عن الهدف الرئيسي. كيف تحافظ على بوصلتك الأساسية وتتجنب التشتت في عالم مخادع."
+    }
+  },
+  "/blog/posts/life_style/gpuvec.html": {
+    "old": {
+      "description": "Compare 2025 cloud GPU pricing across providers like Huawei and Hivenet, find cheapest cloud GPUs for AI/HPC, with benchmarks and cost tools.",
+      "title": "2025 Cloud GPU Pricing Comparison & Cheapest GPUs – عبدالكريم الخطيب",
+      "og:title": "2025 Cloud GPU Pricing Comparison & Cheapest GPUs – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/life_style/images/gpuvec.webp"
+    },
+    "current": {
+      "title": "2025 Cloud GPU Pricing Comparison & Cheapest GPUs | عبدالكريم الخطيب",
+      "og:title": "2025 Cloud GPU Pricing Comparison & Cheapest GPUs | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/009383c9479bfada110c6d9e.webp",
+      "description": "Compare 2025 cloud GPU pricing across providers like Huawei and Hivenet, find cheapest cloud GPUs for AI/HPC, with benchmarks and cost tools."
+    }
+  },
+  "/blog/posts/life_style/kamcalorie.html": {
+    "old": {
+      "description": "حاسبة AI للسعرات الحرارية: اعرف كم كالوري في الأطباق العربية والمصرية والسعودية بسهولة.",
+      "title": "كم كالوري بالسعرات: حاسبة الذكاء الاصطناعي للأكل العربي – عبدالكريم الخطيب",
+      "og:title": "كم كالوري بالسعرات: حاسبة الذكاء الاصطناعي للأكل العربي – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/life_style/images/kcal.webp"
+    },
+    "current": {
+      "title": "كم كالوري بالسعرات: حاسبة الذكاء الاصطناعي للأكل العربي | عبدالكريم الخطيب",
+      "og:title": "كم كالوري بالسعرات: حاسبة الذكاء الاصطناعي للأكل العربي | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/5a9be72cfed56a2bf77c0618.webp",
+      "description": "حاسبة AI للسعرات الحرارية: اعرف كم كالوري في الأطباق العربية والمصرية والسعودية بسهولة."
+    }
+  },
+  "/blog/posts/life_style/protienai.html": {
+    "old": {
+      "description": "اكتشف أفضل أنواع الكرياتين والبروتين لبناء العضلات. يقدم موقع بروتين آي مقارنات شاملة ومراجعات دقيقة لمساعدتك في اختيار المكمل الأنسب لأهدافك البدنية.",
+      "title": "أفضل أنواع الكرياتين والبروتين لبناء العضلات: دليل شامل – عبدالكريم الخطيب",
+      "og:title": "أفضل أنواع الكرياتين والبروتين لبناء العضلات: دليل شامل – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/life_style/images/proteinai.webp"
+    },
+    "current": {
+      "title": "أفضل أنواع الكرياتين والبروتين لبناء العضلات: دليل شامل | عبدالكريم الخطيب",
+      "og:title": "أفضل أنواع الكرياتين والبروتين لبناء العضلات: دليل شامل | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/27fe1a5e18c582c859f8d312.webp",
+      "description": "اكتشف أفضل أنواع الكرياتين والبروتين لبناء العضلات. يقدم موقع بروتين آي مقارنات شاملة ومراجعات دقيقة لمساعدتك في اختيار المكمل الأنسب لأهدافك البدنية."
+    }
+  },
+  "/blog/posts/life_style/why_i_am_blogging.html": {
+    "old": {
+      "description": "Why blogging helps software and machine-learning engineers build presence, organize knowledge, and learn.",
+      "title": "Why I am Blogging: The Benefits of Writing as an AI Engineer – عبدالكريم الخطيب",
+      "og:title": "Why I am Blogging: The Benefits of Writing as an AI Engineer – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/life_style/images/graviety.webp"
+    },
+    "current": {
+      "title": "Why I am Blogging: The Benefits of Writing as an AI Engineer | عبدالكريم الخطيب",
+      "og:title": "Why I am Blogging: The Benefits of Writing as an AI Engineer | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/bc8ab3214b5b57c08ac8a68a.webp",
+      "description": "Why blogging helps software and machine-learning engineers build presence, organize knowledge, and learn."
+    }
+  },
+  "/blog/posts/math/math_skills_for_ai.html": {
+    "old": {
+      "description": "Explore my roadmap for mastering the mathematical foundations of AI, covering linear algebra, calculus, and probability for machine learning research.",
+      "title": "Math for AI Roadmap: Concepts & Course Prep – عبدالكريم الخطيب",
+      "og:title": "Math for AI Roadmap: Concepts & Course Prep – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/math/images/Maslakiat.webp"
+    },
+    "current": {
+      "title": "Math for AI Roadmap: Concepts & Course Prep | عبدالكريم الخطيب",
+      "og:title": "Math for AI Roadmap: Concepts & Course Prep | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/6e2173dd2a57445f1c34df86.webp",
+      "description": "Explore my roadmap for mastering the mathematical foundations of AI, covering linear algebra, calculus, and probability for machine learning research."
+    }
+  },
+  "/blog/posts/minishlab/blog_zaraah.html": {
+    "old": {
+      "description": "Analyze Bojji and Zarra model2vec embeddings for Arabic, compare MTEB average score with all-MiniLM-L6-v2 and other static models.",
+      "title": "Bojji & Zarra Arabic Embeddings: MTEB vs all-MiniLM-L6-v2 – عبدالكريم الخطيب",
+      "og:title": "Bojji & Zarra Arabic Embeddings: MTEB vs all-MiniLM-L6-v2 – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/minishlab/images/minishlab.webp"
+    },
+    "current": {
+      "title": "Bojji & Zarra Arabic Embeddings: MTEB vs all-MiniLM-L6-v2 | عبدالكريم الخطيب",
+      "og:title": "Bojji & Zarra Arabic Embeddings: MTEB vs all-MiniLM-L6-v2 | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/9cac6b407580862f4df87f77.webp",
+      "description": "Analyze Bojji and Zarra model2vec embeddings for Arabic, compare MTEB average score with all-MiniLM-L6-v2 and other static models."
+    }
+  },
+  "/blog/posts/minishlab/ctranslate_maswray.html": {
+    "old": {
+      "description": "From $32k to $0 translating with small models and CTranslate2; includes compute_type int8_float16, quantization 4-bit, and 4-6x speed gains.",
+      "title": "From $32,000 to $0 with Small Models and CTranslate2 – عبدالكريم الخطيب",
+      "og:title": "From $32,000 to $0 with Small Models and CTranslate2 – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/minishlab/images/bojji.webp"
+    },
+    "current": {
+      "title": "From $32,000 to $0 with Small Models and CTranslate2 | عبدالكريم الخطيب",
+      "og:title": "From $32,000 to $0 with Small Models and CTranslate2 | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/4495c469616e57979248d4b7.webp",
+      "description": "From $32k to $0 translating with small models and CTranslate2; includes compute_type int8_float16, quantization 4-bit, and 4-6x speed gains."
+    }
+  },
+  "/blog/posts/minishlab/pyversity_qdrant.html": {
+    "old": {
+      "description": "Learn how to diversify search results in a RAG system using Qdrant and Pyversity. Covers MMR, DPP, and other diversity algorithms with practical Python examples.",
+      "title": "Diversifying Search Results with Pyversity and Qdrant – عبدالكريم الخطيب",
+      "og:title": "Diversifying Search Results with Pyversity and Qdrant – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/minishlab/images/minishlab.webp"
+    },
+    "current": {
+      "title": "Diversifying Search Results with Pyversity and Qdrant | عبدالكريم الخطيب",
+      "og:title": "Diversifying Search Results with Pyversity and Qdrant | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/9cac6b407580862f4df87f77.webp",
+      "description": "Learn how to diversify search results in a RAG system using Qdrant and Pyversity. Covers MMR, DPP, and other diversity algorithms with practical Python examples."
+    }
+  },
+  "/blog/posts/ml_life/cv_of_failure.html": {
+    "old": {
+      "description": "A quick summary of My personal failure and why you should write also a cv of failures to help you track the problems you create over time",
+      "title": "Kareem CV of Failures ‘Rejections build Career’ – عبدالكريم الخطيب",
+      "og:title": "Kareem CV of Failures ‘Rejections build Career’ – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/ml_life/images/til.webp"
+    },
+    "current": {
+      "title": "Kareem CV of Failures 'Rejections build Career' | عبدالكريم الخطيب",
+      "og:title": "Kareem CV of Failures 'Rejections build Career' | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/a549e7cebe09955213b3ab9f.webp",
+      "description": "A quick summary of My personal failure and why you should write also a cv of failures to help you track the problems you create over time"
+    }
+  },
+  "/blog/posts/ml_life/hacker_rank_ai_intereviw.html": {
+    "old": {
+      "description": "HackerRank AI engineer interview review 2026. prompt engineering, SQL, and RAG coding challenges that test memorization over real-world AI skills.",
+      "title": "Hacker AI Engineer Interview 2026 Example – عبدالكريم الخطيب",
+      "og:title": "Hacker AI Engineer Interview 2026 Example – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/ml_life/images/hackerank.svg"
+    },
+    "current": {
+      "title": "Hacker AI Engineer Interview 2026 Example | عبدالكريم الخطيب",
+      "og:title": "Hacker AI Engineer Interview 2026 Example | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/ff31cc27c3f5b38c15b7b1d7.svg",
+      "description": "HackerRank AI engineer interview review 2026. prompt engineering, SQL, and RAG coding challenges that test memorization over real-world AI skills."
+    }
+  },
+  "/blog/posts/mteb_encoding/mteb_massive_text_embedding_benchmark.html": {
+    "old": {
+      "description": "Overview of MTEB, covering 58 datasets across 8 tasks, benchmarking models and explaining the nDCG@10 retrieval metric.",
+      "title": "MTEB Benchmark: Tasks, Datasets & nDCG@10 Explained – عبدالكريم الخطيب",
+      "og:title": "MTEB Benchmark: Tasks, Datasets & nDCG@10 Explained – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/mteb_encoding/images/til.webp"
+    },
+    "current": {
+      "title": "MTEB Benchmark: Tasks, Datasets & nDCG@10 Explained | عبدالكريم الخطيب",
+      "og:title": "MTEB Benchmark: Tasks, Datasets & nDCG@10 Explained | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/a549e7cebe09955213b3ab9f.webp",
+      "description": "Overview of MTEB, covering 58 datasets across 8 tasks, benchmarking models and explaining the nDCG@10 retrieval metric."
+    }
+  },
+  "/blog/posts/mteb_encoding/my_little_dargon.html": {
+    "old": {
+      "description": "MSI gaming laptop review from a machine-learning student: 4-year journey with ‘Kobo’ GTX 1660 Ti, Linux tweaks, battery & heat notes.",
+      "title": "MSI Gaming Laptop Review: My 4-Year ML Workhorse ‘Kobo’ – عبدالكريم الخطيب",
+      "og:title": "MSI Gaming Laptop Review: My 4-Year ML Workhorse ‘Kobo’ – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/kareem.webp"
+    },
+    "current": {
+      "title": "MSI Gaming Laptop Review: My 4-Year ML Workhorse 'Kobo' | عبدالكريم الخطيب",
+      "og:title": "MSI Gaming Laptop Review: My 4-Year ML Workhorse 'Kobo' | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/static/kareem.webp",
+      "description": "MSI gaming laptop review from a machine-learning student: 4-year journey with 'Kobo' GTX 1660 Ti, Linux tweaks, battery & heat notes."
+    }
+  },
+  "/blog/posts/mteb_encoding/tiny-gte_transformer_model.html": {
+    "old": {
+      "description": "tiny-gte is a 45MB distilled transformer from gte-small that produces 384D embeddings for efficient semantic search and vector DBs.",
+      "title": "tiny-gte: Efficient Transformer for Semantic Search – عبدالكريم الخطيب",
+      "og:title": "tiny-gte: Efficient Transformer for Semantic Search – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/mteb_encoding/images/til.webp"
+    },
+    "current": {
+      "title": "tiny-gte: Efficient Transformer for Semantic Search | عبدالكريم الخطيب",
+      "og:title": "tiny-gte: Efficient Transformer for Semantic Search | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/a549e7cebe09955213b3ab9f.webp",
+      "description": "tiny-gte is a 45MB distilled transformer from gte-small that produces 384D embeddings for efficient semantic search and vector DBs."
+    }
+  },
+  "/blog/posts/nlp/dinvo3-for-arabic-scripts.html": {
+    "old": {
+      "description": "Building OCR for historical Arabic manuscripts is hard when you don’t know what fonts the text resembles. I built a simple image similarity pipeline using DINOv3 and Qdrant to match page scans against 300 Arabic fonts — and found one font dominates 93% of pages.",
+      "title": "Using Dinov3 Search to Identify Fonts in Historical Arabic Books – عبدالكريم الخطيب",
+      "og:title": "Using Dinov3 Search to Identify Fonts in Historical Arabic Books – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/nlp/Pasted image 20260608201006.png"
+    },
+    "current": {
+      "title": "Using Dinov3 Search to Identify Fonts in Historical Arabic Books | عبدالكريم الخطيب",
+      "og:title": "Using Dinov3 Search to Identify Fonts in Historical Arabic Books | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/9723d98cc46e26770595222d.png",
+      "description": "Building OCR for historical Arabic manuscripts is hard when you don't know what fonts the text resembles. I built a simple image similarity pipeline using DINOv3 and Qdrant to match page scans against 300 Arabic fonts — and found one font dominates 93% of pages."
+    }
+  },
+  "/blog/posts/nlp/tts-architecture-v1.html": {
+    "old": {
+      "description": "Gallery of Popular TTS Architecture and Papers, Pros and Cons and unique ideas from them, quickly explained.",
+      "title": "Latest TTS Architecture and differences | 2026 – عبدالكريم الخطيب",
+      "og:title": "Latest TTS Architecture and differences | 2026 – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/nlp/Pasted image 20260607222518.png"
+    },
+    "current": {
+      "title": "Latest TTS Architecture and differences | 2026 | عبدالكريم الخطيب",
+      "og:title": "Latest TTS Architecture and differences | 2026 | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/ba4836a0ef21521580bed219.png",
+      "description": "Gallery of Popular TTS Architecture and Papers, Pros and Cons and unique ideas from them, quickly explained."
+    }
+  },
+  "/blog/posts/nlp/embedding_world/hyperrun.html": {
+    "old": {
+      "description": "HyperRun is an open-source, self-hosted alternative to RunLLM. Add an AI-powered “Ask AI” chat widget to any docs site using ColGrep semantic code search, Lisette LLM orchestration, and FastHTML. Supports BYOK, multi-provider, and embeds with one line of code.",
+      "title": "HyperRun + ColGrep: A Self-Hosted Alternative to RunLLM – عبدالكريم الخطيب",
+      "og:title": "HyperRun + ColGrep: A Self-Hosted Alternative to RunLLM – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/nlp/embedding_world/images/colgrep.webp"
+    },
+    "current": {
+      "title": "HyperRun + ColGrep: A Self-Hosted Alternative to RunLLM | عبدالكريم الخطيب",
+      "og:title": "HyperRun + ColGrep: A Self-Hosted Alternative to RunLLM | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/7de5c3dddcc0615201c4b1e0.webp",
+      "description": "HyperRun is an open-source, self-hosted alternative to RunLLM. Add an AI-powered \"Ask AI\" chat widget to any docs site using ColGrep semantic code search, Lisette LLM orchestration, and FastHTML. Supports BYOK, multi-provider, and embeds with one line of code."
+    }
+  },
+  "/blog/posts/nlp/embedding_world/hyperun_fasthtml.html": {
+    "old": {
+      "description": "How I built a real-time AI chat widget with zero React, zero WebSockets, and almost zero custom JavaScript. A deep dive into FastHTML’s server-rendered approach — SSE streaming, DaisyUI modals with checkbox toggles, OOB swaps, session-based state, and an embed trick that works on any static site with one line of code.",
+      "title": "HyperRun Deep Dive: Streaming Chat with FastHTML, HTMX, and SSE – عبدالكريم الخطيب",
+      "og:title": "HyperRun Deep Dive: Streaming Chat with FastHTML, HTMX, and SSE – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/nlp/embedding_world/images/colgrep.webp"
+    },
+    "current": {
+      "title": "HyperRun Deep Dive: Streaming Chat with FastHTML, HTMX, and SSE | عبدالكريم الخطيب",
+      "og:title": "HyperRun Deep Dive: Streaming Chat with FastHTML, HTMX, and SSE | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/7de5c3dddcc0615201c4b1e0.webp",
+      "description": "How I built a real-time AI chat widget with zero React, zero WebSockets, and almost zero custom JavaScript. A deep dive into FastHTML's server-rendered approach — SSE streaming, DaisyUI modals with checkbox toggles, OOB swaps, session-based state, and an embed trick that works on any static site with one line of code."
+    }
+  },
+  "/blog/posts/nlp/embedding_world/index.html": {
+    "old": {
+      "description": "Deep dives into text embeddings, vector databases, sparse retrieval, and semantic search. A curated collection of articles on building production-ready search systems.",
+      "title": "Embedding Models & Vector Search | Kareem Elkhateb – عبدالكريم الخطيب",
+      "og:title": "Embedding Models & Vector Search",
+      "og:image": "https://kareemai.com/mind.svg"
+    },
+    "current": {
+      "title": "Embedding Models & Vector Search | Kareem Elkhateb",
+      "og:title": "Embedding Models & Vector Search | Kareem Elkhateb",
+      "og:image": "https://kareemai.com/static/kareem.webp",
+      "description": "Deep dives into text embeddings, vector databases, sparse retrieval, and semantic search. A curated collection of articles on building production-ready search systems."
+    }
+  },
+  "/blog/posts/nlp/embedding_world/late_interaction.html": {
+    "old": {
+      "description": "Explore Late Interaction models like ColBERT and ColPali for efficient token-level semantic search balancing speed and accuracy.",
+      "title": "Late Interaction & ColPali: Efficient Semantic Search – عبدالكريم الخطيب",
+      "og:title": "Late Interaction & ColPali: Efficient Semantic Search – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/nlp/embedding_world/images/minishlab.webp"
+    },
+    "current": {
+      "title": "Late Interaction & ColPali: Efficient Semantic Search | عبدالكريم الخطيب",
+      "og:title": "Late Interaction & ColPali: Efficient Semantic Search | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/9cac6b407580862f4df87f77.webp",
+      "description": "Explore Late Interaction models like ColBERT and ColPali for efficient token-level semantic search balancing speed and accuracy."
+    }
+  },
+  "/blog/posts/nlp/embedding_world/sakr_v1.html": {
+    "old": {
+      "description": "ماهو نموذج Sakr صقر المخصص لتوليد البيانات باللغة العربية ومدرب علي حوالي 66 مليون صفحة من fine-web dataset يعمل بسرعه فائقة ونتائج متوسطة. شرح تفصيلي.",
+      "title": "نموذج صقر بحجم 50 مليون لتوليد البيانات بالعربي يعمل علي CPU – عبدالكريم الخطيب",
+      "og:title": "نموذج صقر بحجم 50 مليون لتوليد البيانات بالعربي يعمل علي CPU – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/nlp/embedding_world/images/sakr_2.jpg"
+    },
+    "current": {
+      "title": " نموذج صقر بحجم 50 مليون لتوليد البيانات بالعربي يعمل علي CPU | عبدالكريم الخطيب",
+      "og:title": " نموذج صقر بحجم 50 مليون لتوليد البيانات بالعربي يعمل علي CPU | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/9a62ee116f6208730b5afdd7.jpg",
+      "description": "ماهو نموذج Sakr صقر المخصص لتوليد البيانات باللغة العربية ومدرب علي حوالي 66 مليون صفحة من fine-web dataset يعمل بسرعه فائقة ونتائج متوسطة. شرح تفصيلي."
+    }
+  },
+  "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.html": {
+    "old": {
+      "description": "Step-by-step guide to building a bilingual hybrid search system using Qdrant and BM25. Learn how to optimize real estate search with n-grams and RRF fusion.",
+      "title": "BM25 Explained Part 2 | Qdrant hybrid search for real estate – عبدالكريم الخطيب",
+      "og:title": "BM25 Explained Part 2 | Qdrant hybrid search for real estate – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/xbites_chat.webp"
+    },
+    "current": {
+      "title": "BM25 Explained Part 2 | Qdrant hybrid search for real estate | عبدالكريم الخطيب",
+      "og:title": "BM25 Explained Part 2 | Qdrant hybrid search for real estate | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/4f6c3d8a4dd655aaaf454094.webp",
+      "description": "Step-by-step guide to building a bilingual hybrid search system using Qdrant and BM25. Learn how to optimize real estate search with n-grams and RRF fusion."
+    }
+  },
+  "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.html": {
+    "old": {
+      "description": "Benchmarking BM25 implementations: bm25-sparse, rankbm25, numpy vectorization, scipy, and plain Python. Find the fastest BM25 for your search use case.",
+      "title": "BM25 Part 3: Benchmarking Python BM25 Libraries – عبدالكريم الخطيب",
+      "og:title": "BM25 Part 3: Benchmarking Python BM25 Libraries – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/bm25.webp"
+    },
+    "current": {
+      "title": "BM25 Part 3: Benchmarking Python BM25 Libraries | عبدالكريم الخطيب",
+      "og:title": "BM25 Part 3: Benchmarking Python BM25 Libraries | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/3ab4fcaf08eb27a74f281da0.webp",
+      "description": "Benchmarking BM25 implementations: bm25-sparse, rankbm25, numpy vectorization, scipy, and plain Python. Find the fastest BM25 for your search use case."
+    }
+  },
+  "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.html": {
+    "old": {
+      "description": "Learn how BM25 improves search relevance over TF-IDF. This guide covers the math and Python code for implementing BM25 ranking from scratch with clear examples.",
+      "title": "BM25 Search Algorithm: Python Implementation from Scratch – عبدالكريم الخطيب",
+      "og:title": "BM25 Search Algorithm: Python Implementation from Scratch – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/nlp/embedding_world/sparse_embedding/images/bm25.webp"
+    },
+    "current": {
+      "title": "BM25 Search Algorithm: Python Implementation from Scratch | عبدالكريم الخطيب",
+      "og:title": "BM25 Search Algorithm: Python Implementation from Scratch | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/3ab4fcaf08eb27a74f281da0.webp",
+      "description": "Learn how BM25 improves search relevance over TF-IDF. This guide covers the math and Python code for implementing BM25 ranking from scratch with clear examples."
+    }
+  },
+  "/blog/posts/nlp/embedding_world/vector_database_book.html": {
+    "old": {
+      "description": "Review of a new book about Vector database from O’reilly",
+      "title": "Vector Databases - O’reilly By Nitin Borwankar – عبدالكريم الخطيب",
+      "og:title": "Vector Databases - O’reilly By Nitin Borwankar – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/nlp/embedding_world/images/vector_database_book.webp"
+    },
+    "current": {
+      "title": "Vector Databases - O'reilly By Nitin Borwankar | عبدالكريم الخطيب",
+      "og:title": "Vector Databases - O'reilly By Nitin Borwankar | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/ff9b4306e6cb99d40b96f173.webp",
+      "description": "Review of a new book about Vector database from O'reilly"
+    }
+  },
+  "/blog/posts/nlp/gemma_tool_calling.html": {
+    "old": {
+      "description": "How we taught a 1B parameter Gemma 3 model to use grep for Arabic information retrieval, avoiding embeddings and RAG systems.",
+      "title": "Fine-Tuning Gemma 3 for Arabic Tool Calling: A No-RAG Approach – عبدالكريم الخطيب",
+      "og:title": "Fine-Tuning Gemma 3 for Arabic Tool Calling: A No-RAG Approach – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/nlp/embedding_world/images/gemma_3_functioncalling.webp"
+    },
+    "current": {
+      "title": "Fine-Tuning Gemma 3 for Arabic Tool Calling: A No-RAG Approach | عبدالكريم الخطيب",
+      "og:title": "Fine-Tuning Gemma 3 for Arabic Tool Calling: A No-RAG Approach | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/57bfe9754f62fb5d066ec643.webp",
+      "description": "How we taught a 1B parameter Gemma 3 model to use grep for Arabic information retrieval, avoiding embeddings and RAG systems."
+    }
+  },
+  "/blog/posts/on_device/litert.html": {
+    "old": {
+      "description": "A practical guide for ML engineers on converting PyTorch models to LiteRT, benchmarking on real Android devices via ADB, and when to use Qualcomm AI Hub for NPU compilation.",
+      "title": "LiteRT and Qualcomm AI Hub: On-Device ML Without the Cloud – عبدالكريم الخطيب",
+      "og:title": "LiteRT and Qualcomm AI Hub: On-Device ML Without the Cloud – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/on_device/images/litert.webp"
+    },
+    "current": {
+      "title": "LiteRT and Qualcomm AI Hub: On-Device ML Without the Cloud | عبدالكريم الخطيب",
+      "og:title": "LiteRT and Qualcomm AI Hub: On-Device ML Without the Cloud | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/4098fb905903135d6b12b2cd.webp",
+      "description": "A practical guide for ML engineers on converting PyTorch models to LiteRT, benchmarking on real Android devices via ADB, and when to use Qualcomm AI Hub for NPU compilation."
+    }
+  },
+  "/blog/posts/products_reviews/building_ai_pc_in_egypt.html": {
+    "old": {
+      "description": "A personal journey of building a high-performance PC for AI research in Egypt, covering hardware choices, cost comparisons with cloud providers, and the unique challenges of building locally.",
+      "title": "My Journey building a PC for AI Research in Egypt – عبدالكريم الخطيب",
+      "og:title": "My Journey building a PC for AI Research in Egypt – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/products_reviews/images/pc2.webp"
+    },
+    "current": {
+      "title": "My Journey building a PC for AI Research in Egypt | عبدالكريم الخطيب",
+      "og:title": "My Journey building a PC for AI Research in Egypt | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/dbdfbff82e65f6af451729db.webp",
+      "description": "A personal journey of building a high-performance PC for AI research in Egypt, covering hardware choices, cost comparisons with cloud providers, and the unique challenges of building locally."
+    }
+  },
+  "/blog/posts/products_reviews/huawei-freebuds-5i.html": {
+    "old": {
+      "description": "Two-month Huawei FreeBuds 5i review covering ANC performance, sound, battery, Linux compatibility, and microphone/call quality.",
+      "title": "Huawei FreeBuds 5i Review: Best Budget ANC Earbuds? – عبدالكريم الخطيب",
+      "og:title": "Huawei FreeBuds 5i Review: Best Budget ANC Earbuds? – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/products_reviews/images/5i_vs_7i.webp"
+    },
+    "current": {
+      "title": "Huawei FreeBuds 5i Review: Best Budget ANC Earbuds? | عبدالكريم الخطيب",
+      "og:title": "Huawei FreeBuds 5i Review: Best Budget ANC Earbuds? | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/fb8d16f233285c1c08c6e079.webp",
+      "description": "Two-month Huawei FreeBuds 5i review covering ANC performance, sound, battery, Linux compatibility, and microphone/call quality."
+    }
+  },
+  "/blog/posts/products_reviews/huawei-freebuds-7i.html": {
+    "old": {
+      "description": "Review of Huawei FreeBuds 7i after 20 days, comparing call quality, ANC, battery, specs, and if these wireless earbuds are worth upgrading from 5i.",
+      "title": "Huawei FreeBuds 7i Review: Worth Upgrading from 5i? – عبدالكريم الخطيب",
+      "og:title": "Huawei FreeBuds 7i Review: Worth Upgrading from 5i? – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/kareem.webp"
+    },
+    "current": {
+      "title": "Huawei FreeBuds 7i Review: Worth Upgrading from 5i? | عبدالكريم الخطيب",
+      "og:title": "Huawei FreeBuds 7i Review: Worth Upgrading from 5i? | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/static/kareem.webp",
+      "description": "Review of Huawei FreeBuds 7i after 20 days, comparing call quality, ANC, battery, specs, and if these wireless earbuds are worth upgrading from 5i."
+    }
+  },
+  "/blog/posts/products_reviews/huawei_mate_pad_11.html": {
+    "old": {
+      "description": "A detailed student review of the Huawei MatePad 11 after one year. Exploring life without Google services, app compatibility, and integration with Linux.",
+      "title": "Huawei MatePad 11 Review: One Year Without Google Services – عبدالكريم الخطيب",
+      "og:title": "Huawei MatePad 11 Review: One Year Without Google Services – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/products_reviews/images/mate_pad_11.webp"
+    },
+    "current": {
+      "title": "Huawei MatePad 11 Review: One Year Without Google Services | عبدالكريم الخطيب",
+      "og:title": "Huawei MatePad 11 Review: One Year Without Google Services | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/88e39df44e7c0b8a9aafadde.webp",
+      "description": "A detailed student review of the Huawei MatePad 11 after one year. Exploring life without Google services, app compatibility, and integration with Linux."
+    }
+  },
+  "/blog/posts/products_reviews/huawei_watch_gt_4_experience.html": {
+    "old": {
+      "description": "Long-term Huawei Watch GT4 review covering GPS accuracy, sleep tracking, language support (Arabic, Chinese, Thai), and usage in India.",
+      "title": "Huawei Watch GT 4 Review – GPS & Sleep Tracking in India – عبدالكريم الخطيب",
+      "og:title": "Huawei Watch GT 4 Review – GPS & Sleep Tracking in India – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/products_reviews/images/huawei-watch-gt4-14-day-battery-life.webp"
+    },
+    "current": {
+      "title": "Huawei Watch GT 4 Review – GPS & Sleep Tracking in India | عبدالكريم الخطيب",
+      "og:title": "Huawei Watch GT 4 Review – GPS & Sleep Tracking in India | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/72da8b7ba13cc6dcb8b3770e.webp",
+      "description": "Long-term Huawei Watch GT4 review covering GPS accuracy, sleep tracking, language support (Arabic, Chinese, Thai), and usage in India."
+    }
+  },
+  "/blog/posts/products_reviews/one_plus_pad_3.html": {
+    "old": {
+      "description": "OnePlus Pad 3 revie: Snapdragon 8 Elite, 13.2-inch 3.4K 144Hz display, 12,140mAh battery, 80W charging. Is it the best Android tablet for productivity in 2025?",
+      "title": "OnePlus Pad 3 Review (2025) - Researcher Review – عبدالكريم الخطيب",
+      "og:title": "OnePlus Pad 3 Review (2025) - Researcher Review – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/products_reviews/images/one_plus_storm_blue.webp"
+    },
+    "current": {
+      "title": "OnePlus Pad 3 Review (2025) - Researcher Review | عبدالكريم الخطيب",
+      "og:title": "OnePlus Pad 3 Review (2025) - Researcher Review | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/63408e06958e90e677e289cd.webp",
+      "description": "OnePlus Pad 3 revie: Snapdragon 8 Elite, 13.2-inch 3.4K 144Hz display, 12,140mAh battery, 80W charging. Is it the best Android tablet for productivity in 2025?"
+    }
+  },
+  "/blog/posts/seo/google_ads_black_box.html": {
+    "old": {
+      "description": "How to handle Google Ads suspension, recovery tips (Dubai), and navigating the Google Ads black box for Arabic businesses.",
+      "title": "Google Ads Black Box: Suspension Recovery Dubai & Arabic Ads – عبدالكريم الخطيب",
+      "og:title": "Google Ads Black Box: Suspension Recovery Dubai & Arabic Ads – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/seo/images/laptop_seo_increasing.webp"
+    },
+    "current": {
+      "title": "Google Ads Black Box: Suspension Recovery Dubai & Arabic Ads | عبدالكريم الخطيب",
+      "og:title": "Google Ads Black Box: Suspension Recovery Dubai & Arabic Ads | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/1005319bb6f8a5f7a1368120.webp",
+      "description": "How to handle Google Ads suspension, recovery tips (Dubai), and navigating the Google Ads black box for Arabic businesses."
+    }
+  },
+  "/blog/posts/seo/how_i_use_nlp_for_seo.html": {
+    "old": {
+      "description": "A practical guide to using Python and NLP for SEO automation. Covers Google Search Console API, keyword extraction, content gap analysis, and semantic search for real websites.",
+      "title": "How I Use NLP to Improve Website SEO: A Practical Guide – عبدالكريم الخطيب",
+      "og:title": "How I Use NLP to Improve Website SEO: A Practical Guide – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/seo/images/seo_rat.webp"
+    },
+    "current": {
+      "title": "How I Use NLP to Improve Website SEO: A Practical Guide | عبدالكريم الخطيب",
+      "og:title": "How I Use NLP to Improve Website SEO: A Practical Guide | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/dd7d0a08ae25f551c4db5316.webp",
+      "description": "A practical guide to using Python and NLP for SEO automation. Covers Google Search Console API, keyword extraction, content gap analysis, and semantic search for real websites."
+    }
+  },
+  "/blog/posts/seo/seo_rat_journey.html": {
+    "old": {
+      "description": "Why I’m building SEO RAT — an open-source SEO tool focused on real gains from Google Search Console, smart visualizations, and AI-powered keyword analysis.",
+      "title": "Building SEO RAT: A Free, Open-Source SEO Tool – عبدالكريم الخطيب",
+      "og:title": "Building SEO RAT: A Free, Open-Source SEO Tool – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/seo/images/seo_rat.webp"
+    },
+    "current": {
+      "title": "Building SEO RAT: A Free, Open-Source SEO Tool | عبدالكريم الخطيب",
+      "og:title": "Building SEO RAT: A Free, Open-Source SEO Tool | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/dd7d0a08ae25f551c4db5316.webp",
+      "description": "Why I'm building SEO RAT — an open-source SEO tool focused on real gains from Google Search Console, smart visualizations, and AI-powered keyword analysis."
+    }
+  },
+  "/blog/posts/seo/the_curse_of_seo.html": {
+    "old": {
+      "description": "Discover hidden SEO challenges, recovery strategies for cursed SEO and ecommerce sites, and effective tools while navigating search engine optimization.",
+      "title": "The Curse of SEO: Challenges and Recovery Strategies – عبدالكريم الخطيب",
+      "og:title": "The Curse of SEO: Challenges and Recovery Strategies – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/seo/images/labtop.webp"
+    },
+    "current": {
+      "title": "The Curse of SEO: Challenges and Recovery Strategies | عبدالكريم الخطيب",
+      "og:title": "The Curse of SEO: Challenges and Recovery Strategies | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/c428481b41a79492465f5708.webp",
+      "description": "Discover hidden SEO challenges, recovery strategies for cursed SEO and ecommerce sites, and effective tools while navigating search engine optimization."
+    }
+  },
+  "/blog/posts/speech_recognition/muaalm_quran_chance.html": {
+    "old": {
+      "description": "Discover how I optimized the Muaalem El Quran model using TensorRT and ONNX. A deep dive into Quranic speech recognition and my journey with Tarteel AI.",
+      "title": "Tarteel & Muaalem El Quran: Optimizing Quranic AI Part 2 – عبدالكريم الخطيب",
+      "og:title": "Tarteel & Muaalem El Quran: Optimizing Quranic AI Part 2 – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/speech_recognition/images/tarteel_ai.webp"
+    },
+    "current": {
+      "title": "Tarteel & Muaalem El Quran: Optimizing Quranic AI Part 2 | عبدالكريم الخطيب",
+      "og:title": "Tarteel & Muaalem El Quran: Optimizing Quranic AI Part 2 | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/791bb7f14f810938c24a0fcd.webp",
+      "description": "Discover how I optimized the Muaalem El Quran model using TensorRT and ONNX. A deep dive into Quranic speech recognition and my journey with Tarteel AI."
+    }
+  },
+  "/blog/posts/speech_recognition/my_dream_job_at_tarteel.html": {
+    "old": {
+      "description": "Sharing my thoughts about my dream to work at Tarteel on Quran as Machine learning Engineer",
+      "title": "My Dream Job at Tarteel: ML Engineer’s Journey – عبدالكريم الخطيب",
+      "og:title": "My Dream Job at Tarteel: ML Engineer’s Journey – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/speech_recognition/images/tarteel_ai.webp"
+    },
+    "current": {
+      "title": "My Dream Job at Tarteel: ML Engineer's Journey | عبدالكريم الخطيب",
+      "og:title": "My Dream Job at Tarteel: ML Engineer's Journey | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/791bb7f14f810938c24a0fcd.webp",
+      "description": "Sharing my thoughts about my dream to work at Tarteel on Quran as Machine learning Engineer"
+    }
+  },
+  "/blog/posts/tools_reviews/super_productivity_app.html": {
+    "old": {
+      "description": "A detailed review of Super Productivity, the free open source todo app. Explore how I use it for managing AI research, development tasks, and daily productivity.",
+      "title": "Super Productivity Review: Best Free Todo App (2026) – عبدالكريم الخطيب",
+      "og:title": "Super Productivity Review: Best Free Todo App (2026) – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/posts/tools_reviews/images/Pasted image 20260109194735.webp"
+    },
+    "current": {
+      "title": "Super Productivity Review: Best Free Todo App (2026) | عبدالكريم الخطيب",
+      "og:title": "Super Productivity Review: Best Free Todo App (2026) | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/a3c56c87e2df2c2338d7774b.webp",
+      "description": "A detailed review of Super Productivity, the free open source todo app. Explore how I use it for managing AI research, development tasks, and daily productivity."
+    }
+  },
+  "/blog/voice/arabic_turn_detection.html": {
+    "old": {
+      "description": "كيف يكتشف المساعد الصوتي أن المتحدث أنهى دوره؟ شرح لطرق اكتشاف نهاية الكلام، من الصمت وVAD إلى النماذج التي تفهم النص والصوت معاً.",
+      "title": "كيف يعرف المساعد الصوتي أنك انتهيت من الكلام؟ – عبدالكريم الخطيب",
+      "og:title": "كيف يعرف المساعد الصوتي أنك انتهيت من الكلام؟ – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/blog/voice/Pasted image 20260828214126.png"
+    },
+    "current": {
+      "title": "كيف يعرف المساعد الصوتي أنك انتهيت من الكلام؟ | عبدالكريم الخطيب",
+      "og:title": "كيف يعرف المساعد الصوتي أنك انتهيت من الكلام؟ | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/f1203d423b9dac450618e9af.png",
+      "description": "كيف يكتشف المساعد الصوتي أن المتحدث أنهى دوره؟ شرح لطرق اكتشاف نهاية الكلام، من الصمت وVAD إلى النماذج التي تفهم النص والصوت معاً."
+    }
+  },
+  "/index.html": {
+    "old": {
+      "description": "موقع عبدالكريم الخطيب، باحث في معالجة اللغة العربية ومهندس ذكاء اصطناعي يعمل على نماذج التضمين، البحث الدلالي، والذكاء الاصطناعي على الأجهزة.",
+      "title": "عبدالكريم الخطيب | باحث في معالجة اللغة العربية والذكاء الاصطناعي – عبدالكريم الخطيب",
+      "og:title": "عبدالكريم الخطيب — باحث في معالجة اللغة العربية والذكاء الاصطناعي",
+      "og:image": "https://kareemai.com/kareem.webp"
+    },
+    "current": {
+      "title": "عبدالكريم الخطيب | باحث في معالجة اللغة العربية والذكاء الاصطناعي",
+      "og:title": "عبدالكريم الخطيب | باحث في معالجة اللغة العربية والذكاء الاصطناعي",
+      "og:image": "https://kareemai.com/assets/9a80a90db120ccc59edca0a4.webp",
+      "description": "موقع عبدالكريم الخطيب، باحث في معالجة اللغة العربية ومهندس ذكاء اصطناعي يعمل على نماذج التضمين، البحث الدلالي، والذكاء الاصطناعي على الأجهزة."
+    }
+  },
+  "/papers.html": {
+    "old": {
+      "description": "استعرض الأبحاث الأكاديمية لعبدالكريم الخطيب في التعرف على النص العربي، الذكاء الاصطناعي القابل للتفسير، تصنيف الصور الطبية، وتحليل بكاء الرضع بالذكاء الاصطناعي.",
+      "title": "الأبحاث | عبدالكريم الخطيب – عبدالكريم الخطيب",
+      "og:title": "الأبحاث | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/kareem.webp"
+    },
+    "current": {
+      "title": "الأبحاث | عبدالكريم الخطيب",
+      "og:title": "الأبحاث | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/9a80a90db120ccc59edca0a4.webp",
+      "description": "استعرض الأبحاث الأكاديمية لعبدالكريم الخطيب في التعرف على النص العربي، الذكاء الاصطناعي القابل للتفسير، تصنيف الصور الطبية، وتحليل بكاء الرضع بالذكاء الاصطناعي."
+    }
+  },
+  "/publish.html": {
+    "old": {
+      "description": "استعرض الكتب والأدلة التقنية لعبدالكريم الخطيب. تغطي معالجة اللغة العربية الطبيعية، البنية التحتية للتعلم الآلي، وأنظمة الذكاء الاصطناعي الإنتاجية.",
+      "title": "الكتب | عبدالكريم الخطيب – عبدالكريم الخطيب",
+      "og:title": "الكتب والمنشورات | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/kareem.webp"
+    },
+    "current": {
+      "title": "الكتب | عبدالكريم الخطيب",
+      "og:title": "الكتب | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/9a80a90db120ccc59edca0a4.webp",
+      "description": "استعرض الكتب والأدلة التقنية لعبدالكريم الخطيب. تغطي معالجة اللغة العربية الطبيعية، البنية التحتية للتعلم الآلي، وأنظمة الذكاء الاصطناعي الإنتاجية."
+    }
+  },
+  "/til/index.html": {
+    "old": {
+      "description": "ملاحظات سريعة في الذكاء الاصطناعي، معالجة اللغة العربية، وهندسة التعلم الآلي",
+      "title": "ملاحظات | عبدالكريم الخطيب - NLP العربية والذكاء الاصطناعي – عبدالكريم الخطيب",
+      "og:title": "ملاحظات يومية | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/quarto.webp"
+    },
+    "current": {
+      "title": "ملاحظات | عبدالكريم الخطيب - NLP العربية والذكاء الاصطناعي",
+      "og:title": "ملاحظات | عبدالكريم الخطيب - NLP العربية والذكاء الاصطناعي",
+      "og:image": "https://kareemai.com/static/kareem.webp",
+      "description": "ملاحظات سريعة في الذكاء الاصطناعي، معالجة اللغة العربية، وهندسة التعلم الآلي"
+    }
+  },
+  "/til/tils/2025-05-17-til.html": {
+    "old": {
+      "description": "Starting a Today I Learned (TIL) series to overcome perfectionism in technical writing and build professional connections within the machine learning community.",
+      "title": "Learning in Public: Why I Started My TIL Journey – عبدالكريم الخطيب",
+      "og:title": "Learning in Public: Why I Started My TIL Journey – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/til/tils/til.webp"
+    },
+    "current": {
+      "title": "Learning in Public: Why I Started My TIL Journey | عبدالكريم الخطيب",
+      "og:title": "Learning in Public: Why I Started My TIL Journey | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/a549e7cebe09955213b3ab9f.webp",
+      "description": "Starting a Today I Learned (TIL) series to overcome perfectionism in technical writing and build professional connections within the machine learning community."
+    }
+  },
+  "/til/tils/2025-05-18-til.html": {
+    "old": {
+      "description": "This a 2 hours daily exploring and summarizing Qdrant Blogs part 1",
+      "title": "Explore the Qdrant Blog core concepts | Part 1 – عبدالكريم الخطيب",
+      "og:title": "Explore the Qdrant Blog core concepts | Part 1 – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/til/tils/til.webp"
+    },
+    "current": {
+      "title": "Explore the Qdrant Blog core concepts | Part 1 | عبدالكريم الخطيب",
+      "og:title": "Explore the Qdrant Blog core concepts | Part 1 | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/a549e7cebe09955213b3ab9f.webp",
+      "description": "This a 2 hours daily exploring and summarizing Qdrant Blogs part 1"
+    }
+  },
+  "/til/tils/2025-05-19-til.html": {
+    "old": {
+      "description": "Insights on starting a Substack for AI researchers. Learn how blogging improves networking, writing skills, and knowledge management for AI engineering.",
+      "title": "AI Research Blogging: Why Substack Matters for Researchers – عبدالكريم الخطيب",
+      "og:title": "AI Research Blogging: Why Substack Matters for Researchers – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/til/tils/images/old_ahead_of_ai.webp"
+    },
+    "current": {
+      "title": "AI Research Blogging: Why Substack Matters for Researchers | عبدالكريم الخطيب",
+      "og:title": "AI Research Blogging: Why Substack Matters for Researchers | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/3c69dc492e850e0e0f753d91.webp",
+      "description": "Insights on starting a Substack for AI researchers. Learn how blogging improves networking, writing skills, and knowledge management for AI engineering."
+    }
+  },
+  "/til/tils/2025-05-20-til.html": {
+    "old": {
+      "description": "Connect Porkbun domains to Vercel via DNS records and Cloudflare for Railway. Complete steps for domain transfers, WHOIS privacy setup, and DNS propagation troubleshooting.",
+      "title": "How to Connect Porkbun Domains to Vercel and Cloudflare (Step-by-Step) – عبدالكريم الخطيب",
+      "og:title": "How to Connect Porkbun Domains to Vercel and Cloudflare (Step-by-Step) – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/til/tils/til.webp"
+    },
+    "current": {
+      "title": "How to Connect Porkbun Domains to Vercel and Cloudflare (Step-by-Step) | عبدالكريم الخطيب",
+      "og:title": "How to Connect Porkbun Domains to Vercel and Cloudflare (Step-by-Step) | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/a549e7cebe09955213b3ab9f.webp",
+      "description": "Connect Porkbun domains to Vercel via DNS records and Cloudflare for Railway. Complete steps for domain transfers, WHOIS privacy setup, and DNS propagation troubleshooting."
+    }
+  },
+  "/til/tils/2025-05-21-til.html": {
+    "old": {
+      "description": "تأملات حول التوجه إلى الله وتزكية النفس، والتحديات الإيمانية التي تواجه الباحث في مجال الذكاء الاصطناعي للتحرر من الأنانية وتحقيق الإخلاص في طلب العلم.",
+      "title": "البوصلة الحقيقية: تأملات في تزكية النفس وإخلاص النية في طلب العلم – عبدالكريم الخطيب",
+      "og:title": "البوصلة الحقيقية: تأملات في تزكية النفس وإخلاص النية في طلب العلم – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/til/tils/images/isreal.webp"
+    },
+    "current": {
+      "title": "البوصلة الحقيقية: تأملات في تزكية النفس وإخلاص النية في طلب العلم | عبدالكريم الخطيب",
+      "og:title": "البوصلة الحقيقية: تأملات في تزكية النفس وإخلاص النية في طلب العلم | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/1d686d166c6d0ea6f62985ca.webp",
+      "description": "تأملات حول التوجه إلى الله وتزكية النفس، والتحديات الإيمانية التي تواجه الباحث في مجال الذكاء الاصطناعي للتحرر من الأنانية وتحقيق الإخلاص في طلب العلم."
+    }
+  },
+  "/til/tils/2025-05-23-til.html": {
+    "old": {
+      "description": "Yes, Brave Leo runs locally with anonymous requests and local chat storage. Configure Brave Leo to use any local LLM via BYOM: Ollama, vLLM, or SGLang for private AI in your browser.",
+      "title": "Does Brave Leo Run Locally? Privacy-First AI with Ollama and BYOM – عبدالكريم الخطيب",
+      "og:title": "Does Brave Leo Run Locally? Privacy-First AI with Ollama and BYOM – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/til/tils/images/brave_leo.webp"
+    },
+    "current": {
+      "title": "Does Brave Leo Run Locally? Privacy-First AI with Ollama and BYOM | عبدالكريم الخطيب",
+      "og:title": "Does Brave Leo Run Locally? Privacy-First AI with Ollama and BYOM | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/f34a88c9de637741a036d1d7.webp",
+      "description": "Yes, Brave Leo runs locally with anonymous requests and local chat storage. Configure Brave Leo to use any local LLM via BYOM: Ollama, vLLM, or SGLang for private AI in your browser."
+    }
+  },
+  "/til/tils/2025-05-25-til.html": {
+    "old": {
+      "description": "A complete guide to Meta’s RAPTOR RAG technique, DFloat11 lossless model compression, and the Pyrefly Python type checker with implementation details.",
+      "title": "Meta’s RAPTOR RAG, DFloat11 Compression & Pyrefly Guide – عبدالكريم الخطيب",
+      "og:title": "Meta’s RAPTOR RAG, DFloat11 Compression & Pyrefly Guide – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/til/tils/images/raptor.webp"
+    },
+    "current": {
+      "title": "Meta's RAPTOR RAG, DFloat11 Compression & Pyrefly Guide | عبدالكريم الخطيب",
+      "og:title": "Meta's RAPTOR RAG, DFloat11 Compression & Pyrefly Guide | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/a9c1b24a692eff03a8452191.webp",
+      "description": "A complete guide to Meta's RAPTOR RAG technique, DFloat11 lossless model compression, and the Pyrefly Python type checker with implementation details."
+    }
+  },
+  "/til/tils/2025-05-28-til.html": {
+    "old": {
+      "description": "PyLate tutorial for ColBERT vector retrieval. Learn dataset formats, PLAID indexing, evaluation metrics, and practical code examples for dense retrieval systems.",
+      "title": "PyLate Tutorial: Vector Indexing and Retrieval with ColBERT – عبدالكريم الخطيب",
+      "og:title": "PyLate Tutorial: Vector Indexing and Retrieval with ColBERT – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/til/tils/til.webp"
+    },
+    "current": {
+      "title": "PyLate Tutorial: Vector Indexing and Retrieval with ColBERT | عبدالكريم الخطيب",
+      "og:title": "PyLate Tutorial: Vector Indexing and Retrieval with ColBERT | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/a549e7cebe09955213b3ab9f.webp",
+      "description": "PyLate tutorial for ColBERT vector retrieval. Learn dataset formats, PLAID indexing, evaluation metrics, and practical code examples for dense retrieval systems."
+    }
+  },
+  "/til/tils/2025-06-06-til.html": {
+    "old": {
+      "description": "Reflections on landing an AI engineering role, the importance of professional connections, and following the right experts in the machine learning field.",
+      "title": "AI Engineering Careers: Connecting with Minds in Machine Learning – عبدالكريم الخطيب",
+      "og:title": "AI Engineering Careers: Connecting with Minds in Machine Learning – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/til/tils/til.webp"
+    },
+    "current": {
+      "title": "AI Engineering Careers: Connecting with Minds in Machine Learning | عبدالكريم الخطيب",
+      "og:title": "AI Engineering Careers: Connecting with Minds in Machine Learning | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/a549e7cebe09955213b3ab9f.webp",
+      "description": "Reflections on landing an AI engineering role, the importance of professional connections, and following the right experts in the machine learning field."
+    }
+  },
+  "/til/tils/2025-10-21.html": {
+    "old": {
+      "description": "AraModernBert vs AraBERT v2 tokenizers for Arabic NLP. Test results: AraModernBert is 15-71% more efficient. Fertility, compression ratio, and practical performance on MSA and dialect text.",
+      "title": "AraModernBert vs AraBERT v2: Arabic Tokenizer Comparison – عبدالكريم الخطيب",
+      "og:title": "AraModernBert vs AraBERT v2: Arabic Tokenizer Comparison – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/til/tils/til.webp"
+    },
+    "current": {
+      "title": "AraModernBert vs AraBERT v2: Arabic Tokenizer Comparison | عبدالكريم الخطيب",
+      "og:title": "AraModernBert vs AraBERT v2: Arabic Tokenizer Comparison | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/a549e7cebe09955213b3ab9f.webp",
+      "description": "AraModernBert vs AraBERT v2 tokenizers for Arabic NLP. Test results: AraModernBert is 15-71% more efficient. Fertility, compression ratio, and practical performance on MSA and dialect text."
+    }
+  },
+  "/til/tils/2025-12-13.html": {
+    "old": {
+      "description": "Rebuilding NLP fundamentals for Arabic: TF-IDF, BM25, sparse embeddings, minimum edit distance, and learning problem-solving through LeetCode and Jurafsky’s Speech and Language Processing book.",
+      "title": "Arabic NLP Fundamentals: Sparse Embeddings, BM25 & Dynamic Programming – عبدالكريم الخطيب",
+      "og:title": "Arabic NLP Fundamentals: Sparse Embeddings, BM25 & Dynamic Programming – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/til/tils/til.webp"
+    },
+    "current": {
+      "title": "Arabic NLP Fundamentals: Sparse Embeddings, BM25 & Dynamic Programming | عبدالكريم الخطيب",
+      "og:title": "Arabic NLP Fundamentals: Sparse Embeddings, BM25 & Dynamic Programming | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/a549e7cebe09955213b3ab9f.webp",
+      "description": "Rebuilding NLP fundamentals for Arabic: TF-IDF, BM25, sparse embeddings, minimum edit distance, and learning problem-solving through LeetCode and Jurafsky's Speech and Language Processing book."
+    }
+  },
+  "/til/tils/2025-12-14.html": {
+    "old": {
+      "description": "Learning Rust for ML engineering—building AI tools with Polars, Qdrant, and planning semantic search projects like Pyversity and Semhash",
+      "title": "Rust for ML: Building AI Tools and Data Pipelines in 2026 – عبدالكريم الخطيب",
+      "og:title": "Rust for ML: Building AI Tools and Data Pipelines in 2026 – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/til/tils/til.webp"
+    },
+    "current": {
+      "title": "Rust for ML: Building AI Tools and Data Pipelines in 2026 | عبدالكريم الخطيب",
+      "og:title": "Rust for ML: Building AI Tools and Data Pipelines in 2026 | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/a549e7cebe09955213b3ab9f.webp",
+      "description": "Learning Rust for ML engineering—building AI tools with Polars, Qdrant, and planning semantic search projects like Pyversity and Semhash"
+    }
+  },
+  "/til/tils/2025-12-15.html": {
+    "old": {
+      "description": "Exploring the challenges of AI research without high-end compute, focusing on feedback loops and the need for hardware like the RTX 5090.",
+      "title": "AI Research Challenges: The GPU Barrier for Researchers – عبدالكريم الخطيب",
+      "og:title": "AI Research Challenges: The GPU Barrier for Researchers – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/til/tils/til.webp"
+    },
+    "current": {
+      "title": "AI Research Challenges: The GPU Barrier for Researchers | عبدالكريم الخطيب",
+      "og:title": "AI Research Challenges: The GPU Barrier for Researchers | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/a549e7cebe09955213b3ab9f.webp",
+      "description": "Exploring the challenges of AI research without high-end compute, focusing on feedback loops and the need for hardware like the RTX 5090."
+    }
+  },
+  "/til/tils/livekitintro.html": {
+    "old": {
+      "description": "هي مشروع مفتوح المصدر لبناء وكلاء ذكاء إصطناعي تتعامل مع الصوت و الصورة بشكل لحظي وتشمل كل ما يحتاجه المبرمج",
+      "title": "ماهي Likve Kit مقدمة سريعة – عبدالكريم الخطيب",
+      "og:title": "ماهي Likve Kit مقدمة سريعة – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/til/tils/til.jpg"
+    },
+    "current": {
+      "title": "ماهي Likve Kit مقدمة سريعة | عبدالكريم الخطيب",
+      "og:title": "ماهي Likve Kit مقدمة سريعة | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/075fa3d4703aa34241ffba93.jpg",
+      "description": "هي مشروع مفتوح المصدر لبناء وكلاء ذكاء إصطناعي تتعامل مع الصوت و الصورة بشكل لحظي وتشمل كل ما يحتاجه المبرمج"
+    }
+  },
+  "/til/tils/start_youtube_channel_as_ai_developer.html": {
+    "old": {
+      "description": "بشارك خواطر تجربة إنشاء قناة لمشاركة المعارف في تخصصي وهو الذكاء الإصطناعي والبرمجة في عام ملئ بالتشتت والسطحية في نشر المعرفة.",
+      "title": "فوائد و أضرار عمل قناة يوتيوب لمشاركة المعرفة – عبدالكريم الخطيب",
+      "og:title": "فوائد و أضرار عمل قناة يوتيوب لمشاركة المعرفة – عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/til/tils/til.jpg"
+    },
+    "current": {
+      "title": "فوائد و أضرار عمل قناة يوتيوب لمشاركة المعرفة | عبدالكريم الخطيب",
+      "og:title": "فوائد و أضرار عمل قناة يوتيوب لمشاركة المعرفة | عبدالكريم الخطيب",
+      "og:image": "https://kareemai.com/assets/075fa3d4703aa34241ffba93.jpg",
+      "description": "بشارك خواطر تجربة إنشاء قناة لمشاركة المعارف في تخصصي وهو الذكاء الإصطناعي والبرمجة في عام ملئ بالتشتت والسطحية في نشر المعرفة."
+    }
+  }
+}

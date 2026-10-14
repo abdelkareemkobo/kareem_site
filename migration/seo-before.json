@@ -1,0 +1,86 @@
+{
+  "measuredAt": "2026-10-14T12:10:17.822Z",
+  "method": "Static output inspection; gzip estimates, not browser timing or field Core Web Vitals.",
+  "oldQuarto": {
+    "pages": 68,
+    "canonical": 68,
+    "descriptions": 68,
+    "socialImages": 68,
+    "structuredData": 62,
+    "siteNameSchema": 0,
+    "articleSchema": 61,
+    "missingImageDimensions": 195,
+    "images": 199,
+    "htmlBytes": 11211371,
+    "homeResources": [
+      "site_libs/quarto-nav/quarto-nav.js",
+      "site_libs/clipboard/clipboard.min.js",
+      "site_libs/quarto-search/autocomplete.umd.js",
+      "site_libs/quarto-search/fuse.min.js",
+      "site_libs/quarto-search/quarto-search.js",
+      "site_libs/quarto-html/quarto.js",
+      "site_libs/quarto-html/tabsets/tabsets.js",
+      "site_libs/quarto-html/popper.min.js",
+      "site_libs/quarto-html/tippy.umd.min.js",
+      "site_libs/quarto-html/anchor.min.js",
+      "site_libs/quarto-html/tippy.css",
+      "site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css",
+      "site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css",
+      "site_libs/bootstrap/bootstrap.min.js",
+      "site_libs/bootstrap/bootstrap-icons.css",
+      "site_libs/bootstrap/bootstrap-4147375aad28e86e0c0b867c5ec42731.min.css",
+      "site_libs/bootstrap/bootstrap-dark-0c33f1f559f04da1bcee1516f29a3f94.min.css",
+      "site_libs/bootstrap/bootstrap-4147375aad28e86e0c0b867c5ec42731.min.css",
+      "https://www.googletagmanager.com/gtag/js?id=G-XFPC3M9TMG",
+      "shimmering-fonts.css",
+      "theme.css"
+    ],
+    "sharedAssets": {
+      "search.json": {
+        "bytes": 730562,
+        "gzip": 201624
+      },
+      "index.html": {
+        "bytes": 54877,
+        "gzip": 14375
+      }
+    }
+  },
+  "quartz": {
+    "pages": 68,
+    "canonical": 68,
+    "descriptions": 68,
+    "socialImages": 68,
+    "structuredData": 62,
+    "siteNameSchema": 0,
+    "articleSchema": 61,
+    "missingImageDimensions": 70,
+    "images": 71,
+    "htmlBytes": 3694164,
+    "homeResources": [
+      "./index.css",
+      "https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css",
+      "./prescript.js",
+      "https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js",
+      "./postscript.js"
+    ],
+    "sharedAssets": {
+      "index.css": {
+        "bytes": 44044,
+        "gzip": 9144
+      },
+      "postscript.js": {
+        "bytes": 131905,
+        "gzip": 46372
+      },
+      "static/contentIndex.json": {
+        "bytes": 2851606,
+        "gzip": 361532
+      },
+      "index.html": {
+        "bytes": 48265,
+        "gzip": 11731
+      }
+    }
+  }
+}

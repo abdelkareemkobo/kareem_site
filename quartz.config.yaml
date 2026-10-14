@@ -1,0 +1,251 @@
+configuration:
+  pageTitle: عبدالكريم الخطيب
+  pageTitleSuffix: ' | عبدالكريم الخطيب'
+  enableSPA: false
+  enablePopovers: true
+  analytics: null
+  locale: ar-SA
+  baseUrl: kareemai.com
+  ignorePatterns:
+  - private
+  - templates
+  - .obsidian
+  defaultDateType: published
+  theme:
+    fontOrigin: local
+    cdnCaching: false
+    typography:
+      header: Noto Sans Arabic
+      body: Noto Naskh Arabic
+      code: monospace
+    colors:
+      lightMode:
+        light: '#fcfaf6'
+        lightgray: '#e5e5e5'
+        gray: '#b8b8b8'
+        darkgray: '#384a43'
+        dark: '#233c36'
+        secondary: '#176b63'
+        tertiary: '#9b6d3e'
+        highlight: rgba(143, 159, 169, 0.15)
+        textHighlight: '#fff23688'
+      darkMode:
+        light: '#15201e'
+        lightgray: '#393639'
+        gray: '#646464'
+        darkgray: '#d1d8d0'
+        dark: '#f2eee5'
+        secondary: '#8ed3bd'
+        tertiary: '#dbb783'
+        highlight: rgba(143, 159, 169, 0.15)
+        textHighlight: '#b3aa0288'
+plugins:
+- source: ./node_modules/@quartz-themes/core
+  enabled: true
+  order: 5
+  options:
+    theme: things
+    mode: both
+    themeFonts: false
+    include:
+    - base
+    - headings
+    - typography
+    - links
+    - lists
+    - blockquotes
+    - tables
+    - code
+    - images
+    - embeds
+    - checkboxes
+    - callouts
+    - search
+    - scrollbars
+    - explorer
+    - toc
+    - graph
+    - footer
+    - listPage
+    - darkmode
+    - breadcrumbs
+- source: github:quartz-community/note-properties
+  enabled: true
+  order: 0
+  options:
+    hidePropertiesView: true
+- source: github:quartz-community/created-modified-date
+  enabled: true
+  options:
+    priority:
+    - frontmatter
+  order: 10
+- source: github:quartz-community/syntax-highlighting
+  enabled: true
+  options:
+    theme:
+      light: github-light
+      dark: github-dark
+    keepBackground: false
+  order: 20
+- source: github:quartz-community/obsidian-flavored-markdown
+  enabled: true
+  options:
+    enableInHtmlEmbed: true
+    enableCheckbox: true
+  order: 30
+- source: github:quartz-community/github-flavored-markdown
+  enabled: true
+  order: 40
+- source: github:quartz-community/table-of-contents
+  enabled: true
+  order: 50
+  layout:
+    position: right
+    priority: 20
+- source: github:quartz-community/crawl-links
+  enabled: true
+  options:
+    markdownLinkResolution: shortest
+  order: 60
+- source: github:quartz-community/description
+  enabled: true
+  order: 70
+- source: github:quartz-community/latex
+  enabled: true
+  options:
+    renderEngine: katex
+  order: 80
+- source: github:quartz-community/remove-draft
+  enabled: true
+- source: github:quartz-community/explicit-publish
+  enabled: true
+- source: github:quartz-community/alias-redirects
+  enabled: true
+- source: github:quartz-community/content-index
+  enabled: true
+  options:
+    enableSiteMap: true
+    enableRSS: false
+    rssSlug: blog/feed
+    rssLimit: 100
+    # Custom RSS feeds retain full HTML; the search index only needs plain text.
+    rssFullHtml: false
+    includeEmptyFiles: false
+- source: github:quartz-community/favicon
+  enabled: true
+- source: github:quartz-community/cname
+  enabled: true
+- source: github:quartz-community/content-page
+  enabled: true
+- source: github:quartz-community/folder-page
+  enabled: true
+- source: github:quartz-community/tag-page
+  enabled: true
+- source: github:quartz-community/explorer
+  enabled: true
+  options:
+    mapFn: >-
+      (node) => { if (node.isFolder) { const names = { blog: "المدونة", posts: "المقالات", til: "ملاحظات يومية", tils: "الملاحظات", courses: "الدورات", ds_and_algo: "هياكل البيانات والخوارزميات", dspy: "DSPy", fl: "التعلّم الاتحادي", life_style: "الحياة والعمل", math: "الرياضيات", minishlab: "MinishLab", ml_life: "العمل في التعلّم الآلي", mteb_encoding: "اختبارات نماذج التضمين", nlp: "معالجة اللغة الطبيعية", embedding_world: "نماذج التضمين والبحث المتجهي", sparse_embedding: "التضمين المتناثر", on_device: "الذكاء الاصطناعي على الأجهزة", products_reviews: "مراجعات الأجهزة", seo: "تحسين الظهور في البحث", speech_recognition: "التعرّف على الكلام", tools_reviews: "مراجعات الأدوات", voice: "الصوت" }; node.displayName = names[node.slugSegment] ?? node.displayName; } return node; }
+  layout:
+    position: left
+    priority: 50
+- source: github:quartz-community/graph
+  enabled: true
+  layout:
+    position: right
+    priority: 10
+- source: github:quartz-community/search
+  enabled: true
+  layout:
+    position: left
+    priority: 20
+    group: toolbar
+    groupOptions:
+      grow: true
+- source: github:quartz-community/backlinks
+  enabled: true
+  layout:
+    position: right
+    priority: 30
+- source: github:quartz-community/article-title
+  enabled: true
+  layout:
+    position: beforeBody
+    priority: 10
+- source: github:quartz-community/content-meta
+  enabled: true
+  layout:
+    position: beforeBody
+    priority: 20
+- source: github:quartz-community/tag-list
+  enabled: true
+  layout:
+    position: beforeBody
+    priority: 30
+- source: github:quartz-community/page-title
+  enabled: true
+  layout:
+    position: left
+    priority: 10
+- source: github:quartz-community/darkmode
+  enabled: true
+  layout:
+    position: left
+    priority: 30
+    group: toolbar
+- source: github:quartz-community/breadcrumbs
+  enabled: true
+  options:
+    rootName: الرئيسية
+  layout:
+    position: beforeBody
+    priority: 5
+    condition: not-index
+- source: github:quartz-community/comments
+  enabled: true
+  options:
+    provider: giscus
+    options:
+      repo: abdelkareemkobo/kareem_site
+      repoId: R_kgDOQxY8kw
+      category: Comments
+      categoryId: DIC_kwDOQxY8k84C0aRf
+      lang: ar
+      mapping: pathname
+      strict: false
+  layout:
+    position: afterBody
+    priority: 10
+- source: github:quartz-community/footer
+  enabled: true
+  options:
+    links:
+      GitHub: https://github.com/abdelkareemkobo
+      RSS: https://kareemai.com/blog/feed.xml
+      SoundCloud: https://soundcloud.com/abdelkareem-elkhateb
+- source: github:quartz-community/recent-notes
+  enabled: false
+layout:
+  groups:
+    toolbar:
+      priority: 35
+      direction: row
+      gap: 0.5rem
+  byPageType:
+    '404':
+      positions:
+        beforeBody: []
+        left: []
+        right: []
+    content: {}
+    folder:
+      exclude:
+      - reader-mode
+      positions:
+        right: []
+    tag:
+      exclude:
+      - reader-mode
+      positions:
+        right: []

@@ -1,0 +1,230 @@
+---
+permalink: "/blog/posts/seo/how_i_use_nlp_for_seo"
+section: "blog"
+title: 'How I Use NLP to Improve Website SEO: A Practical Guide'
+description: A practical guide to using Python and NLP for SEO automation. Covers
+  Google Search Console API, keyword extraction, content gap analysis, and semantic
+  search for real websites.
+lang: en
+dir: ltr
+author: Kareem Elkhateb
+publish: true
+date: '2023-07-18'
+tags:
+- life
+- blogging
+- publish
+- seo
+socialImage: images/seo_rat.webp
+---
+
+**Using Python and NLP to automate SEO analysis, find content gaps, and improve rankings for real websites.**
+
+This guide shows the exact workflow I use to optimize landing pages for local service businesses and content sites. No fluff — just Python code, real data, and measurable results.
+
+## Why NLP for SEO?
+
+Search engines now understand intent, not just keywords. Writing "best plumber Cairo" 20 times no longer works. You need to cover topics comprehensively, answer related questions, and match the semantic intent behind queries.
+
+NLP helps you:
+
+1. **Mine real queries** from Google Search Console that your pages already rank for
+2. **Find content gaps** — queries you appear for but don't explicitly answer
+3. **Analyze competitor content** to see what topics they cover that you don't
+4. **Measure semantic similarity** between your content and top-ranking pages
+
+## The Workflow
+
+### Step 1: Download Search Console Data
+
+I fetch daily query data via the Google Search Console API. This gives me the actual terms people use to find my sites.
+
+```python
+from googleapiclient.discovery import build
+from google.oauth2 import service_account
+
+def get_gsc_queries(site_url, days=28):
+    credentials = service_account.Credentials.from_service_account_file(
+        'gsc-credentials.json',
+        scopes=['https://www.googleapis.com/auth/webmasters.readonly']
+    )
+    service = build('webmasters', 'v3', credentials=credentials)
+
+    request = {
+        'startDate': (datetime.now() - timedelta(days=days)).strftime('%Y-%m-%d'),
+        'endDate': datetime.now().strftime('%Y-%m-%d'),
+        'dimensions': ['query', 'page'],
+        'rowLimit': 25000
+    }
+
+    response = service.searchanalytics().query(siteUrl=site_url, body=request).execute()
+    return response.get('rows', [])
+```
+
+### Step 2: Extract Keywords and Topics
+
+Once I have the query list, I use NLP to group them by topic and identify patterns.
+
+```python
+import spacy
+from collections import Counter
+
+nlp = spacy.load('en_core_web_sm')
+
+def extract_topics(queries, min_freq=3):
+    """Extract noun phrases and entities from search queries."""
+    topics = Counter()
+    for query in queries:
+        doc = nlp(query.lower())
+        # Extract noun chunks and named entities
+        for chunk in doc.noun_chunks:
+            if len(chunk.text.split()) <= 4:
+                topics[chunk.text] += 1
+    return {k: v for k, v in topics.items() if v >= min_freq}
+```
+
+This tells me what topics people actually search for. For example, on a cleaning services site, I discovered queries like "تنظيف فلل العين" (villa cleaning Al Ain) and "شركة تنظيف بالساعة" (hourly cleaning company) that I wasn't targeting explicitly.
+
+### Step 3: Find Content Gaps
+
+I compare Search Console queries against my page content to find gaps — queries where my site appears but the page doesn't directly answer.
+
+```python
+from sentence_transformers import SentenceTransformer
+from sklearn.metrics.pairwise import cosine_similarity
+
+model = SentenceTransformer('all-MiniLM-L6-v2')
+
+def find_content_gaps(queries, page_content, threshold=0.55):
+    """Find queries with low semantic similarity to page content."""
+    page_embedding = model.encode([page_content])
+    gaps = []
+
+    for query in queries:
+        query_embedding = model.encode([query])
+        similarity = cosine_similarity(query_embedding, page_embedding)[0][0]
+        if similarity < threshold:
+            gaps.append((query, similarity))
+
+    return sorted(gaps, key=lambda x: x[1])
+```
+
+If a query has low similarity to my page, it means my content doesn't cover that topic well. I add an H2 section answering that specific query.
+
+### Step 4: Semantic Keyword Clustering
+
+Instead of targeting single keywords, I group related queries into topic clusters using embeddings. This helps me plan content that covers entire topics comprehensively.
+
+```python
+from sklearn.cluster import KMeans
+import numpy as np
+
+def cluster_queries(queries, n_clusters=8):
+    """Group search queries into topic clusters using embeddings."""
+    embeddings = model.encode(queries)
+    kmeans = KMeans(n_clusters=n_clusters, random_state=42, n_init=10)
+    labels = kmeans.fit_predict(embeddings)
+
+    clusters = {}
+    for query, label in zip(queries, labels):
+        clusters.setdefault(label, []).append(query)
+
+    return clusters
+```
+
+For a home services site, clusters might look like:
+- **Cluster 0**: "تنظيف منازل", "تنظيف فلل", "تنظيف شقق" (residential cleaning)
+- **Cluster 1**: "تنظيف كنب", "تنظيف سجاد", "تنظيف مكيفات" (specialized cleaning)
+- **Cluster 2**: "اسعار التنظيف", "تكلفة تنظيف الفيلا" (pricing queries)
+
+Each cluster becomes a content section or a separate page.
+
+### Step 5: Optimize Page Content
+
+I rewrite page sections to naturally incorporate the queries from each cluster. The key is answering the intent, not stuffing keywords.
+
+For example, if queries show people asking "كم سعر تنظيف الفيلا؟" (how much does villa cleaning cost?), I add a dedicated pricing H2 with transparent pricing tables rather than vague marketing text.
+
+## Real Results
+
+I applied this workflow to three sites:
+
+| Site | Niche | Key Improvement |
+|---|---|---|
+| [Alain Clean](https://www.alainclean.com/) | Home cleaning Al Ain | Added 6 service-specific H2s, FAQ sections, cross-links between services |
+| [Tanor Fix](https://www.tanorfix.com/) | Oven repair Riyadh | Removed keyword stuffing, added natural service descriptions, how-it-works section |
+| [Kareem AI](https://kareemai.com/) | Arabic NLP blog | Added FAQ sections to high-impression posts, fixed heading hierarchy, internal cross-links |
+
+### What Changed
+
+**Alain Clean**: Before optimization, the services page had generic descriptions. After analyzing Search Console queries, I added specific sections for "تنظيف فلل", "تنظيف كنب", "تنظيف بعد التشطيب" — each with unique content, pricing context, and links to related services. Internal links increased from 3 to 18 per page.
+
+**Tanor Fix**: The original content had keyword stuffing — "صيانة افران غاز بالرياض" repeated 15+ times in unnatural ways. I rewrote all descriptions to be helpful first, using the keyword naturally 2-3 times per section. Added a "how it works" section explaining the repair process step by step.
+
+**Kareem AI**: Search Console showed 0 CTR for high-impression pages like the Huawei MatePad 11 review. I expanded the content from a simple review to include a detailed "Disadvantages" section, FAQ with 6 specific questions, and related product links. Heading structure was fixed from H1→H3 skips to proper H1→H2→H3 hierarchy.
+
+## Tools I Use
+
+- **Google Search Console API** — raw query and impression data
+- **spaCy** — keyword extraction and entity recognition
+- **Sentence-Transformers** — semantic similarity and clustering
+- **scikit-learn** — KMeans clustering of query embeddings
+- **pandas** — data manipulation and CSV exports
+- **Quarto** — static site generation with proper SEO metadata
+
+## FAQ: NLP for SEO
+
+### Can NLP really improve SEO rankings?
+Yes, but indirectly. NLP helps you understand what users actually search for and what your content is missing. Better content coverage leads to higher relevance, which leads to better rankings. It's not a magic trick — it's data-driven content improvement.
+
+### Do I need to know Python to use NLP for SEO?
+For automation at scale, yes. But you can start manually: export Search Console data to CSV, read through queries, and identify patterns. The Python scripts just make this faster and more systematic.
+
+### What is semantic SEO?
+Semantic SEO is about covering topics comprehensively rather than targeting single keywords. Google's NLP models (like BERT and MUM) understand relationships between concepts. If your page covers "تنظيف منازل" but also mentions "تنظيف بعد البناء", "تنظيف عميق", and "اسعار التنظيف", Google sees it as more authoritative on the topic.
+
+### How often should I run this analysis?
+I run it monthly for active sites. Search patterns change seasonally — "تنظيف قبل رمضان" spikes before Ramadan, for example. Regular analysis catches these trends early.
+
+### Which embedding model should I use for semantic analysis?
+`all-MiniLM-L6-v2` is fast and good enough for query clustering. For Arabic content, I use multilingual models like `paraphrase-multilingual-MiniLM-L12-v2` or specialized Arabic embeddings from [NAMMA](https://www.namaa.space/).
+
+## Leveling Up
+
+This workflow can be extended further:
+
+**Level 1 — Automation**
+- Schedule daily GSC downloads with cron jobs
+- Store data in SQLite or DuckDB for historical analysis
+- Build dashboards with Streamlit or Plotly
+
+**Level 2 — Competitor Analysis**
+- Scrape competitor pages and extract their topics
+- Compare your content coverage vs. theirs using embeddings
+- Identify topics they rank for that you don't cover
+
+**Level 3 — Predictive Trends**
+- Use time-series forecasting on query volumes
+- Identify rising queries before they peak
+- Create content ahead of demand spikes
+
+**Level 4 — Arabic SEO Tools**
+- Arabic tokenization and morphological analysis with CAMeL Tools
+- RTL text handling for Arabic query processing
+- Dialect-aware keyword extraction (Egyptian, Gulf, Levantine)
+
+## Conclusion
+
+NLP doesn't replace good writing — it makes your writing more targeted. By starting with real search queries instead of guessing keywords, you create content that actually answers what people are looking for.
+
+The sites I optimize using this workflow:
+
+1. [منصة صناعة المحتوي العربي](https://anwan.me/) — Arabic content generation
+2. [كم كالوري في الموز](https://kamcalorie.com) — Arabic nutrition search
+3. [صيانة افران غاز بالرياض](https://www.tanorfix.com/) — Oven repair Riyadh
+4. [شركة تنسيق حدائق بالمدينة المنورة](https://www.smaagarden.com/) — Gardening services
+5. [شركة تنظيف منازل في العين](https://www.alainclean.com/) — Home cleaning Al Ain
+
+For more on Arabic NLP and building production AI systems, explore my [Research Papers](../../../papers.html) or check out my [embedding model research](../../../blog/posts/nlp/embedding_world/hyperrun.html).
+
+If you're building SEO tools or dealing with SEO challenges, also see [Building SEO RAT: A Free, Open-Source SEO Tool](/blog/posts/seo/seo_rat_journey.md) and [The Curse of SEO](../../../blog/posts/seo/the_curse_of_seo.html).

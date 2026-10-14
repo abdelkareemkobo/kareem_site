@@ -1,0 +1,505 @@
+{
+  "notes": [
+    "about.md",
+    "blog/feed.md",
+    "blog/posts/courses/havrard-cs197-ai-research-experiences.md",
+    "blog/posts/ds_and_algo/master_ds.md",
+    "blog/posts/dspy/opencode.md",
+    "blog/posts/fl/what_is_federated_learning.md",
+    "blog/posts/life_style/back_to_rss.md",
+    "blog/posts/life_style/digital_minimalisim_arabic.md",
+    "blog/posts/life_style/fake_graviety.md",
+    "blog/posts/life_style/gpuvec.md",
+    "blog/posts/life_style/kamcalorie.md",
+    "blog/posts/life_style/protienai.md",
+    "blog/posts/life_style/why_i_am_blogging.md",
+    "blog/posts/math/math_skills_for_ai.md",
+    "blog/posts/minishlab/blog_zaraah.md",
+    "blog/posts/minishlab/ctranslate_maswray.md",
+    "blog/posts/minishlab/pyversity_qdrant.md",
+    "blog/posts/ml_life/cv_of_failure.md",
+    "blog/posts/ml_life/hacker_rank_ai_intereviw.md",
+    "blog/posts/mteb_encoding/mteb_massive_text_embedding_benchmark.md",
+    "blog/posts/mteb_encoding/my_little_dargon.md",
+    "blog/posts/mteb_encoding/tiny-gte_transformer_model.md",
+    "blog/posts/nlp/dinvo3-for-arabic-scripts.md",
+    "blog/posts/nlp/tts-architecture-v1.md",
+    "blog/posts/nlp/embedding_world/hyperrun.md",
+    "blog/posts/nlp/embedding_world/hyperun_fasthtml.md",
+    "blog/posts/nlp/embedding_world/index.md",
+    "blog/posts/nlp/embedding_world/late_interaction.md",
+    "blog/posts/nlp/embedding_world/sakr_v1.md",
+    "blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.md",
+    "blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.md",
+    "blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.md",
+    "blog/posts/nlp/embedding_world/vector_database_book.md",
+    "blog/posts/nlp/gemma_tool_calling.md",
+    "blog/posts/on_device/litert.md",
+    "blog/posts/products_reviews/building_ai_pc_in_egypt.md",
+    "blog/posts/products_reviews/huawei-freebuds-5i.md",
+    "blog/posts/products_reviews/huawei-freebuds-7i.md",
+    "blog/posts/products_reviews/huawei_mate_pad_11.md",
+    "blog/posts/products_reviews/huawei_watch_gt_4_experience.md",
+    "blog/posts/products_reviews/one_plus_pad_3.md",
+    "blog/posts/seo/google_ads_black_box.md",
+    "blog/posts/seo/how_i_use_nlp_for_seo.md",
+    "blog/posts/seo/seo_rat_journey.md",
+    "blog/posts/seo/the_curse_of_seo.md",
+    "blog/posts/speech_recognition/muaalm_quran_chance.md",
+    "blog/posts/speech_recognition/my_dream_job_at_tarteel.md",
+    "blog/posts/tools_reviews/super_productivity_app.md",
+    "blog/voice/arabic_turn_detection.md",
+    "index.md",
+    "papers.md",
+    "publish.md",
+    "til/index.md",
+    "til/tils/2025-05-17-til.md",
+    "til/tils/2025-05-18-til.md",
+    "til/tils/2025-05-19-til.md",
+    "til/tils/2025-05-20-til.md",
+    "til/tils/2025-05-21-til.md",
+    "til/tils/2025-05-23-til.md",
+    "til/tils/2025-05-25-til.md",
+    "til/tils/2025-05-28-til.md",
+    "til/tils/2025-06-06-til.md",
+    "til/tils/2025-10-21.md",
+    "til/tils/2025-12-13.md",
+    "til/tils/2025-12-14.md",
+    "til/tils/2025-12-15.md",
+    "til/tils/livekitintro.md",
+    "til/tils/start_youtube_channel_as_ai_developer.md"
+  ],
+  "attachments": [
+    "assets/9a80a90db120ccc59edca0a4.webp",
+    "assets/a549e7cebe09955213b3ab9f.webp",
+    "assets/b76a68ad8c9b380e3b701f30.webp",
+    "assets/1b3c573e7a1a42ae2dceb86d.webp",
+    "assets/32cf4af85633c2b1ddf28e87.webp",
+    "assets/61ea0b632d7ca4a144054135.webp",
+    "assets/568309a042f24a0ecedbe363.webp",
+    "assets/53b39608cbec37b4a4d09a17.webp",
+    "assets/079c26b600e4537fcb27848c.webp",
+    "assets/6101722b17c6004f4b7732e4.webp",
+    "assets/90018249618efb3ca7bd99b8.webp",
+    "assets/9e15ac633c683d601a131e7e.webp",
+    "assets/dbf92fea98be32ebfe3aeb23.webp",
+    "assets/b7088e26cdac032420cb54ed.webp",
+    "assets/957e26e9aa7b4a8019875318.webp",
+    "assets/5d63b76bd370612b1b45e6f3.webp",
+    "assets/55036829d255bdb0645d40c7.webp",
+    "assets/a5328ab9cbe07f1ef49984b7.webp",
+    "assets/ea2e16476e42cfa23e6601a9.webp",
+    "assets/e46c4b70e09543d4b176db91.webp",
+    "assets/4c02c9f44d576f8c6331b654.webp",
+    "assets/bc8ab3214b5b57c08ac8a68a.webp",
+    "assets/08bcb8700f61b69f1a344dc8.webp",
+    "assets/453f563ab03c843a683cf0f0.webp",
+    "assets/1059e8fa9876fa5912e779c4.webp",
+    "assets/009383c9479bfada110c6d9e.webp",
+    "assets/5a9be72cfed56a2bf77c0618.webp",
+    "assets/27fe1a5e18c582c859f8d312.webp",
+    "assets/6e2173dd2a57445f1c34df86.webp",
+    "assets/4495c469616e57979248d4b7.webp",
+    "assets/14bbe81f9f456b5c2b60dae8.webp",
+    "assets/01eb47d96c2df863e81f9c3c.htm",
+    "assets/9cac6b407580862f4df87f77.webp",
+    "assets/5369b11b02a715cac43bb84b.webp",
+    "assets/58e17d176885979f5b0979b7.htm",
+    "assets/ff31cc27c3f5b38c15b7b1d7.svg",
+    "assets/85e5723ca62edd35cf9d1756.webp",
+    "assets/c3d8305223e07963b5c14192.webp",
+    "assets/74a15a7ac266d3b2bd3b4725.webp",
+    "assets/9ce1d3dfbea85c7901301951.webp",
+    "assets/9723d98cc46e26770595222d.png",
+    "assets/ba4836a0ef21521580bed219.png",
+    "assets/ea7eff359a9edee3f0d407b2.webp",
+    "assets/7de5c3dddcc0615201c4b1e0.webp",
+    "assets/05039acc7f997651bb9fd162.jpg",
+    "assets/9a62ee116f6208730b5afdd7.jpg",
+    "assets/4f6c3d8a4dd655aaaf454094.webp",
+    "assets/3ab4fcaf08eb27a74f281da0.webp",
+    "assets/5d0594c2747fede316531e48.webp",
+    "assets/ff9b4306e6cb99d40b96f173.webp",
+    "assets/2a4607f5d704d11738799c0d.jpg",
+    "assets/57bfe9754f62fb5d066ec643.webp",
+    "assets/4098fb905903135d6b12b2cd.webp",
+    "assets/6d6019d07bb4ad5ac6d8c572.webp",
+    "assets/c16b2673681e60ad77e8bfcb.webp",
+    "assets/a309f051c83b8a77d46dff96.webp",
+    "assets/26f72cb3906035a09e15a3d1.webp",
+    "assets/dbdfbff82e65f6af451729db.webp",
+    "assets/fb8d16f233285c1c08c6e079.webp",
+    "assets/4f3e328b7c3d2144fe9bdcc8.webp",
+    "assets/58b816213ebb11aa661b340e.webp",
+    "assets/1a1c471e139ae8ab857d51da.webp",
+    "assets/88e39df44e7c0b8a9aafadde.webp",
+    "assets/f247d0fd680c96d9ba359441.webp",
+    "assets/92d649e9bc7bbdf4af32abf8.webp",
+    "assets/31a5793fa8caf24b639013d3.webp",
+    "assets/40f4fa474c83033558da1bbc.webp",
+    "assets/72da8b7ba13cc6dcb8b3770e.webp",
+    "assets/6c2953bfdd5f1fef4a2c1a49.webp",
+    "assets/63408e06958e90e677e289cd.webp",
+    "assets/94781e7dd9a6f734b073bf45.webp",
+    "assets/7c0c6baf02d6cc8e0717f4c8.webp",
+    "assets/1005319bb6f8a5f7a1368120.webp",
+    "assets/dd7d0a08ae25f551c4db5316.webp",
+    "assets/129514c01a1de5f5835e7c75.webp",
+    "assets/c428481b41a79492465f5708.webp",
+    "assets/791bb7f14f810938c24a0fcd.webp",
+    "assets/a3c56c87e2df2c2338d7774b.webp",
+    "assets/f1203d423b9dac450618e9af.png",
+    "assets/1a0179ab4247aee0f3e67b7b.webp",
+    "assets/3c69dc492e850e0e0f753d91.webp",
+    "assets/1d686d166c6d0ea6f62985ca.webp",
+    "assets/f34a88c9de637741a036d1d7.webp",
+    "assets/a9c1b24a692eff03a8452191.webp",
+    "assets/76afb58383de8c5f5bdfeb26.webp",
+    "assets/f4dbe94cb3badbefaf4d2b9d.webp",
+    "assets/e42e135432d7cf05a6fbb011.png",
+    "assets/075fa3d4703aa34241ffba93.jpg",
+    "assets/7b83d9f48d9cea01289cdf62.png"
+  ],
+  "records": [
+    {
+      "note": "about.md",
+      "permalink": "/about",
+      "section": "page"
+    },
+    {
+      "note": "blog/feed.md",
+      "permalink": "/blog/feed",
+      "section": "page"
+    },
+    {
+      "note": "blog/posts/courses/havrard-cs197-ai-research-experiences.md",
+      "permalink": "/blog/posts/courses/havrard-cs197-ai-research-experiences",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/ds_and_algo/master_ds.md",
+      "permalink": "/blog/posts/ds_and_algo/master_ds",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/dspy/opencode.md",
+      "permalink": "/blog/posts/dspy/opencode",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/fl/what_is_federated_learning.md",
+      "permalink": "/blog/posts/fl/what_is_federated_learning",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/life_style/back_to_rss.md",
+      "permalink": "/blog/posts/life_style/back_to_rss",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/life_style/digital_minimalisim_arabic.md",
+      "permalink": "/blog/posts/life_style/digital_minimalisim_arabic",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/life_style/fake_graviety.md",
+      "permalink": "/blog/posts/life_style/fake_graviety",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/life_style/gpuvec.md",
+      "permalink": "/blog/posts/life_style/gpuvec",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/life_style/kamcalorie.md",
+      "permalink": "/blog/posts/life_style/kamcalorie",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/life_style/protienai.md",
+      "permalink": "/blog/posts/life_style/protienai",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/life_style/why_i_am_blogging.md",
+      "permalink": "/blog/posts/life_style/why_i_am_blogging",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/math/math_skills_for_ai.md",
+      "permalink": "/blog/posts/math/math_skills_for_ai",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/minishlab/blog_zaraah.md",
+      "permalink": "/blog/posts/minishlab/blog_zaraah",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/minishlab/ctranslate_maswray.md",
+      "permalink": "/blog/posts/minishlab/ctranslate_maswray",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/minishlab/pyversity_qdrant.md",
+      "permalink": "/blog/posts/minishlab/pyversity_qdrant",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/ml_life/cv_of_failure.md",
+      "permalink": "/blog/posts/ml_life/cv_of_failure",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/ml_life/hacker_rank_ai_intereviw.md",
+      "permalink": "/blog/posts/ml_life/hacker_rank_ai_intereviw",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/mteb_encoding/mteb_massive_text_embedding_benchmark.md",
+      "permalink": "/blog/posts/mteb_encoding/mteb_massive_text_embedding_benchmark",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/mteb_encoding/my_little_dargon.md",
+      "permalink": "/blog/posts/mteb_encoding/my_little_dargon",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/mteb_encoding/tiny-gte_transformer_model.md",
+      "permalink": "/blog/posts/mteb_encoding/tiny-gte_transformer_model",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/nlp/dinvo3-for-arabic-scripts.md",
+      "permalink": "/blog/posts/nlp/dinvo3-for-arabic-scripts",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/nlp/tts-architecture-v1.md",
+      "permalink": "/blog/posts/nlp/tts-architecture-v1",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/nlp/embedding_world/hyperrun.md",
+      "permalink": "/blog/posts/nlp/embedding_world/hyperrun",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/nlp/embedding_world/hyperun_fasthtml.md",
+      "permalink": "/blog/posts/nlp/embedding_world/hyperun_fasthtml",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/nlp/embedding_world/index.md",
+      "permalink": "/blog/posts/nlp/embedding_world/index",
+      "section": "page"
+    },
+    {
+      "note": "blog/posts/nlp/embedding_world/late_interaction.md",
+      "permalink": "/blog/posts/nlp/embedding_world/late_interaction",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/nlp/embedding_world/sakr_v1.md",
+      "permalink": "/blog/posts/nlp/embedding_world/sakr_v1",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant.md",
+      "permalink": "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_arabic_qdrant",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full.md",
+      "permalink": "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_benchmark_full",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch.md",
+      "permalink": "/blog/posts/nlp/embedding_world/sparse_embedding/bm25_from_scratch",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/nlp/embedding_world/vector_database_book.md",
+      "permalink": "/blog/posts/nlp/embedding_world/vector_database_book",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/nlp/gemma_tool_calling.md",
+      "permalink": "/blog/posts/nlp/gemma_tool_calling",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/on_device/litert.md",
+      "permalink": "/blog/posts/on_device/litert",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/products_reviews/building_ai_pc_in_egypt.md",
+      "permalink": "/blog/posts/products_reviews/building_ai_pc_in_egypt",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/products_reviews/huawei-freebuds-5i.md",
+      "permalink": "/blog/posts/products_reviews/huawei-freebuds-5i",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/products_reviews/huawei-freebuds-7i.md",
+      "permalink": "/blog/posts/products_reviews/huawei-freebuds-7i",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/products_reviews/huawei_mate_pad_11.md",
+      "permalink": "/blog/posts/products_reviews/huawei_mate_pad_11",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/products_reviews/huawei_watch_gt_4_experience.md",
+      "permalink": "/blog/posts/products_reviews/huawei_watch_gt_4_experience",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/products_reviews/one_plus_pad_3.md",
+      "permalink": "/blog/posts/products_reviews/one_plus_pad_3",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/seo/google_ads_black_box.md",
+      "permalink": "/blog/posts/seo/google_ads_black_box",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/seo/how_i_use_nlp_for_seo.md",
+      "permalink": "/blog/posts/seo/how_i_use_nlp_for_seo",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/seo/seo_rat_journey.md",
+      "permalink": "/blog/posts/seo/seo_rat_journey",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/seo/the_curse_of_seo.md",
+      "permalink": "/blog/posts/seo/the_curse_of_seo",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/speech_recognition/muaalm_quran_chance.md",
+      "permalink": "/blog/posts/speech_recognition/muaalm_quran_chance",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/speech_recognition/my_dream_job_at_tarteel.md",
+      "permalink": "/blog/posts/speech_recognition/my_dream_job_at_tarteel",
+      "section": "blog"
+    },
+    {
+      "note": "blog/posts/tools_reviews/super_productivity_app.md",
+      "permalink": "/blog/posts/tools_reviews/super_productivity_app",
+      "section": "blog"
+    },
+    {
+      "note": "blog/voice/arabic_turn_detection.md",
+      "permalink": "/blog/voice/arabic_turn_detection",
+      "section": "blog"
+    },
+    {
+      "note": "index.md",
+      "permalink": "/index",
+      "section": "page"
+    },
+    {
+      "note": "papers.md",
+      "permalink": "/papers",
+      "section": "page"
+    },
+    {
+      "note": "publish.md",
+      "permalink": "/publish",
+      "section": "page"
+    },
+    {
+      "note": "til/index.md",
+      "permalink": "/til/index",
+      "section": "page"
+    },
+    {
+      "note": "til/tils/2025-05-17-til.md",
+      "permalink": "/til/tils/2025-05-17-til",
+      "section": "til"
+    },
+    {
+      "note": "til/tils/2025-05-18-til.md",
+      "permalink": "/til/tils/2025-05-18-til",
+      "section": "til"
+    },
+    {
+      "note": "til/tils/2025-05-19-til.md",
+      "permalink": "/til/tils/2025-05-19-til",
+      "section": "til"
+    },
+    {
+      "note": "til/tils/2025-05-20-til.md",
+      "permalink": "/til/tils/2025-05-20-til",
+      "section": "til"
+    },
+    {
+      "note": "til/tils/2025-05-21-til.md",
+      "permalink": "/til/tils/2025-05-21-til",
+      "section": "til"
+    },
+    {
+      "note": "til/tils/2025-05-23-til.md",
+      "permalink": "/til/tils/2025-05-23-til",
+      "section": "til"
+    },
+    {
+      "note": "til/tils/2025-05-25-til.md",
+      "permalink": "/til/tils/2025-05-25-til",
+      "section": "til"
+    },
+    {
+      "note": "til/tils/2025-05-28-til.md",
+      "permalink": "/til/tils/2025-05-28-til",
+      "section": "til"
+    },
+    {
+      "note": "til/tils/2025-06-06-til.md",
+      "permalink": "/til/tils/2025-06-06-til",
+      "section": "til"
+    },
+    {
+      "note": "til/tils/2025-10-21.md",
+      "permalink": "/til/tils/2025-10-21",
+      "section": "til"
+    },
+    {
+      "note": "til/tils/2025-12-13.md",
+      "permalink": "/til/tils/2025-12-13",
+      "section": "til"
+    },
+    {
+      "note": "til/tils/2025-12-14.md",
+      "permalink": "/til/tils/2025-12-14",
+      "section": "til"
+    },
+    {
+      "note": "til/tils/2025-12-15.md",
+      "permalink": "/til/tils/2025-12-15",
+      "section": "til"
+    },
+    {
+      "note": "til/tils/livekitintro.md",
+      "permalink": "/til/tils/livekitintro",
+      "section": "til"
+    },
+    {
+      "note": "til/tils/start_youtube_channel_as_ai_developer.md",
+      "permalink": "/til/tils/start_youtube_channel_as_ai_developer",
+      "section": "til"
+    }
+  ]
+}

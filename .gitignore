@@ -1,16 +1,17 @@
-/.quarto/
+.DS_Store
+node_modules
+public
+prof
+tsconfig.tsbuildinfo
+.obsidian
+.quartz-cache
+private/
+.replit
+replit.nix
+.quartz/
+quartz/cli/tui/dist/
 
-# Local Netlify folder
-.netlify
-_site/
-.*
-notes/serving/tfserving/model/
-notes/serving/torchserve/config/
-notes/serving/torchserve/*.mar
-notes/serving/torchserve/logs
-
-
-/.luarc.json
-__pycache__/
-
-**/*.quarto_ipynb
+.publish-content/
+.preview.log
+content/templates/
+migration/report.json
