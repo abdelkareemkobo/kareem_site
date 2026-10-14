@@ -3,6 +3,11 @@ import { pathToRoot } from "../util/path"
 
 export default (() => {
   const Listing: QuartzComponent = ({ fileData, allFiles }) => {
+    if (fileData.slug === "index") {
+      const recent = allFiles.filter(note => note.frontmatter?.publish === true && !note.frontmatter?.listing && ["blog", "til"].includes(String(note.frontmatter?.section)))
+        .sort((a, b) => String(b.frontmatter?.modified ?? b.frontmatter?.updated ?? b.frontmatter?.date ?? "").localeCompare(String(a.frontmatter?.modified ?? a.frontmatter?.updated ?? a.frontmatter?.date ?? ""))).slice(0, 8)
+      return <section class="garden-recent"><h2>أحدث الكتابات والملاحظات</h2><ul>{recent.map(note => <li><a href={`/${note.slug}.html`} lang={String(note.frontmatter?.lang ?? "ar")} dir={note.frontmatter?.dir === "ltr" ? "ltr" : "rtl"}>{note.frontmatter?.title}</a><time>{String(note.frontmatter?.modified ?? note.frontmatter?.updated ?? note.frontmatter?.date ?? "")}</time></li>)}</ul><p><a href="/blog/feed.html">جميع المقالات ←</a> · <a href="/til/index.html">الملاحظات اليومية ←</a></p></section>
+    }
     const kind = fileData.frontmatter?.listing
     if (!kind) return null
     const notes = allFiles.filter(f => !f.frontmatter?.listing && f.frontmatter?.publish === true && (kind === "embedding" ? f.frontmatter?.series === "embedding" : f.frontmatter?.section === (kind === "til" ? "til" : "blog")))

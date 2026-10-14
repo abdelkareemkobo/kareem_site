@@ -187,3 +187,38 @@ a[href^="tel:"] { direction: ltr; unicode-bidi: isolate; }
 .darkmode { min-width: 32px; width: 32px; display: inline-flex; align-items: center; justify-content: center; }
 .darkmode svg { width: 20px; height: 20px; fill: none; stroke: currentColor; }
 .kareem-backlinks > h2, .kareem-graph h3 { margin: 0 0 16px; font: 700 .95rem/1.7 "Kareem UI", system-ui, sans-serif; }
+
+/* A note-first entrance to the garden, written as ordinary Obsidian Markdown. */
+body[data-slug="index"] #quartz-body article { font: 400 17px/1.95 "Kareem UI", system-ui, sans-serif; }
+body[data-slug="index"] #quartz-body article p, body[data-slug="index"] #quartz-body article li { font-family: "Kareem UI", system-ui, sans-serif; color: var(--text-normal); }
+body[data-slug="index"] #quartz-body article h1 { font: 700 2rem/1.6 "Kareem UI", system-ui, sans-serif; margin: 0 0 24px; }
+body[data-slug="index"] #quartz-body article h2, .garden-recent h2 { font: 700 1.2rem/1.7 "Kareem UI", system-ui, sans-serif; border: 0; margin: 36px 0 16px; }
+body[data-slug="index"] #quartz-body article li { margin-block: 16px; }
+body[data-slug="index"] #quartz-body article a { background: none; font-weight: 400; text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--text-accent) 35%, transparent); text-underline-offset: 4px; }
+body[data-slug="index"] #quartz-body article .markdown-preview-view > p:first-of-type { float: inline-end; margin: 0 24px 16px 0; }
+body[data-slug="index"] #quartz-body article .markdown-preview-view > p:first-of-type img { width: 76px; max-width: 76px; height: 88px; border-radius: 12px; object-fit: cover; }
+.garden-recent { border-top: 1px solid var(--background-modifier-border); padding-top: 8px; margin-bottom: 48px; }
+.garden-recent ul { list-style: none; padding: 0; }
+.garden-recent li { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 20px; padding: 12px 0; border-bottom: 1px solid var(--background-modifier-border); }
+.garden-recent a { font: 400 .95rem/1.8 "Kareem UI", system-ui, sans-serif; }
+.garden-recent time { font: 400 .75rem/1.5 system-ui, sans-serif; direction: ltr; color: var(--text-muted); }
+@media (min-width: 1180px) {
+  body[data-slug="index"] .page { max-width: 1480px; padding-inline: 32px; }
+  body[data-slug="index"] .page > #quartz-body { direction: ltr; grid-template-columns: 200px minmax(0, 1fr) 210px; grid-template-areas: "left center right" "left footer right"; gap: 36px; }
+  body[data-slug="index"] .page > #quartz-body > .sidebar.left { display: flex; flex-direction: column; align-items: stretch; position: sticky; top: 24px; padding: 0; gap: 20px; height: calc(100dvh - 48px); overflow-y: auto; }
+  body[data-slug="index"] .page-title { font-size: 1rem; }
+  body[data-slug="index"] .explorer { width: 100%; }
+  body[data-slug="index"] .explorer .mobile-explorer { display: none !important; }
+  body[data-slug="index"] .explorer > .explorer-content { display: block; position: static; inset: auto; transform: none; width: 100%; height: auto; padding: 0; border: 0; box-shadow: none; background: transparent; overflow: visible; }
+  body[data-slug="index"] .explorer .explorer-ul { max-height: none; overflow: visible; }
+  body[data-slug="index"] .page > #quartz-body > .sidebar.right { display: flex; flex-direction: column; position: sticky; top: 24px; height: calc(100dvh - 48px); overflow-y: auto; padding: 0; border: 0; gap: 20px; }
+  body[data-slug="index"] .kareem-graph, body[data-slug="index"] .kareem-backlinks { width: 100%; box-sizing: border-box; padding: 12px; background: transparent; border: 0; }
+  body[data-slug="index"] .kareem-backlinks ul { max-height: 300px; }
+  body[data-slug="index"] .kareem-backlinks li a { font: 400 .8rem/1.7 "Kareem UI", system-ui, sans-serif; }
+  body[data-slug="index"] .kareem-nav { gap: 8px 16px; font-size: .8rem; padding-top: 0; }
+}
+@media (max-width: 650px) {
+  body[data-slug="index"] #quartz-body article { font-size: 16px; }
+  body[data-slug="index"] #quartz-body article h1 { font-size: 1.6rem; }
+  body[data-slug="index"] #quartz-body article .markdown-preview-view > p:first-of-type { float: none; margin: 0 0 20px; }
+}

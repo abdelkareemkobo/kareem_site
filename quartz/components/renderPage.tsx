@@ -241,41 +241,6 @@ export function renderPage(
   const root = clone(componentData.tree) as Root
   const visited = new Set<FullSlug>([slug])
   renderTranscludes(root, cfg, slug, componentData, visited)
-  // Compose the homepage from ordinary Markdown headings and image paragraphs.
-  if (slug === "index") {
-    const sections: Element[] = []
-    let section: Element = { type: "element", tagName: "section", properties: { className: ["home-hero"] }, children: [] }
-    sections.push(section)
-    for (const node of root.children) {
-      if (node.type === "element" && node.tagName === "h2") {
-        section = { type: "element", tagName: "section", properties: { className: ["home-section"] }, children: [] }
-        sections.push(section)
-      }
-      section.children.push(node as ElementContent)
-    }
-    for (const part of sections.slice(1)) {
-      const heading = part.children.shift()!
-      const cards: Element[] = []
-      let card: Element | undefined
-      let pending: ElementContent[] = []
-      for (const node of part.children) {
-        if (node.type === "element" && node.tagName === "p" && node.children.some(child => child.type === "element" && child.tagName === "img")) {
-          pending.push(node)
-          continue
-        }
-        if (node.type === "element" && (node.tagName === "h3" || node.tagName === "h4")) {
-          card = { type: "element", tagName: "div", properties: { className: ["home-card"] }, children: pending }
-          pending = []
-          cards.push(card)
-        }
-        if (card) card.children.push(node)
-        else pending.push(node)
-      }
-      part.children = cards.length ? [heading, { type: "element", tagName: "div", properties: { className: ["home-grid"] }, children: cards }] : [heading, ...pending]
-    }
-    root.children = sections
-  }
-
   // Run plugin-provided tree transforms (e.g. resolving inline bases codeblocks)
   if (treeTransforms) {
     for (const transform of treeTransforms) {
