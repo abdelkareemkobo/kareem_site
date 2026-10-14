@@ -222,3 +222,15 @@ body[data-slug="index"] #quartz-body article .markdown-preview-view > p:first-of
   body[data-slug="index"] #quartz-body article h1 { font-size: 1.6rem; }
   body[data-slug="index"] #quartz-body article .markdown-preview-view > p:first-of-type { float: none; margin: 0 0 20px; }
 }
+/* Sidebar titles should read as links, not squeezed article headings. */
+#quartz-body .sidebar .backlinks ul { width: 100%; max-width: 100%; box-sizing: border-box; padding: 0; margin: 12px 0 0; list-style: none; overflow-x: hidden; }
+#quartz-body .sidebar .backlinks li { display: block; width: auto; max-width: 100%; min-width: 0; padding: 0; margin: 0 0 14px; text-align: start; }
+#quartz-body .sidebar .backlinks li a { display: block; width: auto; max-width: 100%; white-space: normal; word-break: normal; overflow-wrap: break-word; unicode-bidi: plaintext; text-align: start; font: 400 .85rem/1.8 "Kareem UI", system-ui, sans-serif; }
+#quartz-body .sidebar .explorer a { white-space: normal; word-break: normal; overflow-wrap: break-word; unicode-bidi: plaintext; font: 400 .85rem/1.8 "Kareem UI", system-ui, sans-serif; }
+#quartz-body .sidebar .explorer .folder-container { min-width: 0; }
+#quartz-body .sidebar .explorer .folder-button { font: 700 .85rem/1.8 "Kareem UI", system-ui, sans-serif; }
+@media (min-width: 1180px) {
+  body[data-slug="index"] .page > #quartz-body { grid-template-columns: 235px minmax(0, 1fr) 255px; gap: 28px; }
+  body[data-slug="index"] .kareem-backlinks, body[data-slug="index"] .kareem-graph { padding-inline: 8px; }
+  body[data-slug="index"] #quartz-body .page-title { font: 700 1rem/1.8 "Kareem UI", system-ui, sans-serif; }
+}

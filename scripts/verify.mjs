@@ -78,6 +78,11 @@ for (const route of JSON.parse(await fs.readFile('migration/urls.json', 'utf8'))
   }
 }
 const home = await fs.readFile('public/index.html', 'utf8')
+const blogEntry = await fs.readFile('public/blog/index.html', 'utf8')
+assert.match(blogEntry, /http-equiv="refresh"/, 'Blog directory must open the actual feed')
+assert.match(blogEntry, /url=\/blog\/feed\.html/, 'Blog directory must target the actual feed')
+const folder = await fs.readFile('public/blog/posts/index.html', 'utf8')
+assert.equal((folder.match(/class="page-listing"/g) ?? []).length, 1, 'Generated folder listings must render only once')
 assert(home.includes('تصفح الملاحظات') && home.includes('روابط واردة'), 'Site Arabic labels must use the corrected locale')
 assert(!home.includes('katex@'), 'Pages without math must not load KaTeX')
 assert(!home.includes('@layer obsidian-theme {'), 'Things CSS must be cached separately, not embedded in every page')

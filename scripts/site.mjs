@@ -73,6 +73,9 @@ export async function finish(manifest, options = {}) {
   let historical = []
   try { historical = JSON.parse(await fs.readFile(path.join(migration, 'historical-redirects.json'), 'utf8')) } catch {}
   for (const route of historical) if (route.current === '/' || manifest.notes.includes(route.current.slice(1).replace(/\.html$/, '.md'))) urls.push({ ...route, redirect: true })
+  if (manifest.notes.includes('blog/feed.md')) {
+    for (const old of ['/blog/', '/blog/index.html', '/blog.html']) urls.push({ old, current: '/blog/feed.html', redirect: true })
+  }
   // Plugin-generated links may omit .html. Consolidate those variants at the host.
   for (const note of manifest.notes) {
     const slug = slugifyFilePath(note)

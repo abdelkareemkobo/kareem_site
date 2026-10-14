@@ -351,6 +351,21 @@
     "redirect": true
   },
   {
+    "old": "/blog/",
+    "current": "/blog/feed.html",
+    "redirect": true
+  },
+  {
+    "old": "/blog/index.html",
+    "current": "/blog/feed.html",
+    "redirect": true
+  },
+  {
+    "old": "/blog.html",
+    "current": "/blog/feed.html",
+    "redirect": true
+  },
+  {
     "old": "/about",
     "current": "/about.html",
     "redirect": true,
