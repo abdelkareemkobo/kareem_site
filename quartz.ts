@@ -4,7 +4,7 @@ import Navigation from "./quartz/components/KareemNavigation"
 import Listing from "./quartz/components/KareemListing"
 import Contents from "./quartz/components/KareemContents"
 import { QuartzComponent } from "./quartz/components/types"
-import { h } from "preact"
+import { h, cloneElement, toChildArray } from "preact"
 import { createHash } from "node:crypto"
 import { transform } from "lightningcss"
 import { write } from "./quartz/plugins/emitters/helpers"
@@ -101,6 +101,13 @@ function adaptUI(component: QuartzComponent): QuartzComponent {
     return script
   })
   let adapted = component
+  if (component.name === "Footer") {
+    adapted = Object.assign(((props) => {
+      const footer = component(props)
+      if (!footer) return null
+      return cloneElement(footer, {}, [h("p", { dir: "rtl", class: "kareem-support" }, "يمكنك دعمي بدعوة صادقة!"), ...toChildArray(footer.props.children).slice(1)])
+    }) as QuartzComponent, component)
+  }
   if (component.name === "Backlinks") {
     adapted = Object.assign(((props) => {
       const links = component(props)
@@ -119,6 +126,7 @@ function adaptUI(component: QuartzComponent): QuartzComponent {
   return adapted
 }
 for (const slots of [layout.defaults, ...Object.values(layout.byPageType)]) {
+  if (slots.footer) slots.footer = adaptUI(slots.footer)
   for (const position of ["left", "right", "beforeBody", "afterBody", "header"] as const) slots[position] = slots[position]?.map(adaptUI)
   slots.header = [...(slots.header ?? []), navigation]
   slots.right = slots.right?.filter(component => component.name !== "TableOfContents")
