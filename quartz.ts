@@ -76,6 +76,27 @@ function adaptUI(component: QuartzComponent): QuartzComponent {
   component.beforeDOMLoaded = earlyScripts.map(script => script.replace(/for\(let e of document\.getElementsByClassName\("darkmode"\)\)e\.addEventListener\("click",n\),window\.addCleanup\(\(\)=>e\.removeEventListener\("click",n\)\);/g, ""))
   const scripts = Array.isArray(component.afterDOMLoaded) ? component.afterDOMLoaded : component.afterDOMLoaded ? [component.afterDOMLoaded] : []
   component.afterDOMLoaded = scripts.map(original => {
+    if (original.includes("[Graph]")) {
+      const replacements = [
+        ['text:iu.text,style:{fontSize:We*15,fill:ze,fontFamily:Ne}', 'text:_.classList.contains("global-graph-container")&&iu.text.length>44?iu.text.slice(0,43)+"…":iu.text,style:{fontSize:We*15,fill:ze,fontFamily:"Arial",wordWrap:true,wordWrapWidth:170,align:"center"}'],
+        ['return 2+Math.sqrt(l)}).iterations(3)', 'return _.classList.contains("global-graph-container")?48:2+Math.sqrt(l)}).iterations(3)'],
+        ['var nu=new a.Container', `await document.fonts.load('14px "Kareem UI"');var nu=new a.Container`],
+        ['ou.on("tick",function(){})', 'ou.on("tick",function(){if(_.classList.contains("global-graph-container")){for(var node of ru){node.x=Math.max(-O/2+100,Math.min(O/2-100,node.x));node.y=Math.max(-G/2+160,Math.min(G/2-35,node.y))}}})'],
+        ['var le=!1;function se()', 'var labelFrame=0;var le=!1;function se()'],
+        ['for(var i=0;i<I.length;i++){var C=I[i]', 'if(_.classList.contains("global-graph-container")&&++labelFrame%4===0){var occupied=[];for(var visible of P){if(_u===visible.simulationData.id){visible.label.alpha=1;continue}var box=visible.label.getBounds();var overlaps=occupied.some(function(other){return box.x<other.x+other.width+8&&box.x+box.width+8>other.x&&box.y<other.y+other.height+6&&box.y+box.height+6>other.y});visible.label.alpha=overlaps?0:.9;if(!overlaps)occupied.push(box)}}for(var i=0;i<I.length;i++){var C=I[i]'],
+        ['ee=h(Z.getPropertyValue("--lightgray").trim(),"#d4d4d4")', 'ee=h(document.documentElement.getAttribute("saved-theme")==="dark"?"#536576":"#c8d2dd","#c8d2dd")'],
+        ['Du.alpha=0', 'Du.alpha=_.classList.contains("global-graph-container")?.9:0'],
+        ['F=Math.max((l-1)/3.75,0)', 'F=_.classList.contains("global-graph-container")?Math.min(1,Math.max(.75,(l-1)/3.75)):Math.max((l-1)/3.75,0)'],
+        ['Wu(F.id),T=C.alpha,Eu||Au()', 'Wu(F.id),T=C.alpha,C.text=F.text,Eu||Au()'],
+        ['Wu(null),C.alpha=T,Eu||Au()', 'Wu(null),C.text=_.classList.contains("global-graph-container")&&F.text.length>44?F.text.slice(0,43)+"…":F.text,C.alpha=T,Eu||Au()'],
+      ]
+      let graphScript = original.replaceAll("await fetchData", "await fetchNavigationData")
+      for (const [before, after] of replacements) {
+        if (!graphScript.includes(before)) throw new Error("Graph plugin changed; review readable labels")
+        graphScript = graphScript.replaceAll(before, after)
+      }
+      return graphScript + `;(() => { const enhance = () => { for (const panel of document.querySelectorAll('.global-graph-container')) { if (!panel.querySelector('canvas') || panel.querySelector('.graph-help')) continue; const help = document.createElement('div'); help.className = 'graph-help'; help.innerHTML = '<strong>استكشف الملاحظات</strong><span>اسحب للتحريك · مرّر للتكبير · اضغط على ملاحظة لفتحها</span>'; const close = document.createElement('button'); close.className = 'graph-close'; close.type = 'button'; close.setAttribute('aria-label', 'إغلاق خريطة الروابط'); close.textContent = '×'; close.addEventListener('click', () => document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape' }))); panel.append(help, close); } }; enhance(); new MutationObserver(enhance).observe(document.body, { childList: true, subtree: true }); document.addEventListener('nav', enhance); })();`
+    }
     if (original.includes("[Explorer]") || original.includes("[Graph]")) return original.replaceAll("await fetchData", "await fetchNavigationData")
       .replace('l.addEventListener("click",o),s.push(()=>l.removeEventListener("click",o))', "")
       .replace('n.checkVisibility&&n.checkVisibility()&&(t.classList.add("collapsed")', 'n.checkVisibility&&n.checkVisibility()&&t.getAttribute("aria-expanded")!=="true"&&(t.classList.add("collapsed")')
