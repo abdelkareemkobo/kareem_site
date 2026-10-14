@@ -106,13 +106,13 @@ function adaptUI(component: QuartzComponent): QuartzComponent {
       const links = component(props)
       if (!links) return null
       const english = String(props.fileData.frontmatter?.lang ?? "ar").startsWith("en")
-      return h("details", { class: "kareem-backlinks" }, h("summary", null, english ? "Pages linking here" : "صفحات تشير إلى هذه الملاحظة"), links)
+      return h("section", { class: "kareem-backlinks" }, h("h2", null, english ? "Pages linking here" : "صفحات تشير إلى هذه الملاحظة"), links)
     }) as QuartzComponent, component)
   }
   if (component.name === "Graph" && component.afterDOMLoaded) {
     const script = (component.afterDOMLoaded as string[]).join("\n")
-    adapted = Object.assign(((props) => h("details", { class: "kareem-graph" }, h("summary", null, "عرض خريطة الروابط"), component(props))) as QuartzComponent, component)
-    adapted.afterDOMLoaded = `(() => { let started = false; document.addEventListener("toggle", event => { if (!started && event.target instanceof HTMLDetailsElement && event.target.matches(".kareem-graph") && event.target.open) { started = true; (() => { ${script} })() } }, true) })();`
+    adapted = Object.assign(((props) => h("section", { class: "kareem-graph" }, component(props))) as QuartzComponent, component)
+    adapted.afterDOMLoaded = script
     component.afterDOMLoaded = adapted.afterDOMLoaded
   }
   uiWrappers.set(component, adapted)

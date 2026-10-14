@@ -62,7 +62,7 @@ The website repository is `abdelkareemkobo/kareem_site`. Its `master` branch bui
 
 Before pushing, run `npm run build`, `npm run verify`, and `npm run typecheck`, then commit the updated `published/` export. Cloud builds use `KAREEM_PUBLISHED_ONLY=1` and never read the private vault. Only approved notes and referenced media belong in this public repository; keep unpublished notes in the vault outside this checkout.
 
-The Things theme uses pinned Quartz theme packages, a cached stylesheet, Arabic fonts, and responsive site navigation. Graph and backlinks panels are collapsed by default. GitHub Pages retains legacy `.html` addresses with canonical, noindex redirect pages; these are browser redirects because Pages does not support custom HTTP redirect rules. RSS keeps the original article identities.
+The Things theme uses pinned Quartz theme packages, a cached stylesheet, Arabic fonts, and responsive site navigation. Graph and backlinks are visible by default, with a bounded scrollable backlinks list. GitHub Pages retains legacy `.html` addresses with canonical, noindex redirect pages; these are browser redirects because Pages does not support custom HTTP redirect rules. RSS keeps the original article identities.
 
 The original Quarto history and `gh-pages` branch are retained for rollback. `netlify.toml` remains an optional alternative host configuration.
 
