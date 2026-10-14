@@ -241,3 +241,24 @@ body[data-slug="index"] #quartz-body article .markdown-preview-view > p:first-of
 .graph-help strong { font-size: 15px; color: var(--text-normal); }
 .graph-help span { color: var(--text-muted); }
 .graph-close { position: absolute; z-index: 3; top: 16px; right: 16px; width: 34px; height: 34px; border: 0; border-radius: 8px; background: var(--background-secondary); color: var(--text-normal); font-size: 26px; cursor: pointer; }
+/* Topic pages are reading collections rather than repeated tag clouds. */
+.tag-intro { margin: 8px 0 28px; color: var(--text-muted); font: 400 1rem/1.9 "Kareem UI", system-ui, sans-serif; }
+.tag-collection-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 20px; font-size: .85rem; }
+.tag-collection-meta a { margin-inline-start: auto; }
+.tag-collection .note-cover img { display: block; width: 100%; height: 100%; object-fit: contain; border-radius: 0; }
+.tag-collection .note-card h2 { margin: 10px 0; border: 0; font: 700 1.1rem/1.7 "Kareem UI", system-ui, sans-serif; }
+.tag-collection .note-card h2 a { color: var(--text-normal); }
+.tag-collection .note-card p { font: 400 .9rem/1.85 "Kareem UI", system-ui, sans-serif; }
+.tag-collection .note-card-body { display: flex; flex-direction: column; flex: 1; }
+.topic-links { display: flex; flex-wrap: wrap; gap: 8px; padding-top: 12px; margin-top: auto; }
+.topic-links a { padding: 3px 10px; border-radius: 6px; background: var(--background-secondary); color: var(--text-muted); font: 400 .75rem/1.8 "Kareem UI", system-ui, sans-serif; }
+.tag-cover-placeholder { width: 100%; height: 100%; display: grid; place-items: center; color: var(--text-accent); font: 700 1.15rem "Kareem UI", system-ui, sans-serif; background: linear-gradient(135deg, var(--background-secondary), var(--background-primary)); }
+.topic-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-bottom: 48px; }
+.topic-grid > a { display: flex; flex-direction: column; gap: 8px; border: 1px solid var(--background-modifier-border); border-radius: 12px; padding: 18px; text-decoration: none; color: var(--text-normal); font: 400 .95rem/1.7 "Kareem UI", system-ui, sans-serif; }
+.topic-grid > a:hover { border-color: var(--text-accent); }
+.topic-grid small { color: var(--text-muted); font-size: .8rem; }
+@media (max-width: 650px) { .topic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } .tag-collection-meta a { margin-inline-start: 0; } }
+.topic-filter-label { display: flex; flex-direction: column; gap: 8px; font: 400 .9rem/1.8 "Kareem UI", system-ui, sans-serif; }
+.topic-filter { box-sizing: border-box; width: 100%; padding: 12px 16px; border: 1px solid var(--background-modifier-border); border-radius: 10px; background: var(--background-primary); color: var(--text-normal); font: inherit; }
+.topic-filter-status { color: var(--text-muted); font: 400 .8rem/1.6 "Kareem UI", system-ui, sans-serif; }
+.topic-grid > a[hidden] { display: none; }

@@ -78,6 +78,25 @@ for (const route of JSON.parse(await fs.readFile('migration/urls.json', 'utf8'))
   }
 }
 const home = await fs.readFile('public/index.html', 'utf8')
+for (const file of publicFiles) {
+  if (!file.startsWith('tags/') || !file.endsWith('.html')) continue
+  const html = await fs.readFile(path.join('public', file), 'utf8')
+  assert(!html.includes('class="giscus"'), `${file}: browsing pages must not show comments`)
+  const tree = fromHtml(html)
+  visit(tree, 'element', node => {
+    const ref = node.tagName === 'a' ? node.properties.href : node.tagName === 'img' ? node.properties.src : null
+    if (typeof ref !== 'string' || !ref.startsWith('/') || ref.startsWith('//')) return
+    const target = decodeURIComponent(ref.split(/[?#]/)[0]).slice(1) || 'index.html'
+    assert(publicFiles.has(target), `${file}: missing topic link or image ${ref}`)
+  })
+}
+const embeddingTag = await fs.readFile('public/tags/embedding.html', 'utf8')
+let embeddingNotes = 0
+for (const note of manifest.notes) {
+  const { data } = matter(await fs.readFile(path.join('.publish-content', note), 'utf8'))
+  if (data.publish === true && !data.listing && (data.tags ?? []).includes('embedding')) embeddingNotes++
+}
+assert.equal((embeddingTag.match(/class="note-card"/g) ?? []).length, embeddingNotes, 'Embedding collection must show each published matching note once')
 const blogEntry = await fs.readFile('public/blog/index.html', 'utf8')
 assert.match(blogEntry, /http-equiv="refresh"/, 'Blog directory must open the actual feed')
 assert.match(blogEntry, /url=\/blog\/feed\.html/, 'Blog directory must target the actual feed')

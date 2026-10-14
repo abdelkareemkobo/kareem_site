@@ -3,6 +3,7 @@ import { PageTypeDispatcher } from "./quartz/plugins/pageTypes/dispatcher"
 import Navigation from "./quartz/components/KareemNavigation"
 import Listing from "./quartz/components/KareemListing"
 import Contents from "./quartz/components/KareemContents"
+import Tags, { tagLabel } from "./quartz/components/KareemTags"
 import { QuartzComponent } from "./quartz/components/types"
 import { h, cloneElement, toChildArray } from "preact"
 import { createHash } from "node:crypto"
@@ -11,9 +12,19 @@ import { write } from "./quartz/plugins/emitters/helpers"
 import { FullSlug } from "./quartz/util/path"
 import { BuildCtx } from "./quartz/util/ctx"
 import { StaticResources } from "./quartz/util/resources"
+import { QuartzPageTypePluginInstance } from "./quartz/plugins/types"
 
 const config = await loadQuartzConfig({ analytics: process.env.KAREEM_PRODUCTION === "1" ? { provider: "google", tagId: "G-XFPC3M9TMG" } : null })
 export const layout = await loadQuartzLayout()
+for (const entry of config.plugins.pageTypes ?? []) if (entry.layout === "tag") {
+  const pageType = entry as QuartzPageTypePluginInstance
+  pageType.body = Tags
+  const generate = pageType.generate
+  if (generate) pageType.generate = args => generate(args).map(page => {
+    const title = tagLabel(page.slug.replace(/^tags\/?/, ""))
+    return { ...page, title, data: { ...page.data, frontmatter: { ...page.data.frontmatter, title, tags: [], lang: "ar", dir: "rtl", comments: false, description: `تصفّح مقالات عبدالكريم الخطيب وتجاربه وملاحظاته حول ${title}.` } } }
+  })
+}
 const navigation = Navigation()
 navigation.afterDOMLoaded = `(() => {
   if (window.kareemHeaderReady) return;
@@ -122,6 +133,12 @@ function adaptUI(component: QuartzComponent): QuartzComponent {
     return script
   })
   let adapted = component
+  if (component.name === "Comments") {
+    adapted = Object.assign(((props) => String(props.fileData.slug).startsWith("tags/") ? null : component(props)) as QuartzComponent, component)
+  }
+  if (component.name === "ArticleTitle") {
+    adapted = Object.assign(((props) => String(props.fileData.slug).startsWith("tags/") ? h("h1", { class: "article-title", dir: "rtl" }, tagLabel(String(props.fileData.slug).slice(5))) : component(props)) as QuartzComponent, component)
+  }
   if (component.name === "Footer") {
     adapted = Object.assign(((props) => {
       const footer = component(props)
